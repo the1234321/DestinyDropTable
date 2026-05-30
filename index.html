@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSO Drop Charts</title>
+    <script src="https://unpkg.com"></script>
+    <style>
+        :root {
+            --bg-dark: #121212; --text-gray: #ccc;
+            --viridia: #1b5e20; --greenill: #4caf50; --skyly: #0288d1; --bluefull: #1565c0;
+            --purplenum: #6a1b9a; --pinkal: #ad1457; --redria: #b71c1c; --oran: #ef6c00;
+            --yellowboze: #fbc02d; --whitill: #eeeeee;
+        }
+        body { background: var(--bg-dark); color: white; font-family: sans-serif; margin: 0; padding-bottom: 50px; }
+        
+        /* 顶部导航 */
+        .header { sticky; top: 0; background: #1a1a1a; z-index: 100; padding: 10px; border-bottom: 1px solid #333; }
+        .tabs { display: flex; gap: 5px; justify-content: center; margin-bottom: 10px; }
+        .tab-btn { border: 1px solid #444; background: #222; color: #aaa; padding: 8px 15px; cursor: pointer; border-radius: 4px; }
+        .tab-btn.active { background: #444; color: #fff; border-color: orange; }
+        
+        /* 搜索框 */
+        .search-box { width: 90%; max-width: 500px; display: block; margin: 0 auto; padding: 8px; border-radius: 4px; border: 1px solid #444; background: #222; color: white; }
+
+        /* 表格样式 */
+        .container { padding: 10px; }
+        .ep-title { text-align: center; color: #ffd700; margin: 20px 0 10px; font-size: 1.2em; border-bottom: 1px solid #333; }
+        table { width: 100%; border-collapse: collapse; font-size: 11px; table-layout: fixed; }
+        th, td { border: 1px solid #222; padding: 4px 2px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        
+        /* ID 颜色映射 */
+        .v { background: var(--viridia); } .g { background: var(--greenill); }
+        .s { background: var(--skyly); } .b { background: var(--bluefull); }
+        .p { background: var(--purplenum); } .pi { background: var(--pinkal); color: #000; }
+        .r { background: var(--redria); } .o { background: var(--oran); }
+        .y { background: var(--yellowboze); color: #000; } .w { background: var(--whitill); color: #000; }
+        
+        .monster-col { width: 80px; background: #1a1a1a; font-weight: bold; position: sticky; left: 0; }
+        .highlight { background: yellow !important; color: black !important; font-weight: bold; }
+
+        /* 悬浮窗工具栏 */
+        .tooltip { position: fixed; background: #333; border: 1px solid orange; padding: 8px; border-radius: 4px; z-index: 1000; pointer-events: none; font-size: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
+        .update-btn { position: fixed; bottom: 20px; right: 20px; background: orange; border: none; padding: 10px; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 10px black; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="tabs">
+                <button v-for="d in difficulties" @click="currentDiff = d" :class="['tab-btn', currentDiff === d ? 'active' : '']">{{ d }}</button>
+            </div>
+            <input class="search-box" v-model="searchQuery" placeholder="输入关键字搜索并过滤...">
+        </div>
+
+        <div class="container" v-if="allData[currentDiff]">
+            <div v-for="epData in allData[currentDiff]" :key="epData.ep">
+                <div class="ep-title">{{ currentDiff }} - {{ epData.ep }}</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="monster-col">Monster</th>
+                            <th class="v">VIR</th><th class="g">GRE</th><th class="s">SKY</th><th class="b">BLU</th>
+                            <th class="p">PUR</th><th class="pi">PIN</th><th class="r">RED</th><th class="o">ORA</th>
+                            <th class="y">YEL</th><th class="w">WHI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="row in filterRows(epData.rows)" :key="row.m">
+                            <td class="monster-col" :class="{highlight: isMatch(row.m)}">{{ row.m }}</td>
+                            <td v-for="id in ids" :class="[id, {highlight: isMatch(row[id])}]" 
+                                @mouseover="showTips($event, row[id])" @mouseleave="hideTips">
+                                {{ row[id] }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 悬浮信息 -->
+        <div v-if="tipContent" class="tooltip" :style="{ top: tipY + 'px', left: tipX + 'px' }">
+            {{ tipContent }}
+        </div>
+
+        <button class="update-btn" @click="loadData" title="从服务器同步最新数据">🔄</button>
+    </div>
+
+    <script>
+        const { createApp, ref, onMounted } = Vue
+        createApp({
+            setup() {
+                const difficulties = ['N', 'H', 'VH', 'U'];
+                const ids = ['v','g','s','b','p','pi','r','o','y','w'];
+                const currentDiff = ref('N');
+                const searchQuery = ref('');
+                const allData = ref({});
+                const tipContent = ref('');
+                const tipX = ref(0); const tipY = ref(0);
+
+                const loadData = async () => {
+                    const res = await fetch('./data.json?t=' + Date.now());
+                    allData.value = await res.json();
+                };
+
+                const isMatch = (text) => {
+                    if (!searchQuery.value) return false;
+                    return text.toLowerCase().includes(searchQuery.value.toLowerCase());
+                };
+
+                const filterRows = (rows) => {
+                    if (!searchQuery.value) return rows;
+                    const q = searchQuery.value.toLowerCase();
+                    return rows.filter(r => Object.values(r).some(v => v.toLowerCase().includes(q)));
+                };
+
+                const showTips = (e, content) => {
+                    if(!content) return;
+                    tipContent.value = content;
+                    tipX.value = e.clientX + 10;
+                    tipY.value = e.clientY + 10;
+                };
+
+                const hideTips = () => { tipContent.value = ''; };
+
+                onMounted(loadData);
+                return { difficulties, ids, currentDiff, searchQuery, allData, loadData, isMatch, filterRows, showTips, hideTips, tipContent, tipX, tipY }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>

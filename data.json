@@ -1,0 +1,58 @@
+{
+  "N": [
+    {
+      "ep": "EPISODE 1",
+      "rows": [
+        { "m": "Hildebear", "v": "Trimate 1/2.22", "g": "Trimate 1/2.22", "s": "Trimate 1/2.22", "b": "Trimate 1/2.22", "p": "Trimate 1/2.22", "pi": "Trimate 1/2.22", "r": "Trimate 1/2.22", "o": "Trimate 1/2.22", "y": "Trimate 1/2.22", "w": "Trimate 1/2.22" },
+        { "m": "Rag Rappy", "v": "Monomate 1/2", "g": "Monomate 1/2", "s": "Monomate 1/2", "b": "Monomate 1/2", "p": "Monomate 1/2", "pi": "Monomate 1/2", "r": "Monomate 1/2", "o": "Monomate 1/2", "y": "Monomate 1/2", "w": "Monomate 1/2" }
+      ]
+    },
+    { "ep": "EPISODE 2", "rows": [] },
+    { "ep": "EPISODE 4", "rows": [] }
+  ],
+  "H": [
+    {
+      "ep": "EPISODE 1",
+      "rows": [
+        { "m": "Hildebear", "v": "AddSlot 1/73.1", "g": "AddSlot 1/73.1", "s": "AddSlot 1/73.1", "b": "AddSlot 1/73.1", "p": "AddSlot 1/73.1", "pi": "AddSlot 1/73.1", "r": "AddSlot 1/73.1", "o": "AddSlot 1/73.1", "y": "AddSlot 1/73.1", "w": "AddSlot 1/73.1" }
+      ]
+    },
+    { "ep": "EPISODE 2", "rows": [] },
+    { "ep": "EPISODE 4", "rows": [] }
+  ],
+  "VH": [
+    {
+      "ep": "EPISODE 1",
+      "rows": [
+        { "m": "Hildebear", "v": "Photon Crystal 1/73.1", "g": "Photon Crystal 1/73.1", "s": "Photon Crystal 1/73.1", "b": "Photon Crystal 1/73.1", "p": "Photon Crystal 1/73.1", "pi": "Photon Crystal 1/73.1", "r": "Photon Crystal 1/73.1", "o": "Photon Crystal 1/73.1", "y": "Photon Crystal 1/73.1", "w": "Photon Crystal 1/73.1" }
+      ]
+    },
+    { "ep": "EPISODE 2", "rows": [] },
+    { "ep": "EPISODE 4", "rows": [] }
+  ],
+  "U": [
+    {
+      "ep": "EPISODE 1",
+      "rows": [
+        { "m": "Hildebear", "v": "Frozen Shooter 1/390", "g": "Hildelt's Cane 1/1260", "s": "Heavenly/Battle 1/390", "b": "God/Ability 1/390", "p": "Red Handgun 1/390", "pi": "Hildelt's Cane 1/1260", "r": "God/Ability 1/390", "o": "Red Handgun 1/390", "y": "Frozen Shooter 1/390", "w": "Heavenly/Battle 1/390" },
+        { "m": "Rag Rappy", "v": "Sange 1/1050", "g": "Guard Wave 1/351", "s": "Sange 1/1050", "b": "Guard Wave 1/351", "p": "Sange 1/1050", "pi": "Guard Wave 1/351", "r": "Sange 1/1050", "o": "Guard Wave 1/351", "y": "Sange 1/1050", "w": "Guard Wave 1/351" },
+        { "m": "Monest", "v": "Photon Crystal 1/64", "g": "Photon Crystal 1/64", "s": "Photon Crystal 1/64", "b": "Photon Crystal 1/64", "p": "Photon Crystal 1/64", "pi": "Photon Crystal 1/64", "r": "Photon Crystal 1/64", "o": "Photon Crystal 1/64", "y": "Photon Crystal 1/64", "w": "Photon Crystal 1/64" },
+        { "m": "Savage Wolf", "v": "Heavenly/Body 1/390", "g": "Heavenly/Body 1/390", "s": "Heavenly/Body 1/390", "b": "Heavenly/Body 1/390", "p": "Heavenly/Body 1/390", "pi": "Heavenly/Body 1/390", "r": "Heavenly/Body 1/390", "o": "Heavenly/Body 1/390", "y": "Heavenly/Body 1/390", "w": "Heavenly/Body 1/390" },
+        { "m": "Booma", "v": "Red Saber 1/315", "g": "Trimate 1/2", "s": "Red Saber 1/315", "b": "Trimate 1/2", "p": "Red Saber 1/315", "pi": "Trimate 1/2", "r": "Red Saber 1/315", "o": "Trimate 1/2", "y": "Red Saber 1/315", "w": "Trimate 1/2" }
+      ]
+    },
+    {
+      "ep": "EPISODE 2",
+      "rows": [
+        { "m": "Merillia", "v": "God/Mind 1/315", "g": "God/Mind 1/315", "s": "God/Mind 1/315", "b": "God/Mind 1/315", "p": "God/Mind 1/315", "pi": "God/Mind 1/315", "r": "God/Mind 1/315", "o": "God/Mind 1/315", "y": "God/Mind 1/315", "w": "God/Mind 1/315" },
+        { "m": "Gee", "v": "Aura Field 1/450", "g": "Aura Field 1/450", "s": "Aura Field 1/450", "b": "Aura Field 1/450", "p": "Aura Field 1/450", "pi": "Aura Field 1/450", "r": "Aura Field 1/450", "o": "Aura Field 1/450", "y": "Aura Field 1/450", "w": "Aura Field 1/450" }
+      ]
+    },
+    {
+      "ep": "EPISODE 4",
+      "rows": [
+        { "m": "Sand Rappie", "v": "Heavenly/Luck 1/450", "g": "Heavenly/Luck 1/450", "s": "Heavenly/Luck 1/450", "b": "Heavenly/Luck 1/450", "p": "Heavenly/Luck 1/450", "pi": "Heavenly/Luck 1/450", "r": "Heavenly/Luck 1/450", "o": "Heavenly/Luck 1/450", "y": "Heavenly/Luck 1/450", "w": "Heavenly/Luck 1/450" }
+      ]
+    }
+  ]
+}
