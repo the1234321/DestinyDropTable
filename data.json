@@ -46,8 +46,9 @@
 
   "items": {
     "红色大剑": {
-      "type": "Sword",
-      "description": "A legendary crimson blade.",
+      "english":"Heaven Punisher",
+      "type": "Gun",
+      "description": " ",
       "quest":"建议刷取",
        "superitem": true
     },
@@ -79,7 +80,7 @@
 
   "tables": {
 
-    "N": {
+    "普通": {
 
       "EP1": {
         "monsters": [
@@ -130,7 +131,7 @@
       }
     },
 
-    "H": {
+    "困难": {
 
       "EP1": {
         "monsters": [
@@ -169,7 +170,7 @@
       }
     },
 
-    "VH": {
+    "极难": {
 
       "EP1": {
         "monsters": [
@@ -208,7 +209,7 @@
       }
     },
 
-    "U": {
+    "极限": {
 
       "EP1": {
         "monsters": [
