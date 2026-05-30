@@ -1,93 +1,314 @@
 {
   "version": "2026.05.30",
 
+  "sectionIds": [
+    {
+      "id": "Viridia",
+      "color": "#1f8f6a"
+    },
+    {
+      "id": "Greenill",
+      "color": "#009c63"
+    },
+    {
+      "id": "Skyly",
+      "color": "#0084d1"
+    },
+    {
+      "id": "Bluefull",
+      "color": "#0069c9"
+    },
+    {
+      "id": "Purplenum",
+      "color": "#7f1d7a"
+    },
+    {
+      "id": "Pinkal",
+      "color": "#c2185b"
+    },
+    {
+      "id": "Redria",
+      "color": "#a32121"
+    },
+    {
+      "id": "Oran",
+      "color": "#c05a00"
+    },
+    {
+      "id": "Yellowboze",
+      "color": "#9b8700"
+    },
+    {
+      "id": "Whitill",
+      "color": "#4b5563"
+    }
+  ],
+
   "items": {
-    "Red Sword": {
-      "rarity": "11★",
+    "红色大剑": {
       "type": "Sword",
-      "description": "A legendary crimson blade."
+      "description": "A legendary crimson blade.",
+      "quest":"建议刷取",
+       "superitem": true
     },
 
     "God/Battle": {
-      "rarity": "Unit",
       "type": "Unit",
       "description": "Increases attack speed."
     },
 
     "Monomate": {
-      "rarity": "Common",
       "type": "Consumable",
       "description": "Recovers HP."
+    },
+
+    "Photon Drop": {
+      "type": "Special",
+      "description": "Exchange item."
+    },
+
+    "Spread Needle": {
+      "type": "Gun",
+      "description": "Fires a wide spread shot."
+    },
+    "Partisan of Lightning": {
+      "type": "Gun",
+      "description": "Fires a wide spread shot."
     }
   },
 
-  "drops": [
-    {
-      "difficulty": "N",
-      "episode": "EP1",
-      "monster": "Booma",
+  "tables": {
 
-      "Viridia": "Red Sword",
-      "Greenill": "Monomate",
-      "Skyly": "God/Battle",
-      "Bluefull": "Monomate",
-      "Purplenum": "Monomate",
-      "Pinkal": "Monomate",
-      "Redria": "Monomate",
-      "Oran": "Monomate",
-      "Yellowboze": "Monomate",
-      "Whitill": "Monomate"
+    "N": {
+
+      "EP1": {
+        "monsters": [
+          {
+            "name": "Booma",
+            "dar": "55%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/22" },
+              "Greenill": { "item": "Monomate", "rate": "1/2" },
+              "Skyly": { "item": "God/Battle", "rate": "1/315" },
+              "Whitill": { "item": "Partisan of Lightning", "rate": "1/315000" }
+            }
+          },
+
+          {
+            "name": "Gobooma",
+            "dar": "60%",
+            "drops": {
+              "Viridia": { "item": "Photon Drop", "rate": "1/120" },
+              "Whitill": { "item": "Spread Needle", "rate": "1/900" }
+            }
+          }
+        ]
+      },
+
+      "EP2": {
+        "monsters": [
+          {
+            "name": "Barba Ray",
+            "dar": "65%",
+            "drops": {
+              "Viridia": { "item": "Photon Drop", "rate": "1/50" }
+            }
+          }
+        ]
+      },
+
+      "EP4": {
+        "monsters": [
+          {
+            "name": "Sand Rappy",
+            "dar": "70%",
+            "drops": {
+              "Skyly": { "item": "Spread Needle", "rate": "1/500" }
+            }
+          }
+        ]
+      }
     },
 
-    {
-      "difficulty": "H",
-      "episode": "EP1",
-      "monster": "Gobooma",
+    "H": {
 
-      "Viridia": "God/Battle",
-      "Greenill": "Red Sword",
-      "Skyly": "Monomate",
-      "Bluefull": "Monomate",
-      "Purplenum": "Monomate",
-      "Pinkal": "Monomate",
-      "Redria": "Monomate",
-      "Oran": "Monomate",
-      "Yellowboze": "Monomate",
-      "Whitill": "Monomate"
+      "EP1": {
+        "monsters": [
+          {
+            "name": "Booma",
+            "dar": "65%",
+            "drops": {
+              "Viridia": { "item": "God/Battle", "rate": "1/180" }
+            }
+          }
+        ]
+      },
+
+      "EP2": {
+        "monsters": [
+          {
+            "name": "Gal Gryphon",
+            "dar": "70%",
+            "drops": {
+              "Redria": { "item": "红色大剑", "rate": "1/420" }
+            }
+          }
+        ]
+      },
+
+      "EP4": {
+        "monsters": [
+          {
+            "name": "Astark",
+            "dar": "75%",
+            "drops": {
+              "Whitill": { "item": "Photon Drop", "rate": "1/15" }
+            }
+          }
+        ]
+      }
     },
 
-    {
-      "difficulty": "VH",
-      "episode": "EP2",
-      "monster": "Hildebear",
+    "VH": {
 
-      "Viridia": "Red Sword",
-      "Greenill": "God/Battle",
-      "Skyly": "Monomate",
-      "Bluefull": "Monomate",
-      "Purplenum": "Monomate",
-      "Pinkal": "Monomate",
-      "Redria": "Monomate",
-      "Oran": "Monomate",
-      "Yellowboze": "Monomate",
-      "Whitill": "Monomate"
+      "EP1": {
+        "monsters": [
+          {
+            "name": "Dragon",
+            "dar": "75%",
+            "drops": {
+              "Skyly": { "item": "红色大剑", "rate": "1/150" }
+            }
+          }
+        ]
+      },
+
+      "EP2": {
+        "monsters": [
+          {
+            "name": "Olga Flow",
+            "dar": "80%",
+            "drops": {
+              "Purplenum": { "item": "Spread Needle", "rate": "1/300" }
+            }
+          }
+        ]
+      },
+
+      "EP4": {
+        "monsters": [
+          {
+            "name": "Saint-Milion",
+            "dar": "80%",
+            "drops": {
+              "Yellowboze": { "item": "God/Battle", "rate": "1/110" }
+            }
+          }
+        ]
+      }
     },
 
-    {
-      "difficulty": "U",
-      "episode": "EP4",
-      "monster": "Sand Rappy",
+    "U": {
 
-      "Viridia": "God/Battle",
-      "Greenill": "Monomate",
-      "Skyly": "Red Sword",
-      "Bluefull": "Monomate",
-      "Purplenum": "Monomate",
-      "Pinkal": "Monomate",
-      "Redria": "Monomate",
-      "Oran": "Monomate",
-      "Yellowboze": "Monomate",
-      "Whitill": "Monomate"
+      "EP1": {
+        "monsters": [
+          {
+            "name": "Dark Falz",
+            "dar": "85%",
+            "drops": {
+              "Whitill": { "item": "Spread Needle", "rate": "1/200" }
+            }
+          }
+        ]
+      },
+
+      "EP2": {
+        "monsters": [
+          {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                    {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                    {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                    {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                              {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                    {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                    {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                              {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                    {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          },
+                    {
+            "name": "Olga Flow",
+            "dar": "85%",
+            "drops": {
+              "Viridia": { "item": "红色大剑", "rate": "1/90" }
+            }
+          }
+        ]
+      },
+
+      "EP4": {
+        "monsters": [
+          {
+            "name": "Shambertin",
+            "dar": "90%",
+            "drops": {
+              "Redria": { "item": "God/Battle", "rate": "1/60" }
+            }
+          }
+        ]
+      }
     }
-  ]
+
+  }
 }

@@ -2,446 +2,407 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>PSOBB Destiny Drop Tables</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drop Tables</title>
 <style>
-
-body{
-    margin:0;
-    background:#111;
-    color:#eee;
-    font-family:Segoe UI,Arial,sans-serif;
+:root{
+    --viridia:#1f8f6a;
+    --greenill:#009c63;
+    --skyly:#0084d1;
+    --bluefull:#0069c9;
+    --purplenum:#7f1d7a;
+    --pinkal:#c2185b;
+    --redria:#a32121;
+    --oran:#c05a00;
+    --yellowboze:#9b8700;
+    --whitill:#4b5563;
+}
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#0f172a; color:white; }
+.header{
+     text-align:center; font-size:28px; font-weight:bold; padding:20px; }
+.difficulty-tabs{ display:flex; justify-content:center; gap:10px; padding:10px; position:sticky; top:0; background:#111827; z-index:100; }
+.tab-btn{ padding:10px 20px; border:none; border-radius:8px; cursor:pointer; background:#1f2937; color:white; }
+.tab-btn.active{ background:#2563eb; }
+.search-bar{ padding:15px; text-align:center; }
+.search-input{ width:400px; max-width:90%; padding:10px; border-radius:8px; border:none; }
+.ep-nav{ display:flex; position:sticky; justify-content:center; gap:10px; margin-bottom:15px; }
+.ep-nav button{ padding:8px 16px; border:none; border-radius:6px; cursor:pointer; }
+.table-section{ margin-top:10px;margin-bottom:16px; }
+.table-title{ text-align:center; font-size:24px; margin-bottom:10px; position:sticky; top:0; background:#0f172a; z-index:20; }
+.table-wrapper{overflow:auto;display:flex;justify-content:center;}
+table{ border-collapse:collapse; width:max-content; min-width:1200px; table-layout:fixed;}
+th, td{ border:1px solid #334155; padding:6px; font-size:12px; text-align:center; }
+thead th{ position:sticky; top:0; background:#111827; z-index:10; }
+tbody td:first-child, thead th:first-child{ position:sticky; left:0; background:#111827; z-index:11; width:140px;min-width:140px;max-width:140px;}
+thead th:not(:first-child),
+tbody td:not(:first-child){width:130px;min-width:130px;max-width:130px;}
+.item-name{
+    display:block;
+    line-height:1.15;
 }
 
-header{
-    background:#1a1a1a;
-    padding:10px;
-    position:sticky;
-    top:0;
-    z-index:100;
+.drop-rate{
+    display:block;
+    margin-top:1px;
+    font-size:10px;
+    color:#94a3b8;
+}
+.monster-name{ font-weight:bold; }
+.dar{ color:#facc15; font-size:10px; }
+.highlight{ outline:3px solid yellow; }
+.tooltip{ position:fixed; display:none; background:#111827; border:1px solid #475569; padding:10px; border-radius:8px; z-index:9999; max-width:300px; pointer-events:none; }
+/* superitem */
+.super-item{
+    font-weight:700;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0066ff,
+        #ff00ff
+    );
+    background-size:300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:rainbow 4s linear infinite;
 }
 
-.toolbar{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    align-items:center;
+@keyframes rainbow{
+    0%{ background-position:0%; }
+    100%{ background-position:300%; }
 }
 
-.tab{
-    padding:8px 16px;
-    background:#2a2a2a;
-    cursor:pointer;
-    border-radius:4px;
-    user-select:none;
+/* Tooltip 内不同字段颜色 */
+.tooltip-name{ color:#60a5fa; font-weight:700; font-size:16px; }
+.tooltip-name.super{ /* superitem 彩虹效果 */ background: linear-gradient(90deg,#ff0000,#ffff00,#00ff00,#00ffff,#0066ff,#ff00ff); background-size:300%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation:rainbow 4s linear infinite; }
+.tooltip-type{ color:#34d399; margin-top:4px; }
+.tooltip-desc{ color:#d1d5db; margin-top:2px; }
+.tooltip-quest{ color:#facc15; margin-top:2px; }
+
+.header-Viridia{
+    background:var(--viridia);
 }
 
-.tab.active{
-    background:#4caf50;
+.header-Greenill{
+    background:var(--greenill);
 }
 
-.search{
-    margin-left:auto;
-    padding:8px;
-    min-width:250px;
+.header-Skyly{
+    background:var(--skyly);
 }
 
-button{
-    padding:8px 14px;
-    cursor:pointer;
+.header-Bluefull{
+    background:var(--bluefull);
 }
 
-.version{
-    margin-top:8px;
-    color:#aaa;
-    font-size:13px;
+.header-Purplenum{
+    background:var(--purplenum);
 }
 
-.container{
-    padding:15px;
+.header-Pinkal{
+    background:var(--pinkal);
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    font-size:13px;
+.header-Redria{
+    background:var(--redria);
 }
 
-th{
-    background:#222;
-    color:white;
-    position:sticky;
-    top:72px;
-    z-index:50;
+.header-Oran{
+    background:var(--oran);
 }
 
-th,td{
-    border:1px solid #333;
-    padding:6px;
-    text-align:center;
+.header-Yellowboze{
+    background:var(--yellowboze);
 }
 
-th:nth-child(2),
-td:nth-child(2){background:#0b665c;}
-
-th:nth-child(3),
-td:nth-child(3){background:#1e5f9c;}
-
-th:nth-child(4),
-td:nth-child(4){background:#5b2f9e;}
-
-th:nth-child(5),
-td:nth-child(5){background:#8a3b23;}
-
-th:nth-child(6),
-td:nth-child(6){background:#85700f;}
-
-.highlight{
-    background:yellow !important;
-    color:black !important;
-    font-weight:bold;
+.header-Whitill{
+    background:var(--whitill);
 }
 
-.tooltip{
-    position:fixed;
-    display:none;
-    max-width:320px;
-    background:#222;
-    border:1px solid #666;
-    padding:10px;
-    border-radius:6px;
-    z-index:9999;
-    pointer-events:none;
+
+.col-Viridia{
+    background:rgba(31,143,106,.25);
+}
+
+.col-Greenill{
+    background:rgba(0,156,99,.25);
+}
+
+.col-Skyly{
+    background:rgba(0,132,209,.25);
+}
+
+.col-Bluefull{
+    background:rgba(0,105,201,.25);
+}
+
+.col-Purplenum{
+    background:rgba(127,29,122,.25);
+}
+
+.col-Pinkal{
+    background:rgba(194,24,91,.25);
+}
+
+.col-Redria{
+    background:rgba(163,33,33,.25);
+}
+
+.col-Oran{
+    background:rgba(192,90,0,.25);
+}
+
+.col-Yellowboze{
+    background:rgba(155,135,0,.25);
+}
+
+.col-Whitill{
+    background:rgba(75,85,99,.25);
+}
+
+.col-Viridia:hover{
+    background:rgba(31,143,106,.45);
+}
+
+.col-Greenill:hover{
+    background:rgba(0,156,99,.45);
+}
+
+.col-Skyly:hover{
+    background:rgba(0,132,209,.45);
+}
+
+.col-Bluefull:hover{
+    background:rgba(0,105,201,.45);
+}
+
+.col-Purplenum:hover{
+    background:rgba(127,29,122,.45);
+}
+
+.col-Pinkal:hover{
+    background:rgba(194,24,91,.45);
+}
+
+.col-Redria:hover{
+    background:rgba(163,33,33,.45);
+}
+
+.col-Oran:hover{
+    background:rgba(192,90,0,.45);
+}
+
+.col-Yellowboze:hover{
+    background:rgba(155,135,0,.45);
+}
+
+.col-Whitill:hover{
+    background:rgba(75,85,99,.45);
+}
+
+.item-cell:hover{
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.25);
+
+    z-index:5;
+
+    position:relative;
+}
+
+#content{max-width:1800px;margin:auto;padding:0 8px;}
+tbody td:hover{
+    box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.2);
 }
 
 </style>
 </head>
 <body>
 
-<header>
+<div class="header">DROP TABLES</div>
 
-<div class="toolbar" id="difficultyTabs"></div>
-
-<div style="height:10px"></div>
-
-<div class="toolbar" id="episodeTabs">
-
-<input
-class="search"
-id="searchBox"
-placeholder="搜索怪物或物品..."
->
-
-<button onclick="reloadData()">更新数据</button>
-
+<div class="difficulty-tabs">
+  <button class="tab-btn active" onclick="switchDifficulty('N')">N</button>
+  <button class="tab-btn" onclick="switchDifficulty('H')">H</button>
+  <button class="tab-btn" onclick="switchDifficulty('VH')">VH</button>
+  <button class="tab-btn" onclick="switchDifficulty('U')">U</button>
 </div>
 
-<div class="version" id="version"></div>
-
-</header>
-
-<div class="container">
-
-<table id="dropTable">
-
-<thead>
-<tr>
-
-<th>Monster</th>
-
-<th>铭绿</th>
-<th>Greenill</th>
-<th>Skyly</th>
-<th>Bluefull</th>
-<th>Purplenum</th>
-
-<th>Pinkal</th>
-<th>Redria</th>
-<th>Oran</th>
-<th>Yellowboze</th>
-<th>Whitill</th>
-
-</tr>
-</thead>
-
-<tbody></tbody>
-
-</table>
-
+<div class="search-bar">
+  <input id="searchInput" class="search-input" placeholder="搜索物品 / 怪物..." oninput="performSearch()">
 </div>
 
-<div class="tooltip" id="tooltip"></div>
+<div class="ep-nav">
+  <button onclick="jumpTo('EP1')">EP1</button>
+  <button onclick="jumpTo('EP2')">EP2</button>
+  <button onclick="jumpTo('EP4')">EP4</button>
+</div>
+
+<div id="content"></div>
+<div id="tooltip" class="tooltip"></div>
 
 <script>
-
-let DATA=null;
-
-let currentDifficulty='U';
-let currentEpisode='EP1';
-
-const difficulties=['N','H','VH','U'];
-const episodes=['EP1','EP2','EP4'];
-
+let data;
+let currentDifficulty = "N";
+let sectionIds = [];
 async function loadData(){
-
-    const res=await fetch(
-        "data.json?t="+Date.now()
-    );
-
-    DATA=await res.json();
-
-    document.getElementById("version")
-        .innerText="Version: "+DATA.version;
-
-    buildTabs();
-
-    renderTable();
+    const res = await fetch('data.json?t=' + Date.now());
+    data = await res.json();
+    sectionIds = data.sectionIds;
+    const hash = location.hash;
+    if(hash){ 
+        const m = hash.match(/^#([NHVHU]+)_(EP\d)$/);
+        if(m){ currentDifficulty=m[1]; jumpTo(m[2]); }
+    }
+    render();
 }
 
-function buildTabs(){
-
-    const d=document.getElementById("difficultyTabs");
-
-    d.innerHTML='';
-
-    difficulties.forEach(diff=>{
-
-        const btn=document.createElement('div');
-
-        btn.className=
-            'tab'+
-            (diff===currentDifficulty?' active':'');
-
-        btn.innerText=diff;
-
-        btn.onclick=()=>{
-
-            currentDifficulty=diff;
-
-            buildTabs();
-            renderTable();
-
-        };
-
-        d.appendChild(btn);
-
-    });
-
-    const e=document.getElementById("episodeTabs");
-
-    episodes.forEach(ep=>{
-
-        let btn=document.getElementById("ep_"+ep);
-
-        if(btn) return;
-
-        btn=document.createElement('div');
-
-        btn.id='ep_'+ep;
-
-        btn.className='tab';
-
-        btn.innerText=ep;
-
-        btn.onclick=()=>{
-
-            currentEpisode=ep;
-
-            document
-            .querySelectorAll('#episodeTabs .tab')
-            .forEach(x=>x.classList.remove('active'));
-
-            btn.classList.add('active');
-
-            renderTable();
-
-        };
-
-        e.insertBefore(btn,e.firstChild);
-
-    });
-
-    document
-    .querySelector('#ep_'+currentEpisode)
-    ?.classList.add('active');
-
+function switchDifficulty(diff){
+    currentDifficulty=diff;
+    document.querySelectorAll(".tab-btn").forEach(btn=>btn.classList.remove("active"));
+    [...document.querySelectorAll(".tab-btn")].find(x=>x.innerText===diff).classList.add("active");
+    render();
 }
 
-function renderTable(){
+function jumpTo(ep){
+    const el = document.getElementById(ep);
+    if(el){
+        el.scrollIntoView({behavior:"smooth"});
+        location.hash = currentDifficulty + "_" + ep;
 
-    const tbody=
-    document.querySelector('#dropTable tbody');
+        // 刷新 active tab
+        document.querySelectorAll(".tab-btn").forEach(btn=>btn.classList.remove("active"));
+        [...document.querySelectorAll(".tab-btn")].find(x=>x.innerText===currentDifficulty).classList.add("active");
+    }
+}
 
-    tbody.innerHTML='';
+function render() {
+    const container = document.getElementById("content");
+    container.innerHTML = "";
 
-    const keyword=
-    document.getElementById('searchBox')
-    .value
-    .toLowerCase();
+    const ids = sectionIds; // 全局 sectionId 数组
 
-    const rows=
-    DATA.drops.filter(x=>
+    ["EP1", "EP2", "EP4"].forEach(ep => {
+        const epData = data.tables[currentDifficulty][ep];
+        if (!epData) return;
 
-        x.difficulty===currentDifficulty
-        &&
-        x.episode===currentEpisode
+        const section = document.createElement("div");
+        section.className = "table-section";
+        section.id = ep;
 
-    );
+        let html = `
+            <div class="table-title">${currentDifficulty} ${ep}</div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Monster</th>
+        `;
 
-    rows.forEach(row=>{
-
-        let found=false;
-
-        Object.values(row)
-        .forEach(v=>{
-
-            if(
-                String(v)
-                .toLowerCase()
-                .includes(keyword)
-            )
-            found=true;
-
+        ids.forEach(id => {
+            html += `<th class="header-${id.id}">${id.id}</th>`;
         });
 
-        if(keyword && !found)
-            return;
+        html += `</tr></thead><tbody>`;
 
-        const tr=document.createElement('tr');
+        epData.monsters.forEach(monster => {
+            html += `<tr>
+                        <td>
+                            <div class="monster-name">${monster.name}</div>
+                            <div class="dar">DAR ${monster.dar}</div>
+                        </td>
+            `;
 
-        const cols=[
+            ids.forEach(sectionId => {
+                const drop = monster.drops[sectionId.id];
+                if (drop) {
+                    const itemInfo = data.items[drop.item];
+                    const isSuper = itemInfo?.superitem === true;
 
-            'monster',
+                    html += `
+                    <td class="item-cell col-${sectionId.id}" data-item="${drop.item}">
+                        <span class="item-name ${isSuper ? 'super-item' : ''}">
+                            ${drop.item}
+                        </span>
+                        <small class="drop-rate">
+                            ${drop.rate}
+                        </small>
+                    </td>
+                    `;
+                } else {
+                    html += `<td>-</td>`;
+                }
+            });
 
-            'Viridia',
-            'Greenill',
-            'Skyly',
-            'Bluefull',
-            'Purplenum',
-
-            'Pinkal',
-            'Redria',
-            'Oran',
-            'Yellowboze',
-            'Whitill'
-
-        ];
-
-        cols.forEach(col=>{
-
-            const td=document.createElement('td');
-
-            const value=row[col] || '';
-
-            if(
-                keyword &&
-                value.toLowerCase()
-                .includes(keyword)
-            ){
-
-                td.innerHTML=
-                value.replace(
-                    new RegExp(
-                        keyword,
-                        'ig'
-                    ),
-                    m=>
-                    '<span class="highlight">'
-                    +m+
-                    '</span>'
-                );
-
-            }
-            else{
-
-                td.textContent=value;
-
-            }
-
-            if(DATA.items[value]){
-
-                td.addEventListener(
-                    'mousemove',
-                    ev=>showTooltip(
-                        ev,
-                        value
-                    )
-                );
-
-                td.addEventListener(
-                    'mouseleave',
-                    hideTooltip
-                );
-
-            }
-
-            tr.appendChild(td);
-
+            html += `</tr>`;
         });
 
-        tbody.appendChild(tr);
-
+        html += `</tbody></table></div>`;
+        section.innerHTML = html;
+        container.appendChild(section);
     });
 
+    bindTooltips();
+    performSearch(); // 搜索后高亮仍生效
 }
 
-function showTooltip(ev,item){
+// Tooltip
+function bindTooltips(){
+    document.querySelectorAll(".item-cell").forEach(cell=>{
+        cell.addEventListener("mousemove", e => {
+    const itemName = cell.dataset.item;
+    const item = data.items[itemName];
+    if(!item) return;
 
-    const data=
-    DATA.items[item];
+    const isSuper = item.superitem === true;
 
-    if(!data)
-        return;
-
-    const t=
-    document.getElementById(
-        'tooltip'
-    );
-
-    t.innerHTML=`
-        <b>${item}</b><br><br>
-        类型：${data.type||''}<br>
-        稀有度：${data.rarity||''}<br><br>
-        ${data.description||''}
+    const tooltip = document.getElementById("tooltip");
+    tooltip.innerHTML = `
+        <div class="tooltip-name ${isSuper ? 'super' : ''}">
+            ${itemName}
+        </div>
+        <div class="tooltip-type">类型：${item.type}</div>
+        <div class="tooltip-desc">${item.description}</div>
+        ${item.quest ? `<div class="tooltip-quest">推荐任务：${item.quest}</div>` : ''}
     `;
 
-    t.style.display='block';
-
-    t.style.left=
-        (ev.clientX+15)+'px';
-
-    t.style.top=
-        (ev.clientY+15)+'px';
+    tooltip.style.display = "block";
+    tooltip.style.left = (e.clientX+15) + "px";
+    tooltip.style.top = (e.clientY+15) + "px";
+});
+        cell.addEventListener("mouseleave",()=>{document.getElementById("tooltip").style.display="none";});
+    });
 }
 
-function hideTooltip(){
-
-    document
-    .getElementById('tooltip')
-    .style.display='none';
-
-}
-
-document
-.getElementById('searchBox')
-.addEventListener(
-    'input',
-    renderTable
-);
-
-async function reloadData(){
-
-    await loadData();
-
-    alert(
-        '已从GitHub获取最新数据'
-    );
+// 搜索
+function performSearch(){
+    const keyword = document.getElementById("searchInput").value.toLowerCase();
+    let firstMatch = null;
+    document.querySelectorAll("tbody tr").forEach(row=>{
+        row.style.display="none";
+        row.querySelectorAll("td").forEach(td=>td.classList.remove("highlight"));
+        const text = row.innerText.toLowerCase();
+        if(keyword==="" || text.includes(keyword)){
+            row.style.display="";
+            row.querySelectorAll("td").forEach(td=>{
+                if(td.innerText.toLowerCase().includes(keyword) && keyword!==""){
+                    td.classList.add("highlight");
+                    if(!firstMatch) firstMatch = row;
+                }
+            });
+        }
+    });
+    if(firstMatch){ 
+        firstMatch.scrollIntoView({behavior:"smooth"});
+    }
 }
 
 loadData();
-
+setInterval(loadData,30000); // 每30秒刷新
 </script>
 
 </body>
