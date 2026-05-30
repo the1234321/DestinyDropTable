@@ -1,132 +1,448 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSO Drop Charts</title>
-    <script src="https://unpkg.com"></script>
-    <style>
-        :root {
-            --bg-dark: #121212; --text-gray: #ccc;
-            --viridia: #1b5e20; --greenill: #4caf50; --skyly: #0288d1; --bluefull: #1565c0;
-            --purplenum: #6a1b9a; --pinkal: #ad1457; --redria: #b71c1c; --oran: #ef6c00;
-            --yellowboze: #fbc02d; --whitill: #eeeeee;
-        }
-        body { background: var(--bg-dark); color: white; font-family: sans-serif; margin: 0; padding-bottom: 50px; }
-        
-        /* 顶部导航 */
-        .header { sticky; top: 0; background: #1a1a1a; z-index: 100; padding: 10px; border-bottom: 1px solid #333; }
-        .tabs { display: flex; gap: 5px; justify-content: center; margin-bottom: 10px; }
-        .tab-btn { border: 1px solid #444; background: #222; color: #aaa; padding: 8px 15px; cursor: pointer; border-radius: 4px; }
-        .tab-btn.active { background: #444; color: #fff; border-color: orange; }
-        
-        /* 搜索框 */
-        .search-box { width: 90%; max-width: 500px; display: block; margin: 0 auto; padding: 8px; border-radius: 4px; border: 1px solid #444; background: #222; color: white; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-        /* 表格样式 */
-        .container { padding: 10px; }
-        .ep-title { text-align: center; color: #ffd700; margin: 20px 0 10px; font-size: 1.2em; border-bottom: 1px solid #333; }
-        table { width: 100%; border-collapse: collapse; font-size: 11px; table-layout: fixed; }
-        th, td { border: 1px solid #222; padding: 4px 2px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-        
-        /* ID 颜色映射 */
-        .v { background: var(--viridia); } .g { background: var(--greenill); }
-        .s { background: var(--skyly); } .b { background: var(--bluefull); }
-        .p { background: var(--purplenum); } .pi { background: var(--pinkal); color: #000; }
-        .r { background: var(--redria); } .o { background: var(--oran); }
-        .y { background: var(--yellowboze); color: #000; } .w { background: var(--whitill); color: #000; }
-        
-        .monster-col { width: 80px; background: #1a1a1a; font-weight: bold; position: sticky; left: 0; }
-        .highlight { background: yellow !important; color: black !important; font-weight: bold; }
+<title>PSOBB Destiny Drop Tables</title>
 
-        /* 悬浮窗工具栏 */
-        .tooltip { position: fixed; background: #333; border: 1px solid orange; padding: 8px; border-radius: 4px; z-index: 1000; pointer-events: none; font-size: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
-        .update-btn { position: fixed; bottom: 20px; right: 20px; background: orange; border: none; padding: 10px; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 10px black; }
-    </style>
+<style>
+
+body{
+    margin:0;
+    background:#111;
+    color:#eee;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+header{
+    background:#1a1a1a;
+    padding:10px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-items:center;
+}
+
+.tab{
+    padding:8px 16px;
+    background:#2a2a2a;
+    cursor:pointer;
+    border-radius:4px;
+    user-select:none;
+}
+
+.tab.active{
+    background:#4caf50;
+}
+
+.search{
+    margin-left:auto;
+    padding:8px;
+    min-width:250px;
+}
+
+button{
+    padding:8px 14px;
+    cursor:pointer;
+}
+
+.version{
+    margin-top:8px;
+    color:#aaa;
+    font-size:13px;
+}
+
+.container{
+    padding:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+}
+
+th{
+    background:#222;
+    color:white;
+    position:sticky;
+    top:72px;
+    z-index:50;
+}
+
+th,td{
+    border:1px solid #333;
+    padding:6px;
+    text-align:center;
+}
+
+th:nth-child(2),
+td:nth-child(2){background:#0b665c;}
+
+th:nth-child(3),
+td:nth-child(3){background:#1e5f9c;}
+
+th:nth-child(4),
+td:nth-child(4){background:#5b2f9e;}
+
+th:nth-child(5),
+td:nth-child(5){background:#8a3b23;}
+
+th:nth-child(6),
+td:nth-child(6){background:#85700f;}
+
+.highlight{
+    background:yellow !important;
+    color:black !important;
+    font-weight:bold;
+}
+
+.tooltip{
+    position:fixed;
+    display:none;
+    max-width:320px;
+    background:#222;
+    border:1px solid #666;
+    padding:10px;
+    border-radius:6px;
+    z-index:9999;
+    pointer-events:none;
+}
+
+</style>
 </head>
 <body>
-    <div id="app">
-        <div class="header">
-            <div class="tabs">
-                <button v-for="d in difficulties" @click="currentDiff = d" :class="['tab-btn', currentDiff === d ? 'active' : '']">{{ d }}</button>
-            </div>
-            <input class="search-box" v-model="searchQuery" placeholder="输入关键字搜索并过滤...">
-        </div>
 
-        <div class="container" v-if="allData[currentDiff]">
-            <div v-for="epData in allData[currentDiff]" :key="epData.ep">
-                <div class="ep-title">{{ currentDiff }} - {{ epData.ep }}</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="monster-col">Monster</th>
-                            <th class="v">VIR</th><th class="g">GRE</th><th class="s">SKY</th><th class="b">BLU</th>
-                            <th class="p">PUR</th><th class="pi">PIN</th><th class="r">RED</th><th class="o">ORA</th>
-                            <th class="y">YEL</th><th class="w">WHI</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="row in filterRows(epData.rows)" :key="row.m">
-                            <td class="monster-col" :class="{highlight: isMatch(row.m)}">{{ row.m }}</td>
-                            <td v-for="id in ids" :class="[id, {highlight: isMatch(row[id])}]" 
-                                @mouseover="showTips($event, row[id])" @mouseleave="hideTips">
-                                {{ row[id] }}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+<header>
 
-        <!-- 悬浮信息 -->
-        <div v-if="tipContent" class="tooltip" :style="{ top: tipY + 'px', left: tipX + 'px' }">
-            {{ tipContent }}
-        </div>
+<div class="toolbar" id="difficultyTabs"></div>
 
-        <button class="update-btn" @click="loadData" title="从服务器同步最新数据">🔄</button>
-    </div>
+<div style="height:10px"></div>
 
-    <script>
-        const { createApp, ref, onMounted } = Vue
-        createApp({
-            setup() {
-                const difficulties = ['N', 'H', 'VH', 'U'];
-                const ids = ['v','g','s','b','p','pi','r','o','y','w'];
-                const currentDiff = ref('N');
-                const searchQuery = ref('');
-                const allData = ref({});
-                const tipContent = ref('');
-                const tipX = ref(0); const tipY = ref(0);
+<div class="toolbar" id="episodeTabs">
 
-                const loadData = async () => {
-                    const res = await fetch('./data.json?t=' + Date.now());
-                    allData.value = await res.json();
-                };
+<input
+class="search"
+id="searchBox"
+placeholder="搜索怪物或物品..."
+>
 
-                const isMatch = (text) => {
-                    if (!searchQuery.value) return false;
-                    return text.toLowerCase().includes(searchQuery.value.toLowerCase());
-                };
+<button onclick="reloadData()">更新数据</button>
 
-                const filterRows = (rows) => {
-                    if (!searchQuery.value) return rows;
-                    const q = searchQuery.value.toLowerCase();
-                    return rows.filter(r => Object.values(r).some(v => v.toLowerCase().includes(q)));
-                };
+</div>
 
-                const showTips = (e, content) => {
-                    if(!content) return;
-                    tipContent.value = content;
-                    tipX.value = e.clientX + 10;
-                    tipY.value = e.clientY + 10;
-                };
+<div class="version" id="version"></div>
 
-                const hideTips = () => { tipContent.value = ''; };
+</header>
 
-                onMounted(loadData);
-                return { difficulties, ids, currentDiff, searchQuery, allData, loadData, isMatch, filterRows, showTips, hideTips, tipContent, tipX, tipY }
+<div class="container">
+
+<table id="dropTable">
+
+<thead>
+<tr>
+
+<th>Monster</th>
+
+<th>铭绿</th>
+<th>Greenill</th>
+<th>Skyly</th>
+<th>Bluefull</th>
+<th>Purplenum</th>
+
+<th>Pinkal</th>
+<th>Redria</th>
+<th>Oran</th>
+<th>Yellowboze</th>
+<th>Whitill</th>
+
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+
+let DATA=null;
+
+let currentDifficulty='U';
+let currentEpisode='EP1';
+
+const difficulties=['N','H','VH','U'];
+const episodes=['EP1','EP2','EP4'];
+
+async function loadData(){
+
+    const res=await fetch(
+        "data.json?t="+Date.now()
+    );
+
+    DATA=await res.json();
+
+    document.getElementById("version")
+        .innerText="Version: "+DATA.version;
+
+    buildTabs();
+
+    renderTable();
+}
+
+function buildTabs(){
+
+    const d=document.getElementById("difficultyTabs");
+
+    d.innerHTML='';
+
+    difficulties.forEach(diff=>{
+
+        const btn=document.createElement('div');
+
+        btn.className=
+            'tab'+
+            (diff===currentDifficulty?' active':'');
+
+        btn.innerText=diff;
+
+        btn.onclick=()=>{
+
+            currentDifficulty=diff;
+
+            buildTabs();
+            renderTable();
+
+        };
+
+        d.appendChild(btn);
+
+    });
+
+    const e=document.getElementById("episodeTabs");
+
+    episodes.forEach(ep=>{
+
+        let btn=document.getElementById("ep_"+ep);
+
+        if(btn) return;
+
+        btn=document.createElement('div');
+
+        btn.id='ep_'+ep;
+
+        btn.className='tab';
+
+        btn.innerText=ep;
+
+        btn.onclick=()=>{
+
+            currentEpisode=ep;
+
+            document
+            .querySelectorAll('#episodeTabs .tab')
+            .forEach(x=>x.classList.remove('active'));
+
+            btn.classList.add('active');
+
+            renderTable();
+
+        };
+
+        e.insertBefore(btn,e.firstChild);
+
+    });
+
+    document
+    .querySelector('#ep_'+currentEpisode)
+    ?.classList.add('active');
+
+}
+
+function renderTable(){
+
+    const tbody=
+    document.querySelector('#dropTable tbody');
+
+    tbody.innerHTML='';
+
+    const keyword=
+    document.getElementById('searchBox')
+    .value
+    .toLowerCase();
+
+    const rows=
+    DATA.drops.filter(x=>
+
+        x.difficulty===currentDifficulty
+        &&
+        x.episode===currentEpisode
+
+    );
+
+    rows.forEach(row=>{
+
+        let found=false;
+
+        Object.values(row)
+        .forEach(v=>{
+
+            if(
+                String(v)
+                .toLowerCase()
+                .includes(keyword)
+            )
+            found=true;
+
+        });
+
+        if(keyword && !found)
+            return;
+
+        const tr=document.createElement('tr');
+
+        const cols=[
+
+            'monster',
+
+            'Viridia',
+            'Greenill',
+            'Skyly',
+            'Bluefull',
+            'Purplenum',
+
+            'Pinkal',
+            'Redria',
+            'Oran',
+            'Yellowboze',
+            'Whitill'
+
+        ];
+
+        cols.forEach(col=>{
+
+            const td=document.createElement('td');
+
+            const value=row[col] || '';
+
+            if(
+                keyword &&
+                value.toLowerCase()
+                .includes(keyword)
+            ){
+
+                td.innerHTML=
+                value.replace(
+                    new RegExp(
+                        keyword,
+                        'ig'
+                    ),
+                    m=>
+                    '<span class="highlight">'
+                    +m+
+                    '</span>'
+                );
+
             }
-        }).mount('#app')
-    </script>
+            else{
+
+                td.textContent=value;
+
+            }
+
+            if(DATA.items[value]){
+
+                td.addEventListener(
+                    'mousemove',
+                    ev=>showTooltip(
+                        ev,
+                        value
+                    )
+                );
+
+                td.addEventListener(
+                    'mouseleave',
+                    hideTooltip
+                );
+
+            }
+
+            tr.appendChild(td);
+
+        });
+
+        tbody.appendChild(tr);
+
+    });
+
+}
+
+function showTooltip(ev,item){
+
+    const data=
+    DATA.items[item];
+
+    if(!data)
+        return;
+
+    const t=
+    document.getElementById(
+        'tooltip'
+    );
+
+    t.innerHTML=`
+        <b>${item}</b><br><br>
+        类型：${data.type||''}<br>
+        稀有度：${data.rarity||''}<br><br>
+        ${data.description||''}
+    `;
+
+    t.style.display='block';
+
+    t.style.left=
+        (ev.clientX+15)+'px';
+
+    t.style.top=
+        (ev.clientY+15)+'px';
+}
+
+function hideTooltip(){
+
+    document
+    .getElementById('tooltip')
+    .style.display='none';
+
+}
+
+document
+.getElementById('searchBox')
+.addEventListener(
+    'input',
+    renderTable
+);
+
+async function reloadData(){
+
+    await loadData();
+
+    alert(
+        '已从GitHub获取最新数据'
+    );
+}
+
+loadData();
+
+</script>
+
 </body>
 </html>
