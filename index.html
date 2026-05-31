@@ -137,7 +137,6 @@ tbody tr:hover td:first-child{
 
     transition:.15s;
 }
-.tooltip{ position:fixed; display:none; background:#111827; border:1px solid #475569; padding:10px; border-radius:8px; z-index:9999; max-width:300px; pointer-events:none; }
 .tooltip-farm {
     color: #94b938;       /* 蓝色示例，也可以换成你喜欢的 */
     font-weight: 600;     /* 稍微加粗 */
@@ -156,14 +155,47 @@ tbody tr:hover td:first-child{
     0%{ background-position:0%; }
     100%{ background-position:300%; }
 }
+.tooltip-item-image{
+    display:block;
+    max-width:200px;
+    max-height:200px;
+    width:auto;
+    height:auto;
+    margin:0 auto 8px auto;
+    border-radius:6px;
+    object-fit:contain;
+}
 
 /* Tooltip 内不同字段颜色 */
+#tooltip {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(17, 24, 39, 0.95);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 300px;       /* 最大宽度，可根据需要调整 */
+    white-space: normal;    /* 自动换行 */
+    word-wrap: break-word;  /* 长词自动换行 */
+    overflow-wrap: break-word;
+    display: none;
+}
+#tooltip div {
+    margin: 2px 0;
+}
+.tooltip-farm {
+    color: #1e90ff;
+    font-weight: 600;
+    font-style: italic;
+}
 .tooltip-name{ color:#60a5fa; font-weight:700; font-size:16px; }
 .tooltip-name.super{ /* superitem 彩虹效果 */ background: linear-gradient(90deg,#ff0000,#ffff00,#00ff00,#00ffff,#0066ff,#ff00ff); background-size:300%; background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation:rainbow 4s linear infinite; }
 .tooltip-type{ color:#34d399; margin-top:4px; }
 .tooltip-desc{ color:#d1d5db; margin-top:2px; }
 .tooltip-quest{ color:#facc15; margin-top:2px; }
-.tooltip-id{color:#a70303;font-weight:700;margin-top:4px;}
+.tooltip-id{color:#e52020f9;font-weight:700;margin-top:4px;}
 .tooltip-en{color:#94a3b8;font-style:italic;margin-bottom:4px;}
 
 .header-Viridia{
@@ -747,12 +779,13 @@ function bindTooltips(){
             const isSuper = item.superitem === true;
 
             tooltip.innerHTML = `
+                ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
                 <div class="tooltip-name ${isSuper?'super':''}">${itemName}</div>
                 ${item.english?`<div class="tooltip-en">${item.english}</div>`:""}
-                <div class="tooltip-id">ID: ${sectionNumber}</div>
+                <div class="tooltip-id">sectionid ${sectionNumber}</div>
                 <div class="tooltip-type">类型：${item.type||"-"}</div>
                 <div class="tooltip-desc">${item.description||""}</div>
-                ${item.quest?`<div class="tooltip-quest">推荐任务：${item.quest}</div>`:""}
+                ${item.quest?`<div class="tooltip-quest">额外说明：${item.quest}</div>`:""}
                 ${farm?`<div class="tooltip-farm">刷怪建议：${farm}</div>`:""}
             `;
             tooltip.style.display = "block";
