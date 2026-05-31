@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drop Tables</title>
+<title>D服中文资料站</title>
 <style>
 :root{--viridia:#1f8f6a; --greenill:#009c63; --skyly:#0084d1; --bluefull:#0069c9; --purplenum:#7f1d7a; --pinkal:#c2185b; --redria:#a32121; --oran:#c05a00; --yellowboze:#9b8700; --whitill:#4b5563;}
 * { box-sizing: border-box; }
@@ -110,7 +110,7 @@ tbody tr:hover td:first-child{
 .item-name{ 
     display:block;
     line-height:1.2;
-    font-size:20px; /* 掉落物品字体加大 */
+    font-size:18px; /* 掉落物品字体加大 */
 }
 .drop-rate{ display:block; margin-top:1px;  color:#94a3b8;
     font-size:20px; /* 掉率字体稍大 */
@@ -138,6 +138,14 @@ tbody tr:hover td:first-child{
     transition:.15s;
 }
 .tooltip{ position:fixed; display:none; background:#111827; border:1px solid #475569; padding:10px; border-radius:8px; z-index:9999; max-width:300px; pointer-events:none; }
+.tooltip-farm {
+    color: #94b938;       /* 蓝色示例，也可以换成你喜欢的 */
+    font-weight: 600;     /* 稍微加粗 */
+    font-style: italic;   /* 斜体，看起来更提示信息 */
+    margin-top: 2px;      /* 上下间距微调 */
+    display: block;
+    white-space: normal;  /* 自动换行 */
+}
 /* superitem */
 .super-item{ font-weight:700; background: linear-gradient( 90deg, #ff0000, #ffff00, #00ff00,  #00ffff, #0066ff, #ff00ff);background-size:300%; background-clip:text;-webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
@@ -483,7 +491,7 @@ tbody td:hover{
 </head>
 <body>
 
-<div class="header">DROP TABLES</div>
+<div class="header">梦幻之星 命运服 中文资料站</div>
 
 <div class="top-info-row">
   <div class="top-info-col left-col">
@@ -496,8 +504,8 @@ tbody td:hover{
   </div>
 
   <div class="top-info-col center-col">
-    <div class="info-title">游戏活动</div>
-    <div class="info-text" id="game-activity">暂无活动</div>
+    <div class="info-title" id="event-title">游戏活动</div>
+    <div class="info-text" id="event-desc">暂无活动</div>
   </div>
 
   <div class="top-info-col right-col">
@@ -572,6 +580,13 @@ async function loadData(){
     data = await res.json();
     sectionIds = data.sectionIds || [];
 
+    //更新活动
+    const activities = data.activities;
+    document.getElementById("event-title").innerText = activities.event || "无活动";
+    document.getElementById("event-desc").innerHTML = (activities.eventDescription || [])
+.map(x => `• ${x}`)
+.join("<br>");
+
     // hash同步
     const hash = location.hash;
     if(hash){
@@ -628,7 +643,7 @@ function render(){
                 <table>
                     <thead>
                         <tr>
-                            <th>怪物名</th>
+                            <th>  </th>
         `;
 
         sectionIds.forEach(id=>{
@@ -649,7 +664,7 @@ function render(){
                 if(drop){
                     const itemInfo = data.items[drop.item];
                     const isSuper = itemInfo?.superitem===true;
-                    html += `<td class="item-cell col-${sectionId.id}" data-item="${drop.item}" data-section="${sectionId.id}">
+                    html += `<td class="item-cell col-${sectionId.id}" data-item="${drop.item}" data-section="${sectionId.id}" data-farm="${monster.farm || ''}">
                         <span class="item-name ${isSuper?'super-item':''}">${drop.item}</span>
                         <small class="drop-rate">${drop.rate}</small>
                     </td>`;
@@ -726,6 +741,7 @@ function bindTooltips(){
             const section = cell.dataset.section;
             const sectionNumber = SECTION_INDEX[section];
             const item = data.items[itemName];
+            const farm = cell.dataset.farm || "";
             if(!item) return;
             const tooltip = document.getElementById("tooltip");
             const isSuper = item.superitem === true;
@@ -737,6 +753,7 @@ function bindTooltips(){
                 <div class="tooltip-type">类型：${item.type||"-"}</div>
                 <div class="tooltip-desc">${item.description||""}</div>
                 ${item.quest?`<div class="tooltip-quest">推荐任务：${item.quest}</div>`:""}
+                ${farm?`<div class="tooltip-farm">刷怪建议：${farm}</div>`:""}
             `;
             tooltip.style.display = "block";
 
