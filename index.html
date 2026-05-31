@@ -85,28 +85,76 @@ body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#0f172a;
 
     border-radius:12px;}
 .table-section{ margin-top:10px;margin-bottom:16px; }
-.table-title{ text-align:center; font-size:24px; margin-bottom:10px; position:sticky; top:0; background:#0f172a; z-index:20; }
+.table-title{ text-align:center; font-size:30px; margin-bottom:10px; position:sticky; top:0; background:#0f172a; z-index:20; }
 .table-wrapper{overflow:auto;display:flex;justify-content:center;}
 table{ border-collapse:collapse; width:max-content; min-width:1200px; table-layout:fixed;font-size:14px;}
-th, td{ border:1px solid #334155; padding:8px 6px; font-size:12px; text-align:center; line-height:1.4; /* 增加行高，看起来更舒适 */
-    font-weight:500;
-    padding-top:12px;
-    padding-bottom:12px;
-}
-thead th{ position:sticky; top:0; background:#111827; z-index:10; }
-tbody td:first-child, thead th:first-child{ position:sticky; left:0; background:#111827; z-index:11; width:140px;min-width:140px;max-width:140px;}
-thead th:not(:first-child),
-tbody td:not(:first-child){width:130px;min-width:130px;max-width:130px;}
-tbody tr:hover td:first-child{
 
-    background:
-    rgba(
-        250,
-        204,
-        21,
-        .15
-    );
+/* 基础单元格 */
+th, td{
+    border: 1px solid #334155;
+    padding: 12px 6px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+/* 表头 sticky */
+thead th{
+    position: sticky;
+    top: 0;
+    background: #111827;
+    z-index: 20; /* 高于普通单元格 */
+}
+
+/* 第一列 sticky (怪物列) */
+thead th:first-child,
+tbody td:first-child{
+    position: sticky;
+    left: 0;
+    min-width: 140px;
+    max-width: 140px;
+    width: 140px;
+    background: #111827; /* 固定列背景 */
+    z-index: 30; /* 高于表头和普通单元格 */
+    box-shadow:  10px 0 10px rgba(0,0,0,.35);
+    clip-path: inset(0);
+}
+
+
+/* 除第一列外的表格列 */
+thead th:not(:first-child),
+tbody td:not(:first-child){
+    width: 130px;
+    min-width: 130px;
+    max-width: 130px;
+}
+
+/* 基础：除第一列外的hover行 */
+tbody tr:hover td:not(:first-child){
+    background: rgba(250,204,21,0.15);
+}
+
+/* 第一列 hover 高亮 */
+tbody tr:hover td:first-child{
+    background:#3d3520;
+}
+tbody td:hover{
+    box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.2);
+}
+
+.item-cell:hover{
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.25);
+    position:relative;
+}
+
+
 .item-name{ 
     display:block;
     line-height:1.2;
@@ -329,16 +377,6 @@ tbody tr:hover td:first-child{
     background:rgba(75,85,99,.45);
 }
 
-.item-cell:hover{
-
-    box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,.25);
-
-    z-index:5;
-
-    position:relative;
-}
-
 .top-info-row{
     display:flex;
     justify-content:space-between;
@@ -514,10 +552,6 @@ tbody tr:hover td:first-child{
 }
 
 #content{max-width:1800px;margin:auto;padding:0 8px;}
-tbody td:hover{
-    box-shadow:
-        inset 0 0 0 2px rgba(255,255,255,.2);
-}
 
 </style>
 </head>

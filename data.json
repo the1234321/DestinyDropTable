@@ -55,9 +55,9 @@
   "items": {
     "辅助系强化盾": {
       "english": "ASSIST  BARRIER",
-      "type": "aaaaaaa",
-      "description": "ssssssssssssssssssssssssssssssssssssssssss",
-      "quest":"bbbbbbbbssssssssssssssssssssssssbbb",
+      "type": "",
+      "description": "",
+      "quest":"",
       "superitem":false,
       "image":""
     },
