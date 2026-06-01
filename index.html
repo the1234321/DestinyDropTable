@@ -780,6 +780,8 @@ function render(){
                 const drop = monster.drops[sectionId.id];
                 if(drop){
                     const itemInfo = data.items[drop.item];
+                    // console.log('Debug monster:', monster);
+                    // console.log('Debug drop:', drop);
                     const rarity = itemInfo.superitem || 0;
                     const rarityClass=rarity===2? "ultimate-item": rarity===1? "legend-item": "";
 
