@@ -50,8 +50,8 @@ body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#0f172a;
 
 /* 按钮放大 */
 .tab-btn, .ep-btn {
-    min-width: 90px;
-    height: 52px;
+    min-width: 60px;
+    height: 30px;
     font-size: 20px;
     font-weight: 700;
     border-radius: 10px;
@@ -137,9 +137,9 @@ tbody td:not(:first-child){
 }
 
 /* 基础：除第一列外的hover行 */
-tbody tr:hover td:not(:first-child){
+/* tbody tr:hover td:not(:first-child){
     background: rgba(250,204,21,0.15);
-}
+} */
 
 /* 第一列 hover 高亮 */
 tbody tr:hover td:first-child{
@@ -203,20 +203,90 @@ tbody td:hover{
     font-size:20px; /* 怪物名稍大 */
 }
 .dar{ color:#facc15; font-size:20px; }
-.highlight{
+
+
+
+.highlight-item{
 
     position:relative;
 
-    z-index:5;
-
-    border-radius:6px;
-
-    animation:searchPulse 1.5s infinite;
+    animation:itemPulse .9s infinite alternate;
 
     box-shadow:
-        0 0 8px rgba(255,255,0,.7),
-        0 0 16px rgba(255,255,0,.5),
-        inset 0 0 0 2px #ffd700;
+        inset 0 0 0 3px #facc15,
+        0 0 20px rgba(250,204,21,.9);
+
+    z-index:5;
+}
+
+@keyframes itemPulse{
+
+    from{
+        box-shadow:
+            inset 0 0 0 3px #facc15,
+            0 0 10px rgba(250,204,21,.5);
+    }
+
+    to{
+        box-shadow:
+            inset 0 0 0 3px #fde047,
+            0 0 35px rgba(250,204,21,1);
+    }
+
+}
+
+
+.highlight-bonus{
+
+    animation:bonusPulse 1.2s infinite alternate;
+
+    box-shadow:
+        inset 0 0 0 2px #3b82f6,
+        0 0 16px rgba(59,130,246,.8);
+
+}
+
+@keyframes bonusPulse{
+
+    from{
+        box-shadow:
+            inset 0 0 0 2px #3b82f6,
+            0 0 8px rgba(59,130,246,.4);
+    }
+
+    to{
+        box-shadow:
+            inset 0 0 0 2px #60a5fa,
+            0 0 22px rgba(59,130,246,1);
+    }
+
+}
+
+
+.highlight-recipe{
+
+    animation:recipePulse 1.2s infinite alternate;
+
+    box-shadow:
+        inset 0 0 0 2px #a855f7,
+        0 0 16px rgba(168,85,247,.8);
+
+}
+
+@keyframes recipePulse{
+
+    from{
+        box-shadow:
+            inset 0 0 0 2px #a855f7,
+            0 0 8px rgba(168,85,247,.4);
+    }
+
+    to{
+        box-shadow:
+            inset 0 0 0 2px #c084fc,
+            0 0 22px rgba(168,85,247,1);
+    }
+
 }
 
 @keyframes searchPulse{
@@ -277,11 +347,15 @@ tbody td:hover{
     border-radius: 8px;
     font-size: 14px;
     line-height: 1.4;
-    max-width: 600px;       /* 最大宽度，可根据需要调整 */
+    width:auto;
+    max-width: min(700px, 80vw);
+    max-height: 80vh;
     white-space: normal;    /* 自动换行 */
     word-wrap: break-word;  /* 长词自动换行 */
     overflow-wrap: break-word;
     display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #tooltip div {
     margin: 2px 0;
@@ -297,6 +371,60 @@ tbody td:hover{
 .tooltip-id{color:#e52020f9;font-weight:700;margin-top:4px;}
 .tooltip-en{color:#94a3b8;font-style:italic;margin-bottom:4px;}
 
+/* .tooltip-extra{
+    max-height:100px;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+} */
+
+/* 套装效果块 */
+.tooltip-block-bonus {
+    background: rgba(59,130,246,0.1);
+    border-left: 3px solid #3b82f6;
+    border-radius: 6px;
+    margin-top: 6px;
+    padding: 6px 10px;
+}
+
+.tooltip-block-bonus .tooltip-block-title {
+    color: #3b82f6;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* 合成公式块 */
+.tooltip-block-recipe {
+    background: rgba(168,85,247,0.1);
+    border-left: 3px solid #a855f7;
+    border-radius: 6px;
+    margin-top: 6px;
+    padding: 6px 10px;
+}
+
+.tooltip-block-recipe .tooltip-block-title {
+    color: #a855f7;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* 套装条目 */
+.bonus-entry, .recipe-entry {
+    margin-bottom: 4px;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.bonus-header, .recipe-header {
+    font-weight: 700;
+    margin-bottom: 2px;
+    word-break: break-word;
+}
+
+.bonus-body, .recipe-body {
+    padding-left: 8px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
 .header-Viridia{
     background:var(--viridia);
     font-size:20px;
@@ -571,7 +699,7 @@ tbody td:hover{
 
     text-decoration:none;
 
-    font-size:13px;
+    font-size:20px;
 }
 
 .info-links a:hover{
@@ -617,7 +745,7 @@ tbody td:hover{
     <div class="info-links">
       <a href="Destiny_CN.zip" download>汉化包下载</a>
     </div>
-    <div class="info-note">解压到游戏目录即可</div>
+    <div class="info-note">汉化包解压到游戏目录即可</div>
   </div>
 
   <div class="top-info-col center-col">
@@ -692,6 +820,9 @@ const SECTION_INDEX = {
     Yellowboze:8, Whitill:9
 };
 
+const bonusIndex = {};
+const recipeIndex = {};
+
 async function loadData(){
     const res = await fetch('data.json?t=' + Date.now());
     data = await res.json();
@@ -703,6 +834,23 @@ async function loadData(){
     document.getElementById("event-desc").innerHTML = (activities.eventDescription || [])
 .map(x => `• ${x}`)
 .join("<br>");
+
+    //初始化索引
+    (data.bonus || []).forEach(b => {
+        const comboText = b.items.join(" + ");
+        b.items.forEach(item => {
+            if(!bonusIndex[item]) bonusIndex[item] = [];
+            bonusIndex[item].push({ combo: comboText, effect: b.effect });
+        });
+    });
+
+(data.recipe || []).forEach(r => {
+    const formulaText = `${r.result} = ${r.components.join(" + ")}`;
+    [r.result, ...r.components].forEach(item => {
+        if(!recipeIndex[item]) recipeIndex[item] = [];
+        recipeIndex[item].push({ result: r.result, components: r.components, formula: formulaText });
+    });
+});
 
     // hash同步
     const hash = location.hash;
@@ -728,7 +876,8 @@ window.addEventListener("load", ()=>{
 
             // 滚动到当前章节
             const el = document.getElementById(currentEpisode);
-            if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
+            if(el) scrollToRow(el);
+            
         });
     }
 
@@ -861,7 +1010,7 @@ function switchDifficulty(diff){
     // 如果你想切换难度时自动滚到当前EP
     const el = document.getElementById(currentEpisode);
     if(el){
-        el.scrollIntoView({behavior:"smooth", block:"start"});
+        scrollToRow(el);
     }
     render()
 }
@@ -879,27 +1028,87 @@ function bindTooltips(){
             const rarity = item.superitem || 0;
             const rarityClass = rarity === 2 ? 'ultimate-item' : rarity === 1  ? 'legend-item'   : '';
 
-            tooltip.innerHTML = `
-                ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
-                <div class="tooltip-name ${rarityClass}"> ${itemName}</div>
-                ${item.english?`<div class="tooltip-en">${item.english}</div>`:""}
-                <div class="tooltip-id">sectionid ${sectionNumber}</div>
-                <div class="tooltip-type">类型：${item.type||"-"}</div>
-                <div class="tooltip-desc">${item.description||""}</div>
-                ${item.quest?`<div class="tooltip-quest">额外说明：${item.quest}</div>`:""}
-                ${farm?`<div class="tooltip-farm">刷怪建议：${farm}</div>`:""}
-            `;
+            // 读取 bonus 和 recipe 索引
+        const tooltipBonus = bonusIndex[itemName] || [];
+        const tooltipRecipe = recipeIndex[itemName] || [];
+
+        tooltip.innerHTML = `
+            ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
+            <div class="tooltip-name ${rarityClass}">${itemName}</div>
+            ${item.english?`<div class="tooltip-en">${item.english}</div>`:""}
+            <div class="tooltip-id">sectionid ${sectionNumber}</div>
+            <div class="tooltip-type">类型：${item.type||"-"}</div>
+            <div class="tooltip-desc">${item.description||""}</div>
+            ${item.quest?`<div class="tooltip-quest">额外说明：${item.quest}</div>`:""}
+            ${farm?`<div class="tooltip-farm">刷怪建议：${farm}</div>`:""}
+
+            ${(tooltipBonus.length || tooltipRecipe.length) ? `
+<div class="tooltip-extra">
+            <!-- 套装效果独立块 -->
+            ${tooltipBonus.length ? `
+            <div class="tooltip-block tooltip-block-bonus">
+                <div class="tooltip-block-title">★ 相关套装效果</div>
+                ${tooltipBonus.map(b => `
+                    <div class="bonus-entry">
+                        <div class="bonus-header">${b.combo}</div>
+                        <div class="bonus-body">${b.effect}</div>
+                    </div>
+                `).join("")}
+            </div>
+            ` : ""}
+
+            <!-- 合成公式独立块 -->
+            ${tooltipRecipe.length ? `
+            <div class="tooltip-block tooltip-block-recipe">
+                <div class="tooltip-block-title">★ 相关合成公式</div>
+                ${tooltipRecipe.map(r => `
+                    <div class="recipe-entry">
+                        <div class="recipe-header">${r.result}</div>
+                        <div class="recipe-body">${r.components.join(" + ")}</div>
+                    </div>
+                `).join("")}
+            </div>
+            ` : ""}
+</div>
+
+            ` : ""}
+        `;
+
+        // 计算tooltip位置
+            
             tooltip.style.display = "block";
 
             const offset = 15;
+
+            // 先让浏览器计算真实尺寸
+            const tooltipWidth = tooltip.offsetWidth;
+            const tooltipHeight = tooltip.offsetHeight;
+
             let left = e.clientX + offset;
             let top = e.clientY + offset;
 
-            if(left + tooltip.offsetWidth > window.innerWidth){
-                left = e.clientX - tooltip.offsetWidth - offset;
+            // ---------- 水平方向 ----------
+
+            // 右边超出
+            if(left + tooltipWidth > window.innerWidth){
+                left = e.clientX - tooltipWidth - offset;
             }
-            if(top + tooltip.offsetHeight > window.innerHeight){
-                top = e.clientY - tooltip.offsetHeight - offset;
+
+            // 左边也超出（极端情况）
+            if(left < 5){
+                left = 5;
+            }
+
+            // ---------- 垂直方向 ----------
+
+            // 下边超出
+            if(top + tooltipHeight > window.innerHeight){
+                top = window.innerHeight - tooltipHeight - 5;
+            }
+
+            // 上边超出
+            if(top < 5){
+                top = 5;
             }
 
             tooltip.style.left = left + "px";
@@ -913,6 +1122,25 @@ function bindTooltips(){
     });
 }
 
+function scrollToRow(row){
+    requestAnimationFrame(()=>{
+        requestAnimationFrame(()=>{
+            const header =
+                document.querySelector(".control-bar");
+            const offset =
+                header ? header.offsetHeight + 10 : 120;
+
+            window.scrollTo({
+                top:
+                    row.getBoundingClientRect().top +
+                    window.scrollY -
+                    offset,
+                behavior:"smooth"
+            });
+        });
+    });
+}
+
 function performSearch(){
     const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
     if(!data) return;
@@ -920,29 +1148,81 @@ function performSearch(){
 
     document.querySelectorAll("tbody tr").forEach(row=>{
         row.style.display = "";
-        row.querySelectorAll("td").forEach(td=>td.classList.remove("highlight"));
+        row.querySelectorAll("td").forEach(td=>td.classList.remove("highlight-item", "highlight-bonus","highlight-recipe"));
         if(!keyword) return;
 
         let rowMatched = false;
         row.querySelectorAll("td").forEach(td=>{
-            let matched = false;
+             let matchedType = null;
             const cellText = td.innerText.toLowerCase();
-            if(cellText.includes(keyword)) matched = true;
+            // if(cellText.includes(keyword)) matched = true;
 
             const itemName = td.dataset.item;
             if(itemName && data.items[itemName]){
+
                 const item = data.items[itemName];
+                // 1.名字匹配（最高优先级）
+
                 if(
-                    (item.english||"").toLowerCase().includes(keyword) ||
+                    itemName.toLowerCase().includes(keyword) ||
+                    (item.english||"").toLowerCase().includes(keyword)
+                ){
+                    matchedType = "item";
+                }
+
+                // 2.普通描述
+
+                else if(
                     (item.type||"").toLowerCase().includes(keyword) ||
                     (item.description||"").toLowerCase().includes(keyword) ||
                     (item.quest||"").toLowerCase().includes(keyword)
-                ) matched = true;
+                ){
+                    matchedType = "item";
+                }
+
+                // 3.套装效果
+
+                    else if(
+                    (bonusIndex[itemName]||[])
+                    .some(b =>
+                        JSON.stringify(b)
+                        .toLowerCase()
+                        .includes(keyword)
+                    )
+                ){
+                    matchedType = "bonus";
+                }
+
+                // 4.合成公式
+
+                else if(
+                    (recipeIndex[itemName]||[])
+                    .some(r =>
+                        JSON.stringify(r)
+                        .toLowerCase()
+                        .includes(keyword)
+                    )
+                ){
+                    matchedType = "recipe";
+                }
             }
-            if(matched){
-                td.classList.add("highlight");
+            if(matchedType==="item"){
                 rowMatched = true;
-                if(!firstMatch) firstMatch = row;
+                td.classList.add("highlight-item");
+
+                if(!firstMatch){
+                    firstMatch=row;
+                }
+            }
+
+            if(matchedType==="bonus"){
+                rowMatched = true;
+                td.classList.add("highlight-bonus");
+            }
+
+            if(matchedType==="recipe"){
+                rowMatched = true;
+                td.classList.add("highlight-recipe");
             }
         });
         if(!rowMatched && keyword!=="") row.style.display = "none";
@@ -954,7 +1234,8 @@ function performSearch(){
         section.style.display = visibleRows>0 ? "" : "none";
     });
 
-    if(firstMatch) firstMatch.scrollIntoView({behavior:"smooth", block:"center"});
+    if(firstMatch) scrollToRow(firstMatch);
+    
 }
 
 function bindControlButtons(){
