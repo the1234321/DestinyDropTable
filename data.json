@@ -3,10 +3,9 @@
   "activities": {
     "event": "D服常用命令",
     "eventDescription": [
-      "/bank        在 角色仓库 与 公共仓库 之间进行切换。",
-      "/lobby       将你从当前任务传送至大厅。此指令仅在执行任务时有效。",
-      "/sectionid # 改角色ID，其中“#”为 0 到 9 之间的数字。0=铬绿, 1=翠绿, 2=天青, 3=纯蓝, 4=淡紫, 5=粉红, 6=真红, 7=橙黄, 8=金黄, 9=羽白",
-      "/daily       查看每日任务，该任务概率掉落抽奖箱，低难度是普通箱，U难度是幻影箱（比较值钱，没开封的可以用来交易），每个账号每天最多掉1个"
+      "【/bank = 仓库切换】, 【/lobby = 做任务时快速回大厅】, 【/sectionid 0-9 = 改角色ID, 0-9对应掉落表中的ID】, 【/daily =查看每日任务，推荐做U难度】",
+      "【ＷＥＡＰＯＮＳ水晶徽章】获取方法: 【Harmony of Despair I】, 【VR Test Destiny: Underground 】, 【VT Test FINAL: Catastrophe】",
+      "【星界精华】和【蝙蝠之翼】获取方法: 【Halloween 相关任务】"
     ]
   },
   "sectionIds": [
@@ -160,7 +159,7 @@
       "english": "Immortal/HP",
       "type": "插件",
       "description": "HP上升 200",
-      "quest": "",
+      "quest": "\n千年纪／ＨＰ = 千年光子核心ＭＰＣ + 不朽级/ＨＰ+ 大灾变之盾 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章",
       "superitem": 1,
       "image": ""
     },
@@ -208,8 +207,8 @@
       "english": "GRATIA",
       "type": "盾",
       "description": "",
-      "quest": "",
-      "superitem": 0,
+      "quest": "\n星界之翼 = 星界精华 + 蝙蝠之翼 + 魔石「心键」+ 魔石「伊利提斯塔」+ 优雅盾",
+      "superitem": 1,
       "image": ""
     },
     "伽斯帝－２３ＳＴ": {
@@ -224,8 +223,8 @@
       "english": "IZMAELA",
       "type": "投刃",
       "description": "",
-      "quest": "",
-      "superitem": 0,
+      "quest": "\n星界剑＝爆裂铠+机械臂外壳 III+千年光子核心ＭＰＣ+红色水晶+蓝色水晶+黄色水晶+绿色水晶+依兹玛艾拉+暗物质",
+      "superitem": 1,
       "image": ""
     },
     "侵蚀遗传因子「弗罗文」": {
@@ -263,9 +262,9 @@
     "光子加速器": {
       "english": "Photon Booster",
       "type": "特殊物品",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "description": "用来合成/兑换强力装备",
+      "quest": "\n耦合中枢 = 机械臂外壳 III + 真空波石 + 光子加速器 + 状态/免疫 + 索尼克小队的证书 + 陷阱/探测 + 暗物质",
+      "superitem": 1,
       "image": ""
     },
     "光子水晶ＰＣ": {
@@ -303,9 +302,9 @@
     "克罗艾女士的毛衣": {
       "english": "KROE'S SWEATER",
       "type": "铠甲",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "description": "防御力 +250, 回避力 +150",
+      "quest": "\n星界斗篷(法术伤害+80%~100%) = 原始光子水晶ＰＰＳ+ 千年光子核心ＭＰＣ + 克罗艾女士的毛衣 + Ｘ组件Ｖｅｒ３．１０ + 魔王铠甲 + 皇朝装甲 + 烈焰戒指 + 忍者服 + 母亲的外套＋",
+      "superitem": 1,
       "image": ""
     },
     "兔子杖": {
@@ -407,8 +406,8 @@
     "冰光服": {
       "english": "LUMINOUS FIELD",
       "type": "铠甲",
-      "description": "",
-      "quest": "",
+      "description": "全职业可装备",
+      "quest": "\n幻影力场(全能力+30铠甲) = 黑暗光子水晶ＤＰＳ + 千年光子核心ＭＰＣ + 机械臂外壳 III + ＤＦ领域 + 创世铠甲 + 冰光服 + 细菌防具「拉夫特利亚」",
       "superitem": 0,
       "image": ""
     },
@@ -495,8 +494,8 @@
     "创世铠甲": {
       "english": "GENESIS ARMOR",
       "type": "铠甲",
-      "description": "全职业可装备",
-      "quest": "防御力+508, 回避力+284",
+      "description": "全职业可装备, 防御力+508, 回避力+284",
+      "quest": "\n幻影力场(全能力+30铠甲) = 黑暗光子水晶ＤＰＳ + 千年光子核心ＭＰＣ + 机械臂外壳 III + ＤＦ领域 + 创世铠甲 + 冰光服 + 细菌防具「拉夫特利亚」",
       "superitem": 1,
       "image": ""
     },
@@ -510,32 +509,32 @@
     },
     "剑之舞": {
       "english": "BLADE DANCE",
-      "type": "",
-      "description": "",
+      "type": "匕首",
+      "description": "HU可装备, EX:强麻痹",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "剑士的心得": {
       "english": "SWORDSMAN LORE",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "插件",
+      "description": "与光剑, 太刀, 双刀同时装备时, 命中提升10, 20000杀 可转换为 剑圣之证",
+      "quest": "\n剑圣之证, 攻击力 +30, 回避力 +60, 与光剑, 太刀, 双刀同时装备时, 防御力 -20",
       "superitem": 0,
       "image": ""
     },
     "剑魔的右手": {
       "english": "Delsaber's Right Arm",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "可转换为 剑魔之剑",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "剑魔的左手": {
       "english": "Delsaber's Left Arm",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "可转换为 剑魔之盾",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -550,64 +549,64 @@
     },
     "勇者之拳": {
       "english": "BRAVE KNUCKLE",
-      "type": "",
-      "description": "",
+      "type": "拳套",
+      "description": "全职业可装备, EX:中麻痹",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "勇者之锤": {
       "english": "BRAVE HAMMER",
-      "type": "",
-      "description": "",
+      "type": "长杖",
+      "description": "FO可装备, EX:销魂",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "勇者的飞碟": {
       "english": "DISKA OF BRAVEMAN",
-      "type": "",
-      "description": "",
+      "type": "投刃",
+      "description": "全职业可装备, EX:削血",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "十字疤": {
       "english": "CROSS SCAR",
-      "type": "",
-      "description": "",
+      "type": "匕首",
+      "description": "HU可装备, EC:雷霆",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "十文字枪": {
       "english": "ASTERON BELT",
-      "type": "",
-      "description": "",
+      "type": "长刀",
+      "description": "HU可装备, EX:地狱",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "千年光子核心ＭＰＣ": {
       "english": "Millennium Photon Core",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "特殊物品",
+      "description": "可用来合成顶级装备",
+      "quest": "\n千年纪／ＨＰ = 千年光子核心ＭＰＣ + 不朽级/ＨＰ+ 大灾变之盾 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章\n烈焰引擎 = 千年光子核心ＭＰＣ + 黑暗光子水晶ＤＰＳ + 爆裂铠 + 巨兽铠甲 + 索尼克小队的证书 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章\nV803(冰系冻结几率 +90%) = 黑暗光子水晶ＤＰＳ+ 千年光子核心ＭＰＣ + V802 + V503 + 魔石「伊利提斯塔」 + Ｄ型因子核心 + 真瑚经书\n幻影力场(全能力+30铠甲) = 黑暗光子水晶ＤＰＳ + 千年光子核心ＭＰＣ + 机械臂外壳 III + ＤＦ领域 + 创世铠甲 + 冰光服 + 细菌防具「拉夫特利亚」\n星界剑＝爆裂铠+机械臂外壳 III+千年光子核心ＭＰＣ+红色水晶+蓝色水晶+黄色水晶+绿色水晶+依兹玛艾拉+暗物质",
+      "superitem": 2,
       "image": ""
     },
     "千里足": {
       "english": "SECURE FEET",
-      "type": "",
-      "description": "",
+      "type": "盾",
+      "description": "人类枪手可装备",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "南瓜": {
       "english": "Jack-O'-Lantern",
-      "type": "",
-      "description": "",
+      "type": "特殊道具",
+      "description": "使用后随机获取一个MAG细胞",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -615,30 +614,30 @@
     "厄普西隆的装甲": {
       "english": "Cladding of Epsilon",
       "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "description": "可以 合成 天堂共鸣",
+      "quest": "天堂共鸣, 火墙术 +50%, 冰箭术 +90%, 群雷术 +50%",
+      "superitem": 2,
       "image": ""
     },
     "原初枢纽": {
       "english": "PRIMAL NEXUS",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "铠甲",
+      "description": "所有攻击法术 +30%",
+      "quest": "简单粗暴",
+      "superitem": 2,
       "image": ""
     },
-    "原始光子水晶": {
+    "原始光子水晶ＰＰＳ": {
       "english": "Primal Photon Sphere",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "特殊物品",
+      "description": "兑换高级装备",
+      "quest": "\n星界爪(辅助法术提升) = 千年光子核心ＭＰＣ + 原始光子水晶ＰＰＳ + 黑暗光子水晶ＤＰＳ+ ＨＰ/涌流 + ＴＰ/涌流 + ＰＢ/涌流 + 索尼克小队的证书 + 御魔手镯 + 御圣手镯\n星界斗篷(法术伤害+80%~100%) = 原始光子水晶ＰＰＳ+ 千年光子核心ＭＰＣ + 克罗艾女士的毛衣 + Ｘ组件Ｖｅｒ３．１０ + 魔王铠甲 + 皇朝装甲 + 烈焰戒指 + 忍者服 + 母亲的外套＋",
+      "superitem": 2,
       "image": ""
     },
     "双头剑": {
       "english": "DOUBLE SABER",
-      "type": "",
+      "type": "双头剑",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -646,7 +645,7 @@
     },
     "双烙印": {
       "english": "TWIN BRAND",
-      "type": "",
+      "type": "双头剑",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -654,16 +653,16 @@
     },
     "双猫细胞": {
       "english": "A New Friend",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "MAG 娑陀 进化成 双娑陀",
       "quest": "",
-      "superitem": 0,
+      "superitem": 1,
       "image": ""
     },
     "双荣耀光剑": {
       "english": "TWIN PALLASCH",
-      "type": "",
-      "description": "",
+      "type": "双头剑",
+      "description": "全职业可装备, EX:魔鬼",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -678,15 +677,15 @@
     },
     "反射装甲": {
       "english": "REFLEX GEAR",
-      "type": "",
-      "description": "",
+      "type": "铠甲",
+      "description": "防御力 +150, 回避力 +380",
       "quest": "",
-      "superitem": 0,
+      "superitem": 1,
       "image": ""
     },
     "变色龙之杖": {
       "english": "CHAMELEON SCYTHE",
-      "type": "",
+      "type": "长刀",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -694,7 +693,7 @@
     },
     "古代剑": {
       "english": "ANCIENT SABER",
-      "type": "",
+      "type": "光剑",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -702,7 +701,7 @@
     },
     "史神克莱奥之杖": {
       "english": "CLIO",
-      "type": "",
+      "type": "手杖",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -710,7 +709,7 @@
     },
     "叹息之墙": {
       "english": "STANDSTILL SHIELD",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -718,15 +717,15 @@
     },
     "合体怪双刃": {
       "english": "P-ARMS'S BLADE",
-      "type": "",
-      "description": "",
+      "type": "匕首",
+      "description": "EX:全麻痹",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "合体怪的双手": {
       "english": "P-arm's Arms",
-      "type": "",
+      "type": "特殊道具",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -734,23 +733,23 @@
     },
     "向日葵": {
       "english": "GIRASOLE",
-      "type": "",
-      "description": "",
+      "type": "双头剑",
+      "description": "EX:能量波",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "咒之披风": {
       "english": "CURSED CLOAK",
-      "type": "",
-      "description": "",
+      "type": "铠甲",
+      "description": "死咒术穿透",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "咒卡": {
       "english": "TALIS",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -758,7 +757,7 @@
     },
     "咒符": {
       "english": "MAHU",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -766,16 +765,16 @@
     },
     "啮魂者": {
       "english": "SOUL BITER",
-      "type": "",
-      "description": "",
+      "type": "大剑",
+      "description": "EX:削血",
       "quest": "",
-      "superitem": 0,
+      "superitem": 1,
       "image": ""
     },
     "啾啾之心": {
       "english": "Heart of Chu Chu",
-      "type": "",
-      "description": "",
+      "type": "特殊道具",
+      "description": "合成 啾啾玛古",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -790,7 +789,7 @@
     },
     "四神盾「朱雀」": {
       "english": "GODS SHIELD SUZAKU",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -798,7 +797,7 @@
     },
     "四神盾「白虎」": {
       "english": "GODS SHIELD BYAKKO",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -806,7 +805,7 @@
     },
     "回复系强化盾": {
       "english": "RECOVERY BARRIER",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -814,7 +813,7 @@
     },
     "回旋双光轮": {
       "english": "TWIN CHAKRAM",
-      "type": "",
+      "type": "匕首",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -822,39 +821,39 @@
     },
     "回生护甲": {
       "english": "REVIVAL CURIASS",
-      "type": "",
-      "description": "",
+      "type": "铠甲",
+      "description": "稍稍恢复HP",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "回生衣": {
       "english": "REVIVAL GARMENT",
-      "type": "",
-      "description": "",
+      "type": "铠甲",
+      "description": "缓慢恢复HP",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "回避力药": {
       "english": "Evade Material",
-      "type": "",
-      "description": "",
+      "type": "能力药",
+      "description": "使用后回避力+1",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "圣光枪": {
       "english": "HOLY RAY",
-      "type": "",
-      "description": "",
+      "type": "步枪",
+      "description": "非机器人角色可装备, EX:全麻痹",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "圣光环": {
       "english": "BRIGHTNESS CIRCLE",
-      "type": "",
+      "type": "铠甲",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -862,7 +861,7 @@
     },
     "圣光盾": {
       "english": "SACRED GUARD",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -872,16 +871,16 @@
       "english": "LAVIS CANNON",
       "type": "光剑",
       "description": "可与 真空波石 合成 圣剑「双刃·拉维斯」 与 圣剑「双切·迦农」, EX:削血能量波",
-      "quest": "\n圣剑「双切·迦农」可与 暗物质 合成 圣剑「终极·迦农」(双头剑), EX:超级能量波\n圣剑「终极·迦农」搭配 耦合中枢:命中+20, 攻击范围扩大, 正面打EP4蜥蜴, 攻速 +15%",
+      "quest": "\n圣剑「终极·迦农」= 圣剑「双切·迦农」+ 暗物质, EX:超级能量波\n圣剑「终极·迦农」搭配 耦合中枢:命中+20, 攻击范围扩大, 正面打EP4蜥蜴, 攻速 +15%",
       "superitem": 2,
       "image": ""
     },
     "圣杖「意念」": {
       "english": "PSYCHO WAND",
-      "type": "",
-      "description": "",
+      "type": "长杖",
+      "description": "FO可装备, TP消耗减半,高级法术 +30%",
       "quest": "",
-      "superitem": 0,
+      "superitem": 1,
       "image": ""
     },
     "圣枪「天罚」": {
@@ -889,12 +888,12 @@
       "type": "光枪",
       "description": "RA可装备, EX:天罚, 可与 圣枪「神罚」合成 天国呼啸",
       "quest": "\n天国呼啸 搭配 耦合中枢: hit (天罚EX)3-3-3 (非天罚EX)4-4-4, 所有攻击自动瞄准, 攻击力和精神力+100, 攻击范围扩大",
-      "superitem": 2,
+      "superitem": 1,
       "image": ""
     },
     "圣洁披风": {
       "english": "SELECT CLOAK",
-      "type": "",
+      "type": "铠甲",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -902,7 +901,7 @@
     },
     "圣灵装甲": {
       "english": "Divinity Armor",
-      "type": "",
+      "type": "铠甲",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -910,47 +909,47 @@
     },
     "圣衣": {
       "english": "SACRED CLOTH",
-      "type": "",
-      "description": "",
+      "type": "铠甲",
+      "description": "麻痹免疫",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "圣诞节礼物": {
       "english": "Christmas Present",
-      "type": "",
-      "description": "",
+      "type": "特殊道具",
+      "description": "使用后获得随机MAG细胞",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "圣降": {
       "english": "SKYFALL",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "长杖",
+      "description": "所有辅助法术范围 +300%",
+      "quest": "辅助必备",
+      "superitem": 2,
       "image": ""
     },
     "地狱之石": {
       "english": "Infernal Stone",
-      "type": "",
-      "description": "",
+      "type": "特殊道具",
+      "description": "还不知道干啥的, 没找到资料",
       "quest": "",
-      "superitem": 0,
+      "superitem": 2,
       "image": ""
     },
     "地狱冲击": {
       "english": "HELL STRIKER",
-      "type": "",
-      "description": "",
+      "type": "光枪",
+      "description": "HU和RA可装备, 可自动瞄准, EX:地狱",
       "quest": "",
-      "superitem": 0,
+      "superitem": 1,
       "image": ""
     },
     "地狱火箭炮": {
       "english": "INFERNO BAZOOKA",
-      "type": "",
+      "type": "散弹",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -982,15 +981,15 @@
     },
     "夜叉": {
       "english": "YASHA",
-      "type": "",
-      "description": "",
+      "type": "太刀",
+      "description": "可与 散华 合成 散华夜叉",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "大叶子": {
       "english": "PLANTAIN LEAF",
-      "type": "",
+      "type": "长杖",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -998,7 +997,7 @@
     },
     "大和": {
       "english": "YAMATO",
-      "type": "",
+      "type": "双剑",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -1006,15 +1005,15 @@
     },
     "大师级/全能力": {
       "english": "Master/Ability",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "全能力 +5",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "大打磨石": {
       "english": "Trigrinder",
-      "type": "",
+      "type": "消耗品",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -1022,10 +1021,10 @@
     },
     "大灾变之盾": {
       "english": "CATACLYSM SHIELD",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "盾",
+      "description": "防御 +220, 回避力 +250, HP +50",
+      "quest": "\n千年纪／ＨＰ = 千年光子核心ＭＰＣ + 不朽级/ＨＰ+ 大灾变之盾 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章",
+      "superitem": 1,
       "image": ""
     },
     "大蛇腭": {
@@ -1038,7 +1037,7 @@
     },
     "大ＨＰ回复液": {
       "english": "Trimate",
-      "type": "",
+      "type": "消耗品",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -1046,7 +1045,7 @@
     },
     "天使之琴": {
       "english": "ANGEL HARP",
-      "type": "",
+      "type": "步枪",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -1054,24 +1053,24 @@
     },
     "天使级/精神": {
       "english": "Angel/Mind",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "精神力 +15",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天使级/运": {
       "english": "Angel/Luck",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "运气 +5",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天国装甲": {
       "english": "Celestial Armor",
-      "type": "",
-      "description": "",
+      "type": "铠甲",
+      "description": "HU和RA可装备",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -1086,183 +1085,183 @@
     },
     "天堂冲击的涂膜": {
       "english": "Heaven Striker Coat",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "使用 迦楼罗 合成 冲击部件",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/全能力": {
       "english": "Heavenly/Ability",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "全能力 +55, 命中 +2",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/命中": {
       "english": "Heavenly/Arms",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "命中 +25",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/回避": {
       "english": "Heavenly/Legs",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "回避力 +55",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/战斗": {
       "english": "Heavenly/Battle",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击速度 +40%",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/抗性": {
       "english": "Heavenly/Resist",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "全抗 +12",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/攻击": {
       "english": "Heavenly/Power",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击力 +55",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/精神": {
       "english": "Heavenly/Mind",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "精神力 +45",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/运": {
       "english": "Heavenly/Luck",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "运 +40",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/防御": {
       "english": "Heavenly/Body",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "防御力 +55",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天堂级/ＨＰ": {
       "english": "Heavenly/HP",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "HP +100",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/全能力": {
       "english": "God/Ability",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "全能力 +20, 命中 +2",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/命中": {
       "english": "God/Arm",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "命中 +15",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/回避": {
       "english": "God/Legs",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "回避力 +50",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/战斗": {
       "english": "God/Battle",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击速度 +20%",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/攻击": {
       "english": "God/Power",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击力 +50",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/精神": {
       "english": "God/Mind",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "精神力 +40",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/运": {
       "english": "God/Luck",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "运气 +30",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/防御": {
       "english": "God/Body",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "防御力 +50",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/魔法": {
       "english": "God/Technique",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "所有法术等级 +3",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/ＨＰ": {
       "english": "God/HP",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "HP +80",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天神级/ＴＰ": {
       "english": "God/TP",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "TP +80",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "天青卡片": {
       "english": "SKYLY CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -1310,9 +1309,9 @@
     },
     "妖刀·暗鸦": {
       "english": "YAMIGARASU",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "太刀",
+      "description": "HU和RA可装备, EX:地狱",
+      "quest": "\n梦魇(EX:地狱波) = 妖刀·暗鸦 + 暗物质",
       "superitem": 0,
       "image": ""
     },
@@ -1534,9 +1533,9 @@
     },
     "巨兽铠甲": {
       "english": "BEHEMOTH ARMOR",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "铠甲",
+      "description": "防御力 +340, 回避力 +340, 攻击力 +50",
+      "quest": "\n烈焰引擎 = 千年光子核心ＭＰＣ + 黑暗光子水晶ＤＰＳ + 爆裂铠 + 巨兽铠甲 + 索尼克小队的证书 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章 ",
       "superitem": 0,
       "image": ""
     },
@@ -1654,18 +1653,18 @@
     },
     "御圣手镯": {
       "english": "ANTI-LIGHT RING",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "盾",
+      "description": "光抗 +60",
+      "quest": "\n星界爪(辅助法术提升) = 千年光子核心ＭＰＣ + 原始光子水晶ＰＰＳ + 黑暗光子水晶ＤＰＳ+ ＨＰ/涌流 + ＴＰ/涌流 + ＰＢ/涌流 + 索尼克小队的证书 + 御魔手镯 + 御圣手镯",
+      "superitem": 1,
       "image": ""
     },
     "御魔手镯": {
       "english": "ANTI-DARK RING",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "盾",
+      "description": "暗抗 +60",
+      "quest": "\n星界爪(辅助法术提升) = 千年光子核心ＭＰＣ + 原始光子水晶ＰＰＳ + 黑暗光子水晶ＤＰＳ+ ＨＰ/涌流 + ＴＰ/涌流 + ＰＢ/涌流 + 索尼克小队的证书 + 御魔手镯 + 御圣手镯",
+      "superitem": 1,
       "image": ""
     },
     "忍者手甲": {
@@ -1680,7 +1679,7 @@
       "english": "NINJA SUIT",
       "type": "铠甲",
       "description": "",
-      "quest": "\n搭配 飞镖: 攻击力+50 命中+20, hits 2-2-4, 投刃攻击动作\n搭配 手里剑: 5目标, Hits 2-2-2, 攻击力+100, 攻击范围扩大",
+      "quest": "\n搭配 飞镖: 攻击力+50 命中+20, hits 2-2-4, 投刃攻击动作\n搭配 手里剑: 5目标, Hits 2-2-2, 攻击力+100, 攻击范围扩大\n星界斗篷(法术伤害+80%~100%) = 原始光子水晶ＰＰＳ+ 千年光子核心ＭＰＣ + 克罗艾女士的毛衣 + Ｘ组件Ｖｅｒ３．１０ + 魔王铠甲 + 皇朝装甲 + 烈焰戒指 + 忍者服 + 母亲的外套＋",
       "superitem": 1,
       "image": ""
     },
@@ -1910,7 +1909,7 @@
     },
     "攻击力药": {
       "english": "Power Material",
-      "type": "",
+      "type": "能力药",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -2022,16 +2021,16 @@
     },
     "暗物质": {
       "english": "Dark Matter",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "特殊道具",
+      "description": "用来合成强力装备",
+      "quest": "\n圣剑「终极·迦农」= 圣剑「双切·迦农」+ 暗物质\n梦魇(EX:地狱波) = 妖刀·暗鸦 + 暗物质\n地狱弹弓 = 魔弹弓 + 暗物质\n星界剑＝爆裂铠+机械臂外壳 III+千年光子核心ＭＰＣ+红色水晶+蓝色水晶+黄色水晶+绿色水晶+依兹玛艾拉+暗物质",
+      "superitem": 2,
       "image": ""
     },
     "替身人偶": {
       "english": "Scape Doll",
-      "type": "",
-      "description": "",
+      "type": "特殊道具",
+      "description": "放背包里, 可以抵消一次死亡",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -2078,10 +2077,10 @@
     },
     "机械臂外壳 III": {
       "english": "Cladding of Manipulator III",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "特殊物品",
+      "description": "用来兑换强力装备",
+      "quest": "\n耦合中枢 = 机械臂外壳 III + 真空波石 + 光子加速器 + 状态/免疫 + 索尼克小队的证书 + 陷阱/探测 + 暗物质\n幻影力场(全能力+30铠甲) = 黑暗光子水晶ＤＰＳ + 千年光子核心ＭＰＣ + 机械臂外壳 III + ＤＦ领域 + 创世铠甲 + 冰光服 + 细菌防具「拉夫特利亚」\n星界剑＝爆裂铠+机械臂外壳 III+千年光子核心ＭＰＣ+红色水晶+蓝色水晶+黄色水晶+绿色水晶+依兹玛艾拉+暗物质",
+      "superitem": 2,
       "image": ""
     },
     "机甲堡垒的零件": {
@@ -2150,7 +2149,7 @@
     },
     "橙黄卡片": {
       "english": "ORAN CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -2183,8 +2182,8 @@
     "母亲的外套＋": {
       "english": "MOTHER GARB+",
       "type": "铠甲",
-      "description": "TP消耗减半",
-      "quest": "全FO都可装备",
+      "description": "全FO都可装备, TP消耗减半",
+      "quest": "\n星界斗篷(法术伤害+80%~100%) = 原始光子水晶ＰＰＳ+ 千年光子核心ＭＰＣ + 克罗艾女士的毛衣 + Ｘ组件Ｖｅｒ３．１０ + 魔王铠甲 + 皇朝装甲 + 烈焰戒指 + 忍者服 + 母亲的外套＋",
       "superitem": 1,
       "image": ""
     },
@@ -2262,7 +2261,7 @@
     },
     "淡紫卡片": {
       "english": "PURPLENUM CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -2270,7 +2269,7 @@
     },
     "混乱预防": {
       "english": "Cure/Confuse",
-      "type": "",
+      "type": "插件",
       "description": "预防混乱效果",
       "quest": "",
       "superitem": 0,
@@ -2422,10 +2421,10 @@
     },
     "烈焰戒指": {
       "english": "RING OF FIRE",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "盾",
+      "description": "火抗 +50, 免疫冰冻",
+      "quest": "\n星界斗篷(法术伤害+80%~100%) = 原始光子水晶ＰＰＳ+ 千年光子核心ＭＰＣ + 克罗艾女士的毛衣 + Ｘ组件Ｖｅｒ３．１０ + 魔王铠甲 + 皇朝装甲 + 烈焰戒指 + 忍者服 + 母亲的外套＋",
+      "superitem": 1,
       "image": ""
     },
     "烟幕铠": {
@@ -2438,18 +2437,18 @@
     },
     "熔岩戒指": {
       "english": "MOLTEN RING",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "盾",
+      "description": "暗抗 +50",
+      "quest": "\n千年纪／ＨＰ = 千年光子核心ＭＰＣ + 不朽级/ＨＰ+ 大灾变之盾 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章\n烈焰引擎 = 千年光子核心ＭＰＣ + 黑暗光子水晶ＤＰＳ + 爆裂铠 + 巨兽铠甲 + 索尼克小队的证书 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章",
+      "superitem": 1,
       "image": ""
     },
     "燃血炮": {
       "english": "COMBUSTION CANNON",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "散弹枪",
+      "description": "EX:削血烈焰",
+      "quest": "EX攻击可穿墙",
+      "superitem": 1,
       "image": ""
     },
     "爆蛋枪的零件": {
@@ -2462,10 +2461,10 @@
     },
     "爆裂铠": {
       "english": "BLAST GARMENT",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "铠甲",
+      "description": "防御力 +600, 回避力 +200, HP +125",
+      "quest": "\n烈焰引擎 = 千年光子核心ＭＰＣ + 黑暗光子水晶ＤＰＳ + 爆裂铠 + 巨兽铠甲 + 索尼克小队的证书 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章\n星界剑＝爆裂铠+机械臂外壳 III+千年光子核心ＭＰＣ+红色水晶+蓝色水晶+黄色水晶+绿色水晶+依兹玛艾拉+暗物质",
+      "superitem": 1,
       "image": ""
     },
     "牌位": {
@@ -2478,10 +2477,10 @@
     },
     "状态/免疫": {
       "english": "State/Maintenance",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "插件",
+      "description": "免疫所有异常状态, 无需多言",
+      "quest": "\n耦合中枢 = 机械臂外壳 III + 真空波石 + 光子加速器 + 状态/免疫 + 索尼克小队的证书 + 陷阱/探测 + 暗物质",
+      "superitem": 2,
       "image": ""
     },
     "狂信者的投刃": {
@@ -2574,72 +2573,72 @@
     },
     "百人长/全能力": {
       "english": "Centurion/Ability",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "全能力 +30, 命中 +2",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "百人长/命中": {
       "english": "Centurion/Arms",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "命中 +35",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "百人长/回避": {
       "english": "Centurion/Legs",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "回避力 +75",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "百人长/战斗": {
       "english": "Centurion/Battle",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击速度 +80%",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "百人长/攻击": {
       "english": "Centurion/Power",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击力 +75",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "百人长/精神": {
       "english": "Centurion/Mind",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "精神力 +75",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "百人长/运": {
       "english": "Centurion/Luck",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "运 +60",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "百人长/防御": {
       "english": "Centurion/Body",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "防御 +75",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "百人长/ＨＰ": {
       "english": "Centurion/HP",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "HP +125",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -2654,10 +2653,10 @@
     },
     "皇朝装甲": {
       "english": "DYNASTY ARMOR",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "铠甲",
+      "description": "全属性 +15",
+      "quest": "\n星界斗篷(法术伤害+80%~100%) = 原始光子水晶ＰＰＳ+ 千年光子核心ＭＰＣ + 克罗艾女士的毛衣 + Ｘ组件Ｖｅｒ３．１０ + 魔王铠甲 + 皇朝装甲 + 烈焰戒指 + 忍者服 + 母亲的外套＋",
+      "superitem": 1,
       "image": ""
     },
     "真·妮之爪": {
@@ -2670,9 +2669,9 @@
     },
     "真瑚经书": {
       "english": "Book of HITOGATA",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "特殊道具",
+      "description": "与 式神 合成 式神「瑚式」",
+      "quest": "\nV803(冰系冻结几率 +90%) = 黑暗光子水晶ＤＰＳ+ 千年光子核心ＭＰＣ + V802 + V503 + 魔石「伊利提斯塔」 + Ｄ型因子核心 + 真瑚经书",
       "superitem": 0,
       "image": ""
     },
@@ -2680,13 +2679,13 @@
       "english": "Syncesta",
       "type": "特殊物品",
       "description": "可合成 圣剑「双刃·拉维斯」 与 圣剑「双切·迦农」",
-      "quest": "",
+      "quest": "\n耦合中枢 = 机械臂外壳 III + 真空波石 + 光子加速器 + 状态/免疫 + 索尼克小队的证书 + 陷阱/探测 + 暗物质",
       "superitem": 1,
       "image": ""
     },
     "真红卡片": {
       "english": "REDRIA CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -2712,7 +2711,7 @@
       "english": "EXCALIBUR",
       "type": "光剑",
       "description": "可由 银月之剑 解封, 3目标, 全职业可装备, EX:削血",
-      "quest": "搭配 特拉西斯: 攻击范围扩大, 双剑攻击动作",
+      "quest": "\n搭配 特拉西斯: 攻击范围扩大, 双剑攻击动作",
       "superitem": 1,
       "image": ""
     },
@@ -2801,7 +2800,7 @@
       "type": "光枪",
       "description": "RA可装备, EX:混沌, 可与 圣枪「天罚」合成 天国呼啸",
       "quest": "\n天国呼啸 搭配 耦合中枢: hit (天罚EX)3-3-3 (非天罚EX)4-4-4, 所有攻击自动瞄准, 攻击力和精神力+100, 攻击范围扩大",
-      "superitem": 2,
+      "superitem": 1,
       "image": ""
     },
     "种子岛": {
@@ -2838,7 +2837,7 @@
     },
     "粉红卡片": {
       "english": "PINKAL CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -2846,7 +2845,7 @@
     },
     "精神力药": {
       "english": "Mind Material",
-      "type": "",
+      "type": "能力药",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -2854,10 +2853,10 @@
     },
     "索尼克小队的证书": {
       "english": "Proof of Sonic Team",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "特殊道具",
+      "description": "用来合成特定装备",
+      "quest": "\n烈焰引擎 = 千年光子核心ＭＰＣ + 黑暗光子水晶ＤＰＳ + 爆裂铠 + 巨兽铠甲 + 索尼克小队的证书 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章\n耦合中枢 = 机械臂外壳 III + 真空波石 + 光子加速器 + 状态/免疫 + 索尼克小队的证书 + 陷阱/探测 + 暗物质\n麻痹弹弓 = 魔弹弓 + 索尼克小队的证书\n幻影力场(全能力+30铠甲) = 黑暗光子水晶ＤＰＳ + 千年光子核心ＭＰＣ + 机械臂外壳 III + ＤＦ领域 + 创世铠甲 + 冰光服 + 细菌防具「拉夫特利亚」\n星界爪(辅助法术提升) = 千年光子核心ＭＰＣ + 原始光子水晶ＰＰＳ + 黑暗光子水晶ＤＰＳ+ ＨＰ/涌流 + ＴＰ/涌流 + ＰＢ/涌流 + 索尼克小队的证书 + 御魔手镯 + 御圣手镯",
+      "superitem": 1,
       "image": ""
     },
     "红忍双刃": {
@@ -2865,7 +2864,7 @@
       "type": "匕首",
       "description": "EX:强攻术 和 强体术",
       "quest": "RA可装备",
-      "superitem": 0,
+      "superitem": 1,
       "image": ""
     },
     "红狂熊的右手": {
@@ -2990,7 +2989,7 @@
     },
     "纯正长刀": {
       "english": "BRIONAC",
-      "type": "",
+      "type": "长刀",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -2998,7 +2997,7 @@
     },
     "纯蓝卡片": {
       "english": "BLUEFULL CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -3046,7 +3045,7 @@
     },
     "缓慢预防": {
       "english": "Cure/Slow",
-      "type": "",
+      "type": "插件",
       "description": "预防缓慢效果",
       "quest": "",
       "superitem": 0,
@@ -3070,7 +3069,7 @@
     },
     "羽白卡片": {
       "english": "WHITILL CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -3078,7 +3077,7 @@
     },
     "翠绿卡片": {
       "english": "GREENILL CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -3328,7 +3327,7 @@
       "english": "CANNON ROUGE",
       "type": "发射器",
       "description": "RA可装备, 10目标, 不可三连, EX:混沌",
-      "quest": "\n搭配 行星引擎: 攻击力+150, 一发5hit",
+      "quest": "\n搭配 行星引擎: 攻击力+150, 单发 5 hit",
       "superitem": 2,
       "image": ""
     },
@@ -3366,10 +3365,10 @@
     },
     "运之药": {
       "english": "Luck Material",
-      "type": "",
+      "type": "能力药",
       "description": "",
       "quest": "",
-      "superitem": 0,
+      "superitem": 1,
       "image": ""
     },
     "远古预言": {
@@ -3462,7 +3461,7 @@
     },
     "金黄卡片": {
       "english": "YELLOWBOZE CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -3470,7 +3469,7 @@
     },
     "铬绿卡片": {
       "english": "VIRIDIA CARD",
-      "type": "",
+      "type": "卡片",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -3526,10 +3525,10 @@
     },
     "陷阱/探测": {
       "english": "Trap/Search",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "插件",
+      "description": "能看见陷阱",
+      "quest": "\n耦合中枢 = 机械臂外壳 III + 真空波石 + 光子加速器 + 状态/免疫 + 索尼克小队的证书 + 陷阱/探测 + 暗物质",
+      "superitem": 2,
       "image": ""
     },
     "雄风之剑": {
@@ -3614,7 +3613,7 @@
     },
     "雷系强化盾": {
       "english": "YELLOW BARRIER",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest": "",
       "superitem": 0,
@@ -3686,10 +3685,10 @@
     },
     "魔弹弓": {
       "english": "SPREAD NEEDLE",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "弹弓",
+      "description": "RA可装备, EX:强麻痹",
+      "quest": "\n地狱弹弓 = 魔弹弓 + 暗物质\n麻痹弹弓 = 魔弹弓 + 索尼克小队的证书",
+      "superitem": 1,
       "image": ""
     },
     "魔法剑": {
@@ -3710,23 +3709,23 @@
     },
     "魔王铠甲": {
       "english": "ARCHFIEND ARMOR",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "铠甲",
+      "description": "防御力 +370, 回避力 +260",
+      "quest": "\n星界斗篷(法术伤害+80%~100%) = 原始光子水晶ＰＰＳ+ 千年光子核心ＭＰＣ + 克罗艾女士的毛衣 + Ｘ组件Ｖｅｒ３．１０ + 魔王铠甲 + 皇朝装甲 + 烈焰戒指 + 忍者服 + 母亲的外套＋",
       "superitem": 0,
       "image": ""
     },
     "魔石「伊利提斯塔」": {
       "english": "Magic Stone \"Iritista\"",
       "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "description": "可用来合成强力装备",
+      "quest": "\n星界之翼 = 星界精华 + 蝙蝠之翼 + 魔石「心键」+ 魔石「伊利提斯塔」+ 优雅盾\nV803(冰系冻结几率 +90%) = 黑暗光子水晶ＤＰＳ+ 千年光子核心ＭＰＣ + V802 + V503 + 魔石「伊利提斯塔」 + Ｄ型因子核心 + 真瑚经书",
+      "superitem": 1,
       "image": ""
     },
     "麻痹预防": {
       "english": "Cure/Paralysis",
-      "type": "",
+      "type": "插件",
       "description": "预防麻痹效果",
       "quest": "",
       "superitem": 0,
@@ -3758,10 +3757,10 @@
     },
     "黑暗光子水晶ＤＰＳ": {
       "english": "Darkness Photon Sphere",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "特殊物品",
+      "description": "可用来合成顶级装备",
+      "quest": "\n烈焰引擎 = 千年光子核心ＭＰＣ + 黑暗光子水晶ＤＰＳ + 爆裂铠 + 巨兽铠甲 + 索尼克小队的证书 + 熔岩戒指 + ＷＥＡＰＯＮＳ水晶徽章\nV803(冰系冻结几率 +90%) = 黑暗光子水晶ＤＰＳ+ 千年光子核心ＭＰＣ + V802 + V503 + 魔石「伊利提斯塔」 + Ｄ型因子核心 + 真瑚经书\n星界爪(辅助法术提升) = 千年光子核心ＭＰＣ + 原始光子水晶ＰＰＳ + 黑暗光子水晶ＤＰＳ+ ＨＰ/涌流 + ＴＰ/涌流 + ＰＢ/涌流 + 索尼克小队的证书 + 御魔手镯 + 御圣手镯",
+      "superitem": 2,
       "image": ""
     },
     "黑暗查欧之心": {
@@ -3854,18 +3853,18 @@
     },
     "龙鳞": {
       "english": "Dragon Scale",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "特殊物品",
+      "description": "MAG 卡玛 进化成 特拉西斯",
+      "quest": "\n搭配 石中剑: 攻击范围扩大, 双剑攻击动作",
+      "superitem": 1,
       "image": ""
     },
     "Ｄ因子发射器": {
       "english": "D-VIRUS LAUNCHER",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "散弹枪",
+      "description": "RA可装备, EX: 削血",
+      "quest": "\n血量低于50%时, 多射1波子弹\n血量低于12.5%时, 多射3波子弹。",
+      "superitem": 2,
       "image": ""
     },
     "Ｄ因子铠甲": {
@@ -3879,8 +3878,8 @@
     "Ｄ型因子核心": {
       "english": "D-Photon Core",
       "type": "特殊道具",
-      "description": "MAG 进化成 堕天灵＆怵天灵",
-      "quest": "60%概率 三无敌",
+      "description": "MAG 进化成 堕天灵＆怵天灵 60%概率 三无敌",
+      "quest": "\nV803(冰系冻结几率 +90%) = 黑暗光子水晶ＤＰＳ+ 千年光子核心ＭＰＣ + V802 + V503 + 魔石「伊利提斯塔」 + Ｄ型因子核心 + 真瑚经书",
       "superitem": 2,
       "image": ""
     },
@@ -3934,16 +3933,16 @@
     },
     "ＤＦ领域": {
       "english": "DF FIELD",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "铠甲",
+      "description": "全职业可装备",
+      "quest": "\n幻影力场(全能力+30铠甲) = 黑暗光子水晶ＤＰＳ + 千年光子核心ＭＰＣ + 机械臂外壳 III + ＤＦ领域 + 创世铠甲 + 冰光服 + 细菌防具「拉夫特利亚」",
       "superitem": 0,
       "image": ""
     },
     "ＤＲＥＡＭＣＡＳＴ组件": {
       "english": "Kit of DREAMCAST",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "MAG 进化成 ＤＲＥＡＭＣＡＳＴ",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -3966,9 +3965,9 @@
     },
     "ＨＰ/涌流": {
       "english": "HP/Flow",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "插件",
+      "description": "每秒回1HP",
+      "quest": "\n星界爪(辅助法术提升) = 千年光子核心ＭＰＣ + 原始光子水晶ＰＰＳ + 黑暗光子水晶ＤＰＳ+ ＨＰ/涌流 + ＴＰ/涌流 + ＰＢ/涌流 + 索尼克小队的证书 + 御魔手镯 + 御圣手镯",
       "superitem": 0,
       "image": ""
     },
@@ -4022,40 +4021,40 @@
     },
     "ＭＡＲＫ３组件": {
       "english": "Kit of MARK3",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "MAG 进化成 ＭＡＲＫ３",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "ＭＡＳＴＥＲＳＹＳＴＥＭ组件": {
       "english": "Kit of MASTER SYSTEM",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "MAG 进化成ＭＡＳＴＥＲＳＹＳＴＥＭ",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
-    "ＭＥＧＡＤＲＩＶＥ组件": {
+    "ＧＥＮＥＳＩＳ组件": {
       "english": "Kit of GENESIS",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "MAG 进化成 ＧＥＮＥＳＩＳ",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "ＰＢ/涌流": {
       "english": "PB/Flow",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "插件",
+      "description": "每5秒回1PB",
+      "quest": "\n星界爪(辅助法术提升) = 千年光子核心ＭＰＣ + 原始光子水晶ＰＰＳ + 黑暗光子水晶ＤＰＳ+ ＨＰ/涌流 + ＴＰ/涌流 + ＰＢ/涌流 + 索尼克小队的证书 + 御魔手镯 + 御圣手镯",
       "superitem": 0,
       "image": ""
     },
     "ＰＢ/重生": {
       "english": "PB/Create",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "每23秒恢复1PB",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -4078,104 +4077,104 @@
     },
     "ＳＥＧＡＳＡＴＵＲＮ组件": {
       "english": "Kit of SEGA SATURN",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "MAG 进化成 SEGA SATURN",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "ＴＰ/回复": {
       "english": "TP/Restorate",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "每15秒恢复1TP",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "ＴＰ/涌流": {
       "english": "TP/Flow",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "插件",
+      "description": "每秒恢复1TP",
+      "quest": "\n星界爪(辅助法术提升) = 千年光子核心ＭＰＣ + 原始光子水晶ＰＰＳ + 黑暗光子水晶ＤＰＳ+ ＨＰ/涌流 + ＴＰ/涌流 + ＰＢ/涌流 + 索尼克小队的证书 + 御魔手镯 + 御圣手镯",
       "superitem": 0,
       "image": ""
     },
     "ＴＰ/重生": {
       "english": "TP/Revival",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "每11秒恢复1TP",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "ＴＰ药": {
       "english": "TP Material",
-      "type": "",
+      "type": "能力药",
       "description": "",
       "quest": "",
-      "superitem": 0,
+      "superitem": 1,
       "image": ""
     },
     "Ｖ１０１": {
       "english": "V101",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "全能力 +15, 运 +15, 命中 +1, 攻击速度 +40%",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "Ｖ５０１": {
       "english": "V501",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "冻结、麻痹、混乱和地狱的EX成功率 +50%",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "Ｖ５０２": {
       "english": "V502",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "冻结、麻痹、混乱的EX成功率 +50%, 地狱的EX成功率 +100%",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "Ｖ５０３": {
       "english": "V503",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "插件",
+      "description": "冻结、麻痹、混乱和地狱的EX成功率 +100%, 内置 灵感之环",
+      "quest": "V803(冰系冻结几率 +90%) = 黑暗光子水晶ＤＰＳ+ 千年光子核心ＭＰＣ + V802 + V503 + 魔石「伊利提斯塔」 + Ｄ型因子核心 + 真瑚经书",
+      "superitem": 1,
       "image": ""
     },
     "Ｖ８０１": {
       "english": "V801",
       "type": "",
-      "description": "",
+      "description": "施法速度 +30%",
       "quest": "",
       "superitem": 0,
       "image": ""
     },
     "Ｖ８０２": {
       "english": "V802",
-      "type": "",
-      "description": "",
-      "quest": "",
-      "superitem": 0,
+      "type": "插件",
+      "description": "施法速度 +100%",
+      "quest": "\nV803(冰系冻结几率 +90%) = 黑暗光子水晶ＤＰＳ+ 千年光子核心ＭＰＣ + V802 + V503 + 魔石「伊利提斯塔」 + Ｄ型因子核心 + 真瑚经书",
+      "superitem": 1,
       "image": ""
     },
     "Ｘ组件Ｖｅｒ３．１０": {
       "english": "X-PARTS ver3.10",
-      "type": "",
-      "description": "",
-      "quest": "",
+      "type": "铠甲",
+      "description": "机器人可装备",
+      "quest": "\n星界斗篷(法术伤害+80%~100%) = 原始光子水晶ＰＰＳ+ 千年光子核心ＭＰＣ + 克罗艾女士的毛衣 + Ｘ组件Ｖｅｒ３．１０ + 魔王铠甲 + 皇朝装甲 + 烈焰戒指 + 忍者服 + 母亲的外套＋",
       "superitem": 0,
       "image": ""
     },
     "Ｙａｈｏｏ！细胞": {
       "english": "Yahoo!'s engine",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "合成 雅虎",
       "quest": "",
       "superitem": 0,
       "image": ""
@@ -21701,43 +21700,43 @@
             "farm": "",
             "drops": {
               "Viridia": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Greenill": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Skyly": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Bluefull": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Purplenum": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Pinkal": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Redria": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Oran": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Yellowboze": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               },
               "Whitill": {
-                "item": "原始光子水晶",
+                "item": "原始光子水晶ＰＰＳ",
                 "rate": "1/45"
               }
             }
@@ -22706,7 +22705,7 @@
                 "rate": "1/1050.25"
               },
               "Skyly": {
-                "item": "ＭＥＧＡＤＲＩＶＥ组件",
+                "item": "ＧＥＮＥＳＩＳ组件",
                 "rate": "1/525.13"
               },
               "Bluefull": {
