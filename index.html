@@ -100,6 +100,9 @@ th, td{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: normal;    /* 自动换行 */
+    word-wrap: break-word;  /* 长词自动换行 */
+    overflow-wrap: break-word;
 }
 
 /* 表头 sticky */
@@ -159,7 +162,37 @@ tbody td:hover{
     display:block;
     line-height:1.2;
     font-size:18px; /* 掉落物品字体加大 */
+    font-weight:500;
 }
+
+.legend-item{
+
+    color:#fbbf24;
+
+    font-weight:700;
+
+    text-shadow:
+        0 0 4px rgba(251,191,36,.35);
+}
+
+.ultimate-item{
+ font-weight:700; background: linear-gradient( 90deg, #ff0000, #ffff00, #00ff00,  #00ffff, #0066ff, #ff00ff);background-size:300%; background-clip:text;-webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:rainbow 4s linear infinite;
+}
+
+
+@keyframes ultimateGlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    100%{
+        background-position:300% 50%;
+    }
+}
+
 .drop-rate{ display:block; margin-top:1px;  color:#94a3b8;
     font-size:20px; /* 掉率字体稍大 */
     color:#94a3b8;
@@ -172,19 +205,44 @@ tbody td:hover{
 .dar{ color:#facc15; font-size:20px; }
 .highlight{
 
+    position:relative;
+
+    z-index:5;
+
+    border-radius:6px;
+
+    animation:searchPulse 1.5s infinite;
+
     box-shadow:
-        inset 0 0 0 2px #facc15;
-
-    background:
-        rgba(
-            250,
-            204,
-            21,
-            .18
-        ) !important;
-
-    transition:.15s;
+        0 0 8px rgba(255,255,0,.7),
+        0 0 16px rgba(255,255,0,.5),
+        inset 0 0 0 2px #ffd700;
 }
+
+@keyframes searchPulse{
+
+    0%{
+        box-shadow:
+            0 0 8px rgba(255,255,0,.5),
+            0 0 16px rgba(255,255,0,.3),
+            inset 0 0 0 2px #ffd700;
+    }
+
+    50%{
+        box-shadow:
+            0 0 16px rgba(255,255,0,.9),
+            0 0 32px rgba(255,255,0,.7),
+            inset 0 0 0 3px #fff176;
+    }
+
+    100%{
+        box-shadow:
+            0 0 8px rgba(255,255,0,.5),
+            0 0 16px rgba(255,255,0,.3),
+            inset 0 0 0 2px #ffd700;
+    }
+}
+
 .tooltip-farm {
     color: #94b938;       /* 蓝色示例，也可以换成你喜欢的 */
     font-weight: 600;     /* 稍微加粗 */
@@ -192,11 +250,6 @@ tbody td:hover{
     margin-top: 2px;      /* 上下间距微调 */
     display: block;
     white-space: normal;  /* 自动换行 */
-}
-/* superitem */
-.super-item{ font-weight:700; background: linear-gradient( 90deg, #ff0000, #ffff00, #00ff00,  #00ffff, #0066ff, #ff00ff);background-size:300%; background-clip:text;-webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation:rainbow 4s linear infinite;
 }
 
 @keyframes rainbow{
@@ -224,7 +277,7 @@ tbody td:hover{
     border-radius: 8px;
     font-size: 14px;
     line-height: 1.4;
-    max-width: 300px;       /* 最大宽度，可根据需要调整 */
+    max-width: 600px;       /* 最大宽度，可根据需要调整 */
     white-space: normal;    /* 自动换行 */
     word-wrap: break-word;  /* 长词自动换行 */
     overflow-wrap: break-word;
@@ -238,11 +291,9 @@ tbody td:hover{
     font-weight: 600;
     font-style: italic;
 }
-.tooltip-name{ color:#60a5fa; font-weight:700; font-size:16px; }
-.tooltip-name.super{ /* superitem 彩虹效果 */ background: linear-gradient(90deg,#ff0000,#ffff00,#00ff00,#00ffff,#0066ff,#ff00ff); background-size:300%; background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation:rainbow 4s linear infinite; }
 .tooltip-type{ color:#34d399; margin-top:4px; }
-.tooltip-desc{ color:#d1d5db; margin-top:2px; }
-.tooltip-quest{ color:#facc15; margin-top:2px; }
+.tooltip-desc{ color:#d1d5db; margin-top:2px; white-space: pre-wrap;  }
+.tooltip-quest{ color:#facc15; margin-top:2px; white-space: pre-wrap;   }
 .tooltip-id{color:#e52020f9;font-weight:700;margin-top:4px;}
 .tooltip-en{color:#94a3b8;font-style:italic;margin-bottom:4px;}
 
@@ -729,11 +780,24 @@ function render(){
                 const drop = monster.drops[sectionId.id];
                 if(drop){
                     const itemInfo = data.items[drop.item];
-                    const isSuper = itemInfo?.superitem===true;
-                    html += `<td class="item-cell col-${sectionId.id}" data-item="${drop.item}" data-section="${sectionId.id}" data-farm="${monster.farm || ''}">
-                        <span class="item-name ${isSuper?'super-item':''}">${drop.item}</span>
-                        <small class="drop-rate">${drop.rate}</small>
-                    </td>`;
+                    const rarity = itemInfo.superitem || 0;
+                    const rarityClass=rarity===2? "ultimate-item": rarity===1? "legend-item": "";
+
+                html += `
+                <td class="item-cell col-${sectionId.id}"
+                    data-item="${drop.item}"
+                    data-section="${sectionId.id}"
+                    data-farm="${monster.farm || ''}">
+
+                    <span class="item-name ${rarityClass}">
+                        ${drop.item}
+                    </span>
+
+                    <small class="drop-rate">
+                        ${drop.rate}
+                    </small>
+
+                </td>`;
                 }else{
                     html += `<td>-</td>`;
                 }
@@ -810,11 +874,12 @@ function bindTooltips(){
             const farm = cell.dataset.farm || "";
             if(!item) return;
             const tooltip = document.getElementById("tooltip");
-            const isSuper = item.superitem === true;
+            const rarity = item.superitem || 0;
+            const rarityClass = rarity === 2 ? 'ultimate-item' : rarity === 1  ? 'legend-item'   : '';
 
             tooltip.innerHTML = `
                 ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
-                <div class="tooltip-name ${isSuper?'super':''}">${itemName}</div>
+                <div class="tooltip-name ${rarityClass}"> ${itemName}</div>
                 ${item.english?`<div class="tooltip-en">${item.english}</div>`:""}
                 <div class="tooltip-id">sectionid ${sectionNumber}</div>
                 <div class="tooltip-type">类型：${item.type||"-"}</div>

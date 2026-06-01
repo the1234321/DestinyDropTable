@@ -54,459 +54,459 @@
   ],
   "items": {
     "辅助系强化盾": {
-      "english": "ASSIST  BARRIER",
-      "type": "",
-      "description": "",
+      "english": "ASSIST BARRIER",
+      "type": "盾",
+      "description": "对强攻术和强体术有增幅",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "万圣节南瓜灯": {
       "english": "Hallowed Jack-O'-Lantern",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "特殊物品",
+      "description": "合成禁忌魔导书所需关键材料",
+      "quest":"禁忌魔导书 = 万圣节南瓜灯 + 厄普西隆的装甲 + 索尼克小队的证书 + 混沌法师的右手 + 魔石「伊利提斯塔」+ 真瑚经书",
+      "superitem": 1,
       "image":""
     },
     "Ideya细胞": {
       "english": "Ideya Cell",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "特殊物品",
+      "description": "MAG 进化成 梦精灵",
+      "quest":"60%概率 三无敌",
+      "superitem": 1,
       "image":""
     },
     "NUG-导弹发射器": {
       "english": "NUG2000-BAZOOKA",
-      "type": "",
+      "type": "发射器",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"不可连续攻击",
+      "superitem": 0,
       "image":""
     },
     "上帝之手": {
       "english": "GOD HAND",
-      "type": "",
-      "description": "",
+      "type": "拳套",
+      "description": "EX:王之",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "不朽级/全能力": {
       "english": "Immortal/Ability",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击力、精神力、回避力、防御力、运各上升 40，命中上升 4",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "不朽级/命中": {
       "english": "Immortal/Arms",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "命中率上升 50",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "不朽级/回避": {
       "english": "Immortal/Legs",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "回避力上升 125",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "不朽级/战斗": {
       "english": "Immortal/Battle",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击速度 + 120%",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "不朽级/攻击": {
       "english": "Immortal/Power",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "攻击力上升 125",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "不朽级/精神": {
       "english": "Immortal/Mind",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "精神力上升 125",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "不朽级/运": {
       "english": "Immortal/Luck",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "运上升 90",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "不朽级/防御": {
       "english": "Immortal/Body",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "防御力上升 125",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "不朽级/ＨＰ": {
       "english": "Immortal/HP",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "HP上升 200",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "业障石杖": {
       "english": "CLUB OF ZUMIURAN",
-      "type": "",
-      "description": "",
+      "type": "手杖",
+      "description": "回避力上升 35, 闪电术+40%",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "中打磨石": {
       "english": "Digrinder",
-      "type": "",
+      "type": "消耗品",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "中毒预防": {
       "english": "Cure/Poison",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "预防中毒效果",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "云长": {
       "english": "YUNCHANG",
-      "type": "",
+      "type": "长刀",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"\n搭配 行星引擎: 命中提升20,攻击提升150, 攻击范围扩大, 攻击速度+15%, 攻击动作变为双头剑",
+      "superitem": 1,
       "image":""
     },
     "以太铠甲": {
       "english": "ETHEREAL ARMOR",
-      "type": "",
-      "description": "",
+      "type": "铠甲",
+      "description": "死咒术附带 穿透效果，攻击速度 +120%, 只能由FO装备",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "优雅盾": {
       "english": "GRATIA",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "伽斯帝－２３ＳＴ": {
       "english": "JUSTY-23ST",
-      "type": "",
-      "description": "",
+      "type": "步枪",
+      "description": "EX:魔鬼",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "依兹玛艾拉": {
       "english": "IZMAELA",
-      "type": "",
+      "type": "投刃",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "侵蚀遗传因子「弗罗文」": {
       "english": "Parasitic gene \"Flow\"",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "特殊物品",
+      "description": "可以和大剑，散弹枪，法杖合成暗黑系列武器，合成保留原武器属性",      
+      "quest":"\n暗黑弗罗文大剑 可三连, 濒死EX剑气与近战斩击叠加伤害\n暗黑陨石枪 常时EX hit:1-1-3 濒死时EX hit:1-1-5 \n暗黑使者杖 高级法术和圣光术 威力提升50% EX:圣光术 \n暗黑使者杖 搭配 寄生防具「掠夺者」:濒死时EX攻击4倍",
+      "superitem": 2,
       "image":""
     },
     "倾心爱意": {
       "english": "TASTE OF AFFECTION",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "双枪",
+      "description": "强攻术和强体术 范围 +100%, 仅限男性装备, EX:削血",
+      "quest":"\n可与 情热香氛(双枪) 合成 天国恋歌(双枪)\n天国恋歌 全职业可装备, 降攻降防术 +100%, EX:恶魔\n天国恋歌 由FO装备时,降攻术、降防术可同时释放\n天国恋歌 与 耦合中枢 搭配: 攻击范围和命中率大幅提升",
+      "superitem": 2,
       "image":""
     },
     "元素爪": {
       "english": "CLAW OF ELEMENTS",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "拳套",
+      "description": "全职业可装备 火墙 +60%, 冰箭 +90%, 群雷 +90%",
+      "quest":"新人类男法师 空手施法速度有额外加成",
+      "superitem": 2,
       "image":""
     },
     "先驱者的部件": {
       "english": "Pioneer Parts",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "MAG 进化成 先驱者, 非三无敌",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "光子加速器": {
       "english": "Photon Booster",
-      "type": "",
+      "type": "特殊物品",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "光子水晶ＰＣ": {
       "english": "Photon Crystal",
-      "type": "",
+      "type": "特殊物品",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "光子爪": {
       "english": "PHOTON CLAW",
-      "type": "",
-      "description": "",
+      "type": "爪",
+      "description": "EX 饮血",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "光栅瞄准镜": {
       "english": "RASTER SCOPE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "插件",
+      "description": "与雅斯米诺科夫系列搭配时，会产生套装效果",
+      "quest":"\n搭配 雅斯米诺科夫9000M: 攻击范围 +40, 攻击力+50, 命中+20\n搭配 雅斯米诺科夫2000H: 攻击范围 -70.0, 三连hit数: 3-3-3\n搭配 雅斯米诺科夫7000V: 攻击力+300, 攻击范围 +55\n搭配 雅斯米诺科夫3000R: Hits N/H : 3-3-3, EX:1-1-3, EX范围 -75, 攻击角度 +35",
+      "superitem": 2,
       "image":""
     },
     "光辉戒指": {
       "english": "RADIANT RING",
-      "type": "",
+      "type": "盾",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"搭配 最后的统治者: EX攻击hit数: 3-3-3",
+      "superitem": 2,
       "image":""
     },
     "克罗艾女士的毛衣": {
       "english": "KROE'S SWEATER",
-      "type": "",
+      "type": "铠甲",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "兔子杖": {
       "english": "RABBIT WAND",
-      "type": "",
+      "type": "手杖",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "八咫镜": {
       "english": "YATA MIRROR",
-      "type": "",
-      "description": "",
+      "type": "盾",
+      "description": "命中 +35, 火球术 +30%",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "八坂琼勾玉": {
       "english": "YASAKANI MAGATAMA",
-      "type": "",
+      "type": "插件",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"搭配 草薙: 命中 +30",
+      "superitem": 0,
       "image":""
     },
     "六芒星盾": {
       "english": "ATTRIBUTE WALL",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "六芒星铠": {
       "english": "ATTRIBUTE PLATE",
-      "type": "",
-      "description": "",
+      "type": "铠甲",
+      "description": "FO无法装备",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "再生机能盾": {
       "english": "REGENERATE GEAR",
-      "type": "",
-      "description": "",
+      "type": "盾",
+      "description": "格挡时回HP",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "再生机能盾Ｂ．Ｐ": {
       "english": "REGENERATE GEAR B.P.",
-      "type": "",
-      "description": "",
+      "type": "盾",
+      "description": "格挡时回HP和TP",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "军用光枪ver.": {
       "english": "CUSTOM RAY ver.OO",
-      "type": "",
+      "type": "光枪",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "军用电击枪": {
       "english": "BRAVACE",
-      "type": "",
+      "type": "光枪",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "军用盾Ｖｅｒ００": {
       "english": "CUSTOM BARRIER ver.OO",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "军用铠Ｖｅｒ００": {
       "english": "CUSTOM FRAME ver.OO",
-      "type": "",
+      "type": "铠甲",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "冰之剑": {
       "english": "KALADBOLG",
-      "type": "",
+      "type": "光剑",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "冰光服": {
       "english": "LUMINOUS FIELD",
-      "type": "",
+      "type": "铠甲",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "冰冻预防": {
       "english": "Cure/Freeze",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "预防冰冻效果",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "冰暴披风": {
       "english": "CONGEAL CLOAK",
-      "type": "",
+      "type": "铠甲",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "冰杖「达冈」": {
       "english": "ICE STAFF:DAGON",
-      "type": "",
-      "description": "",
+      "type": "魔杖",
+      "description": "冰系法术 +20%",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "冰系强化盾": {
       "english": "BLUE BARRIER",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "冰雾双旋": {
       "english": "TWIN CYCLONE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "匕首",
+      "description": "3目标, 仅HU可装备, EX:冰冻",
+      "quest":"EX冰冻几率100%",
+      "superitem": 2,
       "image":""
     },
     "冲击强化盾": {
       "english": "STRIKER PLUS",
-      "type": "",
+      "type": "盾",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "冷射枪": {
       "english": "FROZEN SHOOTER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "步枪",
+      "description": "仅RA可装备, EX:冰冻",
+      "quest":"EX冰冻几率100%",
+      "superitem": 0,
       "image":""
     },
     "冷狱枪": {
       "english": "FROSTBITE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "步枪",
+      "description": "仅RA可装备, EX:冰冻",
+      "quest":"EX冰冻几率100%, 攻击力比冷射枪高124",
+      "superitem": 1,
       "image":""
     },
     "凡尘毁灭": {
       "english": "MORTAL RUIN",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "匕首",
+      "description": "3目标, 仅FO可装备, EX: 死咒球",
+      "quest":"\n搭配 混沌引擎: 10目标, 增加攻击范围和角度, 攻击+250, 死咒球自动追踪",
+      "superitem": 2,
       "image":""
     },
     "凤凰之翼": {
       "english": "PHOENIX WINGS",
-      "type": "",
-      "description": "",
+      "type": "盾",
+      "description": "命中率 +35 回魂术 +100% 火球术 +80%, 炎狱术 +70%",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "创世铠甲": {
       "english": "GENESIS ARMOR",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "铠甲",
+      "description": "全职业可装备",
+      "quest":"防御力+508, 回避力+284",
+      "superitem": 1,
       "image":""
     },
     "削血弹弓": {
       "english": "BERSERK NEEDLE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "弹弓",
+      "description": "EX:削血",
+      "quest":"搭配 矢量瞄准镜: 攻击范围 +105, 命中+20",
+      "superitem": 2,
       "image":""
     },
     "剑之舞": {
@@ -514,7 +514,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "剑士的心得": {
@@ -522,7 +522,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "剑魔的右手": {
@@ -530,7 +530,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "剑魔的左手": {
@@ -538,15 +538,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "加尔之风": {
       "english": "GAL WIND",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "卡片",
+      "description": "仅FO可装备, 回避力-15",
+      "quest":"\n搭配 禁忌魔导书: 攻击力+350, 命中+30, Hits (N/H)3-3-3, (EX)3-3-4",
+      "superitem": 2,
       "image":""
     },
     "勇者之拳": {
@@ -554,7 +554,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "勇者之锤": {
@@ -562,7 +562,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "勇者的飞碟": {
@@ -570,7 +570,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "十字疤": {
@@ -578,7 +578,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "十文字枪": {
@@ -586,7 +586,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "千年光子核心ＭＰＣ": {
@@ -594,7 +594,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "千里足": {
@@ -602,7 +602,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "南瓜": {
@@ -610,7 +610,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "厄普西隆的装甲": {
@@ -618,7 +618,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "原初枢纽": {
@@ -626,7 +626,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "原始光子水晶": {
@@ -634,7 +634,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "双头剑": {
@@ -642,7 +642,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "双烙印": {
@@ -650,7 +650,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "双猫细胞": {
@@ -658,7 +658,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "双荣耀光剑": {
@@ -666,15 +666,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "双里卡之爪": {
       "english": "TWIN RIKA'S CLAW",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "爪",
+      "description": "HU和RA可装备, 3目标, 全属性 +10, 中级法术 +30%, EX:雷暴",
+      "quest":"\nHU装备时, 攻击力 +200\n搭配 耦合中枢: 5目标, 匕首攻击动作, 攻击范围扩大",
+      "superitem": 2,
       "image":""
     },
     "反射装甲": {
@@ -682,7 +682,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "变色龙之杖": {
@@ -690,7 +690,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "古代剑": {
@@ -698,7 +698,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "史神克莱奥之杖": {
@@ -706,7 +706,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "叹息之墙": {
@@ -714,7 +714,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "合体怪双刃": {
@@ -722,7 +722,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "合体怪的双手": {
@@ -730,7 +730,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "向日葵": {
@@ -738,7 +738,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "咒之披风": {
@@ -746,7 +746,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "咒卡": {
@@ -754,7 +754,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "咒符": {
@@ -762,7 +762,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "啮魂者": {
@@ -770,7 +770,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "啾啾之心": {
@@ -778,15 +778,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "嗜血弹弓": {
       "english": "GUSH NEEDLE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "弹弓",
+      "description": "EX:嗜血",
+      "quest":"搭配 矢量瞄准镜: 攻击范围 +105, 命中+20, hit: 1-1-3",
+      "superitem": 2,
       "image":""
     },
     "四神盾「朱雀」": {
@@ -794,7 +794,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "四神盾「白虎」": {
@@ -802,7 +802,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "回复系强化盾": {
@@ -810,7 +810,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "回旋双光轮": {
@@ -818,7 +818,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "回生护甲": {
@@ -826,7 +826,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "回生衣": {
@@ -834,7 +834,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "回避力药": {
@@ -842,7 +842,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣光枪": {
@@ -850,7 +850,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣光环": {
@@ -858,7 +858,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣光盾": {
@@ -866,15 +866,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣剑「拉维斯·迦农」": {
       "english": "LAVIS CANNON",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光剑",
+      "description": "可与 真空波石 合成 圣剑「双刃·拉维斯」 与 圣剑「双切·迦农」, EX:削血能量波",
+      "quest":"\n圣剑「双切·迦农」可与 暗物质 合成 圣剑「终极·迦农」(双头剑), EX:超级能量波\n圣剑「终极·迦农」搭配 耦合中枢:命中+20, 攻击范围扩大, 正面打EP4蜥蜴, 攻速 +15%",
+      "superitem": 2,
       "image":""
     },
     "圣杖「意念」": {
@@ -882,15 +882,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣枪「天罚」": {
       "english": "HEAVEN PUNISHER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光枪",
+      "description": "RA可装备, EX:天罚, 可与 圣枪「神罚」合成 天国呼啸",
+      "quest":"\n天国呼啸 搭配 耦合中枢: hit (天罚EX)3-3-3 (非天罚EX)4-4-4, 所有攻击自动瞄准, 攻击力和精神力+100, 攻击范围扩大",
+      "superitem": 2,
       "image":""
     },
     "圣洁披风": {
@@ -898,7 +898,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣灵装甲": {
@@ -906,7 +906,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣衣": {
@@ -914,7 +914,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣诞节礼物": {
@@ -922,7 +922,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "圣降": {
@@ -930,7 +930,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "地狱之石": {
@@ -938,7 +938,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "地狱冲击": {
@@ -946,7 +946,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "地狱火箭炮": {
@@ -954,31 +954,31 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "埋骨弹弓": {
       "english": "GRAVE DIGGER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "弹弓",
+      "description": "EX:恶魔",
+      "quest":"搭配 矢量瞄准镜: 攻击力 +60, 命中 +30",
+      "superitem": 2,
       "image":""
     },
     "处刑人": {
       "english": "BOONDOCK SAINTS",
-      "type": "",
-      "description": "",
+      "type": "双枪",
+      "description": "EX:地狱",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "复活节彩蛋": {
       "english": "Easter Egg",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "特殊物品",
+      "description": "使用后获得随机道具(大部分是垃圾玩意)",
+      "quest":"复活节期间活动时, 可以找NPC兑换强力道具",
+      "superitem": 1,
       "image":""
     },
     "夜叉": {
@@ -986,7 +986,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "大叶子": {
@@ -994,7 +994,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "大和": {
@@ -1002,7 +1002,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "大师级/全能力": {
@@ -1010,7 +1010,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "大打磨石": {
@@ -1018,7 +1018,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "大灾变之盾": {
@@ -1026,15 +1026,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "大蛇腭": {
       "english": "OROTIAGITO",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "太刀",
+      "description": "EX:削血能量波",
+      "quest":"搭配 浅黄丝威褄取铠: 攻击 +50, 命中 +20, 3目标, hits: 2-2-2, 攻击范围增大, 攻速+15%",
+      "superitem": 0,
       "image":""
     },
     "大ＨＰ回复液": {
@@ -1042,7 +1042,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天使之琴": {
@@ -1050,7 +1050,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天使级/精神": {
@@ -1058,7 +1058,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天使级/运": {
@@ -1066,7 +1066,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天国装甲": {
@@ -1074,15 +1074,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂冲击": {
       "english": "HEAVEN STRIKER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光枪",
+      "description": "RA可装备, EX:削血",
+      "quest":"搭配 DIVINE FIELD: 濒死时 Hits 3-3-3",
+      "superitem": 2,
       "image":""
     },
     "天堂冲击的涂膜": {
@@ -1090,7 +1090,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/全能力": {
@@ -1098,7 +1098,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/命中": {
@@ -1106,7 +1106,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/回避": {
@@ -1114,7 +1114,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/战斗": {
@@ -1122,7 +1122,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/抗性": {
@@ -1130,7 +1130,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/攻击": {
@@ -1138,7 +1138,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/精神": {
@@ -1146,7 +1146,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/运": {
@@ -1154,7 +1154,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/防御": {
@@ -1162,7 +1162,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天堂级/ＨＰ": {
@@ -1170,7 +1170,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/全能力": {
@@ -1178,7 +1178,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/命中": {
@@ -1186,7 +1186,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/回避": {
@@ -1194,7 +1194,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/战斗": {
@@ -1202,7 +1202,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/攻击": {
@@ -1210,7 +1210,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/精神": {
@@ -1218,7 +1218,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/运": {
@@ -1226,7 +1226,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/防御": {
@@ -1234,7 +1234,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/魔法": {
@@ -1242,7 +1242,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/ＨＰ": {
@@ -1250,7 +1250,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天神级/ＴＰ": {
@@ -1258,7 +1258,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "天青卡片": {
@@ -1266,7 +1266,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "夹夹杖": {
@@ -1274,7 +1274,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "奥拉领域": {
@@ -1282,7 +1282,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "女士雨伞": {
@@ -1290,7 +1290,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "如意金箍棒": {
@@ -1298,7 +1298,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "妖刀·断罪": {
@@ -1306,7 +1306,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "妖刀·暗鸦": {
@@ -1314,7 +1314,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "妖刀·永夜": {
@@ -1322,7 +1322,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "妖刀·鬼彻": {
@@ -1330,7 +1330,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "妖精之怒": {
@@ -1338,15 +1338,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "姬蜂后火箭炮": {
       "english": "GI GUE BAZOOKA",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "发射器",
+      "description": "EX:强麻痹",
+      "quest":"可三连攻击",
+      "superitem": 1,
       "image":""
     },
     "威斯克－２３５Ｗ": {
@@ -1354,7 +1354,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "婚纱礼服": {
@@ -1362,7 +1362,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "守护之扇": {
@@ -1370,7 +1370,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "安斯兰德": {
@@ -1378,7 +1378,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "安神护甲": {
@@ -1386,7 +1386,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "安神衣": {
@@ -1394,7 +1394,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "完美/抗性": {
@@ -1402,7 +1402,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "宝石枪": {
@@ -1410,7 +1410,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "审判之刃": {
@@ -1418,7 +1418,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "宽永通宝": {
@@ -1426,15 +1426,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "寄生防具「掠夺者」": {
       "english": "Parasitic Armor 'Predator'",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "铠甲",
+      "description": "防御力+508, 回避力+284, 攻击力+100",
+      "quest":"搭配 暗黑使者杖: 濒死时EX攻击4倍",
+      "superitem": 0,
       "image":""
     },
     "富豪长刀": {
@@ -1442,7 +1442,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "对机器人专用来复枪": {
@@ -1450,7 +1450,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "导向穿甲弹": {
@@ -1458,23 +1458,23 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "封印之盾": {
       "english": "THREE SEALS",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "盾",
+      "description": "缓慢扣血",
+      "quest":"中级法术威力 +30%",
+      "superitem": 2,
       "image":""
     },
     "封印野太刀": {
       "english": "SEALED J-SWORD",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "大剑",
+      "description": "HU可装备, EX:地狱, 可解封为 罪切",
+      "quest":"\n 罪切, 5目标, hits (N/H)3-3-3 (EX)5-1-1\n搭配 浅黄丝威褄取铠: 攻击 +50, 命中 +20, 攻击范围增大, 攻速+15%",
+      "superitem": 2,
       "image":""
     },
     "将军级/命中": {
@@ -1482,7 +1482,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "将军级/回避": {
@@ -1490,7 +1490,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "将军级/攻击": {
@@ -1498,7 +1498,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "将军级/精神": {
@@ -1506,7 +1506,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "小打磨石": {
@@ -1514,23 +1514,23 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "小枪「伽尔德」": {
       "english": "HANDGUN:GULD",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光枪",
+      "description": "男性RA可装备, EX:魂之, 可与小枪「米拉」合成 伽尔德·米拉",
+      "quest":"\n伽尔德·米拉 搭配 耦合中枢, 攻击力 +400, 自动瞄准 Hits: (EX)5-5-5, 攻击范围增大",
+      "superitem": 2,
       "image":""
     },
     "小枪「米拉」": {
       "english": "HANDGUN:MILLA",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光枪",
+      "description": "女性RA可装备, EX:噬血, 可与小枪「伽尔德」合成 伽尔德·米拉",
+      "quest":"\n伽尔德·米拉 搭配 耦合中枢, 攻击力 +400, 自动瞄准 Hits: (EX)5-5-5, 攻击范围增大",
+      "superitem": 2,
       "image":""
     },
     "巨兽铠甲": {
@@ -1538,7 +1538,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "巨神像的右手": {
@@ -1546,7 +1546,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "巨芋叶": {
@@ -1554,7 +1554,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "巨螳螂的双手": {
@@ -1562,7 +1562,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "巨龙级/ＨＰ": {
@@ -1570,7 +1570,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "幻灵双枪": {
@@ -1578,7 +1578,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "幻爪「波姆之心」": {
@@ -1586,7 +1586,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "幻象之球": {
@@ -1594,7 +1594,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "异能魔杖": {
@@ -1602,7 +1602,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "式神": {
@@ -1610,7 +1610,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "弗罗文之盾": {
@@ -1618,7 +1618,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "弗罗文之铠": {
@@ -1626,7 +1626,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "弗罗文大剑": {
@@ -1634,15 +1634,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "强化导向穿甲弹": {
       "english": "IRON FAUST",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "散弹枪",
+      "description": "EX:混沌",
+      "quest":"全RA可装备, 可三连",
+      "superitem": 1,
       "image":""
     },
     "彩虹盾": {
@@ -1650,7 +1650,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "御圣手镯": {
@@ -1658,7 +1658,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "御魔手镯": {
@@ -1666,7 +1666,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "忍者手甲": {
@@ -1674,15 +1674,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "忍者服": {
       "english": "NINJA SUIT",
-      "type": "",
+      "type": "铠甲",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"\n搭配 飞镖: 攻击力+50 命中+20, hits 2-2-4, 投刃攻击动作\n搭配 手里剑: 5目标, Hits 2-2-2, 攻击力+100, 攻击范围扩大",
+      "superitem": 1,
       "image":""
     },
     "总督赠送的遮阳伞": {
@@ -1690,15 +1690,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "恶镰死神的镰刀": {
       "english": "ILL GILL REAPER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "长刀",
+      "description": "N额外闪电伤害, H额外冰冻伤害, EX:内置501的地狱(可与502/503叠加效果)",
+      "quest":"\n搭配 混沌引擎: Hits数: 2-2-3(N) 2-2-2(H/EX),攻击速度 +15%, 攻击范围扩大, 6目标, 原创攻击动作",
+      "superitem": 2,
       "image":""
     },
     "恶魔之叉": {
@@ -1706,7 +1706,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "恶魔之眼": {
@@ -1714,7 +1714,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "恶魔级/战斗": {
@@ -1722,7 +1722,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "恶魔级/魔法": {
@@ -1730,15 +1730,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "情热香氛": {
       "english": "PASSION HAZE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "双枪",
+      "description": "圣泉术和状态数 范围 +100%, 仅限女性装备, EX:销魂",
+      "quest":"\n可与 倾心爱意(双枪) 合成 天国恋歌(双枪)\n天国恋歌 全职业可装备, 降攻降防术 +100%, EX:恶魔\n天国恋歌 由FO装备时,降攻术、降防术可同时释放\n天国恋歌 与 耦合中枢 搭配: 攻击范围和命中率大幅提升",
+      "superitem": 2,
       "image":""
     },
     "意念双枪": {
@@ -1746,7 +1746,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "感电披风": {
@@ -1754,15 +1754,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "感电预防": {
       "english": "Cure/Shock",
-      "type": "",
-      "description": "",
+      "type": "插件",
+      "description": "预防感电效果",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "愤怒之拳": {
@@ -1770,7 +1770,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "战士服": {
@@ -1778,7 +1778,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "战斗杖": {
@@ -1786,7 +1786,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "战斗长刀": {
@@ -1794,7 +1794,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "扇舞": {
@@ -1802,15 +1802,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "手里剑": {
       "english": "FLIGHT CUTTER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "投刃",
+      "description": "HU和RA可装备, 4目标, EX:魔鬼",
+      "quest":"搭配 忍者服: 5目标, Hits 2-2-2, 攻击力+100, 攻击范围扩大",
+      "superitem": 1,
       "image":""
     },
     "扩展插槽": {
@@ -1818,7 +1818,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "抗性/光明": {
@@ -1826,7 +1826,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "抗性/冰冻": {
@@ -1834,7 +1834,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "抗性/火热": {
@@ -1842,7 +1842,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "抗性/灼热": {
@@ -1850,7 +1850,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "抗性/雷电": {
@@ -1858,15 +1858,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "拉克尼姆战斧": {
       "english": "LACONIUM AXE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "大剑",
+      "description": "HU可装备, EX削血",
+      "quest":"3目标",
+      "superitem": 0,
       "image":""
     },
     "拉克尼姆金属杖": {
@@ -1874,7 +1874,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "拉比的羽毛": {
@@ -1882,7 +1882,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "拉比鸟的嘴": {
@@ -1890,7 +1890,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "摩洛星人的心": {
@@ -1898,7 +1898,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "改进型再生机能盾": {
@@ -1906,7 +1906,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "攻击力药": {
@@ -1914,7 +1914,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "散华": {
@@ -1922,15 +1922,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "斩马刀": {
       "english": "ZANBA",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "大剑",
+      "description": "仅限男性HU可装备, EX:削血",
+      "quest":"人类男战士装备时, Hits  1-1-3, 攻速+15%, 攻击范围扩大",
+      "superitem": 1,
       "image":""
     },
     "斩魂者": {
@@ -1938,7 +1938,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "斩龙剑": {
@@ -1946,7 +1946,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "星之护甲": {
@@ -1954,7 +1954,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "星之粉": {
@@ -1962,7 +1962,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "星型增幅器": {
@@ -1970,15 +1970,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "晓之刻印": {
       "english": "DAYLIGHT SCAR",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "匕首",
+      "description": "HU和RA可装备, EX:削血",
+      "quest":"3目标, 攻击范围扩大",
+      "superitem": 1,
       "image":""
     },
     "晨曦之荣光": {
@@ -1986,7 +1986,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "晶化之翼": {
@@ -1994,7 +1994,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "暗影斗篷": {
@@ -2002,7 +2002,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "暗杀者的投刃": {
@@ -2010,7 +2010,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "暗杀者的迷彩服": {
@@ -2018,7 +2018,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "暗物质": {
@@ -2026,7 +2026,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "替身人偶": {
@@ -2034,7 +2034,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "最后的冲击": {
@@ -2042,7 +2042,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "最后的生还者": {
@@ -2050,15 +2050,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
-    "末代皇帝": {
+    "最后的统治者": {
       "english": "LAST EMPEROR",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "匕首",
+      "description": "非机器人可装备, 3命中, EX:消耗TP能量波",
+      "quest":"搭配 光辉戒指: EX攻击hit数: 3-3-3",
+      "superitem": 2,
       "image":""
     },
     "末日决战": {
@@ -2066,7 +2066,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "末日弩": {
@@ -2074,7 +2074,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "机械臂外壳 III": {
@@ -2082,7 +2082,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "机甲堡垒的零件": {
@@ -2090,7 +2090,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "村雨": {
@@ -2098,7 +2098,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "枪手服": {
@@ -2106,7 +2106,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "格斗盾": {
@@ -2114,7 +2114,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "棕狂熊的右手": {
@@ -2122,7 +2122,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "森隐雷藏拳套０型": {
@@ -2130,7 +2130,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "森隐雷藏的双手": {
@@ -2138,15 +2138,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "模范铠甲": {
       "english": "PARAGON FRAME",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "铠甲",
+      "description": "仅FO可装备, 强攻术 和 强体术等级 +5, 圣泉术 威力+800",
+      "quest":"\n搭配 食魂者: 攻击力+100, hits (N/H)1-2-5, (EX)1-1-3, 原创攻击动作, 可正面伤害EP4蜥蜴",
+      "superitem": 2,
       "image":""
     },
     "橙黄卡片": {
@@ -2154,7 +2154,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "武藏": {
@@ -2162,7 +2162,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "死亡金弹": {
@@ -2170,7 +2170,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "母亲的外套": {
@@ -2178,15 +2178,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "母亲的外套＋": {
       "english": "MOTHER GARB+",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "铠甲",
+      "description": "TP消耗减半",
+      "quest":"全FO都可装备",
+      "superitem": 1,
       "image":""
     },
     "沉默爪": {
@@ -2194,7 +2194,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "沙漠之鹰": {
@@ -2202,7 +2202,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "波动护甲": {
@@ -2210,7 +2210,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "波纹剑": {
@@ -2218,7 +2218,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "流星棍": {
@@ -2226,15 +2226,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "浅黄丝威褄取铠": {
       "english": "SAMURAI ARMOR",
-      "type": "",
+      "type": "铠甲",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"搭配 罪切 或 大蛇腭: 攻击 +50, 命中 +20, 3目标, hits: 2-2-2, 攻击范围增大, 攻速+15%",
+      "superitem": 1,
       "image":""
     },
     "浮光盾": {
@@ -2242,7 +2242,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "浮游炮零件": {
@@ -2250,7 +2250,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "消音枪": {
@@ -2258,7 +2258,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "淡紫卡片": {
@@ -2266,15 +2266,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "混乱预防": {
       "english": "Cure/Confuse",
       "type": "",
-      "description": "",
+      "description": "预防混乱效果",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "混沌光环": {
@@ -2282,23 +2282,23 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "混沌引擎": {
       "english": "Chaos Engine",
-      "type": "",
+      "type": "插件",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"\n搭配 凡尘毁灭: 10目标, 增加攻击范围和角度, 攻击+250, 死咒球自动追踪\n搭配 行星吞噬者: 4目标, 攻击范围扩大, 攻击hit数: 2-2-3, 命中+30, 原创攻击动作\n搭配 恶镰死神的镰刀: Hits数: 2-2-3(N) 2-2-2(H/EX), 攻击速度 +15%, 攻击范围扩大, 6目标, 原创攻击动作",
+      "superitem": 2,
       "image":""
     },
     "混沌法师的右手": {
       "english": "Sorcerer's Right Arm",
-      "type": "",
+      "type": "特殊物品",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "混沌骑士枪": {
@@ -2306,7 +2306,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "湮灭重锤": {
@@ -2314,7 +2314,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "漫步少女": {
@@ -2322,7 +2322,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "潘多拉的盒子": {
@@ -2330,7 +2330,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "火光铠": {
@@ -2338,7 +2338,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "火流星": {
@@ -2346,23 +2346,23 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "火焰喷射器": {
       "english": "FLAME VISIT",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "散弹枪",
+      "description": "可合成 强化火焰喷射器",
+      "quest":"\n强化火焰喷射器, 可三连",
+      "superitem": 1,
       "image":""
     },
     "火龙大剑": {
       "english": "RATHALOS GREATSWORD",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "大剑",
+      "description": "HU可装备, 10目标, EX:超级炎狱爆炸",
+      "quest":"搭配 烈焰引擎: Hits: 1-1-4, 原创攻击动作",
+      "superitem": 2,
       "image":""
     },
     "灵感之环": {
@@ -2370,7 +2370,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "灵感铠": {
@@ -2378,7 +2378,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "灼炎凤牙": {
@@ -2386,7 +2386,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "灼热披风": {
@@ -2394,7 +2394,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "炎杖「阿耆尼」": {
@@ -2402,7 +2402,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "炎系强化盾": {
@@ -2410,7 +2410,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "炼狱之刃": {
@@ -2418,7 +2418,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "烈焰戒指": {
@@ -2426,7 +2426,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "烟幕铠": {
@@ -2434,7 +2434,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "熔岩戒指": {
@@ -2442,7 +2442,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "燃血炮": {
@@ -2450,15 +2450,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "爆蛋枪的零件": {
       "english": "Parts of EGG BLASTER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "特殊物品",
+      "description": "可 与 光枪武器 合成 爆弹枪，属性保留",
+      "quest":"\n爆弹枪 与 蛋头博士的B计划 合成 终极爆弹枪\n 终极爆弹枪(双枪): RA可装备, 濒死时 EX:炎狱爆炸\n终极爆弹枪 搭配 烈焰引擎, 攻击力 +100, 攻击范围增大, Hits 4-4-4, 可正面命中EP4蜥蜴",
+      "superitem": 1,
       "image":""
     },
     "爆裂铠": {
@@ -2466,7 +2466,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "牌位": {
@@ -2474,7 +2474,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "状态/免疫": {
@@ -2482,31 +2482,31 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "狂信者的投刃": {
       "english": "SLICER OF FANATIC",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "投刃",
+      "description": "全职业可装备, 3目标, EX:恶魔",
+      "quest":"搭配 行星引擎: 命中+20, 6目标, 攻击范围增大, 攻速+15%",
+      "superitem": 1,
       "image":""
     },
     "狂暴巨猿的头": {
       "english": "Hildebear's Head",
-      "type": "",
+      "type": "特殊物品",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "狂暴白猿的头": {
       "english": "Hildeblue's Head",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "特殊物品",
+      "description": "可以转换为 狂暴白猿头杖, 冻气术 +30%, EX:冰箭术",
+      "quest":"EX范围明显增加",
+      "superitem": 1,
       "image":""
     },
     "猎人之壳": {
@@ -2514,15 +2514,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "瓦尔基里": {
       "english": "VALKYRIE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "长杖",
+      "description": "仅女性可装备, 10目标, 大范围攻击, EX:自定义",
+      "quest":"女性FO装备时, 濒死状态 hits 1-1-3",
+      "superitem": 0,
       "image":""
     },
     "瓦尔斯－ＭＫ２": {
@@ -2530,7 +2530,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "生命壶": {
@@ -2538,7 +2538,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "电子铠": {
@@ -2546,7 +2546,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "电锯": {
@@ -2554,7 +2554,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "疯狂旋律": {
@@ -2562,15 +2562,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "白鸟": {
       "english": "LAST SWAN",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光枪",
+      "description": "女性角色可装备, EX:将之, 可与 黑鸟 合成 双鸟",
+      "quest":"可三连\n双鸟 搭配 耦合中枢: Hits 4-4-4, 攻击范围增大",
+      "superitem": 2,
       "image":""
     },
     "百人长/全能力": {
@@ -2578,7 +2578,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "百人长/命中": {
@@ -2586,7 +2586,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "百人长/回避": {
@@ -2594,7 +2594,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "百人长/战斗": {
@@ -2602,7 +2602,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "百人长/攻击": {
@@ -2610,7 +2610,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "百人长/精神": {
@@ -2618,7 +2618,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "百人长/运": {
@@ -2626,7 +2626,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "百人长/防御": {
@@ -2634,7 +2634,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "百人长/ＨＰ": {
@@ -2642,7 +2642,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "皇家之戟": {
@@ -2650,7 +2650,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "皇朝装甲": {
@@ -2658,15 +2658,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "真·妮之爪": {
       "english": "NEI'S CLAW",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "爪",
+      "description": "仅HU可装备, 3目标, 回避力-20, 火球术+20%, 冻气术+20%, 闪电术+20%, EX:销魂",
+      "quest":"非机器人HU装备时, hits: 2-2-4, 攻击范围扩大, 原创攻击动作",
+      "superitem": 2,
       "image":""
     },
     "真瑚经书": {
@@ -2674,15 +2674,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "真空波石": {
       "english": "Syncesta",
-      "type": "",
-      "description": "",
+      "type": "特殊物品",
+      "description": "可合成 圣剑「双刃·拉维斯」 与 圣剑「双切·迦农」",
       "quest":"",
-      "superitem":false,
+      "superitem": 1,
       "image":""
     },
     "真红卡片": {
@@ -2690,7 +2690,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "真红外套": {
@@ -2698,23 +2698,23 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "矢量瞄准镜": {
       "english": "VECTOR SCOPE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "插件",
+      "description": "与弹弓系武器同时装备, 有增幅效果",
+      "quest":"\n搭配 削血弹弓: 攻击范围 +105, 命中+20\n搭配 地狱弹弓: 攻击范围 +105, 命中+20\n搭配 麻痹弹弓: 攻击范围 +105, 命中+20\n搭配 嗜血弹弓: 攻击范围 +105, 命中+20, hit: 1-1-3\n搭配 埋骨弹弓: 攻击力 +60, 命中 +30",
+      "superitem": 2,
       "image":""
     },
     "石中剑": {
       "english": "EXCALIBUR",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光剑",
+      "description": "可由 银月之剑 解封, 3目标, 全职业可装备, EX:削血",
+      "quest":"搭配 特拉西斯: 攻击范围扩大, 双剑攻击动作",
+      "superitem": 1,
       "image":""
     },
     "破坏彗星": {
@@ -2722,15 +2722,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "破坏者之斧": {
       "english": "BERDYSH",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "长刀",
+      "description": "EX:消耗PB光之壁(N,EX攻击后立刻切换武器,可让PB保持在60以上)",
+      "quest":"RA可装备",
+      "superitem": 1,
       "image":""
     },
     "硅钢反射盾": {
@@ -2738,7 +2738,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "硅钢盾": {
@@ -2746,7 +2746,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "碎弹枪": {
@@ -2754,15 +2754,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "神之吐息": {
       "english": "THE SIGH OF A GOD",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "魔杖",
+      "description": "闪电术 +30%, EX:群雷术",
+      "quest":"搭配 禁忌魔导书: EX伤害和范围提升, Hits: 3-3-3",
+      "superitem": 2,
       "image":""
     },
     "神冰铁": {
@@ -2770,15 +2770,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "神圣双刃": {
       "english": "DIVINE BLADE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "双剑",
+      "description": "全职业可装备, 全属性 +30, 回魂术 +100%, 强攻术 和 强体术 +200%,",
+      "quest":"\n可同时释放 强攻术 和 强体术\n搭配 神圣力场: 攻速+50%, 5目标, 攻击范围增大)",
+      "superitem": 0,
       "image":""
     },
     "神圣粉碎者": {
@@ -2786,7 +2786,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "神威": {
@@ -2794,15 +2794,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
-    "神罚": {
+    "圣枪「神罚」": {
       "english": "OPHELIE SEIZE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光枪",
+      "description": "RA可装备, EX:混沌, 可与 圣枪「天罚」合成 天国呼啸",
+      "quest":"\n天国呼啸 搭配 耦合中枢: hit (天罚EX)3-3-3 (非天罚EX)4-4-4, 所有攻击自动瞄准, 攻击力和精神力+100, 攻击范围扩大",
+      "superitem": 2,
       "image":""
     },
     "种子岛": {
@@ -2810,7 +2810,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "空间机动步兵第３２分队中尉军服": {
@@ -2818,7 +2818,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "空间机动歩兵中尉外套": {
@@ -2826,7 +2826,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "管理员核心": {
@@ -2834,7 +2834,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "粉红卡片": {
@@ -2842,7 +2842,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "精神力药": {
@@ -2850,7 +2850,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "索尼克小队的证书": {
@@ -2858,15 +2858,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红忍双刃": {
       "english": "S-RED'S BLADE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "匕首",
+      "description": "EX:强攻术 和 强体术",
+      "quest":"RA可装备",
+      "superitem": 0,
       "image":""
     },
     "红狂熊的右手": {
@@ -2874,7 +2874,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红粉少女": {
@@ -2882,7 +2882,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色光剑": {
@@ -2890,7 +2890,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色双刃": {
@@ -2898,7 +2898,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色大剑": {
@@ -2906,7 +2906,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色幻影盾": {
@@ -2914,7 +2914,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色手枪": {
@@ -2922,7 +2922,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色手镯": {
@@ -2930,7 +2930,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色投刃": {
@@ -2938,7 +2938,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色机枪": {
@@ -2946,7 +2946,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色水晶": {
@@ -2954,7 +2954,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色轻铠": {
@@ -2962,7 +2962,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红色长刀": {
@@ -2970,7 +2970,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红莲": {
@@ -2978,7 +2978,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "红蝎子": {
@@ -2986,7 +2986,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "纯正长刀": {
@@ -2994,7 +2994,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "纯蓝卡片": {
@@ -3002,7 +3002,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "终极铠甲": {
@@ -3010,7 +3010,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "绝对零度": {
@@ -3018,7 +3018,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "绝望之剑": {
@@ -3026,15 +3026,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "维纳斯弹弓": {
       "english": "VENUS BOW",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "弹弓",
+      "description": "全职业可装备, 5目标, EX:销金777",
+      "quest":"N 固定伤害7, H 固定伤害77, EX 固定伤害777, 可正面命中EP4蜥蜴",
+      "superitem": 2,
       "image":""
     },
     "维维安双刃": {
@@ -3042,15 +3042,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "缓慢预防": {
       "english": "Cure/Slow",
       "type": "",
-      "description": "",
+      "description": "预防缓慢效果",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "罪恶之光": {
@@ -3058,7 +3058,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "羽毛杖": {
@@ -3066,7 +3066,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "羽白卡片": {
@@ -3074,7 +3074,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "翠绿卡片": {
@@ -3082,7 +3082,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "联盟亲卫队上等兵军服": {
@@ -3090,7 +3090,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "联盟亲卫队军服": {
@@ -3098,7 +3098,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "联盟亲卫队指挥官军服": {
@@ -3106,7 +3106,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "胜利者之斧": {
@@ -3114,7 +3114,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "能量风暴盾": {
@@ -3122,7 +3122,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "腥臭盾": {
@@ -3130,7 +3130,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "腥臭铠": {
@@ -3138,7 +3138,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "腭刀「１９７５」": {
@@ -3146,15 +3146,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "舞拉拉压力波动枪": {
       "english": "TENSION BLASTER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光枪",
+      "description": "全职业可装备, EX:强麻痹",
+      "quest":"搭配 MAG莫罗, Hits: 3-3-3",
+      "superitem": 1,
       "image":""
     },
     "艾米提的备忘录": {
@@ -3162,7 +3162,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "英雄级/全能力": {
@@ -3170,7 +3170,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "草薙": {
@@ -3178,7 +3178,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "莉可的眼镜": {
@@ -3186,7 +3186,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "莱阿诺夫３０３ＳＮＲ－３": {
@@ -3194,15 +3194,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "莱阿诺夫３０３ＳＮＲ－５": {
       "english": "RIANOV 303SNR-5",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "步枪",
+      "description": "RA可装备, 不可连发, EX:暗黑",
+      "quest":"3倍发射",
+      "superitem": 1,
       "image":""
     },
     "蓝机忍的双手": {
@@ -3210,7 +3210,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "蓝系威紫涂桶侧二枚酮": {
@@ -3218,7 +3218,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "蓝色幻影盾": {
@@ -3226,7 +3226,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "蓝色水晶": {
@@ -3234,7 +3234,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "蛇矛": {
@@ -3242,15 +3242,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "蛋头博士的B计划": {
       "english": "Dr. Robotnik's Plan B",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "特殊物品",
+      "description": "爆弹枪 与 蛋头博士的B计划 合成 终极爆弹枪",
+      "quest":"\n 终极爆弹枪(双枪): RA可装备, 濒死时 EX:炎狱爆炸\n终极爆弹枪 搭配 烈焰引擎, 攻击力 +100, 攻击范围增大, Hits 4-4-4, 可正面命中EP4蜥蜴",
+      "superitem": 0,
       "image":""
     },
     "蜂尾杖": {
@@ -3258,7 +3258,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "蜂窝反射盾": {
@@ -3266,7 +3266,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "血之艺": {
@@ -3274,7 +3274,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "血祭枪": {
@@ -3282,15 +3282,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "行星吞噬者": {
       "english": "PLANET EATER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "双剑",
+      "description": "3目标, EX:削血",
+      "quest":"搭配 混沌引擎: 4目标, 攻击范围扩大, 攻击hit数: 2-2-3, 命中+30, 原创攻击动作",
+      "superitem": 2,
       "image":""
     },
     "西装外套": {
@@ -3298,7 +3298,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "解放者的飞碟": {
@@ -3306,7 +3306,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "试作型再生机能盾": {
@@ -3314,7 +3314,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "诫魂者": {
@@ -3322,15 +3322,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "赤红加农": {
       "english": "CANNON ROUGE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "发射器",
+      "description": "RA可装备, 10目标, 不可三连, EX:混沌",
+      "quest":"\n搭配 行星引擎: 攻击力+150, 一发5hit",
+      "superitem": 2,
       "image":""
     },
     "赤红陨石": {
@@ -3338,15 +3338,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "赤羽火刑杖": {
       "english": "ZU'S PUNISHMENT",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "长杖",
+      "description": "火球术 +60%, 火墙术 +50%, 炎狱术 +50%, EX:三发火球术",
+      "quest":"搭配 烈焰引擎: EX Hits: 1-2-3, 精神力+100",
+      "superitem": 2,
       "image":""
     },
     "超能增幅器": {
@@ -3354,7 +3354,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "辉石「月晖」": {
@@ -3362,7 +3362,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "运之药": {
@@ -3370,7 +3370,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "远古预言": {
@@ -3378,7 +3378,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "迪·洛尔·雷的壳": {
@@ -3386,7 +3386,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "透明盾": {
@@ -3394,7 +3394,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "逝神": {
@@ -3402,7 +3402,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "逝神Ｓ": {
@@ -3410,7 +3410,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "逝神Ｘ": {
@@ -3418,7 +3418,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "酷刑枪": {
@@ -3426,7 +3426,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "里卡之爪": {
@@ -3434,7 +3434,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "重力铠": {
@@ -3442,7 +3442,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "金刚石杖": {
@@ -3450,7 +3450,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "金色光环": {
@@ -3458,7 +3458,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "金黄卡片": {
@@ -3466,7 +3466,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "铬绿卡片": {
@@ -3474,15 +3474,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "银月之剑": {
       "english": "LAME D'ARGENT",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光剑",
+      "description": "全职业可装备",
+      "quest":"10000只怪后, 可解封为 石中剑, 解封后保留属性",
+      "superitem": 0,
       "image":""
     },
     "防御力药": {
@@ -3490,15 +3490,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "阿诺来复枪": {
       "english": "ANO RIFLE",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "步枪",
+      "description": "RA可装备, EX:强麻痹",
+      "quest":"如果装备者是 机器人女枪手, 攻击力+150, Hits 3-3-3",
+      "superitem": 1,
       "image":""
     },
     "阿诺火箭炮": {
@@ -3506,7 +3506,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "限幅器": {
@@ -3514,7 +3514,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "陨石枪": {
@@ -3522,7 +3522,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "陷阱/探测": {
@@ -3530,7 +3530,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "雄风之剑": {
@@ -3538,39 +3538,39 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "雅斯米诺科夫２０００Ｈ": {
       "english": "YASMINKOV 2000H",
-      "type": "",
+      "type": "光枪",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"搭配 光栅瞄准镜: 攻击范围 -70.0, 三连hit数: 3-3-3",
+      "superitem": 0,
       "image":""
     },
     "雅斯米诺科夫３０００Ｒ": {
       "english": "YASMINKOV 3000R",
-      "type": "",
+      "type": "步枪",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"搭配 光栅瞄准镜: Hits N/H : 3-3-3, EX:1-1-3, EX范围 -75, 攻击角度 +35",
+      "superitem": 0,
       "image":""
     },
     "雅斯米诺科夫７０００Ｖ": {
       "english": "YASMINKOV 7000V",
-      "type": "",
+      "type": "步枪",
       "description": "",
-      "quest":"",
-      "superitem":false,
+      "quest":"搭配 光栅瞄准镜: 攻击力+300, 攻击范围 +55",
+      "superitem": 1,
       "image":""
     },
     "雅斯米诺科夫９０００Ｍ": {
       "english": "YASMINKOV 9000M",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "双枪",
+      "description": "EX可随意定制",
+      "quest":"搭配 光栅瞄准镜: 攻击范围 +40, 攻击力+50, 命中+20",
+      "superitem": 1,
       "image":""
     },
     "零度切刃": {
@@ -3578,15 +3578,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "雷光炮": {
       "english": "MASER BEAM",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "散弹枪",
+      "description": "可合成 强化雷光炮",
+      "quest":"强化雷光炮, 可三连, 武器的群雷攻击力提升",
+      "superitem": 1,
       "image":""
     },
     "雷切": {
@@ -3594,7 +3594,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "雷奥尼亚": {
@@ -3602,7 +3602,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "雷杖「因陀罗」": {
@@ -3610,7 +3610,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "雷系强化盾": {
@@ -3618,7 +3618,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "露芘卡": {
@@ -3626,7 +3626,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "风暴撕裂者": {
@@ -3634,7 +3634,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "风车杖": {
@@ -3642,15 +3642,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "飞镖": {
       "english": "KUNAI",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "卡片",
+      "description": "全职业可装备, EX:全麻痹",
+      "quest":"搭配 忍者服: 攻击力+50 命中+20, hits 2-2-4, 投刃攻击动作",
+      "superitem": 1,
       "image":""
     },
     "飞鸟": {
@@ -3658,15 +3658,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "食魂者": {
       "english": "SOUL DEVOURER",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "投刃",
+      "description": "非机器人可装备, 7目标, EX:魄之",
+      "quest":"\n搭配 模范铠甲: 攻击力+100, hits (N/H)1-2-5, (EX)1-1-3, 原创攻击动作, 可正面伤害EP4蜥蜴",
+      "superitem": 2,
       "image":""
     },
     "魂之粉": {
@@ -3674,7 +3674,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "魔导服": {
@@ -3682,7 +3682,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "魔弹弓": {
@@ -3690,7 +3690,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "魔法剑": {
@@ -3698,15 +3698,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "魔法预言书": {
       "english": "PROPHETS OF MOTAV",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "魔杖",
+      "description": "高级法术 +35%, 降攻术和降防术+100%, EX:极冰术",
+      "quest":"搭配 禁忌魔导书: EX: Lv26极冰术, Hits: 1-2-3",
+      "superitem": 2,
       "image":""
     },
     "魔王铠甲": {
@@ -3714,7 +3714,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "魔石「伊利提斯塔」": {
@@ -3722,15 +3722,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "麻痹预防": {
       "english": "Cure/Paralysis",
       "type": "",
-      "description": "",
+      "description": "预防麻痹效果",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "麻醉枪": {
@@ -3738,7 +3738,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黄狂熊的右手": {
@@ -3746,7 +3746,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黎明祈求": {
@@ -3754,7 +3754,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黑暗光子水晶ＤＰＳ": {
@@ -3762,7 +3762,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黑暗查欧之心": {
@@ -3770,7 +3770,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黑盾": {
@@ -3778,7 +3778,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黑系威赤涂桶侧二枚酮": {
@@ -3786,7 +3786,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黑色手套": {
@@ -3794,7 +3794,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黑色猎犬胸甲": {
@@ -3802,7 +3802,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黑色轻铠": {
@@ -3810,15 +3810,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "黑鸟": {
       "english": "MASTER RAVEN",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "光枪",
+      "description": "男性角色可装备, EX:王之, 可与 白鸟 合成 双鸟",
+      "quest":"可三连\n双鸟 搭配 耦合中枢: Hits 4-4-4, 攻击范围增大",
+      "superitem": 2,
       "image":""
     },
     "龙之泪": {
@@ -3826,7 +3826,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "龙之爪": {
@@ -3834,7 +3834,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "龙剑": {
@@ -3842,7 +3842,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "龙爪虎牙": {
@@ -3850,7 +3850,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "龙鳞": {
@@ -3858,7 +3858,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｄ因子发射器": {
@@ -3866,7 +3866,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｄ因子铠甲": {
@@ -3874,15 +3874,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｄ型因子核心": {
       "english": "D-Photon Core",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "特殊道具",
+      "description": "MAG 进化成 堕天灵＆怵天灵",
+      "quest":"60%概率 三无敌",
+      "superitem": 2,
       "image":""
     },
     "Ｄ组件Ｖｅｒ１．０１": {
@@ -3890,7 +3890,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｄ组件Ｖｅｒ２．１０": {
@@ -3898,7 +3898,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＤＢ之剑": {
@@ -3906,7 +3906,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＤＢ之盾": {
@@ -3914,7 +3914,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＤＢ之铠": {
@@ -3922,7 +3922,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＤＦ盾": {
@@ -3930,7 +3930,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＤＦ领域": {
@@ -3938,7 +3938,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＤＲＥＡＭＣＡＳＴ组件": {
@@ -3946,7 +3946,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｈ＆Ｓ２５正义制裁": {
@@ -3954,7 +3954,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＨＰ/回复": {
@@ -3962,7 +3962,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＨＰ/涌流": {
@@ -3970,7 +3970,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＨＰ/重生": {
@@ -3978,7 +3978,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＨＰ药": {
@@ -3986,7 +3986,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｌ＆Ｋ１４战场之狼": {
@@ -3994,15 +3994,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｌ＆Ｋ３８ 战场之狼": {
       "english": "L&K38 COMBAT",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "散弹枪",
+      "description": "全职业可装备, EX:炽热",
+      "quest":"如果装备者是RA, 解锁三连攻击",
+      "superitem": 1,
       "image":""
     },
     "Ｍ＆Ａ６０老虎钳": {
@@ -4010,15 +4010,15 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｍ＆Ａ８５　战场之怒": {
       "english": "M&A85 FURY",
-      "type": "",
-      "description": "",
-      "quest":"",
-      "superitem":false,
+      "type": "散弹枪",
+      "description": "RA可装备, EX:超级连发子弹, 每攻击25次需要冷却",
+      "quest":"搭配 混沌引擎, 攻击力+150, 子弹穿透, 攻击范围增大",
+      "superitem": 2,
       "image":""
     },
     "ＭＡＲＫ３组件": {
@@ -4026,7 +4026,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＭＡＳＴＥＲＳＹＳＴＥＭ组件": {
@@ -4034,7 +4034,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＭＥＧＡＤＲＩＶＥ组件": {
@@ -4042,7 +4042,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＰＢ/涌流": {
@@ -4050,7 +4050,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＰＢ/重生": {
@@ -4058,7 +4058,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｓ组件Ｖｅｒ１．１６": {
@@ -4066,7 +4066,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｓ组件Ｖｅｒ２．０１": {
@@ -4074,7 +4074,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＳＥＧＡＳＡＴＵＲＮ组件": {
@@ -4082,7 +4082,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＴＰ/回复": {
@@ -4090,7 +4090,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＴＰ/涌流": {
@@ -4098,7 +4098,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＴＰ/重生": {
@@ -4106,7 +4106,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "ＴＰ药": {
@@ -4114,7 +4114,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｖ１０１": {
@@ -4122,7 +4122,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｖ５０１": {
@@ -4130,7 +4130,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｖ５０２": {
@@ -4138,7 +4138,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｖ５０３": {
@@ -4146,7 +4146,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｖ８０１": {
@@ -4154,7 +4154,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｖ８０２": {
@@ -4162,7 +4162,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｘ组件Ｖｅｒ３．１０": {
@@ -4170,7 +4170,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     },
     "Ｙａｈｏｏ！细胞": {
@@ -4178,7 +4178,7 @@
       "type": "",
       "description": "",
       "quest":"",
-      "superitem":false,
+      "superitem": 0,
       "image":""
     }
   },
@@ -24113,7 +24113,7 @@
                 "rate": "1/787.69"
               },
               "Bluefull": {
-                "item": "末代皇帝",
+                "item": "最后的统治者",
                 "rate": "1/1706.66"
               },
               "Purplenum": {
@@ -25044,7 +25044,7 @@
             "farm": "",
             "drops": {
               "Viridia": {
-                "item": "末代皇帝",
+                "item": "最后的统治者",
                 "rate": "1/1137.77"
               },
               "Greenill": {
@@ -25781,7 +25781,7 @@
                 "rate": "1/46.55"
               },
               "Yellowboze": {
-                "item": "末代皇帝",
+                "item": "最后的统治者",
                 "rate": "1/21.33"
               },
               "Whitill": {
