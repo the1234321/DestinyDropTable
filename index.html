@@ -92,7 +92,7 @@ table{ border-collapse:collapse; width:max-content; min-width:1200px; table-layo
 /* 基础单元格 */
 th, td{
     border: 1px solid #334155;
-    padding: 12px 6px;
+    padding: 2px 2px;
     font-size: 12px;
     text-align: center;
     line-height: 1.4;
@@ -118,9 +118,9 @@ thead th:first-child,
 tbody td:first-child{
     position: sticky;
     left: 0;
-    min-width: 140px;
-    max-width: 140px;
-    width: 140px;
+    min-width: 100px;
+    max-width: 100px;
+    width: 100px;
     background: #111827; /* 固定列背景 */
     z-index: 30; /* 高于表头和普通单元格 */
     box-shadow:  10px 0 10px rgba(0,0,0,.35);
@@ -161,7 +161,7 @@ tbody td:hover{
 .item-name{ 
     display:block;
     line-height:1.2;
-    font-size:18px; /* 掉落物品字体加大 */
+    font-size:15px; /* 掉落物品字体加大 */
     font-weight:500;
 }
 
@@ -181,28 +181,21 @@ tbody td:hover{
     animation:rainbow 4s linear infinite;
 }
 
-
-@keyframes ultimateGlow{
-
-    0%{
-        background-position:0% 50%;
-    }
-
-    100%{
-        background-position:300% 50%;
-    }
+@keyframes rainbow{
+    0%{ background-position:0%; }
+    100%{ background-position:300%; }
 }
 
 .drop-rate{ display:block; margin-top:1px;  color:#94a3b8;
-    font-size:20px; /* 掉率字体稍大 */
-    color:#94a3b8;
+    font-size:10px; /* 掉率字体稍大 */
+    color:#ffffff;
 }
 .monster-name{ 
     /* font-weight:bold;      */
     font-weight:700;
-    font-size:20px; /* 怪物名稍大 */
+    font-size:16px; /* 怪物名稍大 */
 }
-.dar{ color:#facc15; font-size:20px; }
+.dar{ color:#facc15; font-size:16px; }
 
 
 
@@ -313,19 +306,44 @@ tbody td:hover{
     }
 }
 
+/* 刷怪 farm */
 .tooltip-farm {
-    color: #94b938;       /* 蓝色示例，也可以换成你喜欢的 */
-    font-weight: 600;     /* 稍微加粗 */
-    font-style: italic;   /* 斜体，看起来更提示信息 */
-    margin-top: 2px;      /* 上下间距微调 */
-    display: block;
-    white-space: normal;  /* 自动换行 */
+    display: inline-block;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #d9f99d;
+    background: rgba(132,204,22,0.1);
+    border-left: 3px solid #84cc16;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-bottom: 4px;
 }
 
-@keyframes rainbow{
-    0%{ background-position:0%; }
-    100%{ background-position:300%; }
+/* 光效伪元素 */
+.tooltip-farm::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+    );
+    animation: farmShine 5s linear infinite;
 }
+
+/* 光效动画 */
+@keyframes farmShine {
+    from { left: -100%; }
+    to   { left: 200%; }
+}
+
 .tooltip-item-image{
     display:block;
     max-width:200px;
@@ -345,7 +363,7 @@ tbody td:hover{
     color: #fff;
     padding: 8px 12px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.4;
     width:auto;
     max-width: min(700px, 80vw);
@@ -360,8 +378,99 @@ tbody td:hover{
 .tooltip div {margin: 2px 0;}
 .tooltip-farm {color: #94b938; font-weight: 600; font-style: italic; margin-top: 2px; display: block; white-space: normal;}
 .tooltip-type{ color:#34d399; margin-top:4px; }
-.tooltip-desc{ color:#d1d5db; margin-top:2px; white-space: pre-wrap;  }
-.tooltip-quest{ color:#facc15; margin-top:2px; white-space: pre-wrap;   }
+
+.tooltip-desc,
+.tooltip-quest,
+.tooltip-farm,
+.tooltip-bonus-inline,
+.tooltip-recipe-inline {
+    font-family: "Segoe UI", "PingFang SC", sans-serif;
+}
+
+* 套装 / 合成公式独立块 */
+.tooltip-bonus-inline,
+.tooltip-recipe-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;                 /* 条目间距微调 */
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+/* 描述 */
+.tooltip-desc {
+    color: #e5e7eb;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.45;        /* 微调行高 */
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: rgba(56,189,248,0.1);
+    border-left: 3px solid #38bdf8;
+    margin-bottom: 4px;       /* 与下一行保持间距 */
+}
+
+.tooltip-desc::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.08),
+            transparent
+        );
+
+    animation:
+        descShine 5s linear infinite;
+}
+
+@keyframes descShine{
+
+    from{
+        left:-100%;
+    }
+
+    to{
+        left:200%;
+    }
+
+}
+
+/* 点评 */
+.tooltip-quest {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 12px;          /* 调小字体，区分描述 */
+    line-height: 1.35;        /* 紧凑一些 */
+    color: #fde68a;
+    background: rgba(251,191,36,0.1);
+    border-left: 3px solid #fbbf24;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+/* 点评图标 */
+.tooltip-quest::before {
+    content: "💡";
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .tooltip-id{color:#e52020f9;font-weight:700;margin-top:4px;}
 .tooltip-en{color:#94a3b8;font-style:italic;margin-bottom:4px;}
 /* 套装与合成 */
@@ -374,8 +483,140 @@ tbody td:hover{
 .tooltip-block-recipe .tooltip-block-title { color: #a855f7;font-weight: 700; margin-bottom: 4px;}
 /* 套装条目 */
 .bonus-entry, .recipe-entry { margin-bottom: 4px; padding: 4px 6px; border-radius: 4px;}
-.bonus-header, .recipe-header { font-weight: 700; margin-bottom: 2px; word-break: break-word;}
+
 .bonus-body, .recipe-body { padding-left: 8px; white-space: pre-wrap; word-break: break-word;}
+
+/* 套装/合成公式中的加号样式 */
+.bonus-body, .recipe-body {
+    font-size: 13px; 
+    line-height: 1.4;
+}
+
+/* 针对加号突出显示 */
+.bonus-body::after, .recipe-body::after {
+    content: "";
+}
+
+/* 使用 span 包裹加号 */
+.bonus-body span.plus, .recipe-body span.plus {
+    font-weight: 700;
+    color: #facc15; /* 金黄色，更醒目 */
+    font-size: 14px;
+    margin: 0 2px;
+}
+
+/* 基础横向 tooltip 容器 */
+.tooltip-inline {
+    display: flex;
+    flex-wrap: wrap; /* 多条换行 */
+    gap: 6px;
+}
+
+/* 单个条目 */
+.tooltip-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.2;
+    transition: transform 0.15s, box-shadow 0.15s;
+    animation:
+    tooltipPulse 3s ease-in-out infinite;
+}
+
+@keyframes bonusPulse{
+
+    0%,100%{
+        border-left-color:#3b82f6;
+    }
+
+    50%{
+        border-left-color:#93c5fd;
+    }
+
+}
+
+/* 套装/合成条目 */
+.bonus-item,
+.recipe-item {
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 套装背景颜色 */
+.tooltip-bonus-inline .bonus-item {
+    background: rgba(59,130,246,0.08);
+    color: #3b82f6;
+}
+
+/* 合成公式背景颜色 */
+.tooltip-recipe-inline .recipe-item {
+    background: rgba(139,92,246,0.08);
+    color: #8b5cf6;
+}
+
+/* 调整整体间距 */
+.tooltip-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;                 /* 行间距微调 */
+}
+
+/* 套装效果颜色 */
+.bonus-item{
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(59,130,246,.15),
+            rgba(59,130,246,.05)
+        );
+
+    border-left:3px solid #3b82f6;
+
+    color:#e5e7eb;
+}
+
+/* 合成公式颜色 */
+.recipe-item{
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(168,85,247,.15),
+            rgba(168,85,247,.05)
+        );
+
+    border-left:3px solid #a855f7;
+
+    color:#e5e7eb;
+    animation:
+    recipePulse 3s ease-in-out infinite;
+}
+
+@keyframes recipePulse{
+
+    0%,100%{
+        border-left-color:#a855f7;
+    }
+
+    50%{
+        border-left-color:#d8b4fe;
+    }
+
+}
+
+/* 标题样式 */
+.bonus-header{
+    color:#60a5fa;
+    font-weight:700;
+}
+
+.recipe-header{
+    color:#c084fc;
+    font-weight:700;
+}
 
 .header-Viridia{ background:var(--viridia); font-size:20px;}
 .header-Greenill{
@@ -556,7 +797,6 @@ tbody td:hover{
 }
 
 .info-title{ font-size:16px; font-weight:700; color:white;}
-.info-links a:hover{  text-decoration:underline;}
 .info-text{  font-size:14px; color:#cbd5e1;}
 .info-links a{ background:#1d4ed8; font-size:16px;  padding:4px 8px; border-radius:8px; color:white; font-weight:700; text-decoration:none; transition:all 0.2s;}
 .info-links a:hover{  background:#2563eb;}
@@ -878,7 +1118,7 @@ async function loadData(){
 
     //初始化索引
     (data.bonus || []).forEach(b => {
-        const comboText = b.items.join(" + ");
+        const comboText = b.items.join(" ✦ ");
 
         // 正常 items
         b.items.forEach(item => {
@@ -1077,110 +1317,105 @@ function switchDifficulty(diff){
     render()
 }
 
-function bindTooltips(){
-    document.querySelectorAll(".item-cell").forEach(cell=>{
-        cell.addEventListener("mousemove", e=>{
+function bindTooltips() {
+    const tooltip = document.getElementById("tooltip");
+
+    document.querySelectorAll(".item-cell").forEach(cell => {
+
+        // 缓存当前显示的 item，避免重复生成
+        let currentItem = null;
+
+        cell.addEventListener("mousemove", e => {
             const itemName = cell.dataset.item;
             const section = cell.dataset.section;
             const sectionNumber = SECTION_INDEX[section];
             const item = data.items[itemName];
             const farm = cell.dataset.farm || "";
-            if(!item) return;
-            const tooltip = document.getElementById("tooltip");
-            const rarity = item.superitem || 0;
-            const rarityClass = rarity === 2 ? 'ultimate-item' : rarity === 1  ? 'legend-item'   : '';
+            if (!item) return;
 
-            // 读取 bonus 和 recipe 索引
-        const tooltipBonus = bonusIndex[itemName] || [];
-        const tooltipRecipe = recipeIndex[itemName] || [];
+            // 如果当前 tooltip 已显示该 item，直接更新位置，不重建
+            if (currentItem !== itemName) {
+                currentItem = itemName;
 
-        tooltip.innerHTML = `
-            ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
-            <div class="tooltip-name ${rarityClass}">${itemName}</div>
-            ${item.english?`<div class="tooltip-en">${item.english}</div>`:""}
-            <div class="tooltip-id">sectionid ${sectionNumber}</div>
-            <div class="tooltip-type">类型：${item.type||"-"}</div>
-            <div class="tooltip-desc">${item.description||""}</div>
-            ${item.quest?`<div class="tooltip-quest">点评：${item.quest}</div>`:""}
-            ${farm?`<div class="tooltip-farm">刷怪建议：${farm}</div>`:""}
+                const rarity = item.superitem || 0;
+                const rarityClass = rarity === 2 ? 'ultimate-item' : rarity === 1 ? 'legend-item' : '';
 
-            ${(tooltipBonus.length || tooltipRecipe.length) ? `
-<div class="tooltip-extra">
-            <!-- 套装效果独立块 -->
-            ${tooltipBonus.length ? `
-            <div class="tooltip-block tooltip-block-bonus">
-                <div class="tooltip-block-title">★ 相关效果</div>
-                ${tooltipBonus.map(b => `
-                    <div class="bonus-entry">
-                        <div class="bonus-header">${b.combo}</div>
-                        <div class="bonus-body">${b.effect}</div>
-                    </div>
-                `).join("")}
-            </div>
-            ` : ""}
+                const tooltipBonus = bonusIndex[itemName] || [];
+                const tooltipRecipe = recipeIndex[itemName] || [];
 
-            <!-- 合成公式独立块 -->
-            ${tooltipRecipe.length ? `
-            <div class="tooltip-block tooltip-block-recipe">
-                <div class="tooltip-block-title">★ 相关合成</div>
-                ${tooltipRecipe.map(r => `
-                    <div class="recipe-entry">
-                        <div class="recipe-header">${r.result}</div>
-                        <div class="recipe-body">${r.components.join(" + ")}</div>
-                    </div>
-                `).join("")}
-            </div>
-            ` : ""}
-</div>
+                tooltip.innerHTML = `
+                    ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
+                    <div class="tooltip-name ${rarityClass}">${itemName}</div>
+                    ${item.english ? `<div class="tooltip-en">${item.english}</div>` : ""}
+                    <div class="tooltip-id">sectionid ${sectionNumber}</div>
+                    <div class="tooltip-type">类型：${item.type || "-"}</div>
+                    ${item.description ? `<span class="tooltip-desc">${item.description}</span>` : ""}
+                    ${item.quest ? `<span class="tooltip-quest">${item.quest}</span>` : ""}
+                    ${farm ? `<span class="tooltip-farm">${farm}</span>` : ""}
 
-            ` : ""}
-        `;
+                    ${tooltipBonus.length ? `
+                    <div class="tooltip-inline tooltip-bonus-inline">
+                        ${tooltipBonus.map(b => `
+                            <div class="tooltip-item bonus-item">
+                                <span class="bonus-header">${b.combo} ➜</span>
+                                <span class="bonus-body">${b.effect}</span>
+                            </div>
+                        `).join("")}
+                    </div>` : ""}
 
-        // 计算tooltip位置
-            
+                    ${tooltipRecipe.length ? `
+                    <div class="tooltip-inline tooltip-recipe-inline">
+                        ${tooltipRecipe.map(r => `
+                            <div class="tooltip-item recipe-item">
+                                <span class="recipe-header">${r.result} ⬅</span>
+                                <span class="recipe-body">${r.components.join('<span class="plus">+</span>')}</span>
+                            </div>
+                        `).join("")}
+                    </div>` : ""}
+                `;
+            }
+
+            // =======================
+            // Tooltip自动定位 V2
+            // =======================
             tooltip.style.display = "block";
 
-            const offset = 15;
+            // 强制浏览器完成布局
+            tooltip.offsetHeight;
 
-            // 先让浏览器计算真实尺寸
-            const tooltipWidth = tooltip.offsetWidth;
-            const tooltipHeight = tooltip.offsetHeight;
+            const rect = tooltip.getBoundingClientRect();
+            const tooltipWidth = rect.width;
+            const tooltipHeight = rect.height;
 
-            let left = e.clientX + offset;
-            let top = e.clientY + offset;
+            const offset = 18;
+            const margin = 10;
+            let left, top;
 
-            // ---------- 水平方向 ----------
-
-            // 右边超出
-            if(left + tooltipWidth > window.innerWidth){
+            // 横向判断
+            if (e.clientX > window.innerWidth / 2) {
                 left = e.clientX - tooltipWidth - offset;
+            } else {
+                left = e.clientX + offset;
             }
+            left = Math.max(margin, Math.min(left, window.innerWidth - tooltipWidth - margin));
 
-            // 左边也超出（极端情况）
-            if(left < 5){
-                left = 5;
+            // 纵向判断
+            if (e.clientY > window.innerHeight / 2) {
+                top = e.clientY - tooltipHeight - offset;
+            } else {
+                top = e.clientY + offset;
             }
+            top = Math.max(margin, Math.min(top, window.innerHeight - tooltipHeight - margin));
 
-            // ---------- 垂直方向 ----------
-
-            // 下边超出
-            if(top + tooltipHeight > window.innerHeight){
-                top = window.innerHeight - tooltipHeight - 5;
-            }
-
-            // 上边超出
-            if(top < 5){
-                top = 5;
-            }
-
-            tooltip.style.left = left + "px";
-            tooltip.style.top = top + "px";
+            tooltip.style.left = `${left}px`;
+            tooltip.style.top = `${top}px`;
         });
 
-        cell.addEventListener("mouseleave", ()=>{
-            document.getElementById("tooltip").style.display = "none";
+        cell.addEventListener("mouseleave", () => {
+            tooltip.style.display = "none";
+            currentItem = null; // 重置
         });
-        
+
     });
 }
 
