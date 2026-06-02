@@ -357,79 +357,27 @@ tbody td:hover{
     overflow-y: auto;
     overflow-x: hidden;
 }
-#tooltip div {
-    margin: 2px 0;
-}
-.tooltip-farm {
-    color: #1e90ff;
-    font-weight: 600;
-    font-style: italic;
-}
+.tooltip div {margin: 2px 0;}
+.tooltip-farm {color: #94b938; font-weight: 600; font-style: italic; margin-top: 2px; display: block; white-space: normal;}
 .tooltip-type{ color:#34d399; margin-top:4px; }
 .tooltip-desc{ color:#d1d5db; margin-top:2px; white-space: pre-wrap;  }
 .tooltip-quest{ color:#facc15; margin-top:2px; white-space: pre-wrap;   }
 .tooltip-id{color:#e52020f9;font-weight:700;margin-top:4px;}
 .tooltip-en{color:#94a3b8;font-style:italic;margin-bottom:4px;}
-
-/* .tooltip-extra{
-    max-height:100px;
-    overflow-y:auto;
-    overscroll-behavior:contain;
-} */
-
+/* 套装与合成 */
+.tooltip-extra{ max-height:300px; overflow-y:auto; overscroll-behavior:contain;}
 /* 套装效果块 */
-.tooltip-block-bonus {
-    background: rgba(59,130,246,0.1);
-    border-left: 3px solid #3b82f6;
-    border-radius: 6px;
-    margin-top: 6px;
-    padding: 6px 10px;
-}
-
-.tooltip-block-bonus .tooltip-block-title {
-    color: #3b82f6;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-
+.tooltip-block-bonus { background: rgba(59,130,246,0.1); border-left: 3px solid #3b82f6; border-radius: 6px; margin-top: 6px; padding: 6px 10px;}
+.tooltip-block-bonus .tooltip-block-title { color: #3b82f6; font-weight: 700; margin-bottom: 4px;}
 /* 合成公式块 */
-.tooltip-block-recipe {
-    background: rgba(168,85,247,0.1);
-    border-left: 3px solid #a855f7;
-    border-radius: 6px;
-    margin-top: 6px;
-    padding: 6px 10px;
-}
-
-.tooltip-block-recipe .tooltip-block-title {
-    color: #a855f7;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-
+.tooltip-block-recipe { background: rgba(168,85,247,0.1);  border-left: 3px solid #a855f7; border-radius: 6px; margin-top: 6px; padding: 6px 10px;}
+.tooltip-block-recipe .tooltip-block-title { color: #a855f7;font-weight: 700; margin-bottom: 4px;}
 /* 套装条目 */
-.bonus-entry, .recipe-entry {
-    margin-bottom: 4px;
-    padding: 4px 6px;
-    border-radius: 4px;
-}
+.bonus-entry, .recipe-entry { margin-bottom: 4px; padding: 4px 6px; border-radius: 4px;}
+.bonus-header, .recipe-header { font-weight: 700; margin-bottom: 2px; word-break: break-word;}
+.bonus-body, .recipe-body { padding-left: 8px; white-space: pre-wrap; word-break: break-word;}
 
-.bonus-header, .recipe-header {
-    font-weight: 700;
-    margin-bottom: 2px;
-    word-break: break-word;
-}
-
-.bonus-body, .recipe-body {
-    padding-left: 8px;
-    white-space: pre-wrap;
-    word-break: break-word;
-}
-.header-Viridia{
-    background:var(--viridia);
-    font-size:20px;
-}
-
+.header-Viridia{ background:var(--viridia); font-size:20px;}
 .header-Greenill{
     background:var(--greenill);
     font-size:20px;
@@ -573,6 +521,18 @@ tbody td:hover{
     display:flex;
     flex-direction:column;
     gap:4px;
+    position:relative;
+    overflow:hidden;
+    transition:.25s;
+}
+.top-info-col::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    opacity:.8;
 }
 
 .left-col, .right-col{
@@ -580,91 +540,166 @@ tbody td:hover{
     flex-shrink:0;
 }
 
+.left-col::before{
+    background:#00a8ff;
+}
+.center-col::before{
+    background:#8b5cf6;
+}
+.right-col::before{
+    background:#f59e0b;
+}
+
 .center-col{
     flex:1; /* 占用中间剩余空间 */
     min-width:250px;
 }
 
-.info-title{
-    font-size:16px;
-    font-weight:700;
-    color:white;
-}
+.info-title{ font-size:16px; font-weight:700; color:white;}
+.info-links a:hover{  text-decoration:underline;}
+.info-text{  font-size:14px; color:#cbd5e1;}
+.info-links a{ background:#1d4ed8; font-size:16px;  padding:4px 8px; border-radius:8px; color:white; font-weight:700; text-decoration:none; transition:all 0.2s;}
+.info-links a:hover{  background:#2563eb;}
+.info-note{ font-size:12px; color:#94a3b8;}
+.info-card{ background:#111827; border:1px solid #334155; border-radius:12px; padding:12px 16px; min-height:90px; display:flex; align-items:center; gap:12px;}
 
-.info-text{
-    font-size:14px;
-    color:#cbd5e1;
-}
+.button-qq{
 
-.info-links a{
-    background:#1d4ed8;
-    padding:4px 8px;
-    border-radius:6px;
-    color:white;
-    font-weight:700;
-    text-decoration:none;
-    display:inline-block;
-    transition:all 0.2s;
-}
+    width:100%;
 
-.info-links a:hover{
-    background:#2563eb;
-}
-
-.info-note{
-    font-size:12px;
-    color:#94a3b8;
-}
-
-.top-info{
+    min-height:54px;
 
     display:flex;
 
-    justify-content:space-between;
-
-    align-items:stretch;
-
-    gap:20px;
-
-    max-width:1400px;
-
-    margin:10px auto 15px auto;
-
-    padding:0 20px;
-}
-
-.info-card{
-
-    background:#111827;
-
-    border:1px solid #334155;
-
-    border-radius:12px;
-
-    padding:12px 16px;
-
-    min-height:90px;
-
-    display:flex;
+    flex-direction:row;
 
     align-items:center;
 
-    gap:12px;
+    gap:10px;
+
+    padding:8px 12px;
+
+    box-sizing:border-box;
+
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00a8ff,
+            #0066ff
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 0 12px rgba(0,168,255,.35);
+
+    transition:.2s;
 }
 
-.left-card{
+.button-qq:hover{
 
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 0 20px rgba(0,168,255,.6);
+
+}
+
+.button-download {
+    width: 100%;
+    min-height:54px;
+    display: flex ; 
+    flex-direction: row ;  /* 确保水平排列 icon 和内容 */
+    align-items: center ;  /* 垂直居中 */
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #3558ff, #2847c7);
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 0 12px rgba(80,120,255,.35);
+    transition: .2s;
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.btn-title { font-size:16px; font-weight:700; }
+.btn-subtitle { font-size:11px; opacity:.8; margin-top:2px; }
+
+.btn-icon { font-size:20px; flex-shrink:0; }
+
+.button-download:hover{
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 0 20px rgba(255,180,0,.6);
+
+}
+
+/* QQ 按钮中文更醒目 */
+.button-qq .btn-title,
+.button-qq .btn-subtitle {
+    color: #ffffa0;  /* 浅黄色，更醒目 */
+    text-shadow: 0 0 4px rgba(255,255,160,0.8); /* 给文字加一点光晕 */
+}
+
+/* 下载按钮中文更醒目 */
+.button-download .btn-title,
+.button-download .btn-subtitle {
+    color: #ffffff; /* 纯白更清晰 */
+    text-shadow: 0 0 4px rgba(255,255,255,0.5); /* 微光晕增加可读性 */
+}
+
+.left-col .info-text{
+    margin-bottom:8px;
+}
+
+.left-col{
+    width:200px;
+}
+.right-col{
+    width:210px;
+}
+
+.center-col{
     flex:1;
 }
+.top-info-col{
+
+    min-height:165px;
+}
+
+.top-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+    gap:20px;
+    max-width:1400px;
+    margin:10px auto 15px auto;
+    padding:0 20px;
+}
+
+
+.left-card{ flex:1;}
 
 .right-card{
-
     width:320px;
-
     flex-direction:column;
-
     justify-content:center;
-
     text-align:center;
 }
 
@@ -677,57 +712,32 @@ tbody td:hover{
     border-radius:10px;
 }
 
-.info-title{
-
-    font-size:16px;
-
-    font-weight:700;
-
-    color:white;
-}
-
-.info-text{
-
-    color:#cbd5e1;
-
-    font-size:13px;
-}
-
-.info-links a{
-
-    color:#60a5fa;
-
-    text-decoration:none;
-
-    font-size:20px;
-}
-
-.info-links a:hover{
-
-    text-decoration:underline;
-}
-
-.info-note{
-
-    color:#94a3b8;
-
-    font-size:12px;
-}
-
 #hh-next{
 
     color:#facc15;
 
-    font-size:13px;
+    font-size:20px;
 }
 
 #hh-countdown{
 
-    font-size:20px;
+    font-size:31px;
+    font-weight:800;
+    line-height:1;
 
-    font-weight:700;
+    letter-spacing:-1px;
+        color:#facc15;
 
-    color:#22c55e;
+    text-shadow:
+        0 0 10px rgba(250,204,21,.5);
+}
+
+.right-col{
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
 }
 
 #content{max-width:1800px;margin:auto;padding:0 8px;}
@@ -740,12 +750,43 @@ tbody td:hover{
 
 <div class="top-info-row">
   <div class="top-info-col left-col">
-    <div class="info-title">Destiny CN</div>
-    <div class="info-text">QQ群：432704374</div>
+    <div class="info-title"> </div>
+
+
+<div class="info-text">
+
+    <a href="https://qm.qq.com/q/PstEbMNSCq"
+       target="_blank"
+       class="button-qq">
+
+        <span class="btn-icon">💬</span>
+
+        <div class="btn-content">
+
+            <div class="btn-title">
+                QQ群
+            </div>
+
+            <div class="btn-subtitle">
+                点击加入聊天群
+            </div>
+
+        </div>
+
+    </a>
+
+</div>
+
+    
     <div class="info-links">
-      <a href="Destiny_CN.zip" download>汉化包下载</a>
+        <a href="Destiny_CN.zip" download class="button-download">
+        <span class="btn-icon">📦</span>
+        <div class="btn-content">
+            <div class="btn-title">汉化包下载</div>
+            <div class="btn-subtitle">解压到游戏目录即可</div>
+        </div>
+        </a>
     </div>
-    <div class="info-note">汉化包解压到游戏目录即可</div>
   </div>
 
   <div class="top-info-col center-col">
@@ -838,19 +879,40 @@ async function loadData(){
     //初始化索引
     (data.bonus || []).forEach(b => {
         const comboText = b.items.join(" + ");
+
+        // 正常 items
         b.items.forEach(item => {
             if(!bonusIndex[item]) bonusIndex[item] = [];
             bonusIndex[item].push({ combo: comboText, effect: b.effect });
         });
+
+        // extra 指向的物品也显示同一个 bonus
+        (b.extra || []).forEach(extraItem => {
+            if(!bonusIndex[extraItem]) bonusIndex[extraItem] = [];
+            bonusIndex[extraItem].push({ combo: comboText, effect: b.effect });
+        });
     });
 
-(data.recipe || []).forEach(r => {
-    const formulaText = `${r.result} = ${r.components.join(" + ")}`;
-    [r.result, ...r.components].forEach(item => {
-        if(!recipeIndex[item]) recipeIndex[item] = [];
-        recipeIndex[item].push({ result: r.result, components: r.components, formula: formulaText });
+    (data.recipe || []).forEach(r => {
+        const formulaText = `${r.result} = ${r.components.join(" + ")}`;
+
+        // result + components
+        const relatedItems = [r.result, ...r.components];
+
+        // extra 指定的物品也显示这个配方
+        if(r.extra && Array.isArray(r.extra)){
+            relatedItems.push(...r.extra);
+        }
+
+        relatedItems.forEach(item => {
+            if(!recipeIndex[item]) recipeIndex[item] = [];
+            recipeIndex[item].push({
+                result: r.result,
+                components: r.components,
+                formula: formulaText
+            });
+        });
     });
-});
 
     // hash同步
     const hash = location.hash;
@@ -1039,7 +1101,7 @@ function bindTooltips(){
             <div class="tooltip-id">sectionid ${sectionNumber}</div>
             <div class="tooltip-type">类型：${item.type||"-"}</div>
             <div class="tooltip-desc">${item.description||""}</div>
-            ${item.quest?`<div class="tooltip-quest">额外说明：${item.quest}</div>`:""}
+            ${item.quest?`<div class="tooltip-quest">点评：${item.quest}</div>`:""}
             ${farm?`<div class="tooltip-farm">刷怪建议：${farm}</div>`:""}
 
             ${(tooltipBonus.length || tooltipRecipe.length) ? `
@@ -1047,7 +1109,7 @@ function bindTooltips(){
             <!-- 套装效果独立块 -->
             ${tooltipBonus.length ? `
             <div class="tooltip-block tooltip-block-bonus">
-                <div class="tooltip-block-title">★ 相关套装效果</div>
+                <div class="tooltip-block-title">★ 相关效果</div>
                 ${tooltipBonus.map(b => `
                     <div class="bonus-entry">
                         <div class="bonus-header">${b.combo}</div>
@@ -1060,7 +1122,7 @@ function bindTooltips(){
             <!-- 合成公式独立块 -->
             ${tooltipRecipe.length ? `
             <div class="tooltip-block tooltip-block-recipe">
-                <div class="tooltip-block-title">★ 相关合成公式</div>
+                <div class="tooltip-block-title">★ 相关合成</div>
                 ${tooltipRecipe.map(r => `
                     <div class="recipe-entry">
                         <div class="recipe-header">${r.result}</div>
