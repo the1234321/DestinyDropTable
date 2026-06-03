@@ -74,7 +74,9 @@ body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#0f172a;
 
 
 .search-bar{ padding:15px; text-align:center; }
-.search-input{  max-width:90%; border:none; 
+.search-input{  
+    max-width:90%; 
+    border:none; 
     width:50%;
 
     height:60px;
@@ -84,6 +86,26 @@ body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#0f172a;
     padding:0 20px;
 
     border-radius:12px;}
+
+.searchInput {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #1f2937;
+    color: #f1f5f9;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 8px rgba(96,165,250,0.5);
+    background: #111827;   /* 深色背景 */
+    color: #f1f5f9;        /* 保证字体可见 */
+}
+
 .table-section{ margin-top:10px;margin-bottom:16px; }
 .table-title{ text-align:center; font-size:30px; margin-bottom:10px; position:sticky; top:0; background:#0f172a; z-index:20; }
 .table-wrapper{overflow:auto;display:flex;justify-content:center;}
@@ -314,11 +336,27 @@ tbody td:hover{
     font-size: 12px;
     line-height: 1.35;
     color: #d9f99d;
-    background: rgba(132,204,22,0.1);
     border-left: 3px solid #84cc16;
     padding: 4px 8px;
     border-radius: 6px;
     margin-bottom: 4px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(15,23,42,.98),
+            rgba(30,41,59,.98)
+        );
+
+    border:
+        1px solid rgba(148,163,184,.35);
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,.05),
+        0 10px 40px rgba(0,0,0,.75);
+
+    backdrop-filter:
+        blur(8px);
 }
 
 /* 光效伪元素 */
@@ -345,8 +383,8 @@ tbody td:hover{
 }
 
 .tooltip-item-image{
-    display:block;
-    max-width:200px;
+    display:flex;
+    max-width:400px;
     max-height:200px;
     width:auto;
     height:auto;
@@ -366,7 +404,7 @@ tbody td:hover{
     font-size: 12px;
     line-height: 1.4;
     width:auto;
-    max-width: min(700px, 80vw);
+    max-width: min(800px, 80vw);
     max-height: 80vh;
     white-space: normal;    /* 自动换行 */
     word-wrap: break-word;  /* 长词自动换行 */
@@ -375,9 +413,26 @@ tbody td:hover{
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.tooltip-name{
+
+    font-size:30px;
+    font-weight:900;
+
+    letter-spacing:.5px;
+
+    text-shadow:
+        0 0 10px currentColor;
+}
 .tooltip div {margin: 2px 0;}
 .tooltip-farm {color: #94b938; font-weight: 600; font-style: italic; margin-top: 2px; display: block; white-space: normal;}
-.tooltip-type{ color:#34d399; margin-top:4px; }
+.tooltip-type{
+    font-size:13px;
+    color:#34d399;           /* 绿色醒目 */
+    font-weight:600;
+    margin-bottom:4px;
+    line-height:1.2;
+}
 
 .tooltip-desc,
 .tooltip-quest,
@@ -471,8 +526,22 @@ tbody td:hover{
     vertical-align: middle;
 }
 
-.tooltip-id{color:#e52020f9;font-weight:700;margin-top:4px;}
-.tooltip-en{color:#94a3b8;font-style:italic;margin-bottom:4px;}
+.tooltip-id{
+    font-size:12px;
+    color:#f87171;           /* 红色醒目但不刺眼 */
+    font-weight:600;
+    margin-bottom:2px;
+    line-height:1.1;
+}
+
+.tooltip-en{
+    font-size:14px;            /* 略小于中文名 */
+    color:#94a3b8;             /* 灰色弱化层次 */
+    font-style:italic;
+    margin-top:0px;
+    margin-bottom:6px;
+    line-height:1.2;
+} */
 /* 套装与合成 */
 .tooltip-extra{ max-height:300px; overflow-y:auto; overscroll-behavior:contain;}
 /* 套装效果块 */
@@ -542,6 +611,24 @@ tbody td:hover{
 .recipe-item {
     padding: 2px 6px;
     border-radius: 4px;
+}
+
+.recipe-item{
+
+    background:
+        rgba(168,85,247,.18);
+
+    border-left:
+        3px solid #a855f7;
+}
+
+.bonus-item{
+
+    background:
+        rgba(59,130,246,.18);
+
+    border-left:
+        3px solid #3b82f6;
 }
 
 /* 套装背景颜色 */
@@ -616,6 +703,13 @@ tbody td:hover{
 .recipe-header{
     color:#c084fc;
     font-weight:700;
+}
+
+.bonus-header,
+.recipe-header{
+    flex-shrink:0;
+    white-space:nowrap;
+    min-width:max-content;
 }
 
 .header-Viridia{ background:var(--viridia); font-size:20px;}
@@ -1083,7 +1177,7 @@ tbody td:hover{
 </div>
 
 <div class="search-bar">
-  <input id="searchInput" class="search-input" placeholder="搜索物品 / 怪物..." oninput="performSearch()">
+  <input id="searchInput" class="search-input" placeholder="搜索物品 / 相关物品..." oninput="performSearch()">
 </div>
 
 <div id="content"></div>
@@ -1115,6 +1209,21 @@ async function loadData(){
     document.getElementById("event-desc").innerHTML = (activities.eventDescription || [])
 .map(x => `• ${x}`)
 .join("<br>");
+
+    //搜索框
+    const searchInput = document.getElementById("searchInput");
+
+    // 鼠标点击时自动全选
+    searchInput.addEventListener("focus", e => {
+        e.target.select();
+    });
+
+    // 按下 Enter 触发搜索
+    searchInput.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+            performSearch();
+        }
+    });
 
     //初始化索引
     (data.bonus || []).forEach(b => {
@@ -1368,7 +1477,7 @@ function bindTooltips() {
                         ${tooltipRecipe.map(r => `
                             <div class="tooltip-item recipe-item">
                                 <span class="recipe-header">${r.result} ⬅</span>
-                                <span class="recipe-body">${r.components.join('<span class="plus">+</span>')}</span>
+                                <span class="recipe-body">${r.components.join('<span class="plus">+</span><wbr>')}</span>
                             </div>
                         `).join("")}
                     </div>` : ""}
