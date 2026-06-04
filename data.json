@@ -2192,7 +2192,7 @@
       "description": "RA可装备, 目标3, EX: 集中射击(单体多重伤害)",
       "quest": "定点攻击神器",
       "superitem": 2,
-      "image": "APOCALYPSE_BOWGUN.jpg"
+      "image": "APOCALYPSE_BOWGUN.gif"
     },
     "机械臂外壳 III": {
       "english": "Cladding of Manipulator III",
@@ -3752,7 +3752,7 @@
       "description": "HU可装备, 3目标, EX: 消耗微量HP能量波, 可叠加伤害",
       "quest": "HU开荒神器之一, 削血伤害固定",
       "superitem": 2,
-      "image": "STORMRENDER.png"
+      "image": "STORMRENDER.gif"
     },
     "风车杖": {
       "english": "WINDMILL",
