@@ -3448,7 +3448,7 @@
       "description": "RA可装备, 10目标, 不可三连, EX:混沌",
       "quest": "增强后很强, 对属性要求高",
       "superitem": 2,
-      "image": ""
+      "image": "CANNON_ROUGE.gif"
     },
     "赤红陨石": {
       "english": "METEOR ROUGE",
@@ -19636,7 +19636,7 @@
           {
             "name": "雷暴巨猿",
             "dar": "85%",
-            "farm": "aaa",
+            "farm": "",
             "drops": {
               "Viridia": {
                 "item": "星型增幅器",
