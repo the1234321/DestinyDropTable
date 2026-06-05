@@ -4306,7 +4306,7 @@
           {
             "name": "狂暴巨猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {
               "Viridia": {
                 "item": "大ＨＰ回复液",
@@ -4353,7 +4353,7 @@
           {
             "name": "狂暴白猿",
             "dar": "100%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {
               "Viridia": {
                 "item": "抗性/火热",
@@ -4400,19 +4400,19 @@
           {
             "name": "吸血巨蚊",
             "dar": "25%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {}
           },
           {
             "name": "吸血巨蚊巢",
             "dar": "0%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {}
           },
           {
             "name": "黄拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "拉比的羽毛",
@@ -4459,7 +4459,7 @@
           {
             "name": "蓝拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "精神力药",
@@ -4506,7 +4506,7 @@
           {
             "name": "狂狼",
             "dar": "30%",
-            "farm": "",
+            "farm": "Maximum Attack 1 第一个房间 和 中央圆顶区域",
             "drops": {
               "Pinkal": {
                 "item": "回复系强化盾",
@@ -4517,7 +4517,7 @@
           {
             "name": "狂狼王",
             "dar": "45%",
-            "farm": "",
+            "farm": "Maximum Attack 1 第一个房间 和 中央圆顶区域",
             "drops": {
               "Viridia": {
                 "item": "替身人偶",
@@ -4564,7 +4564,7 @@
           {
             "name": "棕狂熊",
             "dar": "28%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "棕狂熊的右手",
@@ -4611,7 +4611,7 @@
           {
             "name": "黄狂熊",
             "dar": "32%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "黄狂熊的右手",
@@ -4658,7 +4658,7 @@
           {
             "name": "红狂熊",
             "dar": "35%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "魂之粉",
@@ -4705,7 +4705,7 @@
           {
             "name": "巨螳螂",
             "dar": "50%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A或B或C",
             "drops": {
               "Viridia": {
                 "item": "巨螳螂的双手",
@@ -4752,13 +4752,13 @@
           {
             "name": "毒铃兰",
             "dar": "25%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A",
             "drops": {}
           },
           {
             "name": "红铃兰",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A",
             "drops": {
               "Viridia": {
                 "item": "将军级/精神",
@@ -4805,7 +4805,7 @@
           {
             "name": "翼龙",
             "dar": "50%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage B 或 C",
             "drops": {
               "Viridia": {
                 "item": "魂之粉",
@@ -4852,7 +4852,7 @@
           {
             "name": "绿鲨魔",
             "dar": "28%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Purplenum": {
                 "item": "冰系强化盾",
@@ -4871,7 +4871,7 @@
           {
             "name": "紫鲨魔",
             "dar": "32%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Redria": {
                 "item": "冰系强化盾",
@@ -4886,7 +4886,7 @@
           {
             "name": "狂鲨魔",
             "dar": "15%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "魂之粉",
@@ -4933,7 +4933,7 @@
           {
             "name": "冰史莱姆",
             "dar": "27%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A-",
             "drops": {
               "Viridia": {
                 "item": "回避力药",
@@ -4980,7 +4980,7 @@
           {
             "name": "炎史莱姆",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A-",
             "drops": {
               "Viridia": {
                 "item": "抗性/冰冻",
@@ -5027,7 +5027,7 @@
           {
             "name": "合体怪",
             "dar": "90%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "大ＨＰ回复液",
@@ -5074,7 +5074,7 @@
           {
             "name": "冰剑怪",
             "dar": "40%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "魂之粉",
@@ -5121,7 +5121,7 @@
           {
             "name": "火剑怪",
             "dar": "40%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "魂之粉",
@@ -5168,7 +5168,7 @@
           {
             "name": "傀儡机兵",
             "dar": "28%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE 或 Mines Offensive",
             "drops": {
               "Viridia": {
                 "item": "ＨＰ/回复",
@@ -5215,7 +5215,7 @@
           {
             "name": "机甲堡垒",
             "dar": "80%",
-            "farm": "",
+            "farm": "Mines Offensive",
             "drops": {
               "Viridia": {
                 "item": "大ＨＰ回复液",
@@ -5262,7 +5262,7 @@
           {
             "name": "蓝机忍",
             "dar": "55%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE",
             "drops": {
               "Viridia": {
                 "item": "小打磨石",
@@ -5309,7 +5309,7 @@
           {
             "name": "金机忍",
             "dar": "50%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE",
             "drops": {
               "Viridia": {
                 "item": "魂之粉",
@@ -6072,7 +6072,7 @@
           {
             "name": "狂暴巨猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "Dolmolm Research 第二区域",
             "drops": {
               "Viridia": {
                 "item": "大ＨＰ回复液",
@@ -6119,7 +6119,7 @@
           {
             "name": "狂暴白猿",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 第二区域",
             "drops": {
               "Viridia": {
                 "item": "抗性/灼热",
@@ -6166,7 +6166,7 @@
           {
             "name": "吸血巨蚊",
             "dar": "20%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {
               "Oran": {
                 "item": "攻击力药",
@@ -6181,13 +6181,13 @@
           {
             "name": "吸血巨蚊巢",
             "dar": "0%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {}
           },
           {
             "name": "黄拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "小打磨石",
@@ -6218,7 +6218,7 @@
           {
             "name": "狂狼",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost RIOT RAYGUN+time 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "小打磨石",
@@ -6249,7 +6249,7 @@
           {
             "name": "狂狼王",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost RIOT RAYGUN+time 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "攻击力药",
@@ -6288,7 +6288,7 @@
           {
             "name": "巨螳螂",
             "dar": "40%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {
               "Viridia": {
                 "item": "魂之粉",
@@ -6597,7 +6597,7 @@
           {
             "name": "机甲堡垒",
             "dar": "50%",
-            "farm": "",
+            "farm": "Gal Da Val's Darkness",
             "drops": {
               "Viridia": {
                 "item": "浮光盾",
@@ -6929,7 +6929,7 @@
           {
             "name": "爱之拉比",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "天使级/运",
@@ -7351,7 +7351,7 @@
           {
             "name": "蛮甲猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "Phantasmal World #4 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "星之粉",
@@ -8057,7 +8057,7 @@
           {
             "name": "彩蛋拉比",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "复活节彩蛋",
@@ -8104,7 +8104,7 @@
           {
             "name": "恶镰死神",
             "dar": "40%",
-            "farm": "",
+            "farm": "Defend the room 前四波",
             "drops": {
               "Viridia": {
                 "item": "巨龙级/ＨＰ",
@@ -8151,7 +8151,7 @@
           {
             "name": "暗铃兰",
             "dar": "35%",
-            "farm": "",
+            "farm": "Defend the room 第一波",
             "drops": {
               "Viridia": {
                 "item": "抗性/光明",
@@ -8198,7 +8198,7 @@
           {
             "name": "厄普西隆",
             "dar": "30%",
-            "farm": "",
+            "farm": "Walking through Flames",
             "drops": {
               "Viridia": {
                 "item": "将军级/命中",
@@ -8755,7 +8755,7 @@
           {
             "name": "沙地拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A 前两波拉比",
             "drops": {
               "Viridia": {
                 "item": "拉比鸟的嘴",
@@ -8802,7 +8802,7 @@
           {
             "name": "暗黑拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A 前两波拉比",
             "drops": {
               "Viridia": {
                 "item": "光子水晶ＰＣ",
@@ -8996,7 +8996,7 @@
           {
             "name": "狂暴巨猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {
               "Viridia": {
                 "item": "碎弹枪",
@@ -9043,7 +9043,7 @@
           {
             "name": "狂暴白猿",
             "dar": "100%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {
               "Viridia": {
                 "item": "ＨＰ药",
@@ -9090,19 +9090,19 @@
           {
             "name": "吸血巨蚊",
             "dar": "25%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {}
           },
           {
             "name": "吸血巨蚊巢",
             "dar": "0%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {}
           },
           {
             "name": "黄拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "拉比的羽毛",
@@ -9149,7 +9149,7 @@
           {
             "name": "蓝拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "地狱火箭炮",
@@ -9196,7 +9196,7 @@
           {
             "name": "狂狼",
             "dar": "30%",
-            "farm": "",
+            "farm": "Maximum Attack 1 第一个房间 和 中央圆顶区域",
             "drops": {
               "Viridia": {
                 "item": "ＤＢ之剑",
@@ -9243,7 +9243,7 @@
           {
             "name": "狂狼王",
             "dar": "45%",
-            "farm": "",
+            "farm": "Maximum Attack 1 第一个房间 和 中央圆顶区域",
             "drops": {
               "Viridia": {
                 "item": "麻醉枪",
@@ -9290,7 +9290,7 @@
           {
             "name": "棕狂熊",
             "dar": "28%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "棕狂熊的右手",
@@ -9337,7 +9337,7 @@
           {
             "name": "黄狂熊",
             "dar": "32%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "黄狂熊的右手",
@@ -9384,7 +9384,7 @@
           {
             "name": "红狂熊",
             "dar": "35%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "纯正长刀",
@@ -9431,7 +9431,7 @@
           {
             "name": "巨螳螂",
             "dar": "50%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A或B或C",
             "drops": {
               "Viridia": {
                 "item": "巨螳螂的双手",
@@ -9478,7 +9478,7 @@
           {
             "name": "毒铃兰",
             "dar": "25%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A",
             "drops": {
               "Viridia": {
                 "item": "麻醉枪",
@@ -9525,7 +9525,7 @@
           {
             "name": "红铃兰",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A",
             "drops": {
               "Viridia": {
                 "item": "攻击力药",
@@ -9572,7 +9572,7 @@
           {
             "name": "翼龙",
             "dar": "50%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage B 或 C",
             "drops": {
               "Viridia": {
                 "item": "纯正长刀",
@@ -9619,7 +9619,7 @@
           {
             "name": "绿鲨魔",
             "dar": "28%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "麻醉枪",
@@ -9666,7 +9666,7 @@
           {
             "name": "紫鲨魔",
             "dar": "32%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "拉克尼姆金属杖",
@@ -9713,7 +9713,7 @@
           {
             "name": "狂鲨魔",
             "dar": "15%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "碎弹枪",
@@ -9760,7 +9760,7 @@
           {
             "name": "冰史莱姆",
             "dar": "27%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A-",
             "drops": {
               "Viridia": {
                 "item": "ＤＢ之剑",
@@ -9807,7 +9807,7 @@
           {
             "name": "炎史莱姆",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A-",
             "drops": {
               "Viridia": {
                 "item": "光子水晶ＰＣ",
@@ -9854,7 +9854,7 @@
           {
             "name": "合体怪",
             "dar": "90%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "碎弹枪",
@@ -9901,7 +9901,7 @@
           {
             "name": "冰剑怪",
             "dar": "40%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "麻醉枪",
@@ -9948,7 +9948,7 @@
           {
             "name": "火剑怪",
             "dar": "40%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "ＤＢ之剑",
@@ -9995,7 +9995,7 @@
           {
             "name": "傀儡机兵",
             "dar": "28%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE 或 Mines Offensive",
             "drops": {
               "Viridia": {
                 "item": "ＤＢ之剑",
@@ -10042,7 +10042,7 @@
           {
             "name": "机甲堡垒",
             "dar": "80%",
-            "farm": "",
+            "farm": "Mines Offensive",
             "drops": {
               "Viridia": {
                 "item": "光子爪",
@@ -10089,7 +10089,7 @@
           {
             "name": "蓝机忍",
             "dar": "50%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE",
             "drops": {
               "Viridia": {
                 "item": "麻醉枪",
@@ -10136,7 +10136,7 @@
           {
             "name": "金机忍",
             "dar": "50%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE",
             "drops": {
               "Viridia": {
                 "item": "碎弹枪",
@@ -10951,7 +10951,7 @@
           {
             "name": "狂暴巨猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "Dolmolm Research 第二区域",
             "drops": {
               "Viridia": {
                 "item": "陨石枪",
@@ -10998,7 +10998,7 @@
           {
             "name": "狂暴白猿",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 第二区域",
             "drops": {
               "Viridia": {
                 "item": "扩展插槽",
@@ -11045,19 +11045,19 @@
           {
             "name": "吸血巨蚊",
             "dar": "20%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {}
           },
           {
             "name": "吸血巨蚊巢",
             "dar": "0%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {}
           },
           {
             "name": "黄拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "麻醉枪",
@@ -11104,7 +11104,7 @@
           {
             "name": "狂狼",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost RIOT RAYGUN+time 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "ＤＢ之剑",
@@ -11151,7 +11151,7 @@
           {
             "name": "狂狼王",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost RIOT RAYGUN+time 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "纯正长刀",
@@ -11198,7 +11198,7 @@
           {
             "name": "巨螳螂",
             "dar": "40%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {
               "Viridia": {
                 "item": "碎弹枪",
@@ -11527,7 +11527,7 @@
           {
             "name": "机甲堡垒",
             "dar": "50%",
-            "farm": "",
+            "farm": "Gal Da Val's Darkness",
             "drops": {
               "Viridia": {
                 "item": "消音枪",
@@ -11903,7 +11903,7 @@
           {
             "name": "爱之拉比",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "胜利者之斧",
@@ -12373,7 +12373,7 @@
           {
             "name": "蛮甲猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "Phantasmal World #4 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "蜂尾杖",
@@ -13131,7 +13131,7 @@
           {
             "name": "彩蛋拉比",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "复活节彩蛋",
@@ -13178,7 +13178,7 @@
           {
             "name": "恶镰死神",
             "dar": "40%",
-            "farm": "",
+            "farm": "Defend the room 前四波",
             "drops": {
               "Viridia": {
                 "item": "天神级/命中",
@@ -13225,7 +13225,7 @@
           {
             "name": "暗铃兰",
             "dar": "35%",
-            "farm": "",
+            "farm": "Defend the room 第一波",
             "drops": {
               "Viridia": {
                 "item": "陨石枪",
@@ -13272,7 +13272,7 @@
           {
             "name": "厄普西隆",
             "dar": "30%",
-            "farm": "",
+            "farm": "Walking through Flames",
             "drops": {
               "Viridia": {
                 "item": "天神级/战斗",
@@ -14075,7 +14075,7 @@
           {
             "name": "沙地拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A 前两波拉比",
             "drops": {
               "Viridia": {
                 "item": "拉比鸟的嘴",
@@ -14122,7 +14122,7 @@
           {
             "name": "暗黑拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A 前两波拉比",
             "drops": {
               "Viridia": {
                 "item": "光子水晶ＰＣ",
@@ -14316,7 +14316,7 @@
           {
             "name": "狂暴巨猿",
             "dar": "85%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {
               "Viridia": {
                 "item": "狂暴巨猿的头",
@@ -14363,7 +14363,7 @@
           {
             "name": "狂暴白猿",
             "dar": "100%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {
               "Viridia": {
                 "item": "天神级/战斗",
@@ -14410,19 +14410,19 @@
           {
             "name": "吸血巨蚊",
             "dar": "25%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {}
           },
           {
             "name": "吸血巨蚊巢",
             "dar": "0%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {}
           },
           {
             "name": "黄拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "拉比的羽毛",
@@ -14469,7 +14469,7 @@
           {
             "name": "蓝拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "军用电击枪",
@@ -14516,7 +14516,7 @@
           {
             "name": "狂狼",
             "dar": "30%",
-            "farm": "",
+            "farm": "Maximum Attack 1 第一个房间 和 中央圆顶区域",
             "drops": {
               "Viridia": {
                 "item": "碎弹枪",
@@ -14563,7 +14563,7 @@
           {
             "name": "狂狼王",
             "dar": "45%",
-            "farm": "",
+            "farm": "Maximum Attack 1 第一个房间 和 中央圆顶区域",
             "drops": {
               "Viridia": {
                 "item": "光子爪",
@@ -14610,7 +14610,7 @@
           {
             "name": "棕狂熊",
             "dar": "30%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "棕狂熊的右手",
@@ -14657,7 +14657,7 @@
           {
             "name": "黄狂熊",
             "dar": "38%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "黄狂熊的右手",
@@ -14704,7 +14704,7 @@
           {
             "name": "红狂熊",
             "dar": "35%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "富豪长刀",
@@ -14751,7 +14751,7 @@
           {
             "name": "巨螳螂",
             "dar": "55%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A或B或C",
             "drops": {
               "Viridia": {
                 "item": "巨螳螂的双手",
@@ -14798,7 +14798,7 @@
           {
             "name": "毒铃兰",
             "dar": "25%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A",
             "drops": {
               "Viridia": {
                 "item": "富豪长刀",
@@ -14845,7 +14845,7 @@
           {
             "name": "红铃兰",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A",
             "drops": {
               "Viridia": {
                 "item": "恶魔级/战斗",
@@ -14892,7 +14892,7 @@
           {
             "name": "翼龙",
             "dar": "55%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage B 或 C",
             "drops": {
               "Viridia": {
                 "item": "陨石枪",
@@ -14939,7 +14939,7 @@
           {
             "name": "绿鲨魔",
             "dar": "30%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "雄风之剑",
@@ -14986,7 +14986,7 @@
           {
             "name": "紫鲨魔",
             "dar": "35%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "碎弹枪",
@@ -15033,7 +15033,7 @@
           {
             "name": "狂鲨魔",
             "dar": "15%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "红色长刀",
@@ -15080,7 +15080,7 @@
           {
             "name": "冰史莱姆",
             "dar": "27%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A-",
             "drops": {
               "Viridia": {
                 "item": "勇者之拳",
@@ -15127,7 +15127,7 @@
           {
             "name": "炎史莱姆",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A-",
             "drops": {
               "Viridia": {
                 "item": "天神级/攻击",
@@ -15174,7 +15174,7 @@
           {
             "name": "合体怪",
             "dar": "90%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "最后的冲击",
@@ -15221,7 +15221,7 @@
           {
             "name": "冰剑怪",
             "dar": "45%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "陨石枪",
@@ -15268,7 +15268,7 @@
           {
             "name": "火剑怪",
             "dar": "45%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "陨石枪",
@@ -15315,7 +15315,7 @@
           {
             "name": "傀儡机兵",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE 或 Mines Offensive",
             "drops": {
               "Viridia": {
                 "item": "天神级/防御",
@@ -15362,7 +15362,7 @@
           {
             "name": "机甲堡垒",
             "dar": "85%",
-            "farm": "",
+            "farm": "Mines Offensive",
             "drops": {
               "Viridia": {
                 "item": "红色长刀",
@@ -15409,7 +15409,7 @@
           {
             "name": "蓝机忍",
             "dar": "60%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE",
             "drops": {
               "Viridia": {
                 "item": "蓝机忍的双手",
@@ -15456,7 +15456,7 @@
           {
             "name": "金机忍",
             "dar": "55%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE",
             "drops": {
               "Viridia": {
                 "item": "腭刀「１９７５」",
@@ -16271,7 +16271,7 @@
           {
             "name": "狂暴巨猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "Dolmolm Research 第二区域",
             "drops": {
               "Viridia": {
                 "item": "碎弹枪",
@@ -16318,7 +16318,7 @@
           {
             "name": "狂暴白猿",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 第二区域",
             "drops": {
               "Viridia": {
                 "item": "最后的冲击",
@@ -16365,19 +16365,19 @@
           {
             "name": "吸血巨蚊",
             "dar": "20%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {}
           },
           {
             "name": "吸血巨蚊巢",
             "dar": "0%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {}
           },
           {
             "name": "黄拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "腥臭铠",
@@ -16424,7 +16424,7 @@
           {
             "name": "狂狼",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost RIOT RAYGUN+time 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "陨石枪",
@@ -16471,7 +16471,7 @@
           {
             "name": "狂狼王",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost RIOT RAYGUN+time 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "浮光盾",
@@ -16518,7 +16518,7 @@
           {
             "name": "巨螳螂",
             "dar": "40%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {
               "Viridia": {
                 "item": "胜利者之斧",
@@ -16847,7 +16847,7 @@
           {
             "name": "机甲堡垒",
             "dar": "50%",
-            "farm": "",
+            "farm": "Gal Da Val's Darkness",
             "drops": {
               "Viridia": {
                 "item": "弗罗文之盾",
@@ -17223,7 +17223,7 @@
           {
             "name": "爱之拉比",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "最后的冲击",
@@ -17693,7 +17693,7 @@
           {
             "name": "蛮甲猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "Phantasmal World #4 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "拉克尼姆战斧",
@@ -18451,7 +18451,7 @@
           {
             "name": "彩蛋拉比",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "复活节彩蛋",
@@ -18498,7 +18498,7 @@
           {
             "name": "恶镰死神",
             "dar": "40%",
-            "farm": "",
+            "farm": "Defend the room 前四波",
             "drops": {
               "Viridia": {
                 "item": "波动护甲",
@@ -18545,7 +18545,7 @@
           {
             "name": "暗铃兰",
             "dar": "35%",
-            "farm": "",
+            "farm": "Defend the room 第一波",
             "drops": {
               "Viridia": {
                 "item": "最后的冲击",
@@ -18592,7 +18592,7 @@
           {
             "name": "厄普西隆",
             "dar": "30%",
-            "farm": "",
+            "farm": "Walking through Flames",
             "drops": {
               "Viridia": {
                 "item": "百人长/全能力",
@@ -19395,7 +19395,7 @@
           {
             "name": "沙地拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A 前两波拉比",
             "drops": {
               "Viridia": {
                 "item": "逝神",
@@ -19442,7 +19442,7 @@
           {
             "name": "暗黑拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A 前两波拉比",
             "drops": {
               "Viridia": {
                 "item": "拉比鸟的嘴",
@@ -19636,7 +19636,7 @@
           {
             "name": "雷暴巨猿",
             "dar": "85%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {
               "Viridia": {
                 "item": "星型增幅器",
@@ -19683,7 +19683,7 @@
           {
             "name": "暗黑巨猿",
             "dar": "100%",
-            "farm": "",
+            "farm": "forest offensive",
             "drops": {
               "Viridia": {
                 "item": "百人长/战斗",
@@ -19783,7 +19783,7 @@
           {
             "name": "白拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "愤怒之拳",
@@ -19830,7 +19830,7 @@
           {
             "name": "彩虹拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "红蝎子",
@@ -19877,7 +19877,7 @@
           {
             "name": "角狼",
             "dar": "30%",
-            "farm": "",
+            "farm": "Maximum Attack 1 第一个房间 和 中央圆顶区域",
             "drops": {
               "Viridia": {
                 "item": "军用铠Ｖｅｒ００",
@@ -19924,7 +19924,7 @@
           {
             "name": "角狼王",
             "dar": "45%",
-            "farm": "",
+            "farm": "Maximum Attack 1 第一个房间 和 中央圆顶区域",
             "drops": {
               "Viridia": {
                 "item": "沙漠之鹰",
@@ -19971,7 +19971,7 @@
           {
             "name": "紫魔龟",
             "dar": "30%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "最后的冲击",
@@ -20018,7 +20018,7 @@
           {
             "name": "蓝魔龟",
             "dar": "38%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "罪恶之光",
@@ -20065,7 +20065,7 @@
           {
             "name": "魔螳螂",
             "dar": "35%",
-            "farm": "",
+            "farm": "Wrath of Forest 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "能量风暴盾",
@@ -20112,7 +20112,7 @@
           {
             "name": "嗜血巨螳螂",
             "dar": "55%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A或B或C",
             "drops": {
               "Viridia": {
                 "item": "御魔手镯",
@@ -20159,7 +20159,7 @@
           {
             "name": "变种铃兰",
             "dar": "25%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A",
             "drops": {
               "Viridia": {
                 "item": "最后的冲击",
@@ -20206,7 +20206,7 @@
           {
             "name": "异种铃兰",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A",
             "drops": {
               "Viridia": {
                 "item": "限幅器",
@@ -20253,7 +20253,7 @@
           {
             "name": "翼龙",
             "dar": "55%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage B 或 C",
             "drops": {
               "Viridia": {
                 "item": "红色大剑",
@@ -20441,7 +20441,7 @@
           {
             "name": "冰史莱姆",
             "dar": "27%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A-",
             "drops": {
               "Viridia": {
                 "item": "雄风之剑",
@@ -20488,7 +20488,7 @@
           {
             "name": "炎史莱姆",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage -A-",
             "drops": {
               "Viridia": {
                 "item": "不朽级/运",
@@ -20535,7 +20535,7 @@
           {
             "name": "合体怪",
             "dar": "90%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "散华",
@@ -20582,7 +20582,7 @@
           {
             "name": "冰剑怪",
             "dar": "45%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "大和",
@@ -20629,7 +20629,7 @@
           {
             "name": "火剑怪",
             "dar": "45%",
-            "farm": "",
+            "farm": "Maximum Attack S",
             "drops": {
               "Viridia": {
                 "item": "咒符",
@@ -20723,7 +20723,7 @@
           {
             "name": "机甲堡垒·改",
             "dar": "85%",
-            "farm": "",
+            "farm": "Mines Offensive",
             "drops": {
               "Viridia": {
                 "item": "雅斯米诺科夫２０００Ｈ",
@@ -20770,7 +20770,7 @@
           {
             "name": "紫机忍",
             "dar": "60%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE",
             "drops": {
               "Viridia": {
                 "item": "冰暴铠",
@@ -20817,7 +20817,7 @@
           {
             "name": "红机忍",
             "dar": "55%",
-            "farm": "",
+            "farm": "Lost SOUL BLADE",
             "drops": {
               "Viridia": {
                 "item": "妖刀·断罪",
@@ -21914,7 +21914,7 @@
           {
             "name": "雷暴巨猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "Dolmolm Research 第二区域",
             "drops": {
               "Viridia": {
                 "item": "超能增幅器",
@@ -21961,7 +21961,7 @@
           {
             "name": "暗黑巨猿",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 第二区域",
             "drops": {
               "Viridia": {
                 "item": "神威",
@@ -22061,7 +22061,7 @@
           {
             "name": "白拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "最后的冲击",
@@ -22108,7 +22108,7 @@
           {
             "name": "角狼",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost RIOT RAYGUN+time 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "最后的冲击",
@@ -22155,7 +22155,7 @@
           {
             "name": "角狼王",
             "dar": "30%",
-            "farm": "",
+            "farm": "Lost RIOT RAYGUN+time 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "弗罗文之盾",
@@ -22202,7 +22202,7 @@
           {
             "name": "嗜血巨螳螂",
             "dar": "40%",
-            "farm": "",
+            "farm": "Dolmolm Research",
             "drops": {
               "Viridia": {
                 "item": "胜利者之斧",
@@ -22531,7 +22531,7 @@
           {
             "name": "机甲堡垒·改",
             "dar": "50%",
-            "farm": "",
+            "farm": "Gal Da Val's Darkness",
             "drops": {
               "Viridia": {
                 "item": "导向穿甲弹",
@@ -22907,7 +22907,7 @@
           {
             "name": "爱之拉比",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "腭刀「１９７５」",
@@ -23377,7 +23377,7 @@
           {
             "name": "蛮甲猿",
             "dar": "80%",
-            "farm": "",
+            "farm": "Phantasmal World #4 第一个房间",
             "drops": {
               "Viridia": {
                 "item": "龙之泪",
@@ -24168,7 +24168,7 @@
           {
             "name": "彩蛋拉比",
             "dar": "100%",
-            "farm": "",
+            "farm": "Dolmolm Research 前几波拉比",
             "drops": {
               "Viridia": {
                 "item": "复活节彩蛋",
@@ -24215,7 +24215,7 @@
           {
             "name": "恶镰死神",
             "dar": "40%",
-            "farm": "",
+            "farm": "Defend the room 前四波",
             "drops": {
               "Viridia": {
                 "item": "真·妮之爪",
@@ -24262,7 +24262,7 @@
           {
             "name": "暗铃兰",
             "dar": "35%",
-            "farm": "",
+            "farm": "Defend the room 第一波",
             "drops": {
               "Viridia": {
                 "item": "真瑚经书",
@@ -24309,7 +24309,7 @@
           {
             "name": "厄普西隆",
             "dar": "30%",
-            "farm": "",
+            "farm": "Walking through Flames",
             "drops": {
               "Viridia": {
                 "item": "情热香氛",
@@ -25675,7 +25675,7 @@
           {
             "name": "沙地拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A 前两波拉比",
             "drops": {
               "Viridia": {
                 "item": "空间机动歩兵中尉外套",
@@ -25722,7 +25722,7 @@
           {
             "name": "暗黑拉比鸟",
             "dar": "100%",
-            "farm": "",
+            "farm": "Maximum Attack 4th Stage A 前两波拉比",
             "drops": {
               "Viridia": {
                 "item": "ＨＰ/涌流",
