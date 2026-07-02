@@ -1581,7 +1581,7 @@
     "封印之盾": {
       "english": "THREE SEALS",
       "type": "盾",
-      "description": "缓慢扣血, 中级法术威力 +30%",
+      "description": "缓慢扣血, 高级法术威力 +30%",
       "quest": "中级法术增幅盾 顶配",
       "superitem": 2,
       "image": "Three_Seals.gif"
@@ -8547,7 +8547,7 @@
             }
           },
           {
-            "name": "Za Boota",
+            "name": "狂影变异猪",
             "dar": "32%",
             "farm": "",
             "drops": {}
