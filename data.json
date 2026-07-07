@@ -1057,9 +1057,9 @@
     "地狱之石": {
       "english": "Infernal Stone",
       "type": "特殊道具",
-      "description": "还不知道干啥的, 没找到资料",
+      "description": "",
       "quest": "",
-      "superitem": 0,
+      "superitem": 2,
       "image": ""
     },
     "地狱冲击": {
@@ -2953,7 +2953,7 @@
     "管理员核心": {
       "english": "Administrator's Core",
       "type": "特殊物品",
-      "description": "不知道干啥的, 等我再找找",
+      "description": "不知道干啥的",
       "quest": "",
       "superitem": 0,
       "image": ""
