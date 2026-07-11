@@ -1,0 +1,522 @@
+/* ============================================================
+   集市 / 货币 / 特殊掉落 / 任务资料 —— 独立样式
+   所有选择器都以 #bazaar-info 为作用域（ID 优先级高于
+   index.html 里的全局 table / th / td / sticky 规则），
+   本文件不影响上方掉落表，上方样式也压不过这里。
+   ============================================================ */
+
+#bazaar-info {
+  --bz-border: #24344e;
+  --bz-border-soft: rgba(36, 52, 78, .6);
+  --bz-cyan: #6fd9f2;
+  --bz-cyan-glow: rgba(111, 217, 242, .14);
+  --bz-gold: #f2c14e;
+  --bz-ink: #dce7f5;
+  --bz-muted: #8fa6c4;
+  --bz-well: rgba(4, 10, 24, .55);
+
+  max-width: 1800px;
+  margin: 48px auto 80px;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--bz-ink);
+}
+
+/* ---------- 中和上方全局表格样式的渗透 ---------- */
+
+#bazaar-info table {
+  display: table;
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+#bazaar-info colgroup {
+  display: table-column-group;
+}
+
+#bazaar-info col {
+  display: table-column;
+}
+
+#bazaar-info thead {
+  display: table-header-group;
+}
+
+#bazaar-info tbody {
+  display: table-row-group;
+}
+
+#bazaar-info tr {
+  display: table-row;
+}
+
+#bazaar-info th,
+#bazaar-info td {
+  display: table-cell;
+  box-sizing: border-box;
+  position: static;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  border: none;
+  box-shadow: none;
+  clip-path: none;
+  background: transparent;
+  text-align: left;
+  vertical-align: middle;
+  white-space: normal;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-overflow: clip;
+  font-weight: 400;
+  line-height: 1.55;
+  padding: 10px 12px;
+}
+
+#bazaar-info tbody td:hover {
+  box-shadow: none;
+}
+
+/* ---------- 外层面板 ---------- */
+
+#bazaar-info .bazaar-panel {
+  position: relative;
+  background:
+    radial-gradient(ellipse 65% 42% at 50% 0%, rgba(111, 217, 242, .07), transparent 70%),
+    linear-gradient(180deg, #101a30 0%, #0c1424 100%);
+  border: 1px solid var(--bz-border);
+  border-radius: 14px;
+  padding: clamp(20px, 4vw, 40px);
+  overflow: hidden;
+}
+
+/* 顶部光子饰条 */
+#bazaar-info .bazaar-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 5%, var(--bz-cyan) 40%, var(--bz-gold) 60%, transparent 95%);
+}
+
+#bazaar-info .bazaar-title {
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: var(--bz-ink);
+}
+
+#bazaar-info .bazaar-title::before {
+  content: "— THE PHANTASTIC BAZAAR —";
+  display: block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .38em;
+  text-indent: .38em; /* 抵消最后一个字符的字距，保持视觉居中 */
+  color: var(--bz-cyan);
+  text-shadow: 0 0 12px rgba(111, 217, 242, .5);
+}
+
+#bazaar-info .bazaar-subtitle {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--bz-muted);
+}
+
+/* ---------- 章节跳转导航 ---------- */
+
+#bazaar-info .bazaar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+#bazaar-info .bazaar-nav a {
+  padding: 5px 15px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--bz-cyan);
+  text-decoration: none;
+  border: 1px solid rgba(111, 217, 242, .32);
+  background: rgba(111, 217, 242, .06);
+  transition: background .15s, border-color .15s;
+}
+
+#bazaar-info .bazaar-nav a:hover {
+  background: rgba(111, 217, 242, .16);
+  border-color: var(--bz-cyan);
+}
+
+/* ---------- 章节标题 ---------- */
+
+#bazaar-info .bazaar-section {
+  margin-top: 42px;
+  scroll-margin-top: 130px; /* 锚点跳转时避开顶部 sticky 控制栏 */
+}
+
+#bazaar-info .bazaar-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 0;
+  border: none;
+  font-size: 19px;
+  letter-spacing: .04em;
+  color: var(--bz-gold);
+}
+
+/* PSO 菜单光标式菱形标记 */
+#bazaar-info .bazaar-section h3::before {
+  content: "";
+  flex: none;
+  width: 9px;
+  height: 9px;
+  transform: rotate(45deg);
+  background: var(--bz-cyan);
+  box-shadow: 0 0 9px rgba(111, 217, 242, .85);
+}
+
+#bazaar-info .bazaar-section h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--bz-border), transparent);
+}
+
+/* ---------- 卡片 ---------- */
+
+#bazaar-info .bazaar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(290px, 100%), 1fr));
+  gap: 14px;
+}
+
+#bazaar-info .bazaar-card {
+  background:
+    linear-gradient(180deg, rgba(22, 34, 58, .76), rgba(4, 10, 24, .58));
+  border: 1px solid var(--bz-border);
+  border-radius: 10px;
+  padding: 15px 16px;
+  transition: border-color .15s;
+}
+
+#bazaar-info .bazaar-card:hover {
+  border-color: rgba(111, 217, 242, .45);
+}
+
+#bazaar-info .bazaar-card h4 {
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(111, 217, 242, .22);
+  font-size: 15px;
+  letter-spacing: .02em;
+  color: var(--bz-cyan);
+}
+
+#bazaar-info .bazaar-card--gear {
+  border-color: rgba(242, 193, 78, .42);
+  box-shadow: inset 0 0 0 1px rgba(242, 193, 78, .08);
+}
+
+#bazaar-info .bazaar-card--gear h4 {
+  color: var(--bz-gold);
+  border-bottom-color: rgba(242, 193, 78, .28);
+}
+
+#bazaar-info .bazaar-card p {
+  margin: 0;
+  color: var(--bz-ink);
+}
+
+#bazaar-info .bazaar-card ul {
+  margin: 0;
+  padding-left: 1.25em;
+  color: var(--bz-ink);
+}
+
+#bazaar-info .bazaar-card li {
+  margin: 3px 0;
+}
+
+#bazaar-info .bazaar-card li::marker {
+  color: var(--bz-cyan);
+}
+
+/* 游戏内名称：中文优先，英文原名保留；用掉落表同系金色强调 */
+#bazaar-info .bazaar-term {
+  display: inline;
+  margin: 0 2px;
+  padding: 1px 5px;
+  border: 1px solid rgba(251, 191, 36, .24);
+  border-radius: 5px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: rgba(251, 191, 36, .08);
+  color: #fbbf24;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-shadow: 0 0 8px rgba(251, 191, 36, .22);
+}
+
+#bazaar-info .bazaar-term-en {
+  margin-left: 2px;
+  color: #d6b66c;
+  font-size: .92em;
+  font-weight: 600;
+}
+
+/* ---------- 表格 ---------- */
+
+#bazaar-info .bazaar-table-wrap {
+  overflow: visible;
+  max-height: none;
+  border: 1px solid var(--bz-border);
+  border-radius: 10px;
+  background: var(--bz-well);
+  box-shadow: inset 0 0 0 1px rgba(111, 217, 242, .05);
+}
+
+#bazaar-info .bazaar-table {
+  min-width: 0;
+}
+
+#bazaar-info thead th {
+  position: static;
+  top: auto;
+  z-index: auto;
+  background: #16223a;
+  color: var(--bz-gold);
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: .06em;
+  padding: 12px 12px;
+  border-right: 1px solid var(--bz-border);
+  border-bottom: 1px solid var(--bz-border);
+  text-align: center;
+}
+
+#bazaar-info thead th:last-child {
+  border-right: none;
+}
+
+#bazaar-info .bazaar-table--4 th:nth-child(1),
+#bazaar-info .bazaar-table--4 td:nth-child(1) {
+  width: 24%;
+}
+
+#bazaar-info .bazaar-table--4 th:nth-child(2),
+#bazaar-info .bazaar-table--4 td:nth-child(2) {
+  width: 30%;
+}
+
+#bazaar-info .bazaar-table--4 th:nth-child(3),
+#bazaar-info .bazaar-table--4 td:nth-child(3) {
+  width: 28%;
+}
+
+#bazaar-info .bazaar-table--4 th:nth-child(4),
+#bazaar-info .bazaar-table--4 td:nth-child(4) {
+  width: 18%;
+}
+
+#bazaar-info .bazaar-table--3 th:nth-child(1),
+#bazaar-info .bazaar-table--3 td:nth-child(1) {
+  width: 36%;
+}
+
+#bazaar-info .bazaar-table--3 th:nth-child(2),
+#bazaar-info .bazaar-table--3 td:nth-child(2) {
+  width: 38%;
+}
+
+#bazaar-info .bazaar-table--3 th:nth-child(3),
+#bazaar-info .bazaar-table--3 td:nth-child(3) {
+  width: 26%;
+}
+
+#bazaar-info tbody td {
+  border-right: 1px solid var(--bz-border-soft);
+  border-bottom: 1px solid var(--bz-border-soft);
+  color: var(--bz-ink);
+}
+
+#bazaar-info tbody td:last-child {
+  border-right: none;
+}
+
+#bazaar-info tbody td:first-child {
+  color: var(--bz-cyan);
+  font-weight: 600;
+}
+
+#bazaar-info .bazaar-table--4 th:nth-child(3),
+#bazaar-info .bazaar-table--4 td:nth-child(3),
+#bazaar-info .bazaar-table--4 th:nth-child(4),
+#bazaar-info .bazaar-table--4 td:nth-child(4),
+#bazaar-info .bazaar-table--3 th,
+#bazaar-info .bazaar-table--3 td {
+  text-align: center;
+}
+
+#bazaar-info .bazaar-table--4 td:nth-child(3),
+#bazaar-info .bazaar-table--3 td:nth-child(3) {
+  color: var(--bz-gold);
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+#bazaar-info tbody tr:last-child td {
+  border-bottom: none;
+}
+
+#bazaar-info tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, .025);
+}
+
+#bazaar-info tbody tr:hover td {
+  background: var(--bz-cyan-glow);
+}
+
+/* ---------- 任务折叠卡 ---------- */
+
+#bazaar-info .bazaar-details {
+  margin-top: 12px;
+  border: 1px solid var(--bz-border);
+  border-radius: 10px;
+  background: var(--bz-well);
+  overflow: hidden;
+}
+
+#bazaar-info .bazaar-details > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--bz-ink);
+  transition: background .15s, color .15s;
+}
+
+#bazaar-info .bazaar-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+#bazaar-info .bazaar-details > summary::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  border: 1px solid var(--bz-cyan);
+  transition: background .15s, box-shadow .15s;
+}
+
+#bazaar-info .bazaar-details > summary:hover {
+  background: rgba(111, 217, 242, .06);
+}
+
+#bazaar-info .bazaar-details[open] > summary {
+  color: var(--bz-gold);
+  background: rgba(111, 217, 242, .05);
+  border-bottom: 1px solid var(--bz-border);
+}
+
+#bazaar-info .bazaar-details[open] > summary::before {
+  background: var(--bz-cyan);
+  box-shadow: 0 0 8px rgba(111, 217, 242, .85);
+}
+
+#bazaar-info .bazaar-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 10px;
+  margin: 14px 16px;
+}
+
+#bazaar-info .bazaar-meta div {
+  background: rgba(15, 26, 48, .8);
+  border: 1px solid var(--bz-border-soft);
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: var(--bz-ink);
+}
+
+#bazaar-info .bazaar-meta b {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: var(--bz-muted);
+}
+
+/* ---------- 任务内文字块（掉落 / 怪物数量 / 备注） ---------- */
+
+#bazaar-info .bazaar-blockwrap {
+  margin: 0 16px 14px;
+}
+
+#bazaar-info .bazaar-block-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--bz-cyan);
+}
+
+#bazaar-info .bazaar-block-label::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: var(--bz-cyan);
+}
+
+#bazaar-info .bazaar-block {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--bz-border-soft);
+  background: rgba(2, 8, 20, .6);
+  color: var(--bz-ink);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.55;
+  font-size: 13px;
+  font-family: Consolas, Monaco, "Microsoft YaHei", monospace;
+}
+
+/* 怪物数量清单：多栏排布，避免一条长龙 */
+#bazaar-info .bazaar-block--cols {
+  column-width: 230px;
+  column-gap: 28px;
+  column-rule: 1px solid var(--bz-border-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #bazaar-info * {
+    transition: none !important;
+  }
+}
