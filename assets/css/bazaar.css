@@ -106,60 +106,6 @@
   background: linear-gradient(90deg, transparent 5%, var(--bz-cyan) 40%, var(--bz-gold) 60%, transparent 95%);
 }
 
-#bazaar-info .bazaar-title {
-  margin: 0 0 6px;
-  text-align: center;
-  font-size: clamp(22px, 3vw, 30px);
-  font-weight: 800;
-  letter-spacing: .1em;
-  color: var(--bz-ink);
-}
-
-#bazaar-info .bazaar-title::before {
-  content: "— THE PHANTASTIC BAZAAR —";
-  display: block;
-  margin-bottom: 10px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .38em;
-  text-indent: .38em; /* 抵消最后一个字符的字距，保持视觉居中 */
-  color: var(--bz-cyan);
-  text-shadow: 0 0 12px rgba(111, 217, 242, .5);
-}
-
-#bazaar-info .bazaar-subtitle {
-  margin: 0 0 18px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--bz-muted);
-}
-
-/* ---------- 章节跳转导航 ---------- */
-
-#bazaar-info .bazaar-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin: 0 0 8px;
-}
-
-#bazaar-info .bazaar-nav a {
-  padding: 5px 15px;
-  border-radius: 999px;
-  font-size: 13px;
-  color: var(--bz-cyan);
-  text-decoration: none;
-  border: 1px solid rgba(111, 217, 242, .32);
-  background: rgba(111, 217, 242, .06);
-  transition: background .15s, border-color .15s;
-}
-
-#bazaar-info .bazaar-nav a:hover {
-  background: rgba(111, 217, 242, .16);
-  border-color: var(--bz-cyan);
-}
-
 /* ---------- 章节标题 ---------- */
 
 #bazaar-info .bazaar-section {

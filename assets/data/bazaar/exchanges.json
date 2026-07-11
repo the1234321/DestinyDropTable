@@ -1,0 +1,196 @@
+[
+  {
+    "title": "ASTRAL WINGS",
+    "location": "Trade NPC",
+    "materials": [
+      "ASTRAL WINGS：Astral Essence x1",
+      "Bat Wings x3",
+      "Magic Rock \"Heart Key\" x1",
+      "Magic Stone 'Iritista' x2",
+      "Gratia x1"
+    ]
+  },
+  {
+  "title": "ASTRAL HALO",
+  "location": "Trade NPC",
+  "materials": [
+    "ASTRAL WINGS",
+    "Orb of Illusion"
+  ]
+  },
+  {
+    "title": "Jointparts",
+    "location": "Trade NPC / Bazaar FOmar",
+    "materials": [
+      "Cladding of Manipulator III x7",
+      "Syncesta x5",
+      "Photon Booster x3",
+      "State/Maintenance x1",
+      "Proof of Sonic Team x1",
+      "Trap/Search x1",
+      "Dark Matter x1"
+    ]
+  },
+  {
+    "title": "V803",
+    "location": "Millennium Shop",
+    "materials": [
+      "Darkness Photon Sphere x1",
+      "Millennium Photon Core x20",
+      "V802 x2",
+      "V503 x1",
+      "Magic Stone 'Iritista' x2",
+      "D-Photon Core x1",
+      "Book of Hitogata x1"
+    ]
+  },
+  {
+    "title": "PHANTASMAL FIELD",
+    "location": "Millennium Shop",
+    "materials": [
+      "Darkness Photon Sphere x1",
+      "Millennium Photon Core x25",
+      "Cladding of Manipulator III x1",
+      "DF Field x1",
+      "Genesis Armor x2",
+      "Luminous Field x1",
+      "Virus Armor: Lafuteria x1"
+    ]
+  },
+  {
+    "title": "ASTRAL CLOAK",
+    "location": "Millennium Shop / Delta NPC",
+    "materials": [
+      "Primal Photon Sphere x1",
+      "Millennium Photon Core x8",
+      "KROE'S SWEATER x1",
+      "X-Parts ver3.10 x1",
+      "Archfiend Armor x1",
+      "Dynasty Armor x1",
+      "Ring of Fire x1",
+      "Ninja Suit x1",
+      "Mother Garb+ x2"
+    ]
+  },
+  {
+    "title": "ASTRAL CLAW",
+    "location": "Millennium Shop",
+    "materials": [
+      "Millennium Photon Core x10",
+      "Primal Photon Sphere x1",
+      "Darkness Photon Sphere x1",
+      "HP/FLOW x1",
+      "TP/FLOW x1",
+      "PB/FLOW x1",
+      "Proof of Sonic Team x1",
+      "ANTI-DARK RING x1",
+      "ANTI-LIGHT RING x1"
+    ]
+  },
+  {
+    "title": "Millennium/HP",
+    "location": "Millennium Shop",
+    "materials": [
+      "Millennium Photon Core x5",
+      "Immortal/HP x2",
+      "Cataclysm Shield x1",
+      "MOLTEN RING x1",
+      "Weapons Crystal Badge x10"
+    ]
+  },
+  {
+    "title": "Ignis Engine",
+    "location": "Millennium Shop",
+    "materials": [
+      "Millennium Photon Core x25",
+      "Darkness Photon Sphere x1",
+      "Blast Garment x1",
+      "Behemoth Armor x1",
+      "Proof of Sonic Team x1",
+      "MOLTEN RING x2",
+      "Weapons Crystal Badge x30"
+    ]
+  },
+  {
+    "title": "DIVINE FIELD",
+    "location": "Administrator / Millennium 相关兑换",
+    "materials": [
+      "Cladding of Administrator x2",
+      "Millennium Photon Core x15",
+      "Proof of Sonic Team x2",
+      "Primal Nexus x1",
+      "Ethereal Armor x1",
+      "D-VIRUS ARMOR x1"
+    ]
+  },
+  {
+    "title": "ASTRAL SABER",
+    "location": "Millennium Shop",
+    "materials": [
+      "BLAST GARMENT x1",
+      "Cladding of Manipulator III x2",
+      "Millennium Photon Core x15",
+      "Red Crystal x1",
+      "Blue Crystal x2",
+      "Yellow Crystal x2",
+      "Green Crystal x2",
+      "IZMAELA x1",
+      "Dark Matter x1"
+    ]
+  },
+  {
+    "title": "MATRIX SCOPE",
+    "location": "Millennium Shop / 新增兑换",
+    "materials": [
+      "Infernal Stone x1",
+      "Fragments of Orb [Red] x2",
+      "Fragments [Blue] x2",
+      "Reflex Gear x2",
+      "Ethereal Armor x1",
+      "Shadow Cloak x1",
+      "Proof of Sonic Team x1",
+      "Photon Booster x3",
+      "ADEPT x2",
+      "Syncesta x3"
+    ]
+  },
+  {
+    "title": "Forbidden Grimoire",
+    "location": "Hallowed World [Master] / Paganini",
+    "materials": [
+      "Hallowed Jack-O-Lantern x1",
+      "Millennium Photon Core x10",
+      "Cladding of Epsilon x1",
+      "Proof of Sonic Team x1",
+      "Sorcerer's Right Arm x1",
+      "Magic Stone 'Iritista' x2",
+      "Book of Hitogata x1"
+    ]
+  },
+  {
+    "title": "Section ID Halo",
+    "location": "Love Research [Valentine]",
+    "materials": [
+      "Wings of Life x3",
+      "Flower Bouquet x50"
+    ]
+  },
+  {
+    "title": "Flower Bouquet 商店",
+    "location": "活动商店",
+    "materials": [
+      "Wings of Life：150 Flower Bouquet",
+      "Weapons Crystal Badge x5",
+      "Flower Bouquet x25"
+    ]
+  },
+  {
+    "title": "Easter Egg 商店",
+    "location": "活动商店",
+    "materials": [
+      "D-VIRUS ARMOR：30 Eggs",
+      "D-VIRUS LAUNCHER（全 0%）：30 Eggs",
+      "BERSERK NEEDLE（全 0%）：60 Eggs"
+    ]
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "title": "VR Test Destiny: Underground",
+    "location": "EP2 > VR",
+    "difficulty": "⭐⭐⭐⭐⭐",
+    "requirement": "常驻任务；Ultimate 才有 Trade NPC / Secret。",
+    "reward": "隐藏层通关奖励 Weapons Crystal Badge x1；Hopkins 可用 Photon Token 兑换 Legendary Item Crate。",
+    "drops": [
+      "BOSS1：State/Maintenance 1/85，全 ID",
+      "隐藏 BOSS2：PB/FLOW 1/73，全 ID"
+    ],
+    "counts": "28 Sinow Berill\n24 Sinow Spigell\n15 Mericus\n22 Merikle\n21 Mericarol\n25 Zol Gibbon\n22 Ul Gibbon\n22 Gibbles\n17 Gi Gue\n17 Epsilon\n7 Morfos\n2 Sinow Zele\n2 Sinow Zoa\n2 Deldepth\n14 Meriltas\n27 Merillia\n35 Gee\n1 BOSS1\n1 BOSS2\n19 Del Lily\n13 Delbiter\n11 Recobox\n16 Ill Gill"
+  },
+  {
+    "title": "VR Test FINAL: Catastrophe",
+    "location": "EP2 > Special",
+    "difficulty": "⭐⭐⭐⭐⭐⭐⭐⭐",
+    "requirement": "Ultimate only。",
+    "reward": "通关奖励 Weapons Crystal Badge。",
+    "drops": [
+      "Eclipse Dragon：Darkness Photon Sphere 1/45",
+      "Deos Behemoth：Darkness Photon Sphere 1/45",
+      "Liquid Monkey：Photon Drop 1/500",
+      "Vol Gibbon：Photon Drop 1/500",
+      "Lavaross：Photon Token 1/500",
+      "Astark：SPREAD NEEDLE 1/787",
+      "Pazuzu：TWIN CYCLONE 1/1137"
+    ],
+    "counts": "15 Liquid Monkey\n5 Sinow Berill\n6 Gee\n2 Delsaber\n13 Vol Gibbon\n9 Astark\n9 Meriltas\n13 Merikle\n19 Lavaross\n12 Mericarol\n6 Sinow Spigell\n5 Pazuzu\n5 Mericus\n3 Merillia\n10 Girtablulu\n1 Deos Behemoth\n1 Eclipse Dragon\n24 Del Lily\n17 Ill Gill\n10 Recobox\n17 Epsilon\n15 Delbiter\n14 Morfos\n1 Deldepth"
+  },
+  {
+    "title": "VR Test Destiny: Sandstorm",
+    "location": "EP1 > VR",
+    "difficulty": "⭐⭐⭐⭐⭐⭐",
+    "requirement": "常驻任务。",
+    "reward": "通关奖励 Weapons Crystal Badge x1。",
+    "drops": [
+      "Meri Noir：Red Crystal 1/204，全 ID",
+      "Ba Boota：Photon Drop 1/500",
+      "Goran Detonator：Excalibur 1/1800",
+      "Pazuzu：Elenor 1/1800，Lv5，无 PB"
+    ],
+    "counts": "27 Evil Shark\n27 Pal Shark\n39 Guil Shark\n36 Chaos Bringer\n37 Hildebear\n1 Hildeblue\n25 Delsaber\n32 Goran Detonator\n23 Grass Assassin\n41 Sinow Beat\n37 Ba Boota\n10 Merikle\n16 Mericarol\n13 Pazuzu\n6 Mericus\n17 Dark Belra\n11 So Dimenian\n9 Meri Noir",
+    "notes": [
+      "此任务里的 Mericarol / Merikle / Mericus 不掉普通稀有。"
+    ]
+  },
+  {
+    "title": "Tragedy in Chaos [EP1]",
+    "location": "EP1 > Destiny",
+    "difficulty": "U难度限定",
+    "requirement": "进入需要 Weapons Crystal Badge x1。",
+    "reward": "资料重点是怪物数量，用于刷怪/规划。",
+    "drops": [],
+    "counts": "Dragon 区：\n37 Hildebear\n1 Hildeblue\n17 Barbarous Wolf\n29 Booma\n10 Savage Wolf\n17 Gobooma\n36 Gigobooma\n7 Monest\n7 Rag Rappy\n\nDe Rol 区：\n16 Guil Shark\n12 Evil Shark\n9 Pal Shark\n34 Grass Assassin\n26 Pofuilly Slime\n34 Poison Lily\n16 Pan Arms\n\nVol Opt 区：\n37 Gilchic\n5 Canane\n18 Sinow Gold\n26 Sinow Beat\n25 Garanz\n25 Dubchic\n3 Dubswitch\n6 Canadine\n\nFalz 区：\n23 Chaos Sorcerer\n43 Chaos Bringer\n12 So Dimenian\n9 La Dimenian\n3 Dimenian\n28 Dark Belra\n4 Bulclaw\n22 Delsaber\n1 Dark Falz"
+  },
+  {
+    "title": "VR Test Destiny: Meteor Impact",
+    "location": "EP2 > VR",
+    "difficulty": "⭐⭐⭐⭐⭐⭐",
+    "requirement": "进入需要 Weapons Crystal Badge x1。",
+    "reward": "新增 Asteroid Engine，通关用于刷特殊掉落。",
+    "drops": [
+      "Epsilon：Asteroid Engine 1/2100，全 ID",
+      "Astark：Eternal Night 1/2100，全 ID",
+      "Dorphon Eclair：Planet Eater 1/1030，全 ID"
+    ],
+    "counts": "86 Del Lily\n33 Recobox\n44 Delbiter\n48 Epsilon\n32 Merikle\n20 Mericus\n23 Mericarol\n22 Gibbles\n41 Ill Gill\n23 Gi Gue\n16 Garanz\n25 Morfos\n4 Deldepth\n14 Astark\n8 Dark Belra\n12 Goran Detonator\n10 Delsaber\n11 Dorphon Eclair\n5 Dolmdarl"
+  },
+  {
+    "title": "The Phantasmal Dimension",
+    "location": "EP2 > Special",
+    "difficulty": "⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+    "requirement": "极高难度；建议准备完整队伍和高端装备。",
+    "reward": "大量 Millennium Photon Core 相关掉落；击败隐藏 BOSS / Floor 4 后可用 Photon Sphere 换 Legendary Item Crate。",
+    "drops": [
+      "Astark：Photon Token 1/500",
+      "Dorphon Eclair：Dark Matter 1/1024",
+      "Liquid Monkey / Vol Gibbon：Photon Token 1/1000",
+      "Sinow Zoa：Grave Digger 1/1760，除 Viridia 外",
+      "Sinow Zele：Last Emperor 1/1760",
+      "Ill Gill：Millennium Photon Core 1/900",
+      "Pazuzu：Millennium Photon Core 1/666",
+      "Epsilon：Millennium Photon Core 1/666，除 Oran 外",
+      "Epsilon：RASTER SCOPE 1/1559，Oran",
+      "Millennium Saber / Millennium Sorcerer / Lavaross：Millennium Photon Core 1/500",
+      "Queen of Gal Da Val / D-Virus Morfos / Dark Nebulas：Millennium Photon Core 1/450",
+      "Varazopt ver.D：Millennium Photon Core 1/204",
+      "Spirit Flow：Millennium Photon Core 1/170",
+      "Deos Behemoth：CHAOS HALO 1/51",
+      "Bar Dalus：PHOENIX WINGS 1/51",
+      "Eclipse Dragon：CRYSTALLIZED WINGS 1/51"
+    ],
+    "counts": "普通路线，不含隐藏层：\n14 Gilchic\n9 Dolmolm\n9 Dolmdarl\n23 Sinow Zoa\n14 Ba Boota\n77 Millennium Saber\n20 Sinow Zele\n15 Meriltas\n16 Mericus\n20 Astark\n17 Merikle\n12 Mericarol\n40 Queen of Gal Da Val\n20 Deldepth\n37 Lavaross\n11 Dorphon Eclair\n14 Millennium Sorcerer\n9 Pazuzu\n26 Dubchic\n5 Dubswitch\n15 Vol Gibbon\n20 Liquid Monkey\n50 Dark Nebulas\n69 D-Virus Morfos\n19 Goran Detonator\n12 Soul Stealer\n26 Ill Gill\n21 Epsilon",
+    "notes": [
+      "路线：FLOOR1 → FLOOR2 → FLOOR3 → FLOOR4；Secret1 / Secret2 / 多个 BOSS 分支。",
+      "50 分钟内通关可获得特殊挑战称号。",
+      "Secret BOSS 包含强化版 Deos Behemoth、Bar Dalus、Eclipse Dragon。"
+    ]
+  },
+  {
+    "title": "Beyond the Nightmare",
+    "location": "EP1 > Special",
+    "difficulty": "⭐⭐⭐⭐⭐⭐⭐⭐",
+    "requirement": "BOSS 战任务。",
+    "reward": "Primal Photon Sphere 来源。",
+    "drops": [
+      "Nightmare Dominator VI：Primal Photon Sphere 1/45"
+    ],
+    "counts": "BOSS：Nightmare Dominator VI\nDarvant HP：10,000\nPhase 1 HP：327,000\nPhase 2 HP：163,500\nPhase 3 HP：163,500",
+    "notes": [
+      "无 wipe 且 11 分钟内通关可获得特殊挑战称号。"
+    ]
+  },
+  {
+    "title": "The Discontrolled Tower [Raid]",
+    "location": "EP2 > Special",
+    "difficulty": "⭐⭐⭐⭐⭐⭐⭐⭐",
+    "requirement": "需要 Red player；必须使用宽屏客户端；建议先通 Silent Nightmare [Raid]。",
+    "reward": "Cladding of Manipulator III / Jointparts 相关核心任务。",
+    "drops": [
+      "Manipulator III：Cladding of Manipulator III 1/10",
+      "Mericus：Syncesta 1/787 或 State/Maintenance 1/1865",
+      "Astark：Trap/Search 1/787 或 Yasminkov 9000M 1/787",
+      "Dorphon Eclair：Photon Token 1/400 或 Storm Render 1/787",
+      "Pazuzu：Photon Token 1/400 或 Dark Matter 1/900"
+    ],
+    "counts": "不含隐藏区：\n23 Gilchic\n27 Dubchic\n19 Garanz\n3 Dubswitch\n15 Delsaber\n13 Sinow Berill\n8 Sinow Spigell\n4 Sinow Zoa\n6 Sinow Zele\n17 Morfos\n14 Dark Belra\n5 Dimenian\n3 So Dimenian\n1 La Dimenian\n16 Mericus\n6 Deldepth\n16 Delbiter\n27 Ill Gill\n9 Merillia\n5 Meriltas\n14 Merikle\n13 Mericarol\n7 Zol Gibbon\n9 Ul Gibbon\n13 Gibbles\n12 Gi Gue\n13 Dolmolm\n6 Grass Assassin\n22 Del Lily\n5 Dolmdarl\n13 Recobox\n20 Astark\n8 Girtablulu\n4 Pazuzu\n19 Ba Boota\n11 Dorphon Eclair\n6 Goran Detonator\n4 Pyro Goran\n1 Manipulator III",
+    "notes": [
+      "BOSS：Manipulator III / Divine Guard，HP 2,180,000，DEF 2,500，无弱点。",
+      "Raid BOSS 有额外 AoE 机制；建议聊天速度设置为最快。",
+      "BOSS 图标机制：分散、集合、直线、范围、不可避、抗性降低、Death Sentence 等。"
+    ]
+  },
+  {
+    "title": "The Starlight Tower [Raid]",
+    "location": "EP2 > Special",
+    "difficulty": "⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+    "requirement": "必须使用宽屏客户端；建议 4 人队伍；建议聊天速度最快。",
+    "reward": "Core of Administrator、DIVINE BLADE、DIVINE FIELD 相关材料。",
+    "drops": [
+      "Administrator：Core of Administrator 1/12",
+      "Administrator：DIVINE BLADE 1/28",
+      "Forbidden Scythe IV：Millennium Photon Core 1/64"
+    ],
+    "counts": "BOSS：Administrator / Admin Guard / Forbidden Scythe IV。详细 HP / ATP / DEF 原资料隐藏。",
+    "notes": [
+      "已知机制：Cyclonic Explosion、Creation + Rollback / Rollforward、Thunder Labyrinth Σ、Divine Cross + Divine Punishment、Divine Reckoning、Fatal Sequence、Lightning Storm、Catastrophe Blaze、The Quaternity、Light and Darkness、Absolute Guard Protocol。",
+      "无 wipe 击败 Administrator 可获得特殊挑战称号。"
+    ]
+  },
+  {
+    "title": "Hallowed World [Master]",
+    "location": "EP2 > Special",
+    "difficulty": "⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+    "requirement": "极难，强烈建议 4 人。",
+    "reward": "Hallowed Jack-O-Lantern / Forbidden Grimoire 相关材料。",
+    "drops": [
+      "Hallowed Reaper：Hallowed Jack-O-Lantern 1/1170",
+      "Forbidden Saber：Millennium Photon Core 1/350",
+      "Queen of Gal Da Val：Millennium Photon Core 1/450",
+      "Epsilon：Raster Scope 1/1559",
+      "Del Lily：State/Maintenance 1/2559，除 Viridia 外",
+      "Delbiter：TWIN RIKA'S CLAW 1/3150"
+    ],
+    "counts": "73 Del Lily\n29 Merikle\n30 Mericarol\n24 Mericus\n36 Forbidden Saber\n36 Queen of Gal Da Val\n43 Delbiter\n41 Recobox\n30 Epsilon\n73 Hallowed Reaper"
+  },
+  {
+    "title": "VR Test OMEGA: Oblivion",
+    "location": "EP2 > Special",
+    "difficulty": "⭐⭐⭐⭐⭐⭐⭐⭐",
+    "requirement": "非常难的任务。",
+    "reward": "Infernal Stone / Star Eulogy / MATRIX SCOPE 相关材料。",
+    "drops": [
+      "Tormentark：Star Eulogy 1/1559，Viridia / Greenill / Skyly / Bluefull / Purplenum",
+      "Tormentark：Infernal Stone 1/930，Pinkal / Redria / Oran / Yellowboze / Whitill",
+      "Dorphon Divine：Millennium Photon Core 1/500",
+      "Yowie：Photon Drop 1/600",
+      "Giga Gue ver.D：D-VIRUS LAUNCHER 1/2100"
+    ],
+    "counts": "36 Ill Gill\n10 Goran Detonator\n36 Del Lily\n10 Gibbles\n31 Epsilon\n32 Tormentark\n21 Merikle\n20 Yowie\n12 Gi Gue\n16 Recobox\n22 Delbiter\n9 Mericus\n15 Mericarol\n27 Dorphon Divine\n12 Giga Gue ver.B\n24 Dolmolm\n19 Girtablulu\n4 Gilchic\n5 Morfos\n11 Dolmdarl\n10 Dubchic\n3 Dubswitch",
+    "notes": [
+      "后续调整：增加 1 个治疗环，调整部分敌人属性。",
+      "Yowie、Tormentark、Dorphon Divine、Recobox、Recon 被削弱过部分能力。"
+    ]
+  }
+]

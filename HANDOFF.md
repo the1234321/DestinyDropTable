@@ -55,7 +55,7 @@ http://127.0.0.1:8765/
 
 - `Cladding of Manipulator III` 页面按后续更新与当前掉落表使用 `1/10`。
 - 部分 Destiny 自定义怪物/任务名是意译，不一定是官方中文。
-- `Weapon Crystal Badge`、`Photon Token`、`Star Eulogy`、`MATRIX SCOPE` 等若服务器已有固定中文名，建议替换 `NAME_ZH` 映射。
+- `Weapons Crystal Badge`、`Photon Token`、`Star Eulogy`、`MATRIX SCOPE` 等若服务器已有固定中文名，建议替换 `NAME_ZH` 映射。
 - 下方资料区目前是静态整理内容；如果以后需要跟 `data.json` 一样数据化，可以再把资料拆成 JSON。
 
 ## 验证

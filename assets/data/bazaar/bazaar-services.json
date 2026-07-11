@@ -1,0 +1,34 @@
+[
+  {
+    "title": "The Phantastic Bazaar 位置",
+    "detail": "EP2 > Shop > The Phantastic Bazaar。这里集中提供商店、强化、特殊追加、稀有兑换和活动兑换。"
+  },
+  {
+    "title": "1 PD 商店",
+    "detail": "Charge Vulcan 0/0/0/0/50、Charge Gungnir 0/0/0/0/50、Charge Raygun 0/0/0/0/50。"
+  },
+  {
+    "title": "新手 3 PD 商店",
+    "detail": "出售各种 Heavenly 插件。"
+  },
+  {
+    "title": "20 PD Mag 商店",
+    "detail": "出售带 3PB（包含 M&Y）的 Mag：200/0/0/0、0/200/0/0、0/0/200/0、0/0/0/200。"
+  },
+  {
+    "title": "Photon Token 商店",
+    "detail": "1 Photon Token = 6 PD。"
+  },
+  {
+    "title": "侵蚀因子 底材兑换",
+    "detail": "普通的 Calibur / Arms 的三属性50带Hit，可选多种组合，适合 Dark Flow 或 Dark Meteor。"
+  },
+  {
+    "title": "加 Hit 服务",
+    "detail": "使用 Photon Token 给武器加 Hit。1 Photon Token = 1 Hit%，此方法最高加到 80 Hit。"
+  },
+  {
+    "title": "追加 EX 服务",
+    "detail": "可给没有 EX 的武器追加特殊，例如 Type M Weapon、Yasminkov 系列等。也能给已有独特 EX 的武器追加名字标记，但这类武器追加的 EX 不实际生效。S-rank 不能使用此服务。价格： 1个EX = 50 PD。"
+  }
+]

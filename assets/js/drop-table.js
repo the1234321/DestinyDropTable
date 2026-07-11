@@ -13,9 +13,15 @@ const bonusIndex = {};
 const recipeIndex = {};
 
 async function loadData(){
-    const res = await fetch('data.json?t=' + Date.now());
-    data = await res.json();
-    sectionIds = data.sectionIds || [];
+    const names = ['activities', 'section-ids', 'bonuses', 'recipes', 'tables'];
+    const paths = names.map(name => 'assets/data/drop-table/' + name + '.json');
+    const [activitiesData, sectionIdsData, bonus, recipe, tables, items] = await Promise.all([
+        ...paths.map(path => fetch(path).then(res => res.json())),
+        fetch('assets/data/items.json').then(res => res.json())
+    ]);
+    data = { activities: activitiesData, sectionIds: sectionIdsData, bonus, recipe, tables, items };
+    sectionIds = sectionIdsData || [];
+    window.WIKI_ITEMS = items;
 
     //更新活动
     const activities = data.activities;
@@ -240,10 +246,10 @@ function switchDifficulty(diff){
     render()
 }
 
-function bindTooltips() {
+function bindTooltips(root = document) {
     const tooltip = document.getElementById("tooltip");
 
-    document.querySelectorAll(".item-cell").forEach(cell => {
+    root.querySelectorAll(".item-cell, [data-item]").forEach(cell => {
 
         // 缓存当前显示的 item，避免重复生成
         let currentItem = null;
@@ -252,7 +258,7 @@ function bindTooltips() {
             const itemName = cell.dataset.item;
             const section = cell.dataset.section;
             const sectionNumber = SECTION_INDEX[section];
-            const item = data.items[itemName];
+            const item = data?.items?.[itemName] || window.WIKI_ITEMS?.[itemName];
             const farm = cell.dataset.farm || "";
             if (!item) return;
 
@@ -341,6 +347,8 @@ function bindTooltips() {
 
     });
 }
+
+window.bindItemTooltips = bindTooltips;
 
 function scrollToRow(row){
     requestAnimationFrame(()=>{
@@ -468,49 +476,5 @@ document.querySelectorAll(".ep-btn").forEach(btn=>{
 }
 
 bindControlButtons();
-
-// Happy Hour
-const HH_START = new Date("2026-05-30T06:30:00");
-const HH_INTERVAL = 15.5 * 60 * 60 * 1000; // 15.5小时轮询
-const HH_DURATION = 3 * 60 * 60 * 1000;    // 持续3小时
-
-function updateHappyHour(){
-    const now = new Date().getTime();
-    let current = HH_START.getTime();
-
-    // 找到最近一次开始时间
-    while(current + HH_INTERVAL <= now){
-        current += HH_INTERVAL;
-    }
-
-    let statusText = "";
-    let diff = 0;
-
-    if(now >= current && now < current + HH_DURATION){
-        // 进行中
-        statusText = "Happy Hour进行中";
-        diff = (current + HH_DURATION) - now; // 剩余时间到结束
-    } else {
-        // 下次开始
-        if(now < current){
-            diff = current - now;
-        } else {
-            current += HH_INTERVAL;
-            diff = current - now;
-        }
-        statusText = "下次开始：" + new Date(current).toLocaleString();
-    }
-
-    const hours = Math.floor(diff / 3600000);
-    const mins = Math.floor((diff % 3600000) / 60000);
-    const secs = Math.floor((diff % 60000) / 1000);
-
-    document.getElementById("hh-next").innerHTML = statusText;
-    document.getElementById("hh-countdown").innerHTML = `${hours}h ${mins}m ${secs}s`;
-}
-
-// 初始化
-updateHappyHour();
-setInterval(updateHappyHour, 1000);
 
 loadData();
