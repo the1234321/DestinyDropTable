@@ -7,47 +7,54 @@
     <title>D服中文资料站</title>
     <link rel="stylesheet" href="assets/css/site.css">
     <link rel="stylesheet" href="assets/css/drop-table.css">
-    <link rel="stylesheet" href="assets/css/bazaar.css">
+    <link rel="stylesheet" href="assets/css/bazaar.css?v=20260826-4">
 </head>
 
 <body>
 
     <nav class="wiki-site-nav" aria-label="资料栏目">
-        <span class="wiki-brand">命运服中文资料站</span>
-        <button class="wiki-nav-button is-active" type="button" data-view="drops" aria-selected="true">掉落表</button>
-        <button class="wiki-nav-button wiki-nav-button--featured" type="button" data-view="commands" aria-selected="false">常用命令和规则</button>
-        <button class="wiki-nav-button" type="button" data-view="localization" aria-selected="false">汉化指南</button>
-        <button class="wiki-nav-button" type="button" data-view="currency" aria-selected="false">货币说明</button>
-        <button class="wiki-nav-button" type="button" data-view="special" aria-selected="false">特殊掉落</button>
-        <button class="wiki-nav-button" type="button" data-view="tpd" aria-selected="false">TPD速查</button>
-        <button class="wiki-nav-button" type="button" data-view="services" aria-selected="false">集市服务</button>
-        <button class="wiki-nav-button" type="button" data-view="exchange" aria-selected="false">集市兑换</button>
-        <button class="wiki-nav-button" type="button" data-view="effects" aria-selected="false">后期装备</button>
-        <button class="wiki-nav-button" type="button" data-view="quests" aria-selected="false">任务介绍</button>
+        <span class="wiki-brand" data-i18n="brand">命运服中文资料站</span>
+        <button class="wiki-nav-button is-active" type="button" data-view="drops" aria-selected="true" data-i18n="nav.drops">掉落表</button>
+        <button class="wiki-nav-button wiki-nav-button--featured" type="button" data-view="commands" aria-selected="false" data-i18n="nav.commands">常用命令和规则</button>
+        <button class="wiki-nav-button" type="button" data-view="localization" aria-selected="false" data-i18n="nav.localization">汉化指南</button>
+        <button class="wiki-nav-button" type="button" data-view="dictionary" aria-selected="false" data-i18n="nav.dictionary">中英对照</button>
+        <button class="wiki-nav-button" type="button" data-view="currency" aria-selected="false" data-i18n="nav.currency">货币说明</button>
+        <button class="wiki-nav-button" type="button" data-view="special" aria-selected="false" data-i18n="nav.special">特殊掉落</button>
+        <button class="wiki-nav-button" type="button" data-view="bazaar" aria-selected="false" data-i18n="nav.bazaar">集市服务与兑换</button>
+        <button class="wiki-nav-button" type="button" data-view="effects" aria-selected="false" data-i18n="nav.effects">后期装备</button>
+        <button class="wiki-nav-button" type="button" data-view="quests" aria-selected="false" data-i18n="nav.quests">任务介绍</button>
+    <div class="language-switcher" role="group" aria-label="语言选择">
+            <button type="button" data-language="cn" aria-pressed="true">中文</button>
+            <button type="button" data-language="en" aria-pressed="false">English</button>
+    </div>
     </nav>
 
     <main>
     <section id="drop-table-panel" class="wiki-panel">
-    <div class="control-bar">
+    <div class="control-bar difficulty-selector-bar">
 
         <div class="control-bar-inner">
 
             <div class="selector-row">
 
-                <span class="selector-label">
+                <span class="selector-label" data-i18n="difficulty">
                     难度
                 </span>
 
-                <button class="tab-btn active">普通</button>
-                <button class="tab-btn">困难</button>
-                <button class="tab-btn">极难</button>
-                <button class="tab-btn">极限</button>
+                <button class="tab-btn active" data-difficulty="Normal" data-i18n="difficulty.Normal">普通</button>
+                <button class="tab-btn" data-difficulty="Hard" data-i18n="difficulty.Hard">困难</button>
+                <button class="tab-btn" data-difficulty="Very Hard" data-i18n="difficulty.Very Hard">极难</button>
+                <button class="tab-btn" data-difficulty="Ultimate" data-i18n="difficulty.Ultimate">极限</button>
 
             </div>
 
-            <div class="selector-row">
+        </div>
 
-                <span class="selector-label">
+    </div>
+
+    <div class="selector-row episode-selector-row">
+
+                <span class="selector-label" data-i18n="episode">
                     章节
                 </span>
 
@@ -65,12 +72,8 @@
 
             </div>
 
-        </div>
-
-    </div>
-
     <div class="search-bar">
-        <input id="searchInput" class="search-input" placeholder="搜索物品 / 相关物品..." oninput="performSearch()">
+        <input id="searchInput" class="search-input" data-i18n-placeholder="search" placeholder="搜索物品 / 相关物品..." oninput="performSearch()">
     </div>
 
     <div id="content"></div>
@@ -88,9 +91,13 @@
     <section id="localization-panel" class="wiki-panel" hidden>
         <div id="localization-guide"></div>
     </section>
+    <section id="dictionary-panel" class="wiki-panel" hidden>
+        <div id="bilingual-dictionary"></div>
+    </section>
     </main>
     <div id="tooltip" class="tooltip"></div>
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/drop-table.js"></script>
     <script type="module" src="assets/js/bazaar.js"></script>
     <script src="assets/js/wiki-navigation.js"></script>

@@ -1,0 +1,176 @@
+{
+  "EP1": {
+    "Destiny": [
+      "Wrath of Forest",
+      "Wrath of Forest",
+      "Tragedy in Chaos",
+      "Caverns of Gloom",
+      "Harmony of Despair I",
+      "Harmony of Despair II",
+      "Random Attack Xrd Stage",
+      "Forest Offensive",
+      "Mines Offensive",
+      "Path to Salvation",
+      "Simulator 2.0",
+      "Ruined Serenity",
+      "Science Project",
+      "Shattered Dreams",
+      "Spring Cleaning",
+      "Tyrell's Last Hope",
+      "Sugoroku",
+      "Strange Sighting",
+      "Christmas Fiasco EP1",
+      "Maximum Attack S"
+    ],
+    "Event": [
+      "MAXIMUM ATTACK 1 Ver2",
+      "Maximum Attack 4th Stage -A-",
+      "Maximum Attack 4th Stage -B-",
+      "Maximum Attack 4th Stage -C-",
+      "総督の贈り物",
+      "AOL CUP -Sunset Base-",
+      "ホワイトデーイベント"
+    ],
+    "Extermination": [
+      "Endless Nightmare #1",
+      "Endless Nightmare #2",
+      "Endless Nightmare #3",
+      "Endless Nightmare #4",
+      "Mop-up Operation #1",
+      "Mop-up Operation #2",
+      "Mop-up Operation #3",
+      "Mop-up Operation #4",
+      "Today's Rate"
+    ],
+    "Special": [
+      "Training Room",
+      "Beyond the Veil",
+      "Toward the Multiverse [Lv,I]",
+      "Toward the Multiverse [Lv.II]",
+      "Beyond the Mainframe",
+      "Beyond the Mainframe [Extreme]",
+      "Beyond the Nightmare",
+      "Silent Nightmare [Raid]",
+      "Silent Nightmare [Boss only]",
+      "Distorted  Nightmare [Raid]",
+      "The Ravenous Predator [Raid]"
+    ],
+    "Retrieval": [
+      "Lost HEAT SWORD",
+      "Lost ICE SPINNER",
+      "Lost SOUL BLADE",
+      "Lost HAVOC VULCAN",
+      "Lost HELL PALLASH",
+      "Fragments of Memory",
+      "Gallon's Treachery",
+      "Rappy's Holiday"
+    ],
+    "VR": [
+      "Towards the Future",
+      "VR Test Destiny: Sandstorm"
+    ]
+  },
+  "EP2": {
+    "Destiny": [
+      "Dolmolm Research",
+      "Walking through Flames",
+      "The Eternal Age",
+      "Raid on Central Tower",
+      "Weather Effects",
+      "MAXIMUM ATTACK S",
+      "Random Attack Xrd Stage",
+      "Gal Da Val's Darkness",
+      "Revisiting Darkness",
+      "New MSB",
+      "Seat of the Heart",
+      "World of Illusion/pso",
+      "Christmas Fiasco EP2",
+      "Defend the main room!"
+    ],
+    "Special": [
+      "VR Test FINAL: Catastrophe",
+      "VR Test EXTRA: Singularity",
+      "Hallowed World [Master]",
+      "The Discontrolled Tower [Raid]",
+      "The Manipulated Tower [Raid]",
+      "The Phantasmal Dimension",
+      "The Starlight Tower [Raid]"
+    ],
+    "Event": [
+      "Pioneer Christmas",
+      "夢からの使者",
+      "Beach Laughter",
+      "Pioneer Halloween",
+      "Maximum Attack 2",
+      "Maximum Attack 4th Stage -2A-",
+      "Maximum Attack 4th Stage -2B-",
+      "Maximum Attack 4th Stage -2C-",
+      "Singing by the Beach",
+      "Festivity On The Beach"
+    ],
+    "Extermination": [
+      "Phantasmal World #1",
+      "Phantasmal World #2",
+      "Phantasmal World #3",
+      "Phantasmal World #4"
+    ],
+    "Retrieval": [
+      "LDS +timer",
+      "Lost  RIOT RAYGUN+timer",
+      "Tian's Montreaux Final"
+    ],
+    "Shop": [
+      "Gallon's Shop",
+      "The Phantastic Bazaar"
+    ],
+    "Tower": [
+      "The East Tower",
+      "The West Tower"
+    ],
+    "VR": [
+      "Respective Tomorrow",
+      "Reach for the dream",
+      "VR Test Destiny: Seabed",
+      "VR Test Destiny: Underground",
+      "VR Test Destiny: Meteor Impact"
+    ]
+  },
+  "EP4": {
+    "Destiny": [
+      "Neo Maximum Attack: Episode IV",
+      "Christmas Fiasco EP4",
+      "Point of Disaster",
+      "MA4DMD",
+      "Maximum Attack S",
+      "Brink of Oblivion"
+    ],
+    "Event": [
+      "Claire's Deal 5",
+      "LOGiN presents 勇場のマッチレース",
+      "Maximum Attack 4th Stage -A-",
+      "Maximum Attack 4th Stage -B-",
+      "Maximum Attack 4th Stage -C-",
+      "荒野のくくちばし亭Ver2"
+    ],
+    "Extermination": [
+      "New Mop-Up Operation #1",
+      "New Mop-Up Operation #2",
+      "New Mop-Up Operation #3",
+      "New Mop-Up Operation #4",
+      "New Mop-Up Operation #5",
+      "War of Limits 1",
+      "War of Limits 2",
+      "War of Limits 3",
+      "War of Limits 4",
+      "War of Limits 5"
+    ],
+    "VR": [
+      "Maximum Attack 3 Ver2",
+      "Realms of War",
+      "Beyond the Horizon"
+    ],
+    "Shop": [
+      "Item Present"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+[
+  {
+    "title": {"en": "V803", "cn": "V803"},
+    "lines": {
+      "en": [
+        "Greatly shortens technique casting time.",
+        "Improves freezing success rate for Rabarta and Barta.",
+        "MST +165.",
+        "FO: Rabarta 50%; Barta 90% freeze chance.",
+        "HU / RA: Rabarta 33%; Barta 66% freeze chance."
+      ],
+      "cn": [
+        "装备后大幅缩短技术释放时间。",
+        "额外提高 极冰术 / 冰箭术 冰冻成功率。",
+        "精神力 +165。",
+        "FO：极冰术 冻结率50%，冰箭术 冻结率90%。",
+        "HU / RA：极冰术 冻结率33%，冰箭术 冻结率66%。"
+      ]
+    }
+  },
+  {
+    "title": {"en": "PHANTASMAL FIELD", "cn": "PHANTASMAL FIELD"},
+    "lines": {
+      "en": [
+        "Armor; Lv 200; all classes.",      "DFP 340 / EVP 340.",               "Resists: 32 / 32 / 32 / 41 / 41.",
+        "All stats +30."
+      ],
+      "cn": ["防具，Lv 200，全职业。", "DFP 340 / EVP 340。", "抗性：32 / 32 / 32 / 41 / 41。", "全属性 +30。"]
+    }
+  },
+  {
+    "title": {"en": "ASTRAL CLOAK", "cn": "ASTRAL CLOAK"},
+    "lines": {
+      "en": [
+        "Armor; Lv 200; all classes.",
+        "DFP 250 / EVP 250.",
+        "Resists: 35 / 35 / 35 / 35 / 35.",
+        "Basic techniques +100%; normal techniques +80%; Rabarta +90%."
+      ],
+      "cn": [
+        "防具，Lv 200，全职业。",
+        "DFP 250 / EVP 250。",
+        "抗性：35 / 35 / 35 / 35 / 35。",
+        "初级法术 +100%；中级法术 +80%；极冰术 +90%。"
+      ]
+    }
+  },
+  {
+    "title": {"en": "Asteroid Engine", "cn": "行星引擎"},
+    "lines": {
+      "en": [
+        "All resists +5.",
+        "Yunchang: wider angle and range, speed +15%, ATP +150; Twin Sword animation.",
+        "Cannon Rouge: fires five shots; ATP +150.",
+        "Slicer of Fanatic: speed +15%, targets 3→5, wider angle, ATA +20."
+      ],
+      "cn": [
+        "全抗性 +5。",
+        "强化 Yunchang：角度更宽、范围更远、速度 +15%、ATP +150，攻击动作改变。",
+        "强化 Cannon Rouge：一次发射 5 发，ATP +150。",
+        "强化 Slicer of Fanatic：速度 +15%、目标 3→5、角度更宽、ATA +20。"
+      ]
+    }
+  },
+  {
+    "title": {"en": "Jointparts upgrades", "cn": "Jointparts 强化列表"},
+    "lines": {
+      "en": [
+        "Mille Marteaux: N/H 4-4-4 auto-lock; S 3-3-3 Heaven Punisher effect; ATP +100, MST +100.",
+        "Guld Milla: range 190; S auto-lock and 5-5-5; ATP +400.",
+        "Dual Bird: range 150, 4-4-4, ATA +20.",
+        "Celestial Fusion: range 150, ATA +20, MST +100; FO can double-cast Jellen and Zalure.",
+        "Twin Rika's Claw: Dagger animation, 2-2-2, five targets.",
+        "Ultimate Double Cannon: speed +15%, ATA +20, enhanced special range and angle."
+      ],
+      "cn": [
+        "Mille Marteaux：N/H 4-4-4 自动锁定，S 为 3-3-3 天罚效果，ATP +100、MST +100。",
+        "Guld Milla：N/H 范围 190，S 自动锁定，S 为 5-5-5，ATP +400。",
+        "Dual Bird：范围 150，4-4-4，ATA +20。",
+        "Celestial Fusion：范围 150，ATA +20、MST +100，FO 可降攻术 + 降防术双重释放。",
+        "Twin Rika's Claw：动作爪系→匕首，2-2-2，目标 5。",
+        "Ultimate Double Cannon：速度 +15%，特殊攻击范围/角度增强，ATA +20。"
+      ]
+    }
+  },
+  {
+    "title": {"en": "DIVINE FIELD", "cn": "DIVINE FIELD"},
+    "lines": {
+      "en": [
+        "Armor; Lv 200; all classes.",
+        "DFP 508 / EVP 284.",
+        "Resists: 46 / 46 / 46 / 55 / 55.",
+        "All stats +20.",
+        "Heaven Striker set: at HP below 12.5%, attack becomes 3-3-3.",
+        "DIVINE BLADE set: targets 1→5; speed +50%."
+      ],
+      "cn": [
+        "防具，Lv 200，全职业。",
+        "DFP 508 / EVP 284。",
+        "抗性：46 / 46 / 46 / 55 / 55。",
+        "全属性 +20。",
+        "Heaven Striker 组合：HP 低于 12.5% 时攻击变为 3-3-3。",
+        "DIVINE BLADE 组合：目标 1→5，速度 +50%。"
+      ]
+    }
+  },
+  {
+    "title": {"en": "DIVINE BLADE", "cn": "DIVINE BLADE"},
+    "lines": {
+      "en": [
+        "Twin Sword; all classes.",
+        "ATP 1200 / ATA 55.",
+        "All stats +30.",
+        "Special: full paralysis.",
+        "Reverser +100%; Shifta +200%; Deband +200%; casts Shifta + Deband together."
+      ],
+      "cn": [
+        "武器类型：双剑，全职业。",
+        "ATP 1200 / ATA 55。",
+        "全属性 +30。",
+        "特殊：全麻痹。",
+        "回魂术 +100%；强攻术 +200%；强体术 +200%；附带强攻术 + 强体术双重释放。"
+      ]
+    }
+  }
+]

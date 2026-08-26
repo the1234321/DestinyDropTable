@@ -1,451 +1,649 @@
-[
-  {
-    "items": [
-      "云长",
-      "行星引擎"
-    ],
-    "effect": "命中提升20, 攻击提升150, 攻击范围扩大, 攻击速度+15%, 攻击动作变为双头剑",
-    "extra": []
-  },
-  {
-    "items": [
-      "行星引擎",
-      "狂信者的投刃"
-    ],
-    "effect": "命中+20, 6目标, 攻击范围增大, 攻速+15%",
-    "extra": []
-  },
-  {
-    "items": [
-      "行星引擎",
-      "赤红加农"
-    ],
-    "effect": "攻击力+150, 单发 5 hit",
-    "extra": []
-  },
-  {
-    "items": [
-      "光栅瞄准镜",
-      "雅斯米诺科夫９０００Ｍ"
-    ],
-    "effect": "攻击范围 +40, 攻击力+50, 命中+20",
-    "extra": []
-  },
-  {
-    "items": [
-      "光栅瞄准镜",
-      "雅斯米诺科夫２０００Ｈ"
-    ],
-    "effect": "攻击范围 -70.0, 三连hit数: 3-3-3",
-    "extra": []
-  },
-  {
-    "items": [
-      "光栅瞄准镜",
-      "雅斯米诺科夫３０００Ｒ"
-    ],
-    "effect": "Hits N/H : 3-3-3, EX:1-1-3, EX范围 -75, 攻击角度 +35",
-    "extra": []
-  },
-  {
-    "items": [
-      "光栅瞄准镜",
-      "雅斯米诺科夫７０００Ｖ"
-    ],
-    "effect": "攻击力+300, 攻击范围 +55",
-    "extra": []
-  },
-  {
-    "items": [
-      "矢量瞄准镜",
-      "削血弹弓"
-    ],
-    "effect": "攻击范围 +105, 命中+20",
-    "extra": []
-  },
-  {
-    "items": [
-      "矢量瞄准镜",
-      "地狱弹弓"
-    ],
-    "effect": "攻击范围 +105, 命中+20",
-    "extra": []
-  },
-  {
-    "items": [
-      "矢量瞄准镜",
-      "麻痹弹弓"
-    ],
-    "effect": "攻击范围 +105, 命中+20",
-    "extra": []
-  },
-  {
-    "items": [
-      "矢量瞄准镜",
-      "嗜血弹弓"
-    ],
-    "effect": "攻击范围 +105, 命中+20, hit: 1-1-3",
-    "extra": []
-  },
-  {
-    "items": [
-      "矢量瞄准镜",
-      "埋骨弹弓"
-    ],
-    "effect": "攻击力 +60, 命中 +30",
-    "extra": []
-  },
-  {
-    "items": [
-      "混沌引擎",
-      "凡尘毁灭"
-    ],
-    "effect": "10目标, 增加攻击范围和角度, 攻击+250, 死咒球自动追踪",
-    "extra": []
-  },
-  {
-    "items": [
-      "混沌引擎",
-      "噬星者"
-    ],
-    "effect": "4目标, 攻击范围扩大, 攻击hit数: 2-2-3, 命中+30, 原创攻击动作",
-    "extra": []
-  },
-  {
-    "items": [
-      "混沌引擎",
-      "恶镰死神的镰刀"
-    ],
-    "effect": "Hits数: 2-2-3(N) 2-2-2(H/EX), 攻击速度 +15%, 攻击范围扩大, 6目标, 原创攻击动作",
-    "extra": []
-  },
-  {
-    "items": [
-      "混沌引擎",
-      "Ｍ＆Ａ８５　战场之怒"
-    ],
-    "effect": "攻击力+150, 子弹穿透, 攻击范围增大",
-    "extra": []
-  },
-  {
-    "items": [
-      "烈焰引擎",
-      "火龙大剑"
-    ],
-    "effect": "Hits: 1-1-4, 原创攻击动作",
-    "extra": []
-  },
-  {
-    "items": [
-      "烈焰引擎",
-      "赤羽火刑杖"
-    ],
-    "effect": "EX Hits: 1-2-3, 精神力+100",
-    "extra": []
-  },
-  {
-    "items": [
-      "烈焰引擎",
-      "终极爆弹枪"
-    ],
-    "effect": "攻击力 +100, 攻击范围增大, Hits 4-4-4, 可正面命中EP4蜥蜴",
-    "extra": []
-  },
-  {
-    "items": [
-      "禁忌魔导书",
-      "加尔之风"
-    ],
-    "effect": "攻击力+350, 命中+30, Hits (N/H)3-3-3, (EX)3-3-4",
-    "extra": []
-  },
-  {
-    "items": [
-      "禁忌魔导书",
-      "神之吐息"
-    ],
-    "effect": "EX伤害和范围提升, Hits: 3-3-3",
-    "extra": []
-  },
-  {
-    "items": [
-      "禁忌魔导书",
-      "魔法预言书"
-    ],
-    "effect": "EX: Lv26极冰术, Hits: 1-2-3",
-    "extra": []
-  },
-  {
-    "items": [
-      "神圣力场",
-      "天堂冲击"
-    ],
-    "effect": "濒死时 Hits 3-3-3",
-    "extra": []
-  },
-  {
-    "items": [
-      "神圣力场",
-      "神圣双刃"
-    ],
-    "effect": "攻速+50%, 5目标, 攻击范围增大",
-    "extra": []
-  },
-  {
-    "items": [
-      "忍者服",
-      "飞镖"
-    ],
-    "effect": "攻击力+50 命中+20, hits 2-2-4, 投刃攻击动作",
-    "extra": []
-  },
-  {
-    "items": [
-      "忍者服",
-      "手里剑"
-    ],
-    "effect": "5目标, Hits 2-2-2, 攻击力+100, 攻击范围扩大",
-    "extra": []
-  },
-  {
-    "items": [
-      "耦合中枢",
-      "圣剑「终极·迦农」"
-    ],
-    "effect": "命中+20, 攻击范围扩大, 正面打EP4蜥蜴, 攻速 +15% ",
-    "extra": [
-      "圣剑「拉维斯·迦农」"
-    ]
-  },
-  {
-    "items": [
-      "耦合中枢",
-      "双鸟"
-    ],
-    "effect": "Hits 4-4-4, 攻击范围增大",
-    "extra": [
-      "黑鸟",
-      "白鸟"
-    ]
-  },
-  {
-    "items": [
-      "耦合中枢",
-      "天国呼啸"
-    ],
-    "effect": "hit (天罚EX)3-3-3 (非天罚EX)4-4-4, 所有攻击自动瞄准, 攻击力和精神力+100, 攻击范围扩大",
-    "extra": [
-      "圣枪「天罚」",
-      "圣枪「神罚」"
-    ]
-  },
-  {
-    "items": [
-      "耦合中枢",
-      "伽尔德·米拉"
-    ],
-    "effect": "攻击力 +400, 自动瞄准 Hits: (EX)5-5-5, 攻击范围增大",
-    "extra": [
-      "小枪「伽尔德」",
-      "小枪「米拉」"
-    ]
-  },
-  {
-    "items": [
-      "耦合中枢",
-      "双里卡之爪"
-    ],
-    "effect": "5目标, 匕首攻击动作, 攻击范围扩大",
-    "extra": []
-  },
-  {
-    "items": [
-      "耦合中枢",
-      "天国恋歌"
-    ],
-    "effect": "攻击范围和命中大幅提升",
-    "extra": [
-      "倾心爱意",
-      "情热香氛"
-    ]
-  },
-  {
-    "items": [
-      "浅黄丝威褄取铠",
-      "罪切"
-    ],
-    "effect": "攻击 +50, 攻击范围增大, 攻速+15%",
-    "extra": [
-      "封印野太刀"
-    ]
-  },
-  {
-    "items": [
-      "浅黄丝威褄取铠",
-      "大蛇腭"
-    ],
-    "effect": "攻击 +50, 命中 +20, 3目标, hits: 2-2-2, 攻击范围增大, 攻速+15%",
-    "extra": []
-  },
-  {
-    "items": [
-      "最后的统治者",
-      "光辉手镯"
-    ],
-    "effect": "EX攻击hit数: 3-3-3",
-    "extra": []
-  },
-  {
-    "items": [
-      "石中剑",
-      "特拉西斯"
-    ],
-    "effect": "攻击范围扩大, 双剑攻击动作",
-    "extra": [
-      "龙鳞"
-    ]
-  },
-  {
-    "items": [
-      "舞拉拉压力波动枪",
-      "莫罗"
-    ],
-    "effect": "Hits: 3-3-3",
-    "extra": [
-      "莫罗"
-    ]
-  },
-  {
-    "items": [
-      "食魂者",
-      "模范铠甲"
-    ],
-    "effect": "攻击力+100, hits (N/H)1-2-5, (EX)1-1-3, 原创攻击动作, 可正面伤害EP4蜥蜴",
-    "extra": []
-  },
-  {
-    "items": [
-      "暗黑使者杖",
-      "寄生防具「掠夺者」"
-    ],
-    "effect": "濒死时EX攻击4倍",
-    "extra": [
-      "侵蚀遗传因子「弗罗文」"
-    ]
-  },
-  {
-    "items": [
-      "八坂琼勾玉",
-      "草薙"
-    ],
-    "effect": "命中 +30",
-    "extra": []
-  },
-  {
-    "items": [
-      "矩阵瞄准镜",
-      "末日弩"
-    ],
-    "effect": "攻击力+100，3-3-3hit，增强EX",
-    "extra": []
-  },
-  {
-    "items": [
-      "矩阵瞄准镜",
-      "冰雪女皇"
-    ],
-    "effect": "攻击力+150，命中+30，单发三连射",
-    "extra": [
-      "冷射枪"
-    ]
-  },
-  {
-    "items": [
-      "矩阵瞄准镜",
-      "强化雷光炮"
-    ],
-    "effect": "4-4-4hit，精神力+150，攻击范围扩大",
-    "extra": []
-  },
-  {
-    "items": [
-      "终极爆弹枪"
-    ],
-    "effect": "RA可装备, 濒死时 EX:炎狱爆炸三次(范围攻击)",
-    "extra": [
-      "爆蛋枪的零件",
-      "蛋头博士的B计划"
-    ]
-  },
-  {
-    "items": [
-      "暗黑弗罗文大剑"
-    ],
-    "effect": "",
-    "extra": []
-  },
-  {
-    "items": [
-      "暗黑弗罗文大剑"
-    ],
-    "effect": "可三连, 濒死EX剑气与近战斩击叠加伤害",
-    "extra": [
-      "侵蚀遗传因子「弗罗文」"
-    ]
-  },
-  {
-    "items": [
-      "暗黑陨石枪"
-    ],
-    "effect": "常时EX hit:1-1-3 濒死时EX hit:1-1-5",
-    "extra": [
-      "侵蚀遗传因子「弗罗文」"
-    ]
-  },
-  {
-    "items": [
-      "暗黑使者杖"
-    ],
-    "effect": "高级法术和圣光术 威力提升50% EX:圣光术",
-    "extra": [
-      "侵蚀遗传因子「弗罗文」"
-    ]
-  },
-  {
-    "items": [
-      "罪切"
-    ],
-    "effect": "5目标, hits (N/H)3-3-3 (EX)5-1-1, 原创攻击动作",
-    "extra": [
-      "封印野太刀"
-    ]
-  },
-  {
-    "items": [
-      "天国恋歌"
-    ],
-    "effect": "全职业可装备, 降攻降防术 +100%, EX:恶魔 由FO装备时,降攻术、降防术可同时释放",
-    "extra": [
-      "倾心爱意",
-      "情热香氛"
-    ]
-  },
-  {
-    "items": [
-      "圣剑「终极·迦农」"
-    ],
-    "effect": "EX:超级能量波, 三连后达到濒死状态",
-    "extra": [
-      "圣剑「拉维斯·迦农」"
-    ]
-  },
-  {
-    "items": [
-      "天堂共鸣"
-    ],
-    "effect": "火墙术 +50%, 冰箭术 +90%, 群雷术 +50%",
-    "extra": [
-      "厄普西隆的装甲"
-    ]
-  }
+﻿[
+    {
+        "items": [
+            "YUNCHANG",
+            "Asteroid Engine"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "ATP": "+150",
+            "attack_range": "increased",
+            "attack_speed": "+15%",
+            "attack_action": true,
+            "notes": "命中提升20, 攻击提升150, 攻击范围扩大, 攻击速度+15%, 攻击动作变为双头剑"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Asteroid Engine",
+            "SLICER OF FANATIC"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "targets": 6,
+            "attack_range": "increased",
+            "attack_speed": "+15%",
+            "notes": "命中+20, 6目标, 攻击范围增大, 攻速+15%"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Asteroid Engine",
+            "CANNON ROUGE"
+        ],
+        "effect": {
+            "ATP": "+150",
+            "notes": "攻击力+150, 单发 5 hit"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "RASTER SCOPE",
+            "YASMINKOV 9000M"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "ATP": "+50",
+            "attack_range": "+40",
+            "notes": "攻击范围 +40, 攻击力+50, 命中+20"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "RASTER SCOPE",
+            "YASMINKOV 2000H"
+        ],
+        "effect": {
+            "attack_range": "-70.0",
+            "hits": "3-3-3",
+            "notes": "攻击范围 -70.0, 三连hit数: 3-3-3"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "RASTER SCOPE",
+            "YASMINKOV 3000R"
+        ],
+        "effect": {
+            "hits": "N/H : 3-3-3",
+            "notes": "Hits N/H : 3-3-3, EX:1-1-3, EX范围 -75, 攻击角度 +35"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "RASTER SCOPE",
+            "YASMINKOV 7000V"
+        ],
+        "effect": {
+            "ATP": "+300",
+            "attack_range": "+55",
+            "notes": "攻击力+300, 攻击范围 +55"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "VECTOR SCOPE",
+            "BERSERK NEEDLE"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "attack_range": "+105"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "VECTOR SCOPE",
+            "HELL NEEDLE"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "attack_range": "+105"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "VECTOR SCOPE",
+            "ARREST NEEDLE"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "attack_range": "+105"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "VECTOR SCOPE",
+            "GUSH NEEDLE"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "attack_range": "+105",
+            "hits": "1-1-3"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "VECTOR SCOPE",
+            "GRAVE DIGGER"
+        ],
+        "effect": {
+            "ATA": "+30",
+            "ATP": "+60"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Chaos Engine",
+            "MORTAL RUIN"
+        ],
+        "effect": {
+            "ATP": "+250",
+            "targets": 10,
+            "notes": "10目标, 增加攻击范围和角度, 攻击+250, 死咒球自动追踪"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Chaos Engine",
+            "PLANET EATER"
+        ],
+        "effect": {
+            "ATA": "+30",
+            "targets": 4,
+            "attack_range": "increased",
+            "hits": "2-2-3",
+            "attack_action": true,
+            "notes": "4目标, 攻击范围扩大, 攻击hit数: 2-2-3, 命中+30, 原创攻击动作"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Chaos Engine",
+            "ILL GILL REAPER"
+        ],
+        "effect": {
+            "targets": 6,
+            "attack_range": "increased",
+            "attack_speed": "+15%",
+            "hits": "2-2-3(N) 2-2-2(H/EX)",
+            "attack_action": true,
+            "notes": "Hits数: 2-2-3(N) 2-2-2(H/EX), 攻击速度 +15%, 攻击范围扩大, 6目标, 原创攻击动作"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Chaos Engine",
+            "M\u0026A85 FURY"
+        ],
+        "effect": {
+            "ATP": "+150",
+            "attack_range": "increased",
+            "piercing": true,
+            "notes": "攻击力+150, 子弹穿透, 攻击范围增大"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Ignis Engine",
+            "RATHALOS GREATSWORD"
+        ],
+        "effect": {
+            "hits": "1-1-4",
+            "attack_action": true,
+            "notes": "Hits: 1-1-4, 原创攻击动作"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Ignis Engine",
+            "ZU\u0027S PUNISHMENT"
+        ],
+        "effect": {
+            "MST": "+100",
+            "hits": "1-2-3",
+            "notes": "EX Hits: 1-2-3, 精神力+100"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Ignis Engine",
+            "FINAL EGG BLASTER"
+        ],
+        "effect": {
+            "ATP": "+100",
+            "attack_range": "increased",
+            "hits": "4-4-4",
+            "notes": "攻击力 +100, 攻击范围增大, Hits 4-4-4, 可正面命中EP4蜥蜴"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "FORBIDDEN GRIMOIRE",
+            "GAL WIND"
+        ],
+        "effect": {
+            "ATA": "+30",
+            "ATP": "+350",
+            "hits": "(N/H)3-3-3",
+            "notes": "攻击力+350, 命中+30, Hits (N/H)3-3-3, (EX)3-3-4"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "FORBIDDEN GRIMOIRE",
+            "THE SIGH OF A GOD"
+        ],
+        "effect": {
+            "hits": "3-3-3",
+            "notes": "EX伤害和范围提升, Hits: 3-3-3"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "FORBIDDEN GRIMOIRE",
+            "PROPHETS OF MOTAV"
+        ],
+        "effect": {
+            "hits": "1-2-3",
+            "notes": "EX: Lv26极冰术, Hits: 1-2-3"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "DIVINE FIELD",
+            "HEAVEN STRIKER"
+        ],
+        "effect": {
+            "hits": "3-3-3",
+            "notes": "濒死时 Hits 3-3-3"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "DIVINE FIELD",
+            "DIVINE BLADE"
+        ],
+        "effect": {
+            "targets": 5,
+            "attack_range": "increased",
+            "attack_speed": "+50%",
+            "notes": "攻速+50%, 5目标, 攻击范围增大"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "NINJA SUIT",
+            "KUNAI"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "ATP": "+50",
+            "hits": "2-2-4",
+            "attack_action": true,
+            "notes": "攻击力+50 命中+20, hits 2-2-4, 投刃攻击动作"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "NINJA SUIT",
+            "FLIGHT CUTTER"
+        ],
+        "effect": {
+            "ATP": "+100",
+            "targets": 5,
+            "attack_range": "increased",
+            "hits": "2-2-2",
+            "notes": "5目标, Hits 2-2-2, 攻击力+100, 攻击范围扩大"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Jointparts",
+            "ULTIMATE DOUBLE CANNON"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "attack_range": "increased",
+            "attack_speed": "+15%",
+            "notes": "命中+20, 攻击范围扩大, 正面打EP4蜥蜴, 攻速 +15% "
+        },
+        "extra": [
+            "LAVIS CANNON"
+        ]
+    },
+    {
+        "items": [
+            "Jointparts",
+            "DUAL BIRD"
+        ],
+        "effect": {
+            "attack_range": "increased",
+            "hits": "4-4-4",
+            "notes": "Hits 4-4-4, 攻击范围增大"
+        },
+        "extra": [
+            "MASTER RAVEN",
+            "LAST SWAN"
+        ]
+    },
+    {
+        "items": [
+            "Jointparts",
+            "MILLE MARTEAUX"
+        ],
+        "effect": {
+            "MST": "+100",
+            "attack_range": "increased",
+            "hits": "(HEAVEN_PUNISHER_EX)3-3-3 (NON_HEAVEN_PUNISHER_EX)4-4-4",
+            "auto_target": true,
+            "notes": "hit (天罚EX)3-3-3 (非天罚EX)4-4-4, 所有攻击自动瞄准, 攻击力和精神力+100, 攻击范围扩大"
+        },
+        "extra": [
+            "HEAVEN PUNISHER",
+            "OPHELIE SEIZE"
+        ]
+    },
+    {
+        "items": [
+            "Jointparts",
+            "GULD MILLA"
+        ],
+        "effect": {
+            "ATP": "+400",
+            "attack_range": "increased",
+            "hits": "(EX)5-5-5",
+            "auto_target": true,
+            "notes": "攻击力 +400, 自动瞄准 Hits: (EX)5-5-5, 攻击范围增大"
+        },
+        "extra": [
+            "HANDGUN:GULD",
+            "HANDGUN:MILLA"
+        ]
+    },
+    {
+        "items": [
+            "Jointparts",
+            "TWIN RIKA\u0027S CLAW"
+        ],
+        "effect": {
+            "targets": 5,
+            "attack_range": "increased",
+            "attack_action": true,
+            "notes": "5目标, 匕首攻击动作, 攻击范围扩大"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "Jointparts",
+            "CELESTIAL FUSION"
+        ],
+        "effect": {
+            "notes": "攻击范围和命中大幅提升"
+        },
+        "extra": [
+            "TASTE OF AFFECTION",
+            "PASSION HAZE"
+        ]
+    },
+    {
+        "items": [
+            "SAMURAI ARMOR",
+            "TSUMIKIRI J-SWORD"
+        ],
+        "effect": {
+            "ATP": "+50",
+            "attack_range": "increased",
+            "attack_speed": "+15%",
+            "notes": "攻击 +50, 攻击范围增大, 攻速+15%"
+        },
+        "extra": [
+            "SEALED J-SWORD"
+        ]
+    },
+    {
+        "items": [
+            "SAMURAI ARMOR",
+            "OROTIAGITO"
+        ],
+        "effect": {
+            "ATA": "+20",
+            "ATP": "+50",
+            "targets": 3,
+            "attack_range": "increased",
+            "attack_speed": "+15%",
+            "hits": "2-2-2",
+            "notes": "攻击 +50, 命中 +20, 3目标, hits: 2-2-2, 攻击范围增大, 攻速+15%"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "LAST EMPEROR",
+            "RADIANT RING"
+        ],
+        "effect": {
+            "hits": "3-3-3",
+            "notes": "EX攻击hit数: 3-3-3"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "EXCALIBUR",
+            "Tellusis"
+        ],
+        "effect": {
+            "attack_range": "increased",
+            "attack_action": true,
+            "notes": "攻击范围扩大, 双剑攻击动作"
+        },
+        "extra": [
+            "Dragon Scale"
+        ]
+    },
+    {
+        "items": [
+            "TENSION BLASTER",
+            "Moro"
+        ],
+        "effect": {
+            "hits": "3-3-3"
+        },
+        "extra": [
+            "Moro"
+        ]
+    },
+    {
+        "items": [
+            "SOUL DEVOURER",
+            "PARAGON FRAME"
+        ],
+        "effect": {
+            "ATP": "+100",
+            "hits": "(N/H)1-2-5",
+            "attack_action": true,
+            "notes": "攻击力+100, hits (N/H)1-2-5, (EX)1-1-3, 原创攻击动作, 可正面伤害EP4蜥蜴"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "DARK BRIDGE",
+            "Parasitic Armor \u0027Predator\u0027"
+        ],
+        "effect": {
+            "notes": "濒死时EX攻击4倍"
+        },
+        "extra": [
+            "Parasitic gene \"Flow\""
+        ]
+    },
+    {
+        "items": [
+            "YASAKANI MAGATAMA",
+            "KUSANAGI"
+        ],
+        "effect": {
+            "ATA": "+30"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "MATRIX SCOPE",
+            "APOCALYPSE BOWGUN"
+        ],
+        "effect": {
+            "ATP": "+100",
+            "notes": "攻击力+100，3-3-3hit，增强EX"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "MATRIX SCOPE",
+            "SNOW QUEEN"
+        ],
+        "effect": {
+            "ATA": "+30",
+            "ATP": "+150",
+            "notes": "攻击力+150，命中+30，单发三连射"
+        },
+        "extra": [
+            "FROZEN SHOOTER"
+        ]
+    },
+    {
+        "items": [
+            "MATRIX SCOPE",
+            "POWER MASER"
+        ],
+        "effect": {
+            "MST": "+150",
+            "attack_range": "increased",
+            "notes": "4-4-4hit，精神力+150，攻击范围扩大"
+        },
+        "extra": []
+    },
+    {
+        "items": [
+            "FINAL EGG BLASTER"
+        ],
+        "effect": {
+            "notes": "RA可装备, 濒死时 EX:炎狱爆炸三次(范围攻击)"
+        },
+        "extra": [
+            "Parts of EGG BLASTER",
+            "Dr. Robotnik\u0027s Plan B"
+        ]
+    },
+    {
+        "items": [
+            "DARK FLOW"
+        ],
+        "effect": {
+            "notes": "可三连, 濒死EX剑气与近战斩击叠加伤害"
+        },
+        "extra": [
+            "Parasitic gene \"Flow\""
+        ]
+    },
+    {
+        "items": [
+            "DARK METEOR"
+        ],
+        "effect": {
+            "hits": "1-1-3; LOW_HP_EX:1-1-5",
+            "notes": "常时EX hit:1-1-3 濒死时EX hit:1-1-5"
+        },
+        "extra": [
+            "Parasitic gene \"Flow\""
+        ]
+    },
+    {
+        "items": [
+            "DARK BRIDGE"
+        ],
+        "effect": {
+            "notes": "高级法术和圣光术 威力提升50% EX:圣光术"
+        },
+        "extra": [
+            "Parasitic gene \"Flow\""
+        ]
+    },
+    {
+        "items": [
+            "TSUMIKIRI J-SWORD"
+        ],
+        "effect": {
+            "targets": 5,
+            "hits": "(N/H)3-3-3 (EX)5-1-1",
+            "attack_action": true,
+            "notes": "5目标, hits (N/H)3-3-3 (EX)5-1-1, 原创攻击动作"
+        },
+        "extra": [
+            "SEALED J-SWORD"
+        ]
+    },
+    {
+        "items": [
+            "CELESTIAL FUSION"
+        ],
+        "effect": {
+            "notes": "全职业可装备, 降攻降防术 +100%, EX:恶魔 由FO装备时,降攻术、降防术可同时释放"
+        },
+        "extra": [
+            "TASTE OF AFFECTION",
+            "PASSION HAZE"
+        ]
+    },
+    {
+        "items": [
+            "ULTIMATE DOUBLE CANNON"
+        ],
+        "effect": {
+            "notes": "EX:超级能量波, 三连后达到濒死状态"
+        },
+        "extra": [
+            "LAVIS CANNON"
+        ]
+    },
+    {
+        "items": [
+            "HEAVENLY RESONANCE"
+        ],
+        "effect": {
+            "notes": "火墙术 +50%, 冰箭术 +90%, 群雷术 +50%"
+        },
+        "extra": [
+            "Cladding of Epsilon"
+        ]
+    }
 ]

@@ -1,13 +1,12 @@
 {
-  "event": "常用命令和规则",
+  "event": "Commands and Rules",
   "eventDescription": [
-    "【/bank = 仓库切换】",
-    "【/lobby = 做任务时快速回大厅】",
-    "【/sectionid 0-9 = 改角色ID, 0-9对应掉落表中的ID】",
-    "【/daily =查看每日任务】",
-    "★ D服不允许任何插件读取内存，只允许使用 D服专用地板读取器。（防止作弊）",
-    "★ 使用/daily命令查看每日任务，刷每日任务可概率得一个箱子（早8点刷新），难度越高，箱子越好，每IP最多可获取2个箱子",
-    "★ 游戏允许多开，仅限于账号之间道具转移（账号数量无限制），同IP不允许多开同时刷图。（可能会封号）",
-    "★ D服角色能力上限较高，不兼容其他服的配点方案。（200级推荐配点请看攻略）"
+    "[/bank = switch warehouse]",
+    "[/lobby = quickly return to the lobby during a quest]",
+    "[/daily = view daily quests]",
+    "★ D Server does not allow any plugin to read memory. Only the D Server floor reader may be used. (Anti-cheat policy)",
+    "★ Use /daily to view daily quests. Completing them may reward a crate (refreshes at 08:00). Higher difficulty gives better crates. Each IP can obtain at most 2 crates.",
+    "★ Multiple clients are allowed only to transfer items between accounts (no account limit). Do not run multiple clients from the same IP while farming. (May result in a ban.)",
+    "★ D Server has high character-stat caps and is incompatible with builds from other servers. (See the guide for recommended level-200 builds.)"
   ]
 }

@@ -4,9 +4,9 @@
     "location": "Trade NPC",
     "materials": [
       "ASTRAL WINGS：Astral Essence x1",
-      "Bat Wings x3",
+      "BAT WING x3",
       "Magic Rock \"Heart Key\" x1",
-      "Magic Stone 'Iritista' x2",
+      "Magic Stone \"Iritista\" x2",
       "Gratia x1"
     ]
   },
@@ -15,7 +15,7 @@
   "location": "Trade NPC",
   "materials": [
     "ASTRAL WINGS",
-    "Orb of Illusion"
+    "Orb of Illusions"
   ]
   },
   {
@@ -39,7 +39,7 @@
       "Millennium Photon Core x20",
       "V802 x2",
       "V503 x1",
-      "Magic Stone 'Iritista' x2",
+      "Magic Stone \"Iritista\" x2",
       "D-Photon Core x1",
       "Book of Hitogata x1"
     ]
@@ -54,7 +54,7 @@
       "DF Field x1",
       "Genesis Armor x2",
       "Luminous Field x1",
-      "Virus Armor: Lafuteria x1"
+      "VIRUS ARMOR:Lafuteria x1"
     ]
   },
   {
@@ -113,9 +113,9 @@
   },
   {
     "title": "DIVINE FIELD",
-    "location": "Administrator / Millennium 相关兑换",
+    "location": "Administrator / Millennium ",
     "materials": [
-      "Cladding of Administrator x2",
+      "Core of Administrator x2",
       "Millennium Photon Core x15",
       "Proof of Sonic Team x2",
       "Primal Nexus x1",
@@ -140,11 +140,11 @@
   },
   {
     "title": "MATRIX SCOPE",
-    "location": "Millennium Shop / 新增兑换",
+    "location": "Millennium Shop ",
     "materials": [
       "Infernal Stone x1",
       "Fragments of Orb [Red] x2",
-      "Fragments [Blue] x2",
+      "Fragments of Orb [Blue]x2",
       "Reflex Gear x2",
       "Ethereal Armor x1",
       "Shadow Cloak x1",
@@ -158,12 +158,12 @@
     "title": "Forbidden Grimoire",
     "location": "Hallowed World [Master] / Paganini",
     "materials": [
-      "Hallowed Jack-O-Lantern x1",
+      "Hallowed Jack-O\u0027-Lantern x1",
       "Millennium Photon Core x10",
       "Cladding of Epsilon x1",
       "Proof of Sonic Team x1",
       "Sorcerer's Right Arm x1",
-      "Magic Stone 'Iritista' x2",
+      "Magic Stone \"Iritista\" x2",
       "Book of Hitogata x1"
     ]
   },
@@ -176,8 +176,8 @@
     ]
   },
   {
-    "title": "Flower Bouquet 商店",
-    "location": "活动商店",
+    "title": "Flower Bouquet shop",
+    "location": "Trade NPC",
     "materials": [
       "Wings of Life：150 Flower Bouquet",
       "Weapons Crystal Badge x5",
@@ -185,12 +185,12 @@
     ]
   },
   {
-    "title": "Easter Egg 商店",
-    "location": "活动商店",
+    "title": "Easter Egg shop",
+    "location": "Trade NPC",
     "materials": [
-      "D-VIRUS ARMOR：30 Eggs",
-      "D-VIRUS LAUNCHER（全 0%）：30 Eggs",
-      "BERSERK NEEDLE（全 0%）：60 Eggs"
+      "D-VIRUS ARMOR：30 Easter Egg",
+      "D-VIRUS LAUNCHER（0/0/0/0|0）：30 Easter Egg",
+      "BERSERK NEEDLE（0/0/0/0|0）：60 Easter Egg"
     ]
   }
 ]

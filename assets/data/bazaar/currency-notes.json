@@ -1,32 +1,24 @@
 [
   {
-    "title": "Weapons Crystal Badge 获取方式一览",
+    "title": "Weapons Crystal Badge 获取途径",
     "lines": [
       "Harmony of Despair I",
       "Walking through Flames",
-      "VR Test Destiny: Underground：击败隐藏 BOSS 后获得",
-      "VR Test FINAL: Catastrophe：通关奖励",
-      "VR Test Destiny: Sandstorm：通关奖励",
-      "也可能从各种箱子中获得"
+      "VR Test Destiny: Underground",
+      "VR Test FINAL: Catastrophe",
+      "VR Test Destiny: Sandstorm",
+      "Crates"
     ]
   },
   {
-    "title": "Weapons Crystal Badge 作为门票才能进入的任务",
-    "lines": [
-      "Harmony of Despair II [EP1]",
-      "Tragedy in Chaos [EP1]",
-      "VR Test Destiny: Meteor Impact"
-    ]
+    "title": "Weapons Crystal Badge 消耗任务 ",
+    "lines": ["Harmony of Despair II [EP1]", "Tragedy in Chaos [EP1]", "VR Test Destiny: Meteor Impact"]
   },
   {
     "title": "稀有兑换货币",
     "lines": [
-      "Darkness Photon Sphere",
-      "Millennium Photon Core",
-      "Primal Photon Sphere",
-      "Cladding of Manipulator III",
-      "Core of Administrator",
-      "Hallowed Jack-O-Lantern",
+      "Darkness Photon Sphere",      "Millennium Photon Core",      "Primal Photon Sphere",
+      "Cladding of Manipulator III", "Core of Administrator",       "Hallowed Jack-O\u0027-Lantern",
       "Infernal Stone"
     ]
   },

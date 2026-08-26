@@ -1,18 +1,77 @@
 let data;
-let currentDifficulty = "极限";
+let currentDifficulty = "Ultimate";
 let currentEpisode = "EP1";
 let sectionIds = [];
 
+// 掉落表专用：用于展示各颜色 ID 的编号，不影响其他页面。
 const SECTION_INDEX = {
-    Viridia:0, Greenill:1, Skyly:2, Bluefull:3,
-    Purplenum:4, Pinkal:5, Redria:6, Oran:7,
-    Yellowboze:8, Whitill:9
+    Viridia: 0, Greenill: 1, Skyly: 2, Bluefull: 3,
+    Purplenum: 4, Pinkal: 5, Redria: 6, Oran: 7,
+    Yellowboze: 8, Whitill: 9
 };
 
 const bonusIndex = {};
 const recipeIndex = {};
+let episodeObserver;
 
-async function loadData(){
+function difficultyLabel(difficulty) {
+    return window.WIKI_I18N.text(`difficulty.${difficulty}`, difficulty);
+}
+
+function itemLabel(itemId) {
+    return window.WIKI_I18N.getItem(itemId).name || itemId;
+}
+
+function escapeHtml(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+function itemSearchText(itemId) {
+    const item = data?.items?.[itemId];
+    if (!item) return String(itemId || "").toLowerCase();
+    const text = window.WIKI_I18N.getItem(itemId);
+    return [itemId, text.name, text.description, text.quest]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+}
+
+function effectLabel(key) {
+    return window.WIKI_I18N.text(`effect.${key}`, key);
+}
+
+function effectValue(value) {
+    if (window.WIKI_I18N.language !== "en") {
+        return String(value).replace(/increased/g, "增大");
+    }
+    return String(value)
+        .replace(/扩大|增大/g, "increased")
+        .replace(/数：?/g, "")
+        .replace(/HEAVEN_PUNISHER_EX/g, "Heaven Punisher EX")
+        .replace(/NON_HEAVEN_PUNISHER_EX/g, "non-Heaven Punisher EX")
+        .replace(/LOW_HP_EX/g, "low HP EX")
+        .trim();
+}
+
+function effectText(effect) {
+    if (!effect) return "";
+    return effect.notes;
+    // if (typeof effect === "string") return effect;
+    // return Object.entries(effect).map(([key, value]) => {
+    //     if (key === "notes" && window.WIKI_I18N.language === "en") return "";
+    //     if (value === true) return effectLabel(key);
+    //     if (value === false || value == null || value === "") return "";
+    //     return `${effectLabel(key)}: ${effectValue(value)}`;
+    // }).filter(Boolean).join(", ");
+}
+
+async function loadData() {
+    await window.WIKI_I18N.ready;
     const names = ['activities', 'section-ids', 'bonuses', 'recipes', 'tables'];
     const paths = names.map(name => 'assets/data/drop-table/' + name + '.json');
     const [activitiesData, sectionIdsData, bonus, recipe, tables, items] = await Promise.all([
@@ -20,15 +79,18 @@ async function loadData(){
         fetch('assets/data/items.json').then(res => res.json())
     ]);
     data = { activities: activitiesData, sectionIds: sectionIdsData, bonus, recipe, tables, items };
+    window.WIKI_I18N.setItems(items);
     sectionIds = sectionIdsData || [];
     window.WIKI_ITEMS = items;
 
     //更新活动
     const activities = data.activities;
-    document.getElementById("event-title").innerText = activities.event || "无活动";
+    document.getElementById("event-title").innerText = activities.event
+        ? window.WIKI_I18N.getActivity(activities.event)
+        : window.WIKI_I18N.text("noEvent", "无活动");
     document.getElementById("event-desc").innerHTML = (activities.eventDescription || [])
-.map(x => `• ${x}`)
-.join("<br>");
+        .map(x => `• ${window.WIKI_I18N.getActivity(x)}`)
+        .join("<br>");
 
     //搜索框
     const searchInput = document.getElementById("searchInput");
@@ -47,34 +109,32 @@ async function loadData(){
 
     //初始化索引
     (data.bonus || []).forEach(b => {
-        const comboText = b.items.join(" ✦ ");
-
         // 正常 items
         b.items.forEach(item => {
-            if(!bonusIndex[item]) bonusIndex[item] = [];
-            bonusIndex[item].push({ combo: comboText, effect: b.effect });
+            if (!bonusIndex[item]) bonusIndex[item] = [];
+            bonusIndex[item].push({ items: b.items, effect: b.effect });
         });
 
         // extra 指向的物品也显示同一个 bonus
         (b.extra || []).forEach(extraItem => {
-            if(!bonusIndex[extraItem]) bonusIndex[extraItem] = [];
-            bonusIndex[extraItem].push({ combo: comboText, effect: b.effect });
+            if (!bonusIndex[extraItem]) bonusIndex[extraItem] = [];
+            bonusIndex[extraItem].push({ items: b.items, effect: b.effect });
         });
     });
 
     (data.recipe || []).forEach(r => {
-        const formulaText = `${r.result} = ${r.components.join(" + ")}`;
+        const formulaText = `${itemLabel(r.result)} = ${r.components.map(itemLabel).join(" + ")}`;
 
         // result + components
         const relatedItems = [r.result, ...r.components];
 
         // extra 指定的物品也显示这个配方
-        if(r.extra && Array.isArray(r.extra)){
+        if (r.extra && Array.isArray(r.extra)) {
             relatedItems.push(...r.extra);
         }
 
         relatedItems.forEach(item => {
-            if(!recipeIndex[item]) recipeIndex[item] = [];
+            if (!recipeIndex[item]) recipeIndex[item] = [];
             recipeIndex[item].push({
                 result: r.result,
                 components: r.components,
@@ -85,57 +145,57 @@ async function loadData(){
 
     // hash同步
     const hash = location.hash;
-    if(hash){
-window.addEventListener("load", ()=>{
-    // hash 解析
-    const hash = location.hash.replace("#","");
-    if(hash){
-        const parts = hash.split("_");
-        if(parts.length === 2){
-            currentDifficulty = parts[0];
-            currentEpisode = parts[1];
-        }
-         }
+    if (hash) {
+        window.addEventListener("load", () => {
+            // hash 解析
+            const hash = location.hash.replace("#", "");
+            if (hash) {
+                const parts = hash.split("_");
+                if (parts.length === 2) {
+                    currentDifficulty = parts[0];
+                    currentEpisode = parts[1];
+                }
+            }
 
             // 默认按钮高亮
-            document.querySelectorAll(".tab-btn").forEach(btn=>{
-                btn.classList.toggle("active", btn.innerText.trim()===currentDifficulty);
+            document.querySelectorAll(".tab-btn").forEach(btn => {
+                btn.classList.toggle("active", btn.dataset.difficulty === currentDifficulty);
             });
-            document.querySelectorAll(".ep-btn").forEach(btn=>{
-                btn.classList.toggle("active", btn.innerText.trim()===currentEpisode);
+            document.querySelectorAll(".ep-btn").forEach(btn => {
+                btn.classList.toggle("active", btn.innerText.trim() === currentEpisode);
             });
 
             // 滚动到当前章节
             const el = document.getElementById(currentEpisode);
-            if(el) scrollToRow(el);
-            
+            if (el) scrollToRow(el);
+
         });
     }
 
     render();
 }
-function render(){
+function render() {
     const container = document.getElementById("content");
     container.innerHTML = "";
 
     // 更新顶部按钮active
-    document.querySelectorAll(".tab-btn").forEach(btn=>{
-        btn.classList.toggle("active", btn.innerText === currentDifficulty);
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.difficulty === currentDifficulty);
     });
-    document.querySelectorAll(".ep-btn").forEach(btn=>{
+    document.querySelectorAll(".ep-btn").forEach(btn => {
         btn.classList.toggle("active", btn.innerText === currentEpisode);
     });
 
-    ["EP1","EP2","EP4"].forEach(ep=>{
+    ["EP1", "EP2", "EP4"].forEach(ep => {
         const epData = data.tables?.[currentDifficulty]?.[ep];
-        if(!epData) return;
+        if (!epData) return;
 
         const section = document.createElement("div");
         section.className = "table-section";
         section.id = ep;
 
         let html = `
-            <div class="table-title">${currentDifficulty} ${ep}</div>
+            <div class="table-title">${difficultyLabel(currentDifficulty)} ${ep}</div>
             <div class="table-wrapper">
                 <table>
                     <thead>
@@ -143,36 +203,37 @@ function render(){
                             <th>  </th>
         `;
 
-        sectionIds.forEach(id=>{
-            html += `<th class="header-${id.id}">${id.id}</th>`;
+        sectionIds.forEach(id => {
+            html += `<th class="header-${id.id}" data-section="${escapeHtml(id.id)}"><span>${id.id}</span><small class="section-id">ID ${SECTION_INDEX[id.id] ?? id.index ?? sectionIds.indexOf(id)}</small></th>`;
         });
 
         html += `</tr></thead><tbody>`;
 
-        epData.monsters.forEach(monster=>{
+        epData.monsters.forEach(monster => {
             html += `<tr>
                         <td>
-                            <div class="monster-name">${monster.name}</div>
+                            <div class="monster-name">${window.WIKI_I18N.getMonster(monster.name)}</div>
                             <div class="dar">DAR ${monster.dar}</div>
                         </td>
             `;
-            sectionIds.forEach(sectionId=>{
+            sectionIds.forEach(sectionId => {
                 const drop = monster.drops[sectionId.id];
-                if(drop){
-                    const itemInfo = data.items[drop.item];
+                if (drop) {
+                    const itemInfo = data.items[drop.item] || {};
+                    const itemText = window.WIKI_I18N.getItem(drop.item);
                     // console.log('Debug monster:', monster);
                     // console.log('Debug drop:', drop);
                     const rarity = itemInfo.superitem || 0;
-                    const rarityClass=rarity===2? "ultimate-item": rarity===1? "legend-item": "";
+                    const rarityClass = rarity === 2 ? "ultimate-item" : rarity === 1 ? "legend-item" : "";
 
-                html += `
+                    html += `
                 <td class="item-cell col-${sectionId.id}"
-                    data-item="${drop.item}"
-                    data-section="${sectionId.id}"
-                    data-farm="${monster.farm || ''}">
+                    data-item="${escapeHtml(drop.item)}"
+                    data-section="${escapeHtml(sectionId.id)}"
+                    data-farm="${escapeHtml(monster.farm || '')}">
 
                     <span class="item-name ${rarityClass}">
-                        ${drop.item}
+                        ${itemText.name || drop.item}
                     </span>
 
                     <small class="drop-rate">
@@ -180,7 +241,7 @@ function render(){
                     </small>
 
                 </td>`;
-                }else{
+                } else {
                     html += `<td>-</td>`;
                 }
             });
@@ -194,14 +255,36 @@ function render(){
 
     bindTooltips();
     performSearch();
+    observeEpisodes();
     location.hash = currentDifficulty + "_" + currentEpisode;
 }
 
-function jumpTo(ep){
+function setActiveEpisode(episode) {
+    currentEpisode = episode;
+    document.querySelectorAll(".ep-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.innerText.trim() === episode);
+    });
+    history.replaceState(null, "", `#${currentDifficulty}_${episode}`);
+}
+
+function observeEpisodes() {
+    if (episodeObserver) episodeObserver.disconnect();
+    const header = document.querySelector(".control-bar");
+    const topOffset = header ? header.offsetHeight + 12 : 120;
+    episodeObserver = new IntersectionObserver(entries => {
+        const visible = entries
+            .filter(entry => entry.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length) setActiveEpisode(visible[0].target.id);
+    }, { rootMargin: `-${topOffset}px 0px -55% 0px`, threshold: 0 });
+    document.querySelectorAll(".table-section").forEach(section => episodeObserver.observe(section));
+}
+
+function jumpTo(ep) {
     currentEpisode = ep;
 
     const el = document.getElementById(ep);
-    if(el){
+    if (el) {
         // 获取固定导航高度
         const nav = document.querySelector(".control-bar");
         const navHeight = nav ? nav.offsetHeight : 0;
@@ -218,21 +301,21 @@ function jumpTo(ep){
         location.hash = currentDifficulty + "_" + ep;
 
         // 更新按钮高亮
-        document.querySelectorAll(".ep-btn").forEach(btn=>{
+        document.querySelectorAll(".ep-btn").forEach(btn => {
             btn.classList.toggle("active", btn.innerText.trim() === ep);
         });
-        document.querySelectorAll(".tab-btn").forEach(btn=>{
-            btn.classList.toggle("active", btn.innerText.trim() === currentDifficulty);
+        document.querySelectorAll(".tab-btn").forEach(btn => {
+            btn.classList.toggle("active", btn.dataset.difficulty === currentDifficulty);
         });
     }
 }
 
-function switchDifficulty(diff){
+function switchDifficulty(diff) {
     currentDifficulty = diff;
 
     // 更新按钮高亮
-    document.querySelectorAll(".tab-btn").forEach(btn=>{
-        btn.classList.toggle("active", btn.innerText.trim() === diff);
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.difficulty === diff);
     });
 
     // URL hash 保持同步
@@ -240,7 +323,7 @@ function switchDifficulty(diff){
 
     // 如果你想切换难度时自动滚到当前EP
     const el = document.getElementById(currentEpisode);
-    if(el){
+    if (el) {
         scrollToRow(el);
     }
     render()
@@ -259,6 +342,7 @@ function bindTooltips(root = document) {
             const section = cell.dataset.section;
             const sectionNumber = SECTION_INDEX[section];
             const item = data?.items?.[itemName] || window.WIKI_ITEMS?.[itemName];
+            const itemText = window.WIKI_I18N.getItem(itemName);
             const farm = cell.dataset.farm || "";
             if (!item) return;
 
@@ -274,20 +358,19 @@ function bindTooltips(root = document) {
 
                 tooltip.innerHTML = `
                     ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
-                    <div class="tooltip-name ${rarityClass}">${itemName}</div>
-                    ${item.english ? `<div class="tooltip-en">${item.english}</div>` : ""}
-                    <div class="tooltip-id">sectionid ${sectionNumber}</div>
-                    <div class="tooltip-type">类型：${item.type || "-"}</div>
-                    ${item.description ? `<span class="tooltip-desc">${item.description}</span>` : ""}
-                    ${item.quest ? `<span class="tooltip-quest">${item.quest}</span>` : ""}
+                    <div class="tooltip-name ${rarityClass}">${itemText.name || itemName}</div>
+                    ${window.WIKI_I18N.language === "cn" && itemName !== itemText.name ? `<div class="tooltip-en">${itemName}</div>` : ""}
+                    <div class="tooltip-type">${window.WIKI_I18N.text("itemType", "类型")}: ${window.WIKI_I18N.getType(item.type || "-")}</div>
+                    ${itemText.description ? `<span class="tooltip-desc">${itemText.description}</span>` : ""}
+                    ${itemText.quest ? `<span class="tooltip-quest">${itemText.quest}</span>` : ""}
                     ${farm ? `<span class="tooltip-farm">${farm}</span>` : ""}
 
                     ${tooltipBonus.length ? `
                     <div class="tooltip-inline tooltip-bonus-inline">
                         ${tooltipBonus.map(b => `
                             <div class="tooltip-item bonus-item">
-                                <span class="bonus-header">${b.combo} ➜</span>
-                                <span class="bonus-body">${b.effect}</span>
+                                <span class="bonus-header">${b.items.map(itemLabel).join(" ✦ ")} ➜</span>
+                                <span class="bonus-body">${effectText(b.effect)}</span>
                             </div>
                         `).join("")}
                     </div>` : ""}
@@ -296,8 +379,8 @@ function bindTooltips(root = document) {
                     <div class="tooltip-inline tooltip-recipe-inline">
                         ${tooltipRecipe.map(r => `
                             <div class="tooltip-item recipe-item">
-                                <span class="recipe-header">${r.result} ⬅</span>
-                                <span class="recipe-body">${r.components.join('<span class="plus">+</span><wbr>')}</span>
+                                <span class="recipe-header">${itemLabel(r.result)} ⬅</span>
+                                <span class="recipe-body">${r.components.map(itemLabel).join('<span class="plus">+</span><wbr>')}</span>
                             </div>
                         `).join("")}
                     </div>` : ""}
@@ -340,9 +423,18 @@ function bindTooltips(root = document) {
             tooltip.style.top = `${top}px`;
         });
 
+        cell.addEventListener("mouseenter", () => {
+            const section = cell.dataset.section;
+            document.querySelectorAll(`thead th[data-section="${CSS.escape(section)}"]`)
+                .forEach(header => header.classList.add("section-id-highlight"));
+        });
+
         cell.addEventListener("mouseleave", () => {
             tooltip.style.display = "none";
             currentItem = null; // 重置
+            const section = cell.dataset.section;
+            document.querySelectorAll(`thead th[data-section="${CSS.escape(section)}"]`)
+                .forEach(header => header.classList.remove("section-id-highlight"));
         });
 
     });
@@ -350,9 +442,9 @@ function bindTooltips(root = document) {
 
 window.bindItemTooltips = bindTooltips;
 
-function scrollToRow(row){
-    requestAnimationFrame(()=>{
-        requestAnimationFrame(()=>{
+function scrollToRow(row) {
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
             const header =
                 document.querySelector(".control-bar");
             const offset =
@@ -363,118 +455,121 @@ function scrollToRow(row){
                     row.getBoundingClientRect().top +
                     window.scrollY -
                     offset,
-                behavior:"smooth"
+                behavior: "smooth"
             });
         });
     });
 }
 
-function performSearch(){
+function performSearch() {
     const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
-    if(!data) return;
+    if (!data) return;
     let firstMatch = null;
 
-    document.querySelectorAll("tbody tr").forEach(row=>{
+    document.querySelectorAll("tbody tr").forEach(row => {
         row.style.display = "";
-        row.querySelectorAll("td").forEach(td=>td.classList.remove("highlight-item", "highlight-bonus","highlight-recipe"));
-        if(!keyword) return;
+        row.querySelectorAll("td").forEach(td => td.classList.remove("highlight-item", "highlight-bonus", "highlight-recipe"));
+        if (!keyword) return;
 
         let rowMatched = false;
-        row.querySelectorAll("td").forEach(td=>{
-             let matchedType = null;
+        row.querySelectorAll("td").forEach(td => {
+            let matchedType = null;
             const cellText = td.innerText.toLowerCase();
             // if(cellText.includes(keyword)) matched = true;
 
             const itemName = td.dataset.item;
-            if(itemName && data.items[itemName]){
+            if (itemName && data.items[itemName]) {
+                const itemText = window.WIKI_I18N.getItem(itemName);
 
                 const item = data.items[itemName];
                 // 1.名字匹配（最高优先级）
 
-                if(
-                    itemName.toLowerCase().includes(keyword) ||
-                    (item.english||"").toLowerCase().includes(keyword)
-                ){
+                if (itemSearchText(itemName).includes(keyword)) {
                     matchedType = "item";
                 }
 
                 // 2.普通描述
 
-                else if(
-                    (item.type||"").toLowerCase().includes(keyword) ||
-                    (item.description||"").toLowerCase().includes(keyword) ||
-                    (item.quest||"").toLowerCase().includes(keyword)
-                ){
+                else if (window.WIKI_I18N.getType(item.type || "").toLowerCase().includes(keyword)) {
                     matchedType = "item";
                 }
 
                 // 3.套装效果
 
-                    else if(
-                    (bonusIndex[itemName]||[])
-                    .some(b =>
-                        JSON.stringify(b)
-                        .toLowerCase()
-                        .includes(keyword)
+                else if (
+                    (bonusIndex[itemName] || []).some(b =>
+                        b.items.some(item => itemSearchText(item).includes(keyword)) ||
+                        effectText(b.effect).toLowerCase().includes(keyword)
                     )
-                ){
+                ) {
                     matchedType = "bonus";
                 }
 
                 // 4.合成公式
 
-                else if(
-                    (recipeIndex[itemName]||[])
-                    .some(r =>
-                        JSON.stringify(r)
-                        .toLowerCase()
-                        .includes(keyword)
+                else if (
+                    (recipeIndex[itemName] || []).some(r =>
+                        itemSearchText(r.result).includes(keyword) ||
+                        r.components.some(item => itemSearchText(item).includes(keyword))
                     )
-                ){
+                ) {
                     matchedType = "recipe";
                 }
             }
-            if(matchedType==="item"){
+            if (matchedType === "item") {
                 rowMatched = true;
                 td.classList.add("highlight-item");
 
-                if(!firstMatch){
-                    firstMatch=row;
+                if (!firstMatch) {
+                    firstMatch = row;
                 }
             }
 
-            if(matchedType==="bonus"){
+            if (matchedType === "bonus") {
                 rowMatched = true;
                 td.classList.add("highlight-bonus");
             }
 
-            if(matchedType==="recipe"){
+            if (matchedType === "recipe") {
                 rowMatched = true;
                 td.classList.add("highlight-recipe");
             }
         });
-        if(!rowMatched && keyword!=="") row.style.display = "none";
+        if (!rowMatched && keyword !== "") row.style.display = "none";
     });
 
-    document.querySelectorAll(".table-section").forEach(section=>{
-        if(!keyword){ section.style.display=""; return; }
+    document.querySelectorAll(".table-section").forEach(section => {
+        if (!keyword) { section.style.display = ""; return; }
         const visibleRows = section.querySelectorAll('tbody tr:not([style*="display: none"])').length;
-        section.style.display = visibleRows>0 ? "" : "none";
+        section.style.display = visibleRows > 0 ? "" : "none";
     });
 
-    if(firstMatch) scrollToRow(firstMatch);
-    
+    if (firstMatch) scrollToRow(firstMatch);
+
 }
 
-function bindControlButtons(){
-document.querySelectorAll(".tab-btn").forEach(btn=>{
-    btn.onclick = ()=>switchDifficulty(btn.innerText.trim());
-});
-document.querySelectorAll(".ep-btn").forEach(btn=>{
-    btn.onclick = ()=>jumpTo(btn.innerText.trim());
-});
+function bindControlButtons() {
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.onclick = () => switchDifficulty(btn.dataset.difficulty);
+    });
+    document.querySelectorAll(".ep-btn").forEach(btn => {
+        btn.onclick = () => jumpTo(btn.innerText.trim());
+    });
 }
 
 bindControlButtons();
 
 loadData();
+
+window.addEventListener("wiki-language-change", () => {
+    document.getElementById("tooltip").style.display = "none";
+    if (data) {
+        const activities = data.activities;
+        document.getElementById("event-title").innerText = activities.event
+            ? window.WIKI_I18N.getActivity(activities.event)
+            : window.WIKI_I18N.text("noEvent", "");
+        document.getElementById("event-desc").innerHTML = (activities.eventDescription || [])
+            .map(x => `• ${window.WIKI_I18N.getActivity(x)}`).join("<br>");
+        render();
+    }
+});

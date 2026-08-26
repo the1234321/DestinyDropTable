@@ -1,42 +1,12 @@
 [
-  {
-    "id": "Viridia",
-    "color": "#1f8f6a"
-  },
-  {
-    "id": "Greenill",
-    "color": "#009c63"
-  },
-  {
-    "id": "Skyly",
-    "color": "#0084d1"
-  },
-  {
-    "id": "Bluefull",
-    "color": "#0069c9"
-  },
-  {
-    "id": "Purplenum",
-    "color": "#7f1d7a"
-  },
-  {
-    "id": "Pinkal",
-    "color": "#c2185b"
-  },
-  {
-    "id": "Redria",
-    "color": "#a32121"
-  },
-  {
-    "id": "Oran",
-    "color": "#c05a00"
-  },
-  {
-    "id": "Yellowboze",
-    "color": "#9b8700"
-  },
-  {
-    "id": "Whitill",
-    "color": "#4b5563"
-  }
+  {"id": "Viridia",    "color": "#1f8f6a"},
+  {"id": "Greenill",   "color": "#009c63"},
+  {"id": "Skyly",      "color": "#0084d1"},
+  {"id": "Bluefull",   "color": "#0069c9"},
+  {"id": "Purplenum",  "color": "#7f1d7a"},
+  {"id": "Pinkal",     "color": "#c2185b"},
+  {"id": "Redria",     "color": "#a32121"},
+  {"id": "Oran",       "color": "#c05a00"},
+  {"id": "Yellowboze", "color": "#9b8700"},
+  {"id": "Whitill",    "color": "#4b5563"}
 ]

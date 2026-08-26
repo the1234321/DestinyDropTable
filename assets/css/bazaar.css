@@ -202,6 +202,12 @@
   color: var(--bz-cyan);
 }
 
+/* 货币说明采用更清晰的“标题 + 清单”阅读节奏 */
+#bazaar-info #bz-quick .bazaar-card { border-left: 3px solid var(--bz-cyan); }
+#bazaar-info #bz-quick .bazaar-card h4 { color: var(--bz-gold); font-size: 16px; }
+#bazaar-info #bz-quick .bazaar-card li { padding: 4px 0 4px 4px; border-bottom: 1px solid rgba(143,166,196,.12); }
+#bazaar-info #bz-quick .bazaar-card li:last-child { border-bottom: 0; }
+
 /* 游戏内名称：中文优先，英文原名保留；用掉落表同系金色强调 */
 #bazaar-info .bazaar-term {
   display: inline;
@@ -225,6 +231,21 @@
   font-size: .92em;
   font-weight: 600;
 }
+
+/* 怪物不是道具：中文模式展示 cn.json 名称，使用独立的青绿色标识。 */
+#bazaar-info .bazaar-monster {
+  display: inline;
+  margin: 0 2px;
+  padding: 1px 5px;
+  border: 1px solid rgba(111, 217, 242, .32);
+  border-radius: 5px;
+  background: rgba(111, 217, 242, .08);
+  color: #8be7fa;
+  font-weight: 700;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+#bazaar-info .bazaar-monster-en { margin-left: 2px; color: #8fa6c4; font-size: .92em; font-weight: 600; }
 
 /* ---------- 表格 ---------- */
 
@@ -390,6 +411,19 @@
   background: var(--bz-cyan);
   box-shadow: 0 0 8px rgba(111, 217, 242, .85);
 }
+
+#bazaar-info .bazaar-details.is-search-match { border-color: var(--bz-gold); box-shadow: 0 0 0 1px rgba(242,193,78,.18), 0 0 20px rgba(242,193,78,.1); }
+#bazaar-info .quest-search { display: block; width: min(92%, 820px); height: 62px; margin: 0 auto 32px; padding: 0 22px; border: 2px solid rgba(111,217,242,.48); border-radius: 14px; background: rgba(2,8,20,.84); color: var(--bz-ink); font-size: 19px; font-weight: 600; text-align: center; box-shadow: 0 0 24px rgba(111,217,242,.08); }
+#bazaar-info .quest-search:focus { outline: 2px solid rgba(111,217,242,.5); border-color: var(--bz-cyan); }
+#bazaar-info .quest-episode, #bazaar-info .quest-category { margin: 16px 0; border: 1px solid var(--bz-border); border-radius: 12px; overflow: hidden; background: rgba(4,10,24,.42); }
+#bazaar-info .quest-episode > summary, #bazaar-info .quest-category > summary { padding: 13px 16px; cursor: pointer; font-weight: 800; list-style: none; }
+#bazaar-info .quest-episode > summary { padding: 24px 28px; color: #fff5ce; font-size: clamp(32px, 4vw, 44px); line-height: 1; letter-spacing: .1em; background: linear-gradient(90deg, rgba(242,193,78,.34), rgba(22,34,58,.96)); border-left: 7px solid var(--bz-gold); }
+#bazaar-info .quest-category { margin: 16px 24px; border-color: rgba(111,217,242,.52); }
+#bazaar-info .quest-category > summary { padding: 19px 22px; color: var(--bz-cyan); font-size: clamp(21px, 2.5vw, 28px); line-height: 1.15; background: rgba(22,34,58,.78); border-left: 5px solid var(--bz-cyan); }
+#bazaar-info .quest-category .bazaar-details { margin: 12px 18px 16px; }
+#bazaar-info .quest-category .bazaar-details > summary { padding: 16px 20px; font-size: 17px; background: rgba(15,26,48,.8); }
+#bazaar-info details.quest-episode > summary.quest-episode__heading { display: block; min-height: 76px; padding: 24px 28px; font-size: 44px; font-weight: 900; line-height: 1; letter-spacing: .1em; }
+#bazaar-info details.quest-category > summary.quest-category__heading { display: block; min-height: 58px; padding: 18px 22px; font-size: 28px; font-weight: 900; line-height: 1.15; letter-spacing: .04em; }
 
 #bazaar-info .bazaar-meta {
   display: grid;

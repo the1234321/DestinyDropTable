@@ -10,10 +10,13 @@
   top: 0;
   z-index: 3000;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   padding: 12px max(16px, calc((100vw - 1800px) / 2));
-  overflow-x: auto;
+  overflow-x: hidden;
+  padding-right: 150px;
   background: linear-gradient(90deg, rgba(6, 15, 30, .97), rgba(16, 35, 62, .95), rgba(6, 15, 30, .97));
   backdrop-filter: blur(14px);
   border-block: 1px solid var(--site-border);
@@ -28,6 +31,9 @@
   letter-spacing: .04em;
   text-shadow: 0 0 18px rgba(98, 212, 255, .55);
 }
+
+.wiki-site-nav .wiki-brand { margin-right: 12px; }
+.wiki-site-nav [data-view="localization"][hidden] { display: none; }
 
 .wiki-nav-button {
   flex: 0 0 auto;
@@ -54,6 +60,31 @@
   background: rgba(242, 193, 78, .1);
 }
 
+.language-switcher {
+  position: fixed;
+  top: 10px;
+  right: 16px;
+  z-index: 3100;
+  display: inline-flex;
+  border: 1px solid var(--site-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .045);
+}
+
+.language-switcher button {
+  border: 0;
+  padding: 8px 10px;
+  background: transparent;
+  color: #c9d9ec;
+  font: 700 12px/1 "Segoe UI", "Microsoft YaHei", sans-serif;
+  cursor: pointer;
+}
+
+.language-switcher button + button { border-left: 1px solid var(--site-border); }
+.language-switcher button:hover,
+.language-switcher button.is-active { background: rgba(98, 212, 255, .18); color: #fff; }
+
 .command-panel {
   max-width: 980px;
   margin: 46px auto 90px;
@@ -79,12 +110,27 @@
 }
 
 .wiki-panel[hidden] { display: none !important; }
+.dictionary-panel { max-width: 1100px; margin: 42px auto 80px; padding: 34px; border: 1px solid rgba(98,212,255,.28); border-radius: 18px; background: #111c31; }
+.dictionary-panel__intro { margin: 0 0 18px; color: var(--site-accent); font-size: 19px; font-weight: 800; letter-spacing: .08em; text-align: center; }
+.dictionary-search { display: block; width: min(92%, 760px); height: 58px; margin: 0 auto 36px; padding: 0 20px; border: 2px solid rgba(98,212,255,.5); border-radius: 14px; background: #0b1528; color: #fff; font: 700 18px/1 "Segoe UI", "Microsoft YaHei", sans-serif; text-align: center; }
+.dictionary-search:focus { outline: none; border-color: var(--site-accent); box-shadow: 0 0 20px rgba(98,212,255,.2); }
+.dictionary-section { margin-top: 28px; }
+.dictionary-section h2 { color: var(--site-accent); font-size: 24px; }
+.dictionary-table-wrap { overflow: visible; border: 1px solid var(--site-border); border-radius: 10px; }
+.dictionary-table-wrap table { width: 100%; border-collapse: collapse; }
+.dictionary-table-wrap th { background: #1d3453; color: #fff; }
+.dictionary-table-wrap th, .dictionary-table-wrap td { padding: 12px 16px; border-bottom: 1px solid var(--site-border); text-align: left; font-size: 16px; }
+#dictionary-panel table { display: table; width: 100%; min-width: 0; margin: 0; table-layout: auto; }
+#dictionary-panel th, #dictionary-panel td { position: static; min-width: 0; max-width: none; width: auto; background: transparent; color: #d9e7f7; white-space: normal; }
+#dictionary-panel thead th { position: static; background: #1d3453; }
+#dictionary-panel tbody td:first-child, #dictionary-panel thead th:first-child { position: static; box-shadow: none; clip-path: none; }
 .wiki-item-link { cursor: help; text-decoration: underline dotted rgba(111, 217, 242, .7); text-underline-offset: 3px; }
 .wiki-panel .control-bar { top: 54px; }
 
 @media (max-width: 720px) {
-  .wiki-site-nav { justify-content: flex-start; }
+  .wiki-site-nav { justify-content: flex-start; row-gap: 8px; padding-right: 16px; }
   .wiki-brand { font-size: 15px; }
   .wiki-nav-button { padding: 8px 12px; font-size: 13px; }
   .wiki-panel .control-bar { top: 50px; }
+  .language-switcher { top: 8px; right: 8px; }
 }
