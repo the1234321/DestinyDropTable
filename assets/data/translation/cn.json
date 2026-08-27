@@ -11,12 +11,12 @@
         "nav.quests"          : "任务介绍",
         "brand"               : "命运服中文资料站",
         "pageTitle"           : "D服中文资料站",
-        "difficulty"          : "难度",
+        "difficulty"          : "",
         "difficulty.Normal"   : "普通",
         "difficulty.Hard"     : "困难",
         "difficulty.Very Hard": "极难",
         "difficulty.Ultimate" : "极限",
-        "episode"             : "章节",
+        "episode"             : "",
         "search"              : "搜索物品 / 相关物品...",
         "itemType"            : "类型",
         "noEvent"             : "无活动"
@@ -214,7 +214,8 @@
         "Twin Gun"     : "双枪",
         "Twin Sword"   : "双剑",
         "Unit"         : "插件",
-        "Wand"         : "魔杖"
+        "Wand"         : "魔杖",
+        "Customed": "原创"
     },
     "activity": {
         "Commands and Rules": "常用命令和规则",
@@ -237,6 +238,7 @@
         "auto_target"  : "自动瞄准",
         "piercing"     : "子弹穿透",
         "attack_action": "攻击动作",
+        "can_hit_lizards": "无视沙暴蜥蜴护盾",
         "notes"        : "说明"
     }
 }

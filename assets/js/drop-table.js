@@ -68,29 +68,37 @@ function effectLabel(key) {
     return window.WIKI_I18N.text(`effect.${key}`, key);
 }
 
-function effectValue(value) {
-    if (window.WIKI_I18N.language !== "en") {
-        return String(value).replace(/increased/g, "增大");
+function effectValue(key, value) {
+    if (key === "attack_action") {
+        return window.WIKI_I18N.getType(value);
+    }
+    if (window.WIKI_I18N.language == "cn") {
+        return String(value)
+                .replace(/increased/g, "增大")
+                .replace(/in one attack/g, "单次攻击")
+                .replace(/angle/g, "角度")
+                .replace(/NON_HEAVEN_PUNISHER_EX/g, "非天罚EX")
+                .replace(/HEAVEN_PUNISHER_EX/g, "天罚EX")
+                .replace(/Dual Casting: Jellen and Zalure if tech lv is 30/g, "可同时释放降攻术 降防术 Lv30")
+                .replace(/Low HP/g, "濒死")
+                .trim();
     }
     return String(value)
-        .replace(/扩大|增大/g, "increased")
-        .replace(/数：?/g, "")
-        .replace(/HEAVEN_PUNISHER_EX/g, "Heaven Punisher EX")
-        .replace(/NON_HEAVEN_PUNISHER_EX/g, "non-Heaven Punisher EX")
-        .replace(/LOW_HP_EX/g, "low HP EX")
-        .trim();
+        // .replace(/扩大|增大/g, "increased")
+        // .replace(/数：?/g, "")
+        // .trim();
 }
 
 function effectText(effect) {
     if (!effect) return "";
-    return effect.notes;
-    // if (typeof effect === "string") return effect;
-    // return Object.entries(effect).map(([key, value]) => {
-    //     if (key === "notes" && window.WIKI_I18N.language === "en") return "";
-    //     if (value === true) return effectLabel(key);
-    //     if (value === false || value == null || value === "") return "";
-    //     return `${effectLabel(key)}: ${effectValue(value)}`;
-    // }).filter(Boolean).join(", ");
+    if (typeof effect === "string") return effect;
+    return Object.entries(effect).map(([key, value]) => {
+        if (key === "notes" && window.WIKI_I18N.language === "en") return "";
+        if (value === true) return effectLabel(key);
+        if (value === false || value == null || value === "") return "";
+        const formattedValue = effectValue(key, value);
+        return key === "notes" ? formattedValue : `${effectLabel(key)} ${formattedValue}`;
+    }).filter(Boolean).join(", ");
 }
 
 async function loadData() {

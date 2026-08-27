@@ -9,8 +9,7 @@
             "ATP": "+150",
             "attack_range": "increased",
             "attack_speed": "+15%",
-            "attack_action": true,
-            "notes": "命中提升20, 攻击提升150, 攻击范围扩大, 攻击速度+15%, 攻击动作变为双头剑"
+            "attack_action": "Double Saber"
         },
         "extra": []
     },
@@ -23,8 +22,7 @@
             "ATA": "+20",
             "targets": 6,
             "attack_range": "increased",
-            "attack_speed": "+15%",
-            "notes": "命中+20, 6目标, 攻击范围增大, 攻速+15%"
+            "attack_speed": "+15%"
         },
         "extra": []
     },
@@ -35,7 +33,7 @@
         ],
         "effect": {
             "ATP": "+150",
-            "notes": "攻击力+150, 单发 5 hit"
+            "hits": "5 (in one attack)"
         },
         "extra": []
     },
@@ -47,8 +45,7 @@
         "effect": {
             "ATA": "+20",
             "ATP": "+50",
-            "attack_range": "+40",
-            "notes": "攻击范围 +40, 攻击力+50, 命中+20"
+            "attack_range": "+40"
         },
         "extra": []
     },
@@ -59,8 +56,7 @@
         ],
         "effect": {
             "attack_range": "-70.0",
-            "hits": "3-3-3",
-            "notes": "攻击范围 -70.0, 三连hit数: 3-3-3"
+            "hits": "3-3-3"
         },
         "extra": []
     },
@@ -70,8 +66,8 @@
             "YASMINKOV 3000R"
         ],
         "effect": {
-            "hits": "N/H : 3-3-3",
-            "notes": "Hits N/H : 3-3-3, EX:1-1-3, EX范围 -75, 攻击角度 +35"
+            "hits": "3-3-3(N/H), 1-1-3(EX)",
+            "attack_range": "-75.0 (EX), angle +35"
         },
         "extra": []
     },
@@ -82,8 +78,7 @@
         ],
         "effect": {
             "ATP": "+300",
-            "attack_range": "+55",
-            "notes": "攻击力+300, 攻击范围 +55"
+            "attack_range": "+55"
         },
         "extra": []
     },
@@ -151,7 +146,8 @@
         "effect": {
             "ATP": "+250",
             "targets": 10,
-            "notes": "10目标, 增加攻击范围和角度, 攻击+250, 死咒球自动追踪"
+            "attack_range":"increased",
+            "piercing":true
         },
         "extra": []
     },
@@ -165,8 +161,7 @@
             "targets": 4,
             "attack_range": "increased",
             "hits": "2-2-3",
-            "attack_action": true,
-            "notes": "4目标, 攻击范围扩大, 攻击hit数: 2-2-3, 命中+30, 原创攻击动作"
+            "attack_action": "Customed"
         },
         "extra": []
     },
@@ -180,8 +175,7 @@
             "attack_range": "increased",
             "attack_speed": "+15%",
             "hits": "2-2-3(N) 2-2-2(H/EX)",
-            "attack_action": true,
-            "notes": "Hits数: 2-2-3(N) 2-2-2(H/EX), 攻击速度 +15%, 攻击范围扩大, 6目标, 原创攻击动作"
+            "attack_action": "Customed"
         },
         "extra": []
     },
@@ -193,8 +187,7 @@
         "effect": {
             "ATP": "+150",
             "attack_range": "increased",
-            "piercing": true,
-            "notes": "攻击力+150, 子弹穿透, 攻击范围增大"
+            "piercing": true
         },
         "extra": []
     },
@@ -205,8 +198,7 @@
         ],
         "effect": {
             "hits": "1-1-4",
-            "attack_action": true,
-            "notes": "Hits: 1-1-4, 原创攻击动作"
+            "attack_action": "Customed"
         },
         "extra": []
     },
@@ -303,8 +295,7 @@
             "ATA": "+20",
             "ATP": "+50",
             "hits": "2-2-4",
-            "attack_action": true,
-            "notes": "攻击力+50 命中+20, hits 2-2-4, 投刃攻击动作"
+            "attack_action": "Slicer"
         },
         "extra": []
     },
@@ -317,8 +308,7 @@
             "ATP": "+100",
             "targets": 5,
             "attack_range": "increased",
-            "hits": "2-2-2",
-            "notes": "5目标, Hits 2-2-2, 攻击力+100, 攻击范围扩大"
+            "hits": "2-2-2"
         },
         "extra": []
     },
@@ -331,7 +321,7 @@
             "ATA": "+20",
             "attack_range": "increased",
             "attack_speed": "+15%",
-            "notes": "命中+20, 攻击范围扩大, 正面打EP4蜥蜴, 攻速 +15% "
+            "can_hit_lizards": true
         },
         "extra": [
             "LAVIS CANNON"
@@ -344,8 +334,7 @@
         ],
         "effect": {
             "attack_range": "increased",
-            "hits": "4-4-4",
-            "notes": "Hits 4-4-4, 攻击范围增大"
+            "hits": "4-4-4"
         },
         "extra": [
             "MASTER RAVEN",
@@ -359,10 +348,10 @@
         ],
         "effect": {
             "MST": "+100",
+            "ATP": "+100",
             "attack_range": "increased",
-            "hits": "(HEAVEN_PUNISHER_EX)3-3-3 (NON_HEAVEN_PUNISHER_EX)4-4-4",
-            "auto_target": true,
-            "notes": "hit (天罚EX)3-3-3 (非天罚EX)4-4-4, 所有攻击自动瞄准, 攻击力和精神力+100, 攻击范围扩大"
+            "hits": "3-3-3(HEAVEN_PUNISHER_EX) 4-4-4(NON_HEAVEN_PUNISHER_EX)",
+            "auto_target": true
         },
         "extra": [
             "HEAVEN PUNISHER",
@@ -377,9 +366,8 @@
         "effect": {
             "ATP": "+400",
             "attack_range": "increased",
-            "hits": "(EX)5-5-5",
-            "auto_target": true,
-            "notes": "攻击力 +400, 自动瞄准 Hits: (EX)5-5-5, 攻击范围增大"
+            "hits": "5-5-5(EX)",
+            "auto_target": true
         },
         "extra": [
             "HANDGUN:GULD",
@@ -394,8 +382,7 @@
         "effect": {
             "targets": 5,
             "attack_range": "increased",
-            "attack_action": true,
-            "notes": "5目标, 匕首攻击动作, 攻击范围扩大"
+            "attack_action": "Dagger"
         },
         "extra": []
     },
@@ -405,7 +392,7 @@
             "CELESTIAL FUSION"
         ],
         "effect": {
-            "notes": "攻击范围和命中大幅提升"
+            "attack_range": "increased, Dual Casting: Jellen and Zalure if tech lv is 30"
         },
         "extra": [
             "TASTE OF AFFECTION",
@@ -420,8 +407,7 @@
         "effect": {
             "ATP": "+50",
             "attack_range": "increased",
-            "attack_speed": "+15%",
-            "notes": "攻击 +50, 攻击范围增大, 攻速+15%"
+            "attack_speed": "+15%"
         },
         "extra": [
             "SEALED J-SWORD"
@@ -438,8 +424,7 @@
             "targets": 3,
             "attack_range": "increased",
             "attack_speed": "+15%",
-            "hits": "2-2-2",
-            "notes": "攻击 +50, 命中 +20, 3目标, hits: 2-2-2, 攻击范围增大, 攻速+15%"
+            "hits": "2-2-2"
         },
         "extra": []
     },
@@ -449,8 +434,7 @@
             "RADIANT RING"
         ],
         "effect": {
-            "hits": "3-3-3",
-            "notes": "EX攻击hit数: 3-3-3"
+            "hits": "3-3-3"
         },
         "extra": []
     },
@@ -461,8 +445,7 @@
         ],
         "effect": {
             "attack_range": "increased",
-            "attack_action": true,
-            "notes": "攻击范围扩大, 双剑攻击动作"
+            "attack_action": "Double Saber"
         },
         "extra": [
             "Dragon Scale"
@@ -487,9 +470,9 @@
         ],
         "effect": {
             "ATP": "+100",
-            "hits": "(N/H)1-2-5",
-            "attack_action": true,
-            "notes": "攻击力+100, hits (N/H)1-2-5, (EX)1-1-3, 原创攻击动作, 可正面伤害EP4蜥蜴"
+            "hits": "1-2-5(N/H) 1-1-3(EX)",
+            "attack_action": "Customed",
+            "can_hit_lizards":true
         },
         "extra": []
     },
@@ -499,7 +482,7 @@
             "Parasitic Armor \u0027Predator\u0027"
         ],
         "effect": {
-            "notes": "濒死时EX攻击4倍"
+            "hits": "EX 1-1-3 (Low HP)"
         },
         "extra": [
             "Parasitic gene \"Flow\""
@@ -522,7 +505,7 @@
         ],
         "effect": {
             "ATP": "+100",
-            "notes": "攻击力+100，3-3-3hit，增强EX"
+            "hits": "3-3-3"
         },
         "extra": []
     },
@@ -534,7 +517,7 @@
         "effect": {
             "ATA": "+30",
             "ATP": "+150",
-            "notes": "攻击力+150，命中+30，单发三连射"
+            "hits":  "3 (in one attack)"
         },
         "extra": [
             "FROZEN SHOOTER"
@@ -548,102 +531,8 @@
         "effect": {
             "MST": "+150",
             "attack_range": "increased",
-            "notes": "4-4-4hit，精神力+150，攻击范围扩大"
+            "hits":"4-4-4"
         },
-        "extra": []
-    },
-    {
-        "items": [
-            "FINAL EGG BLASTER"
-        ],
-        "effect": {
-            "notes": "RA可装备, 濒死时 EX:炎狱爆炸三次(范围攻击)"
-        },
-        "extra": [
-            "Parts of EGG BLASTER",
-            "Dr. Robotnik\u0027s Plan B"
-        ]
-    },
-    {
-        "items": [
-            "DARK FLOW"
-        ],
-        "effect": {
-            "notes": "可三连, 濒死EX剑气与近战斩击叠加伤害"
-        },
-        "extra": [
-            "Parasitic gene \"Flow\""
-        ]
-    },
-    {
-        "items": [
-            "DARK METEOR"
-        ],
-        "effect": {
-            "hits": "1-1-3; LOW_HP_EX:1-1-5",
-            "notes": "常时EX hit:1-1-3 濒死时EX hit:1-1-5"
-        },
-        "extra": [
-            "Parasitic gene \"Flow\""
-        ]
-    },
-    {
-        "items": [
-            "DARK BRIDGE"
-        ],
-        "effect": {
-            "notes": "高级法术和圣光术 威力提升50% EX:圣光术"
-        },
-        "extra": [
-            "Parasitic gene \"Flow\""
-        ]
-    },
-    {
-        "items": [
-            "TSUMIKIRI J-SWORD"
-        ],
-        "effect": {
-            "targets": 5,
-            "hits": "(N/H)3-3-3 (EX)5-1-1",
-            "attack_action": true,
-            "notes": "5目标, hits (N/H)3-3-3 (EX)5-1-1, 原创攻击动作"
-        },
-        "extra": [
-            "SEALED J-SWORD"
-        ]
-    },
-    {
-        "items": [
-            "CELESTIAL FUSION"
-        ],
-        "effect": {
-            "notes": "全职业可装备, 降攻降防术 +100%, EX:恶魔 由FO装备时,降攻术、降防术可同时释放"
-        },
-        "extra": [
-            "TASTE OF AFFECTION",
-            "PASSION HAZE"
-        ]
-    },
-    {
-        "items": [
-            "ULTIMATE DOUBLE CANNON"
-        ],
-        "effect": {
-            "notes": "EX:超级能量波, 三连后达到濒死状态"
-        },
-        "extra": [
-            "LAVIS CANNON"
-        ]
-    },
-    {
-        "items": [
-            "HEAVENLY RESONANCE"
-        ],
-        "effect": {
-            "notes": "火墙术 +50%, 冰箭术 +90%, 群雷术 +50%"
-        },
-        "extra": [
-            "Cladding of Epsilon"
-        ]
+        "extra": ["MASER BEAM"]
     }
 ]

@@ -18,12 +18,12 @@ const DEFAULT_UI = {
     "nav.quests": "Quest Guide",
     "brand": "Destiny Server Wiki",
     "pageTitle": "Destiny Server Wiki",
-    "difficulty": "Difficulty",
+    "difficulty": "",
     "difficulty.Normal": "Normal",
     "difficulty.Hard": "Hard",
     "difficulty.Very Hard": "Very Hard",
     "difficulty.Ultimate": "Ultimate",
-    "episode": "Episode",
+    "episode": "",
     "search": "Search items / related items...",
     "itemType": "Type",
     "noEvent": "No event",
@@ -33,6 +33,7 @@ const DEFAULT_UI = {
     "effect.targets": "Targets",
     "effect.attack_range": "Attack range",
     "effect.attack_speed": "Attack speed",
+    "effect.can_hit_lizards": "hits EP4 Lizards in the face",
     "effect.hits": "Hits",
     "effect.auto_target": "Auto-target",
     "effect.piercing": "Piercing shots",
@@ -46,7 +47,10 @@ async function loadLanguage(nextLanguage) {
         ? await fetch("assets/data/translation/cn.json").then(response => response.json())
         : {};
     language = selected;
-    messages = { ...DEFAULT_UI, ...(translation.ui || {}) };
+    const effectMessages = Object.fromEntries(
+        Object.entries(translation.effect || {}).map(([key, value]) => [`effect.${key}`, value])
+    );
+    messages = { ...DEFAULT_UI, ...(translation.ui || {}), ...effectMessages };
     monsterTranslations = translation.monsters || {};
     typeTranslations = translation.types || {};
     activityTranslations = translation.activity || {};

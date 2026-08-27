@@ -3490,7 +3490,7 @@
         "quest"      : {"cn": ""}
     },
     "YASMINKOV 2000H": {
-        "superitem"  : 0,
+        "superitem"  : 1,
         "image"      : "",
         "type"       : "Handgun",
         "name"       : {"cn": "雅斯米诺科夫２０００Ｈ"},
@@ -4246,7 +4246,7 @@
         "image"      : "",
         "type"       : "Mechgun",
         "name"       : {"cn": "终极爆弹枪"},
-        "description": {"cn": ""},
+        "description": {"cn": "RA可装备, 濒死时 EX:炎狱爆炸三次(范围攻击)"},
         "quest"      : {"cn": ""}
     },
     "DUAL BIRD": {
@@ -4374,7 +4374,7 @@
         "image"      : "",
         "type"       : "Shield",
         "name"       : {"cn": "天堂共鸣"},
-        "description": {"cn": ""},
+        "description": {"cn": "火墙术 +50%, 冰箭术 +90%, 群雷术 +50%"},
         "quest"      : {"cn": ""}
     },
     "SANGE \u0026 YASHA": {
@@ -4470,7 +4470,7 @@
         "image"      : "",
         "type"       : "Sword",
         "name"       : {"cn": "暗黑弗罗文大剑"},
-        "description": {"cn": ""},
+        "description": {"cn": "可三连, 濒死EX剑气与近战斩击叠加伤害"},
         "quest"      : {"cn": ""}
     },
     "DARK METEOR": {
@@ -4478,7 +4478,7 @@
         "image"      : "",
         "type"       : "Shot",
         "name"       : {"cn": "暗黑陨石枪"},
-        "description": {"cn": ""},
+        "description": {"cn": "常时EX hit:1-1-3 濒死时EX hit:1-1-5"},
         "quest"      : {"cn": ""}
     },
     "DARK BRIDGE": {
@@ -4486,7 +4486,15 @@
         "image"      : "",
         "type"       : "Rod",
         "name"       : {"cn": "暗黑使者杖"},
-        "description": {"cn": ""},
+        "description": {"cn": "高级法术和圣光术 威力提升50% EX:圣光术"},
+        "quest"      : {"cn": ""}
+    },
+    "TSUMIKIRI J-SWORD": {
+        "superitem"  : 2,
+        "image"      : "",
+        "type"       : "Sword",
+        "name"       : {"cn": "罪切"},
+        "description": {"cn": "5目标, hits (N/H)3-3-3 (EX)5-1-1, 原创攻击动作"},
         "quest"      : {"cn": ""}
     },
     "DIVINE FIELD": {
@@ -4606,6 +4614,14 @@
         "image"      : "",
         "type"       : "Shield",
         "name"       : {"cn": "蝙蝠之翼"},
+        "description": {"cn": ""},
+        "quest"      : {"cn": ""}
+    },
+    "MATRIX SCOPE": {
+        "superitem"  : 2,
+        "image"      : "",
+        "type"       : "Shield",
+        "name"       : {"cn": "矩阵瞄准镜"},
         "description": {"cn": ""},
         "quest"      : {"cn": ""}
     }
