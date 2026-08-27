@@ -149,6 +149,11 @@ thead th.section-id-highlight{
     z-index:35;
 }
 
+/* 搜索时没有命中掉落的 Section ID：保留表格列宽，但不显示表头。 */
+thead th.section-id-no-match{
+    visibility:hidden;
+}
+
 .section-id{
     display:block;
     margin-top:2px;
@@ -309,6 +314,7 @@ tbody td:hover{
 }
 
 
+.highlight-related,
 .highlight-recipe{
 
     animation:recipePulse 1.2s infinite alternate;

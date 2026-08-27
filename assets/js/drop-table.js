@@ -31,14 +31,37 @@ function escapeHtml(value) {
         .replace(/'/g, "&#39;");
 }
 
-function itemSearchText(itemId) {
-    const item = data?.items?.[itemId];
-    if (!item) return String(itemId || "").toLowerCase();
-    const text = window.WIKI_I18N.getItem(itemId);
-    return [itemId, text.name, text.description, text.quest]
-        .filter(Boolean)
+function searchText(...values) {
+    return values
+        .flat(Infinity)
+        .filter(value => typeof value === "string" && value.trim())
         .join(" ")
         .toLowerCase();
+}
+
+// 名称搜索始终同时使用原始英文名和中文名，不受当前界面语言影响。
+function itemNameSearchText(itemId) {
+    const item = data?.items?.[itemId];
+    if (!item) return searchText(itemId);
+    return searchText(itemId, item.name?.en, item.name?.cn);
+}
+
+function itemDetailSearchText(itemId) {
+    const item = data?.items?.[itemId];
+    if (!item) return "";
+    return searchText(
+        item.description?.en,
+        item.description?.cn,
+        item.quest?.en,
+        item.quest?.cn
+    );
+}
+
+function bonusSearchText(effect) {
+    if (!effect || typeof effect !== "object") return searchText(effect);
+    return searchText(
+        Object.entries(effect).flatMap(([key, value]) => [key, effectLabel(key), value])
+    );
 }
 
 function effectLabel(key) {
@@ -465,77 +488,80 @@ function performSearch() {
     const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
     if (!data) return;
     let firstMatch = null;
+    const matchedSections = new Set();
 
     document.querySelectorAll("tbody tr").forEach(row => {
         row.style.display = "";
-        row.querySelectorAll("td").forEach(td => td.classList.remove("highlight-item", "highlight-bonus", "highlight-recipe"));
+        row.querySelectorAll("td").forEach(td => td.classList.remove(
+            "highlight-item", "highlight-related", "highlight-bonus", "highlight-recipe"
+        ));
         if (!keyword) return;
 
         let rowMatched = false;
         row.querySelectorAll("td").forEach(td => {
             let matchedType = null;
-            const cellText = td.innerText.toLowerCase();
-            // if(cellText.includes(keyword)) matched = true;
 
             const itemName = td.dataset.item;
             if (itemName && data.items[itemName]) {
-                const itemText = window.WIKI_I18N.getItem(itemName);
-
                 const item = data.items[itemName];
                 // 1.名字匹配（最高优先级）
 
-                if (itemSearchText(itemName).includes(keyword)) {
+                if (itemNameSearchText(itemName).includes(keyword)) {
                     matchedType = "item";
                 }
 
-                // 2.普通描述
+                // 2. 物品描述、类型和任务说明
 
-                else if (window.WIKI_I18N.getType(item.type || "").toLowerCase().includes(keyword)) {
-                    matchedType = "item";
+                else if (itemDetailSearchText(itemName).includes(keyword)) {
+                    matchedType = "related";
                 }
 
                 // 3.套装效果
 
                 else if (
                     (bonusIndex[itemName] || []).some(b =>
-                        b.items.some(item => itemSearchText(item).includes(keyword)) ||
-                        effectText(b.effect).toLowerCase().includes(keyword)
+                        b.items.some(item => itemNameSearchText(item).includes(keyword)) ||
+                        bonusSearchText(b.effect).includes(keyword)
                     )
                 ) {
-                    matchedType = "bonus";
+                    matchedType = "related";
                 }
 
                 // 4.合成公式
 
                 else if (
                     (recipeIndex[itemName] || []).some(r =>
-                        itemSearchText(r.result).includes(keyword) ||
-                        r.components.some(item => itemSearchText(item).includes(keyword))
+                        itemNameSearchText(r.result).includes(keyword) ||
+                        r.components.some(item => itemNameSearchText(item).includes(keyword))
                     )
                 ) {
-                    matchedType = "recipe";
+                    matchedType = "related";
                 }
             }
             if (matchedType === "item") {
                 rowMatched = true;
                 td.classList.add("highlight-item");
+                matchedSections.add(td.dataset.section);
 
                 if (!firstMatch) {
                     firstMatch = row;
                 }
             }
 
-            if (matchedType === "bonus") {
+            if (matchedType === "related") {
                 rowMatched = true;
-                td.classList.add("highlight-bonus");
-            }
-
-            if (matchedType === "recipe") {
-                rowMatched = true;
-                td.classList.add("highlight-recipe");
+                td.classList.add("highlight-related");
+                matchedSections.add(td.dataset.section);
             }
         });
         if (!rowMatched && keyword !== "") row.style.display = "none";
+    });
+
+    // 搜索时只保留含有命中掉落的 Section ID 表头；清空搜索后恢复原样。
+    document.querySelectorAll("thead th[data-section]").forEach(header => {
+        const hidden = Boolean(keyword) && !matchedSections.has(header.dataset.section);
+        header.classList.toggle("section-id-no-match", hidden);
+        header.setAttribute("aria-hidden", String(hidden));
     });
 
     document.querySelectorAll(".table-section").forEach(section => {
