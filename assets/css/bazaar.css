@@ -363,10 +363,11 @@
 
 #bazaar-info .bazaar-details {
   margin-top: 12px;
-  border: 1px solid var(--bz-border);
+  border: 2px solid rgba(111, 217, 242, .32);
   border-radius: 10px;
   background: var(--bz-well);
   overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
 }
 
 #bazaar-info .bazaar-details > summary {
@@ -413,6 +414,8 @@
 }
 
 #bazaar-info .bazaar-details.is-search-match { border-color: var(--bz-gold); box-shadow: 0 0 0 1px rgba(242,193,78,.18), 0 0 20px rgba(242,193,78,.1); }
+#bazaar-info .quest-drop-table-title { margin: 20px 16px 8px; color: var(--bz-gold); font-size: 16px; }
+#bazaar-info .quest-search-highlight { padding: 0 2px; border-radius: 3px; background: var(--bz-gold); color: #111827; }
 #bazaar-info .quest-search { display: block; width: min(92%, 820px); height: 62px; margin: 0 auto 32px; padding: 0 22px; border: 2px solid rgba(111,217,242,.48); border-radius: 14px; background: rgba(2,8,20,.84); color: var(--bz-ink); font-size: 19px; font-weight: 600; text-align: center; box-shadow: 0 0 24px rgba(111,217,242,.08); }
 #bazaar-info .quest-search:focus { outline: 2px solid rgba(111,217,242,.5); border-color: var(--bz-cyan); }
 #bazaar-info .quest-episode, #bazaar-info .quest-category { margin: 16px 0; border: 1px solid var(--bz-border); border-radius: 12px; overflow: hidden; background: rgba(4,10,24,.42); }
@@ -488,11 +491,56 @@
   font-family: Consolas, Monaco, "Microsoft YaHei", monospace;
 }
 
-/* 怪物数量清单：多栏排布，避免一条长龙 */
-#bazaar-info .bazaar-block--cols {
-  column-width: 230px;
-  column-gap: 28px;
-  column-rule: 1px solid var(--bz-border-soft);
+/* 怪物数量清单：每个区域独立成列，便于按区域阅读 */
+#bazaar-info .quest-monster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+#bazaar-info .quest-monster-area {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--bz-border-soft);
+  border-radius: 6px;
+  background: rgba(15, 26, 48, .55);
+}
+
+#bazaar-info .quest-monster-area h4 {
+  margin: 0 0 7px;
+  color: var(--bz-cyan);
+  font-size: 13px;
+}
+
+#bazaar-info .quest-monster-area ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--bz-ink);
+  line-height: 1.55;
+  font-size: 13px;
+}
+
+#bazaar-info .quest-monster-area li {
+  break-inside: avoid;
+  white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  #bazaar-info .quest-monster-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  #bazaar-info .quest-monster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  #bazaar-info .quest-monster-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

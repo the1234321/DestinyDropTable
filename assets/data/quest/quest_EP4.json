@@ -1,0 +1,1510 @@
+[
+  {
+    "name": "Beyond the Horizon",
+    "total": 820,
+    "monsters": {
+      "Sand Rappy": 131,
+      "Yowie": 131,
+      "Merissa A": 82,
+      "Zu": 74,
+      "Goran Detonator": 64,
+      "Goran": 63,
+      "Pyro Goran": 58,
+      "Boota": 45,
+      "Satellite Lizard": 42,
+      "Ze Boota": 39,
+      "Ba Boota": 36,
+      "Astark": 28,
+      "Dorphon": 15,
+      "Girtablulu": 12
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 150,
+        "monsters": {
+          "Yowie": 35,
+          "Sand Rappy": 34,
+          "Boota": 25,
+          "Ze Boota": 18,
+          "Ba Boota": 18,
+          "Astark": 8,
+          "Zu": 6,
+          "Satellite Lizard": 6
+        }
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 180,
+        "monsters": {
+          "Sand Rappy": 32,
+          "Yowie": 32,
+          "Ze Boota": 21,
+          "Astark": 20,
+          "Boota": 20,
+          "Ba Boota": 18,
+          "Dorphon": 15,
+          "Zu": 14,
+          "Satellite Lizard": 8
+        }
+      },
+      "6": {
+        "floor_name": "Subterranean Desert 1",
+        "floor_id": 6,
+        "total": 150,
+        "monsters": {
+          "Merissa A": 30,
+          "Goran": 26,
+          "Yowie": 26,
+          "Sand Rappy": 23,
+          "Pyro Goran": 18,
+          "Goran Detonator": 16,
+          "Zu": 6,
+          "Satellite Lizard": 5
+        }
+      },
+      "7": {
+        "floor_name": "Subterranean Desert 2",
+        "floor_id": 7,
+        "total": 180,
+        "monsters": {
+          "Zu": 30,
+          "Goran Detonator": 28,
+          "Goran": 22,
+          "Pyro Goran": 21,
+          "Merissa A": 21,
+          "Yowie": 18,
+          "Sand Rappy": 15,
+          "Satellite Lizard": 13,
+          "Girtablulu": 12
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 160,
+        "monsters": {
+          "Merissa A": 31,
+          "Sand Rappy": 27,
+          "Goran Detonator": 20,
+          "Yowie": 20,
+          "Pyro Goran": 19,
+          "Zu": 18,
+          "Goran": 15,
+          "Satellite Lizard": 10
+        }
+      }
+    }
+  },
+  {
+    "name": "Brink of Oblivion",
+    "total": 309,
+    "monsters": {
+      "Yowie": 42,
+      "Sand Rappy": 39,
+      "Satellite Lizard": 39,
+      "Zu": 33,
+      "Goran": 29,
+      "Pyro Goran": 26,
+      "Merissa A": 25,
+      "Goran Detonator": 16,
+      "Ba Boota": 14,
+      "Boota": 13,
+      "Girtablulu": 11,
+      "Astark": 8,
+      "Dorphon": 8,
+      "Ze Boota": 4,
+      "Pazuzu": 1,
+      "Saint-Milion / Kondrieu": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 105,
+        "monsters": {
+          "Yowie": 20,
+          "Satellite Lizard": 16,
+          "Zu": 15,
+          "Ba Boota": 14,
+          "Boota": 13,
+          "Astark": 8,
+          "Dorphon": 8,
+          "Sand Rappy": 7,
+          "Ze Boota": 4
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 203,
+        "monsters": {
+          "Sand Rappy": 32,
+          "Goran": 29,
+          "Pyro Goran": 26,
+          "Merissa A": 25,
+          "Satellite Lizard": 23,
+          "Yowie": 22,
+          "Zu": 18,
+          "Goran Detonator": 16,
+          "Girtablulu": 11,
+          "Pazuzu": 1
+        }
+      },
+      "9": {
+        "floor_name": "Meteor Impact Site",
+        "floor_id": 9,
+        "total": 1,
+        "monsters": {
+          "Saint-Milion / Kondrieu": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Christmas Fiasco EP4",
+    "total": 587,
+    "monsters": {
+      "Sand Rappy": 81,
+      "Merissa A": 80,
+      "Zu": 74,
+      "Satellite Lizard": 59,
+      "Pyro Goran": 53,
+      "Yowie": 51,
+      "Goran": 48,
+      "Goran Detonator": 33,
+      "Dorphon": 27,
+      "Astark": 19,
+      "Ba Boota": 18,
+      "Girtablulu": 18,
+      "Ze Boota": 15,
+      "Boota": 11
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 184,
+        "monsters": {
+          "Dorphon": 27,
+          "Sand Rappy": 27,
+          "Zu": 26,
+          "Satellite Lizard": 24,
+          "Astark": 19,
+          "Ba Boota": 18,
+          "Yowie": 17,
+          "Ze Boota": 15,
+          "Boota": 11
+        }
+      },
+      "7": {
+        "floor_name": "Subterranean Desert 2",
+        "floor_id": 7,
+        "total": 201,
+        "monsters": {
+          "Merissa A": 39,
+          "Sand Rappy": 31,
+          "Zu": 25,
+          "Pyro Goran": 23,
+          "Goran": 19,
+          "Yowie": 19,
+          "Satellite Lizard": 18,
+          "Goran Detonator": 16,
+          "Girtablulu": 11
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 202,
+        "monsters": {
+          "Merissa A": 41,
+          "Pyro Goran": 30,
+          "Goran": 29,
+          "Sand Rappy": 23,
+          "Zu": 23,
+          "Satellite Lizard": 17,
+          "Goran Detonator": 17,
+          "Yowie": 15,
+          "Girtablulu": 7
+        }
+      }
+    }
+  },
+  {
+    "name": "Claire's Deal 5",
+    "total": 114,
+    "monsters": {
+      "Satellite Lizard": 20,
+      "Boota": 18,
+      "Ba Boota": 17,
+      "Zu": 15,
+      "Ze Boota": 15,
+      "Dorphon": 10,
+      "Astark": 10,
+      "Sand Rappy": 9
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 114,
+        "monsters": {
+          "Satellite Lizard": 20,
+          "Boota": 18,
+          "Ba Boota": 17,
+          "Zu": 15,
+          "Ze Boota": 15,
+          "Dorphon": 10,
+          "Astark": 10,
+          "Sand Rappy": 9
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 0,
+        "monsters": {}
+      }
+    }
+  },
+  {
+    "name": "LOGiN presents 勇場のマッチレース",
+    "total": 645,
+    "monsters": {
+      "Goran": 94,
+      "Sand Rappy": 88,
+      "Merissa A": 84,
+      "Yowie": 70,
+      "Boota": 62,
+      "Pyro Goran": 52,
+      "Ze Boota": 50,
+      "Satellite Lizard": 46,
+      "Goran Detonator": 22,
+      "Ba Boota": 20,
+      "Zu": 20,
+      "Astark": 19,
+      "Girtablulu": 14,
+      "Dorphon": 4
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 147,
+        "monsters": {
+          "Sand Rappy": 32,
+          "Boota": 31,
+          "Ze Boota": 25,
+          "Yowie": 21,
+          "Satellite Lizard": 14,
+          "Ba Boota": 10,
+          "Astark": 9,
+          "Zu": 3,
+          "Dorphon": 2
+        }
+      },
+      "2": {
+        "floor_name": "Crater Route 2",
+        "floor_id": 2,
+        "total": 148,
+        "monsters": {
+          "Sand Rappy": 32,
+          "Boota": 31,
+          "Ze Boota": 25,
+          "Yowie": 21,
+          "Satellite Lizard": 14,
+          "Ba Boota": 10,
+          "Astark": 10,
+          "Zu": 3,
+          "Dorphon": 2
+        }
+      },
+      "6": {
+        "floor_name": "Subterranean Desert 1",
+        "floor_id": 6,
+        "total": 166,
+        "monsters": {
+          "Goran": 50,
+          "Merissa A": 30,
+          "Pyro Goran": 24,
+          "Yowie": 16,
+          "Sand Rappy": 16,
+          "Goran Detonator": 12,
+          "Satellite Lizard": 8,
+          "Girtablulu": 6,
+          "Zu": 4
+        }
+      },
+      "7": {
+        "floor_name": "Subterranean Desert 2",
+        "floor_id": 7,
+        "total": 184,
+        "monsters": {
+          "Merissa A": 54,
+          "Goran": 44,
+          "Pyro Goran": 28,
+          "Yowie": 12,
+          "Zu": 10,
+          "Satellite Lizard": 10,
+          "Goran Detonator": 10,
+          "Girtablulu": 8,
+          "Sand Rappy": 8
+        }
+      }
+    }
+  },
+  {
+    "name": "MA4DMD",
+    "total": 460,
+    "monsters": {
+      "Yowie": 58,
+      "Satellite Lizard": 56,
+      "Zu": 55,
+      "Astark": 43,
+      "Sand Rappy": 36,
+      "Goran": 35,
+      "Dorphon": 31,
+      "Merissa A": 31,
+      "Girtablulu": 25,
+      "Pyro Goran": 24,
+      "Ze Boota": 17,
+      "Goran Detonator": 17,
+      "Ba Boota": 16,
+      "Boota": 13,
+      "Dorphon Eclair": 3
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 220,
+        "monsters": {
+          "Yowie": 34,
+          "Astark": 33,
+          "Dorphon": 31,
+          "Zu": 31,
+          "Satellite Lizard": 29,
+          "Ze Boota": 17,
+          "Ba Boota": 16,
+          "Sand Rappy": 13,
+          "Boota": 13,
+          "Dorphon Eclair": 3
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 240,
+        "monsters": {
+          "Goran": 35,
+          "Merissa A": 31,
+          "Satellite Lizard": 27,
+          "Girtablulu": 25,
+          "Yowie": 24,
+          "Zu": 24,
+          "Pyro Goran": 24,
+          "Sand Rappy": 23,
+          "Goran Detonator": 17,
+          "Astark": 10
+        }
+      }
+    }
+  },
+  {
+    "name": "MAXIMUM ATTACK 3 Ver2",
+    "total": 900,
+    "monsters": {
+      "Satellite Lizard": 122,
+      "Yowie": 115,
+      "Pyro Goran": 103,
+      "Goran": 101,
+      "Merissa A": 99,
+      "Sand Rappy": 83,
+      "Astark": 54,
+      "Ba Boota": 47,
+      "Zu": 46,
+      "Boota": 45,
+      "Ze Boota": 39,
+      "Goran Detonator": 32,
+      "Dorphon": 10,
+      "Girtablulu": 4
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "Crater Route 2",
+        "floor_id": 2,
+        "total": 241,
+        "monsters": {
+          "Satellite Lizard": 50,
+          "Astark": 38,
+          "Boota": 34,
+          "Yowie": 28,
+          "Sand Rappy": 26,
+          "Ze Boota": 26,
+          "Ba Boota": 25,
+          "Zu": 11,
+          "Dorphon": 3
+        }
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 129,
+        "monsters": {
+          "Yowie": 22,
+          "Ba Boota": 22,
+          "Satellite Lizard": 18,
+          "Astark": 16,
+          "Ze Boota": 13,
+          "Boota": 11,
+          "Sand Rappy": 11,
+          "Zu": 9,
+          "Dorphon": 7
+        }
+      },
+      "6": {
+        "floor_name": "Subterranean Desert 1",
+        "floor_id": 6,
+        "total": 148,
+        "monsters": {
+          "Goran": 34,
+          "Pyro Goran": 26,
+          "Merissa A": 18,
+          "Satellite Lizard": 17,
+          "Sand Rappy": 17,
+          "Yowie": 17,
+          "Goran Detonator": 10,
+          "Zu": 8,
+          "Girtablulu": 1
+        }
+      },
+      "7": {
+        "floor_name": "Subterranean Desert 2",
+        "floor_id": 7,
+        "total": 209,
+        "monsters": {
+          "Goran": 47,
+          "Merissa A": 46,
+          "Pyro Goran": 40,
+          "Yowie": 29,
+          "Sand Rappy": 22,
+          "Satellite Lizard": 19,
+          "Zu": 3,
+          "Goran Detonator": 3
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 173,
+        "monsters": {
+          "Pyro Goran": 37,
+          "Merissa A": 35,
+          "Goran": 20,
+          "Yowie": 19,
+          "Goran Detonator": 19,
+          "Satellite Lizard": 18,
+          "Zu": 15,
+          "Sand Rappy": 7,
+          "Girtablulu": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "Maximum Attack 4th Stage -A-",
+    "total": 384,
+    "monsters": {
+      "Satellite Lizard": 68,
+      "Merissa A": 58,
+      "Sand Rappy": 57,
+      "Yowie": 56,
+      "Goran": 30,
+      "Pyro Goran": 26,
+      "Zu": 20,
+      "Boota": 18,
+      "Ba Boota": 16,
+      "Astark": 13,
+      "Ze Boota": 13,
+      "Goran Detonator": 6,
+      "Dorphon": 3
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 184,
+        "monsters": {
+          "Yowie": 43,
+          "Satellite Lizard": 38,
+          "Sand Rappy": 31,
+          "Boota": 18,
+          "Ba Boota": 16,
+          "Astark": 13,
+          "Ze Boota": 13,
+          "Zu": 9,
+          "Dorphon": 3
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 200,
+        "monsters": {
+          "Merissa A": 58,
+          "Goran": 30,
+          "Satellite Lizard": 30,
+          "Pyro Goran": 26,
+          "Sand Rappy": 26,
+          "Yowie": 13,
+          "Zu": 11,
+          "Goran Detonator": 6
+        }
+      }
+    }
+  },
+  {
+    "name": "Maximum Attack 4th Stage -B-",
+    "total": 400,
+    "monsters": {
+      "Sand Rappy": 60,
+      "Satellite Lizard": 58,
+      "Yowie": 50,
+      "Zu": 48,
+      "Goran": 40,
+      "Pyro Goran": 32,
+      "Boota": 24,
+      "Merissa A": 20,
+      "Goran Detonator": 19,
+      "Ba Boota": 17,
+      "Ze Boota": 15,
+      "Astark": 11,
+      "Dorphon": 3,
+      "Girtablulu": 3
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 200,
+        "monsters": {
+          "Satellite Lizard": 37,
+          "Yowie": 34,
+          "Sand Rappy": 33,
+          "Zu": 26,
+          "Boota": 24,
+          "Ba Boota": 17,
+          "Ze Boota": 15,
+          "Astark": 11,
+          "Dorphon": 3
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 200,
+        "monsters": {
+          "Goran": 40,
+          "Pyro Goran": 32,
+          "Sand Rappy": 27,
+          "Zu": 22,
+          "Satellite Lizard": 21,
+          "Merissa A": 20,
+          "Goran Detonator": 19,
+          "Yowie": 16,
+          "Girtablulu": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "Maximum Attack 4th Stage -C-",
+    "total": 460,
+    "monsters": {
+      "Yowie": 74,
+      "Sand Rappy": 73,
+      "Satellite Lizard": 69,
+      "Merissa A": 37,
+      "Goran": 37,
+      "Zu": 33,
+      "Pyro Goran": 26,
+      "Ze Boota": 22,
+      "Boota": 20,
+      "Goran Detonator": 18,
+      "Ba Boota": 16,
+      "Astark": 16,
+      "Dorphon": 13,
+      "Girtablulu": 6
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 220,
+        "monsters": {
+          "Yowie": 45,
+          "Satellite Lizard": 38,
+          "Sand Rappy": 33,
+          "Ze Boota": 22,
+          "Boota": 20,
+          "Zu": 17,
+          "Ba Boota": 16,
+          "Astark": 16,
+          "Dorphon": 13
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 240,
+        "monsters": {
+          "Sand Rappy": 40,
+          "Merissa A": 37,
+          "Goran": 37,
+          "Satellite Lizard": 31,
+          "Yowie": 29,
+          "Pyro Goran": 26,
+          "Goran Detonator": 18,
+          "Zu": 16,
+          "Girtablulu": 6
+        }
+      }
+    }
+  },
+  {
+    "name": "Maximum Attack S",
+    "total": 595,
+    "monsters": {
+      "Zu": 98,
+      "Goran Detonator": 76,
+      "Yowie": 61,
+      "Goran": 61,
+      "Sand Rappy": 58,
+      "Merissa A": 41,
+      "Pyro Goran": 38,
+      "Satellite Lizard": 30,
+      "Girtablulu": 29,
+      "Dorphon": 27,
+      "Ze Boota": 21,
+      "Astark": 20,
+      "Ba Boota": 20,
+      "Boota": 15
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 189,
+        "monsters": {
+          "Sand Rappy": 32,
+          "Yowie": 32,
+          "Dorphon": 27,
+          "Ze Boota": 21,
+          "Astark": 20,
+          "Ba Boota": 20,
+          "Boota": 15,
+          "Zu": 14,
+          "Satellite Lizard": 8
+        }
+      },
+      "6": {
+        "floor_name": "Subterranean Desert 1",
+        "floor_id": 6,
+        "total": 205,
+        "monsters": {
+          "Goran": 61,
+          "Pyro Goran": 38,
+          "Yowie": 29,
+          "Sand Rappy": 26,
+          "Merissa A": 22,
+          "Satellite Lizard": 22,
+          "Goran Detonator": 6,
+          "Girtablulu": 1
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 201,
+        "monsters": {
+          "Zu": 84,
+          "Goran Detonator": 70,
+          "Girtablulu": 28,
+          "Merissa A": 19
+        }
+      }
+    }
+  },
+  {
+    "name": "Neo Maximum Attack: Episode IV",
+    "total": 548,
+    "monsters": {
+      "Merissa A": 64,
+      "Goran": 61,
+      "Goran Detonator": 61,
+      "Dorphon": 56,
+      "Astark": 49,
+      "Ba Boota": 39,
+      "Ze Boota": 38,
+      "Satellite Lizard": 36,
+      "Boota": 34,
+      "Pyro Goran": 31,
+      "Girtablulu": 27,
+      "Zu": 27,
+      "Yowie": 23,
+      "Sand Rappy": 2
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 134,
+        "monsters": {
+          "Boota": 20,
+          "Satellite Lizard": 18,
+          "Goran": 17,
+          "Ze Boota": 15,
+          "Ba Boota": 13,
+          "Dorphon": 9,
+          "Astark": 8,
+          "Pyro Goran": 8,
+          "Yowie": 7,
+          "Merissa A": 7,
+          "Zu": 4,
+          "Girtablulu": 3,
+          "Goran Detonator": 3,
+          "Sand Rappy": 2
+        }
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 59,
+        "monsters": {
+          "Zu": 19,
+          "Astark": 14,
+          "Dorphon": 6,
+          "Merissa A": 6,
+          "Girtablulu": 5,
+          "Goran Detonator": 3,
+          "Ba Boota": 3,
+          "Yowie": 3
+        }
+      },
+      "7": {
+        "floor_name": "Subterranean Desert 2",
+        "floor_id": 7,
+        "total": 176,
+        "monsters": {
+          "Merissa A": 36,
+          "Goran Detonator": 27,
+          "Dorphon": 19,
+          "Goran": 17,
+          "Satellite Lizard": 14,
+          "Pyro Goran": 14,
+          "Astark": 10,
+          "Yowie": 9,
+          "Ba Boota": 9,
+          "Girtablulu": 8,
+          "Ze Boota": 7,
+          "Boota": 5,
+          "Zu": 1
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 179,
+        "monsters": {
+          "Goran Detonator": 28,
+          "Goran": 27,
+          "Dorphon": 22,
+          "Astark": 17,
+          "Ze Boota": 16,
+          "Merissa A": 15,
+          "Ba Boota": 14,
+          "Girtablulu": 11,
+          "Boota": 9,
+          "Pyro Goran": 9,
+          "Satellite Lizard": 4,
+          "Yowie": 4,
+          "Zu": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "New Mop-Up Operation #1",
+    "total": 151,
+    "monsters": {
+      "Sand Rappy": 37,
+      "Satellite Lizard": 32,
+      "Astark": 22,
+      "Yowie": 20,
+      "Boota": 20,
+      "Zu": 8,
+      "Ze Boota": 5,
+      "Ba Boota": 5,
+      "Dorphon": 2
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 151,
+        "monsters": {
+          "Sand Rappy": 37,
+          "Satellite Lizard": 32,
+          "Astark": 22,
+          "Yowie": 20,
+          "Boota": 20,
+          "Zu": 8,
+          "Ze Boota": 5,
+          "Ba Boota": 5,
+          "Dorphon": 2
+        }
+      }
+    }
+  },
+  {
+    "name": "New Mop-Up Operation #2",
+    "total": 186,
+    "monsters": {
+      "Satellite Lizard": 41,
+      "Ze Boota": 36,
+      "Boota": 31,
+      "Yowie": 23,
+      "Sand Rappy": 20,
+      "Ba Boota": 14,
+      "Astark": 11,
+      "Dorphon": 5,
+      "Zu": 5
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 186,
+        "monsters": {
+          "Satellite Lizard": 41,
+          "Ze Boota": 36,
+          "Boota": 31,
+          "Yowie": 23,
+          "Sand Rappy": 20,
+          "Ba Boota": 14,
+          "Astark": 11,
+          "Dorphon": 5,
+          "Zu": 5
+        }
+      }
+    }
+  },
+  {
+    "name": "New Mop-Up Operation #3",
+    "total": 339,
+    "monsters": {
+      "Goran": 108,
+      "Satellite Lizard": 73,
+      "Pyro Goran": 55,
+      "Yowie": 41,
+      "Sand Rappy": 38,
+      "Goran Detonator": 16,
+      "Boota": 4,
+      "Zu": 4
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "6": {
+        "floor_name": "Subterranean Desert 1",
+        "floor_id": 6,
+        "total": 339,
+        "monsters": {
+          "Goran": 108,
+          "Satellite Lizard": 73,
+          "Pyro Goran": 55,
+          "Yowie": 41,
+          "Sand Rappy": 38,
+          "Goran Detonator": 16,
+          "Boota": 4,
+          "Zu": 4
+        }
+      }
+    }
+  },
+  {
+    "name": "New Mop-Up Operation #4",
+    "total": 206,
+    "monsters": {
+      "Goran": 46,
+      "Pyro Goran": 40,
+      "Yowie": 38,
+      "Sand Rappy": 29,
+      "Satellite Lizard": 25,
+      "Merissa A": 24,
+      "Goran Detonator": 3,
+      "Girtablulu": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "7": {
+        "floor_name": "Subterranean Desert 2",
+        "floor_id": 7,
+        "total": 206,
+        "monsters": {
+          "Goran": 46,
+          "Pyro Goran": 40,
+          "Yowie": 38,
+          "Sand Rappy": 29,
+          "Satellite Lizard": 25,
+          "Merissa A": 24,
+          "Goran Detonator": 3,
+          "Girtablulu": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "New Mop-Up Operation #5",
+    "total": 211,
+    "monsters": {
+      "Yowie": 40,
+      "Satellite Lizard": 38,
+      "Goran": 37,
+      "Pyro Goran": 30,
+      "Merissa A": 25,
+      "Zu": 19,
+      "Sand Rappy": 11,
+      "Goran Detonator": 7,
+      "Girtablulu": 4
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 211,
+        "monsters": {
+          "Yowie": 40,
+          "Satellite Lizard": 38,
+          "Goran": 37,
+          "Pyro Goran": 30,
+          "Merissa A": 25,
+          "Zu": 19,
+          "Sand Rappy": 11,
+          "Goran Detonator": 7,
+          "Girtablulu": 4
+        }
+      }
+    }
+  },
+  {
+    "name": "Point of Disaster",
+    "total": 253,
+    "monsters": {
+      "Satellite Lizard": 50,
+      "Sand Rappy": 50,
+      "Yowie": 31,
+      "Astark": 31,
+      "Boota": 24,
+      "Zu": 20,
+      "Goran": 12,
+      "Dorphon": 9,
+      "Ze Boota": 8,
+      "Ba Boota": 6,
+      "Merissa A": 4,
+      "Goran Detonator": 3,
+      "Pyro Goran": 2,
+      "Girtablulu": 1,
+      "Shambertin / Kondrieu": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 98,
+        "monsters": {
+          "Satellite Lizard": 23,
+          "Astark": 17,
+          "Sand Rappy": 15,
+          "Boota": 13,
+          "Yowie": 9,
+          "Ze Boota": 6,
+          "Dorphon": 6,
+          "Zu": 5,
+          "Ba Boota": 4
+        }
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 92,
+        "monsters": {
+          "Sand Rappy": 23,
+          "Satellite Lizard": 21,
+          "Astark": 14,
+          "Boota": 11,
+          "Zu": 9,
+          "Yowie": 7,
+          "Dorphon": 3,
+          "Ba Boota": 2,
+          "Ze Boota": 2
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 62,
+        "monsters": {
+          "Yowie": 15,
+          "Sand Rappy": 12,
+          "Goran": 12,
+          "Zu": 6,
+          "Satellite Lizard": 6,
+          "Merissa A": 4,
+          "Goran Detonator": 3,
+          "Pyro Goran": 2,
+          "Girtablulu": 1
+        }
+      },
+      "9": {
+        "floor_name": "Meteor Impact Site",
+        "floor_id": 9,
+        "total": 1,
+        "monsters": {
+          "Shambertin / Kondrieu": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Realms of War",
+    "total": 820,
+    "monsters": {
+      "Sand Rappy": 131,
+      "Yowie": 131,
+      "Merissa A": 82,
+      "Zu": 74,
+      "Goran Detonator": 64,
+      "Goran": 63,
+      "Pyro Goran": 58,
+      "Boota": 45,
+      "Satellite Lizard": 42,
+      "Ze Boota": 39,
+      "Ba Boota": 36,
+      "Astark": 28,
+      "Dorphon": 15,
+      "Girtablulu": 12
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 150,
+        "monsters": {
+          "Yowie": 35,
+          "Sand Rappy": 34,
+          "Boota": 25,
+          "Ze Boota": 18,
+          "Ba Boota": 18,
+          "Astark": 8,
+          "Zu": 6,
+          "Satellite Lizard": 6
+        }
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 180,
+        "monsters": {
+          "Sand Rappy": 32,
+          "Yowie": 32,
+          "Ze Boota": 21,
+          "Astark": 20,
+          "Boota": 20,
+          "Ba Boota": 18,
+          "Dorphon": 15,
+          "Zu": 14,
+          "Satellite Lizard": 8
+        }
+      },
+      "6": {
+        "floor_name": "Subterranean Desert 1",
+        "floor_id": 6,
+        "total": 150,
+        "monsters": {
+          "Merissa A": 30,
+          "Goran": 26,
+          "Yowie": 26,
+          "Sand Rappy": 23,
+          "Pyro Goran": 18,
+          "Goran Detonator": 16,
+          "Zu": 6,
+          "Satellite Lizard": 5
+        }
+      },
+      "7": {
+        "floor_name": "Subterranean Desert 2",
+        "floor_id": 7,
+        "total": 180,
+        "monsters": {
+          "Zu": 30,
+          "Goran Detonator": 28,
+          "Goran": 22,
+          "Pyro Goran": 21,
+          "Merissa A": 21,
+          "Yowie": 18,
+          "Sand Rappy": 15,
+          "Satellite Lizard": 13,
+          "Girtablulu": 12
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 160,
+        "monsters": {
+          "Merissa A": 31,
+          "Sand Rappy": 27,
+          "Goran Detonator": 20,
+          "Yowie": 20,
+          "Pyro Goran": 19,
+          "Zu": 18,
+          "Goran": 15,
+          "Satellite Lizard": 10
+        }
+      }
+    }
+  },
+  {
+    "name": "War of Limits 1",
+    "total": 246,
+    "monsters": {
+      "Satellite Lizard": 51,
+      "Boota": 47,
+      "Sand Rappy": 42,
+      "Astark": 42,
+      "Yowie": 25,
+      "Zu": 12,
+      "Ze Boota": 12,
+      "Ba Boota": 10,
+      "Dorphon": 5
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 246,
+        "monsters": {
+          "Satellite Lizard": 51,
+          "Boota": 47,
+          "Sand Rappy": 42,
+          "Astark": 42,
+          "Yowie": 25,
+          "Zu": 12,
+          "Ze Boota": 12,
+          "Ba Boota": 10,
+          "Dorphon": 5
+        }
+      }
+    }
+  },
+  {
+    "name": "War of Limits 2",
+    "total": 323,
+    "monsters": {
+      "Satellite Lizard": 92,
+      "Ze Boota": 74,
+      "Boota": 39,
+      "Sand Rappy": 37,
+      "Yowie": 37,
+      "Ba Boota": 25,
+      "Astark": 11,
+      "Zu": 5,
+      "Dorphon": 3
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 323,
+        "monsters": {
+          "Satellite Lizard": 92,
+          "Ze Boota": 74,
+          "Boota": 39,
+          "Sand Rappy": 37,
+          "Yowie": 37,
+          "Ba Boota": 25,
+          "Astark": 11,
+          "Zu": 5,
+          "Dorphon": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "War of Limits 3",
+    "total": 358,
+    "monsters": {
+      "Goran": 87,
+      "Boota": 85,
+      "Yowie": 66,
+      "Sand Rappy": 47,
+      "Satellite Lizard": 37,
+      "Pyro Goran": 26,
+      "Zu": 6,
+      "Goran Detonator": 4
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "6": {
+        "floor_name": "Subterranean Desert 1",
+        "floor_id": 6,
+        "total": 358,
+        "monsters": {
+          "Goran": 87,
+          "Boota": 85,
+          "Yowie": 66,
+          "Sand Rappy": 47,
+          "Satellite Lizard": 37,
+          "Pyro Goran": 26,
+          "Zu": 6,
+          "Goran Detonator": 4
+        }
+      }
+    }
+  },
+  {
+    "name": "War of Limits 4",
+    "total": 203,
+    "monsters": {
+      "Goran": 37,
+      "Pyro Goran": 36,
+      "Satellite Lizard": 30,
+      "Merissa A": 28,
+      "Sand Rappy": 26,
+      "Yowie": 26,
+      "Goran Detonator": 16,
+      "Girtablulu": 3,
+      "Zu": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "7": {
+        "floor_name": "Subterranean Desert 2",
+        "floor_id": 7,
+        "total": 203,
+        "monsters": {
+          "Goran": 37,
+          "Pyro Goran": 36,
+          "Satellite Lizard": 30,
+          "Merissa A": 28,
+          "Sand Rappy": 26,
+          "Yowie": 26,
+          "Goran Detonator": 16,
+          "Girtablulu": 3,
+          "Zu": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "War of Limits 5",
+    "total": 238,
+    "monsters": {
+      "Goran": 49,
+      "Satellite Lizard": 48,
+      "Sand Rappy": 44,
+      "Yowie": 41,
+      "Pyro Goran": 19,
+      "Zu": 15,
+      "Merissa A": 11,
+      "Goran Detonator": 7,
+      "Girtablulu": 4
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 238,
+        "monsters": {
+          "Goran": 49,
+          "Satellite Lizard": 48,
+          "Sand Rappy": 44,
+          "Yowie": 41,
+          "Pyro Goran": 19,
+          "Zu": 15,
+          "Merissa A": 11,
+          "Goran Detonator": 7,
+          "Girtablulu": 4
+        }
+      }
+    }
+  },
+  {
+    "name": "荒野のくちばし亭 Ver2",
+    "total": 0,
+    "monsters": {},
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "Crater Route 1",
+        "floor_id": 1,
+        "total": 0,
+        "monsters": {}
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 0,
+        "monsters": {}
+      }
+    }
+  }
+]

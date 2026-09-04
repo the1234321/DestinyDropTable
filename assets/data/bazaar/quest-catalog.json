@@ -1,176 +1,1289 @@
 {
   "EP1": {
-    "Destiny": [
-      "Wrath of Forest",
-      "Wrath of Forest",
-      "Tragedy in Chaos",
-      "Caverns of Gloom",
-      "Harmony of Despair I",
-      "Harmony of Despair II",
-      "Random Attack Xrd Stage",
-      "Forest Offensive",
-      "Mines Offensive",
-      "Path to Salvation",
-      "Simulator 2.0",
-      "Ruined Serenity",
-      "Science Project",
-      "Shattered Dreams",
-      "Spring Cleaning",
-      "Tyrell's Last Hope",
-      "Sugoroku",
-      "Strange Sighting",
-      "Christmas Fiasco EP1",
-      "Maximum Attack S"
-    ],
-    "Event": [
-      "MAXIMUM ATTACK 1 Ver2",
-      "Maximum Attack 4th Stage -A-",
-      "Maximum Attack 4th Stage -B-",
-      "Maximum Attack 4th Stage -C-",
-      "総督の贈り物",
-      "AOL CUP -Sunset Base-",
-      "ホワイトデーイベント"
-    ],
-    "Extermination": [
-      "Endless Nightmare #1",
-      "Endless Nightmare #2",
-      "Endless Nightmare #3",
-      "Endless Nightmare #4",
-      "Mop-up Operation #1",
-      "Mop-up Operation #2",
-      "Mop-up Operation #3",
-      "Mop-up Operation #4",
-      "Today's Rate"
-    ],
-    "Special": [
-      "Training Room",
-      "Beyond the Veil",
-      "Toward the Multiverse [Lv,I]",
-      "Toward the Multiverse [Lv.II]",
-      "Beyond the Mainframe",
-      "Beyond the Mainframe [Extreme]",
-      "Beyond the Nightmare",
-      "Silent Nightmare [Raid]",
-      "Silent Nightmare [Boss only]",
-      "Distorted  Nightmare [Raid]",
-      "The Ravenous Predator [Raid]"
-    ],
-    "Retrieval": [
-      "Lost HEAT SWORD",
-      "Lost ICE SPINNER",
-      "Lost SOUL BLADE",
-      "Lost HAVOC VULCAN",
-      "Lost HELL PALLASH",
-      "Fragments of Memory",
-      "Gallon's Treachery",
-      "Rappy's Holiday"
-    ],
-    "VR": [
-      "Towards the Future",
-      "VR Test Destiny: Sandstorm"
-    ]
+    "Destiny": {
+      "Wrath of Forest ⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": ["第一个房间有大量怪物，可以用来升级和刷活动掉落"],
+          "en": ["The first room has a large number of monsters, which can be used to level up and farm event drops."]
+        }
+      },
+      "Tragedy in Chaos ⭐⭐⭐": {
+        "requirement": "Weapons Crystal Badge",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Caverns of Gloom ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Harmony of Despair I ⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "Weapons Crystal Badge",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Harmony of Despair II ⭐⭐⭐⭐⭐": {
+        "requirement": "Weapons Crystal Badge",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Random Attack Xrd Stage ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Forest Offensive ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Mines Offensive ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Path to Salvation ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Simulator 2.0 ⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Ruined Serenity": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Science Project ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Shattered Dreams ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Spring Cleaning": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Tyrell's Last Hope": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Strange Sighting ⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Christmas Fiasco EP1 ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack S ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Event": {
+      "MAXIMUM ATTACK 1 Ver2": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -A- ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -B- ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -C- ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "総督の贈り物": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "ホワイトデーイベント": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Extermination": {
+      "Endless Nightmare #1 ⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Endless Nightmare #2 ⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Endless Nightmare #3 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Endless Nightmare #4 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Mop-up Operation #1 ⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Mop-up Operation #2 ⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Mop-up Operation #3 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Mop-up Operation #4 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Today's Rate": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Special": {
+      "Training Room": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Beyond the Veil ⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Toward the Multiverse [Lv.I] ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Toward the Multiverse [Lv.II] ⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Toward the Multiverse [Lv.III] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Beyond the Mainframe ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Beyond the Mainframe [Extreme] ⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Silent Nightmare [Raid] ⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Silent Nightmare [Boss only]": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Distorted Nightmare [Raid]": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "The Ravenous Predator [Raid] ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Beyond the Nightmare ⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Nightmare Dominator VI": {
+            "Primal Photon Sphere": "1/45"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Retrieval": {
+      "Lost HEAT SWORD ⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Lost ICE SPINNER ⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Lost SOUL BLADE ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Lost HAVOC VULCAN ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Lost HELL PALLASCH ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Fragments of Memory": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Gallon's Treachery": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Rappy's Holiday": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "VR": {
+      "Towards the Future ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "VR Test Destiny: Sandstorm ⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "Weapons Crystal Badge",
+        "drops": {
+          "Meri Noir": {
+            "Red Crystal": "1/204"
+          },
+          "Ba Boota": {
+            "Photon Drop": "1/500"
+          },
+          "Goran Detonator": {
+            "Excalibur": "1/1800"
+          },
+          "Pazuzu": {
+            "Elenor Lv5": "1/1800"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Mini Event":{
+      "Lost SOUL RIPPER [Extreme] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    }
   },
   "EP2": {
-    "Destiny": [
-      "Dolmolm Research",
-      "Walking through Flames",
-      "The Eternal Age",
-      "Raid on Central Tower",
-      "Weather Effects",
-      "MAXIMUM ATTACK S",
-      "Random Attack Xrd Stage",
-      "Gal Da Val's Darkness",
-      "Revisiting Darkness",
-      "New MSB",
-      "Seat of the Heart",
-      "World of Illusion/pso",
-      "Christmas Fiasco EP2",
-      "Defend the main room!"
-    ],
-    "Special": [
-      "VR Test FINAL: Catastrophe",
-      "VR Test EXTRA: Singularity",
-      "Hallowed World [Master]",
-      "The Discontrolled Tower [Raid]",
-      "The Manipulated Tower [Raid]",
-      "The Phantasmal Dimension",
-      "The Starlight Tower [Raid]"
-    ],
-    "Event": [
-      "Pioneer Christmas",
-      "夢からの使者",
-      "Beach Laughter",
-      "Pioneer Halloween",
-      "Maximum Attack 2",
-      "Maximum Attack 4th Stage -2A-",
-      "Maximum Attack 4th Stage -2B-",
-      "Maximum Attack 4th Stage -2C-",
-      "Singing by the Beach",
-      "Festivity On The Beach"
-    ],
-    "Extermination": [
-      "Phantasmal World #1",
-      "Phantasmal World #2",
-      "Phantasmal World #3",
-      "Phantasmal World #4"
-    ],
-    "Retrieval": [
-      "LDS +timer",
-      "Lost  RIOT RAYGUN+timer",
-      "Tian's Montreaux Final"
-    ],
-    "Shop": [
-      "Gallon's Shop",
-      "The Phantastic Bazaar"
-    ],
-    "Tower": [
-      "The East Tower",
-      "The West Tower"
-    ],
-    "VR": [
-      "Respective Tomorrow",
-      "Reach for the dream",
-      "VR Test Destiny: Seabed",
-      "VR Test Destiny: Underground",
-      "VR Test Destiny: Meteor Impact"
-    ]
+    "Destiny": {
+      "Dolmolm Research": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Walking through Flames ⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "Weapons Crystal Badge",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "The Eternal Age ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Raid on Central Tower ⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Weather Effects": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "MAXIMUM ATTACK S ⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Random Attack Xrd Stage ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Gal Da Val`s Darkness ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Revisiting Darkness ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "New MSB ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Seat of the Heart": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "World of Illusion ⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Christmas Fiasco EP2 ⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Defend the main room! ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Special": {
+      "VR Test EXTRA: Singularity ⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "The Manipulated Tower [Raid] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "VR Test FINAL: Catastrophe ⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "Weapons Crystal Badge",
+        "drops": {
+          "Eclipse Dragon": {
+            "Darkness Photon Sphere": "1/45"
+          },
+          "Deos Behemoth": {
+            "Darkness Photon Sphere": "1/45"
+          },
+          "Liquid Monkey": {
+            "Photon Drop ": "1/500"
+          },
+          "Vol Gibbon": {
+            "Photon Drop": "1/500"
+          },
+          "Lavaross": {
+            "Photon Token": "1/500"
+          },
+          "Astark": {
+            "SPREAD NEEDLE": "1/787"
+          },
+          "Pazuzu": {
+            "TWIN CYCLONE": "1/1137"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Hallowed World [Master] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Hallowed Reaper": {
+            "Hallowed Jack-O'-Lantern": "1/1170"
+          },
+          "Forbidden Saber": {
+            "Millennium Photon Core": "1/350"
+          },
+          "Queen of Gal Da Val": {
+            "Millennium Photon Core": "1/450"
+          },
+          "Epsilon": {
+            "Raster Scope": "1/1559"
+          },
+          "Del Lily": {
+            "State/Maintenance": "1/2559"
+          },
+          "Delbiter": {
+            "TWIN RIKA'S CLAW": "1/3150"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "The Discontrolled Tower [Raid] ⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Manipulator III": {
+            "Cladding of Manipulator III ": "1/10"
+          },
+          "Mericus": {
+            "Syncesta": "1/787",
+            "State/Maintenance": "1/1865"
+          },
+          "Astark": {
+            "Trap/Search 1/787 或 Yasminkov 9000M": "1/787"
+          },
+          "Dorphon Eclair": {
+            "Photon Token 1/400 或 STORMRENDER": "1/787"
+          },
+          "Pazuzu": {
+            "Photon Token 1/400 或 Dark Matter": "1/900"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "The Phantasmal Dimension ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Astark": {
+            "Photon Token 1/500": ""
+          },
+          "Dorphon Eclair": {
+            "Dark Matter 1/1024": ""
+          },
+          "Liquid Monkey / Vol Gibbon": {
+            "Photon Token 1/1000": ""
+          },
+          "Sinow Zoa": {
+            "Grave Digger 1/1760": "除 Viridia 外"
+          },
+          "Sinow Zele": {
+            "Last Emperor 1/1760": ""
+          },
+          "Ill Gill": {
+            "Millennium Photon Core 1/900": ""
+          },
+          "Pazuzu": {
+            "Millennium Photon Core 1/666": ""
+          },
+          "Epsilon": {
+            "Millennium Photon Core 1/666": "除 Oran 外",
+            "RASTER SCOPE 1/1559": "Oran"
+          },
+          "Millennium Saber / Millennium Sorcerer / Lavaross": {
+            "Millennium Photon Core 1/500": ""
+          },
+          "Queen of Gal Da Val / D-Virus Morfos / Dark Nebulas": {
+            "Millennium Photon Core 1/450": ""
+          },
+          "Varazopt ver.D": {
+            "Millennium Photon Core 1/204": ""
+          },
+          "Spirit Flow": {
+            "Millennium Photon Core 1/170": ""
+          },
+          "Deos Behemoth": {
+            "CHAOS HALO 1/51": ""
+          },
+          "Bar Dalus": {
+            "PHOENIX WINGS 1/51": ""
+          },
+          "Eclipse Dragon": {
+            "CRYSTALLIZED WINGS 1/51": ""
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "The Starlight Tower [Raid] ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Administrator": {
+            "Core of Administrator 1/12": "",
+            "DIVINE BLADE 1/28": ""
+          },
+          "Forbidden Scythe IV": {
+            "Millennium Photon Core 1/64": ""
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Event": {
+      "夢からの使者": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Pioneer Halloween": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 2": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -2A- ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -2B- ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -2C- ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Festivity On The Beach": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Extermination": {
+      "Phantasmal World #1 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Phantasmal World #2 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Phantasmal World #3 ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Phantasmal World #4 ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Retrieval": {
+      "Lost DEVIL'S SCEPTER": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Lost RIOT RAYGUN": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Tian`s Montreaux Final": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Tower": {
+      "The East Tower": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "The West Tower": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "VR": {
+      "Respective Tomorrow ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Reach for the Dream": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "VR Test Destiny: Seabed ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "VR Test Destiny: Underground ⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "Weapons Crystal Badge",
+        "drops": {
+          "BOSS1": {
+            "State/Maintenance 1/85": "全 ID"
+          },
+          "BOSS2": {
+            "PB/FLOW 1/73": "全 ID"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "VR Test Destiny: Meteor Impact ⭐⭐⭐⭐⭐⭐": {
+        "requirement": "Weapons Crystal Badge",
+        "reward": "",
+        "drops": {
+          "Epsilon": {
+            "Asteroid Engine 1/2100": "全 ID"
+          },
+          "Astark": {
+            "Eternal Night 1/2100": "全 ID"
+          },
+          "Dorphon Eclair": {
+            "Planet Eater 1/1030": "全 ID"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    }
   },
   "EP4": {
-    "Destiny": [
-      "Neo Maximum Attack: Episode IV",
-      "Christmas Fiasco EP4",
-      "Point of Disaster",
-      "MA4DMD",
-      "Maximum Attack S",
-      "Brink of Oblivion"
-    ],
-    "Event": [
-      "Claire's Deal 5",
-      "LOGiN presents 勇場のマッチレース",
-      "Maximum Attack 4th Stage -A-",
-      "Maximum Attack 4th Stage -B-",
-      "Maximum Attack 4th Stage -C-",
-      "荒野のくくちばし亭Ver2"
-    ],
-    "Extermination": [
-      "New Mop-Up Operation #1",
-      "New Mop-Up Operation #2",
-      "New Mop-Up Operation #3",
-      "New Mop-Up Operation #4",
-      "New Mop-Up Operation #5",
-      "War of Limits 1",
-      "War of Limits 2",
-      "War of Limits 3",
-      "War of Limits 4",
-      "War of Limits 5"
-    ],
-    "VR": [
-      "Maximum Attack 3 Ver2",
-      "Realms of War",
-      "Beyond the Horizon"
-    ],
-    "Shop": [
-      "Item Present"
-    ]
+    "Destiny": {
+      "Neo Maximum Attack: Episode IV ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Christmas Fiasco EP4 ⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Point of Disaster ⭐⭐" : {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "MA4DMD": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack S ⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Brink of Oblivion ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Event": {
+      "Claire's Deal 5": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "LOGiN presents 勇場のマッチレース": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -A- ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -B- ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Maximum Attack 4th Stage -C- ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Extermination": {
+      "New Mop-Up Operation #1 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "New Mop-Up Operation #2 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "New Mop-Up Operation #3 ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "New Mop-Up Operation #4 ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "New Mop-Up Operation #5 ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "War of Limits 1 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "War of Limits 2 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "War of Limits 3 ⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "War of Limits 4 ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "War of Limits 5 ⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "VR": {
+      "MAXIMUM ATTACK 3 Ver2": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Realms of War": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Beyond the Horizon": {
+        "requirement": "",
+        "reward": "",
+        "drops": {},
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    }
   }
 }

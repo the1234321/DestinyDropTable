@@ -1,0 +1,3244 @@
+[
+  {
+    "name"    : "Caverns of Gloom",
+    "total"   : 1021,
+    "monsters": {
+      "Poison Lily / Ob Lily"            : 198,
+      "Evil Shark / Vulmer"              : 166,
+      "Pal Shark / Govulmer"             : 150,
+      "Guil Shark / Melqueek"            : 140,
+      "Nano Dragon / Sil Dragon"         : 105,
+      "Grass Assassin / Crimson Assassin":  96,
+      "Pofuilly Slime"                   :  91,
+      "Pan Arms"                         :  73,
+      "De Rol Le / Dal Ra Lie"           :   1,
+      "Dark Falz"                        :   1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "3" : {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 224,
+        "monsters"  : {
+          "Evil Shark / Vulmer"              : 49,
+          "Pal Shark / Govulmer"             : 45,
+          "Guil Shark / Melqueek"            : 40,
+          "Poison Lily / Ob Lily"            : 35,
+          "Pan Arms"                         : 23,
+          "Grass Assassin / Crimson Assassin": 20,
+          "Nano Dragon / Sil Dragon"         : 12
+        }
+      },
+      "4" : {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 485,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"            : 89,
+          "Evil Shark / Vulmer"              : 76,
+          "Grass Assassin / Crimson Assassin": 76,
+          "Pal Shark / Govulmer"             : 70,
+          "Guil Shark / Melqueek"            : 68,
+          "Pofuilly Slime"                   : 54,
+          "Nano Dragon / Sil Dragon"         : 52
+        }
+      },
+      "5" : {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 310,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"   : 74,
+          "Pan Arms"                : 50,
+          "Nano Dragon / Sil Dragon": 41,
+          "Evil Shark / Vulmer"     : 41,
+          "Pofuilly Slime"          : 37,
+          "Pal Shark / Govulmer"    : 35,
+          "Guil Shark / Melqueek"   : 32
+        }
+      },
+      "10": {"floor_name": "Ruins 3", "floor_id": 10, "total": 0, "monsters": {}},
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"De Rol Le / Dal Ra Lie": 1}
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Christmas Fiasco EP1",
+    "total"   : 622,
+    "monsters": {
+      "Poison Lily / Ob Lily"            : 56,
+      "Canadine / Canabine"              : 38,
+      "Garanz / Baranz"                  : 37,
+      "So Dimenian / Del-D"              : 34,
+      "Guil Shark / Melqueek"            : 32,
+      "Grass Assassin / Crimson Assassin": 31,
+      "Nano Dragon / Sil Dragon"         : 31,
+      "Gillchic / Gillchich"             : 31,
+      "Dimenian / Arlan"                 : 29,
+      "Evil Shark / Vulmer"              : 28,
+      "Pal Shark / Govulmer"             : 28,
+      "Chaos Bringer / Dark Bringer"     : 27,
+      "Claw"                             : 27,
+      "Pofuilly Slime"                   : 25,
+      "La Dimenian / Merlan"             : 24,
+      "Chaos Sorcerer / Gran Sorcerer"   : 23,
+      "Dark Belra / Indi Belra"          : 22,
+      "Dubchic / Dubchich"               : 20,
+      "Bulclaw"                          : 20,
+      "Sinow Beat / Sinow Blue"          : 17,
+      "Sinow Gold / Sinow Red"           : 14,
+      "Dark Gunner / Death Gunner"       : 12,
+      "Canane / Canune"                  :  8,
+      "Dubwitch"                         :  5
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "4" : {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 231,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"            : 56,
+          "Guil Shark / Melqueek"            : 32,
+          "Grass Assassin / Crimson Assassin": 31,
+          "Nano Dragon / Sil Dragon"         : 31,
+          "Evil Shark / Vulmer"              : 28,
+          "Pal Shark / Govulmer"             : 28,
+          "Pofuilly Slime"                   : 25
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 170,
+        "monsters"  : {
+          "Canadine / Canabine"    : 38,
+          "Garanz / Baranz"        : 37,
+          "Gillchic / Gillchich"   : 31,
+          "Dubchic / Dubchich"     : 20,
+          "Sinow Beat / Sinow Blue": 17,
+          "Sinow Gold / Sinow Red" : 14,
+          "Canane / Canune"        :  8,
+          "Dubwitch"               :  5
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 221,
+        "monsters"  : {
+          "So Dimenian / Del-D"           : 34,
+          "Dimenian / Arlan"              : 29,
+          "Chaos Bringer / Dark Bringer"  : 27,
+          "Claw"                          : 27,
+          "La Dimenian / Merlan"          : 24,
+          "Chaos Sorcerer / Gran Sorcerer": 23,
+          "Dark Belra / Indi Belra"       : 22,
+          "Bulclaw"                       : 20,
+          "Dark Gunner / Death Gunner"    : 12
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Forest Offensive",
+    "total"   : 103,
+    "monsters": {
+      "Chaos Bringer / Dark Bringer"     : 23,
+      "Hildebear / Hildelta"             : 18,
+      "Monest / Mothvist"                : 11,
+      "Booma / Bartle"                   :  8,
+      "Grass Assassin / Crimson Assassin":  8,
+      "Gigobooma / Tollaw"               :  7,
+      "Sinow Beat / Sinow Blue"          :  6,
+      "Gobooma / Barble"                 :  5,
+      "Sinow Gold / Sinow Red"           :  4,
+      "Barbarous Wolf / Gulgus-gue"      :  3,
+      "Guil Shark / Melqueek"            :  3,
+      "Rag Rappy / El Rappy"             :  2,
+      "Savage Wolf / Gulgus"             :  2,
+      "Delsaber"                         :  2,
+      "Dragon / Sil Dragon"              :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 50,
+        "monsters"  : {
+          "Hildebear / Hildelta"       : 12,
+          "Monest / Mothvist"          : 11,
+          "Booma / Bartle"             :  8,
+          "Gigobooma / Tollaw"         :  7,
+          "Gobooma / Barble"           :  5,
+          "Barbarous Wolf / Gulgus-gue":  3,
+          "Rag Rappy / El Rappy"       :  2,
+          "Savage Wolf / Gulgus"       :  2
+        }
+      },
+      "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 1, "monsters": {"Dragon / Sil Dragon": 1} },
+      "16": {
+        "floor_name": "BA Spaceship",
+        "floor_id"  : 16,
+        "total"     : 52,
+        "monsters"  : {
+          "Chaos Bringer / Dark Bringer"     : 23,
+          "Grass Assassin / Crimson Assassin":  8,
+          "Hildebear / Hildelta"             :  6,
+          "Sinow Beat / Sinow Blue"          :  6,
+          "Sinow Gold / Sinow Red"           :  4,
+          "Guil Shark / Melqueek"            :  3,
+          "Delsaber"                         :  2
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Harmony of Despair I",
+    "total"   : 1180,
+    "monsters": {
+      "Claw"                          : 238,
+      "La Dimenian / Merlan"          : 167,
+      "Delsaber"                      : 157,
+      "Dimenian / Arlan"              : 143,
+      "So Dimenian / Del-D"           : 132,
+      "Bulclaw"                       : 123,
+      "Chaos Bringer / Dark Bringer"  :  84,
+      "Dark Gunner / Death Gunner"    :  58,
+      "Dark Belra / Indi Belra"       :  44,
+      "Chaos Sorcerer / Gran Sorcerer":  25,
+      "De Rol Le / Dal Ra Lie"        :   1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8" : {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 423,
+        "monsters"  : {
+          "Claw"                          : 108,
+          "La Dimenian / Merlan"          :  55,
+          "Dimenian / Arlan"              :  53,
+          "Delsaber"                      :  52,
+          "Bulclaw"                       :  45,
+          "Dark Belra / Indi Belra"       :  44,
+          "So Dimenian / Del-D"           :  41,
+          "Chaos Sorcerer / Gran Sorcerer":  25
+        }
+      },
+      "9" : {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 756,
+        "monsters"  : {
+          "Claw"                        : 130,
+          "La Dimenian / Merlan"        : 112,
+          "Delsaber"                    : 105,
+          "So Dimenian / Del-D"         :  91,
+          "Dimenian / Arlan"            :  90,
+          "Chaos Bringer / Dark Bringer":  84,
+          "Bulclaw"                     :  78,
+          "Dark Gunner / Death Gunner"  :  58
+        }
+      },
+      "10": {"floor_name": "Ruins 3", "floor_id": 10, "total": 0, "monsters": {}},
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"De Rol Le / Dal Ra Lie": 1}
+      }
+    }
+  },
+  {
+    "name"    : "Harmony of Despair II",
+    "total"   : 938,
+    "monsters": {
+      "La Dimenian / Merlan"          : 146,
+      "Chaos Bringer / Dark Bringer"  : 136,
+      "Dark Belra / Indi Belra"       : 126,
+      "Dimenian / Arlan"              : 113,
+      "So Dimenian / Del-D"           : 109,
+      "Bulclaw"                       : 100,
+      "Claw"                          :  99,
+      "Chaos Sorcerer / Gran Sorcerer":  79,
+      "Dark Gunner / Death Gunner"    :  26,
+      "Dark Falz"                     :   1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "9" : {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 669,
+        "monsters"  : {
+          "La Dimenian / Merlan"          : 110,
+          "So Dimenian / Del-D"           :  89,
+          "Chaos Bringer / Dark Bringer"  :  88,
+          "Dark Belra / Indi Belra"       :  87,
+          "Claw"                          :  79,
+          "Bulclaw"                       :  71,
+          "Dimenian / Arlan"              :  69,
+          "Chaos Sorcerer / Gran Sorcerer":  57,
+          "Dark Gunner / Death Gunner"    :  17
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 268,
+        "monsters"  : {
+          "Chaos Bringer / Dark Bringer"  : 48,
+          "Dimenian / Arlan"              : 44,
+          "Dark Belra / Indi Belra"       : 39,
+          "La Dimenian / Merlan"          : 36,
+          "Bulclaw"                       : 29,
+          "Chaos Sorcerer / Gran Sorcerer": 22,
+          "Claw"                          : 20,
+          "So Dimenian / Del-D"           : 20,
+          "Dark Gunner / Death Gunner"    :  9
+        }
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Maximum Attack S",
+    "total"   : 448,
+    "monsters": {
+      "Poison Lily / Ob Lily"            : 60,
+      "Guil Shark / Melqueek"            : 37,
+      "Hildebear / Hildelta"             : 35,
+      "Chaos Sorcerer / Gran Sorcerer"   : 28,
+      "Delsaber"                         : 28,
+      "Chaos Bringer / Dark Bringer"     : 26,
+      "So Dimenian / Del-D"              : 24,
+      "Grass Assassin / Crimson Assassin": 22,
+      "Sinow Gold / Sinow Red"           : 22,
+      "Pan Arms"                         : 20,
+      "Dark Belra / Indi Belra"          : 19,
+      "Pal Shark / Govulmer"             : 18,
+      "Sinow Beat / Sinow Blue"          : 18,
+      "Evil Shark / Vulmer"              : 17,
+      "Nano Dragon / Sil Dragon"         : 17,
+      "Dimenian / Arlan"                 : 15,
+      "La Dimenian / Merlan"             : 14,
+      "Dark Gunner / Death Gunner"       : 13,
+      "Bulclaw"                          :  9,
+      "Pofuilly Slime"                   :  4
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "5" : {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 160,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"   : 60,
+          "Guil Shark / Melqueek"   : 24,
+          "Pan Arms"                : 20,
+          "Pal Shark / Govulmer"    : 18,
+          "Evil Shark / Vulmer"     : 17,
+          "Nano Dragon / Sil Dragon": 17,
+          "Pofuilly Slime"          :  4
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 129,
+        "monsters"  : {
+          "Chaos Sorcerer / Gran Sorcerer": 28,
+          "So Dimenian / Del-D"           : 24,
+          "Dark Belra / Indi Belra"       : 19,
+          "Dimenian / Arlan"              : 15,
+          "La Dimenian / Merlan"          : 14,
+          "Dark Gunner / Death Gunner"    : 13,
+          "Bulclaw"                       :  9,
+          "Chaos Bringer / Dark Bringer"  :  5
+        }
+      },
+      "16": {
+        "floor_name": "BA Spaceship",
+        "floor_id"  : 16,
+        "total"     : 159,
+        "monsters"  : {
+          "Hildebear / Hildelta"             : 35,
+          "Delsaber"                         : 28,
+          "Grass Assassin / Crimson Assassin": 22,
+          "Sinow Gold / Sinow Red"           : 22,
+          "Chaos Bringer / Dark Bringer"     : 21,
+          "Sinow Beat / Sinow Blue"          : 18,
+          "Guil Shark / Melqueek"            : 13
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Mines Offensive",
+    "total"   : 169,
+    "monsters": {
+      "Garanz / Baranz"        : 50,
+      "Gillchic / Gillchich"   : 38,
+      "Sinow Beat / Sinow Blue": 26,
+      "Sinow Gold / Sinow Red" : 20,
+      "Dubchic / Dubchich"     : 18,
+      "Canadine / Canabine"    : 11,
+      "Canane / Canune"        :  6
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "6": {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 84,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 26,
+          "Garanz / Baranz"        : 21,
+          "Canadine / Canabine"    : 11,
+          "Sinow Beat / Sinow Blue":  9,
+          "Sinow Gold / Sinow Red" :  9,
+          "Canane / Canune"        :  4,
+          "Dubchic / Dubchich"     :  4
+        }
+      },
+      "7": {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 85,
+        "monsters"  : {
+          "Garanz / Baranz"        : 29,
+          "Sinow Beat / Sinow Blue": 17,
+          "Dubchic / Dubchich"     : 14,
+          "Gillchic / Gillchich"   : 12,
+          "Sinow Gold / Sinow Red" : 11,
+          "Canane / Canune"        :  2
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Path to Salvation",
+    "total"   : 596,
+    "monsters": {
+      "So Dimenian / Del-D"           : 116,
+      "Delsaber"                      :  77,
+      "Dimenian / Arlan"              :  70,
+      "Claw"                          :  69,
+      "La Dimenian / Merlan"          :  67,
+      "Bulclaw"                       :  49,
+      "Dark Belra / Indi Belra"       :  44,
+      "Chaos Bringer / Dark Bringer"  :  38,
+      "Dark Gunner / Death Gunner"    :  32,
+      "Chaos Sorcerer / Gran Sorcerer":  28,
+      "Dark Falz"                     :   1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8" : {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 326,
+        "monsters"  : {
+          "So Dimenian / Del-D"           : 65,
+          "Delsaber"                      : 59,
+          "Dimenian / Arlan"              : 47,
+          "La Dimenian / Merlan"          : 47,
+          "Claw"                          : 35,
+          "Bulclaw"                       : 31,
+          "Dark Belra / Indi Belra"       : 26,
+          "Chaos Sorcerer / Gran Sorcerer": 16
+        }
+      },
+      "9" : {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 114,
+        "monsters"  : {
+          "Chaos Bringer / Dark Bringer": 25,
+          "Delsaber"                    : 18,
+          "Claw"                        : 16,
+          "So Dimenian / Del-D"         : 14,
+          "Dark Gunner / Death Gunner"  : 12,
+          "Bulclaw"                     : 10,
+          "Dimenian / Arlan"            :  9,
+          "La Dimenian / Merlan"        :  8
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 155,
+        "monsters"  : {
+          "So Dimenian / Del-D"           : 37,
+          "Dark Gunner / Death Gunner"    : 20,
+          "Claw"                          : 18,
+          "Dark Belra / Indi Belra"       : 18,
+          "Dimenian / Arlan"              : 14,
+          "Chaos Bringer / Dark Bringer"  : 13,
+          "Chaos Sorcerer / Gran Sorcerer": 12,
+          "La Dimenian / Merlan"          : 12,
+          "Bulclaw"                       :  8
+        }
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Random Attack Xrd Stage",
+    "total"   : 706,
+    "monsters": {
+      "Grass Assassin / Crimson Assassin": 81,
+      "Chaos Bringer / Dark Bringer"     : 49,
+      "Poison Lily / Ob Lily"            : 45,
+      "Gillchic / Gillchich"             : 44,
+      "Sinow Gold / Sinow Red"           : 43,
+      "Dubchic / Dubchich"               : 39,
+      "Sinow Beat / Sinow Blue"          : 36,
+      "Dimenian / Arlan"                 : 35,
+      "Guil Shark / Melqueek"            : 34,
+      "Pal Shark / Govulmer"             : 30,
+      "So Dimenian / Del-D"              : 28,
+      "La Dimenian / Merlan"             : 25,
+      "Evil Shark / Vulmer"              : 24,
+      "Garanz / Baranz"                  : 22,
+      "Dark Belra / Indi Belra"          : 22,
+      "Delsaber"                         : 21,
+      "Nano Dragon / Sil Dragon"         : 17,
+      "Hildebear / Hildelta"             : 16,
+      "Dark Gunner / Death Gunner"       : 15,
+      "Chaos Sorcerer / Gran Sorcerer"   : 14,
+      "Bulclaw"                          : 14,
+      "Pan Arms"                         : 12,
+      "Canadine / Canabine"              : 10,
+      "Canane / Canune"                  :  9,
+      "Claw"                             :  8,
+      "Dubwitch"                         :  4,
+      "Dragon / Sil Dragon"              :  1,
+      "De Rol Le / Dal Ra Lie"           :  1,
+      "Vol Opt / Vol Opt ver.2"          :  1,
+      "Dark Falz"                        :  1,
+      "Hildeblue"                        :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "2" : {"floor_name": "Forest 2", "floor_id": 2, "total": 0, "monsters": {}},
+      "3" : {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 179,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"            : 45,
+          "Pal Shark / Govulmer"             : 30,
+          "Guil Shark / Melqueek"            : 28,
+          "Evil Shark / Vulmer"              : 24,
+          "Grass Assassin / Crimson Assassin": 23,
+          "Nano Dragon / Sil Dragon"         : 17,
+          "Pan Arms"                         : 12
+        }
+      },
+      "5" : {"floor_name": "Cave 3", "floor_id": 5, "total": 0, "monsters": {}},
+      "6" : {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 170,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 44,
+          "Dubchic / Dubchich"     : 39,
+          "Sinow Gold / Sinow Red" : 27,
+          "Garanz / Baranz"        : 22,
+          "Sinow Beat / Sinow Blue": 15,
+          "Canadine / Canabine"    : 10,
+          "Canane / Canune"        :  9,
+          "Dubwitch"               :  4
+        }
+      },
+      "7" : {"floor_name": "Mine 2", "floor_id": 7, "total": 0, "monsters": {}},
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 176,
+        "monsters"  : {
+          "Dimenian / Arlan"              : 35,
+          "So Dimenian / Del-D"           : 28,
+          "La Dimenian / Merlan"          : 25,
+          "Dark Belra / Indi Belra"       : 22,
+          "Dark Gunner / Death Gunner"    : 15,
+          "Chaos Sorcerer / Gran Sorcerer": 14,
+          "Bulclaw"                       : 14,
+          "Chaos Bringer / Dark Bringer"  : 12,
+          "Claw"                          :  8
+        }
+      },
+      "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 1, "monsters": {"Dragon / Sil Dragon": 1} },
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"De Rol Le / Dal Ra Lie": 1}
+      },
+      "13": { "floor_name": "Monitor Room", "floor_id": 13, "total": 2, "monsters": {"Vol Opt / Vol Opt ver.2": 1} },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} },
+      "16": {
+        "floor_name": "BA Spaceship",
+        "floor_id"  : 16,
+        "total"     : 96,
+        "monsters"  : {
+          "Grass Assassin / Crimson Assassin": 52,
+          "Delsaber"                         : 13,
+          "Hildebear / Hildelta"             :  9,
+          "Sinow Beat / Sinow Blue"          :  9,
+          "Chaos Bringer / Dark Bringer"     :  7,
+          "Guil Shark / Melqueek"            :  6
+        }
+      },
+      "17": {
+        "floor_name": "BA Palace",
+        "floor_id"  : 17,
+        "total"     : 80,
+        "monsters"  : {
+          "Chaos Bringer / Dark Bringer"     : 30,
+          "Sinow Gold / Sinow Red"           : 16,
+          "Sinow Beat / Sinow Blue"          : 12,
+          "Delsaber"                         :  8,
+          "Hildebear / Hildelta"             :  7,
+          "Grass Assassin / Crimson Assassin":  6,
+          "Hildeblue"                        :  1
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Ruined Serenity",
+    "total"   : 470,
+    "monsters": {
+      "Claw"                          : 98,
+      "Dimenian / Arlan"              : 74,
+      "So Dimenian / Del-D"           : 70,
+      "La Dimenian / Merlan"          : 46,
+      "Dark Belra / Indi Belra"       : 38,
+      "Delsaber"                      : 35,
+      "Bulclaw"                       : 30,
+      "Chaos Bringer / Dark Bringer"  : 26,
+      "Chaos Sorcerer / Gran Sorcerer": 24,
+      "Dark Gunner / Death Gunner"    : 23
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8" : {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 178,
+        "monsters"  : {
+          "Claw"                          : 51,
+          "Dimenian / Arlan"              : 28,
+          "So Dimenian / Del-D"           : 23,
+          "Dark Belra / Indi Belra"       : 23,
+          "La Dimenian / Merlan"          : 18,
+          "Delsaber"                      : 12,
+          "Chaos Sorcerer / Gran Sorcerer": 12,
+          "Bulclaw"                       : 11
+        }
+      },
+      "9" : {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 182,
+        "monsters"  : {
+          "Claw"                        : 31,
+          "Dimenian / Arlan"            : 31,
+          "So Dimenian / Del-D"         : 31,
+          "Delsaber"                    : 23,
+          "Dark Gunner / Death Gunner"  : 23,
+          "La Dimenian / Merlan"        : 20,
+          "Chaos Bringer / Dark Bringer": 10,
+          "Bulclaw"                     :  7
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 110,
+        "monsters"  : {
+          "So Dimenian / Del-D"           : 16,
+          "Chaos Bringer / Dark Bringer"  : 16,
+          "Claw"                          : 16,
+          "Dimenian / Arlan"              : 15,
+          "Dark Belra / Indi Belra"       : 15,
+          "Bulclaw"                       : 12,
+          "Chaos Sorcerer / Gran Sorcerer": 12,
+          "La Dimenian / Merlan"          :  8
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Science Project",
+    "total"   : 266,
+    "monsters": {
+      "Poison Lily / Ob Lily"            : 68,
+      "Evil Shark / Vulmer"              : 49,
+      "Guil Shark / Melqueek"            : 40,
+      "Nano Dragon / Sil Dragon"         : 29,
+      "Pofuilly Slime"                   : 28,
+      "Pal Shark / Govulmer"             : 27,
+      "Pan Arms"                         : 12,
+      "Grass Assassin / Crimson Assassin": 12,
+      "De Rol Le / Dal Ra Lie"           :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "3" : {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 142,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"            : 40,
+          "Nano Dragon / Sil Dragon"         : 24,
+          "Evil Shark / Vulmer"              : 23,
+          "Guil Shark / Melqueek"            : 21,
+          "Pal Shark / Govulmer"             : 15,
+          "Grass Assassin / Crimson Assassin": 12,
+          "Pan Arms"                         :  7
+        }
+      },
+      "5" : {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 123,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"   : 28,
+          "Pofuilly Slime"          : 28,
+          "Evil Shark / Vulmer"     : 26,
+          "Guil Shark / Melqueek"   : 19,
+          "Pal Shark / Govulmer"    : 12,
+          "Nano Dragon / Sil Dragon":  5,
+          "Pan Arms"                :  5
+        }
+      },
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"De Rol Le / Dal Ra Lie": 1}
+      }
+    }
+  },
+  {
+    "name"    : "Shattered Dreams",
+    "total"   : 597,
+    "monsters": {
+      "Claw"                          : 116,
+      "Dimenian / Arlan"              :  89,
+      "So Dimenian / Del-D"           :  85,
+      "Dark Belra / Indi Belra"       :  70,
+      "La Dimenian / Merlan"          :  61,
+      "Bulclaw"                       :  42,
+      "Delsaber"                      :  35,
+      "Chaos Bringer / Dark Bringer"  :  34,
+      "Dark Gunner / Death Gunner"    :  29,
+      "Chaos Sorcerer / Gran Sorcerer":  28
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8" : {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 178,
+        "monsters"  : {
+          "Claw"                          : 51,
+          "Dimenian / Arlan"              : 28,
+          "So Dimenian / Del-D"           : 23,
+          "Dark Belra / Indi Belra"       : 23,
+          "La Dimenian / Merlan"          : 18,
+          "Delsaber"                      : 12,
+          "Chaos Sorcerer / Gran Sorcerer": 12,
+          "Bulclaw"                       : 11
+        }
+      },
+      "9" : {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 183,
+        "monsters"  : {
+          "Claw"                        : 31,
+          "Dimenian / Arlan"            : 31,
+          "So Dimenian / Del-D"         : 31,
+          "Delsaber"                    : 23,
+          "Dark Gunner / Death Gunner"  : 23,
+          "La Dimenian / Merlan"        : 20,
+          "Chaos Bringer / Dark Bringer": 10,
+          "Bulclaw"                     :  8
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 110,
+        "monsters"  : {
+          "So Dimenian / Del-D"           : 16,
+          "Chaos Bringer / Dark Bringer"  : 16,
+          "Claw"                          : 16,
+          "Dimenian / Arlan"              : 15,
+          "Dark Belra / Indi Belra"       : 15,
+          "Bulclaw"                       : 12,
+          "Chaos Sorcerer / Gran Sorcerer": 12,
+          "La Dimenian / Merlan"          :  8
+        }
+      },
+      "11": {
+        "floor_name": "Under the Dome",
+        "floor_id"  : 11,
+        "total"     : 126,
+        "monsters"  : {
+          "Dark Belra / Indi Belra"       : 32,
+          "Claw"                          : 18,
+          "Dimenian / Arlan"              : 15,
+          "La Dimenian / Merlan"          : 15,
+          "So Dimenian / Del-D"           : 15,
+          "Bulclaw"                       : 11,
+          "Chaos Bringer / Dark Bringer"  :  8,
+          "Dark Gunner / Death Gunner"    :  6,
+          "Chaos Sorcerer / Gran Sorcerer":  4
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Simulator 2.0",
+    "total"   : 248,
+    "monsters": {
+      "Chaos Bringer / Dark Bringer"     : 51,
+      "Poison Lily / Ob Lily"            : 22,
+      "Guil Shark / Melqueek"            : 20,
+      "Hildebear / Hildelta"             : 19,
+      "Gillchic / Gillchich"             : 15,
+      "Grass Assassin / Crimson Assassin": 14,
+      "Sinow Beat / Sinow Blue"          : 13,
+      "Sinow Gold / Sinow Red"           : 12,
+      "Chaos Sorcerer / Gran Sorcerer"   : 12,
+      "Dark Belra / Indi Belra"          : 10,
+      "Canadine / Canabine"              :  8,
+      "Garanz / Baranz"                  :  8,
+      "Gigobooma / Tollaw"               :  6,
+      "So Dimenian / Del-D"              :  6,
+      "Savage Wolf / Gulgus"             :  5,
+      "Barbarous Wolf / Gulgus-gue"      :  5,
+      "Delsaber"                         :  5,
+      "Booma / Bartle"                   :  4,
+      "Dubchic / Dubchich"               :  3,
+      "Evil Shark / Vulmer"              :  3,
+      "Gobooma / Barble"                 :  2,
+      "Rag Rappy / El Rappy"             :  2,
+      "Monest / Mothvist"                :  1,
+      "Dubwitch"                         :  1,
+      "De Rol Le / Dal Ra Lie"           :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 35,
+        "monsters"  : {
+          "Hildebear / Hildelta"       : 10,
+          "Gigobooma / Tollaw"         :  6,
+          "Savage Wolf / Gulgus"       :  5,
+          "Barbarous Wolf / Gulgus-gue":  5,
+          "Booma / Bartle"             :  4,
+          "Gobooma / Barble"           :  2,
+          "Rag Rappy / El Rappy"       :  2,
+          "Monest / Mothvist"          :  1
+        }
+      },
+      "4" : {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 38,
+        "monsters"  : {"Poison Lily / Ob Lily": 22, "Guil Shark / Melqueek": 13, "Grass Assassin / Crimson Assassin": 3}
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 47,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 15,
+          "Canadine / Canabine"    :  8,
+          "Garanz / Baranz"        :  8,
+          "Sinow Beat / Sinow Blue":  6,
+          "Sinow Gold / Sinow Red" :  6,
+          "Dubchic / Dubchich"     :  3,
+          "Dubwitch"               :  1
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 34,
+        "monsters"  : {
+          "Chaos Sorcerer / Gran Sorcerer": 12,
+          "Dark Belra / Indi Belra"       : 10,
+          "So Dimenian / Del-D"           :  6,
+          "Chaos Bringer / Dark Bringer"  :  6
+        }
+      },
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"De Rol Le / Dal Ra Lie": 1}
+      },
+      "16": {
+        "floor_name": "BA Spaceship",
+        "floor_id"  : 16,
+        "total"     : 40,
+        "monsters"  : {
+          "Chaos Bringer / Dark Bringer"     : 22,
+          "Guil Shark / Melqueek"            :  4,
+          "Evil Shark / Vulmer"              :  3,
+          "Delsaber"                         :  3,
+          "Grass Assassin / Crimson Assassin":  3,
+          "Hildebear / Hildelta"             :  2,
+          "Sinow Gold / Sinow Red"           :  2,
+          "Sinow Beat / Sinow Blue"          :  1
+        }
+      },
+      "17": {
+        "floor_name": "BA Palace",
+        "floor_id"  : 17,
+        "total"     : 53,
+        "monsters"  : {
+          "Chaos Bringer / Dark Bringer"     : 23,
+          "Grass Assassin / Crimson Assassin":  8,
+          "Hildebear / Hildelta"             :  7,
+          "Sinow Beat / Sinow Blue"          :  6,
+          "Sinow Gold / Sinow Red"           :  4,
+          "Guil Shark / Melqueek"            :  3,
+          "Delsaber"                         :  2
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Spring Cleaning",
+    "total"   : 821,
+    "monsters": {
+      "Gillchic / Gillchich"             : 78,
+      "Evil Shark / Vulmer"              : 72,
+      "Claw"                             : 56,
+      "Poison Lily / Ob Lily"            : 54,
+      "Gigobooma / Tollaw"               : 53,
+      "Dimenian / Arlan"                 : 50,
+      "Canadine / Canabine"              : 39,
+      "So Dimenian / Del-D"              : 35,
+      "Garanz / Baranz"                  : 33,
+      "Pal Shark / Govulmer"             : 32,
+      "Gobooma / Barble"                 : 29,
+      "Dark Belra / Indi Belra"          : 29,
+      "Guil Shark / Melqueek"            : 27,
+      "La Dimenian / Merlan"             : 27,
+      "Nano Dragon / Sil Dragon"         : 25,
+      "Sinow Gold / Sinow Red"           : 22,
+      "Delsaber"                         : 22,
+      "Chaos Sorcerer / Gran Sorcerer"   : 21,
+      "Sinow Beat / Sinow Blue"          : 20,
+      "Booma / Bartle"                   : 19,
+      "Savage Wolf / Gulgus"             : 15,
+      "Monest / Mothvist"                : 12,
+      "Grass Assassin / Crimson Assassin": 12,
+      "Dark Gunner / Death Gunner"       : 10,
+      "Dubchic / Dubchich"               :  9,
+      "Pan Arms"                         :  6,
+      "Barbarous Wolf / Gulgus-gue"      :  5,
+      "Rag Rappy / El Rappy"             :  4,
+      "Canane / Canune"                  :  2,
+      "Dubwitch"                         :  2
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1": {
+        "floor_name": "Forest 1",
+        "floor_id"  : 1,
+        "total"     : 137,
+        "monsters"  : {
+          "Gigobooma / Tollaw"         : 53,
+          "Gobooma / Barble"           : 29,
+          "Booma / Bartle"             : 19,
+          "Savage Wolf / Gulgus"       : 15,
+          "Monest / Mothvist"          : 12,
+          "Barbarous Wolf / Gulgus-gue":  5,
+          "Rag Rappy / El Rappy"       :  4
+        }
+      },
+      "3": {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 228,
+        "monsters"  : {
+          "Evil Shark / Vulmer"              : 72,
+          "Poison Lily / Ob Lily"            : 54,
+          "Pal Shark / Govulmer"             : 32,
+          "Guil Shark / Melqueek"            : 27,
+          "Nano Dragon / Sil Dragon"         : 25,
+          "Grass Assassin / Crimson Assassin": 12,
+          "Pan Arms"                         :  6
+        }
+      },
+      "6": {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 205,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 78,
+          "Canadine / Canabine"    : 39,
+          "Garanz / Baranz"        : 33,
+          "Sinow Gold / Sinow Red" : 22,
+          "Sinow Beat / Sinow Blue": 20,
+          "Dubchic / Dubchich"     :  9,
+          "Canane / Canune"        :  2,
+          "Dubwitch"               :  2
+        }
+      },
+      "8": {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 251,
+        "monsters"  : {
+          "Claw"                          : 56,
+          "Dimenian / Arlan"              : 50,
+          "So Dimenian / Del-D"           : 35,
+          "Dark Belra / Indi Belra"       : 29,
+          "La Dimenian / Merlan"          : 27,
+          "Delsaber"                      : 22,
+          "Chaos Sorcerer / Gran Sorcerer": 21,
+          "Dark Gunner / Death Gunner"    : 10
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Strange Sighting",
+    "total"   : 238,
+    "monsters": {
+      "Rag Rappy / El Rappy"       : 90,
+      "Hildebear / Hildelta"       : 40,
+      "Gobooma / Barble"           : 37,
+      "Gigobooma / Tollaw"         : 25,
+      "Booma / Bartle"             : 20,
+      "Monest / Mothvist"          : 16,
+      "Savage Wolf / Gulgus"       :  6,
+      "Barbarous Wolf / Gulgus-gue":  3,
+      "Hildeblue"                  :  1
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1": {
+        "floor_name": "Forest 1",
+        "floor_id"  : 1,
+        "total"     : 84,
+        "monsters"  : {
+          "Rag Rappy / El Rappy"       : 65,
+          "Booma / Bartle"             :  6,
+          "Gobooma / Barble"           :  6,
+          "Monest / Mothvist"          :  4,
+          "Savage Wolf / Gulgus"       :  2,
+          "Barbarous Wolf / Gulgus-gue":  1
+        }
+      },
+      "2": {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 154,
+        "monsters"  : {
+          "Hildebear / Hildelta"       : 40,
+          "Gobooma / Barble"           : 31,
+          "Rag Rappy / El Rappy"       : 25,
+          "Gigobooma / Tollaw"         : 25,
+          "Booma / Bartle"             : 14,
+          "Monest / Mothvist"          : 12,
+          "Savage Wolf / Gulgus"       :  4,
+          "Barbarous Wolf / Gulgus-gue":  2,
+          "Hildeblue"                  :  1
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Sugoroku",
+    "total"   : 0,
+    "monsters": {},
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1": {"floor_name": "Forest 1",   "floor_id": 1, "total": 0, "monsters": {}},
+      "2": {"floor_name": "Forest 2",   "floor_id": 2, "total": 0, "monsters": {}}
+    }
+  },
+  {
+    "name"    : "Tragedy in Chaos",
+    "total"   : 598,
+    "monsters": {
+      "Dark Bringer"    : 43,
+      "Hildelta"        : 37,
+      "Gillchich"       : 37,
+      "Tollaw"          : 36,
+      "Crimson Assassin": 34,
+      "Ob Lily"         : 34,
+      "Bartle"          : 29,
+      "Indi Belra"      : 28,
+      "Pofuilly Slime"  : 26,
+      "Sinow Blue"      : 26,
+      "Baranz"          : 25,
+      "Dubchich"        : 25,
+      "Gran Sorcerer"   : 23,
+      "Delsaber"        : 22,
+      "Sinow Red"       : 18,
+      "Gulgus-gue"      : 17,
+      "Barble"          : 17,
+      "Melqueek"        : 16,
+      "Pan Arms"        : 16,
+      "Vulmer"          : 12,
+      "Del-D"           : 12,
+      "Gulgus"          : 10,
+      "Govulmer"        :  9,
+      "Merlan"          :  9,
+      "Mothvist"        :  7,
+      "El Rappy"        :  7,
+      "Canabine"        :  6,
+      "Canune"          :  5,
+      "Bulclaw"         :  4,
+      "Dubwitch"        :  3,
+      "Arlan"           :  3,
+      "Hildeblue"       :  1,
+      "Dark Falz"       :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 161,
+        "monsters"  : {
+          "Hildelta"  : 37,
+          "Tollaw"    : 36,
+          "Bartle"    : 29,
+          "Gulgus-gue": 17,
+          "Barble"    : 17,
+          "Gulgus"    : 10,
+          "Mothvist"  :  7,
+          "El Rappy"  :  7,
+          "Hildeblue" :  1
+        }
+      },
+      "5" : {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 147,
+        "monsters"  : {
+          "Crimson Assassin": 34,
+          "Ob Lily"         : 34,
+          "Pofuilly Slime"  : 26,
+          "Melqueek"        : 16,
+          "Pan Arms"        : 16,
+          "Vulmer"          : 12,
+          "Govulmer"        :  9
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 145,
+        "monsters"  : {
+          "Gillchich" : 37,
+          "Sinow Blue": 26,
+          "Baranz"    : 25,
+          "Dubchich"  : 25,
+          "Sinow Red" : 18,
+          "Canabine"  :  6,
+          "Canune"    :  5,
+          "Dubwitch"  :  3
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 144,
+        "monsters"  : {
+          "Dark Bringer" : 43,
+          "Indi Belra"   : 28,
+          "Gran Sorcerer": 23,
+          "Delsaber"     : 22,
+          "Del-D"        : 12,
+          "Merlan"       :  9,
+          "Bulclaw"      :  4,
+          "Arlan"        :  3
+        }
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Tyrell's Last Hope",
+    "total"   : 793,
+    "monsters": {
+      "Gillchic / Gillchich"          : 74,
+      "Dimenian / Arlan"              : 53,
+      "Delsaber"                      : 51,
+      "So Dimenian / Del-D"           : 45,
+      "La Dimenian / Merlan"          : 43,
+      "Dark Belra / Indi Belra"       : 41,
+      "Poison Lily / Ob Lily"         : 37,
+      "Dubchic / Dubchich"            : 37,
+      "Hildebear / Hildelta"          : 36,
+      "Sinow Beat / Sinow Blue"       : 32,
+      "Guil Shark / Melqueek"         : 29,
+      "Evil Shark / Vulmer"           : 28,
+      "Canadine / Canabine"           : 28,
+      "Gobooma / Barble"              : 27,
+      "Pofuilly Slime"                : 24,
+      "Pal Shark / Govulmer"          : 18,
+      "Nano Dragon / Sil Dragon"      : 18,
+      "Pan Arms"                      : 17,
+      "Claw"                          : 17,
+      "Chaos Bringer / Dark Bringer"  : 17,
+      "Booma / Bartle"                : 16,
+      "Rag Rappy / El Rappy"          : 16,
+      "Garanz / Baranz"               : 15,
+      "Sinow Gold / Sinow Red"        : 13,
+      "Chaos Sorcerer / Gran Sorcerer": 12,
+      "Gigobooma / Tollaw"            : 11,
+      "Savage Wolf / Gulgus"          :  8,
+      "Monest / Mothvist"             :  7,
+      "Dubwitch"                      :  7,
+      "Bulclaw"                       :  7,
+      "Canane / Canune"               :  4,
+      "Dragon / Sil Dragon"           :  1,
+      "De Rol Le / Dal Ra Lie"        :  1,
+      "Vol Opt / Vol Opt ver.2"       :  1,
+      "Dark Falz"                     :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 121,
+        "monsters"  : {
+          "Hildebear / Hildelta": 36,
+          "Gobooma / Barble"    : 27,
+          "Booma / Bartle"      : 16,
+          "Rag Rappy / El Rappy": 16,
+          "Gigobooma / Tollaw"  : 11,
+          "Savage Wolf / Gulgus":  8,
+          "Monest / Mothvist"   :  7
+        }
+      },
+      "5" : {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 171,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"   : 37,
+          "Guil Shark / Melqueek"   : 29,
+          "Evil Shark / Vulmer"     : 28,
+          "Pofuilly Slime"          : 24,
+          "Pal Shark / Govulmer"    : 18,
+          "Nano Dragon / Sil Dragon": 18,
+          "Pan Arms"                : 17
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 210,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 74,
+          "Dubchic / Dubchich"     : 37,
+          "Sinow Beat / Sinow Blue": 32,
+          "Canadine / Canabine"    : 28,
+          "Garanz / Baranz"        : 15,
+          "Sinow Gold / Sinow Red" : 13,
+          "Dubwitch"               :  7,
+          "Canane / Canune"        :  4
+        }
+      },
+      "8" : {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 217,
+        "monsters"  : {
+          "Dimenian / Arlan"              : 48,
+          "La Dimenian / Merlan"          : 40,
+          "Delsaber"                      : 38,
+          "So Dimenian / Del-D"           : 38,
+          "Dark Belra / Indi Belra"       : 30,
+          "Claw"                          : 10,
+          "Chaos Bringer / Dark Bringer"  :  6,
+          "Chaos Sorcerer / Gran Sorcerer":  4,
+          "Bulclaw"                       :  3
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 69,
+        "monsters"  : {
+          "Delsaber"                      : 13,
+          "Dark Belra / Indi Belra"       : 11,
+          "Chaos Bringer / Dark Bringer"  : 11,
+          "Chaos Sorcerer / Gran Sorcerer":  8,
+          "So Dimenian / Del-D"           :  7,
+          "Claw"                          :  7,
+          "Dimenian / Arlan"              :  5,
+          "Bulclaw"                       :  4,
+          "La Dimenian / Merlan"          :  3
+        }
+      },
+      "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 1, "monsters": {"Dragon / Sil Dragon": 1} },
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"De Rol Le / Dal Ra Lie": 1}
+      },
+      "13": { "floor_name": "Monitor Room", "floor_id": 13, "total": 2, "monsters": {"Vol Opt / Vol Opt ver.2": 1} },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Wrath of Forest",
+    "total"   : 309,
+    "monsters": {
+      "Booma / Bartle"             : 70,
+      "Gigobooma / Tollaw"         : 64,
+      "Gobooma / Barble"           : 57,
+      "Rag Rappy / El Rappy"       : 45,
+      "Hildebear / Hildelta"       : 34,
+      "Monest / Mothvist"          : 16,
+      "Savage Wolf / Gulgus"       : 14,
+      "Barbarous Wolf / Gulgus-gue":  8,
+      "Dragon / Sil Dragon"        :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1" : {
+        "floor_name": "Forest 1",
+        "floor_id"  : 1,
+        "total"     : 154,
+        "monsters"  : {
+          "Booma / Bartle"             : 47,
+          "Gobooma / Barble"           : 36,
+          "Gigobooma / Tollaw"         : 28,
+          "Rag Rappy / El Rappy"       : 26,
+          "Savage Wolf / Gulgus"       : 11,
+          "Monest / Mothvist"          :  4,
+          "Barbarous Wolf / Gulgus-gue":  2
+        }
+      },
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 154,
+        "monsters"  : {
+          "Gigobooma / Tollaw"         : 36,
+          "Hildebear / Hildelta"       : 34,
+          "Booma / Bartle"             : 23,
+          "Gobooma / Barble"           : 21,
+          "Rag Rappy / El Rappy"       : 19,
+          "Monest / Mothvist"          : 12,
+          "Barbarous Wolf / Gulgus-gue":  6,
+          "Savage Wolf / Gulgus"       :  3
+        }
+      },
+      "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 1, "monsters": {"Dragon / Sil Dragon": 1} }
+    }
+  },
+  {
+    "name"    : "AOL CUP -Sunset Base-",
+    "total"   : 0,
+    "monsters": {},
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1": {"floor_name": "Forest 1",   "floor_id": 1, "total": 0, "monsters": {}},
+      "2": {"floor_name": "Forest 2",   "floor_id": 2, "total": 0, "monsters": {}},
+      "8": {"floor_name": "Ruins 1",    "floor_id": 8, "total": 0, "monsters": {}}
+    }
+  },
+  {
+    "name"    : "Beyond the Mainframe",
+    "total"   : 343,
+    "monsters": {
+      "Gillchich"       : 73,
+      "Dubchich"        : 47,
+      "Sinow Blue"      : 47,
+      "Baranz"          : 37,
+      "Sinow Red"       : 32,
+      "Canune"          : 18,
+      "Canabine"        : 15,
+      "Dark Bringer"    : 13,
+      "Indi Belra"      : 10,
+      "Merlan"          :  8,
+      "Claw"            :  8,
+      "Delsaber"        :  7,
+      "Del-D"           :  7,
+      "Arlan"           :  6,
+      "Dubwitch"        :  5,
+      "Melqueek"        :  4,
+      "Crimson Assassin":  3,
+      "Vol Opt ver.2"   :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "6" : {"floor_name": "Mine 1", "floor_id": 6, "total": 0, "monsters": {}},
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 340,
+        "monsters"  : {
+          "Gillchich"       : 73,
+          "Dubchich"        : 47,
+          "Sinow Blue"      : 47,
+          "Baranz"          : 37,
+          "Sinow Red"       : 32,
+          "Canune"          : 18,
+          "Canabine"        : 15,
+          "Dark Bringer"    : 13,
+          "Indi Belra"      : 10,
+          "Merlan"          :  8,
+          "Claw"            :  8,
+          "Delsaber"        :  7,
+          "Del-D"           :  7,
+          "Arlan"           :  6,
+          "Dubwitch"        :  5,
+          "Melqueek"        :  4,
+          "Crimson Assassin":  3
+        }
+      },
+      "13": { "floor_name": "Monitor Room", "floor_id": 13, "total": 3, "monsters": {"Vol Opt ver.2": 1} }
+    }
+  },
+  {
+    "name"    : "Beyond the Mainframe [Extreme]",
+    "total"   : 302,
+    "monsters": {
+      "Gillchich"      : 46,
+      "Dubchich"       : 25,
+      "Giga Gue Type-B": 25,
+      "Sinow Phantom"  : 25,
+      "Sinow Predator" : 22,
+      "Morfos"         : 18,
+      "Dark Bringer"   : 17,
+      "Indi Belra"     : 17,
+      "Gibbles"        : 13,
+      "Canune"         : 12,
+      "Pyro Goran"     : 12,
+      "Girtablulu"     : 11,
+      "Delsaber"       : 10,
+      "Merikle"        :  9,
+      "Mericarol"      :  9,
+      "Gi Gue"         :  9,
+      "Deldepth"       :  9,
+      "Canabine"       :  4,
+      "Dubwitch"       :  3,
+      "Mericus"        :  3,
+      "Vol Opt ver.2"  :  2,
+      "The Prophet"    :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "6" : {"floor_name": "Mine 1", "floor_id": 6, "total": 0, "monsters": {}},
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 299,
+        "monsters"  : {
+          "Gillchich"      : 46,
+          "Dubchich"       : 25,
+          "Giga Gue Type-B": 25,
+          "Sinow Phantom"  : 25,
+          "Sinow Predator" : 22,
+          "Morfos"         : 18,
+          "Dark Bringer"   : 17,
+          "Indi Belra"     : 17,
+          "Gibbles"        : 13,
+          "Canune"         : 12,
+          "Pyro Goran"     : 12,
+          "Girtablulu"     : 11,
+          "Delsaber"       : 10,
+          "Merikle"        :  9,
+          "Mericarol"      :  9,
+          "Gi Gue"         :  9,
+          "Deldepth"       :  9,
+          "Canabine"       :  4,
+          "Dubwitch"       :  3,
+          "Mericus"        :  3
+        }
+      },
+      "13": { "floor_name": "Monitor Room", "floor_id": 13, "total": 3, "monsters": {"The Prophet": 1} }
+    }
+  },
+  {
+    "name"    : "Beyond the Nightmare",
+    "total"   : 5,
+    "monsters": {"Phantasmal Construct": 4, "Nightmare Dominator VI": 1},
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "10": {"floor_name": "Ruins 3", "floor_id": 10, "total": 0, "monsters": {}},
+      "14": {
+        "floor_name": "Dark Falz",
+        "floor_id"  : 14,
+        "total"     : 5,
+        "monsters"  : {"Phantasmal Construct": 4, "Nightmare Dominator VI": 1}
+      }
+    }
+  },
+  {
+    "name"    : "Beyond the Veil",
+    "total"   : 267,
+    "monsters": {
+      "Hildelta"        : 24,
+      "Dark Bringer"    : 24,
+      "Tollaw"          : 17,
+      "Melqueek"        : 17,
+      "Barble"          : 16,
+      "El Rappy"        : 15,
+      "Sinow Blue"      : 15,
+      "Bartle"          : 14,
+      "Delsaber"        : 14,
+      "Sinow Red"       : 14,
+      "Gulgus-gue"      : 13,
+      "Gulgus"          : 13,
+      "Vulmer"          : 12,
+      "Crimson Assassin": 12,
+      "Gran Sorcerer"   :  8,
+      "Bulclaw"         :  8,
+      "Govulmer"        :  8,
+      "Indi Belra"      :  5,
+      "Mothvist"        :  3,
+      "Arlan"           :  3,
+      "Merlan"          :  3,
+      "Del-D"           :  3,
+      "Death Gunner"    :  1,
+      "Hildeblue"       :  1,
+      "Rathalos"        :  1,
+      "Vaal Hazak"      :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1" : {
+        "floor_name": "Forest 1",
+        "floor_id"  : 1,
+        "total"     : 103,
+        "monsters"  : {
+          "Tollaw"    : 17,
+          "Barble"    : 16,
+          "El Rappy"  : 15,
+          "Bartle"    : 14,
+          "Gulgus-gue": 13,
+          "Gulgus"    : 13,
+          "Hildelta"  : 12,
+          "Mothvist"  :  3
+        }
+      },
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 44,
+        "monsters"  : {
+          "Dark Bringer" : 11,
+          "Gran Sorcerer":  8,
+          "Bulclaw"      :  8,
+          "Indi Belra"   :  5,
+          "Arlan"        :  3,
+          "Merlan"       :  3,
+          "Del-D"        :  3,
+          "Death Gunner" :  1
+        }
+      },
+      "3" : {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 118,
+        "monsters"  : {
+          "Melqueek"        : 17,
+          "Sinow Blue"      : 15,
+          "Delsaber"        : 14,
+          "Sinow Red"       : 14,
+          "Dark Bringer"    : 13,
+          "Hildelta"        : 12,
+          "Vulmer"          : 12,
+          "Crimson Assassin": 12,
+          "Govulmer"        :  8,
+          "Hildeblue"       :  1
+        }
+      },
+      "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 2, "monsters": {"Rathalos": 1, "Vaal Hazak": 1} }
+    }
+  },
+  {
+    "name"    : "Distorted Nightmare [Raid]",
+    "total"   : 1,
+    "monsters": {"Nightmare Chaser XII": 1},
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "5" : {"floor_name": "Cave 3", "floor_id": 5, "total": 0, "monsters": {}},
+      "12": { "floor_name": "Underground Channel", "floor_id": 12, "total": 1, "monsters": {"Nightmare Chaser XII": 1} }
+    }
+  },
+  {
+    "name"    : "Endless Nightmare #1",
+    "total"   : 179,
+    "monsters": {
+      "Booma / Bartle"             : 60,
+      "Gobooma / Barble"           : 32,
+      "Savage Wolf / Gulgus"       : 29,
+      "Gigobooma / Tollaw"         : 23,
+      "Rag Rappy / El Rappy"       : 19,
+      "Hildebear / Hildelta"       :  8,
+      "Monest / Mothvist"          :  4,
+      "Barbarous Wolf / Gulgus-gue":  4
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1": {
+        "floor_name": "Forest 1",
+        "floor_id"  : 1,
+        "total"     : 64,
+        "monsters"  : {
+          "Booma / Bartle"             : 48,
+          "Savage Wolf / Gulgus"       :  6,
+          "Rag Rappy / El Rappy"       :  5,
+          "Gobooma / Barble"           :  3,
+          "Monest / Mothvist"          :  1,
+          "Barbarous Wolf / Gulgus-gue":  1
+        }
+      },
+      "2": {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 115,
+        "monsters"  : {
+          "Gobooma / Barble"           : 29,
+          "Savage Wolf / Gulgus"       : 23,
+          "Gigobooma / Tollaw"         : 23,
+          "Rag Rappy / El Rappy"       : 14,
+          "Booma / Bartle"             : 12,
+          "Hildebear / Hildelta"       :  8,
+          "Barbarous Wolf / Gulgus-gue":  3,
+          "Monest / Mothvist"          :  3
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Endless Nightmare #2",
+    "total"   : 287,
+    "monsters": {
+      "Evil Shark / Vulmer"              : 152,
+      "Pal Shark / Govulmer"             :  44,
+      "Poison Lily / Ob Lily"            :  32,
+      "Guil Shark / Melqueek"            :  28,
+      "Grass Assassin / Crimson Assassin":  20,
+      "Nano Dragon / Sil Dragon"         :   6,
+      "Pofuilly Slime"                   :   5
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "3": {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 154,
+        "monsters"  : {
+          "Evil Shark / Vulmer"              : 111,
+          "Poison Lily / Ob Lily"            :  13,
+          "Pal Shark / Govulmer"             :  13,
+          "Grass Assassin / Crimson Assassin":   7,
+          "Guil Shark / Melqueek"            :   5,
+          "Nano Dragon / Sil Dragon"         :   5
+        }
+      },
+      "4": {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 133,
+        "monsters"  : {
+          "Evil Shark / Vulmer"              : 41,
+          "Pal Shark / Govulmer"             : 31,
+          "Guil Shark / Melqueek"            : 23,
+          "Poison Lily / Ob Lily"            : 19,
+          "Grass Assassin / Crimson Assassin": 13,
+          "Pofuilly Slime"                   :  5,
+          "Nano Dragon / Sil Dragon"         :  1
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Endless Nightmare #3",
+    "total"   : 295,
+    "monsters": {
+      "Gillchic / Gillchich"   : 108,
+      "Canadine / Canabine"    :  68,
+      "Sinow Beat / Sinow Blue":  48,
+      "Dubchic / Dubchich"     :  37,
+      "Sinow Gold / Sinow Red" :  14,
+      "Garanz / Baranz"        :  10,
+      "Dubwitch"               :   8,
+      "Canane / Canune"        :   2
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "6": {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 125,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 54,
+          "Canadine / Canabine"    : 33,
+          "Sinow Beat / Sinow Blue": 15,
+          "Dubchic / Dubchich"     : 12,
+          "Sinow Gold / Sinow Red" :  4,
+          "Garanz / Baranz"        :  3,
+          "Canane / Canune"        :  2,
+          "Dubwitch"               :  2
+        }
+      },
+      "7": {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 170,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 54,
+          "Canadine / Canabine"    : 35,
+          "Sinow Beat / Sinow Blue": 33,
+          "Dubchic / Dubchich"     : 25,
+          "Sinow Gold / Sinow Red" : 10,
+          "Garanz / Baranz"        :  7,
+          "Dubwitch"               :  6
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Endless Nightmare #4",
+    "total"   : 369,
+    "monsters": {
+      "Claw"                          : 90,
+      "La Dimenian / Merlan"          : 59,
+      "Dimenian / Arlan"              : 49,
+      "So Dimenian / Del-D"           : 49,
+      "Delsaber"                      : 44,
+      "Dark Belra / Indi Belra"       : 28,
+      "Dark Gunner / Death Gunner"    : 21,
+      "Chaos Bringer / Dark Bringer"  : 13,
+      "Bulclaw"                       :  6,
+      "Chaos Sorcerer / Gran Sorcerer":  3
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8": {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 203,
+        "monsters"  : {
+          "Claw"                          : 47,
+          "Dimenian / Arlan"              : 38,
+          "So Dimenian / Del-D"           : 38,
+          "La Dimenian / Merlan"          : 36,
+          "Dark Belra / Indi Belra"       : 28,
+          "Delsaber"                      : 11,
+          "Chaos Sorcerer / Gran Sorcerer":  3,
+          "Bulclaw"                       :  2
+        }
+      },
+      "9": {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 166,
+        "monsters"  : {
+          "Claw"                        : 43,
+          "Delsaber"                    : 33,
+          "La Dimenian / Merlan"        : 23,
+          "Dark Gunner / Death Gunner"  : 21,
+          "Chaos Bringer / Dark Bringer": 13,
+          "So Dimenian / Del-D"         : 11,
+          "Dimenian / Arlan"            : 11,
+          "Bulclaw"                     :  4
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Fragments of Memory",
+    "total"   : 854,
+    "monsters": {
+      "Claw"                          : 237,
+      "Dimenian / Arlan"              : 226,
+      "Bulclaw"                       :  86,
+      "Delsaber"                      :  81,
+      "Dark Gunner / Death Gunner"    :  77,
+      "Chaos Sorcerer / Gran Sorcerer":  68,
+      "Dark Belra / Indi Belra"       :  38,
+      "Chaos Bringer / Dark Bringer"  :  16,
+      "Dark Falz"                     :   1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8" : {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 263,
+        "monsters"  : {
+          "Dimenian / Arlan"              : 74,
+          "Claw"                          : 57,
+          "Delsaber"                      : 41,
+          "Chaos Sorcerer / Gran Sorcerer": 38,
+          "Bulclaw"                       : 32,
+          "Dark Belra / Indi Belra"       : 21
+        }
+      },
+      "9" : {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 331,
+        "monsters"  : {
+          "Claw"                        : 110,
+          "Dimenian / Arlan"            :  93,
+          "Dark Gunner / Death Gunner"  :  42,
+          "Delsaber"                    :  40,
+          "Bulclaw"                     :  28,
+          "Chaos Bringer / Dark Bringer":   8
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 259,
+        "monsters"  : {
+          "Claw"                          : 70,
+          "Dimenian / Arlan"              : 59,
+          "Dark Gunner / Death Gunner"    : 35,
+          "Chaos Sorcerer / Gran Sorcerer": 30,
+          "Bulclaw"                       : 26,
+          "Dark Belra / Indi Belra"       : 17,
+          "Chaos Bringer / Dark Bringer"  :  8
+        }
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Gallon's Treachery",
+    "total"   : 116,
+    "monsters": {
+      "Poison Lily / Ob Lily"       : 22,
+      "Evil Shark / Vulmer"         : 16,
+      "Guil Shark / Melqueek"       : 14,
+      "Pal Shark / Govulmer"        : 13,
+      "Claw"                        : 12,
+      "So Dimenian / Del-D"         : 10,
+      "Nano Dragon / Sil Dragon"    :  7,
+      "Pofuilly Slime"              :  5,
+      "Delsaber"                    :  3,
+      "Chaos Bringer / Dark Bringer":  3,
+      "La Dimenian / Merlan"        :  3,
+      "Dimenian / Arlan"            :  3,
+      "Dark Gunner / Death Gunner"  :  2,
+      "Pan Arms"                    :  1
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "5": {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 78,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"   : 22,
+          "Evil Shark / Vulmer"     : 16,
+          "Guil Shark / Melqueek"   : 14,
+          "Pal Shark / Govulmer"    : 13,
+          "Nano Dragon / Sil Dragon":  7,
+          "Pofuilly Slime"          :  5,
+          "Pan Arms"                :  1
+        }
+      },
+      "9": {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 38,
+        "monsters"  : {
+          "Claw"                        : 12,
+          "So Dimenian / Del-D"         : 10,
+          "Delsaber"                    :  3,
+          "Chaos Bringer / Dark Bringer":  3,
+          "La Dimenian / Merlan"        :  3,
+          "Dimenian / Arlan"            :  3,
+          "Dark Gunner / Death Gunner"  :  2
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Lost HAVOC VULCAN",
+    "total"   : 826,
+    "monsters": {
+      "Dimenian / Arlan"              : 156,
+      "Claw"                          : 152,
+      "La Dimenian / Merlan"          :  94,
+      "So Dimenian / Del-D"           :  89,
+      "Dark Gunner / Death Gunner"    :  81,
+      "Delsaber"                      :  68,
+      "Dark Belra / Indi Belra"       :  54,
+      "Chaos Bringer / Dark Bringer"  :  49,
+      "Bulclaw"                       :  36,
+      "Chaos Sorcerer / Gran Sorcerer":  28,
+      "Dark Falz"                     :   1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8" : {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 262,
+        "monsters"  : {
+          "Dimenian / Arlan"              : 65,
+          "Claw"                          : 54,
+          "La Dimenian / Merlan"          : 37,
+          "So Dimenian / Del-D"           : 29,
+          "Delsaber"                      : 27,
+          "Dark Belra / Indi Belra"       : 26,
+          "Chaos Sorcerer / Gran Sorcerer": 15,
+          "Bulclaw"                       :  9
+        }
+      },
+      "9" : {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 262,
+        "monsters"  : {
+          "Dimenian / Arlan"            : 48,
+          "Delsaber"                    : 41,
+          "Dark Gunner / Death Gunner"  : 38,
+          "Claw"                        : 34,
+          "Chaos Bringer / Dark Bringer": 32,
+          "La Dimenian / Merlan"        : 28,
+          "So Dimenian / Del-D"         : 21,
+          "Bulclaw"                     : 12
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 301,
+        "monsters"  : {
+          "Claw"                          : 64,
+          "Dimenian / Arlan"              : 43,
+          "Dark Gunner / Death Gunner"    : 43,
+          "So Dimenian / Del-D"           : 39,
+          "La Dimenian / Merlan"          : 29,
+          "Dark Belra / Indi Belra"       : 28,
+          "Chaos Bringer / Dark Bringer"  : 17,
+          "Bulclaw"                       : 15,
+          "Chaos Sorcerer / Gran Sorcerer": 13
+        }
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Lost HEAT SWORD",
+    "total"   : 188,
+    "monsters": {
+      "Gigobooma / Tollaw"         : 58,
+      "Gobooma / Barble"           : 38,
+      "Booma / Bartle"             : 29,
+      "Savage Wolf / Gulgus"       : 26,
+      "Hildebear / Hildelta"       : 12,
+      "Rag Rappy / El Rappy"       : 10,
+      "Barbarous Wolf / Gulgus-gue":  7,
+      "Monest / Mothvist"          :  7,
+      "Dragon / Sil Dragon"        :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1" : {
+        "floor_name": "Forest 1",
+        "floor_id"  : 1,
+        "total"     : 84,
+        "monsters"  : {
+          "Gigobooma / Tollaw"         : 43,
+          "Booma / Bartle"             : 16,
+          "Savage Wolf / Gulgus"       : 11,
+          "Gobooma / Barble"           :  9,
+          "Barbarous Wolf / Gulgus-gue":  3,
+          "Monest / Mothvist"          :  2
+        }
+      },
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 103,
+        "monsters"  : {
+          "Gobooma / Barble"           : 29,
+          "Savage Wolf / Gulgus"       : 15,
+          "Gigobooma / Tollaw"         : 15,
+          "Booma / Bartle"             : 13,
+          "Hildebear / Hildelta"       : 12,
+          "Rag Rappy / El Rappy"       : 10,
+          "Monest / Mothvist"          :  5,
+          "Barbarous Wolf / Gulgus-gue":  4
+        }
+      },
+      "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 1, "monsters": {"Dragon / Sil Dragon": 1} }
+    }
+  },
+  {
+    "name"    : "Lost HELL PALLASCH",
+    "total"   : 492,
+    "monsters": {
+      "Claw"                          : 87,
+      "Delsaber"                      : 62,
+      "Chaos Sorcerer / Gran Sorcerer": 61,
+      "Bulclaw"                       : 55,
+      "Dimenian / Arlan"              : 54,
+      "Dark Gunner / Death Gunner"    : 45,
+      "Dark Belra / Indi Belra"       : 40,
+      "So Dimenian / Del-D"           : 26,
+      "La Dimenian / Merlan"          : 20,
+      "Chaos Bringer / Dark Bringer"  : 15,
+      "Dark Falz"                     :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8" : {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 184,
+        "monsters"  : {
+          "Delsaber"                      : 31,
+          "Claw"                          : 31,
+          "Bulclaw"                       : 28,
+          "Chaos Sorcerer / Gran Sorcerer": 27,
+          "Dark Belra / Indi Belra"       : 26,
+          "Dimenian / Arlan"              : 22,
+          "La Dimenian / Merlan"          : 11,
+          "So Dimenian / Del-D"           :  8
+        }
+      },
+      "9" : {
+        "floor_name": "Ruins 2",
+        "floor_id"  : 9,
+        "total"     : 147,
+        "monsters"  : {
+          "Delsaber"                    : 31,
+          "Claw"                        : 29,
+          "Dark Gunner / Death Gunner"  : 21,
+          "Bulclaw"                     : 17,
+          "Dimenian / Arlan"            : 12,
+          "La Dimenian / Merlan"        :  9,
+          "Chaos Bringer / Dark Bringer":  8,
+          "So Dimenian / Del-D"         :  6
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 160,
+        "monsters"  : {
+          "Chaos Sorcerer / Gran Sorcerer": 34,
+          "Claw"                          : 27,
+          "Dark Gunner / Death Gunner"    : 24,
+          "Dimenian / Arlan"              : 20,
+          "Dark Belra / Indi Belra"       : 14,
+          "So Dimenian / Del-D"           : 12,
+          "Bulclaw"                       : 10,
+          "Chaos Bringer / Dark Bringer"  :  7
+        }
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Lost ICE SPINNER",
+    "total"   : 451,
+    "monsters": {
+      "Evil Shark / Vulmer"              : 129,
+      "Guil Shark / Melqueek"            : 125,
+      "Pal Shark / Govulmer"             :  65,
+      "Poison Lily / Ob Lily"            :  56,
+      "Grass Assassin / Crimson Assassin":  37,
+      "Nano Dragon / Sil Dragon"         :  26,
+      "Pofuilly Slime"                   :   7,
+      "Pan Arms"                         :   5,
+      "De Rol Le / Dal Ra Lie"           :   1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "3" : {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 186,
+        "monsters"  : {
+          "Guil Shark / Melqueek"            : 53,
+          "Evil Shark / Vulmer"              : 52,
+          "Poison Lily / Ob Lily"            : 29,
+          "Grass Assassin / Crimson Assassin": 22,
+          "Pal Shark / Govulmer"             : 18,
+          "Nano Dragon / Sil Dragon"         : 10,
+          "Pan Arms"                         :  2
+        }
+      },
+      "4" : {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 164,
+        "monsters"  : {
+          "Evil Shark / Vulmer"              : 50,
+          "Guil Shark / Melqueek"            : 46,
+          "Pal Shark / Govulmer"             : 30,
+          "Grass Assassin / Crimson Assassin": 15,
+          "Poison Lily / Ob Lily"            : 11,
+          "Nano Dragon / Sil Dragon"         :  9,
+          "Pofuilly Slime"                   :  3
+        }
+      },
+      "5" : {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 100,
+        "monsters"  : {
+          "Evil Shark / Vulmer"     : 27,
+          "Guil Shark / Melqueek"   : 26,
+          "Pal Shark / Govulmer"    : 17,
+          "Poison Lily / Ob Lily"   : 16,
+          "Nano Dragon / Sil Dragon":  7,
+          "Pofuilly Slime"          :  4,
+          "Pan Arms"                :  3
+        }
+      },
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"De Rol Le / Dal Ra Lie": 1}
+      }
+    }
+  },
+  {
+    "name"    : "Lost SOUL BLADE",
+    "total"   : 329,
+    "monsters": {
+      "Gillchic / Gillchich"   : 85,
+      "Canadine / Canabine"    : 80,
+      "Sinow Beat / Sinow Blue": 70,
+      "Sinow Gold / Sinow Red" : 37,
+      "Garanz / Baranz"        : 26,
+      "Dubchic / Dubchich"     : 21,
+      "Canane / Canune"        :  4,
+      "Dubwitch"               :  4,
+      "Vol Opt / Vol Opt ver.2":  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "6" : {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 157,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 59,
+          "Sinow Beat / Sinow Blue": 46,
+          "Canadine / Canabine"    : 33,
+          "Sinow Gold / Sinow Red" : 16,
+          "Canane / Canune"        :  3
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 170,
+        "monsters"  : {
+          "Canadine / Canabine"    : 47,
+          "Gillchic / Gillchich"   : 26,
+          "Garanz / Baranz"        : 26,
+          "Sinow Beat / Sinow Blue": 24,
+          "Sinow Gold / Sinow Red" : 21,
+          "Dubchic / Dubchich"     : 21,
+          "Dubwitch"               :  4,
+          "Canane / Canune"        :  1
+        }
+      },
+      "13": { "floor_name": "Monitor Room", "floor_id": 13, "total": 2, "monsters": {"Vol Opt / Vol Opt ver.2": 1} }
+    }
+  },
+  {
+    "name"    : "Lost SOUL RIPPER [Extreme]",
+    "total"   : 537,
+    "monsters": {
+      "Gillchich"           : 87,
+      "Oppressor VII"       : 82,
+      "Canabine"            : 80,
+      "D-Virus Baranz ver.2": 53,
+      "Praetorian IV"       : 49,
+      "Dubchich"            : 36,
+      "Mericus"             : 22,
+      "Girtablulu"          : 21,
+      "Dark Bringer"        : 20,
+      "Ba Boota"            : 17,
+      "Canune"              : 14,
+      "Gibbles"             : 11,
+      "Pyro Goran"          : 11,
+      "Gi Gue"              : 10,
+      "Morfos"              : 10,
+      "Indi Belra"          :  6,
+      "Dubwitch"            :  5,
+      "The Prophet"         :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "6" : {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 249,
+        "monsters"  : {
+          "Gillchich"           : 61,
+          "Oppressor VII"       : 48,
+          "Canabine"            : 31,
+          "Praetorian IV"       : 21,
+          "D-Virus Baranz ver.2": 14,
+          "Dubchich"            : 13,
+          "Dark Bringer"        : 13,
+          "Canune"              : 12,
+          "Mericus"             : 11,
+          "Girtablulu"          :  6,
+          "Indi Belra"          :  5,
+          "Gibbles"             :  4,
+          "Gi Gue"              :  4,
+          "Dubwitch"            :  2,
+          "Morfos"              :  2,
+          "Ba Boota"            :  2
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 285,
+        "monsters"  : {
+          "Canabine"            : 49,
+          "D-Virus Baranz ver.2": 39,
+          "Oppressor VII"       : 34,
+          "Praetorian IV"       : 28,
+          "Gillchich"           : 26,
+          "Dubchich"            : 23,
+          "Girtablulu"          : 15,
+          "Ba Boota"            : 15,
+          "Mericus"             : 11,
+          "Pyro Goran"          : 11,
+          "Morfos"              :  8,
+          "Dark Bringer"        :  7,
+          "Gibbles"             :  7,
+          "Gi Gue"              :  6,
+          "Dubwitch"            :  3,
+          "Canune"              :  2,
+          "Indi Belra"          :  1
+        }
+      },
+      "13": { "floor_name": "Monitor Room", "floor_id": 13, "total": 3, "monsters": {"The Prophet": 1} }
+    }
+  },
+  {
+    "name"    : "MAXIMUM ATTACK 1 Ver2",
+    "total"   : 590,
+    "monsters": {
+      "Gillchic / Gillchich"       : 96,
+      "Poison Lily / Ob Lily"      : 81,
+      "Canadine / Canabine"        : 63,
+      "Booma / Bartle"             : 59,
+      "Evil Shark / Vulmer"        : 54,
+      "Gigobooma / Tollaw"         : 37,
+      "Sinow Beat / Sinow Blue"    : 34,
+      "Savage Wolf / Gulgus"       : 25,
+      "Gobooma / Barble"           : 24,
+      "Guil Shark / Melqueek"      : 23,
+      "Garanz / Baranz"            : 22,
+      "Barbarous Wolf / Gulgus-gue": 18,
+      "Nano Dragon / Sil Dragon"   : 13,
+      "Pal Shark / Govulmer"       : 12,
+      "Hildebear / Hildelta"       : 11,
+      "Pofuilly Slime"             :  6,
+      "Pan Arms"                   :  6,
+      "Sinow Gold / Sinow Red"     :  3,
+      "Canane / Canune"            :  2,
+      "Monest / Mothvist"          :  1
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "2": {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 175,
+        "monsters"  : {
+          "Booma / Bartle"             : 59,
+          "Gigobooma / Tollaw"         : 37,
+          "Savage Wolf / Gulgus"       : 25,
+          "Gobooma / Barble"           : 24,
+          "Barbarous Wolf / Gulgus-gue": 18,
+          "Hildebear / Hildelta"       : 11,
+          "Monest / Mothvist"          :  1
+        }
+      },
+      "5": {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 195,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"   : 81,
+          "Evil Shark / Vulmer"     : 54,
+          "Guil Shark / Melqueek"   : 23,
+          "Nano Dragon / Sil Dragon": 13,
+          "Pal Shark / Govulmer"    : 12,
+          "Pofuilly Slime"          :  6,
+          "Pan Arms"                :  6
+        }
+      },
+      "6": {"floor_name": "Mine 1", "floor_id": 6, "total": 0, "monsters": {}},
+      "7": {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 220,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 96,
+          "Canadine / Canabine"    : 63,
+          "Sinow Beat / Sinow Blue": 34,
+          "Garanz / Baranz"        : 22,
+          "Sinow Gold / Sinow Red" :  3,
+          "Canane / Canune"        :  2
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Maximum Attack 4th Stage -A-",
+    "total"   : 606,
+    "monsters": {
+      "Poison Lily / Ob Lily"            : 63,
+      "Claw"                             : 51,
+      "Gillchic / Gillchich"             : 46,
+      "Evil Shark / Vulmer"              : 43,
+      "Canadine / Canabine"              : 43,
+      "Dimenian / Arlan"                 : 37,
+      "La Dimenian / Merlan"             : 33,
+      "Dark Gunner / Death Gunner"       : 31,
+      "So Dimenian / Del-D"              : 30,
+      "Guil Shark / Melqueek"            : 28,
+      "Grass Assassin / Crimson Assassin": 25,
+      "Dark Belra / Indi Belra"          : 23,
+      "Pal Shark / Govulmer"             : 21,
+      "Sinow Gold / Sinow Red"           : 21,
+      "Dubchic / Dubchich"               : 20,
+      "Sinow Beat / Sinow Blue"          : 17,
+      "Pofuilly Slime"                   : 16,
+      "Nano Dragon / Sil Dragon"         : 14,
+      "Garanz / Baranz"                  : 12,
+      "Bulclaw"                          :  8,
+      "Chaos Sorcerer / Gran Sorcerer"   :  7,
+      "Dubwitch"                         :  4,
+      "Canane / Canune"                  :  3,
+      "Chaos Bringer / Dark Bringer"     :  3
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "4" : {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 210,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"            : 63,
+          "Evil Shark / Vulmer"              : 43,
+          "Guil Shark / Melqueek"            : 28,
+          "Grass Assassin / Crimson Assassin": 25,
+          "Pal Shark / Govulmer"             : 21,
+          "Pofuilly Slime"                   : 16,
+          "Nano Dragon / Sil Dragon"         : 14
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 166,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 46,
+          "Canadine / Canabine"    : 43,
+          "Sinow Gold / Sinow Red" : 21,
+          "Dubchic / Dubchich"     : 20,
+          "Sinow Beat / Sinow Blue": 17,
+          "Garanz / Baranz"        : 12,
+          "Dubwitch"               :  4,
+          "Canane / Canune"        :  3
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 230,
+        "monsters"  : {
+          "Claw"                          : 51,
+          "Dimenian / Arlan"              : 37,
+          "La Dimenian / Merlan"          : 33,
+          "Dark Gunner / Death Gunner"    : 31,
+          "So Dimenian / Del-D"           : 30,
+          "Dark Belra / Indi Belra"       : 23,
+          "Bulclaw"                       :  8,
+          "Chaos Sorcerer / Gran Sorcerer":  7,
+          "Chaos Bringer / Dark Bringer"  :  3
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Maximum Attack 4th Stage -B-",
+    "total"   : 540,
+    "monsters": {
+      "Poison Lily / Ob Lily"            : 62,
+      "Claw"                             : 52,
+      "Pal Shark / Govulmer"             : 40,
+      "Canadine / Canabine"              : 35,
+      "Guil Shark / Melqueek"            : 32,
+      "Grass Assassin / Crimson Assassin": 28,
+      "Dark Belra / Indi Belra"          : 27,
+      "So Dimenian / Del-D"              : 25,
+      "Dark Gunner / Death Gunner"       : 24,
+      "Nano Dragon / Sil Dragon"         : 22,
+      "Dubchic / Dubchich"               : 21,
+      "Gillchic / Gillchich"             : 21,
+      "Evil Shark / Vulmer"              : 20,
+      "Sinow Beat / Sinow Blue"          : 19,
+      "La Dimenian / Merlan"             : 18,
+      "Sinow Gold / Sinow Red"           : 16,
+      "Pofuilly Slime"                   : 14,
+      "Garanz / Baranz"                  : 13,
+      "Dimenian / Arlan"                 : 13,
+      "Bulclaw"                          : 11,
+      "Chaos Sorcerer / Gran Sorcerer"   : 10,
+      "Chaos Bringer / Dark Bringer"     :  5,
+      "Dubwitch"                         :  4,
+      "Canane / Canune"                  :  3
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "4" : {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 218,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"            : 62,
+          "Pal Shark / Govulmer"             : 40,
+          "Guil Shark / Melqueek"            : 32,
+          "Grass Assassin / Crimson Assassin": 28,
+          "Nano Dragon / Sil Dragon"         : 22,
+          "Evil Shark / Vulmer"              : 20,
+          "Pofuilly Slime"                   : 14
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 132,
+        "monsters"  : {
+          "Canadine / Canabine"    : 35,
+          "Dubchic / Dubchich"     : 21,
+          "Gillchic / Gillchich"   : 21,
+          "Sinow Beat / Sinow Blue": 19,
+          "Sinow Gold / Sinow Red" : 16,
+          "Garanz / Baranz"        : 13,
+          "Dubwitch"               :  4,
+          "Canane / Canune"        :  3
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 190,
+        "monsters"  : {
+          "Claw"                          : 52,
+          "Dark Belra / Indi Belra"       : 27,
+          "So Dimenian / Del-D"           : 25,
+          "Dark Gunner / Death Gunner"    : 24,
+          "La Dimenian / Merlan"          : 18,
+          "Dimenian / Arlan"              : 13,
+          "Bulclaw"                       : 11,
+          "Chaos Sorcerer / Gran Sorcerer": 10,
+          "Chaos Bringer / Dark Bringer"  :  5
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Maximum Attack 4th Stage -C-",
+    "total"   : 451,
+    "monsters": {
+      "Poison Lily / Ob Lily"            : 62,
+      "Pal Shark / Govulmer"             : 40,
+      "Guil Shark / Melqueek"            : 32,
+      "Grass Assassin / Crimson Assassin": 28,
+      "Dubchic / Dubchich"               : 24,
+      "Nano Dragon / Sil Dragon"         : 22,
+      "Evil Shark / Vulmer"              : 20,
+      "So Dimenian / Del-D"              : 20,
+      "Sinow Gold / Sinow Red"           : 19,
+      "Gillchic / Gillchich"             : 19,
+      "Dark Gunner / Death Gunner"       : 18,
+      "Sinow Beat / Sinow Blue"          : 17,
+      "Claw"                             : 17,
+      "Garanz / Baranz"                  : 16,
+      "Canadine / Canabine"              : 16,
+      "Pofuilly Slime"                   : 14,
+      "Chaos Bringer / Dark Bringer"     : 12,
+      "La Dimenian / Merlan"             : 11,
+      "Dimenian / Arlan"                 : 11,
+      "Dark Belra / Indi Belra"          :  9,
+      "Chaos Sorcerer / Gran Sorcerer"   :  7,
+      "Bulclaw"                          :  5,
+      "Canane / Canune"                  :  4,
+      "Dubwitch"                         :  3,
+      "Dark Falz"                        :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "4" : {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 218,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"            : 62,
+          "Pal Shark / Govulmer"             : 40,
+          "Guil Shark / Melqueek"            : 32,
+          "Grass Assassin / Crimson Assassin": 28,
+          "Nano Dragon / Sil Dragon"         : 22,
+          "Evil Shark / Vulmer"              : 20,
+          "Pofuilly Slime"                   : 14
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 118,
+        "monsters"  : {
+          "Dubchic / Dubchich"     : 24,
+          "Sinow Gold / Sinow Red" : 19,
+          "Gillchic / Gillchich"   : 19,
+          "Sinow Beat / Sinow Blue": 17,
+          "Garanz / Baranz"        : 16,
+          "Canadine / Canabine"    : 16,
+          "Canane / Canune"        :  4,
+          "Dubwitch"               :  3
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 114,
+        "monsters"  : {
+          "So Dimenian / Del-D"           : 20,
+          "Dark Gunner / Death Gunner"    : 18,
+          "Claw"                          : 17,
+          "Chaos Bringer / Dark Bringer"  : 12,
+          "La Dimenian / Merlan"          : 11,
+          "Dimenian / Arlan"              : 11,
+          "Dark Belra / Indi Belra"       :  9,
+          "Chaos Sorcerer / Gran Sorcerer":  7,
+          "Bulclaw"                       :  5
+        }
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Mop-up Operation #1",
+    "total"   : 90,
+    "monsters": {
+      "Gigobooma / Tollaw"         : 36,
+      "Gobooma / Barble"           : 23,
+      "Booma / Bartle"             : 14,
+      "Savage Wolf / Gulgus"       : 10,
+      "Barbarous Wolf / Gulgus-gue":  5,
+      "Monest / Mothvist"          :  2
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1": {
+        "floor_name": "Forest 1",
+        "floor_id"  : 1,
+        "total"     : 90,
+        "monsters"  : {
+          "Gigobooma / Tollaw"         : 36,
+          "Gobooma / Barble"           : 23,
+          "Booma / Bartle"             : 14,
+          "Savage Wolf / Gulgus"       : 10,
+          "Barbarous Wolf / Gulgus-gue":  5,
+          "Monest / Mothvist"          :  2
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Mop-up Operation #2",
+    "total"   : 154,
+    "monsters": {
+      "Evil Shark / Vulmer"              : 72,
+      "Guil Shark / Melqueek"            : 24,
+      "Pal Shark / Govulmer"             : 21,
+      "Nano Dragon / Sil Dragon"         : 18,
+      "Grass Assassin / Crimson Assassin": 10,
+      "Poison Lily / Ob Lily"            :  9
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "3": {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 154,
+        "monsters"  : {
+          "Evil Shark / Vulmer"              : 72,
+          "Guil Shark / Melqueek"            : 24,
+          "Pal Shark / Govulmer"             : 21,
+          "Nano Dragon / Sil Dragon"         : 18,
+          "Grass Assassin / Crimson Assassin": 10,
+          "Poison Lily / Ob Lily"            :  9
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Mop-up Operation #3",
+    "total"   : 141,
+    "monsters": {
+      "Gillchic / Gillchich"   : 59,
+      "Canadine / Canabine"    : 39,
+      "Sinow Beat / Sinow Blue": 17,
+      "Dubchic / Dubchich"     :  9,
+      "Sinow Gold / Sinow Red" :  7,
+      "Garanz / Baranz"        :  6,
+      "Canane / Canune"        :  2,
+      "Dubwitch"               :  2
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "6": {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 141,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 59,
+          "Canadine / Canabine"    : 39,
+          "Sinow Beat / Sinow Blue": 17,
+          "Dubchic / Dubchich"     :  9,
+          "Sinow Gold / Sinow Red" :  7,
+          "Garanz / Baranz"        :  6,
+          "Canane / Canune"        :  2,
+          "Dubwitch"               :  2
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Mop-up Operation #4",
+    "total"   : 182,
+    "monsters": {
+      "Claw"                          : 50,
+      "Dimenian / Arlan"              : 35,
+      "So Dimenian / Del-D"           : 33,
+      "La Dimenian / Merlan"          : 27,
+      "Delsaber"                      : 13,
+      "Dark Belra / Indi Belra"       : 12,
+      "Dark Gunner / Death Gunner"    :  6,
+      "Chaos Sorcerer / Gran Sorcerer":  5
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "8": {
+        "floor_name": "Ruins 1",
+        "floor_id"  : 8,
+        "total"     : 182,
+        "monsters"  : {
+          "Claw"                          : 50,
+          "Dimenian / Arlan"              : 35,
+          "So Dimenian / Del-D"           : 33,
+          "La Dimenian / Merlan"          : 27,
+          "Delsaber"                      : 13,
+          "Dark Belra / Indi Belra"       : 12,
+          "Dark Gunner / Death Gunner"    :  6,
+          "Chaos Sorcerer / Gran Sorcerer":  5
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Rappy's Holiday",
+    "total"   : 164,
+    "monsters": {
+      "Hildebear / Hildelta"       : 75,
+      "Booma / Bartle"             : 20,
+      "Barbarous Wolf / Gulgus-gue": 20,
+      "Savage Wolf / Gulgus"       : 15,
+      "Gigobooma / Tollaw"         : 13,
+      "Gobooma / Barble"           : 11,
+      "Monest / Mothvist"          : 10
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1": {
+        "floor_name": "Forest 1",
+        "floor_id"  : 1,
+        "total"     : 34,
+        "monsters"  : {
+          "Booma / Bartle"             : 11,
+          "Barbarous Wolf / Gulgus-gue":  8,
+          "Savage Wolf / Gulgus"       :  6,
+          "Gigobooma / Tollaw"         :  5,
+          "Gobooma / Barble"           :  4
+        }
+      },
+      "2": {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 130,
+        "monsters"  : {
+          "Hildebear / Hildelta"       : 75,
+          "Barbarous Wolf / Gulgus-gue": 12,
+          "Monest / Mothvist"          : 10,
+          "Booma / Bartle"             :  9,
+          "Savage Wolf / Gulgus"       :  9,
+          "Gigobooma / Tollaw"         :  8,
+          "Gobooma / Barble"           :  7
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Silent Nightmare [Boss only]",
+    "total"   : 1,
+    "monsters": {"Nightmare Chaser XII": 1},
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "5" : {"floor_name": "Cave 3", "floor_id": 5, "total": 0, "monsters": {}},
+      "12": { "floor_name": "Underground Channel", "floor_id": 12, "total": 1, "monsters": {"Nightmare Chaser XII": 1} }
+    }
+  },
+  {
+    "name"    : "Silent Nightmare [Raid]",
+    "total"   : 499,
+    "monsters": {
+      "Ob Lily"             : 39,
+      "Arlan"               : 39,
+      "Merlan"              : 36,
+      "Merikle"             : 31,
+      "Indi Belra"          : 31,
+      "Baranz"              : 29,
+      "Gillchich"           : 27,
+      "Melqueek"            : 20,
+      "Delsaber"            : 20,
+      "Del-D"               : 19,
+      "Mericarol"           : 19,
+      "Dark Bringer"        : 18,
+      "Gibbles"             : 18,
+      "Delbiter"            : 17,
+      "Goran Detonator"     : 16,
+      "Gran Sorcerer"       : 16,
+      "Vulmer"              : 13,
+      "Claw"                : 13,
+      "Pofuilly Slime"      : 12,
+      "Govulmer"            : 10,
+      "Mericus"             : 10,
+      "Girtablulu"          : 10,
+      "Death Gunner"        : 10,
+      "Gi Gue"              :  8,
+      "Pan Arms"            :  7,
+      "Pazuzu"              :  7,
+      "Nightmare Chaser XII":  1,
+      "Dark Falz"           :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "5" : {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 206,
+        "monsters"  : {
+          "Ob Lily"        : 39,
+          "Melqueek"       : 20,
+          "Delsaber"       : 20,
+          "Merikle"        : 19,
+          "Vulmer"         : 13,
+          "Pofuilly Slime" : 12,
+          "Mericarol"      : 11,
+          "Gibbles"        : 11,
+          "Govulmer"       : 10,
+          "Merlan"         :  8,
+          "Delbiter"       :  8,
+          "Pan Arms"       :  7,
+          "Dark Bringer"   :  6,
+          "Arlan"          :  5,
+          "Goran Detonator":  4,
+          "Del-D"          :  3,
+          "Gi Gue"         :  3,
+          "Girtablulu"     :  3,
+          "Mericus"        :  2,
+          "Pazuzu"         :  2
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 291,
+        "monsters"  : {
+          "Arlan"          : 34,
+          "Indi Belra"     : 31,
+          "Baranz"         : 29,
+          "Merlan"         : 28,
+          "Gillchich"      : 27,
+          "Gran Sorcerer"  : 16,
+          "Del-D"          : 16,
+          "Claw"           : 13,
+          "Dark Bringer"   : 12,
+          "Merikle"        : 12,
+          "Goran Detonator": 12,
+          "Death Gunner"   : 10,
+          "Delbiter"       :  9,
+          "Mericarol"      :  8,
+          "Mericus"        :  8,
+          "Gibbles"        :  7,
+          "Girtablulu"     :  7,
+          "Gi Gue"         :  5,
+          "Pazuzu"         :  5
+        }
+      },
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"Nightmare Chaser XII": 1}
+      },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "The Ravenous Predator [Raid]",
+    "total"   : 1,
+    "monsters": {"Soul Butcher": 1},
+    "floors"  : {
+      "0" : { "floor_name": "Pioneer II",          "floor_id":  0, "total": 0, "monsters": {                 } },
+      "5" : { "floor_name": "Cave 3",              "floor_id":  5, "total": 0, "monsters": {                 } },
+      "12": { "floor_name": "Underground Channel", "floor_id": 12, "total": 1, "monsters": {"Soul Butcher": 1} }
+    }
+  },
+  {
+    "name"    : "Today's Rate",
+    "total"   : 249,
+    "monsters": {
+      "Guil Shark / Melqueek"   : 53,
+      "Poison Lily / Ob Lily"   : 52,
+      "Gillchic / Gillchich"    : 47,
+      "Sinow Beat / Sinow Blue" : 27,
+      "Canadine / Canabine"     : 25,
+      "Dubchic / Dubchich"      :  9,
+      "Nano Dragon / Sil Dragon":  7,
+      "Sinow Gold / Sinow Red"  :  7,
+      "Pan Arms"                :  6,
+      "Garanz / Baranz"         :  6,
+      "Pofuilly Slime"          :  5,
+      "Dubwitch"                :  3,
+      "Evil Shark / Vulmer"     :  1,
+      "Pal Shark / Govulmer"    :  1
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "4": {
+        "floor_name": "Cave 2",
+        "floor_id"  : 4,
+        "total"     : 29,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"   : 18,
+          "Guil Shark / Melqueek"   :  8,
+          "Pofuilly Slime"          :  2,
+          "Nano Dragon / Sil Dragon":  1
+        }
+      },
+      "5": {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 96,
+        "monsters"  : {
+          "Guil Shark / Melqueek"   : 45,
+          "Poison Lily / Ob Lily"   : 34,
+          "Nano Dragon / Sil Dragon":  6,
+          "Pan Arms"                :  6,
+          "Pofuilly Slime"          :  3,
+          "Evil Shark / Vulmer"     :  1,
+          "Pal Shark / Govulmer"    :  1
+        }
+      },
+      "6": {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 124,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 47,
+          "Sinow Beat / Sinow Blue": 27,
+          "Canadine / Canabine"    : 25,
+          "Dubchic / Dubchich"     :  9,
+          "Sinow Gold / Sinow Red" :  7,
+          "Garanz / Baranz"        :  6,
+          "Dubwitch"               :  3
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Toward the Multiverse [Lv.I]",
+    "total"   : 9,
+    "monsters": {
+      "Sil Dragon"   : 2,
+      "Barba Ray"    : 1,
+      "Gol Dragon"   : 1,
+      "Olga Flow"    : 1,
+      "Dal Ra Lie"   : 1,
+      "Vol Opt ver.2": 1,
+      "Dark Falz"    : 1
+    },
+    "floors"  : {
+      "0" : { "floor_name": "Pioneer II",          "floor_id":  0, "total": 0, "monsters": {}                   },
+      "1" : { "floor_name": "Forest 1",            "floor_id":  1, "total": 1, "monsters": {"Barba Ray": 1}     },
+      "2" : { "floor_name": "Forest 2",            "floor_id":  2, "total": 1, "monsters": {"Gol Dragon": 1}    },
+      "3" : { "floor_name": "Cave 1",              "floor_id":  3, "total": 1, "monsters": {"Sil Dragon": 1}    },
+      "4" : { "floor_name": "Cave 2",              "floor_id":  4, "total": 1, "monsters": {"Olga Flow": 1}     },
+      "11": { "floor_name": "Under the Dome",      "floor_id": 11, "total": 1, "monsters": {"Sil Dragon": 1}    },
+      "12": { "floor_name": "Underground Channel", "floor_id": 12, "total": 1, "monsters": {"Dal Ra Lie": 1}    },
+      "13": { "floor_name": "Monitor Room",        "floor_id": 13, "total": 2, "monsters": {"Vol Opt ver.2": 1} },
+      "14": { "floor_name": "Dark Falz",           "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1}     }
+    }
+  },
+  {
+    "name"    : "Toward the Multiverse [Lv.II]",
+    "total"   : 10,
+    "monsters": {
+      "Sil Dragon"   : 2,
+      "Barba Ray"    : 1,
+      "Gol Dragon"   : 1,
+      "Olga Flow"    : 1,
+      "Dal Ra Lie"   : 1,
+      "Vol Opt ver.2": 1,
+      "Dark Falz"    : 1
+    },
+    "floors"  : {
+      "0" : { "floor_name": "Pioneer II",          "floor_id":  0, "total": 0, "monsters": {}                   },
+      "1" : { "floor_name": "Forest 1",            "floor_id":  1, "total": 1, "monsters": {"Barba Ray": 1}     },
+      "2" : { "floor_name": "Forest 2",            "floor_id":  2, "total": 1, "monsters": {"Gol Dragon": 1}    },
+      "3" : { "floor_name": "Cave 1",              "floor_id":  3, "total": 1, "monsters": {"Sil Dragon": 1}    },
+      "4" : { "floor_name": "Cave 2",              "floor_id":  4, "total": 1, "monsters": {"Olga Flow": 1}     },
+      "11": { "floor_name": "Under the Dome",      "floor_id": 11, "total": 1, "monsters": {"Sil Dragon": 1}    },
+      "12": { "floor_name": "Underground Channel", "floor_id": 12, "total": 1, "monsters": {"Dal Ra Lie": 1}    },
+      "13": { "floor_name": "Monitor Room",        "floor_id": 13, "total": 3, "monsters": {"Vol Opt ver.2": 1} },
+      "14": { "floor_name": "Dark Falz",           "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1}     }
+    }
+  },
+  {
+    "name"    : "Toward the Multiverse [Lv.III]",
+    "total"   : 90,
+    "monsters": {
+      "Millennium Saber"    : 14,
+      "Headless Horseman"   : 14,
+      "Tormentark"          : 11,
+      "Tormentorr"          :  8,
+      "D-Virus Baranz"      :  8,
+      "Phantasmal Construct":  8,
+      "Pazuzu"              :  7,
+      "Soul Stealer"        :  6,
+      "Dubchich"            :  4,
+      "Rathalos"            :  2,
+      "Bar Dalus"           :  1,
+      "Eclipse Dragon"      :  1,
+      "The Chaos Ruler"     :  1,
+      "Del Lodos"           :  1,
+      "The Prophet"         :  1,
+      "Millennium Fury"     :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "1" : { "floor_name": "Forest 1", "floor_id": 1, "total": 5, "monsters": {"Tormentorr": 4, "Bar Dalus": 1} },
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 11,
+        "monsters"  : {"Millennium Saber": 6, "D-Virus Baranz": 4, "Eclipse Dragon": 1}
+      },
+      "3" : {
+        "floor_name": "Cave 1",
+        "floor_id"  : 3,
+        "total"     : 7,
+        "monsters"  : {"Pazuzu": 5, "Rathalos": 1, "Tormentark": 1}
+      },
+      "4" : { "floor_name": "Cave 2", "floor_id": 4, "total": 1, "monsters": {"The Chaos Ruler": 1} },
+      "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 3, "monsters": {"Pazuzu": 2, "Rathalos": 1} },
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 5,
+        "monsters"  : {"Tormentorr": 4, "Del Lodos": 1}
+      },
+      "13": {
+        "floor_name": "Monitor Room",
+        "floor_id"  : 13,
+        "total"     : 11,
+        "monsters"  : {"D-Virus Baranz": 4, "Dubchich": 4, "The Prophet": 1}
+      },
+      "14": {
+        "floor_name": "Dark Falz",
+        "floor_id"  : 14,
+        "total"     : 47,
+        "monsters"  : {
+          "Headless Horseman"   : 14,
+          "Tormentark"          : 10,
+          "Phantasmal Construct":  8,
+          "Millennium Saber"    :  8,
+          "Soul Stealer"        :  6,
+          "Millennium Fury"     :  1
+        }
+      }
+    }
+  },
+  {
+    "name"    : "Towards the Future",
+    "total"   : 197,
+    "monsters": {
+      "Gillchic / Gillchich"          : 26,
+      "Dimenian / Arlan"              : 17,
+      "Canadine / Canabine"           : 16,
+      "Claw"                          : 14,
+      "Evil Shark / Vulmer"           : 13,
+      "Poison Lily / Ob Lily"         : 13,
+      "Booma / Bartle"                : 12,
+      "Sinow Beat / Sinow Blue"       : 12,
+      "Gigobooma / Tollaw"            :  7,
+      "Guil Shark / Melqueek"         :  7,
+      "Gobooma / Barble"              :  6,
+      "Pofuilly Slime"                :  5,
+      "Nano Dragon / Sil Dragon"      :  5,
+      "Pal Shark / Govulmer"          :  5,
+      "Hildebear / Hildelta"          :  4,
+      "Pan Arms"                      :  4,
+      "Dark Belra / Indi Belra"       :  4,
+      "Chaos Bringer / Dark Bringer"  :  4,
+      "So Dimenian / Del-D"           :  4,
+      "Garanz / Baranz"               :  3,
+      "Savage Wolf / Gulgus"          :  2,
+      "Sinow Gold / Sinow Red"        :  2,
+      "Chaos Sorcerer / Gran Sorcerer":  2,
+      "Rag Rappy / El Rappy"          :  1,
+      "Barbarous Wolf / Gulgus-gue"   :  1,
+      "Canane / Canune"               :  1,
+      "Dubchic / Dubchich"            :  1,
+      "Dubwitch"                      :  1,
+      "Dragon / Sil Dragon"           :  1,
+      "De Rol Le / Dal Ra Lie"        :  1,
+      "Vol Opt / Vol Opt ver.2"       :  1,
+      "Dark Falz"                     :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "2" : {
+        "floor_name": "Forest 2",
+        "floor_id"  : 2,
+        "total"     : 33,
+        "monsters"  : {
+          "Booma / Bartle"             : 12,
+          "Gigobooma / Tollaw"         :  7,
+          "Gobooma / Barble"           :  6,
+          "Hildebear / Hildelta"       :  4,
+          "Savage Wolf / Gulgus"       :  2,
+          "Rag Rappy / El Rappy"       :  1,
+          "Barbarous Wolf / Gulgus-gue":  1
+        }
+      },
+      "5" : {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 52,
+        "monsters"  : {
+          "Evil Shark / Vulmer"     : 13,
+          "Poison Lily / Ob Lily"   : 13,
+          "Guil Shark / Melqueek"   :  7,
+          "Pofuilly Slime"          :  5,
+          "Nano Dragon / Sil Dragon":  5,
+          "Pal Shark / Govulmer"    :  5,
+          "Pan Arms"                :  4
+        }
+      },
+      "7" : {
+        "floor_name": "Mine 2",
+        "floor_id"  : 7,
+        "total"     : 62,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 26,
+          "Canadine / Canabine"    : 16,
+          "Sinow Beat / Sinow Blue": 12,
+          "Garanz / Baranz"        :  3,
+          "Sinow Gold / Sinow Red" :  2,
+          "Canane / Canune"        :  1,
+          "Dubchic / Dubchich"     :  1,
+          "Dubwitch"               :  1
+        }
+      },
+      "10": {
+        "floor_name": "Ruins 3",
+        "floor_id"  : 10,
+        "total"     : 45,
+        "monsters"  : {
+          "Dimenian / Arlan"              : 17,
+          "Claw"                          : 14,
+          "Dark Belra / Indi Belra"       :  4,
+          "Chaos Bringer / Dark Bringer"  :  4,
+          "So Dimenian / Del-D"           :  4,
+          "Chaos Sorcerer / Gran Sorcerer":  2
+        }
+      },
+      "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 1, "monsters": {"Dragon / Sil Dragon": 1} },
+      "12": {
+        "floor_name": "Underground Channel",
+        "floor_id"  : 12,
+        "total"     : 1,
+        "monsters"  : {"De Rol Le / Dal Ra Lie": 1}
+      },
+      "13": { "floor_name": "Monitor Room", "floor_id": 13, "total": 2, "monsters": {"Vol Opt / Vol Opt ver.2": 1} },
+      "14": { "floor_name": "Dark Falz", "floor_id": 14, "total": 1, "monsters": {"Dark Falz": 1} }
+    }
+  },
+  {
+    "name"    : "Training Room",
+    "total"   : 153,
+    "monsters": {"Recobox": 152, "Delbiter": 1},
+    "floors"  : {
+      "0" : { "floor_name": "Pioneer II", "floor_id":  0, "total":  0, "monsters": {                            } },
+      "8" : { "floor_name": "Ruins 1",    "floor_id":  8, "total": 33, "monsters": {"Recobox": 33               } },
+      "9" : { "floor_name": "Ruins 2",    "floor_id":  9, "total": 41, "monsters": {"Recobox": 41               } },
+      "10": { "floor_name": "Ruins 3",    "floor_id": 10, "total": 79, "monsters": {"Recobox": 78, "Delbiter": 1} }
+    }
+  },
+  {
+    "name"    : "VR Test Destiny: Sandstorm",
+    "total"   : 407,
+    "monsters": {
+      "Sinow Blue"      : 41,
+      "Melqueek"        : 39,
+      "Hildelta"        : 37,
+      "Ba Boota"        : 37,
+      "Dark Bringer"    : 36,
+      "Goran Detonator" : 32,
+      "Vulmer"          : 27,
+      "Govulmer"        : 27,
+      "Delsaber"        : 25,
+      "Crimson Assassin": 23,
+      "Indi Belra"      : 17,
+      "Mericarol"       : 16,
+      "Pazuzu"          : 13,
+      "Del-D"           : 11,
+      "Merikle"         : 10,
+      "Meri Noir"       :  9,
+      "Mericus"         :  6,
+      "Hildeblue"       :  1
+    },
+    "floors"  : {
+      "0" : {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "17": {
+        "floor_name": "BA Palace",
+        "floor_id"  : 17,
+        "total"     : 407,
+        "monsters"  : {
+          "Sinow Blue"      : 41,
+          "Melqueek"        : 39,
+          "Hildelta"        : 37,
+          "Ba Boota"        : 37,
+          "Dark Bringer"    : 36,
+          "Goran Detonator" : 32,
+          "Vulmer"          : 27,
+          "Govulmer"        : 27,
+          "Delsaber"        : 25,
+          "Crimson Assassin": 23,
+          "Indi Belra"      : 17,
+          "Mericarol"       : 16,
+          "Pazuzu"          : 13,
+          "Del-D"           : 11,
+          "Merikle"         : 10,
+          "Meri Noir"       :  9,
+          "Mericus"         :  6,
+          "Hildeblue"       :  1
+        }
+      }
+    }
+  },
+  {
+    "name"    : "ホワイトデーイベント",
+    "total"   : 114,
+    "monsters": {
+      "Poison Lily / Ob Lily"   : 26,
+      "Guil Shark / Melqueek"   : 24,
+      "Pal Shark / Govulmer"    : 24,
+      "Evil Shark / Vulmer"     : 24,
+      "Pofuilly Slime"          :  7,
+      "Nano Dragon / Sil Dragon":  5,
+      "Pan Arms"                :  4
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "5": {
+        "floor_name": "Cave 3",
+        "floor_id"  : 5,
+        "total"     : 114,
+        "monsters"  : {
+          "Poison Lily / Ob Lily"   : 26,
+          "Guil Shark / Melqueek"   : 24,
+          "Pal Shark / Govulmer"    : 24,
+          "Evil Shark / Vulmer"     : 24,
+          "Pofuilly Slime"          :  7,
+          "Nano Dragon / Sil Dragon":  5,
+          "Pan Arms"                :  4
+        }
+      }
+    }
+  },
+  {
+    "name"    : "総督の贈り物",
+    "total"   : 122,
+    "monsters": {
+      "Gillchic / Gillchich"   : 68,
+      "Sinow Beat / Sinow Blue": 22,
+      "Canadine / Canabine"    : 20,
+      "Dubchic / Dubchich"     :  6,
+      "Sinow Gold / Sinow Red" :  3,
+      "Garanz / Baranz"        :  2,
+      "Dubwitch"               :  1
+    },
+    "floors"  : {
+      "0": {"floor_name": "Pioneer II", "floor_id": 0, "total": 0, "monsters": {}},
+      "6": {
+        "floor_name": "Mine 1",
+        "floor_id"  : 6,
+        "total"     : 122,
+        "monsters"  : {
+          "Gillchic / Gillchich"   : 68,
+          "Sinow Beat / Sinow Blue": 22,
+          "Canadine / Canabine"    : 20,
+          "Dubchic / Dubchich"     :  6,
+          "Sinow Gold / Sinow Red" :  3,
+          "Garanz / Baranz"        :  2,
+          "Dubwitch"               :  1
+        }
+      }
+    }
+  }
+]

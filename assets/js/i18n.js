@@ -4,6 +4,7 @@ let itemData = {};
 let monsterTranslations = {};
 let typeTranslations = {};
 let activityTranslations = {};
+let questAreaTranslations = {};
 
 const LANGUAGE_LABELS = { cn: "中文", en: "English" };
 const DEFAULT_UI = {
@@ -44,7 +45,7 @@ const DEFAULT_UI = {
 async function loadLanguage(nextLanguage) {
     const selected = nextLanguage === "en" ? "en" : "cn";
     const translation = selected === "cn"
-        ? await fetch("assets/data/translation/cn.json").then(response => response.json())
+        ? await fetch("assets/data/translation/cn.json?v=20260903-1").then(response => response.json())
         : {};
     language = selected;
     const effectMessages = Object.fromEntries(
@@ -54,6 +55,7 @@ async function loadLanguage(nextLanguage) {
     monsterTranslations = translation.monsters || {};
     typeTranslations = translation.types || {};
     activityTranslations = translation.activity || {};
+    questAreaTranslations = translation.questAreas || {};
     localStorage.setItem("wiki-language", language);
     document.documentElement.lang = language === "en" ? "en" : "zh-CN";
     document.title = messages.pageTitle || document.title;
@@ -94,6 +96,7 @@ window.WIKI_I18N = {
         return monsterTranslations[monsterId]?.name || monsterId;
     },
     getActivity(value) { return activityTranslations[value] || value; },
+    getQuestArea(value) { return questAreaTranslations[value] || value; },
     text(key, fallback = "") { return messages[key] || fallback; },
     async setLanguage(nextLanguage) {
         if (nextLanguage === language) {

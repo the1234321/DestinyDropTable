@@ -1,0 +1,4003 @@
+[
+  {
+    "name": "Beach Laughter",
+    "total": 0,
+    "monsters": {},
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 0,
+        "monsters": {}
+      },
+      "6": {
+        "floor_name": "Jungle Area East",
+        "floor_id": 6,
+        "total": 0,
+        "monsters": {}
+      },
+      "7": {
+        "floor_name": "Jungle Area North",
+        "floor_id": 7,
+        "total": 0,
+        "monsters": {}
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 0,
+        "monsters": {}
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 0,
+        "monsters": {}
+      }
+    }
+  },
+  {
+    "name": "Christmas Fiasco EP2",
+    "total": 532,
+    "monsters": {
+      "Delsaber": 36,
+      "Gillchic / Gillchich": 35,
+      "Gee": 33,
+      "Delbiter": 30,
+      "Barbarous Wolf / Gulgus-gue": 28,
+      "Recobox": 26,
+      "Deldepth": 26,
+      "Zol Gibbon": 25,
+      "Dolmolm": 23,
+      "Morfos": 23,
+      "Dolmdarl": 23,
+      "Chaos Sorcerer / Gran Sorcerer": 20,
+      "Gi Gue": 20,
+      "Merillia": 19,
+      "Gibbles": 19,
+      "Sinow Zele": 19,
+      "Savage Wolf / Gulgus": 18,
+      "Pan Arms": 16,
+      "Ul Gibbon": 15,
+      "Meriltas": 13,
+      "Sinow Zoa": 12,
+      "Dubchic / Dubchich": 11,
+      "Sinow Berill": 10,
+      "Sinow Spigell": 9,
+      "Merikle": 7,
+      "Mericus": 7,
+      "Mericarol": 6,
+      "Dubwitch": 3
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 167,
+        "monsters": {
+          "Delsaber": 36,
+          "Gillchic / Gillchich": 35,
+          "Barbarous Wolf / Gulgus-gue": 28,
+          "Chaos Sorcerer / Gran Sorcerer": 20,
+          "Savage Wolf / Gulgus": 18,
+          "Pan Arms": 16,
+          "Dubchic / Dubchich": 11,
+          "Dubwitch": 3
+        }
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 183,
+        "monsters": {
+          "Gee": 33,
+          "Zol Gibbon": 25,
+          "Gi Gue": 20,
+          "Merillia": 19,
+          "Gibbles": 19,
+          "Ul Gibbon": 15,
+          "Meriltas": 13,
+          "Sinow Berill": 10,
+          "Sinow Spigell": 9,
+          "Merikle": 7,
+          "Mericus": 7,
+          "Mericarol": 6
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 182,
+        "monsters": {
+          "Delbiter": 30,
+          "Recobox": 26,
+          "Deldepth": 26,
+          "Dolmolm": 23,
+          "Morfos": 23,
+          "Dolmdarl": 23,
+          "Sinow Zele": 19,
+          "Sinow Zoa": 12
+        }
+      }
+    }
+  },
+  {
+    "name": "Defend the main room!",
+    "total": 169,
+    "monsters": {
+      "Del Lily": 43,
+      "Ill Gill": 25,
+      "Gi Gue": 23,
+      "Mericarol": 17,
+      "Gibbles": 16,
+      "Delbiter": 11,
+      "Merikle": 10,
+      "Recobox": 9,
+      "Mericus": 8,
+      "Epsilon": 7
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 169,
+        "monsters": {
+          "Del Lily": 43,
+          "Ill Gill": 25,
+          "Gi Gue": 23,
+          "Mericarol": 17,
+          "Gibbles": 16,
+          "Delbiter": 11,
+          "Merikle": 10,
+          "Recobox": 9,
+          "Mericus": 8,
+          "Epsilon": 7
+        }
+      }
+    }
+  },
+  {
+    "name": "Dolmolm Research",
+    "total": 454,
+    "monsters": {
+      "Poison Lily / Ob Lily": 46,
+      "Dolmolm": 46,
+      "Hildebear / Hildelta": 41,
+      "So Dimenian / Del-D": 35,
+      "Grass Assassin / Crimson Assassin": 31,
+      "Dolmdarl": 31,
+      "Rag Rappy / El Rappy": 28,
+      "Dimenian / Arlan": 27,
+      "Deldepth": 25,
+      "La Dimenian / Merlan": 24,
+      "Sinow Zele": 23,
+      "Dark Belra / Indi Belra": 20,
+      "Morfos": 19,
+      "Sinow Zoa": 17,
+      "Delbiter": 15,
+      "Monest / Mothvist": 13,
+      "Recobox": 13
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "VR Temple Alpha",
+        "floor_id": 1,
+        "total": 68,
+        "monsters": {
+          "Hildebear / Hildelta": 30,
+          "Grass Assassin / Crimson Assassin": 12,
+          "Poison Lily / Ob Lily": 10,
+          "Rag Rappy / El Rappy": 6,
+          "So Dimenian / Del-D": 3,
+          "Dark Belra / Indi Belra": 2,
+          "La Dimenian / Merlan": 2,
+          "Monest / Mothvist": 2,
+          "Dimenian / Arlan": 1
+        }
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 197,
+        "monsters": {
+          "Poison Lily / Ob Lily": 36,
+          "So Dimenian / Del-D": 32,
+          "Dimenian / Arlan": 26,
+          "La Dimenian / Merlan": 22,
+          "Rag Rappy / El Rappy": 22,
+          "Grass Assassin / Crimson Assassin": 19,
+          "Dark Belra / Indi Belra": 18,
+          "Monest / Mothvist": 11,
+          "Hildebear / Hildelta": 11
+        }
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 37,
+        "monsters": {
+          "Deldepth": 8,
+          "Morfos": 6,
+          "Dolmdarl": 6,
+          "Dolmolm": 5,
+          "Delbiter": 4,
+          "Sinow Zele": 3,
+          "Sinow Zoa": 3,
+          "Recobox": 2
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 152,
+        "monsters": {
+          "Dolmolm": 41,
+          "Dolmdarl": 25,
+          "Sinow Zele": 20,
+          "Deldepth": 17,
+          "Sinow Zoa": 14,
+          "Morfos": 13,
+          "Recobox": 11,
+          "Delbiter": 11
+        }
+      }
+    }
+  },
+  {
+    "name": "Festivity On The Beach",
+    "total": 15,
+    "monsters": {
+      "Dolmolm": 15
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 15,
+        "monsters": {
+          "Dolmolm": 15
+        }
+      }
+    }
+  },
+  {
+    "name": "Gal Da Val`s Darkness",
+    "total": 361,
+    "monsters": {
+      "Gillchic / Gillchich": 41,
+      "Garanz / Baranz": 31,
+      "Delsaber": 28,
+      "Merillia": 28,
+      "Ul Gibbon": 27,
+      "Meriltas": 24,
+      "Gee": 23,
+      "Savage Wolf / Gulgus": 21,
+      "Gi Gue": 21,
+      "Dubchic / Dubchich": 19,
+      "Pan Arms": 18,
+      "Barbarous Wolf / Gulgus-gue": 16,
+      "Gibbles": 15,
+      "Zol Gibbon": 11,
+      "Mericarol": 10,
+      "Sinow Berill": 10,
+      "Sinow Spigell": 9,
+      "Dubwitch": 3,
+      "Merikle": 3,
+      "Mericus": 2,
+      "Gal Gryphon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 177,
+        "monsters": {
+          "Gillchic / Gillchich": 41,
+          "Garanz / Baranz": 31,
+          "Delsaber": 28,
+          "Savage Wolf / Gulgus": 21,
+          "Dubchic / Dubchich": 19,
+          "Pan Arms": 18,
+          "Barbarous Wolf / Gulgus-gue": 16,
+          "Dubwitch": 3
+        }
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 183,
+        "monsters": {
+          "Merillia": 28,
+          "Ul Gibbon": 27,
+          "Meriltas": 24,
+          "Gee": 23,
+          "Gi Gue": 21,
+          "Gibbles": 15,
+          "Zol Gibbon": 11,
+          "Mericarol": 10,
+          "Sinow Berill": 10,
+          "Sinow Spigell": 9,
+          "Merikle": 3,
+          "Mericus": 2
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Gal Gryphon": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Hallowed World [Master]",
+    "total": 416,
+    "monsters": {
+      "Del Lily": 73,
+      "Hallowed Reaper": 73,
+      "Millennium Bringer": 43,
+      "Recobox": 41,
+      "Forbidden Saber": 36,
+      "Queen of Gal Da Val": 36,
+      "Meri Nelgal": 30,
+      "Epsilon": 30,
+      "Meri Vajulla": 29,
+      "Lafuterian": 24,
+      "Barba Ray": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 0,
+        "monsters": {}
+      },
+      "14": {
+        "floor_name": "VR Temple Final",
+        "floor_id": 14,
+        "total": 1,
+        "monsters": {
+          "Barba Ray": 1
+        }
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 227,
+        "monsters": {
+          "Hallowed Reaper": 49,
+          "Del Lily": 40,
+          "Forbidden Saber": 25,
+          "Millennium Bringer": 24,
+          "Epsilon": 19,
+          "Meri Vajulla": 17,
+          "Queen of Gal Da Val": 15,
+          "Lafuterian": 13,
+          "Recobox": 13,
+          "Meri Nelgal": 12
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 188,
+        "monsters": {
+          "Del Lily": 33,
+          "Recobox": 28,
+          "Hallowed Reaper": 24,
+          "Queen of Gal Da Val": 21,
+          "Millennium Bringer": 19,
+          "Meri Nelgal": 18,
+          "Meri Vajulla": 12,
+          "Lafuterian": 11,
+          "Forbidden Saber": 11,
+          "Epsilon": 11
+        }
+      }
+    }
+  },
+  {
+    "name": "Lost DEVIL'S SCEPTER",
+    "total": 647,
+    "monsters": {
+      "Gee": 139,
+      "Merillia": 90,
+      "Ul Gibbon": 88,
+      "Meriltas": 79,
+      "Zol Gibbon": 79,
+      "Sinow Spigell": 45,
+      "Sinow Berill": 39,
+      "Gi Gue": 25,
+      "Gibbles": 23,
+      "Mericarol": 12,
+      "Mericus": 12,
+      "Merikle": 11,
+      "Merikle / Mericus": 4,
+      "Gal Gryphon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 158,
+        "monsters": {
+          "Gee": 33,
+          "Ul Gibbon": 18,
+          "Zol Gibbon": 18,
+          "Merillia": 16,
+          "Meriltas": 16,
+          "Sinow Berill": 13,
+          "Sinow Spigell": 13,
+          "Gibbles": 9,
+          "Gi Gue": 9,
+          "Mericarol": 4,
+          "Merikle": 4,
+          "Mericus": 4,
+          "Merikle / Mericus": 1
+        }
+      },
+      "6": {
+        "floor_name": "Jungle Area East",
+        "floor_id": 6,
+        "total": 105,
+        "monsters": {
+          "Merillia": 29,
+          "Meriltas": 17,
+          "Gee": 13,
+          "Ul Gibbon": 11,
+          "Sinow Spigell": 9,
+          "Zol Gibbon": 7,
+          "Sinow Berill": 6,
+          "Mericus": 4,
+          "Merikle / Mericus": 3,
+          "Merikle": 3,
+          "Mericarol": 3
+        }
+      },
+      "7": {
+        "floor_name": "Jungle Area North",
+        "floor_id": 7,
+        "total": 98,
+        "monsters": {
+          "Gee": 25,
+          "Meriltas": 16,
+          "Zol Gibbon": 16,
+          "Merillia": 14,
+          "Sinow Spigell": 7,
+          "Ul Gibbon": 5,
+          "Mericarol": 5,
+          "Merikle": 4,
+          "Mericus": 4,
+          "Sinow Berill": 2
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 144,
+        "monsters": {
+          "Ul Gibbon": 37,
+          "Zol Gibbon": 25,
+          "Gee": 25,
+          "Merillia": 15,
+          "Gibbles": 14,
+          "Meriltas": 10,
+          "Sinow Berill": 9,
+          "Sinow Spigell": 9
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 141,
+        "monsters": {
+          "Gee": 43,
+          "Meriltas": 20,
+          "Ul Gibbon": 17,
+          "Merillia": 16,
+          "Gi Gue": 16,
+          "Zol Gibbon": 13,
+          "Sinow Berill": 9,
+          "Sinow Spigell": 7
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Gal Gryphon": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Lost RIOT RAYGUN",
+    "total": 405,
+    "monsters": {
+      "Gillchic / Gillchich": 112,
+      "Savage Wolf / Gulgus": 67,
+      "Delsaber": 63,
+      "Barbarous Wolf / Gulgus-gue": 45,
+      "Pan Arms": 42,
+      "Dubchic / Dubchich": 25,
+      "Garanz / Baranz": 24,
+      "Chaos Sorcerer / Gran Sorcerer": 23,
+      "Dubwitch": 3,
+      "Gol Dragon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 206,
+        "monsters": {
+          "Gillchic / Gillchich": 58,
+          "Savage Wolf / Gulgus": 39,
+          "Delsaber": 35,
+          "Barbarous Wolf / Gulgus-gue": 25,
+          "Pan Arms": 25,
+          "Garanz / Baranz": 24
+        }
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 198,
+        "monsters": {
+          "Gillchic / Gillchich": 54,
+          "Savage Wolf / Gulgus": 28,
+          "Delsaber": 28,
+          "Dubchic / Dubchich": 25,
+          "Chaos Sorcerer / Gran Sorcerer": 23,
+          "Barbarous Wolf / Gulgus-gue": 20,
+          "Pan Arms": 17,
+          "Dubwitch": 3
+        }
+      },
+      "15": {
+        "floor_name": "VR Spaceship Final",
+        "floor_id": 15,
+        "total": 1,
+        "monsters": {
+          "Gol Dragon": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Maximum Attack 2",
+    "total": 843,
+    "monsters": {
+      "Gee": 122,
+      "Ul Gibbon": 106,
+      "Meriltas": 97,
+      "Zol Gibbon": 78,
+      "Merillia": 76,
+      "Savage Wolf / Gulgus": 56,
+      "Gillchic / Gillchich": 52,
+      "Delsaber": 36,
+      "Poison Lily / Ob Lily": 35,
+      "So Dimenian / Del-D": 27,
+      "La Dimenian / Merlan": 21,
+      "Dimenian / Arlan": 20,
+      "Sinow Berill": 19,
+      "Hildebear / Hildelta": 18,
+      "Garanz / Baranz": 17,
+      "Dark Belra / Indi Belra": 14,
+      "Pan Arms": 10,
+      "Gi Gue": 9,
+      "Gibbles": 8,
+      "Grass Assassin / Crimson Assassin": 6,
+      "Barbarous Wolf / Gulgus-gue": 5,
+      "Mericarol": 4,
+      "Merikle / Mericus": 3,
+      "Sinow Spigell": 2,
+      "Merikle": 1,
+      "Mericus": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 141,
+        "monsters": {
+          "Poison Lily / Ob Lily": 35,
+          "So Dimenian / Del-D": 27,
+          "La Dimenian / Merlan": 21,
+          "Dimenian / Arlan": 20,
+          "Hildebear / Hildelta": 18,
+          "Dark Belra / Indi Belra": 14,
+          "Grass Assassin / Crimson Assassin": 6
+        }
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 176,
+        "monsters": {
+          "Savage Wolf / Gulgus": 56,
+          "Gillchic / Gillchich": 52,
+          "Delsaber": 36,
+          "Garanz / Baranz": 17,
+          "Pan Arms": 10,
+          "Barbarous Wolf / Gulgus-gue": 5
+        }
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 126,
+        "monsters": {
+          "Meriltas": 34,
+          "Ul Gibbon": 21,
+          "Merillia": 20,
+          "Sinow Berill": 18,
+          "Zol Gibbon": 16,
+          "Gee": 15,
+          "Sinow Spigell": 2
+        }
+      },
+      "6": {
+        "floor_name": "Jungle Area East",
+        "floor_id": 6,
+        "total": 62,
+        "monsters": {
+          "Gee": 15,
+          "Merillia": 9,
+          "Ul Gibbon": 9,
+          "Meriltas": 6,
+          "Zol Gibbon": 6,
+          "Gi Gue": 6,
+          "Gibbles": 5,
+          "Mericarol": 4,
+          "Merikle": 1,
+          "Mericus": 1
+        }
+      },
+      "7": {
+        "floor_name": "Jungle Area North",
+        "floor_id": 7,
+        "total": 95,
+        "monsters": {
+          "Meriltas": 52,
+          "Merillia": 34,
+          "Ul Gibbon": 3,
+          "Merikle / Mericus": 3,
+          "Gee": 2,
+          "Zol Gibbon": 1
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 128,
+        "monsters": {
+          "Ul Gibbon": 63,
+          "Zol Gibbon": 45,
+          "Merillia": 10,
+          "Gee": 7,
+          "Gibbles": 3
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 115,
+        "monsters": {
+          "Gee": 83,
+          "Ul Gibbon": 10,
+          "Zol Gibbon": 10,
+          "Meriltas": 5,
+          "Merillia": 3,
+          "Gi Gue": 3,
+          "Sinow Berill": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Maximum Attack 4th Stage -2A-",
+    "total": 440,
+    "monsters": {
+      "Gee": 62,
+      "Recobox": 56,
+      "Dolmdarl": 55,
+      "Dolmolm": 51,
+      "Zol Gibbon": 41,
+      "Merillia": 32,
+      "Ul Gibbon": 29,
+      "Meriltas": 21,
+      "Sinow Berill": 20,
+      "Morfos": 20,
+      "Sinow Zoa": 12,
+      "Deldepth": 12,
+      "Sinow Spigell": 8,
+      "Sinow Zele": 7,
+      "Delbiter": 7,
+      "Gibbles": 6,
+      "Merikle / Mericus": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 220,
+        "monsters": {
+          "Gee": 62,
+          "Zol Gibbon": 41,
+          "Merillia": 32,
+          "Ul Gibbon": 29,
+          "Meriltas": 21,
+          "Sinow Berill": 20,
+          "Sinow Spigell": 8,
+          "Gibbles": 6,
+          "Merikle / Mericus": 1
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 220,
+        "monsters": {
+          "Recobox": 56,
+          "Dolmdarl": 55,
+          "Dolmolm": 51,
+          "Morfos": 20,
+          "Sinow Zoa": 12,
+          "Deldepth": 12,
+          "Sinow Zele": 7,
+          "Delbiter": 7
+        }
+      }
+    }
+  },
+  {
+    "name": "Maximum Attack 4th Stage -2B-",
+    "total": 490,
+    "monsters": {
+      "Gee": 67,
+      "Dolmdarl": 53,
+      "Merillia": 52,
+      "Dolmolm": 51,
+      "Meriltas": 42,
+      "Recobox": 42,
+      "Morfos": 38,
+      "Zol Gibbon": 27,
+      "Sinow Berill": 25,
+      "Deldepth": 25,
+      "Sinow Zele": 18,
+      "Ul Gibbon": 16,
+      "Sinow Spigell": 12,
+      "Sinow Zoa": 12,
+      "Merikle / Mericus": 3,
+      "Mericarol": 3,
+      "Delbiter": 2,
+      "Mericus": 1,
+      "Merikle": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 249,
+        "monsters": {
+          "Gee": 67,
+          "Merillia": 52,
+          "Meriltas": 42,
+          "Zol Gibbon": 27,
+          "Sinow Berill": 25,
+          "Ul Gibbon": 16,
+          "Sinow Spigell": 12,
+          "Merikle / Mericus": 3,
+          "Mericarol": 3,
+          "Mericus": 1,
+          "Merikle": 1
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 241,
+        "monsters": {
+          "Dolmdarl": 53,
+          "Dolmolm": 51,
+          "Recobox": 42,
+          "Morfos": 38,
+          "Deldepth": 25,
+          "Sinow Zele": 18,
+          "Sinow Zoa": 12,
+          "Delbiter": 2
+        }
+      }
+    }
+  },
+  {
+    "name": "Maximum Attack 4th Stage -2C-",
+    "total": 484,
+    "monsters": {
+      "Recobox": 58,
+      "Gee": 45,
+      "Dolmolm": 44,
+      "Dolmdarl": 38,
+      "Del Lily": 28,
+      "Zol Gibbon": 26,
+      "Merillia": 24,
+      "Sinow Berill": 22,
+      "Ill Gill": 21,
+      "Meriltas": 20,
+      "Delbiter": 19,
+      "Sinow Zoa": 18,
+      "Sinow Zele": 18,
+      "Morfos": 16,
+      "Gi Gue": 15,
+      "Ul Gibbon": 14,
+      "Sinow Spigell": 14,
+      "Gibbles": 14,
+      "Deldepth": 10,
+      "Merikle": 6,
+      "Mericus": 6,
+      "Mericarol": 4,
+      "Epsilon": 4
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 180,
+        "monsters": {
+          "Gee": 45,
+          "Zol Gibbon": 26,
+          "Merillia": 24,
+          "Sinow Berill": 22,
+          "Meriltas": 20,
+          "Ul Gibbon": 14,
+          "Sinow Spigell": 14,
+          "Gi Gue": 6,
+          "Gibbles": 6,
+          "Mericarol": 1,
+          "Merikle": 1,
+          "Mericus": 1
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 195,
+        "monsters": {
+          "Recobox": 44,
+          "Dolmolm": 44,
+          "Dolmdarl": 38,
+          "Sinow Zoa": 18,
+          "Sinow Zele": 18,
+          "Morfos": 16,
+          "Deldepth": 10,
+          "Delbiter": 7
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 109,
+        "monsters": {
+          "Del Lily": 28,
+          "Ill Gill": 21,
+          "Recobox": 14,
+          "Delbiter": 12,
+          "Gi Gue": 9,
+          "Gibbles": 8,
+          "Merikle": 5,
+          "Mericus": 5,
+          "Epsilon": 4,
+          "Mericarol": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "MAXIMUM ATTACK S",
+    "total": 549,
+    "monsters": {
+      "Gi Gue": 87,
+      "Gee": 74,
+      "Dolmdarl": 51,
+      "Gibbles": 49,
+      "Dolmolm": 47,
+      "Ul Gibbon": 37,
+      "Sinow Spigell": 37,
+      "Merikle": 34,
+      "Merillia": 33,
+      "Meriltas": 31,
+      "Mericus": 28,
+      "Zol Gibbon": 24,
+      "Mericarol": 15,
+      "Sinow Berill": 2
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 287,
+        "monsters": {
+          "Gee": 68,
+          "Dolmdarl": 51,
+          "Dolmolm": 47,
+          "Ul Gibbon": 35,
+          "Merillia": 33,
+          "Meriltas": 31,
+          "Zol Gibbon": 22
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 262,
+        "monsters": {
+          "Gi Gue": 87,
+          "Gibbles": 49,
+          "Sinow Spigell": 37,
+          "Merikle": 34,
+          "Mericus": 28,
+          "Mericarol": 15,
+          "Gee": 6,
+          "Ul Gibbon": 2,
+          "Zol Gibbon": 2,
+          "Sinow Berill": 2
+        }
+      }
+    }
+  },
+  {
+    "name": "New MSB",
+    "total": 756,
+    "monsters": {
+      "Poison Lily / Ob Lily": 105,
+      "Gee": 86,
+      "Rag Rappy / El Rappy": 69,
+      "So Dimenian / Del-D": 54,
+      "Dimenian / Arlan": 48,
+      "La Dimenian / Merlan": 41,
+      "Hildebear / Hildelta": 38,
+      "Merillia": 38,
+      "Dark Belra / Indi Belra": 36,
+      "Grass Assassin / Crimson Assassin": 20,
+      "Ul Gibbon": 20,
+      "Sinow Spigell": 16,
+      "Meriltas": 15,
+      "Sinow Zoa": 14,
+      "Monest / Mothvist": 13,
+      "Recobox": 13,
+      "Sinow Berill": 12,
+      "Zol Gibbon": 12,
+      "Delbiter": 12,
+      "Dolmdarl": 12,
+      "Gi Gue": 11,
+      "Dolmolm": 11,
+      "Del Lily": 11,
+      "Sinow Zele": 10,
+      "Deldepth": 8,
+      "Ill Gill": 8,
+      "Mericarol": 5,
+      "Epsilon": 5,
+      "Gibbles": 4,
+      "Merikle / Mericus": 3,
+      "Merikle": 2,
+      "Mericus": 2,
+      "Gal Gryphon": 1,
+      "Olga Flow": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 424,
+        "monsters": {
+          "Poison Lily / Ob Lily": 105,
+          "Rag Rappy / El Rappy": 69,
+          "So Dimenian / Del-D": 54,
+          "Dimenian / Arlan": 48,
+          "La Dimenian / Merlan": 41,
+          "Hildebear / Hildelta": 38,
+          "Dark Belra / Indi Belra": 36,
+          "Grass Assassin / Crimson Assassin": 20,
+          "Monest / Mothvist": 13
+        }
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 29,
+        "monsters": {
+          "Sinow Spigell": 16,
+          "Sinow Berill": 12,
+          "Gibbles": 1
+        }
+      },
+      "7": {
+        "floor_name": "Jungle Area North",
+        "floor_id": 7,
+        "total": 78,
+        "monsters": {
+          "Merillia": 24,
+          "Gee": 22,
+          "Ul Gibbon": 11,
+          "Zol Gibbon": 8,
+          "Meriltas": 4,
+          "Mericarol": 4,
+          "Merikle / Mericus": 2,
+          "Gibbles": 1,
+          "Merikle": 1,
+          "Mericus": 1
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 114,
+        "monsters": {
+          "Gee": 64,
+          "Merillia": 14,
+          "Meriltas": 11,
+          "Gi Gue": 10,
+          "Ul Gibbon": 9,
+          "Zol Gibbon": 4,
+          "Gibbles": 1,
+          "Merikle / Mericus": 1
+        }
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 73,
+        "monsters": {
+          "Sinow Zoa": 14,
+          "Recobox": 13,
+          "Dolmdarl": 12,
+          "Dolmolm": 11,
+          "Sinow Zele": 10,
+          "Deldepth": 8,
+          "Delbiter": 5
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Gal Gryphon": 1
+        }
+      },
+      "13": {
+        "floor_name": "Test Subject Disposal Area",
+        "floor_id": 13,
+        "total": 1,
+        "monsters": {
+          "Olga Flow": 1
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 36,
+        "monsters": {
+          "Del Lily": 11,
+          "Ill Gill": 8,
+          "Delbiter": 7,
+          "Epsilon": 5,
+          "Mericarol": 1,
+          "Merikle": 1,
+          "Mericus": 1,
+          "Gibbles": 1,
+          "Gi Gue": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Phantasmal World #1",
+    "total": 361,
+    "monsters": {
+      "Gee": 122,
+      "Merillia": 83,
+      "Ul Gibbon": 45,
+      "Meriltas": 41,
+      "Sinow Berill": 25,
+      "Zol Gibbon": 20,
+      "Gi Gue": 12,
+      "Sinow Spigell": 7,
+      "Mericarol": 6
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "6": {
+        "floor_name": "Jungle Area East",
+        "floor_id": 6,
+        "total": 203,
+        "monsters": {
+          "Merillia": 58,
+          "Gee": 55,
+          "Ul Gibbon": 26,
+          "Meriltas": 25,
+          "Sinow Berill": 16,
+          "Zol Gibbon": 11,
+          "Sinow Spigell": 6,
+          "Mericarol": 6
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 158,
+        "monsters": {
+          "Gee": 67,
+          "Merillia": 25,
+          "Ul Gibbon": 19,
+          "Meriltas": 16,
+          "Gi Gue": 12,
+          "Sinow Berill": 9,
+          "Zol Gibbon": 9,
+          "Sinow Spigell": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Phantasmal World #2",
+    "total": 358,
+    "monsters": {
+      "Ul Gibbon": 114,
+      "Gee": 80,
+      "Merillia": 54,
+      "Meriltas": 42,
+      "Zol Gibbon": 26,
+      "Sinow Berill": 24,
+      "Sinow Spigell": 9,
+      "Gibbles": 9
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 191,
+        "monsters": {
+          "Ul Gibbon": 61,
+          "Gee": 40,
+          "Merillia": 28,
+          "Meriltas": 20,
+          "Sinow Berill": 17,
+          "Zol Gibbon": 16,
+          "Sinow Spigell": 9
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 167,
+        "monsters": {
+          "Ul Gibbon": 53,
+          "Gee": 40,
+          "Merillia": 26,
+          "Meriltas": 22,
+          "Zol Gibbon": 10,
+          "Gibbles": 9,
+          "Sinow Berill": 7
+        }
+      }
+    }
+  },
+  {
+    "name": "Phantasmal World #3",
+    "total": 347,
+    "monsters": {
+      "Dolmolm": 103,
+      "Dolmdarl": 57,
+      "Morfos": 47,
+      "Sinow Zoa": 33,
+      "Deldepth": 31,
+      "Recobox": 27,
+      "Delbiter": 27,
+      "Sinow Zele": 22
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 166,
+        "monsters": {
+          "Dolmolm": 64,
+          "Dolmdarl": 31,
+          "Morfos": 23,
+          "Sinow Zoa": 16,
+          "Recobox": 12,
+          "Delbiter": 12,
+          "Sinow Zele": 7,
+          "Deldepth": 1
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 181,
+        "monsters": {
+          "Dolmolm": 39,
+          "Deldepth": 30,
+          "Dolmdarl": 26,
+          "Morfos": 24,
+          "Sinow Zoa": 17,
+          "Sinow Zele": 15,
+          "Recobox": 15,
+          "Delbiter": 15
+        }
+      }
+    }
+  },
+  {
+    "name": "Phantasmal World #4",
+    "total": 242,
+    "monsters": {
+      "Ill Gill": 72,
+      "Del Lily": 57,
+      "Gi Gue": 22,
+      "Gibbles": 20,
+      "Recobox": 20,
+      "Delbiter": 19,
+      "Mericarol": 11,
+      "Epsilon": 9,
+      "Merikle": 6,
+      "Mericus": 6
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 139,
+        "monsters": {
+          "Ill Gill": 49,
+          "Del Lily": 30,
+          "Gibbles": 16,
+          "Delbiter": 11,
+          "Recobox": 10,
+          "Gi Gue": 9,
+          "Mericarol": 5,
+          "Merikle": 4,
+          "Epsilon": 3,
+          "Mericus": 2
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 103,
+        "monsters": {
+          "Del Lily": 27,
+          "Ill Gill": 23,
+          "Gi Gue": 13,
+          "Recobox": 10,
+          "Delbiter": 8,
+          "Mericarol": 6,
+          "Epsilon": 6,
+          "Gibbles": 4,
+          "Mericus": 4,
+          "Merikle": 2
+        }
+      }
+    }
+  },
+  {
+    "name": "Pioneer Christmas",
+    "total": 0,
+    "monsters": {},
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 0,
+        "monsters": {}
+      }
+    }
+  },
+  {
+    "name": "Pioneer Halloween",
+    "total": 175,
+    "monsters": {
+      "Merillia": 57,
+      "Ul Gibbon": 51,
+      "Gee": 30,
+      "Meriltas": 25,
+      "Zol Gibbon": 8,
+      "Sinow Berill": 2,
+      "Merikle / Mericus": 1,
+      "Gi Gue": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "6": {
+        "floor_name": "Jungle Area East",
+        "floor_id": 6,
+        "total": 44,
+        "monsters": {
+          "Merillia": 22,
+          "Ul Gibbon": 13,
+          "Meriltas": 7,
+          "Gee": 2
+        }
+      },
+      "7": {
+        "floor_name": "Jungle Area North",
+        "floor_id": 7,
+        "total": 33,
+        "monsters": {
+          "Merillia": 14,
+          "Meriltas": 11,
+          "Ul Gibbon": 5,
+          "Gee": 2,
+          "Merikle / Mericus": 1
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 45,
+        "monsters": {
+          "Ul Gibbon": 21,
+          "Gee": 9,
+          "Merillia": 9,
+          "Zol Gibbon": 5,
+          "Sinow Berill": 1
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 53,
+        "monsters": {
+          "Gee": 17,
+          "Merillia": 12,
+          "Ul Gibbon": 12,
+          "Meriltas": 7,
+          "Zol Gibbon": 3,
+          "Sinow Berill": 1,
+          "Gi Gue": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Raid on Central Tower",
+    "total": 264,
+    "monsters": {
+      "Del Lily": 60,
+      "Mericarol": 35,
+      "Delbiter": 32,
+      "Gi Gue": 31,
+      "Ill Gill": 28,
+      "Gibbles": 23,
+      "Epsilon": 21,
+      "Merikle": 18,
+      "Mericus": 13,
+      "Sinow Zele": 1,
+      "Sinow Zoa": 1,
+      "Olga Flow": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 5,
+        "monsters": {
+          "Delbiter": 3,
+          "Sinow Zele": 1,
+          "Sinow Zoa": 1
+        }
+      },
+      "13": {
+        "floor_name": "Test Subject Disposal Area",
+        "floor_id": 13,
+        "total": 1,
+        "monsters": {
+          "Olga Flow": 1
+        }
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 112,
+        "monsters": {
+          "Del Lily": 34,
+          "Ill Gill": 18,
+          "Delbiter": 15,
+          "Gi Gue": 15,
+          "Gibbles": 10,
+          "Mericarol": 10,
+          "Epsilon": 4,
+          "Mericus": 3,
+          "Merikle": 3
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 146,
+        "monsters": {
+          "Del Lily": 26,
+          "Mericarol": 25,
+          "Epsilon": 17,
+          "Gi Gue": 16,
+          "Merikle": 15,
+          "Delbiter": 14,
+          "Gibbles": 13,
+          "Mericus": 10,
+          "Ill Gill": 10
+        }
+      }
+    }
+  },
+  {
+    "name": "Random Attack Xrd Stage",
+    "total": 1015,
+    "monsters": {
+      "Poison Lily / Ob Lily": 60,
+      "Hildebear / Hildelta": 47,
+      "Gillchic / Gillchich": 45,
+      "Gee": 44,
+      "Delsaber": 43,
+      "Pan Arms": 34,
+      "Dolmolm": 33,
+      "Rag Rappy / El Rappy": 31,
+      "Gibbles": 31,
+      "Dolmdarl": 30,
+      "Delbiter": 30,
+      "Sinow Spigell": 29,
+      "Morfos": 29,
+      "Gi Gue": 28,
+      "Dimenian / Arlan": 27,
+      "Dark Belra / Indi Belra": 27,
+      "Sinow Zoa": 27,
+      "La Dimenian / Merlan": 26,
+      "So Dimenian / Del-D": 26,
+      "Merillia": 26,
+      "Meriltas": 25,
+      "Sinow Berill": 24,
+      "Ul Gibbon": 22,
+      "Deldepth": 22,
+      "Dubchic / Dubchich": 21,
+      "Grass Assassin / Crimson Assassin": 20,
+      "Savage Wolf / Gulgus": 20,
+      "Recobox": 19,
+      "Chaos Sorcerer / Gran Sorcerer": 18,
+      "Zol Gibbon": 18,
+      "Mericarol": 17,
+      "Ill Gill": 17,
+      "Del Lily": 16,
+      "Sinow Zele": 15,
+      "Merikle": 12,
+      "Barbarous Wolf / Gulgus-gue": 11,
+      "Mericus": 11,
+      "Garanz / Baranz": 10,
+      "Monest / Mothvist": 8,
+      "Epsilon": 7,
+      "Dubwitch": 5,
+      "Gal Gryphon": 1,
+      "Olga Flow": 1,
+      "Barba Ray": 1,
+      "Gol Dragon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "VR Temple Alpha",
+        "floor_id": 1,
+        "total": 179,
+        "monsters": {
+          "Poison Lily / Ob Lily": 46,
+          "Dimenian / Arlan": 24,
+          "Rag Rappy / El Rappy": 20,
+          "So Dimenian / Del-D": 19,
+          "Hildebear / Hildelta": 17,
+          "La Dimenian / Merlan": 17,
+          "Dark Belra / Indi Belra": 15,
+          "Grass Assassin / Crimson Assassin": 15,
+          "Monest / Mothvist": 6
+        }
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 93,
+        "monsters": {
+          "Hildebear / Hildelta": 30,
+          "Poison Lily / Ob Lily": 14,
+          "Dark Belra / Indi Belra": 12,
+          "Rag Rappy / El Rappy": 11,
+          "La Dimenian / Merlan": 9,
+          "So Dimenian / Del-D": 7,
+          "Grass Assassin / Crimson Assassin": 5,
+          "Dimenian / Arlan": 3,
+          "Monest / Mothvist": 2
+        }
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 98,
+        "monsters": {
+          "Gillchic / Gillchich": 24,
+          "Pan Arms": 17,
+          "Delsaber": 17,
+          "Dubchic / Dubchich": 10,
+          "Garanz / Baranz": 10,
+          "Barbarous Wolf / Gulgus-gue": 9,
+          "Savage Wolf / Gulgus": 8,
+          "Dubwitch": 3
+        }
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 109,
+        "monsters": {
+          "Delsaber": 26,
+          "Gillchic / Gillchich": 21,
+          "Chaos Sorcerer / Gran Sorcerer": 18,
+          "Pan Arms": 17,
+          "Savage Wolf / Gulgus": 12,
+          "Dubchic / Dubchich": 11,
+          "Dubwitch": 2,
+          "Barbarous Wolf / Gulgus-gue": 2
+        }
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 51,
+        "monsters": {
+          "Gee": 9,
+          "Sinow Spigell": 6,
+          "Meriltas": 6,
+          "Ul Gibbon": 6,
+          "Gi Gue": 5,
+          "Sinow Berill": 5,
+          "Mericus": 3,
+          "Merikle": 3,
+          "Zol Gibbon": 3,
+          "Gibbles": 3,
+          "Merillia": 1,
+          "Mericarol": 1
+        }
+      },
+      "6": {
+        "floor_name": "Jungle Area East",
+        "floor_id": 6,
+        "total": 62,
+        "monsters": {
+          "Sinow Berill": 8,
+          "Gibbles": 7,
+          "Gee": 7,
+          "Zol Gibbon": 7,
+          "Merillia": 7,
+          "Meriltas": 7,
+          "Ul Gibbon": 6,
+          "Gi Gue": 6,
+          "Mericarol": 3,
+          "Sinow Spigell": 2,
+          "Merikle": 1,
+          "Mericus": 1
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 44,
+        "monsters": {
+          "Merillia": 12,
+          "Gee": 8,
+          "Gibbles": 5,
+          "Ul Gibbon": 4,
+          "Sinow Berill": 4,
+          "Sinow Spigell": 4,
+          "Mericarol": 3,
+          "Meriltas": 2,
+          "Mericus": 1,
+          "Gi Gue": 1
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 93,
+        "monsters": {
+          "Gee": 20,
+          "Sinow Spigell": 17,
+          "Meriltas": 10,
+          "Zol Gibbon": 8,
+          "Sinow Berill": 7,
+          "Ul Gibbon": 6,
+          "Merillia": 6,
+          "Gibbles": 6,
+          "Gi Gue": 5,
+          "Mericarol": 4,
+          "Mericus": 2,
+          "Merikle": 2
+        }
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 115,
+        "monsters": {
+          "Dolmolm": 22,
+          "Dolmdarl": 16,
+          "Sinow Zoa": 15,
+          "Deldepth": 15,
+          "Morfos": 15,
+          "Recobox": 11,
+          "Sinow Zele": 11,
+          "Delbiter": 10
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 78,
+        "monsters": {
+          "Morfos": 14,
+          "Dolmdarl": 14,
+          "Sinow Zoa": 12,
+          "Dolmolm": 11,
+          "Delbiter": 8,
+          "Recobox": 8,
+          "Deldepth": 7,
+          "Sinow Zele": 4
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Gal Gryphon": 1
+        }
+      },
+      "13": {
+        "floor_name": "Test Subject Disposal Area",
+        "floor_id": 13,
+        "total": 1,
+        "monsters": {
+          "Olga Flow": 1
+        }
+      },
+      "14": {
+        "floor_name": "VR Temple Final",
+        "floor_id": 14,
+        "total": 1,
+        "monsters": {
+          "Barba Ray": 1
+        }
+      },
+      "15": {
+        "floor_name": "VR Spaceship Final",
+        "floor_id": 15,
+        "total": 1,
+        "monsters": {
+          "Gol Dragon": 1
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 89,
+        "monsters": {
+          "Ill Gill": 17,
+          "Del Lily": 16,
+          "Delbiter": 12,
+          "Gi Gue": 11,
+          "Gibbles": 10,
+          "Epsilon": 7,
+          "Mericarol": 6,
+          "Merikle": 6,
+          "Mericus": 4
+        }
+      }
+    }
+  },
+  {
+    "name": "Reach for the Dream",
+    "total": 42,
+    "monsters": {
+      "Gillchic / Gillchich": 19,
+      "Delsaber": 7,
+      "Dubchic / Dubchich": 6,
+      "Savage Wolf / Gulgus": 4,
+      "Garanz / Baranz": 3,
+      "Pan Arms": 2,
+      "Dubwitch": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 42,
+        "monsters": {
+          "Gillchic / Gillchich": 19,
+          "Delsaber": 7,
+          "Dubchic / Dubchich": 6,
+          "Savage Wolf / Gulgus": 4,
+          "Garanz / Baranz": 3,
+          "Pan Arms": 2,
+          "Dubwitch": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Respective Tomorrow",
+    "total": 375,
+    "monsters": {
+      "Gee": 88,
+      "Recobox": 62,
+      "Dubchic / Dubchich": 28,
+      "Poison Lily / Ob Lily": 19,
+      "Merillia": 19,
+      "Dimenian / Arlan": 18,
+      "Gi Gue": 18,
+      "Mericarol": 14,
+      "Rag Rappy / El Rappy": 10,
+      "La Dimenian / Merlan": 9,
+      "Sinow Zoa": 9,
+      "Gibbles": 7,
+      "Dubwitch": 6,
+      "Ul Gibbon": 6,
+      "Hildebear / Hildelta": 5,
+      "Meriltas": 5,
+      "Merikle": 5,
+      "Sinow Berill": 4,
+      "Morfos": 4,
+      "Dolmdarl": 4,
+      "Grass Assassin / Crimson Assassin": 3,
+      "Zol Gibbon": 3,
+      "Mericus": 3,
+      "Ill Gill": 3,
+      "Del Lily": 3,
+      "Monest / Mothvist": 2,
+      "Sinow Spigell": 2,
+      "Dolmolm": 2,
+      "Pan Arms": 1,
+      "Gillchic / Gillchich": 1,
+      "Savage Wolf / Gulgus": 1,
+      "Delsaber": 1,
+      "Barbarous Wolf / Gulgus-gue": 1,
+      "Garanz / Baranz": 1,
+      "Delbiter": 1,
+      "Sinow Zele": 1,
+      "Gal Gryphon": 1,
+      "Olga Flow": 1,
+      "Barba Ray": 1,
+      "Gol Dragon": 1,
+      "Merikle / Mericus": 1,
+      "Epsilon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "VR Temple Alpha",
+        "floor_id": 1,
+        "total": 66,
+        "monsters": {
+          "Poison Lily / Ob Lily": 19,
+          "Dimenian / Arlan": 18,
+          "Rag Rappy / El Rappy": 10,
+          "La Dimenian / Merlan": 9,
+          "Hildebear / Hildelta": 5,
+          "Grass Assassin / Crimson Assassin": 3,
+          "Monest / Mothvist": 2
+        }
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 40,
+        "monsters": {
+          "Dubchic / Dubchich": 28,
+          "Dubwitch": 6,
+          "Pan Arms": 1,
+          "Gillchic / Gillchich": 1,
+          "Savage Wolf / Gulgus": 1,
+          "Delsaber": 1,
+          "Barbarous Wolf / Gulgus-gue": 1,
+          "Garanz / Baranz": 1
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 159,
+        "monsters": {
+          "Gee": 88,
+          "Merillia": 19,
+          "Gi Gue": 14,
+          "Mericarol": 9,
+          "Ul Gibbon": 6,
+          "Meriltas": 5,
+          "Sinow Berill": 4,
+          "Merikle": 4,
+          "Zol Gibbon": 3,
+          "Gibbles": 3,
+          "Sinow Spigell": 2,
+          "Mericus": 2
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 51,
+        "monsters": {
+          "Recobox": 30,
+          "Sinow Zoa": 9,
+          "Morfos": 4,
+          "Dolmdarl": 4,
+          "Dolmolm": 2,
+          "Delbiter": 1,
+          "Sinow Zele": 1
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Gal Gryphon": 1
+        }
+      },
+      "13": {
+        "floor_name": "Test Subject Disposal Area",
+        "floor_id": 13,
+        "total": 1,
+        "monsters": {
+          "Olga Flow": 1
+        }
+      },
+      "14": {
+        "floor_name": "VR Temple Final",
+        "floor_id": 14,
+        "total": 1,
+        "monsters": {
+          "Barba Ray": 1
+        }
+      },
+      "15": {
+        "floor_name": "VR Spaceship Final",
+        "floor_id": 15,
+        "total": 1,
+        "monsters": {
+          "Gol Dragon": 1
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 55,
+        "monsters": {
+          "Recobox": 32,
+          "Mericarol": 5,
+          "Gibbles": 4,
+          "Gi Gue": 4,
+          "Ill Gill": 3,
+          "Del Lily": 3,
+          "Merikle / Mericus": 1,
+          "Merikle": 1,
+          "Mericus": 1,
+          "Epsilon": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Revisiting Darkness",
+    "total": 337,
+    "monsters": {
+      "Gillchic / Gillchich": 71,
+      "Delsaber": 38,
+      "Savage Wolf / Gulgus": 31,
+      "Chaos Sorcerer / Gran Sorcerer": 30,
+      "Poison Lily / Ob Lily": 29,
+      "Dark Belra / Indi Belra": 26,
+      "Dimenian / Arlan": 19,
+      "Pan Arms": 19,
+      "Dubchic / Dubchich": 16,
+      "Hildebear / Hildelta": 15,
+      "Rag Rappy / El Rappy": 9,
+      "Barbarous Wolf / Gulgus-gue": 9,
+      "Grass Assassin / Crimson Assassin": 6,
+      "La Dimenian / Merlan": 5,
+      "So Dimenian / Del-D": 5,
+      "Monest / Mothvist": 4,
+      "Dubwitch": 4,
+      "Barba Ray": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "VR Temple Alpha",
+        "floor_id": 1,
+        "total": 11,
+        "monsters": {
+          "Poison Lily / Ob Lily": 4,
+          "Hildebear / Hildelta": 2,
+          "Dimenian / Arlan": 2,
+          "Dark Belra / Indi Belra": 2,
+          "Grass Assassin / Crimson Assassin": 1
+        }
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 107,
+        "monsters": {
+          "Poison Lily / Ob Lily": 25,
+          "Dark Belra / Indi Belra": 24,
+          "Dimenian / Arlan": 17,
+          "Hildebear / Hildelta": 13,
+          "Rag Rappy / El Rappy": 9,
+          "La Dimenian / Merlan": 5,
+          "So Dimenian / Del-D": 5,
+          "Grass Assassin / Crimson Assassin": 5,
+          "Monest / Mothvist": 4
+        }
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 218,
+        "monsters": {
+          "Gillchic / Gillchich": 71,
+          "Delsaber": 38,
+          "Savage Wolf / Gulgus": 31,
+          "Chaos Sorcerer / Gran Sorcerer": 30,
+          "Pan Arms": 19,
+          "Dubchic / Dubchich": 16,
+          "Barbarous Wolf / Gulgus-gue": 9,
+          "Dubwitch": 4
+        }
+      },
+      "14": {
+        "floor_name": "VR Temple Final",
+        "floor_id": 14,
+        "total": 1,
+        "monsters": {
+          "Barba Ray": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Seat of the Heart",
+    "total": 212,
+    "monsters": {
+      "Savage Wolf / Gulgus": 21,
+      "Gillchic / Gillchich": 16,
+      "Dubchic / Dubchich": 16,
+      "Recobox": 13,
+      "So Dimenian / Del-D": 12,
+      "Dimenian / Arlan": 12,
+      "Meriltas": 12,
+      "La Dimenian / Merlan": 11,
+      "Gee": 10,
+      "Poison Lily / Ob Lily": 9,
+      "Ul Gibbon": 8,
+      "Rag Rappy / El Rappy": 7,
+      "Ill Gill": 7,
+      "Gibbles": 6,
+      "Merillia": 5,
+      "Sinow Spigell": 5,
+      "Gi Gue": 5,
+      "Barbarous Wolf / Gulgus-gue": 4,
+      "Zol Gibbon": 4,
+      "Grass Assassin / Crimson Assassin": 3,
+      "Hildebear / Hildelta": 3,
+      "Dubwitch": 3,
+      "Dark Belra / Indi Belra": 2,
+      "Monest / Mothvist": 2,
+      "Delsaber": 2,
+      "Sinow Berill": 2,
+      "Mericarol": 2,
+      "Del Lily": 2,
+      "Delbiter": 2,
+      "Merikle / Mericus": 2,
+      "Chaos Sorcerer / Gran Sorcerer": 1,
+      "Pan Arms": 1,
+      "Gol Dragon": 1,
+      "Epsilon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 61,
+        "monsters": {
+          "So Dimenian / Del-D": 12,
+          "Dimenian / Arlan": 12,
+          "La Dimenian / Merlan": 11,
+          "Poison Lily / Ob Lily": 9,
+          "Rag Rappy / El Rappy": 7,
+          "Grass Assassin / Crimson Assassin": 3,
+          "Hildebear / Hildelta": 3,
+          "Dark Belra / Indi Belra": 2,
+          "Monest / Mothvist": 2
+        }
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 64,
+        "monsters": {
+          "Savage Wolf / Gulgus": 21,
+          "Gillchic / Gillchich": 16,
+          "Dubchic / Dubchich": 16,
+          "Barbarous Wolf / Gulgus-gue": 4,
+          "Dubwitch": 3,
+          "Delsaber": 2,
+          "Chaos Sorcerer / Gran Sorcerer": 1,
+          "Pan Arms": 1
+        }
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 47,
+        "monsters": {
+          "Meriltas": 12,
+          "Gee": 10,
+          "Ul Gibbon": 8,
+          "Merillia": 5,
+          "Sinow Spigell": 5,
+          "Zol Gibbon": 4,
+          "Sinow Berill": 2,
+          "Gibbles": 1
+        }
+      },
+      "15": {
+        "floor_name": "VR Spaceship Final",
+        "floor_id": 15,
+        "total": 1,
+        "monsters": {
+          "Gol Dragon": 1
+        }
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 39,
+        "monsters": {
+          "Recobox": 13,
+          "Ill Gill": 7,
+          "Gi Gue": 5,
+          "Gibbles": 5,
+          "Mericarol": 2,
+          "Del Lily": 2,
+          "Delbiter": 2,
+          "Merikle / Mericus": 2,
+          "Epsilon": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Singing by the Beach",
+    "total": 0,
+    "monsters": {},
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 0,
+        "monsters": {}
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 0,
+        "monsters": {}
+      }
+    }
+  },
+  {
+    "name": "The Discontrolled Tower [Raid]",
+    "total": 481,
+    "monsters": {
+      "Ill Gill": 31,
+      "Dubchich": 27,
+      "Baranz": 26,
+      "Gillchich": 23,
+      "Del Lily": 22,
+      "Astark": 22,
+      "Mericus": 21,
+      "Delbiter": 20,
+      "Ba Boota": 19,
+      "Morfos": 18,
+      "Merikle": 18,
+      "Gibbles": 18,
+      "Gi Gue": 17,
+      "Delsaber": 15,
+      "Mericarol": 15,
+      "Indi Belra": 14,
+      "Sinow Berill": 13,
+      "Dolmolm": 13,
+      "Recobox": 13,
+      "Dorphon Eclair": 12,
+      "Deldepth": 10,
+      "Merillia": 9,
+      "Ul Gibbon": 9,
+      "Sinow Spigell": 8,
+      "Girtablulu": 8,
+      "Zol Gibbon": 7,
+      "Sinow Zele": 6,
+      "Crimson Assassin": 6,
+      "Goran Detonator": 6,
+      "Arlan": 5,
+      "Meriltas": 5,
+      "Dolmdarl": 5,
+      "Sinow Zoa": 4,
+      "Pazuzu": 4,
+      "Pyro Goran": 4,
+      "Dubwitch": 3,
+      "Del-D": 3,
+      "Merlan": 1,
+      "Manipulator III": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 146,
+        "monsters": {
+          "Sinow Berill": 13,
+          "Gillchich": 11,
+          "Dubchich": 11,
+          "Delsaber": 10,
+          "Merillia": 9,
+          "Ul Gibbon": 9,
+          "Baranz": 8,
+          "Sinow Spigell": 8,
+          "Indi Belra": 7,
+          "Zol Gibbon": 7,
+          "Sinow Zele": 6,
+          "Morfos": 5,
+          "Meriltas": 5,
+          "Gibbles": 5,
+          "Sinow Zoa": 4,
+          "Mericus": 4,
+          "Deldepth": 4,
+          "Delbiter": 4,
+          "Ill Gill": 3,
+          "Gi Gue": 3,
+          "Dubwitch": 2,
+          "Mericarol": 2,
+          "Arlan": 1,
+          "Del-D": 1,
+          "Merlan": 1,
+          "Merikle": 1,
+          "Dolmolm": 1,
+          "Crimson Assassin": 1
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 335,
+        "monsters": {
+          "Ill Gill": 28,
+          "Del Lily": 22,
+          "Astark": 22,
+          "Ba Boota": 19,
+          "Baranz": 18,
+          "Mericus": 17,
+          "Merikle": 17,
+          "Dubchich": 16,
+          "Delbiter": 16,
+          "Gi Gue": 14,
+          "Mericarol": 13,
+          "Gibbles": 13,
+          "Morfos": 13,
+          "Recobox": 13,
+          "Gillchich": 12,
+          "Dolmolm": 12,
+          "Dorphon Eclair": 12,
+          "Girtablulu": 8,
+          "Indi Belra": 7,
+          "Deldepth": 6,
+          "Goran Detonator": 6,
+          "Crimson Assassin": 5,
+          "Delsaber": 5,
+          "Dolmdarl": 5,
+          "Arlan": 4,
+          "Pazuzu": 4,
+          "Pyro Goran": 4,
+          "Del-D": 2,
+          "Dubwitch": 1,
+          "Manipulator III": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "The East Tower",
+    "total": 95,
+    "monsters": {
+      "Meriltas": 16,
+      "Recobox": 14,
+      "Zol Gibbon": 9,
+      "Gee": 8,
+      "Gi Gue": 8,
+      "Del Lily": 7,
+      "Ul Gibbon": 6,
+      "Gibbles": 6,
+      "Mericarol": 5,
+      "Ill Gill": 4,
+      "Merikle": 3,
+      "Delbiter": 3,
+      "Sinow Berill": 2,
+      "Sinow Spigell": 2,
+      "Mericus": 1,
+      "Epsilon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 43,
+        "monsters": {
+          "Meriltas": 16,
+          "Zol Gibbon": 9,
+          "Gee": 8,
+          "Ul Gibbon": 6,
+          "Sinow Berill": 2,
+          "Sinow Spigell": 2
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 52,
+        "monsters": {
+          "Recobox": 14,
+          "Gi Gue": 8,
+          "Del Lily": 7,
+          "Gibbles": 6,
+          "Mericarol": 5,
+          "Ill Gill": 4,
+          "Merikle": 3,
+          "Delbiter": 3,
+          "Mericus": 1,
+          "Epsilon": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "The Eternal Age",
+    "total": 703,
+    "monsters": {
+      "Epsilon": 100,
+      "Gee": 58,
+      "Ul Gibbon": 36,
+      "Zol Gibbon": 35,
+      "Recobox": 35,
+      "Meriltas": 28,
+      "Merillia": 27,
+      "Dolmolm": 25,
+      "Dolmdarl": 25,
+      "Morfos": 20,
+      "Deldepth": 20,
+      "Delbiter": 20,
+      "Dubchic / Dubchich": 19,
+      "Delsaber": 19,
+      "Poison Lily / Ob Lily": 18,
+      "Gillchic / Gillchich": 17,
+      "Sinow Zoa": 15,
+      "Sinow Berill": 14,
+      "Gi Gue": 13,
+      "Gibbles": 13,
+      "Dark Belra / Indi Belra": 11,
+      "Garanz / Baranz": 11,
+      "Savage Wolf / Gulgus": 11,
+      "Barbarous Wolf / Gulgus-gue": 11,
+      "Sinow Zele": 11,
+      "La Dimenian / Merlan": 10,
+      "Hildebear / Hildelta": 10,
+      "Grass Assassin / Crimson Assassin": 9,
+      "Dimenian / Arlan": 9,
+      "Pan Arms": 9,
+      "Sinow Spigell": 8,
+      "Mericarol": 7,
+      "So Dimenian / Del-D": 5,
+      "Mericus": 5,
+      "Merikle": 5,
+      "Rag Rappy / El Rappy": 4,
+      "Dubwitch": 3,
+      "Monest / Mothvist": 2,
+      "Gal Gryphon": 1,
+      "Olga Flow": 1,
+      "Ill Gill": 1,
+      "Barba Ray": 1,
+      "Gol Dragon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "VR Temple Alpha",
+        "floor_id": 1,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 78,
+        "monsters": {
+          "Poison Lily / Ob Lily": 18,
+          "Dark Belra / Indi Belra": 11,
+          "La Dimenian / Merlan": 10,
+          "Hildebear / Hildelta": 10,
+          "Grass Assassin / Crimson Assassin": 9,
+          "Dimenian / Arlan": 9,
+          "So Dimenian / Del-D": 5,
+          "Rag Rappy / El Rappy": 4,
+          "Monest / Mothvist": 2
+        }
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 100,
+        "monsters": {
+          "Dubchic / Dubchich": 19,
+          "Delsaber": 19,
+          "Gillchic / Gillchich": 17,
+          "Garanz / Baranz": 11,
+          "Savage Wolf / Gulgus": 11,
+          "Barbarous Wolf / Gulgus-gue": 11,
+          "Pan Arms": 9,
+          "Dubwitch": 3
+        }
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 0,
+        "monsters": {}
+      },
+      "6": {
+        "floor_name": "Jungle Area East",
+        "floor_id": 6,
+        "total": 80,
+        "monsters": {
+          "Gee": 17,
+          "Merillia": 13,
+          "Meriltas": 13,
+          "Zol Gibbon": 7,
+          "Ul Gibbon": 7,
+          "Sinow Berill": 6,
+          "Sinow Spigell": 4,
+          "Gi Gue": 3,
+          "Gibbles": 3,
+          "Mericarol": 3,
+          "Mericus": 2,
+          "Merikle": 2
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 85,
+        "monsters": {
+          "Zol Gibbon": 20,
+          "Gee": 16,
+          "Ul Gibbon": 16,
+          "Gibbles": 8,
+          "Meriltas": 6,
+          "Merillia": 6,
+          "Sinow Berill": 3,
+          "Sinow Spigell": 3,
+          "Gi Gue": 2,
+          "Mericus": 2,
+          "Mericarol": 2,
+          "Merikle": 1
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 84,
+        "monsters": {
+          "Gee": 25,
+          "Ul Gibbon": 13,
+          "Meriltas": 9,
+          "Zol Gibbon": 8,
+          "Merillia": 8,
+          "Gi Gue": 8,
+          "Sinow Berill": 5,
+          "Mericarol": 2,
+          "Gibbles": 2,
+          "Merikle": 2,
+          "Sinow Spigell": 1,
+          "Mericus": 1
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 168,
+        "monsters": {
+          "Recobox": 35,
+          "Dolmolm": 25,
+          "Dolmdarl": 25,
+          "Morfos": 20,
+          "Deldepth": 20,
+          "Delbiter": 17,
+          "Sinow Zoa": 15,
+          "Sinow Zele": 11
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Gal Gryphon": 1
+        }
+      },
+      "13": {
+        "floor_name": "Test Subject Disposal Area",
+        "floor_id": 13,
+        "total": 5,
+        "monsters": {
+          "Delbiter": 3,
+          "Olga Flow": 1,
+          "Ill Gill": 1
+        }
+      },
+      "14": {
+        "floor_name": "VR Temple Final",
+        "floor_id": 14,
+        "total": 1,
+        "monsters": {
+          "Barba Ray": 1
+        }
+      },
+      "15": {
+        "floor_name": "VR Spaceship Final",
+        "floor_id": 15,
+        "total": 1,
+        "monsters": {
+          "Gol Dragon": 1
+        }
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 100,
+        "monsters": {
+          "Epsilon": 100
+        }
+      }
+    }
+  },
+  {
+    "name": "The Manipulated Tower [Raid]",
+    "total": 9,
+    "monsters": {
+      "Pazuzu": 4,
+      "Ill Gill": 3,
+      "Manipulator III": 1,
+      "Girtablulu": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 9,
+        "monsters": {
+          "Pazuzu": 4,
+          "Ill Gill": 3,
+          "Manipulator III": 1,
+          "Girtablulu": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "The Phantasmal Dimension",
+    "total": 940,
+    "monsters": {
+      "Millennium Saber": 104,
+      "D-Virus Morfos": 97,
+      "Dark Nebulas": 65,
+      "Lavaross": 57,
+      "Queen of Gal Da Val": 50,
+      "Ill Gill": 44,
+      "Dubchich": 34,
+      "Merikle": 29,
+      "Goran Detonator": 29,
+      "Mericus": 27,
+      "Astark": 27,
+      "Pazuzu": 27,
+      "Gillchich": 26,
+      "Sinow Zele": 25,
+      "Epsilon": 25,
+      "Sinow Zoa": 24,
+      "Ba Boota": 23,
+      "Varazopt Ver.D": 23,
+      "Deldepth": 22,
+      "Meriltas": 20,
+      "Liquid Monkey": 20,
+      "Soul Stealer": 20,
+      "Spirit Flow": 19,
+      "Dorphon Eclair": 16,
+      "Vol Gibbon": 15,
+      "Mericarol": 14,
+      "Millennium Sorcerer": 14,
+      "Dubwitch": 12,
+      "Dolmolm": 9,
+      "Dolmdarl": 9,
+      "Recobox": 7,
+      "Indi Belra": 4,
+      "Deos Behemoth": 1,
+      "Bar Dalus": 1,
+      "Eclipse Dragon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 0,
+        "monsters": {}
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 0,
+        "monsters": {}
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 197,
+        "monsters": {
+          "Millennium Saber": 22,
+          "Queen of Gal Da Val": 17,
+          "Astark": 14,
+          "Millennium Sorcerer": 14,
+          "Mericus": 13,
+          "Merikle": 13,
+          "Gillchich": 12,
+          "Dubchich": 12,
+          "Meriltas": 9,
+          "Pazuzu": 9,
+          "Ba Boota": 8,
+          "Mericarol": 8,
+          "Sinow Zele": 7,
+          "Deldepth": 7,
+          "Dorphon Eclair": 7,
+          "Dolmdarl": 6,
+          "Dolmolm": 5,
+          "Lavaross": 5,
+          "Dubwitch": 5,
+          "Sinow Zoa": 4
+        }
+      },
+      "7": {
+        "floor_name": "Jungle Area North",
+        "floor_id": 7,
+        "total": 150,
+        "monsters": {
+          "Liquid Monkey": 20,
+          "Queen of Gal Da Val": 17,
+          "Vol Gibbon": 15,
+          "Lavaross": 15,
+          "Millennium Saber": 13,
+          "Dubchich": 8,
+          "Meriltas": 6,
+          "Merikle": 6,
+          "Dark Nebulas": 6,
+          "Astark": 6,
+          "Ba Boota": 6,
+          "Sinow Zoa": 6,
+          "Mericus": 5,
+          "Deldepth": 5,
+          "Mericarol": 4,
+          "Dorphon Eclair": 4,
+          "Sinow Zele": 3,
+          "Dubwitch": 3,
+          "D-Virus Morfos": 1,
+          "Varazopt Ver.D": 1
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 144,
+        "monsters": {
+          "Pazuzu": 18,
+          "Millennium Saber": 18,
+          "Lavaross": 13,
+          "Gillchich": 12,
+          "Merikle": 10,
+          "Mericus": 9,
+          "Goran Detonator": 9,
+          "Ba Boota": 9,
+          "Dubchich": 8,
+          "Astark": 7,
+          "Queen of Gal Da Val": 7,
+          "Varazopt Ver.D": 7,
+          "Dorphon Eclair": 5,
+          "Meriltas": 5,
+          "Soul Stealer": 3,
+          "Mericarol": 2,
+          "Dubwitch": 2
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 0,
+        "monsters": {}
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 112,
+        "monsters": {
+          "D-Virus Morfos": 27,
+          "Ill Gill": 14,
+          "Dark Nebulas": 14,
+          "Spirit Flow": 9,
+          "Recobox": 7,
+          "Varazopt Ver.D": 7,
+          "Sinow Zele": 5,
+          "Goran Detonator": 5,
+          "Millennium Saber": 5,
+          "Soul Stealer": 5,
+          "Lavaross": 5,
+          "Indi Belra": 4,
+          "Deldepth": 2,
+          "Queen of Gal Da Val": 2,
+          "Sinow Zoa": 1
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 193,
+        "monsters": {
+          "D-Virus Morfos": 39,
+          "Dark Nebulas": 31,
+          "Millennium Saber": 24,
+          "Goran Detonator": 15,
+          "Ill Gill": 14,
+          "Sinow Zoa": 13,
+          "Lavaross": 10,
+          "Sinow Zele": 10,
+          "Deldepth": 8,
+          "Queen of Gal Da Val": 7,
+          "Dubchich": 6,
+          "Dolmolm": 4,
+          "Dolmdarl": 3,
+          "Soul Stealer": 3,
+          "Gillchich": 2,
+          "Varazopt Ver.D": 2,
+          "Dubwitch": 2
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Deos Behemoth": 1
+        }
+      },
+      "14": {
+        "floor_name": "VR Temple Final",
+        "floor_id": 14,
+        "total": 1,
+        "monsters": {
+          "Bar Dalus": 1
+        }
+      },
+      "15": {
+        "floor_name": "VR Spaceship Final",
+        "floor_id": 15,
+        "total": 1,
+        "monsters": {
+          "Eclipse Dragon": 1
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 141,
+        "monsters": {
+          "D-Virus Morfos": 30,
+          "Epsilon": 25,
+          "Millennium Saber": 22,
+          "Ill Gill": 16,
+          "Dark Nebulas": 14,
+          "Spirit Flow": 10,
+          "Lavaross": 9,
+          "Soul Stealer": 9,
+          "Varazopt Ver.D": 6
+        }
+      }
+    }
+  },
+  {
+    "name": "The Starlight Tower [Raid]",
+    "total": 3,
+    "monsters": {
+      "Forbidden Scythe IV": 2,
+      "Administrator": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 3,
+        "monsters": {
+          "Forbidden Scythe IV": 2,
+          "Administrator": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "The West Tower",
+    "total": 121,
+    "monsters": {
+      "Recobox": 36,
+      "Delbiter": 14,
+      "Dolmolm": 10,
+      "Dolmdarl": 10,
+      "Del Lily": 9,
+      "Ill Gill": 8,
+      "Sinow Zoa": 7,
+      "Gi Gue": 7,
+      "Sinow Zele": 6,
+      "Gibbles": 5,
+      "Mericarol": 3,
+      "Merikle / Mericus": 3,
+      "Merikle": 1,
+      "Mericus": 1,
+      "Epsilon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 55,
+        "monsters": {
+          "Recobox": 18,
+          "Dolmolm": 10,
+          "Dolmdarl": 10,
+          "Sinow Zoa": 7,
+          "Sinow Zele": 6,
+          "Delbiter": 4
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 66,
+        "monsters": {
+          "Recobox": 18,
+          "Delbiter": 10,
+          "Del Lily": 9,
+          "Ill Gill": 8,
+          "Gi Gue": 7,
+          "Gibbles": 5,
+          "Mericarol": 3,
+          "Merikle / Mericus": 3,
+          "Merikle": 1,
+          "Mericus": 1,
+          "Epsilon": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Tian`s Montreaux Final",
+    "total": 301,
+    "monsters": {
+      "Gee": 85,
+      "Merillia": 44,
+      "Ul Gibbon": 43,
+      "Zol Gibbon": 28,
+      "Meriltas": 24,
+      "Recobox": 16,
+      "Gi Gue": 12,
+      "Dolmolm": 12,
+      "Gibbles": 10,
+      "Sinow Berill": 7,
+      "Dolmdarl": 7,
+      "Sinow Spigell": 3,
+      "Mericarol": 3,
+      "Mericus": 3,
+      "Merikle": 3,
+      "Gal Gryphon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 116,
+        "monsters": {
+          "Ul Gibbon": 28,
+          "Gee": 26,
+          "Merillia": 25,
+          "Zol Gibbon": 18,
+          "Sinow Berill": 7,
+          "Gibbles": 5,
+          "Meriltas": 4,
+          "Sinow Spigell": 3
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 59,
+        "monsters": {
+          "Gee": 16,
+          "Gi Gue": 12,
+          "Merillia": 7,
+          "Gibbles": 5,
+          "Meriltas": 4,
+          "Mericarol": 3,
+          "Mericus": 3,
+          "Merikle": 3,
+          "Ul Gibbon": 3,
+          "Zol Gibbon": 3
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Gal Gryphon": 1
+        }
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 125,
+        "monsters": {
+          "Gee": 43,
+          "Recobox": 16,
+          "Meriltas": 16,
+          "Ul Gibbon": 12,
+          "Merillia": 12,
+          "Dolmolm": 12,
+          "Zol Gibbon": 7,
+          "Dolmdarl": 7
+        }
+      }
+    }
+  },
+  {
+    "name": "VR Test Destiny: Meteor Impact",
+    "total": 477,
+    "monsters": {
+      "Del Lily": 86,
+      "Epsilon": 48,
+      "Delbiter": 44,
+      "Ill Gill": 41,
+      "Recobox": 33,
+      "Merikle": 32,
+      "Morfos": 25,
+      "Mericarol": 23,
+      "Gi Gue": 23,
+      "Gibbles": 22,
+      "Mericus": 20,
+      "Baranz": 16,
+      "Astark": 14,
+      "Goran Detonator": 12,
+      "Dorphon Eclair": 11,
+      "Delsaber": 10,
+      "Indi Belra": 8,
+      "Dolmdarl": 5,
+      "Deldepth": 4
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 477,
+        "monsters": {
+          "Del Lily": 86,
+          "Epsilon": 48,
+          "Delbiter": 44,
+          "Ill Gill": 41,
+          "Recobox": 33,
+          "Merikle": 32,
+          "Morfos": 25,
+          "Mericarol": 23,
+          "Gi Gue": 23,
+          "Gibbles": 22,
+          "Mericus": 20,
+          "Baranz": 16,
+          "Astark": 14,
+          "Goran Detonator": 12,
+          "Dorphon Eclair": 11,
+          "Delsaber": 10,
+          "Indi Belra": 8,
+          "Dolmdarl": 5,
+          "Deldepth": 4
+        }
+      }
+    }
+  },
+  {
+    "name": "VR Test Destiny: Seabed",
+    "total": 292,
+    "monsters": {
+      "Dolmolm": 57,
+      "Sinow Zoa": 32,
+      "Morfos": 28,
+      "Recobox": 27,
+      "Dolmdarl": 25,
+      "Sinow Zele": 25,
+      "Deldepth": 22,
+      "Delbiter": 22,
+      "Ill Gill": 13,
+      "Gibbles": 8,
+      "Delsaber": 6,
+      "Gi Gue": 5,
+      "Garanz / Baranz": 5,
+      "Gillchic / Gillchich": 4,
+      "Dark Belra / Indi Belra": 3,
+      "Dubchic / Dubchich": 3,
+      "So Dimenian / Del-D": 2,
+      "Grass Assassin / Crimson Assassin": 2,
+      "La Dimenian / Merlan": 1,
+      "Dubwitch": 1,
+      "Olga Flow": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 138,
+        "monsters": {
+          "Dolmolm": 32,
+          "Sinow Zoa": 16,
+          "Dolmdarl": 15,
+          "Recobox": 14,
+          "Morfos": 14,
+          "Sinow Zele": 13,
+          "Delbiter": 12,
+          "Deldepth": 11,
+          "Dark Belra / Indi Belra": 3,
+          "So Dimenian / Del-D": 2,
+          "Grass Assassin / Crimson Assassin": 2,
+          "Gi Gue": 2,
+          "La Dimenian / Merlan": 1,
+          "Ill Gill": 1
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 153,
+        "monsters": {
+          "Dolmolm": 25,
+          "Sinow Zoa": 16,
+          "Morfos": 14,
+          "Recobox": 13,
+          "Sinow Zele": 12,
+          "Ill Gill": 12,
+          "Deldepth": 11,
+          "Dolmdarl": 10,
+          "Delbiter": 10,
+          "Gibbles": 8,
+          "Delsaber": 6,
+          "Garanz / Baranz": 5,
+          "Gillchic / Gillchich": 4,
+          "Gi Gue": 3,
+          "Dubchic / Dubchich": 3,
+          "Dubwitch": 1
+        }
+      },
+      "13": {
+        "floor_name": "Test Subject Disposal Area",
+        "floor_id": 13,
+        "total": 1,
+        "monsters": {
+          "Olga Flow": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "VR Test Destiny: Underground",
+    "total": 363,
+    "monsters": {
+      "Gee": 35,
+      "Sinow Berill": 28,
+      "Merillia": 27,
+      "Zol Gibbon": 25,
+      "Sinow Spigell": 24,
+      "Merikle": 22,
+      "Ul Gibbon": 22,
+      "Gibbles": 22,
+      "Mericarol": 21,
+      "Del Lily": 19,
+      "Gi Gue": 17,
+      "Epsilon": 17,
+      "Ill Gill": 16,
+      "Mericus": 15,
+      "Meriltas": 14,
+      "Delbiter": 13,
+      "Recobox": 11,
+      "Morfos": 7,
+      "Sinow Zoa": 2,
+      "Sinow Zele": 2,
+      "Deldepth": 2,
+      "Gal Gryphon": 1,
+      "Gol Dragon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 0,
+        "monsters": {}
+      },
+      "7": {
+        "floor_name": "Jungle Area North",
+        "floor_id": 7,
+        "total": 64,
+        "monsters": {
+          "Sinow Berill": 14,
+          "Sinow Spigell": 12,
+          "Merikle": 7,
+          "Morfos": 7,
+          "Mericus": 4,
+          "Mericarol": 4,
+          "Zol Gibbon": 4,
+          "Ul Gibbon": 2,
+          "Gibbles": 2,
+          "Gi Gue": 2,
+          "Sinow Zoa": 2,
+          "Sinow Zele": 2,
+          "Deldepth": 2
+        }
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 172,
+        "monsters": {
+          "Gee": 35,
+          "Merillia": 27,
+          "Zol Gibbon": 21,
+          "Ul Gibbon": 20,
+          "Meriltas": 14,
+          "Sinow Berill": 14,
+          "Sinow Spigell": 12,
+          "Gibbles": 8,
+          "Gi Gue": 6,
+          "Mericarol": 6,
+          "Merikle": 5,
+          "Mericus": 4
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Gal Gryphon": 1
+        }
+      },
+      "15": {
+        "floor_name": "VR Spaceship Final",
+        "floor_id": 15,
+        "total": 1,
+        "monsters": {
+          "Gol Dragon": 1
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 125,
+        "monsters": {
+          "Del Lily": 19,
+          "Epsilon": 17,
+          "Ill Gill": 16,
+          "Delbiter": 13,
+          "Gibbles": 12,
+          "Mericarol": 11,
+          "Recobox": 11,
+          "Merikle": 10,
+          "Gi Gue": 9,
+          "Mericus": 7
+        }
+      }
+    }
+  },
+  {
+    "name": "VR Test EXTRA: Singularity",
+    "total": 437,
+    "monsters": {
+      "Sinow Zoa": 31,
+      "Gillchich": 31,
+      "Indi Belra": 26,
+      "Gran Sorcerer": 24,
+      "Zol Gibbon": 22,
+      "Delsaber": 21,
+      "Ob Lily": 19,
+      "Baranz": 18,
+      "Gee": 18,
+      "Morfos": 17,
+      "Gibbles": 16,
+      "Deldepth": 14,
+      "Mericus": 13,
+      "Del-D": 12,
+      "Sinow Zele": 12,
+      "Delbiter": 12,
+      "Crimson Assassin": 11,
+      "Mericarol": 11,
+      "Dolmolm": 11,
+      "Merikle": 10,
+      "Sinow Berill": 10,
+      "Arlan": 9,
+      "Hildelta": 8,
+      "Merlan": 7,
+      "Dolmdarl": 7,
+      "Sinow Spigell": 7,
+      "Ul Gibbon": 7,
+      "Ill Gill": 6,
+      "Gi Gue": 5,
+      "Gulgus-gue": 5,
+      "Pan Arms": 4,
+      "Gulgus": 4,
+      "Meriltas": 3,
+      "Recobox": 3,
+      "Merillia": 2,
+      "Bar Dalus": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "VR Temple Alpha",
+        "floor_id": 1,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 96,
+        "monsters": {
+          "Indi Belra": 16,
+          "Del-D": 11,
+          "Crimson Assassin": 9,
+          "Arlan": 9,
+          "Mericus": 9,
+          "Delsaber": 8,
+          "Ob Lily": 6,
+          "Merlan": 6,
+          "Mericarol": 6,
+          "Merikle": 4,
+          "Sinow Zoa": 4,
+          "Gi Gue": 2,
+          "Hildelta": 2,
+          "Sinow Zele": 1,
+          "Morfos": 1,
+          "Baranz": 1,
+          "Delbiter": 1
+        }
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 110,
+        "monsters": {
+          "Gillchich": 26,
+          "Gran Sorcerer": 24,
+          "Baranz": 11,
+          "Delsaber": 6,
+          "Morfos": 4,
+          "Deldepth": 4,
+          "Gulgus-gue": 4,
+          "Pan Arms": 4,
+          "Indi Belra": 3,
+          "Dolmolm": 3,
+          "Sinow Zoa": 3,
+          "Hildelta": 3,
+          "Gibbles": 2,
+          "Mericarol": 2,
+          "Delbiter": 2,
+          "Dolmdarl": 2,
+          "Sinow Zele": 2,
+          "Merikle": 1,
+          "Merlan": 1,
+          "Del-D": 1,
+          "Ill Gill": 1,
+          "Mericus": 1
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 120,
+        "monsters": {
+          "Zol Gibbon": 22,
+          "Gee": 18,
+          "Ob Lily": 13,
+          "Sinow Berill": 10,
+          "Sinow Spigell": 7,
+          "Ul Gibbon": 7,
+          "Gibbles": 7,
+          "Merikle": 5,
+          "Gulgus": 4,
+          "Meriltas": 3,
+          "Mericarol": 3,
+          "Mericus": 3,
+          "Gi Gue": 3,
+          "Sinow Zoa": 3,
+          "Merillia": 2,
+          "Dolmdarl": 2,
+          "Crimson Assassin": 2,
+          "Deldepth": 1,
+          "Dolmolm": 1,
+          "Sinow Zele": 1,
+          "Morfos": 1,
+          "Baranz": 1,
+          "Gulgus-gue": 1
+        }
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 110,
+        "monsters": {
+          "Sinow Zoa": 21,
+          "Morfos": 11,
+          "Deldepth": 9,
+          "Delbiter": 9,
+          "Sinow Zele": 8,
+          "Delsaber": 7,
+          "Indi Belra": 7,
+          "Gibbles": 7,
+          "Dolmolm": 7,
+          "Baranz": 5,
+          "Ill Gill": 5,
+          "Gillchich": 5,
+          "Dolmdarl": 3,
+          "Recobox": 3,
+          "Hildelta": 3
+        }
+      },
+      "14": {
+        "floor_name": "VR Temple Final",
+        "floor_id": 14,
+        "total": 1,
+        "monsters": {
+          "Bar Dalus": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "VR Test FINAL: Catastrophe",
+    "total": 232,
+    "monsters": {
+      "Del Lily": 24,
+      "Lavaross": 19,
+      "Ill Gill": 17,
+      "Epsilon": 17,
+      "Liquid Monkey": 15,
+      "Delbiter": 15,
+      "Morfos": 14,
+      "Vol Gibbon": 13,
+      "Merikle": 13,
+      "Mericarol": 12,
+      "Girtablulu": 10,
+      "Recobox": 10,
+      "Astark": 9,
+      "Meriltas": 9,
+      "Gee": 6,
+      "Sinow Spigell": 6,
+      "Sinow Berill": 5,
+      "Pazuzu": 5,
+      "Mericus": 5,
+      "Merillia": 3,
+      "Delsaber": 2,
+      "Deos Behemoth": 1,
+      "Eclipse Dragon": 1,
+      "Deldepth": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "4": {
+        "floor_name": "VR Spaceship Beta",
+        "floor_id": 4,
+        "total": 0,
+        "monsters": {}
+      },
+      "7": {
+        "floor_name": "Jungle Area North",
+        "floor_id": 7,
+        "total": 0,
+        "monsters": {}
+      },
+      "9": {
+        "floor_name": "Seaside Area",
+        "floor_id": 9,
+        "total": 85,
+        "monsters": {
+          "Liquid Monkey": 15,
+          "Vol Gibbon": 13,
+          "Meriltas": 9,
+          "Gee": 6,
+          "Astark": 6,
+          "Lavaross": 6,
+          "Sinow Spigell": 6,
+          "Sinow Berill": 5,
+          "Merikle": 5,
+          "Mericarol": 4,
+          "Pazuzu": 3,
+          "Merillia": 3,
+          "Delsaber": 2,
+          "Mericus": 1,
+          "Girtablulu": 1
+        }
+      },
+      "12": {
+        "floor_name": "Cliffs of Gal Da Val",
+        "floor_id": 12,
+        "total": 1,
+        "monsters": {
+          "Deos Behemoth": 1
+        }
+      },
+      "15": {
+        "floor_name": "VR Spaceship Final",
+        "floor_id": 15,
+        "total": 1,
+        "monsters": {
+          "Eclipse Dragon": 1
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 145,
+        "monsters": {
+          "Del Lily": 24,
+          "Ill Gill": 17,
+          "Epsilon": 17,
+          "Delbiter": 15,
+          "Morfos": 14,
+          "Lavaross": 13,
+          "Recobox": 10,
+          "Girtablulu": 9,
+          "Merikle": 8,
+          "Mericarol": 8,
+          "Mericus": 4,
+          "Astark": 3,
+          "Pazuzu": 2,
+          "Deldepth": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "VR Test OMEGA: Oblivion",
+    "total": 385,
+    "monsters": {
+      "Ill Gill": 36,
+      "Del Lily": 36,
+      "Tormentark": 32,
+      "Epsilon": 31,
+      "Dorphon Divine": 27,
+      "Dolmolm": 24,
+      "Delbiter": 22,
+      "Merikle": 21,
+      "Yowie": 20,
+      "Girtablulu": 19,
+      "Recobox": 16,
+      "Mericarol": 15,
+      "Gi Gue": 12,
+      "Giga Gue Type-B": 12,
+      "Dolmdarl": 11,
+      "Goran Detonator": 10,
+      "Gibbles": 10,
+      "Dubchich": 10,
+      "Mericus": 9,
+      "Morfos": 5,
+      "Gillchich": 4,
+      "Dubwitch": 3
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 385,
+        "monsters": {
+          "Ill Gill": 36,
+          "Del Lily": 36,
+          "Tormentark": 32,
+          "Epsilon": 31,
+          "Dorphon Divine": 27,
+          "Dolmolm": 24,
+          "Delbiter": 22,
+          "Merikle": 21,
+          "Yowie": 20,
+          "Girtablulu": 19,
+          "Recobox": 16,
+          "Mericarol": 15,
+          "Gi Gue": 12,
+          "Giga Gue Type-B": 12,
+          "Dolmdarl": 11,
+          "Goran Detonator": 10,
+          "Gibbles": 10,
+          "Dubchich": 10,
+          "Mericus": 9,
+          "Morfos": 5,
+          "Gillchich": 4,
+          "Dubwitch": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "Walking through Flames",
+    "total": 279,
+    "monsters": {
+      "Del Lily": 47,
+      "Recobox": 37,
+      "Ill Gill": 31,
+      "Epsilon": 29,
+      "Gi Gue": 27,
+      "Delbiter": 26,
+      "Merikle": 24,
+      "Mericarol": 24,
+      "Gibbles": 17,
+      "Mericus": 17
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 279,
+        "monsters": {
+          "Del Lily": 47,
+          "Recobox": 37,
+          "Ill Gill": 31,
+          "Epsilon": 29,
+          "Gi Gue": 27,
+          "Delbiter": 26,
+          "Merikle": 24,
+          "Mericarol": 24,
+          "Gibbles": 17,
+          "Mericus": 17
+        }
+      }
+    }
+  },
+  {
+    "name": "Weather Effects",
+    "total": 98,
+    "monsters": {
+      "Meriltas": 14,
+      "Del Lily": 14,
+      "Sinow Berill": 12,
+      "Zol Gibbon": 8,
+      "Delbiter": 8,
+      "Gi Gue": 7,
+      "Gibbles": 6,
+      "Merikle": 6,
+      "Ill Gill": 6,
+      "Epsilon": 5,
+      "Sinow Spigell": 4,
+      "Merillia": 3,
+      "Ul Gibbon": 2,
+      "Mericarol": 2,
+      "Mericus": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 43,
+        "monsters": {
+          "Meriltas": 14,
+          "Sinow Berill": 12,
+          "Zol Gibbon": 8,
+          "Sinow Spigell": 4,
+          "Merillia": 3,
+          "Ul Gibbon": 2
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 55,
+        "monsters": {
+          "Del Lily": 14,
+          "Delbiter": 8,
+          "Gi Gue": 7,
+          "Gibbles": 6,
+          "Merikle": 6,
+          "Ill Gill": 6,
+          "Epsilon": 5,
+          "Mericarol": 2,
+          "Mericus": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "World of Illusion",
+    "total": 780,
+    "monsters": {
+      "Ob Lily": 86,
+      "Indi Belra": 82,
+      "Delbiter": 50,
+      "Gillchich": 42,
+      "Hildelta": 41,
+      "Gibbles": 37,
+      "Crimson Assassin": 32,
+      "Gi Gue": 32,
+      "Delsaber": 31,
+      "Ill Gill": 31,
+      "Ul Gibbon": 25,
+      "Mericarol": 24,
+      "Del-D": 22,
+      "Epsilon": 21,
+      "Baranz": 18,
+      "El Rappy": 14,
+      "Arlan": 13,
+      "Dubchich": 13,
+      "Merlan": 12,
+      "Deldepth": 12,
+      "Dolmolm": 12,
+      "Dolmdarl": 12,
+      "Sinow Berill": 11,
+      "Merikle": 11,
+      "Mericus": 10,
+      "Gee": 9,
+      "Sinow Spigell": 9,
+      "Merillia": 9,
+      "Morfos": 9,
+      "Gulgus": 8,
+      "Mothvist": 7,
+      "Pan Arms": 6,
+      "Meriltas": 6,
+      "Sinow Zele": 6,
+      "Zol Gibbon": 4,
+      "Sinow Zoa": 4,
+      "Gulgus-gue": 3,
+      "Del Lily": 3,
+      "Dubwitch": 2,
+      "Olga Flow": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "1": {
+        "floor_name": "VR Temple Alpha",
+        "floor_id": 1,
+        "total": 160,
+        "monsters": {
+          "Ob Lily": 47,
+          "Indi Belra": 36,
+          "Hildelta": 20,
+          "Crimson Assassin": 19,
+          "Del-D": 17,
+          "Arlan": 9,
+          "Merlan": 8,
+          "Mothvist": 4
+        }
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 149,
+        "monsters": {
+          "Indi Belra": 46,
+          "Ob Lily": 39,
+          "Hildelta": 21,
+          "El Rappy": 14,
+          "Crimson Assassin": 13,
+          "Del-D": 5,
+          "Arlan": 4,
+          "Merlan": 4,
+          "Mothvist": 3
+        }
+      },
+      "3": {
+        "floor_name": "VR Spaceship Alpha",
+        "floor_id": 3,
+        "total": 123,
+        "monsters": {
+          "Gillchich": 42,
+          "Delsaber": 31,
+          "Baranz": 18,
+          "Dubchich": 13,
+          "Gulgus": 8,
+          "Pan Arms": 6,
+          "Gulgus-gue": 3,
+          "Dubwitch": 2
+        }
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 117,
+        "monsters": {
+          "Ul Gibbon": 25,
+          "Gibbles": 22,
+          "Gi Gue": 15,
+          "Sinow Berill": 11,
+          "Gee": 9,
+          "Sinow Spigell": 9,
+          "Merillia": 9,
+          "Mericarol": 6,
+          "Meriltas": 6,
+          "Zol Gibbon": 4,
+          "Merikle": 1
+        }
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 83,
+        "monsters": {
+          "Delbiter": 28,
+          "Deldepth": 12,
+          "Dolmolm": 12,
+          "Dolmdarl": 12,
+          "Morfos": 9,
+          "Sinow Zele": 6,
+          "Sinow Zoa": 4
+        }
+      },
+      "13": {
+        "floor_name": "Test Subject Disposal Area",
+        "floor_id": 13,
+        "total": 1,
+        "monsters": {
+          "Olga Flow": 1
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 147,
+        "monsters": {
+          "Ill Gill": 31,
+          "Delbiter": 22,
+          "Epsilon": 21,
+          "Mericarol": 18,
+          "Gi Gue": 17,
+          "Gibbles": 15,
+          "Mericus": 10,
+          "Merikle": 10,
+          "Del Lily": 3
+        }
+      }
+    }
+  },
+  {
+    "name": "夢からの使者",
+    "total": 66,
+    "monsters": {
+      "Gee": 49,
+      "Ul Gibbon": 8,
+      "Meriltas": 8,
+      "Zol Gibbon": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 66,
+        "monsters": {
+          "Gee": 49,
+          "Ul Gibbon": 8,
+          "Meriltas": 8,
+          "Zol Gibbon": 1
+        }
+      }
+    }
+  }
+]
