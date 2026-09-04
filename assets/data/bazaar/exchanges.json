@@ -11,12 +11,12 @@
     ]
   },
   {
-  "title": "ASTRAL HALO",
-  "location": "Trade NPC",
-  "materials": [
-    "ASTRAL WINGS",
-    "Orb of Illusions"
-  ]
+    "title": "ASTRAL HALO",
+    "location": "Trade NPC",
+    "materials": [
+      "ASTRAL WINGS",
+      "Orb of Illusions"
+    ]
   },
   {
     "title": "Jointparts",
@@ -191,6 +191,22 @@
       "D-VIRUS ARMOR：30 Easter Egg",
       "D-VIRUS LAUNCHER（0/0/0/0|0）：30 Easter Egg",
       "BERSERK NEEDLE（0/0/0/0|0）：60 Easter Egg"
+    ]
+  },
+  {
+    "title": "Lightning Garment",
+    "location": "Trade NPC",
+    "materials": [
+      "Secret Ticket：99"
+    ]
+  },
+  {
+    "title": "MIRACLE CHAIN",
+    "location": "Trade NPC",
+    "materials": [
+      "Fragments of Orb [Yellow] :1",
+      "Fragments of Orb [Green] :1",
+      "Weapons Crystal Badge :10"
     ]
   }
 ]

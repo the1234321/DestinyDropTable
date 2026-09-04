@@ -19,7 +19,16 @@
         "episode"             : "",
         "search"              : "搜索物品 / 相关物品...",
         "itemType"            : "类型",
-        "noEvent"             : "无活动"
+        "noEvent"             : "无活动",
+        "label.item"          : "物品",
+        "label.source"        : "任务 / 来源",
+        "label.rate"          : "掉率 / 条件",
+        "label.notes"         : "备注",
+        "label.monsters"      : "怪物数量 / BOSS 信息",
+        "label.questDrops"    : "特殊掉落",
+        "label.specialDrops"  : "特殊掉落",
+        "term.except"         : "除了",
+        "term.allIds"         : "全ID"
     },
     "monsters"  : {
         "Nightmare Dominator VI"   : {"name": "噩梦支配者 VI"         },
@@ -74,6 +83,7 @@
         "Soul Stealer"             : {"name": "窃魂者"                },
         "Millennium Fury"          : {"name": "千年之怒"              },
         "Millennium Bringer"       : {"name": "千年骑士"              },
+        "Giga Gue Type-B"          : {"name": "蜂后 B型"              },
         
         "Al Rappy"                 : {"name": "蓝拉比鸟"              },
         "Arlan"                    : {"name": "异魔兵"                },

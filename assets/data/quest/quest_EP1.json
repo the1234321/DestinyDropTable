@@ -73,7 +73,7 @@
     "total"   : 622,
     "monsters": {
       "Poison Lily / Ob Lily"            : 56,
-      "Canadine / Canabine"              : 38,
+      "Canadine / Canabin"              : 38,
       "Garanz / Baranz"                  : 37,
       "So Dimenian / Del-D"              : 34,
       "Guil Shark / Melqueek"            : 32,
@@ -118,7 +118,7 @@
         "floor_id"  : 7,
         "total"     : 170,
         "monsters"  : {
-          "Canadine / Canabine"    : 38,
+          "Canadine / Canabin"    : 38,
           "Garanz / Baranz"        : 37,
           "Gillchic / Gillchich"   : 31,
           "Dubchic / Dubchich"     : 20,
@@ -151,7 +151,7 @@
     "total"   : 103,
     "monsters": {
       "Chaos Bringer / Dark Bringer"     : 23,
-      "Hildebear / Hildelta"             : 18,
+      "Hildebear / Hildelt"             : 18,
       "Monest / Mothvist"                : 11,
       "Booma / Bartle"                   :  8,
       "Grass Assassin / Crimson Assassin":  8,
@@ -173,7 +173,7 @@
         "floor_id"  : 2,
         "total"     : 50,
         "monsters"  : {
-          "Hildebear / Hildelta"       : 12,
+          "Hildebear / Hildelt"       : 12,
           "Monest / Mothvist"          : 11,
           "Booma / Bartle"             :  8,
           "Gigobooma / Tollaw"         :  7,
@@ -191,7 +191,7 @@
         "monsters"  : {
           "Chaos Bringer / Dark Bringer"     : 23,
           "Grass Assassin / Crimson Assassin":  8,
-          "Hildebear / Hildelta"             :  6,
+          "Hildebear / Hildelt"             :  6,
           "Sinow Beat / Sinow Blue"          :  6,
           "Sinow Gold / Sinow Red"           :  4,
           "Guil Shark / Melqueek"            :  3,
@@ -315,7 +315,7 @@
     "monsters": {
       "Poison Lily / Ob Lily"            : 60,
       "Guil Shark / Melqueek"            : 37,
-      "Hildebear / Hildelta"             : 35,
+      "Hildebear / Hildelt"             : 35,
       "Chaos Sorcerer / Gran Sorcerer"   : 28,
       "Delsaber"                         : 28,
       "Chaos Bringer / Dark Bringer"     : 26,
@@ -370,7 +370,7 @@
         "floor_id"  : 16,
         "total"     : 159,
         "monsters"  : {
-          "Hildebear / Hildelta"             : 35,
+          "Hildebear / Hildelt"             : 35,
           "Delsaber"                         : 28,
           "Grass Assassin / Crimson Assassin": 22,
           "Sinow Gold / Sinow Red"           : 22,
@@ -390,7 +390,7 @@
       "Sinow Beat / Sinow Blue": 26,
       "Sinow Gold / Sinow Red" : 20,
       "Dubchic / Dubchich"     : 18,
-      "Canadine / Canabine"    : 11,
+      "Canadine / Canabin"    : 11,
       "Canane / Canune"        :  6
     },
     "floors"  : {
@@ -402,7 +402,7 @@
         "monsters"  : {
           "Gillchic / Gillchich"   : 26,
           "Garanz / Baranz"        : 21,
-          "Canadine / Canabine"    : 11,
+          "Canadine / Canabin"    : 11,
           "Sinow Beat / Sinow Blue":  9,
           "Sinow Gold / Sinow Red" :  9,
           "Canane / Canune"        :  4,
@@ -512,12 +512,12 @@
       "Dark Belra / Indi Belra"          : 22,
       "Delsaber"                         : 21,
       "Nano Dragon / Sil Dragon"         : 17,
-      "Hildebear / Hildelta"             : 16,
+      "Hildebear / Hildelt"             : 16,
       "Dark Gunner / Death Gunner"       : 15,
       "Chaos Sorcerer / Gran Sorcerer"   : 14,
       "Bulclaw"                          : 14,
       "Pan Arms"                         : 12,
-      "Canadine / Canabine"              : 10,
+      "Canadine / Canabin"              : 10,
       "Canane / Canune"                  :  9,
       "Claw"                             :  8,
       "Dubwitch"                         :  4,
@@ -555,7 +555,7 @@
           "Sinow Gold / Sinow Red" : 27,
           "Garanz / Baranz"        : 22,
           "Sinow Beat / Sinow Blue": 15,
-          "Canadine / Canabine"    : 10,
+          "Canadine / Canabin"    : 10,
           "Canane / Canune"        :  9,
           "Dubwitch"               :  4
         }
@@ -593,7 +593,7 @@
         "monsters"  : {
           "Grass Assassin / Crimson Assassin": 52,
           "Delsaber"                         : 13,
-          "Hildebear / Hildelta"             :  9,
+          "Hildebear / Hildelt"             :  9,
           "Sinow Beat / Sinow Blue"          :  9,
           "Chaos Bringer / Dark Bringer"     :  7,
           "Guil Shark / Melqueek"            :  6
@@ -608,7 +608,7 @@
           "Sinow Gold / Sinow Red"           : 16,
           "Sinow Beat / Sinow Blue"          : 12,
           "Delsaber"                         :  8,
-          "Hildebear / Hildelta"             :  7,
+          "Hildebear / Hildelt"             :  7,
           "Grass Assassin / Crimson Assassin":  6,
           "Hildeblue"                        :  1
         }
@@ -818,14 +818,14 @@
       "Chaos Bringer / Dark Bringer"     : 51,
       "Poison Lily / Ob Lily"            : 22,
       "Guil Shark / Melqueek"            : 20,
-      "Hildebear / Hildelta"             : 19,
+      "Hildebear / Hildelt"             : 19,
       "Gillchic / Gillchich"             : 15,
       "Grass Assassin / Crimson Assassin": 14,
       "Sinow Beat / Sinow Blue"          : 13,
       "Sinow Gold / Sinow Red"           : 12,
       "Chaos Sorcerer / Gran Sorcerer"   : 12,
       "Dark Belra / Indi Belra"          : 10,
-      "Canadine / Canabine"              :  8,
+      "Canadine / Canabin"              :  8,
       "Garanz / Baranz"                  :  8,
       "Gigobooma / Tollaw"               :  6,
       "So Dimenian / Del-D"              :  6,
@@ -848,7 +848,7 @@
         "floor_id"  : 2,
         "total"     : 35,
         "monsters"  : {
-          "Hildebear / Hildelta"       : 10,
+          "Hildebear / Hildelt"       : 10,
           "Gigobooma / Tollaw"         :  6,
           "Savage Wolf / Gulgus"       :  5,
           "Barbarous Wolf / Gulgus-gue":  5,
@@ -870,7 +870,7 @@
         "total"     : 47,
         "monsters"  : {
           "Gillchic / Gillchich"   : 15,
-          "Canadine / Canabine"    :  8,
+          "Canadine / Canabin"    :  8,
           "Garanz / Baranz"        :  8,
           "Sinow Beat / Sinow Blue":  6,
           "Sinow Gold / Sinow Red" :  6,
@@ -905,7 +905,7 @@
           "Evil Shark / Vulmer"              :  3,
           "Delsaber"                         :  3,
           "Grass Assassin / Crimson Assassin":  3,
-          "Hildebear / Hildelta"             :  2,
+          "Hildebear / Hildelt"             :  2,
           "Sinow Gold / Sinow Red"           :  2,
           "Sinow Beat / Sinow Blue"          :  1
         }
@@ -917,7 +917,7 @@
         "monsters"  : {
           "Chaos Bringer / Dark Bringer"     : 23,
           "Grass Assassin / Crimson Assassin":  8,
-          "Hildebear / Hildelta"             :  7,
+          "Hildebear / Hildelt"             :  7,
           "Sinow Beat / Sinow Blue"          :  6,
           "Sinow Gold / Sinow Red"           :  4,
           "Guil Shark / Melqueek"            :  3,
@@ -936,7 +936,7 @@
       "Poison Lily / Ob Lily"            : 54,
       "Gigobooma / Tollaw"               : 53,
       "Dimenian / Arlan"                 : 50,
-      "Canadine / Canabine"              : 39,
+      "Canadine / Canabin"              : 39,
       "So Dimenian / Del-D"              : 35,
       "Garanz / Baranz"                  : 33,
       "Pal Shark / Govulmer"             : 32,
@@ -997,7 +997,7 @@
         "total"     : 205,
         "monsters"  : {
           "Gillchic / Gillchich"   : 78,
-          "Canadine / Canabine"    : 39,
+          "Canadine / Canabin"    : 39,
           "Garanz / Baranz"        : 33,
           "Sinow Gold / Sinow Red" : 22,
           "Sinow Beat / Sinow Blue": 20,
@@ -1028,7 +1028,7 @@
     "total"   : 238,
     "monsters": {
       "Rag Rappy / El Rappy"       : 90,
-      "Hildebear / Hildelta"       : 40,
+      "Hildebear / Hildelt"       : 40,
       "Gobooma / Barble"           : 37,
       "Gigobooma / Tollaw"         : 25,
       "Booma / Bartle"             : 20,
@@ -1057,7 +1057,7 @@
         "floor_id"  : 2,
         "total"     : 154,
         "monsters"  : {
-          "Hildebear / Hildelta"       : 40,
+          "Hildebear / Hildelt"       : 40,
           "Gobooma / Barble"           : 31,
           "Rag Rappy / El Rappy"       : 25,
           "Gigobooma / Tollaw"         : 25,
@@ -1085,7 +1085,7 @@
     "total"   : 598,
     "monsters": {
       "Dark Bringer"    : 43,
-      "Hildelta"        : 37,
+      "Hildelt"        : 37,
       "Gillchich"       : 37,
       "Tollaw"          : 36,
       "Crimson Assassin": 34,
@@ -1110,7 +1110,7 @@
       "Merlan"          :  9,
       "Mothvist"        :  7,
       "El Rappy"        :  7,
-      "Canabine"        :  6,
+      "Canabin"        :  6,
       "Canune"          :  5,
       "Bulclaw"         :  4,
       "Dubwitch"        :  3,
@@ -1125,7 +1125,7 @@
         "floor_id"  : 2,
         "total"     : 161,
         "monsters"  : {
-          "Hildelta"  : 37,
+          "Hildelt"  : 37,
           "Tollaw"    : 36,
           "Bartle"    : 29,
           "Gulgus-gue": 17,
@@ -1160,7 +1160,7 @@
           "Baranz"    : 25,
           "Dubchich"  : 25,
           "Sinow Red" : 18,
-          "Canabine"  :  6,
+          "Canabin"  :  6,
           "Canune"    :  5,
           "Dubwitch"  :  3
         }
@@ -1195,11 +1195,11 @@
       "Dark Belra / Indi Belra"       : 41,
       "Poison Lily / Ob Lily"         : 37,
       "Dubchic / Dubchich"            : 37,
-      "Hildebear / Hildelta"          : 36,
+      "Hildebear / Hildelt"          : 36,
       "Sinow Beat / Sinow Blue"       : 32,
       "Guil Shark / Melqueek"         : 29,
       "Evil Shark / Vulmer"           : 28,
-      "Canadine / Canabine"           : 28,
+      "Canadine / Canabin"           : 28,
       "Gobooma / Barble"              : 27,
       "Pofuilly Slime"                : 24,
       "Pal Shark / Govulmer"          : 18,
@@ -1230,7 +1230,7 @@
         "floor_id"  : 2,
         "total"     : 121,
         "monsters"  : {
-          "Hildebear / Hildelta": 36,
+          "Hildebear / Hildelt": 36,
           "Gobooma / Barble"    : 27,
           "Booma / Bartle"      : 16,
           "Rag Rappy / El Rappy": 16,
@@ -1261,7 +1261,7 @@
           "Gillchic / Gillchich"   : 74,
           "Dubchic / Dubchich"     : 37,
           "Sinow Beat / Sinow Blue": 32,
-          "Canadine / Canabine"    : 28,
+          "Canadine / Canabin"    : 28,
           "Garanz / Baranz"        : 15,
           "Sinow Gold / Sinow Red" : 13,
           "Dubwitch"               :  7,
@@ -1319,7 +1319,7 @@
       "Gigobooma / Tollaw"         : 64,
       "Gobooma / Barble"           : 57,
       "Rag Rappy / El Rappy"       : 45,
-      "Hildebear / Hildelta"       : 34,
+      "Hildebear / Hildelt"       : 34,
       "Monest / Mothvist"          : 16,
       "Savage Wolf / Gulgus"       : 14,
       "Barbarous Wolf / Gulgus-gue":  8,
@@ -1347,7 +1347,7 @@
         "total"     : 154,
         "monsters"  : {
           "Gigobooma / Tollaw"         : 36,
-          "Hildebear / Hildelta"       : 34,
+          "Hildebear / Hildelt"       : 34,
           "Booma / Bartle"             : 23,
           "Gobooma / Barble"           : 21,
           "Rag Rappy / El Rappy"       : 19,
@@ -1380,7 +1380,7 @@
       "Baranz"          : 37,
       "Sinow Red"       : 32,
       "Canune"          : 18,
-      "Canabine"        : 15,
+      "Canabin"        : 15,
       "Dark Bringer"    : 13,
       "Indi Belra"      : 10,
       "Merlan"          :  8,
@@ -1407,7 +1407,7 @@
           "Baranz"          : 37,
           "Sinow Red"       : 32,
           "Canune"          : 18,
-          "Canabine"        : 15,
+          "Canabin"        : 15,
           "Dark Bringer"    : 13,
           "Indi Belra"      : 10,
           "Merlan"          :  8,
@@ -1444,7 +1444,7 @@
       "Mericarol"      :  9,
       "Gi Gue"         :  9,
       "Deldepth"       :  9,
-      "Canabine"       :  4,
+      "Canabin"       :  4,
       "Dubwitch"       :  3,
       "Mericus"        :  3,
       "Vol Opt ver.2"  :  2,
@@ -1475,7 +1475,7 @@
           "Mericarol"      :  9,
           "Gi Gue"         :  9,
           "Deldepth"       :  9,
-          "Canabine"       :  4,
+          "Canabin"       :  4,
           "Dubwitch"       :  3,
           "Mericus"        :  3
         }
@@ -1502,7 +1502,7 @@
     "name"    : "Beyond the Veil",
     "total"   : 267,
     "monsters": {
-      "Hildelta"        : 24,
+      "Hildelt"        : 24,
       "Dark Bringer"    : 24,
       "Tollaw"          : 17,
       "Melqueek"        : 17,
@@ -1542,7 +1542,7 @@
           "Bartle"    : 14,
           "Gulgus-gue": 13,
           "Gulgus"    : 13,
-          "Hildelta"  : 12,
+          "Hildelt"  : 12,
           "Mothvist"  :  3
         }
       },
@@ -1571,7 +1571,7 @@
           "Delsaber"        : 14,
           "Sinow Red"       : 14,
           "Dark Bringer"    : 13,
-          "Hildelta"        : 12,
+          "Hildelt"        : 12,
           "Vulmer"          : 12,
           "Crimson Assassin": 12,
           "Govulmer"        :  8,
@@ -1600,7 +1600,7 @@
       "Savage Wolf / Gulgus"       : 29,
       "Gigobooma / Tollaw"         : 23,
       "Rag Rappy / El Rappy"       : 19,
-      "Hildebear / Hildelta"       :  8,
+      "Hildebear / Hildelt"       :  8,
       "Monest / Mothvist"          :  4,
       "Barbarous Wolf / Gulgus-gue":  4
     },
@@ -1629,7 +1629,7 @@
           "Gigobooma / Tollaw"         : 23,
           "Rag Rappy / El Rappy"       : 14,
           "Booma / Bartle"             : 12,
-          "Hildebear / Hildelta"       :  8,
+          "Hildebear / Hildelt"       :  8,
           "Barbarous Wolf / Gulgus-gue":  3,
           "Monest / Mothvist"          :  3
         }
@@ -1684,7 +1684,7 @@
     "total"   : 295,
     "monsters": {
       "Gillchic / Gillchich"   : 108,
-      "Canadine / Canabine"    :  68,
+      "Canadine / Canabin"    :  68,
       "Sinow Beat / Sinow Blue":  48,
       "Dubchic / Dubchich"     :  37,
       "Sinow Gold / Sinow Red" :  14,
@@ -1700,7 +1700,7 @@
         "total"     : 125,
         "monsters"  : {
           "Gillchic / Gillchich"   : 54,
-          "Canadine / Canabine"    : 33,
+          "Canadine / Canabin"    : 33,
           "Sinow Beat / Sinow Blue": 15,
           "Dubchic / Dubchich"     : 12,
           "Sinow Gold / Sinow Red" :  4,
@@ -1715,7 +1715,7 @@
         "total"     : 170,
         "monsters"  : {
           "Gillchic / Gillchich"   : 54,
-          "Canadine / Canabine"    : 35,
+          "Canadine / Canabin"    : 35,
           "Sinow Beat / Sinow Blue": 33,
           "Dubchic / Dubchich"     : 25,
           "Sinow Gold / Sinow Red" : 10,
@@ -1959,7 +1959,7 @@
       "Gobooma / Barble"           : 38,
       "Booma / Bartle"             : 29,
       "Savage Wolf / Gulgus"       : 26,
-      "Hildebear / Hildelta"       : 12,
+      "Hildebear / Hildelt"       : 12,
       "Rag Rappy / El Rappy"       : 10,
       "Barbarous Wolf / Gulgus-gue":  7,
       "Monest / Mothvist"          :  7,
@@ -1989,7 +1989,7 @@
           "Savage Wolf / Gulgus"       : 15,
           "Gigobooma / Tollaw"         : 15,
           "Booma / Bartle"             : 13,
-          "Hildebear / Hildelta"       : 12,
+          "Hildebear / Hildelt"       : 12,
           "Rag Rappy / El Rappy"       : 10,
           "Monest / Mothvist"          :  5,
           "Barbarous Wolf / Gulgus-gue":  4
@@ -2135,7 +2135,7 @@
     "total"   : 329,
     "monsters": {
       "Gillchic / Gillchich"   : 85,
-      "Canadine / Canabine"    : 80,
+      "Canadine / Canabin"    : 80,
       "Sinow Beat / Sinow Blue": 70,
       "Sinow Gold / Sinow Red" : 37,
       "Garanz / Baranz"        : 26,
@@ -2153,7 +2153,7 @@
         "monsters"  : {
           "Gillchic / Gillchich"   : 59,
           "Sinow Beat / Sinow Blue": 46,
-          "Canadine / Canabine"    : 33,
+          "Canadine / Canabin"    : 33,
           "Sinow Gold / Sinow Red" : 16,
           "Canane / Canune"        :  3
         }
@@ -2163,7 +2163,7 @@
         "floor_id"  : 7,
         "total"     : 170,
         "monsters"  : {
-          "Canadine / Canabine"    : 47,
+          "Canadine / Canabin"    : 47,
           "Gillchic / Gillchich"   : 26,
           "Garanz / Baranz"        : 26,
           "Sinow Beat / Sinow Blue": 24,
@@ -2182,7 +2182,7 @@
     "monsters": {
       "Gillchich"           : 87,
       "Oppressor VII"       : 82,
-      "Canabine"            : 80,
+      "Canabin"            : 80,
       "D-Virus Baranz ver.2": 53,
       "Praetorian IV"       : 49,
       "Dubchich"            : 36,
@@ -2208,7 +2208,7 @@
         "monsters"  : {
           "Gillchich"           : 61,
           "Oppressor VII"       : 48,
-          "Canabine"            : 31,
+          "Canabin"            : 31,
           "Praetorian IV"       : 21,
           "D-Virus Baranz ver.2": 14,
           "Dubchich"            : 13,
@@ -2229,7 +2229,7 @@
         "floor_id"  : 7,
         "total"     : 285,
         "monsters"  : {
-          "Canabine"            : 49,
+          "Canabin"            : 49,
           "D-Virus Baranz ver.2": 39,
           "Oppressor VII"       : 34,
           "Praetorian IV"       : 28,
@@ -2257,7 +2257,7 @@
     "monsters": {
       "Gillchic / Gillchich"       : 96,
       "Poison Lily / Ob Lily"      : 81,
-      "Canadine / Canabine"        : 63,
+      "Canadine / Canabin"        : 63,
       "Booma / Bartle"             : 59,
       "Evil Shark / Vulmer"        : 54,
       "Gigobooma / Tollaw"         : 37,
@@ -2269,7 +2269,7 @@
       "Barbarous Wolf / Gulgus-gue": 18,
       "Nano Dragon / Sil Dragon"   : 13,
       "Pal Shark / Govulmer"       : 12,
-      "Hildebear / Hildelta"       : 11,
+      "Hildebear / Hildelt"       : 11,
       "Pofuilly Slime"             :  6,
       "Pan Arms"                   :  6,
       "Sinow Gold / Sinow Red"     :  3,
@@ -2288,7 +2288,7 @@
           "Savage Wolf / Gulgus"       : 25,
           "Gobooma / Barble"           : 24,
           "Barbarous Wolf / Gulgus-gue": 18,
-          "Hildebear / Hildelta"       : 11,
+          "Hildebear / Hildelt"       : 11,
           "Monest / Mothvist"          :  1
         }
       },
@@ -2313,7 +2313,7 @@
         "total"     : 220,
         "monsters"  : {
           "Gillchic / Gillchich"   : 96,
-          "Canadine / Canabine"    : 63,
+          "Canadine / Canabin"    : 63,
           "Sinow Beat / Sinow Blue": 34,
           "Garanz / Baranz"        : 22,
           "Sinow Gold / Sinow Red" :  3,
@@ -2330,7 +2330,7 @@
       "Claw"                             : 51,
       "Gillchic / Gillchich"             : 46,
       "Evil Shark / Vulmer"              : 43,
-      "Canadine / Canabine"              : 43,
+      "Canadine / Canabin"              : 43,
       "Dimenian / Arlan"                 : 37,
       "La Dimenian / Merlan"             : 33,
       "Dark Gunner / Death Gunner"       : 31,
@@ -2373,7 +2373,7 @@
         "total"     : 166,
         "monsters"  : {
           "Gillchic / Gillchich"   : 46,
-          "Canadine / Canabine"    : 43,
+          "Canadine / Canabin"    : 43,
           "Sinow Gold / Sinow Red" : 21,
           "Dubchic / Dubchich"     : 20,
           "Sinow Beat / Sinow Blue": 17,
@@ -2407,7 +2407,7 @@
       "Poison Lily / Ob Lily"            : 62,
       "Claw"                             : 52,
       "Pal Shark / Govulmer"             : 40,
-      "Canadine / Canabine"              : 35,
+      "Canadine / Canabin"              : 35,
       "Guil Shark / Melqueek"            : 32,
       "Grass Assassin / Crimson Assassin": 28,
       "Dark Belra / Indi Belra"          : 27,
@@ -2450,7 +2450,7 @@
         "floor_id"  : 7,
         "total"     : 132,
         "monsters"  : {
-          "Canadine / Canabine"    : 35,
+          "Canadine / Canabin"    : 35,
           "Dubchic / Dubchich"     : 21,
           "Gillchic / Gillchich"   : 21,
           "Sinow Beat / Sinow Blue": 19,
@@ -2496,7 +2496,7 @@
       "Sinow Beat / Sinow Blue"          : 17,
       "Claw"                             : 17,
       "Garanz / Baranz"                  : 16,
-      "Canadine / Canabine"              : 16,
+      "Canadine / Canabin"              : 16,
       "Pofuilly Slime"                   : 14,
       "Chaos Bringer / Dark Bringer"     : 12,
       "La Dimenian / Merlan"             : 11,
@@ -2534,7 +2534,7 @@
           "Gillchic / Gillchich"   : 19,
           "Sinow Beat / Sinow Blue": 17,
           "Garanz / Baranz"        : 16,
-          "Canadine / Canabine"    : 16,
+          "Canadine / Canabin"    : 16,
           "Canane / Canune"        :  4,
           "Dubwitch"               :  3
         }
@@ -2619,7 +2619,7 @@
     "total"   : 141,
     "monsters": {
       "Gillchic / Gillchich"   : 59,
-      "Canadine / Canabine"    : 39,
+      "Canadine / Canabin"    : 39,
       "Sinow Beat / Sinow Blue": 17,
       "Dubchic / Dubchich"     :  9,
       "Sinow Gold / Sinow Red" :  7,
@@ -2635,7 +2635,7 @@
         "total"     : 141,
         "monsters"  : {
           "Gillchic / Gillchich"   : 59,
-          "Canadine / Canabine"    : 39,
+          "Canadine / Canabin"    : 39,
           "Sinow Beat / Sinow Blue": 17,
           "Dubchic / Dubchich"     :  9,
           "Sinow Gold / Sinow Red" :  7,
@@ -2682,7 +2682,7 @@
     "name"    : "Rappy's Holiday",
     "total"   : 164,
     "monsters": {
-      "Hildebear / Hildelta"       : 75,
+      "Hildebear / Hildelt"       : 75,
       "Booma / Bartle"             : 20,
       "Barbarous Wolf / Gulgus-gue": 20,
       "Savage Wolf / Gulgus"       : 15,
@@ -2709,7 +2709,7 @@
         "floor_id"  : 2,
         "total"     : 130,
         "monsters"  : {
-          "Hildebear / Hildelta"       : 75,
+          "Hildebear / Hildelt"       : 75,
           "Barbarous Wolf / Gulgus-gue": 12,
           "Monest / Mothvist"          : 10,
           "Booma / Bartle"             :  9,
@@ -2845,7 +2845,7 @@
       "Poison Lily / Ob Lily"   : 52,
       "Gillchic / Gillchich"    : 47,
       "Sinow Beat / Sinow Blue" : 27,
-      "Canadine / Canabine"     : 25,
+      "Canadine / Canabin"     : 25,
       "Dubchic / Dubchich"      :  9,
       "Nano Dragon / Sil Dragon":  7,
       "Sinow Gold / Sinow Red"  :  7,
@@ -2890,7 +2890,7 @@
         "monsters"  : {
           "Gillchic / Gillchich"   : 47,
           "Sinow Beat / Sinow Blue": 27,
-          "Canadine / Canabine"    : 25,
+          "Canadine / Canabin"    : 25,
           "Dubchic / Dubchich"     :  9,
           "Sinow Gold / Sinow Red" :  7,
           "Garanz / Baranz"        :  6,
@@ -2933,13 +2933,14 @@
       "Olga Flow"    : 1,
       "Dal Ra Lie"   : 1,
       "Vol Opt ver.2": 1,
+      "Gal Gryphon":1,
       "Dark Falz"    : 1
     },
     "floors"  : {
       "0" : { "floor_name": "Pioneer II",          "floor_id":  0, "total": 0, "monsters": {}                   },
       "1" : { "floor_name": "Forest 1",            "floor_id":  1, "total": 1, "monsters": {"Barba Ray": 1}     },
       "2" : { "floor_name": "Forest 2",            "floor_id":  2, "total": 1, "monsters": {"Gol Dragon": 1}    },
-      "3" : { "floor_name": "Cave 1",              "floor_id":  3, "total": 1, "monsters": {"Sil Dragon": 1}    },
+      "3" : { "floor_name": "Cave 1",              "floor_id":  3, "total": 1, "monsters": {"Gal Gryphon": 1}    },
       "4" : { "floor_name": "Cave 2",              "floor_id":  4, "total": 1, "monsters": {"Olga Flow": 1}     },
       "11": { "floor_name": "Under the Dome",      "floor_id": 11, "total": 1, "monsters": {"Sil Dragon": 1}    },
       "12": { "floor_name": "Underground Channel", "floor_id": 12, "total": 1, "monsters": {"Dal Ra Lie": 1}    },
@@ -2960,7 +2961,8 @@
       "Pazuzu"              :  7,
       "Soul Stealer"        :  6,
       "Dubchich"            :  4,
-      "Rathalos"            :  2,
+      "Rathalos"            :  1,
+      "Deos Behemoth":1,
       "Bar Dalus"           :  1,
       "Eclipse Dragon"      :  1,
       "The Chaos Ruler"     :  1,
@@ -2981,7 +2983,7 @@
         "floor_name": "Cave 1",
         "floor_id"  : 3,
         "total"     : 7,
-        "monsters"  : {"Pazuzu": 5, "Rathalos": 1, "Tormentark": 1}
+        "monsters"  : {"Pazuzu": 5, "Deos Behemoth":1, "Tormentark": 1}
       },
       "4" : { "floor_name": "Cave 2", "floor_id": 4, "total": 1, "monsters": {"The Chaos Ruler": 1} },
       "11": { "floor_name": "Under the Dome", "floor_id": 11, "total": 3, "monsters": {"Pazuzu": 2, "Rathalos": 1} },
@@ -3018,7 +3020,7 @@
     "monsters": {
       "Gillchic / Gillchich"          : 26,
       "Dimenian / Arlan"              : 17,
-      "Canadine / Canabine"           : 16,
+      "Canadine / Canabin"           : 16,
       "Claw"                          : 14,
       "Evil Shark / Vulmer"           : 13,
       "Poison Lily / Ob Lily"         : 13,
@@ -3030,7 +3032,7 @@
       "Pofuilly Slime"                :  5,
       "Nano Dragon / Sil Dragon"      :  5,
       "Pal Shark / Govulmer"          :  5,
-      "Hildebear / Hildelta"          :  4,
+      "Hildebear / Hildelt"          :  4,
       "Pan Arms"                      :  4,
       "Dark Belra / Indi Belra"       :  4,
       "Chaos Bringer / Dark Bringer"  :  4,
@@ -3059,7 +3061,7 @@
           "Booma / Bartle"             : 12,
           "Gigobooma / Tollaw"         :  7,
           "Gobooma / Barble"           :  6,
-          "Hildebear / Hildelta"       :  4,
+          "Hildebear / Hildelt"       :  4,
           "Savage Wolf / Gulgus"       :  2,
           "Rag Rappy / El Rappy"       :  1,
           "Barbarous Wolf / Gulgus-gue":  1
@@ -3085,7 +3087,7 @@
         "total"     : 62,
         "monsters"  : {
           "Gillchic / Gillchich"   : 26,
-          "Canadine / Canabine"    : 16,
+          "Canadine / Canabin"    : 16,
           "Sinow Beat / Sinow Blue": 12,
           "Garanz / Baranz"        :  3,
           "Sinow Gold / Sinow Red" :  2,
@@ -3135,7 +3137,7 @@
     "monsters": {
       "Sinow Blue"      : 41,
       "Melqueek"        : 39,
-      "Hildelta"        : 37,
+      "Hildelt"        : 37,
       "Ba Boota"        : 37,
       "Dark Bringer"    : 36,
       "Goran Detonator" : 32,
@@ -3161,7 +3163,7 @@
         "monsters"  : {
           "Sinow Blue"      : 41,
           "Melqueek"        : 39,
-          "Hildelta"        : 37,
+          "Hildelt"        : 37,
           "Ba Boota"        : 37,
           "Dark Bringer"    : 36,
           "Goran Detonator" : 32,
@@ -3217,7 +3219,7 @@
     "monsters": {
       "Gillchic / Gillchich"   : 68,
       "Sinow Beat / Sinow Blue": 22,
-      "Canadine / Canabine"    : 20,
+      "Canadine / Canabin"    : 20,
       "Dubchic / Dubchich"     :  6,
       "Sinow Gold / Sinow Red" :  3,
       "Garanz / Baranz"        :  2,
@@ -3232,7 +3234,7 @@
         "monsters"  : {
           "Gillchic / Gillchich"   : 68,
           "Sinow Beat / Sinow Blue": 22,
-          "Canadine / Canabine"    : 20,
+          "Canadine / Canabin"    : 20,
           "Dubchic / Dubchich"     :  6,
           "Sinow Gold / Sinow Red" :  3,
           "Garanz / Baranz"        :  2,

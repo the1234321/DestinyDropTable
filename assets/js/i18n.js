@@ -1,4 +1,4 @@
-let language = localStorage.getItem("wiki-language") || "cn";
+let language = localStorage.getItem("wiki-language") || "en";
 let messages = {};
 let itemData = {};
 let monsterTranslations = {};
@@ -39,13 +39,22 @@ const DEFAULT_UI = {
     "effect.auto_target": "Auto-target",
     "effect.piercing": "Piercing shots",
     "effect.attack_action": "Attack action",
-    "effect.notes": "Notes"
+    "effect.notes": "Notes",
+    "label.item": "Item",
+    "label.source": "Quest / Source",
+    "label.rate": "Rate / Condition",
+    "label.notes": "Notes",
+    "label.monsters": "Monster Counts / BOSS Info",
+    "label.questDrops": "Special Drops",
+    "label.specialDrops": "Special Drops",
+    "term.except": "except",
+    "term.allIds": "all IDs"
 };
 
 async function loadLanguage(nextLanguage) {
     const selected = nextLanguage === "en" ? "en" : "cn";
     const translation = selected === "cn"
-        ? await fetch("assets/data/translation/cn.json?v=20260903-1").then(response => response.json())
+        ? await fetch("assets/data/translation/cn.json?v=20260904-5").then(response => response.json())
         : {};
     language = selected;
     const effectMessages = Object.fromEntries(
@@ -95,8 +104,12 @@ window.WIKI_I18N = {
     getMonster(monsterId) {
         return monsterTranslations[monsterId]?.name || monsterId;
     },
+    getMonsterEntries() {
+        return Object.entries(monsterTranslations);
+    },
     getActivity(value) { return activityTranslations[value] || value; },
     getQuestArea(value) { return questAreaTranslations[value] || value; },
+    getTerm(value) { return messages[`term.${value}`] || value; },
     text(key, fallback = "") { return messages[key] || fallback; },
     async setLanguage(nextLanguage) {
         if (nextLanguage === language) {

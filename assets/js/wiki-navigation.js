@@ -31,7 +31,7 @@ document.querySelectorAll(".wiki-nav-button").forEach(button => {
   button.addEventListener("click", () => selectView(button.dataset.view));
 });
 
-const views = ["drops", "commands", "localization", "dictionary", "currency", "special", "bazaar", "effects", "quests"];
+const views = ["drops", "commands", "localization", "dictionary", "special", "bazaar", "effects", "quests"];
 const initialView = location.hash.slice(1);
 selectView(views.includes(initialView) ? initialView : "drops", false);
 

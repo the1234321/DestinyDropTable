@@ -180,7 +180,7 @@
     "monsters": {
       "Poison Lily / Ob Lily": 46,
       "Dolmolm": 46,
-      "Hildebear / Hildelta": 41,
+      "Hildebear / Hildelt": 41,
       "So Dimenian / Del-D": 35,
       "Grass Assassin / Crimson Assassin": 31,
       "Dolmdarl": 31,
@@ -208,7 +208,7 @@
         "floor_id": 1,
         "total": 68,
         "monsters": {
-          "Hildebear / Hildelta": 30,
+          "Hildebear / Hildelt": 30,
           "Grass Assassin / Crimson Assassin": 12,
           "Poison Lily / Ob Lily": 10,
           "Rag Rappy / El Rappy": 6,
@@ -232,7 +232,7 @@
           "Grass Assassin / Crimson Assassin": 19,
           "Dark Belra / Indi Belra": 18,
           "Monest / Mothvist": 11,
-          "Hildebear / Hildelta": 11
+          "Hildebear / Hildelt": 11
         }
       },
       "10": {
@@ -638,7 +638,7 @@
       "La Dimenian / Merlan": 21,
       "Dimenian / Arlan": 20,
       "Sinow Berill": 19,
-      "Hildebear / Hildelta": 18,
+      "Hildebear / Hildelt": 18,
       "Garanz / Baranz": 17,
       "Dark Belra / Indi Belra": 14,
       "Pan Arms": 10,
@@ -668,7 +668,7 @@
           "So Dimenian / Del-D": 27,
           "La Dimenian / Merlan": 21,
           "Dimenian / Arlan": 20,
-          "Hildebear / Hildelta": 18,
+          "Hildebear / Hildelt": 18,
           "Dark Belra / Indi Belra": 14,
           "Grass Assassin / Crimson Assassin": 6
         }
@@ -1043,7 +1043,7 @@
       "So Dimenian / Del-D": 54,
       "Dimenian / Arlan": 48,
       "La Dimenian / Merlan": 41,
-      "Hildebear / Hildelta": 38,
+      "Hildebear / Hildelt": 38,
       "Merillia": 38,
       "Dark Belra / Indi Belra": 36,
       "Grass Assassin / Crimson Assassin": 20,
@@ -1089,7 +1089,7 @@
           "So Dimenian / Del-D": 54,
           "Dimenian / Arlan": 48,
           "La Dimenian / Merlan": 41,
-          "Hildebear / Hildelta": 38,
+          "Hildebear / Hildelt": 38,
           "Dark Belra / Indi Belra": 36,
           "Grass Assassin / Crimson Assassin": 20,
           "Monest / Mothvist": 13
@@ -1569,7 +1569,7 @@
     "total": 1015,
     "monsters": {
       "Poison Lily / Ob Lily": 60,
-      "Hildebear / Hildelta": 47,
+      "Hildebear / Hildelt": 47,
       "Gillchic / Gillchich": 45,
       "Gee": 44,
       "Delsaber": 43,
@@ -1630,7 +1630,7 @@
           "Dimenian / Arlan": 24,
           "Rag Rappy / El Rappy": 20,
           "So Dimenian / Del-D": 19,
-          "Hildebear / Hildelta": 17,
+          "Hildebear / Hildelt": 17,
           "La Dimenian / Merlan": 17,
           "Dark Belra / Indi Belra": 15,
           "Grass Assassin / Crimson Assassin": 15,
@@ -1642,7 +1642,7 @@
         "floor_id": 2,
         "total": 93,
         "monsters": {
-          "Hildebear / Hildelta": 30,
+          "Hildebear / Hildelt": 30,
           "Poison Lily / Ob Lily": 14,
           "Dark Belra / Indi Belra": 12,
           "Rag Rappy / El Rappy": 11,
@@ -1890,7 +1890,7 @@
       "Gibbles": 7,
       "Dubwitch": 6,
       "Ul Gibbon": 6,
-      "Hildebear / Hildelta": 5,
+      "Hildebear / Hildelt": 5,
       "Meriltas": 5,
       "Merikle": 5,
       "Sinow Berill": 4,
@@ -1935,7 +1935,7 @@
           "Dimenian / Arlan": 18,
           "Rag Rappy / El Rappy": 10,
           "La Dimenian / Merlan": 9,
-          "Hildebear / Hildelta": 5,
+          "Hildebear / Hildelt": 5,
           "Grass Assassin / Crimson Assassin": 3,
           "Monest / Mothvist": 2
         }
@@ -2052,7 +2052,7 @@
       "Dimenian / Arlan": 19,
       "Pan Arms": 19,
       "Dubchic / Dubchich": 16,
-      "Hildebear / Hildelta": 15,
+      "Hildebear / Hildelt": 15,
       "Rag Rappy / El Rappy": 9,
       "Barbarous Wolf / Gulgus-gue": 9,
       "Grass Assassin / Crimson Assassin": 6,
@@ -2075,7 +2075,7 @@
         "total": 11,
         "monsters": {
           "Poison Lily / Ob Lily": 4,
-          "Hildebear / Hildelta": 2,
+          "Hildebear / Hildelt": 2,
           "Dimenian / Arlan": 2,
           "Dark Belra / Indi Belra": 2,
           "Grass Assassin / Crimson Assassin": 1
@@ -2089,7 +2089,7 @@
           "Poison Lily / Ob Lily": 25,
           "Dark Belra / Indi Belra": 24,
           "Dimenian / Arlan": 17,
-          "Hildebear / Hildelta": 13,
+          "Hildebear / Hildelt": 13,
           "Rag Rappy / El Rappy": 9,
           "La Dimenian / Merlan": 5,
           "So Dimenian / Del-D": 5,
@@ -2146,7 +2146,7 @@
       "Barbarous Wolf / Gulgus-gue": 4,
       "Zol Gibbon": 4,
       "Grass Assassin / Crimson Assassin": 3,
-      "Hildebear / Hildelta": 3,
+      "Hildebear / Hildelt": 3,
       "Dubwitch": 3,
       "Dark Belra / Indi Belra": 2,
       "Monest / Mothvist": 2,
@@ -2179,7 +2179,7 @@
           "Poison Lily / Ob Lily": 9,
           "Rag Rappy / El Rappy": 7,
           "Grass Assassin / Crimson Assassin": 3,
-          "Hildebear / Hildelta": 3,
+          "Hildebear / Hildelt": 3,
           "Dark Belra / Indi Belra": 2,
           "Monest / Mothvist": 2
         }
@@ -2486,7 +2486,7 @@
       "Barbarous Wolf / Gulgus-gue": 11,
       "Sinow Zele": 11,
       "La Dimenian / Merlan": 10,
-      "Hildebear / Hildelta": 10,
+      "Hildebear / Hildelt": 10,
       "Grass Assassin / Crimson Assassin": 9,
       "Dimenian / Arlan": 9,
       "Pan Arms": 9,
@@ -2525,7 +2525,7 @@
           "Poison Lily / Ob Lily": 18,
           "Dark Belra / Indi Belra": 11,
           "La Dimenian / Merlan": 10,
-          "Hildebear / Hildelta": 10,
+          "Hildebear / Hildelt": 10,
           "Grass Assassin / Crimson Assassin": 9,
           "Dimenian / Arlan": 9,
           "So Dimenian / Del-D": 5,
@@ -3399,7 +3399,7 @@
       "Merikle": 10,
       "Sinow Berill": 10,
       "Arlan": 9,
-      "Hildelta": 8,
+      "Hildelt": 8,
       "Merlan": 7,
       "Dolmdarl": 7,
       "Sinow Spigell": 7,
@@ -3444,7 +3444,7 @@
           "Merikle": 4,
           "Sinow Zoa": 4,
           "Gi Gue": 2,
-          "Hildelta": 2,
+          "Hildelt": 2,
           "Sinow Zele": 1,
           "Morfos": 1,
           "Baranz": 1,
@@ -3467,7 +3467,7 @@
           "Indi Belra": 3,
           "Dolmolm": 3,
           "Sinow Zoa": 3,
-          "Hildelta": 3,
+          "Hildelt": 3,
           "Gibbles": 2,
           "Mericarol": 2,
           "Delbiter": 2,
@@ -3529,7 +3529,7 @@
           "Gillchich": 5,
           "Dolmdarl": 3,
           "Recobox": 3,
-          "Hildelta": 3
+          "Hildelt": 3
         }
       },
       "14": {
@@ -3823,7 +3823,7 @@
       "Indi Belra": 82,
       "Delbiter": 50,
       "Gillchich": 42,
-      "Hildelta": 41,
+      "Hildelt": 41,
       "Gibbles": 37,
       "Crimson Assassin": 32,
       "Gi Gue": 32,
@@ -3874,7 +3874,7 @@
         "monsters": {
           "Ob Lily": 47,
           "Indi Belra": 36,
-          "Hildelta": 20,
+          "Hildelt": 20,
           "Crimson Assassin": 19,
           "Del-D": 17,
           "Arlan": 9,
@@ -3889,7 +3889,7 @@
         "monsters": {
           "Indi Belra": 46,
           "Ob Lily": 39,
-          "Hildelta": 21,
+          "Hildelt": 21,
           "El Rappy": 14,
           "Crimson Assassin": 13,
           "Del-D": 5,

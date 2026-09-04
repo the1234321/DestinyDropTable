@@ -6,8 +6,12 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": ["第一个房间有大量怪物，可以用来升级和刷活动掉落"],
-          "en": ["The first room has a large number of monsters, which can be used to level up and farm event drops."]
+          "cn": [
+            "第一个房间有大量怪物，可以用来升级和刷活动掉落"
+          ],
+          "en": [
+            "The first room has a large number of monsters, which can be used to level up and farm event drops."
+          ]
         }
       },
       "Tragedy in Chaos ⭐⭐⭐": {
@@ -15,8 +19,12 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "U难度限定"
+          ],
+          "en": [
+            "Ult only"
+          ]
         }
       },
       "Caverns of Gloom ⭐⭐⭐": {
@@ -24,8 +32,18 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "关底数字答案 (PD奖励)：",
+            "第一个数字（幸存者人数）：在任务开始的开场文本中。",
+            "第二个数字（数据日志数量）：在洞穴 1 出现“回头”提示时，转身穿过前一个房间的墙壁获得。",
+            "第三个数字（天数）：在洞穴 2 与一个箱子形状的 NPC 对话获得。"
+          ],
+          "en": [
+            "Puzzle Answer (reward: PD):",
+            "The first number (number of survivors): Located in the opening text at the start of the quest.",
+            "The second number (number of data logs): Found by turning back and walking through the wall in the previous room when the 'go back' message pops up in cave 1.",
+            "The third number (number of days): Found by talking to an NPC that looks like a box in cave 2."
+          ]
         }
       },
       "Harmony of Despair I ⭐⭐⭐⭐⭐": {
@@ -60,8 +78,13 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "隐藏区域：",
+            "击败BOSS后返回森林，通过装置传送至宇宙船。此处怪物密集，阵亡即回城（替身人偶无效），通关可获额外奖励"
+          ],
+          "en": [
+            "Secret Area: Return to the forest after defeating the BOSS and warp to the Spaceship. Fight massive mobs; dying sends you straight to city (Scape Dolls ineffective). Cleared for bonus rewards."
+          ]
         }
       },
       "Mines Offensive ⭐⭐⭐⭐": {
@@ -84,11 +107,15 @@
       },
       "Simulator 2.0 ⭐⭐⭐⭐⭐": {
         "requirement": "",
-        "reward": "",
+        "reward": "Secret Ticket",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "玩家死亡后不会被传送回城（其他玩家可以复活你，或者你可以使用替人人偶）。"
+          ],
+          "en": [
+            "You won't be transported to city when you die (other player can revive you or you can use scape doll)"
+          ]
         }
       },
       "Ruined Serenity": {
@@ -148,7 +175,11 @@
       "Christmas Fiasco EP1 ⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Dark Bringer": {
+            "Fragments of Orb [Blue] 1/393": "skyly, bluefull"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -309,8 +340,14 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "和银行旁边的猴子对话，可以获得大量美赛塔",
+            "可用来测试武器和法术，死亡后自动复活，有补充PB的装置"
+          ],
+          "en": [
+            "get free meseta talk to FOnewm near the bank",
+            "can be used to test weapons and spells, automatically revives after death, and has a device to fill PB."
+          ]
         }
       },
       "Beyond the Veil ⭐⭐⭐⭐⭐⭐": {
@@ -318,41 +355,101 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "U难度限定"
+          ],
+          "en": [
+            "Ult only"
+          ]
         }
       },
       "Toward the Multiverse [Lv.I] ⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Dark Falz": {
+            "HEAVENLY RESONANCE 1/102": "all ids"
+          },
+          "Sil Dragon, Dal Ra Lie, Vol Opt ver.2, Gal Gryphon ": {
+            "Photon Token 1/256": "all ids"
+          }
+        },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "通关奖励NPC：",
+            "根据通关时间及等级等发放奖励。包含S级枪械与带属性的特殊武器。",
+            "高难度下奖励更佳、爆率更高、属性上限（Max%）也更高。"
+          ],
+          "en": [
+            "Reward NPC: ",
+            "Grants rewards based on clear time, level, etc., including S-Rank GUNs and special attribute weapons. ",
+            "Higher difficulties offer better rewards, higher drop rates, and increased Max%."
+          ]
         }
       },
       "Toward the Multiverse [Lv.II] ⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Dark Falz": {
+            "HEAVENLY RESONANCE 1/51": "Viridia, Greenill, Skyly,  Bluefull, Purplenum",
+            "MA&X76 OMEGA 1/204": "Pinkal, Redria,  Oran, Yellowboze, Whitill"
+          },
+          "Sil Dragon, Dal Ra Lie, Gal Gryphon": {
+            "Photon Token 1/64": "all ids"
+          },
+          "Vol Opt ver.2": {
+            "State/Maintenance 1/73": "all ids"
+          }
+        },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "通关奖励NPC：",
+            "根据通关时间及等级等发放奖励。包含S级枪械与带属性的特殊武器。",
+            "高难度下奖励更佳、爆率更高、属性上限（Max%）也更高。"
+          ],
+          "en": [
+            "Reward NPC: ",
+            "Grants rewards based on clear time, level, etc., including S-Rank GUNs and special attribute weapons. ",
+            "Higher difficulties offer better rewards, higher drop rates, and increased Max%."
+          ]
         }
       },
       "Toward the Multiverse [Lv.III] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Rathalos, Del Lodos, Deos Behemoth": {
+            "Millennium Photon Core 1/64": "all ids"
+          },
+          "The Prophet": {
+            "Blast Garment 1/45": "all ids"
+          },
+          "The Chaos Ruler": {
+            "MA&X76 OMEGA 1/32": "all ids"
+          }
+        },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "通关奖励NPC：",
+            "根据通关时间及等级等发放奖励。包含S级枪械与带属性的特殊武器。",
+            "高难度下奖励更佳、爆率更高、属性上限（Max%）也更高。"
+          ],
+          "en": [
+            "Reward NPC: ",
+            "Grants rewards based on clear time, level, etc., including S-Rank GUNs and special attribute weapons. ",
+            "Higher difficulties offer better rewards, higher drop rates, and increased Max%."
+          ]
         }
       },
       "Beyond the Mainframe ⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Vol Opt ver.2": {
+            "State/Maintenance 1/93": "except Greenill Bluefull"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -361,7 +458,20 @@
       "Beyond the Mainframe [Extreme] ⭐⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "The Prophet": {
+            "Blast Garment 1/45": "all  ids"
+          },
+          "Girtablulu": {
+            "Orb of Illusions 1/2559": "all ids"
+          },
+          "Pyro Goran": {
+            "Photon Drop 1/600": "all ids"
+          },
+          "???": {
+            "Photon Token 1/600": "all ids"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -370,37 +480,73 @@
       "Silent Nightmare [Raid] ⭐⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Nightmare Chaser XII": {
+            "Chaos Engine 1/73": "all ids"
+          },
+          "Dark Falz": {
+            "RASTER SCOPE 1/64": "Viridia, Greenill, Skyly,  Bluefull, Purplenum",
+            "VECTOR SCOPE 1/64": "Pinkal, Redria,  Oran, Yellowboze, Whitill"
+          }
+        },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "建议将文本显示速度设置为“最快”。可以更早地显示任务实时信息。"
+          ],
+          "en": [
+            "recommend to setmessage speed 'fastest' for raid contents.It shows scroll text earlier."
+          ]
         }
       },
       "Silent Nightmare [Boss only]": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Nightmare Chaser XII": {
+            "Chaos Engine 1/136": "all ids"
+          }
+        },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "建议将文本显示速度设置为“最快”。可以更早地显示任务实时信息。"
+          ],
+          "en": [
+            "recommend to setmessage speed 'fastest' for raid contents.It shows scroll text earlier."
+          ]
         }
       },
       "Distorted Nightmare [Raid]": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Nightmare Chaser XII": {
+            "Chaos Engine 1/73": "all ids"
+          }
+        },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "建议将文本显示速度设置为“最快”。可以更早地显示任务实时信息。"
+          ],
+          "en": [
+            "recommend to setmessage speed 'fastest' for raid contents.It shows scroll text earlier."
+          ]
         }
       },
       "The Ravenous Predator [Raid] ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Soul Butcher": {
+            "Parasitic Armor \u0027Predator\u0027": "all ids"
+          }
+        },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "建议将文本显示速度设置为“最快”。可以更早地显示任务实时信息。"
+          ],
+          "en": [
+            "recommend to setmessage speed 'fastest' for raid contents.It shows scroll text earlier."
+          ]
         }
       },
       "Beyond the Nightmare ⭐⭐⭐⭐⭐⭐⭐⭐": {
@@ -408,7 +554,7 @@
         "reward": "",
         "drops": {
           "Nightmare Dominator VI": {
-            "Primal Photon Sphere": "1/45"
+            "Primal Photon Sphere 1/45": "all ids"
           }
         },
         "notes": {
@@ -506,29 +652,48 @@
         "reward": "Weapons Crystal Badge",
         "drops": {
           "Meri Noir": {
-            "Red Crystal": "1/204"
+            "Red Crystal 1/204": "all ids"
           },
           "Ba Boota": {
-            "Photon Drop": "1/500"
+            "Photon Drop 1/500": "all ids"
           },
           "Goran Detonator": {
-            "Excalibur": "1/1800"
+            "Excalibur 1/1800": "all ids"
           },
           "Pazuzu": {
-            "Elenor Lv5": "1/1800"
+            "Elenor Lv5 1/1800": "all ids"
           }
         },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "在这个任务中，Mericarol, Merikle, Mericus不会掉落普通稀有物品。",
+            "当你进行陷阱射击时，你的角色会面向南方。"
+          ],
+          "en": [
+            "In this quest, Mericarol, Merikle, Mericus do not drop regular rares.",
+            "When you do trap shot, your character will face south."
+          ]
         }
       }
     },
-    "Mini Event":{
+    "Mini Event": {
       "Lost SOUL RIPPER [Extreme] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "D-Virus Baranz ver.2": {
+            "D-Virus Shield 1/1204": "all ids"
+          },
+          "Oppressor VII & Praetorian IV": {
+            "Millennium Photon Core 1/450": "all ids"
+          },
+          "Girtablulu": {
+            "Millennium Photon Core 1/500": "all ids"
+          },
+          "The Prophet": {
+            "BLAST GARMENT 1/45": "all ids"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -559,7 +724,11 @@
       "The Eternal Age ⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Epsilon": {
+            "Yellow Crystal 1/102": "Yellowboze, Whitill"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -570,8 +739,32 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "关于通关奖励物品: 随机最高H属性90%，更容易抽中武器",
+            "奖励武器列表:",
+            "Yasminkov 9000M",
+            "Yasminkov 3000R",
+            "Holy Ray",
+            "Valkyrie",
+            "Frozen Shooter",
+            "NUG2000-Bazooka",
+            "Raikiri",
+            "Red Sword",
+            "Evil Curst"
+          ],
+          "en": [
+            "About reward items: Max % is 90, Improved weapon reward rate",
+            "list:",
+            "Yasminkov 9000M",
+            "Yasminkov 3000R",
+            "Holy Ray",
+            "Valkyrie",
+            "Frozen Shooter",
+            "NUG2000-Bazooka",
+            "Raikiri",
+            "Red Sword",
+            "Evil Curst"
+          ]
         }
       },
       "Weather Effects": {
@@ -597,8 +790,12 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "完成隐藏区域奖励Secret Ticket"
+          ],
+          "en": [
+            "can receive a Secret Ticket when you cleared secret level"
+          ]
         }
       },
       "Gal Da Val`s Darkness ⭐⭐⭐": {
@@ -622,7 +819,11 @@
       "New MSB ⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Olga Flow": {
+            "Madam's Bracelet 1/64": "all ids"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -640,7 +841,11 @@
       "World of Illusion ⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Olga Flow": {
+            "SOUL ERASER 1/73": "all ids"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -649,7 +854,11 @@
       "Christmas Fiasco EP2 ⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Delbiter": {
+            "Fragments of Orb [Red] 1/393": "redria/pinkal"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -669,16 +878,63 @@
       "VR Test EXTRA: Singularity ⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Bar Dalus": {
+            "Blue Crystal 1/24": "Oran",
+            "VENUS BOW 1/77": "Viridia, Greenill, Skyly,  Bluefull, Purplenum",
+            "Heavenly/Resist 1/36": "Pinkal, Redria",
+            "Berserk Needle 1/93": "Yellowboze",
+            "Radiant Ring 1/102": "Whitill"
+          }
+        },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "所有武器均带有 NA/H、NM/H、ND/H、AD/H、AM/H 或 MD/H 属性",
+            "命中：30h~65h 属性：50%~60%",
+            "物品列表:",
+            "HP Material ×2",
+            "Calibur",
+            "Raygun",
+            "Arms",
+            "Resist/Burning++ (不易抽到)",
+            "Resist/Blizzard++ (不易抽到)",
+            "Resist/Storm++ (不易抽到)",
+            "Resist/Holy++ (不易抽到)",
+            "Resist/Devil++ (不易抽到)",
+            "Power Maser",
+            "Gal Wind (极难抽到)",
+            "TENSION BLASTER (4人组队时才可能抽到)"
+          ],
+          "en": [
+            "All weapons will come with NA/H, NM/H, ND/H, AD/H, AM/H or MD/H",
+            "Hit:30%~65% Attribute:50%~60%",
+            "reward list:",
+            "HP Material ×2",
+            "Calibur",
+            "Raygun",
+            "Arms",
+            "Resist/Burning++ (Rare)",
+            "Resist/Blizzard++ (Rare)",
+            "Resist/Storm++ (Rare)",
+            "Resist/Holy++ (Rare)",
+            "Resist/Devil++(Rare)",
+            "Power Maser",
+            "Gal Wind (Super Rare)",
+            "TENSION BLASTER (4P Only)"
+          ]
         }
       },
       "The Manipulated Tower [Raid] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Manipulator III ver.2": {
+            "GOLDEN HALO 1/39": "all ids"
+          },
+          "Ill Gill, Pazuzu": {
+            "Photon Token 1/400": "all ids"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
@@ -689,25 +945,25 @@
         "reward": "Weapons Crystal Badge",
         "drops": {
           "Eclipse Dragon": {
-            "Darkness Photon Sphere": "1/45"
+            "Darkness Photon Sphere 1/45": "all ids"
           },
           "Deos Behemoth": {
-            "Darkness Photon Sphere": "1/45"
+            "Darkness Photon Sphere 1/45": "all ids"
           },
           "Liquid Monkey": {
-            "Photon Drop ": "1/500"
+            "Photon Drop 1/500": "all ids"
           },
           "Vol Gibbon": {
-            "Photon Drop": "1/500"
+            "Photon Drop 1/500": "all ids"
           },
           "Lavaross": {
-            "Photon Token": "1/500"
+            "Photon Token 1/500": "all ids"
           },
           "Astark": {
-            "SPREAD NEEDLE": "1/787"
+            "SPREAD NEEDLE 1/787": "all ids"
           },
           "Pazuzu": {
-            "TWIN CYCLONE": "1/1137"
+            "TWIN CYCLONE 1/1137": "all ids"
           }
         },
         "notes": {
@@ -720,22 +976,22 @@
         "reward": "",
         "drops": {
           "Hallowed Reaper": {
-            "Hallowed Jack-O'-Lantern": "1/1170"
+            "Hallowed Jack-O'-Lantern 1/1170": "all ids"
           },
           "Forbidden Saber": {
-            "Millennium Photon Core": "1/350"
+            "Millennium Photon Core 1/350": "all ids"
           },
           "Queen of Gal Da Val": {
-            "Millennium Photon Core": "1/450"
+            "Millennium Photon Core 1/450": "all ids"
           },
           "Epsilon": {
-            "Raster Scope": "1/1559"
+            "Raster Scope 1/1559": "all ids"
           },
           "Del Lily": {
-            "State/Maintenance": "1/2559"
+            "State/Maintenance 1/2559": "all ids"
           },
           "Delbiter": {
-            "TWIN RIKA'S CLAW": "1/3150"
+            "TWIN RIKA'S CLAW 1/3150": "all ids"
           }
         },
         "notes": {
@@ -748,20 +1004,23 @@
         "reward": "",
         "drops": {
           "Manipulator III": {
-            "Cladding of Manipulator III ": "1/10"
+            "Cladding of Manipulator III 1/10": "all ids"
           },
           "Mericus": {
-            "Syncesta": "1/787",
-            "State/Maintenance": "1/1865"
+            "Syncesta 1/787": "except Whitill",
+            "State/Maintenance 1/1865": "Whitill"
           },
           "Astark": {
-            "Trap/Search 1/787 或 Yasminkov 9000M": "1/787"
+            "Trap/Search 1/787": "except Purplenum",
+            "Yasminkov 9000M 1/787": "Purplenum"
           },
           "Dorphon Eclair": {
-            "Photon Token 1/400 或 STORMRENDER": "1/787"
+            "Photon Token 1/400": "except Oran",
+            "STORMRENDER 1/787": "Oran"
           },
           "Pazuzu": {
-            "Photon Token 1/400 或 Dark Matter": "1/900"
+            "Photon Token 1/400": "except Viridia",
+            "Dark Matter 1/900": "Viridia"
           }
         },
         "notes": {
@@ -774,55 +1033,69 @@
         "reward": "",
         "drops": {
           "Astark": {
-            "Photon Token 1/500": ""
+            "Photon Token 1/500": "all ids"
           },
           "Dorphon Eclair": {
-            "Dark Matter 1/1024": ""
+            "Dark Matter 1/1024": "all ids"
           },
-          "Liquid Monkey / Vol Gibbon": {
-            "Photon Token 1/1000": ""
+          "Liquid Monkey, Vol Gibbon": {
+            "Photon Token 1/1000": "all ids"
           },
           "Sinow Zoa": {
-            "Grave Digger 1/1760": "除 Viridia 外"
+            "Grave Digger 1/1760": "except Viridia"
           },
           "Sinow Zele": {
-            "Last Emperor 1/1760": ""
+            "Last Emperor 1/1760": "all ids"
           },
           "Ill Gill": {
-            "Millennium Photon Core 1/900": ""
+            "Millennium Photon Core 1/900": "all ids"
           },
           "Pazuzu": {
-            "Millennium Photon Core 1/666": ""
+            "Millennium Photon Core 1/666": "all ids"
           },
           "Epsilon": {
-            "Millennium Photon Core 1/666": "除 Oran 外",
+            "Millennium Photon Core 1/666": "except Oran",
             "RASTER SCOPE 1/1559": "Oran"
           },
           "Millennium Saber / Millennium Sorcerer / Lavaross": {
-            "Millennium Photon Core 1/500": ""
+            "Millennium Photon Core 1/500": "all ids"
           },
           "Queen of Gal Da Val / D-Virus Morfos / Dark Nebulas": {
-            "Millennium Photon Core 1/450": ""
+            "Millennium Photon Core 1/450": "all ids"
           },
           "Varazopt ver.D": {
-            "Millennium Photon Core 1/204": ""
+            "Millennium Photon Core 1/204": "all ids"
           },
           "Spirit Flow": {
-            "Millennium Photon Core 1/170": ""
+            "Millennium Photon Core 1/170": "all ids"
           },
           "Deos Behemoth": {
-            "CHAOS HALO 1/51": ""
+            "CHAOS HALO 1/51": "all ids"
           },
           "Bar Dalus": {
-            "PHOENIX WINGS 1/51": ""
+            "PHOENIX WINGS 1/51": "all ids"
           },
           "Eclipse Dragon": {
-            "CRYSTALLIZED WINGS 1/51": ""
+            "CRYSTALLIZED WINGS 1/51": "all ids"
           }
         },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "你的队伍需要在 16 分钟内通关 1 层才能进入 BOSS 房间。",
+            "区域路线:",
+            "区域1 → 区域2 → 区域3  → 区域4",
+            "隐藏区域1 → BOSS[A]",
+            "隐藏区域2 → BOSS[B]",
+            "隐藏区域[C]"
+          ],
+          "en": [
+            "Your team need to clear Floor1 within 16mins to enter BOSS room.",
+            "areas:",
+            "FLOOR1 → FLOOR2 → FLOOR3  → FLOOR4",
+            "Secret1 → BOSS[A]",
+            "Secret2 → BOSS[B]",
+            "BOSS[C]"
+          ]
         }
       },
       "The Starlight Tower [Raid] ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
@@ -830,11 +1103,11 @@
         "reward": "",
         "drops": {
           "Administrator": {
-            "Core of Administrator 1/12": "",
-            "DIVINE BLADE 1/28": ""
+            "Core of Administrator 1/12": "Viridia, Greenill, Skyly,  Bluefull, Purplenum",
+            "DIVINE BLADE 1/28": "Pinkal, Redria,  Oran, Yellowboze, Whitill"
           },
           "Forbidden Scythe IV": {
-            "Millennium Photon Core 1/64": ""
+            "Millennium Photon Core 1/64": "all ids"
           }
         },
         "notes": {
@@ -1019,24 +1292,70 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": [
+            "当玩家人数为 3-4 人时, 敌人会更强一些。",
+            "普通/困难难度 奖励: Power Material ×1",
+            "非常困难难度 奖励: Power Material ×2",
+            "U难度 奖励:",
+            "所有武器均带有NA/H、NAM/H、AND/H、AD/H、AM/H或MD/H属性，命中：30H~65H，属性：50%~60%。",
+            "Power Material ×2",
+            "Calibur",
+            "Raygun",
+            "Arms",
+            "Resist/Burning++ (不易抽到) ",
+            "Resist/Blizzard++ (不易抽到)",
+            "Resist/Storm++ (不易抽到)",
+            "Resist/Holy++ (不易抽到)",
+            "Resist/Devil++ (不易抽到)",
+            "YASMINKOV 9000M",
+            "ZANBA",
+            "HOLY RAY",
+            "FLIGHT CUTTER",
+            "YAMIGARASU (极难抽到)",
+            "ANO RIFLE (极难抽到)",
+            "TENSION BLASTER (4人组队时才可能抽到)"
+          ],
+          "en": [
+            "All enemies would be A bit stronger when 3-4 Players",
+            "Normal/Hard reward: Power Material ×1",
+            "V-Hard reward: Power Material ×2",
+            "Ultimate reward:",
+            "All weapons will come with NA/H, NM/H, ND/H, AD/H, AM/H or MD/H, Hit:30%~65%, Attribute:50%~60%",
+            "Power Material ×2",
+            "Calibur",
+            "Raygun",
+            "Arms",
+            "Resist/Burning++ (Rare) ",
+            "Resist/Blizzard++ (Rare)",
+            "Resist/Storm++ (Rare)",
+            "Resist/Holy++ (Rare)",
+            "Resist/Devil++ (Rare)",
+            "YASMINKOV 9000M",
+            "ZANBA",
+            "HOLY RAY",
+            "FLIGHT CUTTER",
+            "YAMIGARASU (Super Rare)",
+            "ANO RIFLE (Super Rare)",
+            "TENSION BLASTER (4P Only)"
+          ]
         }
       },
       "VR Test Destiny: Underground ⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "Weapons Crystal Badge",
         "drops": {
-          "BOSS1": {
-            "State/Maintenance 1/85": "全 ID"
+          "Gal Gryphon": {
+            "State/Maintenance 1/85": "all ids"
           },
-          "BOSS2": {
-            "PB/FLOW 1/73": "全 ID"
+          "Gol Dragon": {
+            "PB/FLOW 1/73": "all ids"
           }
         },
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": ["区域路线图: 地下区域1 → 地下区域2 → 地下区域3 → Gal Gryphon 和 Gol Dragon (隐藏BOSS)",
+        "完成此任务后，NPC 会用你的Photon Token兑换Legendary Item Crate。(5:5 或  1:1)他每局游戏只会兑换一到两次，而且仅限U难度"],
+          "en": ["areas: Underground Area1 → Underground Area2 → Underground Area3 → Gal Gryphon and Gol Dragon (Secret)",
+        "After completing this quest, NPC  will exchange your Photon Token for Legendary Item Crate(5:5 or 1:1). He only trades once or twice per 1 run and ultimate only"]
         }
       },
       "VR Test Destiny: Meteor Impact ⭐⭐⭐⭐⭐⭐": {
@@ -1044,13 +1363,13 @@
         "reward": "",
         "drops": {
           "Epsilon": {
-            "Asteroid Engine 1/2100": "全 ID"
+            "Asteroid Engine 1/2100": "all ids"
           },
           "Astark": {
-            "Eternal Night 1/2100": "全 ID"
+            "Eternal Night 1/2100": "all ids"
           },
           "Dorphon Eclair": {
-            "Planet Eater 1/1030": "全 ID"
+            "Planet Eater 1/1030": "all ids"
           }
         },
         "notes": {
@@ -1074,13 +1393,17 @@
       "Christmas Fiasco EP4 ⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
-        "drops": {},
+        "drops": {
+          "Girtablulu": {
+            "Green Crystal  1/393": "Viridia, Greenill"
+          }
+        },
         "notes": {
           "cn": [],
           "en": []
         }
       },
-      "Point of Disaster ⭐⭐" : {
+      "Point of Disaster ⭐⭐": {
         "requirement": "",
         "reward": "",
         "drops": {},
@@ -1094,8 +1417,8 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": ["必出Dorphon Eclair"],
+          "en": ["has a guaranteed Dorphon Eclair spawn"]
         }
       },
       "Maximum Attack S ⭐⭐⭐⭐⭐": {
@@ -1141,8 +1464,8 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": ["任务开始时可快速清理两轮Sand Rappy"],
+          "en": ["Clear 2 spawns of Sand Rappy fastly"]
         }
       },
       "Maximum Attack 4th Stage -B- ⭐⭐⭐": {
@@ -1150,8 +1473,8 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": ["任务开始时可快速清理两轮Sand Rappy"],
+          "en": ["Clear 2 spawns of Sand Rappy fastly"]
         }
       },
       "Maximum Attack 4th Stage -C- ⭐⭐⭐": {
@@ -1159,8 +1482,8 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": [],
-          "en": []
+          "cn": ["任务开始时可快速清理两轮Sand Rappy"],
+          "en": ["Clear 2 spawns of Sand Rappy fastly"]
         }
       }
     },
