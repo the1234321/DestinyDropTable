@@ -5,11 +5,14 @@ let monsterTranslations = {};
 let typeTranslations = {};
 let activityTranslations = {};
 let questAreaTranslations = {};
+let boostTranslations = {};
+let databaseTranslations = {};
+let classTranslations = {};
 
 const LANGUAGE_LABELS = { cn: "中文", en: "English" };
 const DEFAULT_UI = {
     "nav.drops": "Drop Table",
-    "nav.commands": "Commands and Rules",
+    "nav.commands": "New Player Guide",
     "nav.localization": "Localization Guide",
     "nav.dictionary": "Bilingual Dictionary",
     "nav.currency": "Currency",
@@ -17,6 +20,7 @@ const DEFAULT_UI = {
     "nav.bazaar": "Bazaar",
     "nav.effects": "Endgame Gear",
     "nav.quests": "Quest Guide",
+    "nav.database": "Equipment Database",
     "brand": "Destiny Server Wiki",
     "pageTitle": "Destiny Server Wiki",
     "difficulty": "",
@@ -44,6 +48,9 @@ const DEFAULT_UI = {
     "label.source": "Quest / Source",
     "label.rate": "Rate / Condition",
     "label.notes": "Notes",
+    "label.class": "Class",
+    "label.boosts": "Boosts",
+    "label.allClasses": "All classes",
     "label.monsters": "Monster Counts / BOSS Info",
     "label.questDrops": "Special Drops",
     "label.specialDrops": "Special Drops",
@@ -54,7 +61,7 @@ const DEFAULT_UI = {
 async function loadLanguage(nextLanguage) {
     const selected = nextLanguage === "en" ? "en" : "cn";
     const translation = selected === "cn"
-        ? await fetch("assets/data/translation/cn.json?v=20260904-5").then(response => response.json())
+        ? await fetch("assets/data/translation/cn.json?v=20260905-5").then(response => response.json())
         : {};
     language = selected;
     const effectMessages = Object.fromEntries(
@@ -65,6 +72,9 @@ async function loadLanguage(nextLanguage) {
     typeTranslations = translation.types || {};
     activityTranslations = translation.activity || {};
     questAreaTranslations = translation.questAreas || {};
+    boostTranslations = translation.boosts || {};
+    databaseTranslations = translation.database || {};
+    classTranslations = translation.classes || {};
     localStorage.setItem("wiki-language", language);
     document.documentElement.lang = language === "en" ? "en" : "zh-CN";
     document.title = messages.pageTitle || document.title;
@@ -109,6 +119,9 @@ window.WIKI_I18N = {
     },
     getActivity(value) { return activityTranslations[value] || value; },
     getQuestArea(value) { return questAreaTranslations[value] || value; },
+    getBoost(value) { return language === "cn" ? (boostTranslations[value] || value) : value; },
+    getDatabase(value) { return language === "cn" ? (databaseTranslations[value] || value) : value; },
+    getClass(value) { return language === "cn" ? (classTranslations[value] || value) : value; },
     getTerm(value) { return messages[`term.${value}`] || value; },
     text(key, fallback = "") { return messages[key] || fallback; },
     async setLanguage(nextLanguage) {

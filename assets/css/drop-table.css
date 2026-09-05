@@ -117,6 +117,21 @@ body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#0f172a;
 .table-title{ text-align:center; font-size:30px; margin-bottom:10px; background:#0f172a; z-index:20; }
 .table-wrapper{display:block;}
 table{ border-collapse:collapse; width:max-content; min-width:1200px; margin:0 auto; table-layout:fixed;font-size:14px;}
+#database-panel .database-table { width: 100%; min-width: 0; margin: 0; }
+#database-panel .database-table th,
+#database-panel .database-table td,
+#database-panel .database-table th:not(:first-child),
+#database-panel .database-table td:not(:first-child) {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    position: static;
+    box-shadow: none;
+    clip-path: none;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+}
 
 /* 基础单元格 */
 th, td{
@@ -501,6 +516,13 @@ tbody td:hover{
     border-left: 3px solid #38bdf8;
     margin-bottom: 4px;       /* 与下一行保持间距 */
 }
+.tooltip-class { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; margin: 3px 0 5px; padding: 0; line-height: 1.2; }
+.class-badge-row { display: contents; }
+.class-badge { display: inline-block; margin: 2px 3px 2px 0; padding: 4px 7px; border: 1px solid rgba(255,255,255,.35); border-radius: 3px; color: #fff; font-weight: 900; font-size: 15px; line-height: 1.2; }
+.class-badge.class-all { background: #fff; border-color: #cbd5e1; color: #111827; }
+.class-badge.hunter { background: #b4232f; }
+.class-badge.ranger { background: #16824a; }
+.class-badge.force { background: #2867b2; }
 
 .tooltip-desc::after{
 
@@ -554,6 +576,26 @@ tbody td:hover{
     border-radius: 6px;
     margin-bottom: 4px;
 }
+.tooltip-quest::before { content: none; }
+.boost-badge-list { display: inline-flex; flex-wrap: wrap; gap: 4px; margin-left: 4px; vertical-align: middle; }
+.boost-badge-row { display: block; white-space: nowrap; }
+.boost-badge { display: inline-block; padding: 3px 6px; border: 1px solid rgba(255,255,255,.4); border-radius: 3px; color: #fff; font-size: 14px; font-weight: 800; line-height: 1.25; white-space: nowrap; }
+.boost-badge.fire, .boost-badge.attack { background: #b4232f; }
+.boost-badge.ice, .boost-badge.defense, .boost-badge.tp, .boost-badge.mind { background: #2463a8; }
+.boost-badge.lightning, .boost-badge.luck { background: #b58b00; color: #111827; }
+.boost-badge.holy { background: #fff; color: #111827; }
+.boost-badge.megid { background: #090b10; color: #fff; }
+.boost-badge.hp { background: #258451; }
+.boost-badge.accuracy { background: #258451; }
+.boost-badge.evasion { background: #7847a8; }
+.boost-badge.stat, .boost-badge.other { background: #526174; }
+.boost-badge.special-purple { background: #7847a8; }
+.boost-badge.special-orange { background: #c66a20; }
+.class-badge small { display: block; margin-top: 2px; font-size: 10px; font-weight: 700; line-height: 1; }
+.tooltip-effects-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 3px 0 5px; line-height: 1.25; }
+.tooltip-effects-row .boost-badge-list { display: inline-flex; flex-wrap: nowrap; gap: 4px; margin: 0; }
+.tooltip-effects-row .boost-badge-row { display: contents; }
+.tooltip-special { display: inline-flex; margin: 0; font-size: 13px; }
 
 /* 点评图标 */
 .tooltip-quest::before {
@@ -748,6 +790,30 @@ tbody td:hover{
     white-space:nowrap;
     min-width:max-content;
 }
+
+#database-panel .database-table th,
+#database-panel .database-table td,
+#database-panel .database-table th:first-child,
+#database-panel .database-table td:first-child,
+#database-panel .database-table th:not(:first-child),
+#database-panel .database-table td:not(:first-child) {
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto;
+}
+
+#database-panel .database-table .boost-badge,
+#database-panel .database-table .class-badge {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+#database-panel .database-table th:first-child,
+#database-panel .database-table td:first-child { width: 16% !important; }
+#database-panel .database-table th:nth-last-child(-n+2),
+#database-panel .database-table td:nth-last-child(-n+2) { width: 24% !important; }
+
+.tooltip-quest::before { content: none !important; display: none !important; }
 
 .header-Viridia{ background:var(--viridia); font-size:20px;}
 .header-Greenill{

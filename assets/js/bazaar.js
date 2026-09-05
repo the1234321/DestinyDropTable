@@ -489,7 +489,7 @@ async function loadBazaarData() {
     episode,
     Object.fromEntries(questEpisodes[index].map(quest => [quest.name.replace(/ \[EP\d\]$/, ''), quest]))
   ]));
-  const items = await fetch('assets/data/items.json').then(res => res.json());
+  const items = await fetch('assets/data/item-catalog.json').then(res => res.json());
   const translation = { monsters: Object.fromEntries(window.WIKI_I18N.getMonsterEntries()) };
   ITEM_DATA = items;
   window.WIKI_I18N.setItems(ITEM_DATA);

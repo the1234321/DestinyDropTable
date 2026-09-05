@@ -1,4 +1,5 @@
 let data;
+let itemDetails = {};
 let currentDifficulty = "Ultimate";
 let currentEpisode = "EP1";
 let sectionIds = [];
@@ -101,14 +102,75 @@ function effectText(effect) {
     }).filter(Boolean).join(", ");
 }
 
+function classBadges(value) {
+    const classes = String(value || "").split(/,\s*/).filter(Boolean);
+    const allClasses = new Set(["humar", "hunewearl", "hucast", "hucaseal", "ramar", "ramarl", "racast", "racaseal", "fomar", "fomarl", "fonewm", "fonewearl"]);
+    if (classes.length === allClasses.size && classes.every(value => allClasses.has(value))) {
+        return `<span class="class-badge class-all">${window.WIKI_I18N.text("label.allClasses", "全职业可装备")}</span>`;
+    }
+    const badges = classes.map(value => {
+        const faction = /^(humar|hunewearl|hucast|hucaseal)$/.test(value) ? "hunter" :
+            /^(ramar|ramarl|racast|racaseal)$/.test(value) ? "ranger" :
+            /^(fomar|fomarl|fonewm|fonewearl)$/.test(value) ? "force" : "";
+        return `<span class="class-badge ${faction}">${escapeHtml(window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getClass(value) : value)}</span>`;
+    });
+    const rows = [];
+    for (let index = 0; index < badges.length; index += 4) rows.push(`<span class="class-badge-row">${badges.slice(index, index + 4).join(" ")}</span>`);
+    return rows.join("");
+}
+
+function specialBadge(value, prefix = "") {
+    if (!value || value === "None") return "";
+    const translated = window.WIKI_I18N.getBoost(value);
+    const tone = /^(Draw|Drain|Fill|Gush|Heat|Fire|Flame|Burning|Berserk)$/.test(value) ? "fire" : /^(Heart|Mind|Soul|Geist|Ice|Frost|Freeze|Blizzard|Spirit)$/.test(value) ? "ice" : /^(Master's|Lord's|King's|Panic|Riot|Havoc|Chaos|Energy Wave)$/.test(value) ? "special-purple" : /^(Charge|Shock|Thunder|Storm|Tempest)$/.test(value) ? "lightning" : /^(Bind|Hold|Seize|Arrest)$/.test(value) ? "special-orange" : /^(Dim|Shadow|Dark|Hell)$/.test(value) ? "megid" : /^(Devil's|Demon's)$/.test(value) ? "holy" : "other";
+    return `<span class="boost-badge ${tone}">${escapeHtml(prefix + translated)}</span>`;
+}
+
+function detailFor(itemName) {
+    return itemDetails[itemName] || null;
+}
+
+function detailType(itemName, item) {
+    const detail = detailFor(itemName);
+    if (detail) return detail.type === "weapon" ? detail.raw.Type : detail.type === "armor" ? "Armor" : detail.type === "shield" ? "Shield" : detail.type === "unit" ? "Unit" : "Mag";
+    return item?.type || "-";
+}
+
+function detailDescription(itemName, item) {
+    const detail = detailFor(itemName);
+    if (!detail) return window.WIKI_I18N.getItem(itemName).description;
+    if (["weapon", "armor", "shield"].includes(detail.type)) return classBadges(detail.raw.Class);
+    return "";
+}
+
+function detailBoosts(itemName) {
+    const detail = detailFor(itemName);
+    if (!detail || !detail.raw.Boosts || detail.raw.Boosts === "None") return "";
+    const translate = value => window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getBoost(value) : value;
+    return String(detail.raw.Boosts).split(", ").map(part => {
+        const match = part.match(/^(All Stats|Megid Penetration|HP Recovery|TP Recovery|HP Drain|TP Drain|Trap Search|[^ +]+)(.*)$/);
+        const exact = translate(part);
+        const label = exact !== part ? exact : match ? `${translate(match[1])}${match[2]}` : part;
+        const key = exact !== part ? part : match?.[1] || "other";
+        const tone = /^(Foie|Gifoie|Rafoie|Fire|Flame|Heat|Burning)$/.test(key) ? "fire" : /^(Barta|Gibarta|Rabarta|Ice|Frost|Freeze|Blizzard)$/.test(key) ? "ice" : /^(Zonde|Gizonde|Razonde|Shock|Thunder|Storm|Tempest)$/.test(key) ? "lightning" : /^(Grants|Resta|Anti|Reverser)$/.test(key) ? "holy" : /^(Megid|Megid Penetration)$/.test(key) ? "megid" : /^(Shifta|Jellen|ATP)$/.test(key) ? "attack" : /^(Deband|Zalure|DFP)$/.test(key) ? "defense" : /^(HP|HP Recovery|HP Drain)$/.test(key) ? "hp" : /^(TP|TP Recovery|TP Drain)$/.test(key) ? "tp" : /^ATA$/.test(key) ? "accuracy" : /^EVP$/.test(key) ? "evasion" : /^MST$/.test(key) ? "mind" : /^LCK$/.test(key) ? "luck" : "other";
+        return `<span class="boost-badge ${tone}">${escapeHtml(label)}</span>`;
+    }).join("");
+}
+
 async function loadData() {
     await window.WIKI_I18N.ready;
     const names = ['activities', 'section-ids', 'bonuses', 'recipes', 'tables'];
     const paths = names.map(name => 'assets/data/drop-table/' + name + '.json');
-    const [activitiesData, sectionIdsData, bonus, recipe, tables, items] = await Promise.all([
+    const [activitiesData, sectionIdsData, bonus, recipe, tables, items, ...detailFiles] = await Promise.all([
         ...paths.map(path => fetch(path).then(res => res.json())),
-        fetch('assets/data/items.json').then(res => res.json())
+        fetch('assets/data/item-catalog.json').then(res => res.json()),
+        ...Object.values({ weapons: 'weapons', armors: 'armors', shields: 'shields', units: 'units', mags: 'mags' })
+            .map(file => fetch(`assets/data/item/${file}.json`).then(res => res.json()))
     ]);
+    const detailKinds = ['weapon', 'armor', 'shield', 'unit', 'mag'];
+    detailKinds.forEach((kind, index) => Object.entries(detailFiles[index] || {}).forEach(([name, raw]) => {
+        itemDetails[name] = { type: kind, raw };
+    }));
     data = { activities: activitiesData, sectionIds: sectionIdsData, bonus, recipe, tables, items };
     window.WIKI_I18N.setItems(items);
     sectionIds = sectionIdsData || [];
@@ -287,7 +349,7 @@ function render() {
     bindTooltips();
     performSearch();
     observeEpisodes();
-    location.hash = currentDifficulty + "_" + currentEpisode;
+    if (window.WIKI_ACTIVE_VIEW === "drops") location.hash = currentDifficulty + "_" + currentEpisode;
 }
 
 function setActiveEpisode(episode) {
@@ -391,9 +453,10 @@ function bindTooltips(root = document) {
                     ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
                     <div class="tooltip-name ${rarityClass}">${itemText.name || itemName}</div>
                     ${window.WIKI_I18N.language === "cn" && itemName !== itemText.name ? `<div class="tooltip-en">${itemName}</div>` : ""}
-                    <div class="tooltip-type">${window.WIKI_I18N.text("itemType", "类型")}: ${window.WIKI_I18N.getType(item.type || "-")}</div>
-                    ${itemText.description ? `<span class="tooltip-desc">${itemText.description}</span>` : ""}
-                    ${itemText.quest ? `<span class="tooltip-quest">${itemText.quest}</span>` : ""}
+                    <div class="tooltip-type">${window.WIKI_I18N.text("itemType", "类型")}: ${window.WIKI_I18N.getType(detailType(itemName, item))}</div>
+                    ${detailDescription(itemName, item) ? `<div class="tooltip-class">${detailDescription(itemName, item)}</div>` : ""}
+                    ${!detailFor(itemName) && itemText.description ? `<span class="tooltip-desc">${itemText.description}</span>` : ""}
+                    ${(detailFor(itemName)?.raw.Special && detailFor(itemName).raw.Special !== "None") || detailBoosts(itemName) ? `<div class="tooltip-effects-row">${detailFor(itemName)?.raw.Special && detailFor(itemName).raw.Special !== "None" ? specialBadge(detailFor(itemName).raw.Special, "EX：") : ""}${detailBoosts(itemName) ? `<span class="boost-badge-list">${detailBoosts(itemName)}</span>` : ""}</div>` : ""}
                     ${farm ? `<span class="tooltip-farm">${farm}</span>` : ""}
 
                     ${tooltipBonus.length ? `
