@@ -1663,5 +1663,20 @@
         "Boosts": "None",
         "Description": "Radiant Armor",
         "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "LIGHTNING GARMENT": {
+        "min-DFP": 210,
+        "max-DFP": 210,
+        "min-EVP": 170,
+        "max-EVP": 170,
+        "Req Lv": 150,
+        "EFR": 15,
+        "ETH": 15,
+        "EIC": 15,
+        "EDK": 60,
+        "ELT": 60,
+        "Boosts": "ATA +20, Grants +50%",
+        "Description": "LIGHTNING GARMENT",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
     }
 }

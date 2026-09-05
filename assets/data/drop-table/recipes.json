@@ -447,7 +447,7 @@
         "result": "STRIKER OF CHAO",
         "components": [
             "BRANCH OF PAKUPAKU",
-            "CHU CHU MAG"
+            "CHU CHU"
         ],
         "extra": []
     },
@@ -568,6 +568,110 @@
             "Photon Booster",
             "ADEPT",
             "Syncesta"
+        ],
+        "extra": []
+    },
+    {
+        "result": "DARK FLOW",
+        "components": [
+            "Calibur",
+            "Parasitic gene \"Flow\""
+        ],
+        "extra": []
+    },
+    {
+        "result": "DARK METEOR",
+        "components": [
+            "Arms",
+            "Parasitic gene \"Flow\""
+        ],
+        "extra": []
+    },
+    {
+        "result": "DARK BRIDGE",
+        "components": [
+            "Striker",
+            "Parasitic gene \"Flow\""
+        ],
+        "extra": []
+    },
+    {
+        "result": "BLACK KING BAR",
+        "components": [
+            "MONKEY KING BAR",
+            "Blue-black stone"
+        ],
+        "extra": []
+    },
+    {
+        "result": "S-BERILL\u0027S HANDS #1",
+        "components": [
+            "S-BERILL\u0027S HANDS #0",
+            "Berill Photon"
+        ],
+        "extra": []
+    },
+    {
+        "result": "DANCING HITOGATA",
+        "components": [
+            "HITOGATA",
+            "Book of HITOGATA"
+        ],
+        "extra": []
+    },
+    {
+        "result": "Recon",
+        "components": [
+            "6th Anniversary Cell",
+            "Kama"
+        ],
+        "extra": []
+    },
+    {
+        "result": "Dark Chao",
+        "components": [
+            "Heart of Dark Chao",
+            "Mag"
+        ],
+        "extra": []
+    },
+    {
+        "result": "TWIN WRAITH",
+        "components": [
+            "Pandora\u0027s Box",
+            "Naga"
+        ],
+        "extra": []
+    },
+    {
+        "result": "NiGHTS",
+        "components": [
+            "Ideya Cell",
+            "Mag"
+        ],
+        "extra": []
+    },
+    {
+        "result": "Twin Sato",
+        "components": [
+            "A New Friend",
+            "Sato"
+        ],
+        "extra": []
+    },
+    {
+        "result": "Coelum",
+        "components": [
+            "Dragon Tear",
+            "Mag"
+        ],
+        "extra": []
+    },
+    {
+        "result": "Gael Giel",
+        "components": [
+            "D-Photon Core",
+            "Kama"
         ],
         "extra": []
     }

@@ -6988,5 +6988,35 @@
         "Description": "A mysterious cane created from the head of a Zu. Its special attack launches 3 fireballs.",
         "Boosts": "Foie +60%, Gifoie +50%, Rafoie +50%",
         "Class": "fomar, fomarl, fonewm, fonewearl"
+    },
+    "SOUL ERASER": {
+        "Type": "Slicer",
+        "ATP": "550-700",
+        "Grind": 150,
+        "Total ATP": 700,
+        "ATA": 45,
+        "MST": 0,
+        "Required": "",
+        "Special": "Hell",
+        "Targets": 7,
+        "Range": 130.0,
+        "Description": "A demonic cane embedded with chaos emerald. It's said to be able to obliterate foes only with one shot.",
+        "Boosts": "None",
+        "Class": "humar, hunewearl, ramar, ramarl, fomar, fomarl, fonewm, fonewearl"
+    },
+    "MIRACLE CHAIN": {
+        "Type": "Cane",
+        "ATP": "700-750",
+        "Grind": 50,
+        "Total ATP": 750,
+        "ATA": 45,
+        "MST": 0,
+        "Required": "",
+        "Special": "Shifta/Deband",
+        "Targets": 1,
+        "Range": 14.0,
+        "Description": "A special sword that can cast support techniques. Only female can use this weapon.",
+        "Boosts": "Resta/Shifta/Deband Range+100%",
+        "Class": "hunewearl, hucaseal, ramarl, racaseal, fomarl, fonewearl"
     }
 }

@@ -5586,7 +5586,8 @@
             "cn": "暗黑弗罗文大剑"
         },
         "description": {
-            "cn": "可三连, 濒死EX剑气与近战斩击叠加伤害"
+            "cn": "可三连, 濒死EX剑气与近战斩击叠加伤害",
+            "en": "combo unlocked, special attack doesn't lose the swing damage."
         }
     },
     "DARK METEOR": {
@@ -6010,7 +6011,7 @@
         }
     },
     "3RD ANNIVERSARY BLADE": {
-        "superitem": 0,
+        "superitem": 2,
         "image": "",
         "name": {
             "cn": "三周年纪念刀"
@@ -8606,7 +8607,7 @@
         }
     },
     "5TH ANNIVERSARY ARMOR": {
-        "superitem": 0,
+        "superitem": 2,
         "image": "",
         "name": {
             "cn": "5周年纪念铠甲"
@@ -10135,7 +10136,7 @@
         }
     },
     "Kama": {
-        "superitem": 0,
+        "superitem": 1,
         "image": "",
         "name": {
             "cn": "迦摩"
@@ -10942,6 +10943,61 @@
         "image": "",
         "name": {
             "cn": "苍穹"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Blue-black stone": {
+        "superitem": 0,
+        "image": "",
+        "name": {
+            "cn": "苍黑石"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Berill Photon": {
+        "superitem": 0,
+        "image": "",
+        "name": {
+            "cn": "机忍光子"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "6th Anniversary Cell": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "6周年纪念细胞"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "MADAM\u0027S BRACELET":{
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "女士手镯"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "LIGHTNING GARMENT":{
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "辉光铠"
         },
         "description": {
             "en": "",

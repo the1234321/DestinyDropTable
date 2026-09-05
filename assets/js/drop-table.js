@@ -449,12 +449,13 @@ function bindTooltips(root = document) {
                 const tooltipBonus = bonusIndex[itemName] || [];
                 const tooltipRecipe = recipeIndex[itemName] || [];
 
+                const itemTypeContent = window.WIKI_I18N.getType(detailType(itemName, item));
+
                 tooltip.innerHTML = `
                     ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
                     <div class="tooltip-name ${rarityClass}">${itemText.name || itemName}</div>
                     ${window.WIKI_I18N.language === "cn" && itemName !== itemText.name ? `<div class="tooltip-en">${itemName}</div>` : ""}
-                    <div class="tooltip-type">${window.WIKI_I18N.text("itemType", "类型")}: ${window.WIKI_I18N.getType(detailType(itemName, item))}</div>
-                    ${detailDescription(itemName, item) ? `<div class="tooltip-class">${detailDescription(itemName, item)}</div>` : ""}
+                    ${itemTypeContent && itemTypeContent !== "-" ? `<div class="tooltip-type">${window.WIKI_I18N.text("itemType", "类型")}: ${itemTypeContent}</div>` : ""}
                     ${!detailFor(itemName) && itemText.description ? `<span class="tooltip-desc">${itemText.description}</span>` : ""}
                     ${(detailFor(itemName)?.raw.Special && detailFor(itemName).raw.Special !== "None") || detailBoosts(itemName) ? `<div class="tooltip-effects-row">${detailFor(itemName)?.raw.Special && detailFor(itemName).raw.Special !== "None" ? specialBadge(detailFor(itemName).raw.Special, "EX：") : ""}${detailBoosts(itemName) ? `<span class="boost-badge-list">${detailBoosts(itemName)}</span>` : ""}</div>` : ""}
                     ${farm ? `<span class="tooltip-farm">${farm}</span>` : ""}
