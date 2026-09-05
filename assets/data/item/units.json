@@ -1,0 +1,794 @@
+{
+    "Knight/Power": {
+        "Stat Type": "ATP",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts attack power by 5 when equipped."
+    },
+    "General/Power": {
+        "Stat Type": "ATP",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts attack power by 10 when equipped."
+    },
+    "Ogre/Power": {
+        "Stat Type": "ATP",
+        "Stat Amount": "+15",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts attack power by 15 when equipped."
+    },
+    "God/Power": {
+        "Stat Type": "ATP",
+        "Stat Amount": "+50",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts attack power by 50 when equipped."
+    },
+    "Heavenly/Power": {
+        "Stat Type": "ATP",
+        "Stat Amount": "+55",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ATP by 55 when equipped."
+    },
+    "Centurion/Power": {
+        "Stat Type": "ATP",
+        "Stat Amount": "+75",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ATP by 75 when equipped."
+    },
+    "Immortal/Power": {
+        "Stat Type": "ATP",
+        "Stat Amount": "+125",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ATP by 125 when equipped."
+    },
+    "V503": {
+        "Stat Type": "ATP",
+        "Stat Amount": "+5",
+        "Boosts": "Increases special attack success rate. Increases ATA for hunters/forces.",
+        "Description": "This unit increases the success rate of special attacks. In addition, raises ATA for Hunters and Forces using ranged attacks."
+    },
+    "Priest/Mind": {
+        "Stat Type": "MST",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts mind energy by 5 when equipped."
+    },
+    "General/Mind": {
+        "Stat Type": "MST",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts mind energy by 10 when equipped."
+    },
+    "Angel/Mind": {
+        "Stat Type": "MST",
+        "Stat Amount": "+15",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts mind energy by 15 when equipped."
+    },
+    "God/Mind": {
+        "Stat Type": "MST",
+        "Stat Amount": "+40",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts mind energy by 40 when equipped."
+    },
+    "V801": {
+        "Stat Type": "MST",
+        "Stat Amount": "+5",
+        "Boosts": "Technique cast speed +30%.",
+        "Description": "When equipped, this unit decreases techinque casting time."
+    },
+    "Heavenly/Mind": {
+        "Stat Type": "MST",
+        "Stat Amount": "+45",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts MST by 45 when equipped."
+    },
+    "Centurion/Mind": {
+        "Stat Type": "MST",
+        "Stat Amount": "+75",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts MST by 75 when equipped."
+    },
+    "V802": {
+        "Stat Type": "MST",
+        "Stat Amount": "+80",
+        "Boosts": "Technique cast speed +100%.",
+        "Description": "When equipped, this unit significantly decreases techinque casting time."
+    },
+    "Immortal/Mind": {
+        "Stat Type": "MST",
+        "Stat Amount": "+125",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts MST by 125 when equipped."
+    },
+    "V803": {
+        "Stat Type": "MST",
+        "Stat Amount": "+165",
+        "Boosts": "Technique cast speed +100%. Increases success rate of freezing Rabarta and Gibarta.",
+        "Description": "CGWhen equipped, this unit significantly decreases techinque casting time. In addition, increases the success rate of freezing Rabarta and Gibarta."
+    },
+    "Marksman/Arm": {
+        "Stat Type": "ATA",
+        "Stat Amount": "+3",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts accuracy by 3 when equipped."
+    },
+    "General/Arm": {
+        "Stat Type": "ATA",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts accuracy by 5 when equipped."
+    },
+    "Elf/Arm": {
+        "Stat Type": "ATA",
+        "Stat Amount": "+7",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts accuracy by 7 when equipped."
+    },
+    "God/Arm": {
+        "Stat Type": "ATA",
+        "Stat Amount": "+15",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts accuracy by 15 when equipped."
+    },
+    "Heavenly/Arms": {
+        "Stat Type": "ATA",
+        "Stat Amount": "+25",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ATA by 25 when equipped."
+    },
+    "Centurion/Arms": {
+        "Stat Type": "ATA",
+        "Stat Amount": "+35",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ATA by 35 when equipped."
+    },
+    "Immortal/Arms": {
+        "Stat Type": "ATA",
+        "Stat Amount": "+50",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ATA by 50 when equipped."
+    },
+    "Thief/Legs": {
+        "Stat Type": "EVP",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts evasion by 10 when equipped."
+    },
+    "General/Legs": {
+        "Stat Type": "EVP",
+        "Stat Amount": "+20",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts evasion by 20 when equipped."
+    },
+    "Elf/Legs": {
+        "Stat Type": "EVP",
+        "Stat Amount": "+30",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts evasion by 30 when equipped."
+    },
+    "God/Legs": {
+        "Stat Type": "EVP",
+        "Stat Amount": "+50",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts evasion by 50 when equipped."
+    },
+    "Heavenly/Legs": {
+        "Stat Type": "EVP",
+        "Stat Amount": "+55",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts EVP by 55 when equipped."
+    },
+    "Centurion/Legs": {
+        "Stat Type": "EVP",
+        "Stat Amount": "+75",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts EVP by 75 when equipped."
+    },
+    "Immortal/Legs": {
+        "Stat Type": "EVP",
+        "Stat Amount": "+125",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts EVP by 125 when equipped."
+    },
+    "Digger/HP": {
+        "Stat Type": "HP",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max HP by 10 when equipped."
+    },
+    "General/HP": {
+        "Stat Type": "HP",
+        "Stat Amount": "+20",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max HP by 20 when equipped."
+    },
+    "Dragon/HP": {
+        "Stat Type": "HP",
+        "Stat Amount": "+40",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max HP by 40 when equipped."
+    },
+    "God/HP": {
+        "Stat Type": "HP",
+        "Stat Amount": "+80",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max HP by 80 when equipped."
+    },
+    "Heavenly/HP": {
+        "Stat Type": "HP",
+        "Stat Amount": "+100",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max HP by 100 when equipped."
+    },
+    "Centurion/HP": {
+        "Stat Type": "HP",
+        "Stat Amount": "+125",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max HP by 125 when equipped."
+    },
+    "Immortal/HP": {
+        "Stat Type": "HP",
+        "Stat Amount": "+200",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max HP by 200 when equipped."
+    },
+    "Millennium/HP": {
+        "Stat Type": "HP",
+        "Stat Amount": "+275",
+        "Boosts": "None",
+        "Description": "CGA reinforcing unit for protective gear. Boosts max HP by 275 when equipped."
+    },
+    "Magician/TP": {
+        "Stat Type": "TP",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max TP by 10 when equipped."
+    },
+    "General/TP": {
+        "Stat Type": "TP",
+        "Stat Amount": "+20",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max TP by 20 when equipped."
+    },
+    "Angel/TP": {
+        "Stat Type": "TP",
+        "Stat Amount": "+30",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max TP by 40 when equipped."
+    },
+    "God/TP": {
+        "Stat Type": "TP",
+        "Stat Amount": "+80",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max TP by 80 when equipped."
+    },
+    "Heavenly/TP": {
+        "Stat Type": "TP",
+        "Stat Amount": "+100",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts max TP by 100 when equipped."
+    },
+    "Warrior/Body": {
+        "Stat Type": "DFP",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts defense by 10 when equipped."
+    },
+    "General/Body": {
+        "Stat Type": "DFP",
+        "Stat Amount": "+20",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts defense by 20 when equipped."
+    },
+    "Metal/Body": {
+        "Stat Type": "DFP",
+        "Stat Amount": "+30",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts defense by 30 when equipped."
+    },
+    "God/Body": {
+        "Stat Type": "DFP",
+        "Stat Amount": "+50",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts defense by 50 when equipped."
+    },
+    "Heavenly/Body": {
+        "Stat Type": "DFP",
+        "Stat Amount": "+55",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts DFP by 55 when equipped."
+    },
+    "Centurion/Body": {
+        "Stat Type": "DFP",
+        "Stat Amount": "+75",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts DFP by 75 when equipped."
+    },
+    "Immortal/Body": {
+        "Stat Type": "DFP",
+        "Stat Amount": "+125",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts DFP by 125 when equipped."
+    },
+    "Angel/Luck": {
+        "Stat Type": "LCK",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts luck by 5 when equipped."
+    },
+    "God/Luck": {
+        "Stat Type": "LCK",
+        "Stat Amount": "+30",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts luck by 30 when equipped."
+    },
+    "Heavenly/Luck": {
+        "Stat Type": "LCK",
+        "Stat Amount": "+40",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts LCK by 40 when equipped."
+    },
+    "Centurion/Luck": {
+        "Stat Type": "LCK",
+        "Stat Amount": "+60",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts LCK by 60 when equipped."
+    },
+    "Immortal/Luck": {
+        "Stat Type": "LCK",
+        "Stat Amount": "+90",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts LCK by 90 when equipped."
+    },
+    "Master/Ability": {
+        "Stat Type": "All Stats",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "When equipped, this unit will increase ATP, MST, EVP, DFP, and LCK by 5."
+    },
+    "Hero/Ability": {
+        "Stat Type": "All Stats",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "When equipped, this unit will increase ATP, MST, EVP, DFP, and LCK by 10. Also increases ATA by 1."
+    },
+    "God/Ability": {
+        "Stat Type": "All Stats",
+        "Stat Amount": "+20",
+        "Boosts": "None",
+        "Description": "When equipped, this unit will increase ATP, MST, EVP, DFP, and LCK by 20. Also increases HP by 2."
+    },
+    "V101": {
+        "Stat Type": "All Stats",
+        "Stat Amount": "+15",
+        "Boosts": "Attack Speed +40%, ATA +1.5",
+        "Description": "When equipped, this unit will increase ATP, EVP, DFP, and LCK by 15. It also increases ATA by 1 and boosts attack speed."
+    },
+    "Heavenly/Ability": {
+        "Stat Type": "All Stats",
+        "Stat Amount": "+25",
+        "Boosts": "None",
+        "Description": "When equipped, this unit will increase ATP, MST, EVP, DFP, and LCK by 25. Also increases ATA by 2."
+    },
+    "Centurion/Ability": {
+        "Stat Type": "All Stats",
+        "Stat Amount": "+30",
+        "Boosts": "None",
+        "Description": "When equipped, this unit will increase ATP, MST, EVP, DFP, and LCK by 30. Also increases ATA by 2."
+    },
+    "Immortal/Ability": {
+        "Stat Type": "All Stats",
+        "Stat Amount": "+40",
+        "Boosts": "None",
+        "Description": "When equipped, this unit will increase ATP, MST, EVP, DFP, and LCK by 40. Also increases ATA by 4."
+    },
+    "Resist/Fire": {
+        "Stat Type": "EFR",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts fire resistance by 5 when equipped."
+    },
+    "Resist/Flame": {
+        "Stat Type": "EFR",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts fire resistance by 10 when equipped."
+    },
+    "Resist/Burning": {
+        "Stat Type": "EFR",
+        "Stat Amount": "+15",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts fire resistance by 15 when equipped."
+    },
+    "Ignis Engine": {
+        "Stat Type": "EFR",
+        "Stat Amount": "+15",
+        "Boosts": "Empowers certain weapons.",
+        "Description": "CGA destructive device built by Dr. Robotonik. It\u0027s said it empowers certain flame weapons..."
+    },
+    "Resist/Cold": {
+        "Stat Type": "EIC",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ice resistance by 5 when equipped."
+    },
+    "Resist/Freeze": {
+        "Stat Type": "EIC",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ice resistance by 10 when equipped."
+    },
+    "Resist/Blizzard": {
+        "Stat Type": "EIC",
+        "Stat Amount": "+15",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts ice resistance by 15 when equipped."
+    },
+    "Resist/Shock": {
+        "Stat Type": "ETH",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts lightning resistance by 5 when equipped."
+    },
+    "Resist/Thunder": {
+        "Stat Type": "ETH",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts lightning resistance by 10 when equipped."
+    },
+    "Resist/Storm": {
+        "Stat Type": "ETH",
+        "Stat Amount": "+15",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts lightning resistance by 15 when equipped."
+    },
+    "Resist/Light": {
+        "Stat Type": "ELT",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts light resistance by 5 when equipped."
+    },
+    "Resist/Saint": {
+        "Stat Type": "ELT",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts light resistance by 10 when equipped."
+    },
+    "Resist/Holy": {
+        "Stat Type": "ELT",
+        "Stat Amount": "+15",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts light resistance by 15 when equipped."
+    },
+    "Resist/Dark": {
+        "Stat Type": "EDK",
+        "Stat Amount": "+5",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts dark resistance by 5 when equipped."
+    },
+    "Resist/Evil": {
+        "Stat Type": "EDK",
+        "Stat Amount": "+10",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts dark resistance by 10 when equipped."
+    },
+    "Resist/Devil": {
+        "Stat Type": "EDK",
+        "Stat Amount": "+15",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts dark resistance by 15 when equipped."
+    },
+    "All/Resist": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+3",
+        "Boosts": "None",
+        "Description": "A reinforcing unit that boosts fire, ice, lightning, light and dark resistances by 3 when equipped."
+    },
+    "Super/Resist": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+6",
+        "Boosts": "None",
+        "Description": "A reinforcing unit that boosts fire, ice, lightning, light and dark resistances by 6 when equipped."
+    },
+    "Perfect/Resist": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+9",
+        "Boosts": "None",
+        "Description": "A reinforcing unit that boosts fire, ice, lightning, light and dark resistances by 9 when equipped."
+    },
+    "Heavenly/Resist": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+12",
+        "Boosts": "None",
+        "Description": "A reinforcing unit that boosts fire, ice, lightning, light and dark resistances by 12 when equipped."
+    },
+    "Chaos Engine": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+5",
+        "Boosts": "Empowers certain weapons.",
+        "Description": "A strange device built by outlaws. It\u0027s said it empowers certain weapons..."
+    },
+    "Jointparts": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+5",
+        "Boosts": "Empowers certain weapons.",
+        "Description": "CGAn unknown artifact it\u0027s said to be used in the past. It enhances bond strength of certain weapons."
+    },
+    "RASTER SCOPE": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+5",
+        "Boosts": "Empowers certain weapons.",
+        "Description": "A legendary scope made by Vise Corp. Its said to enhance Yasminkov series."
+    },
+    "VECTOR SCOPE": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+5",
+        "Boosts": "Empowers certain weapons.",
+        "Description": "A legendary scope made by Justice Corp. Its said to enhance Needle type weapons."
+    },
+    "Asteroid Engine": {
+        "Stat Type": "All Resistances",
+        "Stat Amount": "+5",
+        "Boosts": "Empowers certain weapons.",
+        "Description": "An unknown device found in meteor impact site. It\u0027s said it empowers certain weapons..."
+    },
+    "HP/Restorate": {
+        "Stat Type": "HP Regen",
+        "Stat Amount": "1 per 14 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into energy that slowly recovers HP."
+    },
+    "HP/Generate": {
+        "Stat Type": "HP Regen",
+        "Stat Amount": "1 per 11 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into energy that recovers HP."
+    },
+    "HP/Revival": {
+        "Stat Type": "HP Regen",
+        "Stat Amount": "1 per 8 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into energy that rapidly recovers HP."
+    },
+    "HP/Ressurection": {
+        "Stat Type": "HP Regen",
+        "Stat Amount": "1 per 5 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into energy that rapidly recovers HP."
+    },
+    "HP/Flow": {
+        "Stat Type": "HP Regen",
+        "Stat Amount": "1 per 1 sec",
+        "Boosts": "None",
+        "Description": "This ultimate unit draws power from other dimensions, and converts it into energy that rapidly recovers HP."
+    },
+    "TP/Restorate": {
+        "Stat Type": "TP Regen",
+        "Stat Amount": "1 per 15 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into energy that slowly recovers TP."
+    },
+    "TP/Generate": {
+        "Stat Type": "TP Regen",
+        "Stat Amount": "1 per 13 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into energy that recovers TP."
+    },
+    "TP/Revival": {
+        "Stat Type": "TP Regen",
+        "Stat Amount": "1 per 11 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into energy that rapidly recovers TP."
+    },
+    "TP/Ressurection": {
+        "Stat Type": "TP Regen",
+        "Stat Amount": "1 per 9 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into energy that rapidly recovers TP."
+    },
+    "TP/Flow": {
+        "Stat Type": "TP Regen",
+        "Stat Amount": "1 per 1 sec",
+        "Boosts": "None",
+        "Description": "This ultimate unit draws power from other dimensions, and converts it into energy that rapidly recovers TP."
+    },
+    "PB/Amplifier": {
+        "Stat Type": "PB Regen",
+        "Stat Amount": "1 per 40 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and slowly converts it into Photon Blast (PB) energy."
+    },
+    "PB/Generate": {
+        "Stat Type": "PB Regen",
+        "Stat Amount": "1 per 35 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and converts it into Photon Blast (PB) energy."
+    },
+    "PB/Create": {
+        "Stat Type": "PB Regen",
+        "Stat Amount": "1 per 23 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and rapidly converts it into Photon Blast (PB) energy."
+    },
+    "PB/Increase": {
+        "Stat Type": "PB Regen",
+        "Stat Amount": "1 per 18 sec",
+        "Boosts": "None",
+        "Description": "When equipped, this unit draws ether from the air, and rapidly converts it into Photon Blast (PB) energy."
+    },
+    "PB/Flow": {
+        "Stat Type": "PB Regen",
+        "Stat Amount": "1 per 5 sec",
+        "Boosts": "None",
+        "Description": "This ultimate unit draws power from other dimensions, and rapidly converts it into Photon Blast (PB) energy."
+    },
+    "Wizard/Technique": {
+        "Stat Type": "Technique Lv",
+        "Stat Amount": "+1",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Raises all techniques by 1 level when equipped."
+    },
+    "Devil/Technique": {
+        "Stat Type": "Technique Lv",
+        "Stat Amount": "+2",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Raises all techniques by 2 levels when equipped."
+    },
+    "God/Technique": {
+        "Stat Type": "Technique Lv",
+        "Stat Amount": "+3",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Raises all techniques by 3 levels when equipped."
+    },
+    "Heavenly/Technique": {
+        "Stat Type": "Technique Lv",
+        "Stat Amount": "+4",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Raises all techniques by 4 levels when equipped."
+    },
+    "General/Battle": {
+        "Stat Type": "Attack Speed",
+        "Stat Amount": "+5%",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts attack speed slightly when equipped."
+    },
+    "Devil/Battle": {
+        "Stat Type": "Attack Speed",
+        "Stat Amount": "+10%",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts attack speed when equipped."
+    },
+    "God/Battle": {
+        "Stat Type": "Attack Speed",
+        "Stat Amount": "+20%",
+        "Boosts": "None",
+        "Description": "A reinforcing unit for protective gear. Boosts attack speed significantly when equipped."
+    },
+    "Heavenly/Battle": {
+        "Stat Type": "Attack Speed",
+        "Stat Amount": "+40%",
+        "Boosts": "None",
+        "Description": "Greatly increases the user\u0027s attack speed."
+    },
+    "Immortal/Battle": {
+        "Stat Type": "Attack Speed",
+        "Stat Amount": "+120%",
+        "Boosts": "None",
+        "Description": "The ultimate battle unit fit for a massacre. Severely increases attack speed."
+    },
+    "Centurion/Battle": {
+        "Stat Type": "Attack Speed",
+        "Stat Amount": "+80%",
+        "Boosts": "None",
+        "Description": "Significantly increases the user\u0027s attack speed."
+    },
+    "State/Maintenance": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Cures All",
+        "Description": "When equipped, this medical unit will cure any condition."
+    },
+    "Trap/Search": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Exposes hidden traps",
+        "Description": "When equipped, makes all traps visible."
+    },
+    "Cure/Poison": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Cures Poison",
+        "Description": "When equipped, this medical unit will instantly cure Poison."
+    },
+    "Cure/Paralysis": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Cures Paralysis",
+        "Description": "When equipped, this medical unit will instantly cure Paralysis."
+    },
+    "Cure/Shock": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Cures Shock",
+        "Description": "When equipped, this medical unit will instantly cure the effects of a Short."
+    },
+    "Cure/Slow": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Cures Slow",
+        "Description": "When equipped, this medical unit will instantly cure Slow Motion."
+    },
+    "Cure/Confuse": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Cures Confuse",
+        "Description": "When equipped, this medical unit will instantly cure Confusion."
+    },
+    "Cure/Freeze": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Cures Freeze",
+        "Description": "When equipped, this medical unit will instantly cure the effects of being Frozen."
+    },
+    "YASAKANI MAGATAMA": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "ATA +30 if used with Kusanagi.",
+        "Description": "ATA increases by 30 if used with a Kusanagi."
+    },
+    "V501": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Increases special attack success rate.",
+        "Description": "When equipped, this unit will increase the success rate of special attacks."
+    },
+    "V502": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Increases special attack success rate.",
+        "Description": "When equipped, this unit will increase the success rate of special attacks."
+    },
+    "LIMITER": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Decreases stats and resistances.",
+        "Description": "Lowers your ATP, MST, EVP, DFP, and LCK by 30. Also lowers ATA and all resistances by 10."
+    },
+    "ADEPT": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Increases stats, resistances, and cuts TP cost by 25%.",
+        "Description": "Raises your ATP, MST, EVP, DFP, and LCK by 10. Also increases ATA by 20, resistances by 6, and cuts TP consumption by 25%."
+    },
+    "SWORDSMAN LORE": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Increases ATA with certain weapons.",
+        "Description": "Raises ATA by 10 when equipped with a saber, sword, or twin sword."
+    },
+    "PROOF OF SWORD-SAINT": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Increases stats with certain weapons.",
+        "Description": "Raises ATA by 30, EVP by 60, lowers DFP by 20 when equipped with a saber, sword, or twin sword."
+    },
+    "SMARTLINK": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Increases ATA for hunters/forces.",
+        "Description": "Raises ATA for Hunters and Forces using ranged attacks."
+    },
+    "DIVINE PROTECTION": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Increases LCK, EDK and ELT during certain times.",
+        "Description": "Double\u0027s the wearer\u0027s LCK, and increases resistance to dark and light by 20."
+    },
+    "Friend Ring": {
+        "Stat Type": "N/A",
+        "Stat Amount": "N/A",
+        "Boosts": "Increases stats based on guildcards and team members.",
+        "Description": "Special unit for protective armor. Its boosts certain abilites by how many teammates and guild cards you have."
+    }
+}

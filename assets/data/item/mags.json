@@ -1,0 +1,658 @@
+{
+    "Mag": {
+        "100PB Trigger": "none",
+        "1/10HP Trigger": "none",
+        "Boss Trigger": "none",
+        "Activation Chance": "0%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Varuna": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "none",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "40%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Mitra": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "none",
+        "Activation Chance": "40%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Surya": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Vayu": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "45%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Varaha": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "30%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Kama": {
+        "100PB Trigger": "none",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Ushasu": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "35%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Apsaras": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Kumara": {
+        "100PB Trigger": "Resta",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "35%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Kaitabha": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "30%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Tapas": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "45%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Bhirava": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "30%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Kalki": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "none",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "40%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Rudra": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Marutah": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "none",
+        "Activation Chance": "40%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Yaksa": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "35%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Sita": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "30%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Garuda": {
+        "100PB Trigger": "Resta",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "30%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Nandin": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Ashvinau": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "none",
+        "Activation Chance": "40%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Ribhava": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Soma": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Ila": {
+        "100PB Trigger": "none",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Durga": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Vritra": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "none",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "40%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Namuci": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "45%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Sumba": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Naga": {
+        "100PB Trigger": "none",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "20%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Pitri": {
+        "100PB Trigger": "Resta",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Kabanda": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Ravana": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Marica": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "30%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Soniti": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Preta": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Andhaka": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "25%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Bana": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "20%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Naraka": {
+        "100PB Trigger": "Resta",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "30%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Madhu": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "20%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Churel": {
+        "100PB Trigger": "Resta",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "ROBOCHAO": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "OPA-OPA": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "PIAN": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "CHAO": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "CHU CHU": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "KAPU KAPU": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "ANGEL\u0027S WING": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "DEVIL\u0027S WING": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "ELENOR": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "MARK3": {
+        "100PB Trigger": "none",
+        "1/10HP Trigger": "none",
+        "Boss Trigger": "none",
+        "Activation Chance": "0%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "MASTER SYSTEM": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "none",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "15%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "GENESIS": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "30%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "SEGA SATURN": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "DREAMCAST": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "70%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "HAMBURGER": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "PANZER\u0027S TAIL": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "DEVIL\u0027S TAIL": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Deva": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Rati": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Savitri": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Rukmin": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Pushan": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Diwari": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Shifta/Deband",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Sato": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Bhima": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Nidra": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Geung-si": {
+        "100PB Trigger": "Resta",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Recon": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "60%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Tellusis": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "55%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Striker Unit": {
+        "100PB Trigger": "Resta",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "55%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Pioneer": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Puyo": {
+        "100PB Trigger": "Shifta/Deband",
+        "1/10HP Trigger": "Shifta/Deband",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Moro": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Resta",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Rappy": {
+        "100PB Trigger": "Resta",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Yahoo!": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Gael Giel": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "60%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Agastya": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Resta",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "50%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "NiGHTS": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "60%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Twin Sato": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "60%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "DARK CHAO": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "60%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "TWIN WRAITH": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "60%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "Coelum": {
+        "100PB Trigger": "Invincibility",
+        "1/10HP Trigger": "Invincibility",
+        "Boss Trigger": "Invincibility",
+        "Activation Chance": "60%",
+        "Notes": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    }
+}
