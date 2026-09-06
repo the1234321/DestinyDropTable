@@ -152,7 +152,7 @@ function databaseClassHtml(value) {
 
 function databaseSpecialHtml(value) {
   const translated = window.WIKI_I18N.getBoost(value);
-  const tone = /^(Draw|Drain|Fill|Gush|Heat|Fire|Flame|Burning|Berserk)$/.test(value) ? "fire" : /^(Heart|Mind|Soul|Geist|Ice|Frost|Freeze|Blizzard|Spirit)$/.test(value) ? "ice" : /^(Master's|Lord's|King's|Panic|Riot|Havoc|Chaos|Energy Wave)$/.test(value) ? "special-purple" : /^(Charge|Shock|Thunder|Storm|Tempest)$/.test(value) ? "lightning" : /^(Bind|Hold|Seize|Arrest)$/.test(value) ? "special-orange" : /^(Dim|Shadow|Dark|Hell)$/.test(value) ? "megid" : /^(Devil's|Demon's)$/.test(value) ? "holy" : "other";
+  const tone = /^(Draw|Drain|Fill|Gush|Heat|Fire|Flame|Burning|Berserk|Triple Foie|Ultimate Destruction|Energy Beam)$/.test(value) ? "fire" : /^(Heart|Mind|Soul|Geist|Ice|Frost|Freeze|Blizzard|Spirit|Freeze Mist)$/.test(value) ? "ice" : /^(Master's|Lord's|King's|Panic|Riot|Havoc|Chaos|Energy Wave)$/.test(value) ? "special-purple" : /^(Charge|Shock|Thunder|Storm|Tempest)$/.test(value) ? "lightning" : /^(Bind|Hold|Seize|Arrest)$/.test(value) ? "special-orange" : /^(Dim|Shadow|Dark|Hell|Double Megid|Hell Stor|Megid)$/.test(value) ? "megid" : /^(Devil's|Demon's)$/.test(value) ? "holy" : "other";
   return `<span class="boost-badge ${tone}">${databaseEscape(translated)}</span>`;
 }
 
@@ -162,7 +162,7 @@ function databaseBoostHtml(value) {
     const key = match?.[1] || "other";
     const exact = window.WIKI_I18N.getBoost(part);
     const label = exact !== part ? exact : match ? `${window.WIKI_I18N.getBoost(key)}${match[2]}` : part;
-    const tone = /^(Foie|Gifoie|Rafoie|Fire|Flame|Heat|Burning)$/.test(key) ? "fire" : /^(Barta|Gibarta|Rabarta|Ice|Frost|Freeze|Blizzard)$/.test(key) ? "ice" : /^(Zonde|Gizonde|Razonde|Shock|Thunder|Storm|Tempest)$/.test(key) ? "lightning" : /^(Grants|Resta|Anti|Reverser)$/.test(key) ? "holy" : /^(Megid|Megid Penetration)$/.test(key) ? "megid" : /^(Shifta|Jellen|ATP)$/.test(key) ? "attack" : /^(Deband|Zalure|DFP)$/.test(key) ? "defense" : /^(HP|HP Recovery|HP Drain)$/.test(key) ? "hp" : /^(TP|TP Recovery|TP Drain)$/.test(key) ? "tp" : /^ATA$/.test(key) ? "accuracy" : /^EVP$/.test(key) ? "evasion" : /^MST$/.test(key) ? "mind" : /^LCK$/.test(key) ? "luck" : "other";
+    const tone = /^(Foie|Gifoie|Rafoie|Fire|Flame|Heat|Burning)$/.test(key) ? "fire" : /^(Barta|Gibarta|Rabarta|Ice|Frost|Freeze|Blizzard)$/.test(key) ? "ice" : /^(Zonde|Gizonde|Razonde|All|All Stats|Shock|Thunder|Storm|Tempest)$/.test(key) ? "lightning" : /^(Triple Grants|Grants|Resta|Anti|Reverser)$/.test(key) ? "holy" : /^(Megid|Megid Penetration)$/.test(key) ? "megid" : /^(Shifta|Jellen|ATP)$/.test(key) ? "attack" : /^(Deband|Zalure|DFP)$/.test(key) ? "defense" : /^(HP|HP Recovery|HP Drain)$/.test(key) ? "hp" : /^(TP|TP Recovery|TP Drain)$/.test(key) ? "tp" : /^ATA$/.test(key) ? "accuracy" : /^EVP$/.test(key) ? "evasion" : /^MST$/.test(key) ? "mind" : /^LCK$/.test(key) ? "luck" : "other";
     return `<span class="boost-badge ${tone}">${databaseEscape(label)}</span>`;
   });
   const rows = [];

@@ -10,7 +10,7 @@
         }
     },
     "Hallowed Jack-O\u0027-Lantern": {
-        "superitem": 1,
+        "superitem": 2,
         "image": "",
         "name": {
             "cn": "万圣节南瓜灯"
@@ -1340,7 +1340,7 @@
         }
     },
     "Heavenly/Resist": {
-        "superitem": 0,
+        "superitem": 2,
         "image": "",
         "name": {
             "cn": "天堂级/抗性"
@@ -3470,13 +3470,13 @@
         }
     },
     "Core of Administrator": {
-        "superitem": 0,
+        "superitem": 2,
         "image": "",
         "name": {
             "cn": "管理员核心"
         },
         "description": {
-            "cn": "不知道干啥的"
+            "cn": ""
         }
     },
     "PINKAL CARD": {
@@ -10998,6 +10998,17 @@
         "image": "",
         "name": {
             "cn": "辉光铠"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Blueprint\u003A Astral Dragon":{
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "蓝图：星界龙"
         },
         "description": {
             "en": "",

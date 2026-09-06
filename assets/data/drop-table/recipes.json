@@ -297,14 +297,6 @@
         "extra": []
     },
     {
-        "result": "HEAVENLY RESONANCE",
-        "components": [
-            "Cladding of Epsilon",
-            "Generic Armor"
-        ],
-        "extra": []
-    },
-    {
         "result": "SANGE \u0026 YASHA",
         "components": [
             "SANGE",
@@ -544,7 +536,7 @@
     {
         "result": "D-VIRUS ARMOR",
         "components": [
-            "Easter Egg *30"
+            "Easter Egg"
         ],
         "extra": []
     },
@@ -672,6 +664,18 @@
         "components": [
             "D-Photon Core",
             "Kama"
+        ],
+        "extra": []
+    },
+        {
+        "result": "DIVINE FIELD",
+        "components": [
+            "Core of Administrator",
+            "Millennium Photon Core",
+            "Proof of Sonic Team",
+            "PRIMAL NEXUS",
+            "ETHEREAL ARMOR",
+            "D-VIRUS ARMOR"
         ],
         "extra": []
     }

@@ -75,19 +75,19 @@ function effectValue(key, value) {
     }
     if (window.WIKI_I18N.language == "cn") {
         return String(value)
-                .replace(/increased/g, "增大")
-                .replace(/in one attack/g, "单次攻击")
-                .replace(/angle/g, "角度")
-                .replace(/NON_HEAVEN_PUNISHER_EX/g, "非天罚EX")
-                .replace(/HEAVEN_PUNISHER_EX/g, "天罚EX")
-                .replace(/Dual Casting: Jellen and Zalure if tech lv is 30/g, "可同时释放降攻术 降防术 Lv30")
-                .replace(/Low HP/g, "濒死")
-                .trim();
+            .replace(/increased/g, "增大")
+            .replace(/in one attack/g, "单次攻击")
+            .replace(/angle/g, "角度")
+            .replace(/NON_HEAVEN_PUNISHER_EX/g, "非天罚EX")
+            .replace(/HEAVEN_PUNISHER_EX/g, "天罚EX")
+            .replace(/Dual Casting: Jellen and Zalure if tech lv is 30/g, "可同时释放降攻术 降防术 Lv30")
+            .replace(/Low HP/g, "濒死")
+            .trim();
     }
     return String(value)
-        // .replace(/扩大|增大/g, "increased")
-        // .replace(/数：?/g, "")
-        // .trim();
+    // .replace(/扩大|增大/g, "increased")
+    // .replace(/数：?/g, "")
+    // .trim();
 }
 
 function effectText(effect) {
@@ -111,7 +111,7 @@ function classBadges(value) {
     const badges = classes.map(value => {
         const faction = /^(humar|hunewearl|hucast|hucaseal)$/.test(value) ? "hunter" :
             /^(ramar|ramarl|racast|racaseal)$/.test(value) ? "ranger" :
-            /^(fomar|fomarl|fonewm|fonewearl)$/.test(value) ? "force" : "";
+                /^(fomar|fomarl|fonewm|fonewearl)$/.test(value) ? "force" : "";
         return `<span class="class-badge ${faction}">${escapeHtml(window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getClass(value) : value)}</span>`;
     });
     const rows = [];
@@ -122,7 +122,7 @@ function classBadges(value) {
 function specialBadge(value, prefix = "") {
     if (!value || value === "None") return "";
     const translated = window.WIKI_I18N.getBoost(value);
-    const tone = /^(Draw|Drain|Fill|Gush|Heat|Fire|Flame|Burning|Berserk)$/.test(value) ? "fire" : /^(Heart|Mind|Soul|Geist|Ice|Frost|Freeze|Blizzard|Spirit)$/.test(value) ? "ice" : /^(Master's|Lord's|King's|Panic|Riot|Havoc|Chaos|Energy Wave)$/.test(value) ? "special-purple" : /^(Charge|Shock|Thunder|Storm|Tempest)$/.test(value) ? "lightning" : /^(Bind|Hold|Seize|Arrest)$/.test(value) ? "special-orange" : /^(Dim|Shadow|Dark|Hell)$/.test(value) ? "megid" : /^(Devil's|Demon's)$/.test(value) ? "holy" : "other";
+    const tone = /^(Draw|Drain|Fill|Gush|Heat|Fire|Flame|Burning|Berserk|Triple Foie|Ultimate Destruction|Energy Beam)$/.test(value) ? "fire" : /^(Heart|Mind|Soul|Geist|Ice|Frost|Freeze|Blizzard|Spirit|Freeze Mist)$/.test(value) ? "ice" : /^(Master's|Lord's|King's|Panic|Riot|Havoc|Chaos)$/.test(value) ? "special-purple" : /^(Charge|Shock|Thunder|Storm|Tempest|Autotarget Charge|Set 777 Damage)$/.test(value) ? "lightning" : /^(Bind|Hold|Seize|Arrest)$/.test(value) ? "special-orange" : /^(Dim|Shadow|Dark|Hell|Double Megid|Hell Storm|Megid)$/.test(value) ? "megid" : /^(Devil's|Demon's)$/.test(value) ? "holy" : "other";
     return `<span class="boost-badge ${tone}">${escapeHtml(prefix + translated)}</span>`;
 }
 
@@ -152,7 +152,7 @@ function detailBoosts(itemName) {
         const exact = translate(part);
         const label = exact !== part ? exact : match ? `${translate(match[1])}${match[2]}` : part;
         const key = exact !== part ? part : match?.[1] || "other";
-        const tone = /^(Foie|Gifoie|Rafoie|Fire|Flame|Heat|Burning)$/.test(key) ? "fire" : /^(Barta|Gibarta|Rabarta|Ice|Frost|Freeze|Blizzard)$/.test(key) ? "ice" : /^(Zonde|Gizonde|Razonde|Shock|Thunder|Storm|Tempest)$/.test(key) ? "lightning" : /^(Grants|Resta|Anti|Reverser)$/.test(key) ? "holy" : /^(Megid|Megid Penetration)$/.test(key) ? "megid" : /^(Shifta|Jellen|ATP)$/.test(key) ? "attack" : /^(Deband|Zalure|DFP)$/.test(key) ? "defense" : /^(HP|HP Recovery|HP Drain)$/.test(key) ? "hp" : /^(TP|TP Recovery|TP Drain)$/.test(key) ? "tp" : /^ATA$/.test(key) ? "accuracy" : /^EVP$/.test(key) ? "evasion" : /^MST$/.test(key) ? "mind" : /^LCK$/.test(key) ? "luck" : "other";
+        const tone = /^(Foie|Gifoie|Rafoie|Fire|Flame|Heat|Burning)$/.test(key) ? "fire" : /^(Barta|Gibarta|Rabarta|Ice|Frost|Freeze|Blizzard)$/.test(key) ? "ice" : /^(Zonde|Gizonde|All|All Stats|Razonde|Shock|Thunder|Storm|Tempest)$/.test(key) ? "lightning" : /^(Grants|Resta|Anti|Reverser)$/.test(key) ? "holy" : /^(Megid|Megid Penetration)$/.test(key) ? "megid" : /^(Shifta|Jellen|ATP)$/.test(key) ? "attack" : /^(Deband|Zalure|DFP)$/.test(key) ? "defense" : /^(HP|HP Recovery|HP Drain)$/.test(key) ? "hp" : /^(TP|TP Recovery|TP Drain)$/.test(key) ? "tp" : /^ATA$/.test(key) ? "accuracy" : /^EVP$/.test(key) ? "evasion" : /^MST$/.test(key) ? "mind" : /^LCK$/.test(key) ? "luck" : "other";
         return `<span class="boost-badge ${tone}">${escapeHtml(label)}</span>`;
     }).join("");
 }
@@ -456,7 +456,7 @@ function bindTooltips(root = document) {
                     <div class="tooltip-name ${rarityClass}">${itemText.name || itemName}</div>
                     ${window.WIKI_I18N.language === "cn" && itemName !== itemText.name ? `<div class="tooltip-en">${itemName}</div>` : ""}
                     ${itemTypeContent && itemTypeContent !== "-" ? `<div class="tooltip-type">${window.WIKI_I18N.text("itemType", "类型")}: ${itemTypeContent}</div>` : ""}
-                    ${!detailFor(itemName) && itemText.description ? `<span class="tooltip-desc">${itemText.description}</span>` : ""}
+                    ${detailDescription(itemName, item) ? `<div class="tooltip-class">${detailDescription(itemName, item)}</div>` : ""}
                     ${(detailFor(itemName)?.raw.Special && detailFor(itemName).raw.Special !== "None") || detailBoosts(itemName) ? `<div class="tooltip-effects-row">${detailFor(itemName)?.raw.Special && detailFor(itemName).raw.Special !== "None" ? specialBadge(detailFor(itemName).raw.Special, "EX：") : ""}${detailBoosts(itemName) ? `<span class="boost-badge-list">${detailBoosts(itemName)}</span>` : ""}</div>` : ""}
                     ${farm ? `<span class="tooltip-farm">${farm}</span>` : ""}
 

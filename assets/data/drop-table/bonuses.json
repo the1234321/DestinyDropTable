@@ -209,8 +209,7 @@
         ],
         "effect": {
             "MST": "+100",
-            "hits": "1-2-3",
-            "notes": "EX Hits: 1-2-3, 精神力+100"
+            "hits": "1-2-3(EX)"
         },
         "extra": []
     },
@@ -223,7 +222,7 @@
             "ATP": "+100",
             "attack_range": "increased",
             "hits": "4-4-4",
-            "notes": "攻击力 +100, 攻击范围增大, Hits 4-4-4, 可正面命中EP4蜥蜴"
+            "can_hit_lizards":true
         },
         "extra": []
     },
