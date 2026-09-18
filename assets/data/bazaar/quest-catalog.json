@@ -1377,6 +1377,34 @@
           "en": []
         }
       }
+    },
+    "Anniversary": {
+        "World of Illusion/pso ⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Olga Flow": {
+            "SOUL ERASER 1/73": "all ids"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Radiant Destiny! ⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Tormentorr": {
+            "AEGIS OF ISOLATION 1/264": "all ids"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
     }
   },
   "EP4": {

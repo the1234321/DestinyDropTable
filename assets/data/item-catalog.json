@@ -11014,5 +11014,16 @@
             "en": "",
             "cn": ""
         }
+    },
+    "AEGIS OF ISOLATION":{
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "隔离神盾"
+        },
+        "description": {
+            "en": "Blocks healing (Resta/Star) from other members, Maximizes heal power of monomate and dimate",
+            "cn": "阻止队友对你的所有治疗效果, 提高小中HP回复药效果"
+        }
     }
 }

@@ -2203,5 +2203,20 @@
         "Boosts": "ATA+25, Resta/Anti +100%, Rabarta +70%",
         "Description": "A gorgeous bracelet. Boosts range of Resta and Anti. In addition, enhances Powar of Rabarta.",
         "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
+    },
+    "AEGIS OF ISOLATION": {
+        "min-DFP": 120,
+        "max-DFP": 170,
+        "min-EVP": 180,
+        "max-EVP": 230,
+        "Req Lv": 150,
+        "EFR": 32,
+        "ETH": 32,
+        "EIC": 32,
+        "EDK": 24,
+        "ELT": 24,
+        "Boosts": "ATP+60",
+        "Description": "This shield contains 2 exclusive features.",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
     }
 }
