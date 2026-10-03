@@ -1141,7 +1141,7 @@ Jointparts|耦合中枢
 DEAL WITH IT|顺其自然
 BAT WING|蝙蝠之翼
 WINGS OF LIFE|生命之翼
-2ND ANNIVERSARY WINGS|2NDANNIVERSARYWINGS
+2ND ANNIVERSARY WINGS|两周年纪念之翼
 DEMON WING|恶魔之翼
 HELLFIRE SHIELD|地狱火之盾
 PROFOUND DARKNESS|深远之暗
@@ -1278,7 +1278,7 @@ Puyo|噗呦
 Moro|莫罗
 Rappy|拉比
 Yahoo!|雅虎
-Gael Giel|伽埃尔基埃尔
+Gael Giel|堕天灵＆怵天灵
 Agastya|浮游炮
 NiGHTS|梦精灵
 Twin Sato|双娑陀
@@ -1391,7 +1391,6 @@ Pyro Goran|暗黑狂刀魔
 Sand Rappy|沙地拉比鸟
 Del Rappy|暗黑拉比鸟
 Saint-Milion|圣魔龙
-Saint Million|圣魔龙
 Shambertin|沙柏龙
 Kondrieu|空间龙
 Rathalos|雄火龙
@@ -1489,7 +1488,7 @@ Homemade chocolate.\nHand-crafted with love!|自制的巧克力\n味道如何？
 Homemade candy.\nHand-crafted with love!|自制的糖果\n味道如何？
 Gorgeous cake.\nHand-crafted with love!|自制的糕点\n味道如何？
 Desc. Unknown1|描述. 未知1
-High purity photon shaped\nlike a coin.\nThere is someone \nwho needs this...|秘密组织ＷＥＡＰＯＮＳ的等级徽章\n无法知道使用的效果
+High purity photon shaped\nlike a coin.\nThere is someone \nwho needs this...|形状像硬币的高纯度光子物。\n似乎有人在回收这种物品
 Is today your lucky day?\nContains one random item.\nFound in Ultimate difficulty \nonly.|你是欧皇还是非酋？\n内含一件随机物品。\n仅能在Ｕ难度中\n发现。
 Is today your lucky day?\nContains one random item.\nFound in Normal, Hard and\nVery Hard difficulty.|你是欧皇还是非酋？\n内含一件随机物品。\n可在Ｎ、Ｈ及\nＶＨ难度中发现。
 Is today your lucky day?\nContains one random item.\nObtained during Destiny \nPSOBB Anniversary.|你是欧皇还是非酋？\n内含一件随机物品。\n在 Destiny PSOBB 周年庆\n期间获得。
@@ -3767,7 +3766,6 @@ Tormentorr|折磨者
 \tCGA shiny green shard \nfound in a crater.\nThere is someone \nwho needs this...|\tCG在陨石坑中发现的\n闪耀着绿光的碎片。\n似乎有人在回收这种物品
 A mysterious Photon.\nThere is someone who \nneeds this...|一种神秘的光子。\n似乎有人在回收这种物品
 \tCGA secret cane that boosts\npower of techniques.|\tCG一根可以提升法术威力的\n秘密长杖。
-\tCGA secret cane that boosts\npower of techniques.|\tCG一根可以提升法术威力的\n秘密长杖。
 \tCGA holiness saber that boosts Gifoie, Rafoie and Gibarta.\nIn addition, boosts player's DFP.|\tCG一把带有神圣气息的小剑，可强化炎狱、火墙与冰箭术。\n此外，还能增加玩家的防御力。
 \tCGA pair of holiness blades\nthat boosts Foie, Rafoie\nand Gibarta.\nIn addition, boosts player's EVP.|\tCG一对带有神圣气息的双刃，\n可强化火球、炎狱\n与冰箭术。\n此外，还能增加玩家的回避力。
 Special Armor that contains\ngreat power of light magic.|蕴含强大光魔法力量的\n特殊铠甲。
@@ -3787,7 +3785,6 @@ FIXED:INTRODUCTION|定型文：自我介绍
 CREATE A QUESTION|创建问题
 CREATE A CONVERSATION|创建对话
 LIST ALL|显示全部
-Fixed:Greetings|定型文：问候
 Fixed:Reply/Confirmation|定型文：回答／确认
 Fixed:Invitation to party|定型文：组队邀请
 Fixed:About an adventure|定型文：关于冒险
@@ -4092,7 +4089,6 @@ It's up to you.|由你决定。
 OK, I'll join up.|好，我加入。
 What is the name\nof your TEAM?|你的队伍叫什么名字？
 OK, let me create\nit.|好，我来创建。
-You create a TEAM,\nplease.|请你创建队伍。
 I prefer Chatting\nrather than going\non an adventure.|比起冒险，我更喜欢聊天。
 I prefer going on\na free adventure,\nnot a QUEST.|比起任务，我更喜欢自由冒险。
 Sure.|当然。
@@ -4172,7 +4168,6 @@ Hang on a second.\nI'll be there.|等一下，我马上到。
 I need help, too!|我也需要帮助！
 Take care of yourself.|照顾好自己。
 Sorry, I'm busy now.|抱歉，我现在很忙。
-Sorry, I have nothing\nthat'd help you right now.|抱歉，我现在帮不了你。
 I'm coming to save\nyou. Hold on.|我来救你，坚持住。
 I'm coming to save you,\nbut it will take time.|我来救你，不过要一点时间。
 Sorry, I have no TP.|抱歉，我没有TP了。
@@ -4334,15 +4329,11 @@ You're not getting\naway this time!|这次别想跑！
 Yeah, right!|是吗？
 I'm not going down\nthat easily!|我没那么容易倒下！
 Please have mercy\non me!|求你手下留情！
-Please have mercy\non me!|求你手下留情！
 I'll destroy you!|我要毁灭你！
 Where indeed?|谁知道呢？
-You just don't give up,\ndo you?|你还真是不死心啊？
-All right,\nbring it on!|好，放马过来！
 I'll get those back\nfrom you later!|以后我会把那些拿回来的！
 You'll regret this!|你会后悔的！
 Go easy on me, OK?|下手轻点，好吗？
-All right,\nbring it on!|好，放马过来！
 Shall we make a\nlittle wager?|要不要赌一把？
 It's a deal,\npartner!|成交，伙伴！
 No alliances!\nI hunt alone!|不要同盟！我独来独往！
@@ -4356,7 +4347,6 @@ Good fight,\nmy friend.|打得不错，朋友。
 Let's meet again.|后会有期。
 Get out of here!|滚开！
 Any time,\nany place!|随时奉陪！
-Good fight,\nmy friend.|打得不错，朋友。
 That sounds good!|听起来不错！
 No...let's do something\ndifferent this time.|不，这次换点别的吧。
 No,\nlet's use the same rules.|不，就用同样的规则。
@@ -4460,7 +4450,6 @@ CUSTOM FRAME ver.00|军用盾 ver.00
 LIGHT RELIFE|浮光盾
 REGENE GEAR|再生机能盾
 CUSTOM BARRIER ver.00|军用盾 ver.00
-unit|插件
 FOIE|火球术
 GIFOIE|火墙术
 RAFOIE|炎狱术
@@ -4889,3 +4878,150 @@ Select Topic.|选择主题。
 Select Subject.|选择主语。
 a|一个
 an|一个
+MA-X76 OMEGA|ＭＡ－Ｘ７６ 战场之神
+placeholder FEATHER GARMENT|占位
+AEGIS OF ISOLATION|隔离神盾
+Resist/Explosion|抗性/炎爆
+Resist/Glacier|抗性/冰川
+Resist/Tempest|抗性/感电
+An illegally modified\r\ndual vulcan capable\r\nof unleashing\r\noverwhelming firepower.|一门非法改装的\r\n双管火神炮\r\n能够释放\r\n压倒性的火力。
+\tC6友情の力で輝く神秘的な剣。\n「自分の道」を見つけた時、\n真価を発揮すると言われている。|\tC6一把闪耀着友谊之力的神秘宝剑。\n据说，当你找到属于自己的道路时\n它才会展现出真正的价值。
+\tCGA pair of holiness blades\nthat boost Rabarta, Razonde\nand Zonde.\nIn addition, boosts player's EVP.|\tCG一对神圣之刃\n可增强极冰术，雷爆术，闪电术\n还会提升玩家回避力
+A madam's bracelet.\nBoosts range of Resta\r\nand Anti.\r\nIn addition, enhances\r\nRabarta.|一枚女士手镯\r\n增强圣泉术\r\n和状态术范围\r\n还会额外增强\n极冰术
+An extremely rare ring\r\nthat contains great resistance.\r\nHowever, its overwhelming\r\npower weakens pleyer's HP.|一枚极其稀有的手镯\r\n极大的提高抗性\r\n然而，他会极大的\r\n削弱玩家的生命值
+A legendary armor\r\nthat protects wielder\r\nwith divine light.|一套传奇盔甲\r\n它以神圣之光\r\n保护持有者。
+An armor that protects\r\nwielder with celestial feather.\r\nIncreases ATA by 40.\r\nHowever, this armor does not\r\nhelp wielder by physical attacks.|这件盔甲以天界之羽\r\n保护穿戴者\r\n并提升40点命中力\r\n然而，这件盔甲无法提升\r\n穿戴者的物理防御力。
+A cursed rare shield.\r\nDisables healing and\r\nrevival of allies,\r\nbut maximizes the\r\neffect of all potions\r\nused by the bearer.|一面被诅咒的稀有护盾。\r\n它会阻止对队友的\r\n治疗和复活效果\r\n但会最大化\r\n持有者自身的\r\n使用次数。
+\tCGA legendary scope\nmade by Combat Corp.\nIts said to enhance\ncertain weapons.|\tCG传奇瞄准镜\n由战斗公司制造。\n据说可以增强\n某些武器的性能。
+A reinforcing unit for \nprotective gear.\nBoosts fire resistance by \n25 when equipped.|防具的扩展插件\n装备者炎抗性\n暂时上升２５
+A reinforcing unit for \nprotective gear.\nBoosts ice resistance\r\nby 25 when equipped.|防具的扩展插件\n装备者冰抗性\r\n暂时上升２５
+A reinforcing unit for \nprotective gear.\nBoosts lightning resistance\r\nby 25 when equipped.|防具的扩展插件\n装备者雷抗性\r\n暂时上升２５
+Placeholder MAY|占位符 MAY
+placeholder Devourer|占位符 Devourer
+placeholder custom slicer|占位符自定义投刃
+placeholder custom dagger|占位符自定义匕首
+LIGHTNING GARMENT|辉光铠
+placeholder RESONATING CHAOS|占位符 RESONATING CHAOS
+\tCGAn illegally modified\r\ndual vulcan capable\r\nof unleashing\r\noverwhelming firepower.|\tCG一门非法改装的\r\n双管火神炮\r\n能够释放\r\n压倒性的火力。
+A gorgeous bracelet.\nBoosts range of Resta\r\nand Anti.\r\nIn addition, enhances\r\nPowar of Rabarta.|一条漂亮的手镯.\r\n增强圣泉术\r\n和状态术范围\r\n还会额外增强\n极冰术
+A cursed rare shield.\r\nDisables healing of allies,\r\nbut maximizes the\r\neffect of all potions\r\nused by the bearer.|一面被诅咒的稀有护盾。\r\n它会阻止队友的\r\n治疗效果\r\n但会使得持有者\r\n自身的药品\r\n使用效果最大化。
+A demonic shiled infected\r\nby unknown photon.|一个被未知光子感染的\r\n恶魔护盾.
+Photon Reactor|光子反应堆
+Astral Ore 'Iritista'|星界石「伊利提斯塔」
+Phantasmal Ore 'Syncesta'|幻影「真空波石」
+placeholder item[1]|占位1
+placeholder item[2]|占位2
+placeholder item[3]|占位3
+placeholder item[4]|占位4
+RAGE DE FEU#4|火之狂怒
+SOUL ERASER|灭魂者
+Placeholder  CANNON|Placeholder  CANNON
+Placeholder Dual Claw|Placeholder Dual Claw
+Placeholder CURSED CHAIN|Placeholder CURSED CHAIN
+Placeholder GLIDE DIVINE Y|Placeholder GLIDE DIVINE Y
+Placeholder GLIDE DIVINE Z|Placeholder GLIDE DIVINE Z
+Placeholder ASTRAL BLADE|Placeholder ASTRAL BLADE
+SLICER OF HERETIC|异教徒的投刃
+Placeholder CAVRIANA|Placeholder CAVRIANA
+MIRACLE CHAIN|奇迹之剑
+Placeholder BAZOOKA|Placeholder BAZOOKA
+Placeholder LAUNCHER|Placeholder LAUNCHER
+Placeholder IRON FIST|Placeholder IRON FIST
+placeholder DUO RIFLE|placeholder DUO RIFLE
+placeholder STRIKER|placeholder STRIKER
+placeholder DUO RIFLE2|placeholder DUO RIFLE3
+Placeholder DM|Placeholder DM
+DAISY CHAIN II|雏菊之剑 II
+DAISY CHAIN III|雏菊之剑 III
+placeholder RAY|placeholder RAY
+DAISY CHAIN IV|雏菊之剑 IV
+placeholder RESURRECTION CLOAK|placeholder RESURRECTION CLOAK
+placeholder DARKNESS AURA|placeholder DARKNESS AURA
+placeholder Resists|placeholder Resists
+RESONATING CHAOS|混沌共鸣
+A photon reactor that\r\nenhances certain weapon.|一种能增强某些武器\r\n性能的光子反应堆。
+\tCGA mysterious ore that \nemits a starlight.\r\nWhen used on certain \nitems, it...|\tCG神秘矿石，会发出星光。\r\n当用于某些物品时，它……
+\tCGMysterious ore said to be \r\nfound only by the masters.\r\nWhen used on certain \nitems, it...|\tCG神秘矿石，据说只有大师才能找到。\r\n当用于某些物品时，它……
+A demonic cane embedded \nwith chaos emerald.\r\nIt's said to be able to obliterate\r\nfoes only with one shot.|一根镶嵌着混沌翡翠的\r\n恶魔手杖。\r\n据说只需一击就能彻底摧毁敌人
+\tCGOnly one fact is known\r\nthat this is alternate form\r\nof Lavis Cannon.\r\nIts abilities are unknown.|\tCG唯一已知的是，这是拉维斯·迦农的另一种形态。\r\n它的能力未知。
+A pair of Dragon's claws\r\nused to make this weapon.\r\nIts special attack burns\r\nenemies around.|这件武器是用一对龙爪制成的。\r\n它的特殊攻击会灼烧周围的敌人。
+\tCGA secret cane that boosts\npower of Grants.\r\nIn addition, expands\r\nrange of Shifta/Deband.|\tCG秘密手杖，可增强\n圣光术的力量。\r\n此外，扩大\r\n强攻术和强体术的范围。
+\tCGA mysterious cane.\r\nBoosts range of Resta, Anti\r\nand Zalure.|\tCG神秘手杖。\r\n提升 圣泉术、状态术 \r\n 降防术的范围。
+A dreadful slicer\r\nthat said to be used\r\nby a secret society.\r\nSpecial attacks arrests\nenemies.|据说被一个秘密社团使用的可怕投刃。\r\n特殊攻击麻痹敌人。
+A celestial wand that\r\nenhances range of healing\r\nand jellen.\r\nIts special attack casts\r\nresta.|天界魔杖，可以增强治疗和治疗的范围。\r\n它的特殊攻击会施放\r\n圣泉术。
+A special sword that\r\ncan cast support\r\ntechniques.\r\nOnly female can use\r\nthis weapon.|一把特殊的剑\r\nc可以施放支援法术。\r\n只有女性才能使用这把武器。
+The upgraded version\r\nof Baranz Launcher.|机甲堡垒导弹枪\r\n升级版
+\tCGplaceholder desc|\tCGplaceholder desc
+\tCGA cloak wreathed\r\nin azure phoenix fire.\r\nExpanding the reach\r\nof resurrection.|\tCG斗篷缠绕着\r\n蔚蓝凤凰之火。\r\n扩大复活的范围。
+\tCGplaceholder armor desc|\tCGplaceholder armor desc
+An armor that protects\r\nwielder with celestial feather.\r\nIncreases ATA by 35.\r\nHowever, this armor does not\r\nhelp wielder by physical attacks.|一件能用天界之羽保护穿戴者的盔甲。\r\n增加35命中。\r\n但这件盔甲不能帮助穿戴者抵御物理攻击
+\tCGA demonic shield infected\r\nby unknown gene.\r\nThe significant dark photon\r\nenhances player's ATP by 100.|\tCG被未知基因感染的恶魔护盾\r\n黑暗光子\r\n使玩家的攻击力提高100。
+placeholder Booster|placeholder Booster
+ALTERNATIVE CANNON|圣剑「变种·迦农」
+CAVRIANA|卡维里亚纳
+placeholder BLOODY REBELLION|placeholder BLOODY REBELLION
+placeholder IS|placeholder IS
+placeholder ANNIHILATOR|placeholder ANNIHILATOR
+Placeholder DARK METEOR|Placeholder DARK METEOR
+placeholder EN|placeholder EN
+placeholder RC|placeholder RC
+placeholder DA|placeholder DA
+placeholder FG|placeholder FG
+placeholder IW|placeholder IW
+placeholder res|placeholder res
+A photon reactor.\r\nThere is someone\nwho needs this...|光子反应堆\r\n有人\n需要这个…… \tCG
+\tCGAn empowered photon booster.\r\nBoosts the efficiency of \nan item.|\tCG被强化的光子推进器\r\n可提高特性装备的性能。
+A special gun made by a \nmysterious scientist out \nto conquer the world.\nDoes fire damage.\r\nif you use a certain \nitem, it will become...|由企图征服世界的\n神秘科学家制作的\n特殊枪械\n造成火焰伤害。\r\n如果使用某种\n特定道具，它将变成……
+A mysterious ultimate \nweapon.\nIts abilities are unknown.\r\nif you use a certain \nitem, it will become...|神秘的终极\n武器\n其能力未知。\r\n如果使用某种\n特定道具, 它将变成……
+An armor that protects\r\nwielder with celestial feather.\r\nIncreases ATA by [Res].\r\nHowever, this armor does not\r\nhelp wielder by physical attacks.|一件用天界羽毛保护\r\n持有者的护甲。\r\n提升相当于 [Res] 的 ATA（命中力）。\r\n然而，这件护甲无法\r\n抵御物理攻击。 \tCG
+\tCGA demonic shield infected\r\nby unknown gene.\r\nThe significant dark photon\r\nenhances player's ATP by [Res].|\tCGA demonic shield infected\r\nby unknown gene.\r\nThe significant dark photon\r\nenhances player's ATP by [Res].
+Placeholder Tool|占位tool
+Overload Booster|过载加速器
+Kit of Monster Burger|怪兽汉堡细胞
+Kit of Twin Nidra|双蝎细胞
+Rogue Token I|肉鸽令牌 I
+Egg Rappy's Beak|彩蛋拉比的嘴
+Hallo Rappy's Beak|南瓜拉比的嘴
+Love Rappy's Beak|爱之拉比的嘴
+St. Rappy's Beak|圣诞拉比的嘴
+Soul of Dark Bringer|暗黑骑士之魂
+Soul of Delbiter|暗黑麒麟之魂
+Soul of Morphos|暗腐蝶之魂
+Soul of ZU|巨型火犀鸟之魂
+Game DISK: Puyo Puyo Fever|游戏光碟：噗哟噗哟狂热
+Soul of ????1|????之魂 1
+Soul of ????2|????之魂 2
+Soul of ????3|????之魂 3
+Soul of ????4|????之魂 4
+Rogue Token II|肉鸽令牌 II
+Rogue Token III|肉鸽令牌 III
+Rogue Token IV|肉鸽令牌 IV
+3RD ANNIVERSARY BLADE [Crimson]|三周年纪念刀【真红】
+3RD ANNIVERSARY BLADE [Galaxy]|三周年纪念刀【银河】
+2ND ANNIVERSARY WINGS [Viridia]|两周年纪念之翼【铬绿】
+2ND ANNIVERSARY WINGS [Greenil]|两周年纪念之翼【翠绿】
+2ND ANNIVERSARY WINGS [Skyly]|两周年纪念之翼【天青】
+2ND ANNIVERSARY WINGS [Bluefull]|两周年纪念之翼【纯蓝】
+2ND ANNIVERSARY WINGS [Purplenum]|两周年纪念之翼【淡紫】
+2ND ANNIVERSARY WINGS [Pinkal]|两周年纪念之翼【粉红】
+2ND ANNIVERSARY WINGS [Redria]|两周年纪念之翼【真红】
+2ND ANNIVERSARY WINGS [Oran]|两周年纪念之翼【橙黄】
+2ND ANNIVERSARY WINGS [Yellowboze]|两周年纪念之翼【金黄】
+2ND ANNIVERSARY WINGS [Whitill]|两周年纪念之翼【羽白】
+DOUBLE HAMBURGER|双汉堡包
+Twin Nidra|双尼德拉
+Morphos|暗腐蝶
+Saint-Million|圣魔龙
+Puyo Puyo Fever|噗哟噗哟狂热
+An unknown artifact.\r\nIrene in Bazaar quest\r\nmay knows about this\r\nitem...|一个未知工艺品\r\nBazaar任务的Irene\r\n可能会知道这件物品
+\tCGAn empowered photon booster.\r\nBoosts the efficiency of \r\ncertain item.|\tCG增强型光子加速器\r\n可以提高武器性能
+An unknown orb found\r\nin mysterious region.\nThere is someone who \nneeds this...|神秘区域发现的未知球体\n可能有人需要它…
+A dull beak from\r\na Egg Rappy.\r\nWhen used on Rappy, it...|彩蛋拉比鸟尖锐的嘴部\r\n如果对拉比使用它....
+A dull beak from\r\na Hallo Rappy.\r\nWhen used on Rappy, it...|南瓜拉比鸟尖锐的嘴部\r\n如果对拉比使用它....
+A dull beak from\r\na Love Rappy.\r\nWhen used on Rappy, it...|爱之拉比鸟尖锐的嘴部\r\n如果对拉比使用它....
+A dull beak from\r\na St. Rappy.\r\nWhen used on Rappy, it...|圣诞拉比鸟尖锐的嘴部\r\n如果对拉比使用它....
+The soul of Dark Bringer\r\nextracted through\r\nenergy distortion.\r\nWhen used on Bhima, it...|通过扭曲能量提取的\r\n暗黑骑士的灵魂\r\n当对比玛使用时…
+The soul of Delbiter\r\nextracted through\r\nenergy distortion.\r\nWhen used on Bhima, it...|通过扭曲能量提取的\r\n暗黑麒麟的灵魂\r\n当对比玛使用时…
+The soul of Morphos\r\nextracted through\r\nenergy distortion.\r\nWhen used on\r\nRibhava, it...|通过扭曲能量提取的\r\n暗腐蝶的灵魂\r\n当对比玛使用时…
+The soul of ZU\r\nextracted through\r\nenergy distortion.\r\nWhen used on\r\nGaruda, it...|通过扭曲能量提取的\r\n巨型火犀鸟的灵魂\r\n当对比玛使用时…
+A Game disk.\r\nIt says 'Puyo Puyo Fever'.\r\nWhen used on\r\nCHU CHU, it...|一张游戏光盘。\r\n上面写着“噗哟噗哟狂热版”\r\nCHU CHU上使用时…

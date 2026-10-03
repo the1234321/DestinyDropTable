@@ -5463,7 +5463,7 @@
           }
         },
         {
-          "name": "Saint Million",
+          "name": "Saint-Milion",
           "dar": "100%",
           "farm": "",
           "drops": {
@@ -11070,7 +11070,7 @@
           }
         },
         {
-          "name": "Saint Million",
+          "name": "Saint-Milion",
           "dar": "100%",
           "farm": "",
           "drops": {
@@ -16677,7 +16677,7 @@
           }
         },
         {
-          "name": "Saint Million",
+          "name": "Saint-Milion",
           "dar": "100%",
           "farm": "",
           "drops": {
@@ -17119,8 +17119,8 @@
               "rate": "1/213.33"
             },
             "Skyly": {
-              "item": "STAG CUTLERY",
-              "rate": "1/213.33"
+              "item": "DEATH REAPER",
+              "rate": "1/682.67"
             },
             "Bluefull": {
               "item": "Centurion/Mind",
@@ -17581,12 +17581,12 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "FINAL IMPACT",
-              "rate": "1/182.86"
+              "item": "EXTERMINATOR",
+              "rate": "1/585.14"
             },
             "Greenill": {
-              "item": "SILENCE CLAW",
-              "rate": "1/182.86"
+              "item": "ENERGY STORM",
+              "rate": "1/900.22"
             },
             "Skyly": {
               "item": "RED SWORD",
@@ -17789,8 +17789,8 @@
               "rate": "1/350.08"
             },
             "Pinkal": {
-              "item": "YAMATO",
-              "rate": "1/71.11"
+              "item": "TIGER'S FANG & DRAGON'S CLAW",
+              "rate": "1/350.08"
             },
             "Redria": {
               "item": "SANGE",
@@ -17805,7 +17805,7 @@
               "rate": "1/350.08"
             },
             "Whitill": {
-              "item": "P-arm's Arms",
+              "item": "P-ARMS'S BLADE",
               "rate": "1/350.08"
             }
           }
@@ -18056,7 +18056,7 @@
             },
             "Greenill": {
               "item": "NUG2000-BAZOOKA",
-              "rate": "1/18331.81"
+              "rate": "1/1489.45"
             },
             "Skyly": {
               "item": "S-RED'S BLADE",
@@ -18131,7 +18131,7 @@
             },
             "Yellowboze": {
               "item": "NUG2000-BAZOOKA",
-              "rate": "1/28810.14"
+              "rate": "1/2925.69"
             },
             "Whitill": {
               "item": "WHITILL CARD",
@@ -18208,8 +18208,8 @@
               "rate": "1/700.17"
             },
             "Purplenum": {
-              "item": "Delsaber's Left Arm",
-              "rate": "1/455.11"
+              "item": "NUG2000-BAZOOKA",
+              "rate": "1/1820.43"
             },
             "Pinkal": {
               "item": "YUNCHANG",
@@ -18224,8 +18224,8 @@
               "rate": "1/455.11"
             },
             "Yellowboze": {
-              "item": "Delsaber's Right Arm",
-              "rate": "1/142.22"
+              "item": "Proof of Sonic Team",
+              "rate": "1/3034.07"
             },
             "Whitill": {
               "item": "MORNING GLORY",
@@ -18239,8 +18239,8 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "Centurion/Luck",
-              "rate": "1/292.57"
+              "item": "V503",
+              "rate": "1/2127.8"
             },
             "Greenill": {
               "item": "MOLTEN RING",
@@ -18290,24 +18290,24 @@
               "rate": "1/2275.57"
             },
             "Greenill": {
-              "item": "RED MECHGUN",
-              "rate": "1/700.17"
+              "item": "DYNASTY ARMOR",
+              "rate": "1/1654.94"
             },
             "Skyly": {
               "item": "SKYLY CARD",
               "rate": "1/22406.45"
             },
             "Bluefull": {
-              "item": "RED SLICER",
-              "rate": "1/700.17"
+              "item": "State/Maintenance",
+              "rate": "1/3309.94"
             },
             "Purplenum": {
               "item": "SACRED GUARD",
               "rate": "1/2275.57"
             },
             "Pinkal": {
-              "item": "MORNING GLORY",
-              "rate": "1/700.17"
+              "item": "RAMBLING MAY",
+              "rate": "1/455.11"
             },
             "Redria": {
               "item": "SMOKING PLATE",
@@ -18322,7 +18322,7 @@
               "rate": "1/700.17"
             },
             "Whitill": {
-              "item": "RED SLICER",
+              "item": "DAISY CHAIN",
               "rate": "1/700.17"
             }
           }
@@ -18412,8 +18412,8 @@
               "rate": "1/11457.38"
             },
             "Yellowboze": {
-              "item": "BUSINESS JACKET",
-              "rate": "1/517.17"
+              "item": "BEHEMOTH ARMOR",
+              "rate": "1/2327.26"
             },
             "Whitill": {
               "item": "ARCHFIEND ARMOR",
@@ -18463,8 +18463,8 @@
               "rate": "1/650.16"
             },
             "Whitill": {
-              "item": "ENERGY STORM",
-              "rate": "1/568.89"
+              "item": "LAVIS CANNON",
+              "rate": "1/2600.64"
             }
           }
         },
@@ -18709,7 +18709,7 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "RED SCORPIO",
+              "item": "CANNON ROUGE",
               "rate": "1/900.22"
             },
             "Greenill": {
@@ -18803,8 +18803,8 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "GAE BOLG",
-              "rate": "1/4.92"
+              "item": "SAMURAI ARMOR",
+              "rate": "1/64"
             },
             "Greenill": {
               "item": "HOLY RAY",
@@ -19559,7 +19559,7 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "VICTOR AXE",
+              "item": "SWORD OF DESPAIR",
               "rate": "1/787.69"
             },
             "Greenill": {
@@ -19708,12 +19708,12 @@
               "rate": "1/630.16"
             },
             "Skyly": {
-              "item": "STING TIP",
-              "rate": "1/128"
+              "item": "JUDGEMENT BLADE",
+              "rate": "1/630.16"
             },
             "Bluefull": {
-              "item": "STING TIP",
-              "rate": "1/128"
+              "item": "GUSH NEEDLE",
+              "rate": "1/630.16"
             },
             "Purplenum": {
               "item": "STING TIP",
@@ -20018,8 +20018,8 @@
               "rate": "1/4096.01"
             },
             "Whitill": {
-              "item": "STING TIP",
-              "rate": "1/256"
+              "item": "PARAGON FRAME",
+              "rate": "1/4096.01"
             }
           }
         },
@@ -20123,8 +20123,8 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "VICTOR AXE",
-              "rate": "1/1016.37"
+              "item": "AENSLAND",
+              "rate": "1/734.05"
             },
             "Greenill": {
               "item": "STANDSTILL SHIELD",
@@ -20374,8 +20374,8 @@
               "rate": "1/900.22"
             },
             "Purplenum": {
-              "item": "ATTRIBUTE WALL",
-              "rate": "1/900.22"
+              "item": "Kit of Twin Nidra",
+              "rate": "1/9362.42"
             },
             "Pinkal": {
               "item": "FATSIA",
@@ -20409,16 +20409,16 @@
               "rate": "1/1050.25"
             },
             "Greenill": {
-              "item": "Cure/Slow",
-              "rate": "1/1706.66"
+              "item": "INFERNO BLADE",
+              "rate": "1/1050.25"
             },
             "Skyly": {
               "item": "JUSTY-23ST",
               "rate": "1/213.33"
             },
             "Bluefull": {
-              "item": "ALIVE AQHU",
-              "rate": "1/213.33"
+              "item": "DEATH REAPER",
+              "rate": "1/1050.25"
             },
             "Purplenum": {
               "item": "L&K14 COMBAT",
@@ -20758,8 +20758,8 @@
               "rate": "1/393.85"
             },
             "Redria": {
-              "item": "DESERT EAGLE",
-              "rate": "1/393.85"
+              "item": "BERSERK NEEDLE",
+              "rate": "1/3723.7"
             },
             "Oran": {
               "item": "L&K38 COMBAT",
@@ -20781,7 +20781,7 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "STING TIP",
+              "item": "GALATINE",
               "rate": "1/787.69"
             },
             "Greenill": {
@@ -20828,7 +20828,7 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "AGITO",
+              "item": "Immortal/HP",
               "rate": "1/700.17"
             },
             "Greenill": {
@@ -20926,8 +20926,8 @@
               "rate": "1/182.86"
             },
             "Greenill": {
-              "item": "MAHU",
-              "rate": "1/182.86"
+              "item": "SUPPRESSED GUN",
+              "rate": "1/417.96"
             },
             "Skyly": {
               "item": "STANDSTILL SHIELD",
@@ -21001,8 +21001,8 @@
               "rate": "1/731.43"
             },
             "Yellowboze": {
-              "item": "YASMINKOV 7000V",
-              "rate": "1/787.69"
+              "item": "Soul of Morphos",
+              "rate": "1/8192.02"
             },
             "Whitill": {
               "item": "Dr. Robotnik's Plan B",
@@ -22368,8 +22368,8 @@
               "rate": "1/1820.43"
             },
             "Yellowboze": {
-              "item": "Heaven Striker Coat",
-              "rate": "1/1137.77"
+              "item": "Kit of Monster Burger",
+              "rate": "1/7281.73"
             },
             "Whitill": {
               "item": "Tempest Garment",
@@ -22458,8 +22458,8 @@
               "rate": "1/237.04"
             },
             "Oran": {
-              "item": "V501",
-              "rate": "1/237.04"
+              "item": "Kit of Hamburger",
+              "rate": "1/541.8"
             },
             "Yellowboze": {
               "item": "SPIRIT CUIRASS",
@@ -22759,7 +22759,7 @@
           "farm": "",
           "drops": {
             "Viridia": {
-              "item": "BLUE ODOSHI VIOLET NIMAIDOU",
+              "item": "X-PARTS ver3.10",
               "rate": "1/900.22"
             },
             "Greenill": {
@@ -22811,7 +22811,7 @@
             },
             "Greenill": {
               "item": "RING OF FIRE",
-              "rate": "1/787.69"
+              "rate": "1/393.85"
             },
             "Skyly": {
               "item": "LAME D'ARGENT",
@@ -23130,7 +23130,7 @@
           }
         },
         {
-          "name": "Saint Million",
+          "name": "Saint-Milion",
           "dar": "100%",
           "farm": "",
           "drops": {
