@@ -1405,6 +1405,33 @@
           "en": []
         }
       }
+    },
+        "Mini Event": {
+        "Phantasmal World #3 [Extreme] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Dr. Robotnik": {
+            "PHANTOM RAVEN 1/1280": "all ids"
+          },
+          "Sinow Azure": {
+            "Millennium Photon Core 1/450": "all ids"
+          },
+                    "Sinow Gore": {
+            "Millennium Photon Core 1/450": "all ids"
+          },
+                    "D-Virus Morfos": {
+            "Millennium Photon Core 1/450": "all ids"
+          },
+                    "Dark Nebulas": {
+            "Millennium Photon Core 1/450": "all ids"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
     }
   },
   "EP4": {

@@ -4281,5 +4281,68 @@
         }
       }
     }
+  },
+    {
+    "name": "Phantasmal World #3 [Extreme]",
+    "total": 485,
+    "monsters": {
+      "Dolmolm": 107,
+      "Dolmdarl": 61,
+      "Recobox": 56,
+      "D-Virus Morfos": 54,
+      "Dr. Robotnik": 44,
+      "Sinow Azure": 38,
+      "Yowie": 31,
+      "Sinow Gore": 30,
+      "Dark Nebulas": 29,
+      "Gibbles": 15,
+      "Girtablulu": 12,
+      "Ill Gill": 8
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "10": {
+        "floor_name": "Seabed Upper Levels",
+        "floor_id": 10,
+        "total": 229,
+        "monsters": {
+          "Dolmolm": 68,
+          "Dolmdarl": 34,
+          "D-Virus Morfos": 25,
+          "Recobox": 20,
+          "Sinow Azure": 19,
+          "Dark Nebulas": 13,
+          "Yowie": 13,
+          "Sinow Gore": 11,
+          "Dr. Robotnik": 8,
+          "Ill Gill": 8,
+          "Gibbles": 6,
+          "Girtablulu": 4
+        }
+      },
+      "11": {
+        "floor_name": "Seabed Lower Levels",
+        "floor_id": 11,
+        "total": 256,
+        "monsters": {
+          "Dolmolm": 39,
+          "Dr. Robotnik": 36,
+          "Recobox": 36,
+          "D-Virus Morfos": 29,
+          "Dolmdarl": 27,
+          "Sinow Gore": 19,
+          "Sinow Azure": 19,
+          "Yowie": 18,
+          "Dark Nebulas": 16,
+          "Gibbles": 9,
+          "Girtablulu": 8
+        }
+      }
+    }
   }
 ]
