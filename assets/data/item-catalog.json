@@ -10982,7 +10982,7 @@
             "cn": ""
         }
     },
-    "MADAM\u0027S BRACELET":{
+    "MADAM\u0027S BRACELET": {
         "superitem": 2,
         "image": "",
         "name": {
@@ -10993,7 +10993,7 @@
             "cn": ""
         }
     },
-    "LIGHTNING GARMENT":{
+    "LIGHTNING GARMENT": {
         "superitem": 2,
         "image": "",
         "name": {
@@ -11004,7 +11004,7 @@
             "cn": ""
         }
     },
-    "Blueprint\u003A Astral Dragon":{
+    "Blueprint\u003A Astral Dragon": {
         "superitem": 2,
         "image": "",
         "name": {
@@ -11015,7 +11015,7 @@
             "cn": ""
         }
     },
-    "AEGIS OF ISOLATION":{
+    "AEGIS OF ISOLATION": {
         "superitem": 2,
         "image": "",
         "name": {
@@ -11024,6 +11024,50 @@
         "description": {
             "en": "Blocks healing (Resta/Star) from other members, Maximizes heal power of monomate and dimate",
             "cn": "阻止队友对你的所有治疗效果, 提高小中HP回复药效果"
+        }
+    },
+    "Ragol Life Essence": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "拉古奥尔生命精华"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Kit of Twin Nidra": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "双蝎细胞"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Kit of Monster Burger": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "怪兽汉堡细胞"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Kit of Hamburger": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "汉堡包细胞"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
         }
     }
 }

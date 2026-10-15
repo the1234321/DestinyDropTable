@@ -1506,5 +1506,154 @@
         "monsters": {}
       }
     }
+  },
+   {
+    "name": "Brink of Oblivion [Limited-EX]",
+    "total": 394,
+    "monsters": {
+      "Yowie": 44,
+      "Merissa A": 43,
+      "Sand Rappy": 39,
+      "Satellite Lizard": 39,
+      "Goran": 37,
+      "Zu": 35,
+      "Goran Detonator": 34,
+      "Pyro Goran": 30,
+      "Meri Noir": 21,
+      "Tormentark": 19,
+      "Dorphon Divine": 19,
+      "Ba Boota": 17,
+      "Boota": 11,
+      "Ze Boota": 4,
+      "Pazuzu": 1,
+      "Saint-Milion / Kondrieu": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 141,
+        "monsters": {
+          "Yowie": 20,
+          "Ba Boota": 17,
+          "Tormentark": 16,
+          "Satellite Lizard": 16,
+          "Zu": 15,
+          "Dorphon Divine": 15,
+          "Boota": 11,
+          "Sand Rappy": 7,
+          "Meri Noir": 7,
+          "Merissa A": 5,
+          "Ze Boota": 4,
+          "Goran Detonator": 4,
+          "Pyro Goran": 2,
+          "Goran": 2
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 252,
+        "monsters": {
+          "Merissa A": 38,
+          "Goran": 35,
+          "Sand Rappy": 32,
+          "Goran Detonator": 30,
+          "Pyro Goran": 28,
+          "Yowie": 24,
+          "Satellite Lizard": 23,
+          "Zu": 20,
+          "Meri Noir": 14,
+          "Dorphon Divine": 4,
+          "Tormentark": 3,
+          "Pazuzu": 1
+        }
+      },
+      "9": {
+        "floor_name": "Meteor Impact Site",
+        "floor_id": 9,
+        "total": 1,
+        "monsters": {
+          "Saint-Milion / Kondrieu": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "Brink of Oblivion [Limited]",
+    "total": 309,
+    "monsters": {
+      "Yowie": 42,
+      "Sand Rappy": 39,
+      "Satellite Lizard": 39,
+      "Zu": 33,
+      "Goran": 29,
+      "Pyro Goran": 26,
+      "Merissa A": 25,
+      "Goran Detonator": 16,
+      "Ba Boota": 14,
+      "Boota": 13,
+      "Girtablulu": 11,
+      "Astark": 8,
+      "Dorphon": 8,
+      "Ze Boota": 4,
+      "Pazuzu": 1,
+      "Saint-Milion / Kondrieu": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Pioneer II",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Crater Interior",
+        "floor_id": 5,
+        "total": 105,
+        "monsters": {
+          "Yowie": 20,
+          "Satellite Lizard": 16,
+          "Zu": 15,
+          "Ba Boota": 14,
+          "Boota": 13,
+          "Astark": 8,
+          "Dorphon": 8,
+          "Sand Rappy": 7,
+          "Ze Boota": 4
+        }
+      },
+      "8": {
+        "floor_name": "Subterranean Desert 3",
+        "floor_id": 8,
+        "total": 203,
+        "monsters": {
+          "Sand Rappy": 32,
+          "Goran": 29,
+          "Pyro Goran": 26,
+          "Merissa A": 25,
+          "Satellite Lizard": 23,
+          "Yowie": 22,
+          "Zu": 18,
+          "Goran Detonator": 16,
+          "Girtablulu": 11,
+          "Pazuzu": 1
+        }
+      },
+      "9": {
+        "floor_name": "Meteor Impact Site",
+        "floor_id": 9,
+        "total": 1,
+        "monsters": {
+          "Saint-Milion / Kondrieu": 1
+        }
+      }
+    }
   }
 ]
