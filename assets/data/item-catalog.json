@@ -11069,5 +11069,16 @@
             "en": "",
             "cn": ""
         }
+    },
+    "Astral Essence": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "星界精华"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
     }
 }

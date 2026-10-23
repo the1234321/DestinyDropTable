@@ -4344,5 +4344,119 @@
         }
       }
     }
+  },
+    {
+    "name": "Hallowed World [Extreme]",
+    "total": 319,
+    "monsters": {
+      "Grim Reaper": 73,
+      "Del Lily": 66,
+      "Delbiter": 33,
+      "Gi Gue": 31,
+      "Gibbles": 30,
+      "Mericarol": 19,
+      "Merikle": 17,
+      "Mericus": 17,
+      "Recobox": 16,
+      "Epsilon": 16,
+      "Barba Ray": 1
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "2": {
+        "floor_name": "VR Temple Beta",
+        "floor_id": 2,
+        "total": 0,
+        "monsters": {}
+      },
+      "14": {
+        "floor_name": "VR Temple Final",
+        "floor_id": 14,
+        "total": 1,
+        "monsters": {
+          "Barba Ray": 1
+        }
+      },
+      "16": {
+        "floor_name": "Seaside Area at Night",
+        "floor_id": 16,
+        "total": 181,
+        "monsters": {
+          "Grim Reaper": 49,
+          "Del Lily": 34,
+          "Gibbles": 21,
+          "Delbiter": 21,
+          "Gi Gue": 15,
+          "Merikle": 12,
+          "Mericus": 9,
+          "Mericarol": 8,
+          "Epsilon": 8,
+          "Recobox": 4
+        }
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 137,
+        "monsters": {
+          "Del Lily": 32,
+          "Grim Reaper": 24,
+          "Gi Gue": 16,
+          "Delbiter": 12,
+          "Recobox": 12,
+          "Mericarol": 11,
+          "Gibbles": 9,
+          "Mericus": 8,
+          "Epsilon": 8,
+          "Merikle": 5
+        }
+      }
+    }
+  },
+  {
+    "name": "Walking through Flames [Halloween]",
+    "total": 279,
+    "monsters": {
+      "Del Lily": 47,
+      "Recobox": 37,
+      "Grim Reaper": 31,
+      "Epsilon": 29,
+      "Gi Gue": 27,
+      "Delbiter": 26,
+      "Merikle": 24,
+      "Mericarol": 24,
+      "Gibbles": 17,
+      "Mericus": 17
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "17": {
+        "floor_name": "Tower",
+        "floor_id": 17,
+        "total": 279,
+        "monsters": {
+          "Del Lily": 47,
+          "Recobox": 37,
+          "Grim Reaper": 31,
+          "Epsilon": 29,
+          "Gi Gue": 27,
+          "Delbiter": 26,
+          "Merikle": 24,
+          "Mericarol": 24,
+          "Gibbles": 17,
+          "Mericus": 17
+        }
+      }
+    }
   }
 ]

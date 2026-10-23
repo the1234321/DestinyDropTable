@@ -699,6 +699,34 @@
           "en": []
         }
       }
+    },
+    "Halloween": {
+      "Harmony of Despair II [Event]": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Headless Horseman": {
+            "BAT WING 1/730": "all ids"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Path to Salvation [Event]": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Headless Horseman": {
+            "BAT WING 1/730": "all ids"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
     }
   },
   "EP2": {
@@ -1352,10 +1380,14 @@
           }
         },
         "notes": {
-          "cn": ["区域路线图: 地下区域1 → 地下区域2 → 地下区域3 → Gal Gryphon 和 Gol Dragon (隐藏BOSS)",
-        "完成此任务后，NPC 会用你的Photon Token兑换Legendary Item Crate。(5:5 或  1:1)他每局游戏只会兑换一到两次，而且仅限U难度"],
-          "en": ["areas: Underground Area1 → Underground Area2 → Underground Area3 → Gal Gryphon and Gol Dragon (Secret)",
-        "After completing this quest, NPC  will exchange your Photon Token for Legendary Item Crate(5:5 or 1:1). He only trades once or twice per 1 run and ultimate only"]
+          "cn": [
+            "区域路线图: 地下区域1 → 地下区域2 → 地下区域3 → Gal Gryphon 和 Gol Dragon (隐藏BOSS)",
+            "完成此任务后，NPC 会用你的Photon Token兑换Legendary Item Crate。(5:5 或  1:1)他每局游戏只会兑换一到两次，而且仅限U难度"
+          ],
+          "en": [
+            "areas: Underground Area1 → Underground Area2 → Underground Area3 → Gal Gryphon and Gol Dragon (Secret)",
+            "After completing this quest, NPC  will exchange your Photon Token for Legendary Item Crate(5:5 or 1:1). He only trades once or twice per 1 run and ultimate only"
+          ]
         }
       },
       "VR Test Destiny: Meteor Impact ⭐⭐⭐⭐⭐⭐": {
@@ -1379,7 +1411,7 @@
       }
     },
     "Anniversary": {
-        "World of Illusion/pso ⭐⭐⭐⭐⭐⭐": {
+      "World of Illusion/pso ⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
         "drops": {
@@ -1406,8 +1438,8 @@
         }
       }
     },
-        "Mini Event": {
-        "Phantasmal World #3 [Extreme] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
+    "Mini Event": {
+      "Phantasmal World #3 [Extreme] ⭐⭐⭐⭐⭐⭐⭐⭐⭐": {
         "requirement": "",
         "reward": "",
         "drops": {
@@ -1417,14 +1449,43 @@
           "Sinow Azure": {
             "Millennium Photon Core 1/450": "all ids"
           },
-                    "Sinow Gore": {
+          "Sinow Gore": {
             "Millennium Photon Core 1/450": "all ids"
           },
-                    "D-Virus Morfos": {
+          "D-Virus Morfos": {
             "Millennium Photon Core 1/450": "all ids"
           },
-                    "Dark Nebulas": {
+          "Dark Nebulas": {
             "Millennium Photon Core 1/450": "all ids"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      }
+    },
+    "Halloween": {
+      "Hallowed World [Extreme]": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Grim Reaper": {
+            "ASTRAL ESSENCE 1/1400": "all ids"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
+      },
+      "Walking through Flames [Halloween]": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Grim Reaper": {
+            "ILL GILL REAPER 1/930": "Viridia, Greenill, Skyly,  Bluefull, Purplenum",
+            "LAST EMPEROR 1/930": "Pinkal, Redria,  Oran, Yellowboze, Whitill"
           }
         },
         "notes": {
@@ -1472,8 +1533,12 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": ["必出Dorphon Eclair"],
-          "en": ["has a guaranteed Dorphon Eclair spawn"]
+          "cn": [
+            "必出Dorphon Eclair"
+          ],
+          "en": [
+            "has a guaranteed Dorphon Eclair spawn"
+          ]
         }
       },
       "Maximum Attack S ⭐⭐⭐⭐⭐": {
@@ -1519,8 +1584,12 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": ["任务开始时可快速清理两轮Sand Rappy"],
-          "en": ["Clear 2 spawns of Sand Rappy fastly"]
+          "cn": [
+            "任务开始时可快速清理两轮Sand Rappy"
+          ],
+          "en": [
+            "Clear 2 spawns of Sand Rappy fastly"
+          ]
         }
       },
       "Maximum Attack 4th Stage -B- ⭐⭐⭐": {
@@ -1528,8 +1597,12 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": ["任务开始时可快速清理两轮Sand Rappy"],
-          "en": ["Clear 2 spawns of Sand Rappy fastly"]
+          "cn": [
+            "任务开始时可快速清理两轮Sand Rappy"
+          ],
+          "en": [
+            "Clear 2 spawns of Sand Rappy fastly"
+          ]
         }
       },
       "Maximum Attack 4th Stage -C- ⭐⭐⭐": {
@@ -1537,8 +1610,12 @@
         "reward": "",
         "drops": {},
         "notes": {
-          "cn": ["任务开始时可快速清理两轮Sand Rappy"],
-          "en": ["Clear 2 spawns of Sand Rappy fastly"]
+          "cn": [
+            "任务开始时可快速清理两轮Sand Rappy"
+          ],
+          "en": [
+            "Clear 2 spawns of Sand Rappy fastly"
+          ]
         }
       }
     },
@@ -1668,12 +1745,12 @@
         "requirement": "",
         "reward": "",
         "drops": {
-            "Saint-Milion": {
+          "Saint-Milion": {
             "Ragol Life Essence 1/39": "all ids"
-            },
-            "Kondrieu":{
-              "Ragol Life Essence 1/32": "all ids"
-            }
+          },
+          "Kondrieu": {
+            "Ragol Life Essence 1/32": "all ids"
+          }
         },
         "notes": {
           "cn": [],
@@ -1684,15 +1761,15 @@
         "requirement": "",
         "reward": "Weapons Crystal Badge",
         "drops": {
-            "Saint-Milion": {
+          "Saint-Milion": {
             "Ragol Life Essence 1/16": "all ids"
-            },
-            "Kondrieu":{
-              "Ragol Life Essence 1/12": "all ids"
-            },
-            "Custom Enemies":{
-              "Millennium Photon Core 1/???": "all ids"
-            }
+          },
+          "Kondrieu": {
+            "Ragol Life Essence 1/12": "all ids"
+          },
+          "Custom Enemies": {
+            "Millennium Photon Core 1/???": "all ids"
+          }
         },
         "notes": {
           "cn": [],
