@@ -272,12 +272,90 @@ tbody td:hover{
     font-size:10px; /* 掉率字体稍大 */
     color:#ffffff;
 }
-.monster-name{ 
-    /* font-weight:bold;      */
+.monster-name{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
     font-weight:700;
     font-size:16px; /* 怪物名稍大 */
 }
+.monster-name[data-difficulty="1"]{ color:#ff6868; text-shadow:0 0 8px rgba(255,60,60,.22); }
 .dar{ color:#facc15; font-size:16px; }
+.monster-cell[data-monster] { text-align:center; }
+.monster-cell.has-quest-data { cursor:help; }
+.monster-quest-tooltip {
+    position: fixed;
+    z-index: 10001;
+    display: none;
+    width: max-content;
+    max-width: min(390px, 86vw);
+    padding: 10px 12px;
+    border: 1px solid rgba(98, 212, 255, .42);
+    border-radius: 9px;
+    background: rgba(8, 18, 34, .97);
+    color: #e6eefb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .42);
+    pointer-events: none;
+    font: 13px/1.45 "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+.monster-quest-tooltip__heading {
+    margin-bottom: 7px;
+    color: #8be7fa;
+    font-weight: 800;
+}
+.monster-quest-tooltip__header {
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin-bottom:7px;
+    color:#8be7fa;
+    font-weight:800;
+}
+.monster-quest-tooltip__image { width:42px; height:42px; flex:none; object-fit:contain; }
+.monster-quest-tooltip__list { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
+.monster-quest-tooltip__row {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 6px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, .045);
+}
+.monster-quest-tooltip__rank {
+    display: grid;
+    width: 18px;
+    height: 18px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(98, 212, 255, .14);
+    color: #8be7fa;
+    font-size: 11px;
+    font-weight: 800;
+}
+.monster-quest-tooltip__context { color: #a9bad0; font-size: 11px; }
+.monster-quest-tooltip__title { color: #f2d58a; font-weight: 700; overflow-wrap: anywhere; }
+.monster-quest-tooltip__count { color: #fff; font-weight: 800; white-space: nowrap; }
+.monster-quest-tooltip__empty { color: #a9bad0; }
+.tooltip-monster-quests {
+    margin-top:10px;
+    padding-top:9px;
+    border-top:1px solid rgba(98,212,255,.28);
+}
+.tooltip-monster-quests .monster-quest-tooltip__header { font-size:12px; }
+.tooltip-monster-quests .monster-quest-tooltip__image { width:32px; height:32px; }
+.tooltip-mag {
+    margin:8px 0;
+    padding:8px 10px;
+    border:1px solid rgba(98,212,255,.28);
+    border-radius:7px;
+    background:rgba(98,212,255,.06);
+}
+.tooltip-mag__heading { margin-bottom:5px; color:#8be7fa; font-weight:800; }
+.tooltip-mag__row { display:flex; justify-content:space-between; gap:16px; padding:2px 0; }
+.tooltip-mag__row span { color:#a9bad0; }
+.tooltip-mag__row strong { color:#f2d58a; text-align:right; }
 
 
 
@@ -465,14 +543,13 @@ tbody td:hover{
     font-size: 12px;
     line-height: 1.4;
     width:auto;
-    max-width: min(800px, 80vw);
-    max-height: 80vh;
+    max-width: min(1000px, 90vw);
     white-space: normal;    /* 自动换行 */
     word-wrap: break-word;  /* 长词自动换行 */
     overflow-wrap: break-word;
     display: none;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: visible;
+    pointer-events: none;
 }
 
 .tooltip-name{

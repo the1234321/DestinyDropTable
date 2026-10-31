@@ -1,0 +1,463 @@
+{
+  "rules": [
+    {
+      "title": { "cn": "禁止读取游戏内存", "en": "No game-memory reading" },
+      "content": {
+        "cn": "不允许使用任何插件读取内存，只允许使用 D 服专用地板读取器，以防止作弊。",
+        "en": "Plugins that read game memory are not allowed. Only the Destiny-specific floor reader may be used, to prevent cheating."
+      }
+    },
+    {
+      "title": { "cn": "每日系统", "en": "Daily reward system" },
+      "content": {
+        "cn": "每个账号每天可获取一个箱子（有概率获得超级装备）；每个 IP 每天最多获取两个。超出的箱子会被 GM 回收。",
+        "en": "Each account can receive one box per day, with a chance to contain super equipment. Each IP is limited to two boxes per day. Extra boxes will be reclaimed by a GM."
+      }
+    },
+    {
+      "title": { "cn": "多开限制", "en": "Multi-client limits" },
+      "content": {
+        "cn": "允许同时运行多个客户端，账号数量不限，但仅限在账号之间转移道具；不允许多开同时刷图，否则可能封号。",
+        "en": "Running multiple clients is allowed, with no account-count limit, but only for transferring items between your own accounts. Do not run multiple clients to farm simultaneously; doing so may result in a ban."
+      }
+    },
+    {
+      "title": { "cn": "角色配点", "en": "Character builds" },
+      "content": {
+        "cn": "D 服角色能力上限较高，其他服务器的配点方案可能不兼容。请参考 200 级配点攻略。",
+        "en": "Destiny characters have higher stat caps, so builds from other servers may not be compatible. See the level-200 build guide."
+      }
+    },
+    {
+      "title": { "cn": "交流规范", "en": "Respectful conduct" },
+      "content": {
+        "cn": "请勿在游戏内持续辱骂、攻击他人或进行诈骗。D 服允许充值购买装备，请谨慎交易。",
+        "en": "Do not repeatedly insult or attack others in chat, and do not scam. Destiny allows equipment purchases with donations, so trade carefully."
+      }
+    },
+    {
+      "title": { "cn": "玩家交易", "en": "Player trading" },
+      "content": {
+        "cn": "游戏内交易通常在 Discord 社区交易区进行；也可以委托群友或直接与群友交易。",
+        "en": "In-game trades are usually arranged in the Discord community's trading channel. You may ask a community member to help or trade with them directly."
+      }
+    }
+  ],
+  "commandGroups": [
+    {
+      "title": { "cn": "仓库与任务", "en": "Storage and quests" },
+      "commands": [
+        {
+          "name": "/bank",
+          "recommended": true,
+          "summary": {
+            "cn": "在角色仓库与公共仓库之间切换。",
+            "en": "Switch between your character bank and the shared bank."
+          },
+          "details": {
+            "cn": ["公共仓库由同一账号下的所有角色共享。"],
+            "en": ["The shared bank is accessible to every character on the same account."]
+          }
+        },
+        {
+          "name": "/lobby",
+          "recommended": true,
+          "summary": {
+            "cn": "从当前任务传送至大厅。",
+            "en": "Return to the lobby from your current quest."
+          },
+          "details": {
+            "cn": ["仅在执行任务时有效。"],
+            "en": ["This command only works while you are on a quest."]
+          }
+        },
+        {
+          "name": "/daily",
+          "summary": {
+            "cn": "查看当前生效的每日任务及其剩余时间。",
+            "en": "Check the active daily quest and its remaining time."
+          },
+          "details": {
+            "cn": ["每日任务会掉落每日宝箱。若你位于正确的任务地图并使用此指令，系统会显示“激活”状态。"],
+            "en": ["The daily quest drops a daily box. If you are in the correct quest area, this command shows the quest as “active.”"]
+          }
+        }
+      ]
+    },
+    {
+      "title": { "cn": "角色与配点", "en": "Character and materials" },
+      "commands": [
+        {
+          "name": "/sectionid #",
+          "summary": {
+            "cn": "修改角色的颜色编号；# 为 0 到 9。",
+            "en": "Change your character's Section ID. Replace # with a number from 0 to 9."
+          },
+          "details": {
+            "cn": ["使用后请切换场景或重新登录，避免玛古喂食异常。"],
+            "en": ["After changing your ID, switch areas or log in again to avoid Mag-feeding issues."]
+          },
+          "sectionIds": [
+            { "id": 0, "name": { "cn": "铬绿", "en": "Viridia" }, "image": "Viridia.png" },
+            { "id": 1, "name": { "cn": "翠绿", "en": "Greenill" }, "image": "Greenill.png" },
+            { "id": 2, "name": { "cn": "天青", "en": "Skyly" }, "image": "Skyly.png" },
+            { "id": 3, "name": { "cn": "纯蓝", "en": "Bluefull" }, "image": "Bluefull.png" },
+            { "id": 4, "name": { "cn": "淡紫", "en": "Purplenum" }, "image": "Purplenum.png" },
+            { "id": 5, "name": { "cn": "粉红", "en": "Pinkal" }, "image": "Pinkal.png" },
+            { "id": 6, "name": { "cn": "真红", "en": "Redria" }, "image": "Redria.png" },
+            { "id": 7, "name": { "cn": "橙黄", "en": "Oran" }, "image": "Oran.png" },
+            { "id": 8, "name": { "cn": "金黄", "en": "Yellowboze" }, "image": "Yellowboze.png" },
+            { "id": 9, "name": { "cn": "羽白", "en": "Whitill" }, "image": "Whitill.png" }
+          ]
+        },
+        {
+          "name": "/matcount",
+          "summary": {
+            "cn": "显示当前已使用的各类能力药数量。",
+            "en": "Show how many of each type of Material you have used."
+          },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/matreset #",
+          "summary": {
+            "cn": "重置能力药使用计数；# 为 1 到 5。输入后需切换场景生效，并需执行两次确认。",
+            "en": "Reset a Material usage counter. Replace # with 1–5. Switch areas for the change to take effect; run the command twice to confirm."
+          },
+          "details": {
+            "cn": ["1：攻击；2：精神；3：回避；4：防御；5：运气。", "注意：无法重置 HP / TP 药的计数。"],
+            "en": ["1: Power; 2: Mind; 3: Evade; 4: Defense (Def); 5: Luck.", "HP and TP Material counters cannot be reset."]
+          }
+        },
+        {
+          "name": "/npc #",
+          "summary": {
+            "cn": "使用特殊装扮；# 为 0 到 11。",
+            "en": "Apply a special character costume. Replace # with a number from 0 to 11."
+          },
+          "details": {
+            "cn": ["使用前请先前往更衣室，将头部/发型更换为第一个型号。", "0：默认（原角色）；1：忍者；2：暗影；3：索尼克；4：纳克鲁斯；5：塔尔斯；6：大叔（EP2）；7：艾莉（EP2）；8：桃子（EP4）；9：艾米；10：公会/仓库职员；11：希尔弗。"],
+            "en": ["Before using this command, visit the dressing room and set the head/hair model to the first option.", "0: Default; 1: Ninja; 2: Shadow; 3: Sonic; 4: Knuckles; 5: Tails; 6: Uncle (EP2); 7: Elly (EP2); 8: Momoka (EP4); 9: Amy; 10: Guild/Shop Staff; 11: Silver."]
+          }
+        },
+        {
+          "name": "/skin #",
+          "summary": {
+            "cn": "更改肤色；# 为 1 到 4。仅适用于机器人职业以外的角色。",
+            "en": "Change your skin tone. Replace # with 1–4. This only works for non-CAST classes."
+          },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/face #",
+          "summary": {
+            "cn": "更改面部造型；# 为 1 到 5。仅适用于机器人职业以外的角色。",
+            "en": "Change your face style. Replace # with 1–5. This only works for non-CAST classes."
+          },
+          "details": { "cn": [], "en": [] }
+        }
+      ]
+    },
+    {
+      "title": { "cn": "房间与玩家", "en": "Room and players" },
+      "commands": [
+        {
+          "name": "/setpass #",
+          "summary": { "cn": "将当前房间密码修改为 #。", "en": "Set the current room password to #." },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/setname #",
+          "summary": { "cn": "将当前房间名称修改为 #。", "en": "Set the current room name to #." },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/roll",
+          "summary": {
+            "cn": "随机掷出 0 到 100 之间的数字，并向房间内所有成员显示。",
+            "en": "Roll a random number from 0 to 100 and show it to everyone in the room."
+          },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/guildcards",
+          "summary": {
+            "cn": "查看当前大厅或房间内所有玩家的公会名片。",
+            "en": "View the Guild Cards of all players in the current lobby or room."
+          },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/ignore #",
+          "summary": {
+            "cn": "屏蔽指定玩家；# 为其公会名片编号。",
+            "en": "Ignore a player. Replace # with their Guild Card number."
+          },
+          "details": {
+            "cn": ["如需解除屏蔽，请在账号设置中清除屏蔽列表。"],
+            "en": ["To unblock a player, clear the block list in your account settings."]
+          }
+        },
+        {
+          "name": "房间 ID 颜色段",
+          "nameEn": "Room Section ID",
+          "summary": {
+            "cn": "按 Tab 键查看当前房间的颜色编号。",
+            "en": "Press Tab to view the Section ID color of your current room."
+          },
+          "details": { "cn": [], "en": [] }
+        }
+      ]
+    },
+    {
+      "title": { "cn": "活动与系统信息", "en": "Events and system information" },
+      "commands": [
+        {
+          "name": "/hh",
+          "summary": {
+            "cn": "双倍掉率活动进行时，查看剩余时间（分钟）。",
+            "en": "While Happy Hours is active, check how many minutes remain."
+          },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/xp",
+          "summary": {
+            "cn": "经验加倍活动进行时，查看剩余时间（分钟）。",
+            "en": "While an XP Boost is active, check how many minutes remain."
+          },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/roominfo",
+          "summary": {
+            "cn": "显示房间详细信息：经验倍率、掉落倍率、房主 ID 颜色段及难度。",
+            "en": "Show room details: EXP and drop rates, host ID color, and difficulty."
+          },
+          "details": { "cn": [], "en": [] }
+        },
+        {
+          "name": "/killcount",
+          "summary": {
+            "cn": "显示封印物品当前的击杀总数。",
+            "en": "Show the current kill count for a sealed item."
+          },
+          "details": {
+            "cn": ["若击杀数已满但物品尚未解封，请尝试切换场景。"],
+            "en": ["If the required count is reached but the item has not unlocked, try switching areas."]
+          }
+        },
+        {
+          "name": "/arrow #",
+          "summary": {
+            "cn": "在头顶显示彩色箭头；# 为颜色编号。",
+            "en": "Display a colored arrow above your character. Replace # with a color number."
+          },
+          "details": {
+            "cn": ["0：无；1：红；2：蓝；3：绿；4：黄；5：紫；6：青；7：橙；8：粉；9–11：白；12：黑；13 及以上：无箭头。"],
+            "en": ["0: None; 1: Red; 2: Blue; 3: Green; 4: Yellow; 5: Purple; 6: Cyan; 7: Orange; 8: Pink; 9–11: White; 12: Black; 13 or higher: No arrow."]
+          }
+        },
+        {
+          "name": "/controller #",
+          "summary": {
+            "cn": "按指定类型自动设置控制器配置。",
+            "en": "Automatically configure a controller profile by type."
+          },
+          "details": {
+            "cn": ["1：原生 PS4 控制器；2：Xbox One 控制器（即将推出）；3：Xbox 360 控制器。", "使用 DS4Windows 等驱动程序时，请选择 3（Xbox 360）。"],
+            "en": ["1: Native PS4 controller; 2: Xbox One controller (coming soon); 3: Xbox 360 controller.", "If you use a driver such as DS4Windows, choose 3 (Xbox 360)."]
+          }
+        }
+      ]
+    }
+  ],
+  "statPlan": {
+    "intro": {
+      "cn": "PSOBB Destiny 服务器 200 级全职业配点攻略",
+      "en": "PSOBB Destiny Server: Level-200 Builds for All Classes"
+    },
+    "principles": [
+      {
+        "title": { "cn": "核心加点原则", "en": "Core build principles" },
+        "content": {
+          "cn": "D 服全部职业属性上限上调，很难让所有属性都达到黄字，因此需要有所取舍。优先级：命中（ATA）> 攻击（POW）/精神（MIND）> 幸运（LUCK）。防御力和回避力可按剩余药位及个人喜好补充。",
+          "en": "Destiny raises the stat caps for all classes, so reaching yellow numbers in every stat is difficult and requires trade-offs. Priority: Accuracy (ATA) > ATP (POW) / MST (MIND) > Luck (LUCK). Use remaining Material slots for DFP or EVP according to preference."
+        }
+      },
+      {
+        "title": { "cn": "通用玛古参考", "en": "General Mag reference" },
+        "content": {
+          "cn": "大部分职业可以通用 0/130/70/0 属性的 MAG，但这不是最佳方案。",
+          "en": "A 0/130/70/0 MAG can work for most classes, but it is not an optimal build."
+        }
+      },
+      {
+        "title": { "cn": "常用插件说明", "en": "Common unit notes" },
+        "content": {
+          "cn": "V802（加速插件）：施法速度 +100%，本攻略默认 FO 全程佩戴。V503（属性增强）：提升 ATP 等属性。抗性装方案若计入 V503 提供的 ATP，可能导致攻击（POW）无法达到黄字，因此本表不将其计入计算。",
+          "en": "V802 (cast-speed unit) increases casting speed by 100%; this guide assumes Forces wear it at all times. V503 (stat-boosting unit) increases ATP and other stats. Since counting its ATP can prevent POW from reaching yellow numbers in resistance builds, it is not included in the calculations below."
+        }
+      },
+      {
+        "title": { "cn": "方案说明", "en": "About these builds" },
+        "content": {
+          "cn": "本方案为官方/资深玩家推荐路线，并非强制标准，请根据实际战斗需求决定是否采用。",
+          "en": "These builds are recommendations from the server and experienced players, not requirements. Choose a build that fits your combat needs."
+        }
+      }
+    ],
+    "classes": [
+      {
+        "group": { "cn": "猎人 HU", "en": "Hunters (HU)" },
+        "name": "HUmar",
+        "nickname": "废材",
+        "mag": "DEF 0 / POW 129 / DEX 71 / MIND 0",
+        "materials": { "cn": "攻击力 148，运 45", "en": "148 Power, 45 Luck" },
+        "remaining": 57
+      },
+      {
+        "group": { "cn": "猎人 HU", "en": "Hunters (HU)" },
+        "name": "HUnewearl",
+        "nickname": "花瓶",
+        "mag": "DEF 0 / POW 137 / DEX 63 / MIND 0",
+        "materials": { "cn": "攻击力 71，运 45", "en": "71 Power, 45 Luck" },
+        "remaining": 34,
+        "notes": {
+          "cn": ["推荐 HP 1930（需 96 个 HP 药水），是触发无敌的最佳选择。"],
+          "en": ["Recommended HP: 1930 (requires 96 HP Materials); an excellent choice for triggering invincibility."]
+        }
+      },
+      {
+        "group": { "cn": "猎人 HU", "en": "Hunters (HU)" },
+        "name": "HUcast",
+        "nickname": "旦那",
+        "mag": "DEF 0 / POW 115 / DEX 85 / MIND 0",
+        "materials": { "cn": "攻击力 105，运 45", "en": "105 Power, 45 Luck" },
+        "remaining": 0,
+        "notes": {
+          "cn": ["D 服 HUcast 攻击力黄字高达 1800，此方案最后还差 5 点才变黄。若要最大化攻击力，建议增加 V503 或减少运气药。"],
+          "en": ["Destiny HUcast reaches 1800 ATP at yellow numbers, and this build falls 5 points short. To maximize ATP, add V503 or use fewer Luck Materials."]
+        }
+      },
+      {
+        "group": { "cn": "猎人 HU", "en": "Hunters (HU)" },
+        "name": "HUcaseal",
+        "nickname": "女忍",
+        "mag": "DEF 0 / POW 133 / DEX 67 / MIND 0",
+        "materials": { "cn": "攻击力 67，运 45", "en": "67 Power, 45 Luck" },
+        "remaining": 38,
+        "notes": {
+          "cn": ["推荐 HP 1930（需 31 个 HP 药水），是触发无敌的最佳选择。"],
+          "en": ["Recommended HP: 1930 (requires 31 HP Materials); an excellent choice for triggering invincibility."]
+        }
+      },
+      {
+        "group": { "cn": "枪手 RA", "en": "Rangers (RA)" },
+        "name": "RAmar",
+        "nickname": "军哥",
+        "mag": "DEF 0 / POW 142 / DEX 58 / MIND 0",
+        "materials": { "cn": "攻击力 170，运 45", "en": "170 Power, 45 Luck" },
+        "remaining": 35
+      },
+      {
+        "group": { "cn": "枪手 RA", "en": "Rangers (RA)" },
+        "name": "RAmarl",
+        "nickname": "军嫂",
+        "mag": "DEF 0 / POW 131 / DEX 69 / MIND 0",
+        "materials": { "cn": "攻击力 148，运 45", "en": "148 Power, 45 Luck" },
+        "remaining": 57
+      },
+      {
+        "group": { "cn": "枪手 RA", "en": "Rangers (RA)" },
+        "name": "RAcast",
+        "nickname": "坦克",
+        "mag": "DEF 0 / POW 130 / DEX 70 / MIND 0",
+        "materials": { "cn": "攻击力 101，运 45", "en": "101 Power, 45 Luck" },
+        "remaining": 4
+      },
+      {
+        "group": { "cn": "枪手 RA", "en": "Rangers (RA)" },
+        "name": "RAcaseal",
+        "nickname": "女仆",
+        "mag": "DEF 0 / POW 136 / DEX 64 / MIND 0",
+        "materials": { "cn": "攻击力 99，运 45", "en": "99 Power, 45 Luck" },
+        "remaining": 6,
+        "notes": {
+          "cn": ["装备 Immortal/Ability 可达成全属性最大化，但并非必要。"],
+          "en": ["Immortal/Ability can maximize all stats, but it is not required."]
+        }
+      },
+      {
+        "group": { "cn": "法师 FO", "en": "Forces (FO)" },
+        "name": "FOmar",
+        "nickname": "农夫",
+        "routes": [
+          {
+            "name": { "cn": "攻击力黄字路线", "en": "Yellow ATP build" },
+            "mag": "DEF 0 / POW 127 / DEX 73 / MIND 0",
+            "materials": { "cn": "攻击 90，精神 115，运 45", "en": "90 Power, 115 Mind, 45 Luck" },
+            "remaining": 0,
+            "notes": {
+              "cn": ["精神力差 84 点达到最大值；无 V802 无法装备 SKYFALL。"],
+              "en": ["MST is 84 points below its maximum; SKYFALL cannot be equipped without V802."]
+            }
+          },
+          {
+            "name": { "cn": "精神力黄字路线", "en": "Yellow MST build" },
+            "mag": "DEF 0 / POW 0 / DEX 73 / MIND 127",
+            "materials": { "cn": "攻击 175，精神 30，运 45", "en": "175 Power, 30 Mind, 45 Luck" },
+            "remaining": 0,
+            "notes": {
+              "cn": ["攻击力差 83 点达到最大值。"],
+              "en": ["ATP is 83 points below its maximum."]
+            }
+          }
+        ]
+      },
+      {
+        "group": { "cn": "法师 FO", "en": "Forces (FO)" },
+        "name": "FOmarl",
+        "nickname": "人妻",
+        "routes": [
+          {
+            "name": { "cn": "攻击力黄字路线", "en": "Yellow ATP build" },
+            "mag": "DEF 0 / POW 129 / DEX 71 / MIND 0",
+            "materials": { "cn": "攻击 88，精神 117，运 45", "en": "88 Power, 117 Mind, 45 Luck" },
+            "remaining": 0,
+            "notes": {
+              "cn": ["精神力差 80 点达到最大值；无 V802 可装备 SKYFALL。"],
+              "en": ["MST is 80 points below its maximum; SKYFALL can be equipped without V802."]
+            }
+          },
+          {
+            "name": { "cn": "精神力黄字路线", "en": "Yellow MST build" },
+            "mag": "DEF 0 / POW 0 / DEX 71 / MIND 129",
+            "materials": { "cn": "攻击 177，精神 28，运 45", "en": "177 Power, 28 Mind, 45 Luck" },
+            "remaining": 0,
+            "notes": {
+              "cn": ["攻击力差 79 点达到最大值。"],
+              "en": ["ATP is 79 points below its maximum."]
+            }
+          }
+        ]
+      },
+      {
+        "group": { "cn": "法师 FO", "en": "Forces (FO)" },
+        "name": "FOnewm",
+        "nickname": "猴子",
+        "mag": "DEF 0 / POW 106 / DEX 94 / MIND 0",
+        "materials": { "cn": "攻击力 38，精神力 61，运 45", "en": "38 Power, 61 Mind, 45 Luck" },
+        "remaining": 6
+      },
+      {
+        "group": { "cn": "法师 FO", "en": "Forces (FO)" },
+        "name": "FOnewearl",
+        "nickname": "萝莉",
+        "mag": "DEF 0 / POW 103 / DEX 97 / MIND 0",
+        "materials": { "cn": "攻击力 64，精神力 45，运 45", "en": "64 Power, 45 Mind, 45 Luck" },
+        "remaining": 41
+      }
+    ]
+  }
+}

@@ -2,6 +2,9 @@ let language = localStorage.getItem("wiki-language") || "en";
 let messages = {};
 let itemData = {};
 let monsterTranslations = {};
+let monsterCatalog = {};
+let monsterCatalogByLowercase = {};
+let monsterCatalogPromise;
 let typeTranslations = {};
 let activityTranslations = {};
 let questAreaTranslations = {};
@@ -12,17 +15,50 @@ let boostTechniques = new Set();
 let databaseTranslations = {};
 let classTranslations = {};
 let translationDataPromise;
+const jsonDataCache = new Map();
+
+function loadJson(path) {
+    if (!jsonDataCache.has(path)) {
+        const request = fetch(path)
+            .then(response => {
+                if (!response.ok) throw new Error(`Could not load ${path}: ${response.status}`);
+                return response.json();
+            })
+            .catch(error => {
+                jsonDataCache.delete(path);
+                throw error;
+            });
+        jsonDataCache.set(path, request);
+    }
+    return jsonDataCache.get(path);
+}
+
+window.WIKI_DATA = { loadJson };
 
 const LANGUAGE_LABELS = { cn: "中文", en: "English" };
 const DEFAULT_UI = {
     "nav.drops": "Drop Table",
     "nav.commands": "New Player Guide",
+    "guide.eyebrow": "Destiny New Player Guide",
+    "guide.serverRules": "Server Rules",
+    "guide.commonCommands": "Common Commands",
+    "guide.level200": "Level-200 Builds",
+    "guide.localization": "Chinese Localization",
+    "guide.recommended": "Recommended shortcut",
+    "guide.mag": "Mag build",
+    "guide.materials": "Material allocation",
+    "guide.remaining": "Slots remaining",
+    "guide.loadError": "Could not load guide content.",
+    "guide.menuHeading": "NEW PLAYER GUIDE",
     "nav.localization": "Localization Guide",
     "nav.dictionary": "Bilingual Dictionary",
     "nav.currency": "Currency",
     "nav.special": "Special Drops",
     "nav.bazaar": "Bazaar",
-    "nav.effects": "Endgame Gear",
+    "nav.crafting": "Crafting / Sets",
+    "crafting.recipes": "Crafting",
+    "crafting.sets": "Sets",
+    "crafting.menuHeading": "CRAFTING / SETS",
     "nav.quests": "Quest Guide",
     "nav.database": "Equipment Database",
     "brand": "Destiny Server Wiki",
@@ -133,17 +169,26 @@ function translatedBoostParts(value) {
 
 function loadTranslationData() {
     if (!translationDataPromise) {
-        translationDataPromise = fetch("assets/data/translation/cn.json?v=20261031-2").then(response => {
-            if (!response.ok) throw new Error(`Could not load Chinese translations: ${response.status}`);
-            return response.json();
-        });
+        translationDataPromise = loadJson("assets/data/translation/cn.json?v=20261031-2");
     }
     return translationDataPromise;
 }
 
+function loadMonsterCatalog() {
+    if (!monsterCatalogPromise) {
+        monsterCatalogPromise = loadJson("assets/data/monster-catalog.json").then(catalog => {
+            monsterCatalog = catalog;
+            monsterCatalogByLowercase = Object.fromEntries(
+                Object.entries(catalog).map(([name, value]) => [name.toLocaleLowerCase(), value])
+            );
+        });
+    }
+    return monsterCatalogPromise;
+}
+
 async function loadLanguage(nextLanguage) {
     const selected = nextLanguage === "en" ? "en" : "cn";
-    const translation = await loadTranslationData();
+    const [translation] = await Promise.all([loadTranslationData(), loadMonsterCatalog()]);
     const localized = selected === "cn";
     language = selected;
     const effectMessages = Object.fromEntries(
@@ -208,6 +253,16 @@ window.WIKI_I18N = {
     },
     getMonsterEntries() {
         return Object.entries(monsterTranslations);
+    },
+    getMonsterCatalogEntries() {
+        return Object.keys(monsterCatalog).map(name => [name, this.getMonsterMeta(name)]);
+    },
+    getMonsterMeta(monsterId) {
+        const info = monsterCatalog[monsterId] || monsterCatalogByLowercase[String(monsterId).toLocaleLowerCase()];
+        return {
+            image: typeof info?.image === "string" ? info.image : "",
+            difficulty: info?.difficulty === 1 ? 1 : 0
+        };
     },
     getActivity(value) { return activityTranslations[value] || value; },
     getQuestArea(value) { return questAreaTranslations[value] || value; },

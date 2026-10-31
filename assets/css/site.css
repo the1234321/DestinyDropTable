@@ -15,7 +15,7 @@
   align-items: center;
   gap: 10px;
   padding: 12px max(16px, calc((100vw - 1800px) / 2));
-  overflow-x: hidden;
+  overflow: visible;
   padding-right: 150px;
   background: linear-gradient(90deg, rgba(6, 15, 30, .97), rgba(16, 35, 62, .95), rgba(6, 15, 30, .97));
   backdrop-filter: blur(14px);
@@ -35,6 +35,81 @@
 .wiki-site-nav .wiki-brand { margin-right: 12px; }
 .wiki-site-nav [data-view="localization"][hidden] { display: none; }
 
+.wiki-nav-dropdown { position: relative; flex: 0 0 auto; }
+.wiki-nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  z-index: 3200;
+  display: grid;
+  width: max-content;
+  min-width: 220px;
+  padding: 10px;
+  border: 1px solid rgba(98, 212, 255, .62);
+  border-radius: 12px;
+  background: linear-gradient(160deg, rgba(14, 31, 54, .99), rgba(5, 12, 25, .99));
+  box-shadow: 0 16px 38px rgba(0, 0, 0, .58), 0 0 0 1px rgba(98, 212, 255, .12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -6px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+.wiki-nav-dropdown__heading {
+  margin: 1px 5px 7px;
+  padding: 4px 6px 8px;
+  border-bottom: 1px solid rgba(98, 212, 255, .28);
+  color: #8be7fa;
+  font: 800 12px/1.3 "Segoe UI", "Microsoft YaHei", sans-serif;
+  letter-spacing: .08em;
+}
+.wiki-nav-dropdown:hover .wiki-nav-dropdown__menu,
+.wiki-nav-dropdown:focus-within .wiki-nav-dropdown__menu,
+.wiki-nav-dropdown .wiki-nav-button[aria-expanded="true"] + .wiki-nav-dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+.wiki-nav-dropdown.is-dismissed .wiki-nav-dropdown__menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -6px);
+}
+.wiki-nav-dropdown__item {
+  position: relative;
+  width: 100%;
+  border: 0;
+  border-radius: 7px;
+  padding: 11px 12px 11px 28px;
+  background: rgba(255, 255, 255, .035);
+  color: #e4efff;
+  font: 700 14px/1.4 "Segoe UI", "Microsoft YaHei", sans-serif;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .16s ease, color .16s ease, transform .16s ease;
+}
+.wiki-nav-dropdown__item + .wiki-nav-dropdown__item { margin-top: 5px; }
+.wiki-nav-dropdown__item::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%) rotate(45deg);
+  border: 1px solid #67d7f3;
+  background: rgba(98, 212, 255, .24);
+}
+.wiki-nav-dropdown__item:hover,
+.wiki-nav-dropdown__item:focus-visible {
+  outline: none;
+  background: linear-gradient(90deg, rgba(98, 212, 255, .24), rgba(98, 212, 255, .08));
+  color: #fff;
+  transform: translateX(2px);
+}
+.wiki-nav-dropdown__item[hidden] { display: none; }
+
 .wiki-nav-button {
   flex: 0 0 auto;
   border: 1px solid transparent;
@@ -49,6 +124,11 @@
 
 .wiki-nav-button:hover { color: #fff; background: rgba(98, 212, 255, .12); }
 .wiki-nav-button.is-active {
+  color: #06111e;
+  background: linear-gradient(135deg, #89e5ff, #4ca9f5);
+  box-shadow: 0 4px 18px rgba(76, 169, 245, .32);
+}
+.wiki-nav-dropdown.is-active > .wiki-nav-button {
   color: #06111e;
   background: linear-gradient(135deg, #89e5ff, #4ca9f5);
   box-shadow: 0 4px 18px rgba(76, 169, 245, .32);
@@ -111,6 +191,57 @@
 .guide-section { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--site-border); }
 .guide-section h3 { margin: 0 0 12px; color: #fff; font-size: 22px; }
 .guide-section .localization-guide { padding: 0; }
+.guide-page__intro { margin: -8px 0 24px; color: var(--site-text-muted); font-size: 16px; }
+.guide-card-grid, .guide-command-grid, .guide-build-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 14px; }
+.guide-card, .guide-command, .guide-build-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(98, 212, 255, .2);
+  border-radius: 12px;
+  background: linear-gradient(160deg, rgba(28, 48, 76, .72), rgba(8, 17, 32, .82));
+}
+.guide-card h3, .guide-command-group > h3 { margin: 0 0 10px; color: #8be7fa; font-size: 18px; }
+.guide-card p, .guide-command p { margin: 0; color: #d9e7f7; line-height: 1.8; }
+.guide-command-group { margin-top: 30px; }
+.guide-command-group > h3 { padding-bottom: 10px; border-bottom: 1px solid var(--site-border); }
+.guide-command h4, .guide-build-card h4 { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 10px; color: #ffe3a0; font-size: 17px; }
+.guide-command code { color: #9de7ff; font-size: 16px; }
+.guide-section-id-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(112px, 1fr)); gap: 8px; margin-top: 16px; }
+.guide-section-id {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid rgba(98, 212, 255, .18);
+  border-radius: 9px;
+  background: rgba(5, 14, 28, .58);
+  color: #e4efff;
+  font-size: 13px;
+  font-weight: 700;
+}
+.guide-section-id img { width: 28px; height: 28px; flex: none; object-fit: contain; }
+.guide-section-id__number {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(98, 212, 255, .14);
+  color: #9de7ff;
+  font-size: 11px;
+}
+.guide-command__tag { padding: 3px 8px; border: 1px solid rgba(242, 193, 78, .35); border-radius: 999px; color: #f2d58a; font-size: 11px; }
+.guide-command ul, .stat-build__notes { margin: 10px 0 0; padding-left: 1.25em; color: var(--site-text-muted); line-height: 1.8; }
+.guide-build-card h4 small { color: var(--site-text-muted); font-size: 13px; font-weight: 500; }
+.stat-build { margin: 0; }
+.stat-build > div { display: grid; grid-template-columns: minmax(100px, .75fr) minmax(0, 1.25fr); gap: 10px; padding: 8px 0; border-top: 1px solid rgba(148, 163, 184, .14); }
+.stat-build dt { color: var(--site-text-muted); }
+.stat-build dd { margin: 0; color: #e8f2ff; font-weight: 600; overflow-wrap: anywhere; }
+.stat-route { margin-top: 14px; padding-top: 12px; border-top: 1px dashed rgba(148, 163, 184, .28); }
+.stat-route h5 { margin: 0 0 8px; color: #8be7fa; font-size: 14px; }
+.guide-card-grid--principles { margin-bottom: 30px; }
 .database-panel { max-width: 1800px; margin: 34px auto 80px; padding: 28px clamp(14px, 3vw, 42px); }
 .database-panel h1 { margin: 0 0 18px; font-size: clamp(26px, 4vw, 38px); }
 .database-search { display: block; width: min(100%, 820px); height: 52px; margin: 0 auto 28px; padding: 0 16px; border: 2px solid rgba(98,212,255,.45); border-radius: 10px; background: #0b1528; color: #fff; font: 600 16px/1 "Segoe UI", "Microsoft YaHei", sans-serif; }
@@ -186,13 +317,21 @@
 #dictionary-panel th, #dictionary-panel td { position: static; min-width: 0; max-width: none; width: auto; background: transparent; color: #d9e7f7; white-space: normal; }
 #dictionary-panel thead th { position: static; background: #1d3453; }
 #dictionary-panel tbody td:first-child, #dictionary-panel thead th:first-child { position: static; box-shadow: none; clip-path: none; }
-.wiki-item-link { cursor: help; text-decoration: underline dotted rgba(111, 217, 242, .7); text-underline-offset: 3px; }
+.wiki-item-link { cursor: pointer; text-decoration: none; }
+.database-table tr.database-target > td { background: rgba(111, 217, 242, .16); box-shadow: inset 0 1px rgba(111, 217, 242, .45), inset 0 -1px rgba(111, 217, 242, .45); }
+.dictionary-monster { display: inline-flex; align-items: center; gap: 6px; color: #8be7fa; font-weight: 700; }
+.dictionary-monster[data-difficulty="1"] { color: #ff8585; }
+.dictionary-monster__image { width: 30px; height: 30px; object-fit: contain; }
 .wiki-panel .control-bar { top: 54px; }
 
 @media (max-width: 720px) {
   .wiki-site-nav { justify-content: flex-start; row-gap: 8px; padding-right: 16px; }
   .wiki-brand { font-size: 15px; }
   .wiki-nav-button { padding: 8px 12px; font-size: 13px; }
+  .wiki-nav-dropdown__menu { left: 0; transform: translate(0, -6px); }
+  .wiki-nav-dropdown:hover .wiki-nav-dropdown__menu,
+  .wiki-nav-dropdown:focus-within .wiki-nav-dropdown__menu,
+  .wiki-nav-dropdown .wiki-nav-button[aria-expanded="true"] + .wiki-nav-dropdown__menu { transform: translate(0, 0); }
   .wiki-panel .control-bar { top: 50px; }
   .language-switcher { top: 8px; right: 8px; }
 }

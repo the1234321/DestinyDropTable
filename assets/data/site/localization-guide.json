@@ -1,12 +1,12 @@
 {
-  "eyebrow"    : "本地化资料",
-  "title"      : "汉化指南",
-  "description": "下载汉化包后，按以下步骤安装即可。",
+  "eyebrow"    : { "cn": "本地化资料", "en": "Localization" },
+  "title"      : { "cn": "汉化指南", "en": "Chinese Localization Guide" },
+  "description": { "cn": "下载汉化包后，按以下步骤安装即可。", "en": "Download the localization pack and follow these steps to install it." },
   "steps"      : [
-    "下载汉化包压缩文件。",
-    "解压到游戏安装目录。",
-    "如系统询问是否覆盖文件，请确认覆盖。",
-    "有问题请加【 QQ群 432704374 】"
+    { "cn": "下载汉化包压缩文件。", "en": "Download the localization pack archive." },
+    { "cn": "解压到游戏安装目录。", "en": "Extract it into your game installation folder." },
+    { "cn": "如系统询问是否覆盖文件，请确认覆盖。", "en": "If prompted to overwrite files, confirm the replacement." },
+    { "cn": "有问题请加【 QQ群 432704374 】", "en": "For help, join QQ Group 432704374." }
   ],
-  "download"   : {"label": "下载 Destiny_CN 汉化包", "href": "Destiny_CN.zip"}
+  "download"   : {"label": { "cn": "下载 Destiny_CN 汉化包", "en": "Download Destiny_CN Localization Pack" }, "href": "Destiny_CN.zip"}
 }

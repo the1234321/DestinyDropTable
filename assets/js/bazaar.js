@@ -1,4 +1,4 @@
-let SERVICES, EXCHANGES, EQUIPMENT_EFFECTS, QUEST_CATALOG, QUEST_DATA, NAME_RE, SCOPED_NAME_RE;
+let SERVICES, EXCHANGES, RECIPES, SET_BONUSES, QUEST_CATALOG, QUEST_DATA, NAME_RE, SCOPED_NAME_RE;
 let ITEM_DATA = {};
 let ITEM_ID_BY_TERM = {};
 let MONSTER_ID_BY_TERM = {};
@@ -9,7 +9,7 @@ let BAZAAR_LANGUAGE = '';
 const QUEST_SEARCH_INDEX = new WeakMap();
 const SECTION_BY_ID = {
   'bz-quick': 'currency', 'bz-drops': 'special', 'bz-mpc': 'special',
-  'bz-services': 'bazaar', 'bz-exchange': 'bazaar', 'bz-effects': 'effects', 'bz-quests': 'quests'
+  'bz-services': 'bazaar', 'bz-exchange': 'bazaar', 'bz-crafting': 'crafting', 'bz-quests': 'quests'
 };
 
 function localized(value) {
@@ -43,11 +43,27 @@ function appendRichText(node, text, includeSectionIds = false) {
     }
     const term = document.createElement("span");
     term.className = monsterId ? "bazaar-monster" : "bazaar-term";
+    if (monsterId) {
+      const monsterInfo = window.WIKI_I18N.getMonsterMeta(monsterId);
+      term.dataset.difficulty = String(monsterInfo.difficulty);
+      if (monsterInfo.image) {
+        const image = document.createElement("img");
+        image.className = "bazaar-monster__image";
+        image.src = monsterInfo.image;
+        image.alt = "";
+        image.loading = "lazy";
+        image.addEventListener("error", () => image.remove(), { once: true });
+        term.appendChild(image);
+      }
+    }
     term.appendChild(document.createTextNode(displayName));
     term.title = match;
     if (itemId) {
       term.dataset.item = itemId;
-      term.classList.add('wiki-item-link');
+      if (window.WIKI_HAS_EQUIPMENT?.(itemId)) {
+        term.classList.add('wiki-item-link');
+        term.dataset.equipmentAvailable = "true";
+      }
     }
     fragment.appendChild(term);
     lastIndex = offset + match.length;
@@ -63,15 +79,6 @@ function el(tag, className, text) {
   if (className) node.className = className;
   if (text != null) appendRichText(node, text);
   return node;
-}
-
-function addListCard(parent, item) {
-  const card = el("article", "bazaar-card" + (item.kind === "gear" ? " bazaar-card--gear" : ""));
-  card.appendChild(el("h4", null, localized(item.title)));
-  const ul = el("ul");
-  (localized(item.lines) || item.lines || []).forEach(line => ul.appendChild(el("li", null, line)));
-  card.appendChild(ul);
-  parent.appendChild(card);
 }
 
 function addSection(parent, title, id) {
@@ -100,6 +107,46 @@ function formatQuestDrops(drops) {
   ).join("\n");
 }
 
+function addQuestDrops(parent, drops) {
+  const wrap = el("div", "bazaar-blockwrap quest-drops-wrap");
+  wrap.appendChild(el("div", "bazaar-block-label", window.WIKI_I18N.text('label.questDrops', 'Special Drops')));
+  const table = el("table", "quest-drop-table");
+  const header = document.createElement("thead");
+  const headerRow = document.createElement("tr");
+  const labels = window.WIKI_I18N.language === 'cn'
+    ? ["怪物", "掉落物", "掉率", "ID"]
+    : ["Monster", "Drop item", "Rate", "Section ID"];
+  labels.forEach(label => headerRow.appendChild(el("th", null, label)));
+  header.appendChild(headerRow);
+  table.appendChild(header);
+
+  const body = document.createElement("tbody");
+  Object.entries(drops || {}).forEach(([bosses, entries]) => {
+    const monsterNames = bosses.split(",").map(name => name.trim()).filter(Boolean);
+    Object.entries(entries || {}).forEach(([drop, ids]) => {
+      const match = drop.match(/^(.*?)\s+(\d+\/\d+)\s*$/);
+      const row = document.createElement("tr");
+      const monsterCell = el("td", "quest-drop-table__monster");
+      monsterNames.forEach((name, index) => {
+        if (index) monsterCell.appendChild(document.createTextNode(" "));
+        const monster = el("span", "quest-drop-monster");
+        appendRichText(monster, name, true);
+        monsterCell.appendChild(monster);
+      });
+      const itemCell = el("td", "quest-drop-table__item");
+      appendRichText(itemCell, match?.[1] || drop, true);
+      const rateCell = el("td", "quest-drop-table__rate", match?.[2] || "—");
+      const idCell = el("td", "quest-drop-table__ids");
+      appendRichText(idCell, localizeQuestText(ids), true);
+      row.append(monsterCell, itemCell, rateCell, idCell);
+      body.appendChild(row);
+    });
+  });
+  table.appendChild(body);
+  wrap.appendChild(table);
+  parent.appendChild(wrap);
+}
+
 function questNotes(notes) {
   if (Array.isArray(notes)) return notes;
   return notes?.[window.WIKI_I18N.language] || notes?.en || notes?.cn || [];
@@ -115,14 +162,16 @@ function localizeQuestText(value) {
     .replace(/\ball\s*ids\b|全\s*ID/gi, window.WIKI_I18N.getTerm('allIds'));
 }
 
-function questDropRows(episode) {
+function questDropRows() {
   const rows = [];
-  Object.entries(QUEST_CATALOG[episode] || {}).forEach(([category, quests]) => {
-    Object.entries(quests).forEach(([title, quest]) => {
-      Object.entries(quest.drops || {}).forEach(([boss, entries]) => {
-        Object.entries(entries || {}).forEach(([drop, note]) => {
-          const match = drop.match(/^(.*?)(?:\s+(\d+\/\d+))?$/);
-          rows.push([match?.[1] || drop, `${category} > ${questBaseTitle(title)}`, `${boss}${match?.[2] ? `：${match[2]}` : ''}`, note || '']);
+  ['EP1', 'EP2', 'EP4'].forEach(episode => {
+    Object.entries(QUEST_CATALOG[episode] || {}).forEach(([category, quests]) => {
+      Object.entries(quests).forEach(([title, quest]) => {
+        Object.entries(quest.drops || {}).forEach(([boss, entries]) => {
+          Object.entries(entries || {}).forEach(([drop, note]) => {
+            const match = drop.match(/^(.*?)(?:\s+(\d+\/\d+))?$/);
+            rows.push([match?.[1] || drop, `${episode} > ${category} > ${questBaseTitle(title)}`, `${boss}${match?.[2] ? `：${match[2]}` : ''}`, note || '']);
+          });
         });
       });
     });
@@ -130,9 +179,9 @@ function questDropRows(episode) {
   return rows;
 }
 
-function addScopedTable(parent, headers, rows, plainTextColumns = []) {
+function addScopedTable(parent, headers, rows, plainTextColumns = [], className = "") {
   const wrap = el("div", "bazaar-table-wrap");
-  const table = el("table", "bazaar-table bazaar-table--" + headers.length);
+  const table = el("table", `bazaar-table bazaar-table--${headers.length} ${className}`.trim());
   const thead = document.createElement('thead');
   const headRow = document.createElement('tr');
   headers.forEach(header => headRow.appendChild(el('th', null, header)));
@@ -143,7 +192,24 @@ function addScopedTable(parent, headers, rows, plainTextColumns = []) {
     const tr = document.createElement('tr');
     row.forEach((cell, index) => {
       const td = document.createElement('td');
-      if (plainTextColumns.includes(index)) td.textContent = cell;
+      if (className === "bazaar-table--special-drops" && index === 1) {
+        td.className = "special-drop-source";
+        const [episode, category, ...titleParts] = String(cell).split(" > ");
+        if (titleParts.length) {
+          const episodeLabel = document.createElement("span");
+          episodeLabel.className = "special-drop-source__episode";
+          episodeLabel.textContent = episode;
+          const categoryLabel = document.createElement("span");
+          categoryLabel.className = "special-drop-source__category";
+          categoryLabel.textContent = category;
+          const questLabel = document.createElement("span");
+          questLabel.className = "special-drop-source__quest";
+          questLabel.textContent = titleParts.join(" > ");
+          td.append(episodeLabel, document.createTextNode(" "), categoryLabel, document.createTextNode(" "), questLabel);
+        } else {
+          td.textContent = cell;
+        }
+      } else if (plainTextColumns.includes(index)) td.textContent = cell;
       else appendRichText(td, localizeQuestText(cell), true);
       tr.appendChild(td);
     });
@@ -251,10 +317,13 @@ function addQuestCounts(parent, data, keyword = '') {
       ? window.WIKI_I18N.getQuestArea(floor.floor_name)
       : floor.floor_name;
     area.appendChild(el("h4", null, areaName));
-    const list = el("ul");
+    const list = el("div", "quest-monster-list");
     monsters.forEach(([name, count]) => {
-      const item = el("li");
-      appendRichText(item, `${name}：${count}`, true);
+      const item = el("div", "quest-monster-row");
+      const monster = el("span", "quest-monster-row__name");
+      appendRichText(monster, name, true);
+      const amount = el("span", "quest-monster-row__count", count);
+      item.append(monster, amount);
       list.appendChild(item);
     });
     area.appendChild(list);
@@ -358,28 +427,94 @@ function addExchangeCards(parent) {
   parent.appendChild(grid);
 }
 
+function addCraftingCards(parent) {
+  const recipes = el("section", "crafting-subsection");
+  recipes.dataset.craftingSection = "recipes";
+  recipes.appendChild(el("h3", null, window.WIKI_I18N.language === 'cn' ? "合成公式" : "Crafting recipes"));
+  parent.appendChild(recipes);
+  const recipeGrid = el("div", "crafting-grid");
+  RECIPES.forEach(recipe => {
+    const card = el("article", "bazaar-card crafting-card");
+    card.appendChild(el("h4", "crafting-card__result", recipe.result));
+    const label = window.WIKI_I18N.language === 'cn' ? "合成材料" : "Components";
+    card.appendChild(el("div", "crafting-card__label", label));
+    const components = el("div", "crafting-card__items");
+    recipe.components.filter(Boolean).forEach(item => {
+      const name = el("span", "crafting-card__item");
+      appendRichText(name, item);
+      components.appendChild(name);
+    });
+    card.appendChild(components);
+    recipeGrid.appendChild(card);
+  });
+  recipes.appendChild(recipeGrid);
+
+  const sets = el("section", "crafting-subsection");
+  sets.dataset.craftingSection = "sets";
+  sets.appendChild(el("h3", null, window.WIKI_I18N.language === 'cn' ? "套装效果" : "Set bonuses"));
+  parent.appendChild(sets);
+  const setGrid = el("div", "crafting-grid");
+  const effectLabels = {
+    ATA: ["命中", "Accuracy"], ATP: ["攻击力", "Attack power"],
+    attack_range: ["攻击范围", "Attack range"], attack_speed: ["攻击速度", "Attack speed"],
+    attack_action: ["攻击动作", "Attack action"], targets: ["目标数", "Targets"],
+    hits: ["命中段数", "Hits"], piercing: ["贯穿", "Piercing"]
+  };
+  SET_BONUSES.forEach(set => {
+    const card = el("article", "bazaar-card crafting-card crafting-card--set");
+    const items = el("div", "crafting-card__items");
+    set.items.filter(Boolean).forEach(item => {
+      const name = el("span", "crafting-card__item");
+      appendRichText(name, item);
+      items.appendChild(name);
+    });
+    card.appendChild(items);
+    const effects = el("dl", "crafting-card__effects");
+    Object.entries(set.effect || {}).forEach(([key, value]) => {
+      const label = effectLabels[key];
+      const term = el("dt", null, label ? label[window.WIKI_I18N.language === 'cn' ? 0 : 1] : key);
+      const displayValue = typeof value === "boolean"
+        ? (window.WIKI_I18N.language === 'cn' ? (value ? "是" : "否") : (value ? "Yes" : "No"))
+        : localizeQuestText(value);
+      const description = el("dd", null, displayValue === "increased"
+        ? window.WIKI_I18N.text('boost.increased', window.WIKI_I18N.language === 'cn' ? "提升" : "Increased")
+        : displayValue);
+      effects.append(term, description);
+    });
+    card.appendChild(effects);
+    setGrid.appendChild(card);
+  });
+  sets.appendChild(setGrid);
+}
+
 function addQuest(parent, quest, keyword = '') {
   const details = el("details", "bazaar-details");
   const summary = document.createElement("summary");
-  summary.textContent = quest.title; // 任务名保持英文，不与道具/怪物名称混淆。
+  const title = document.createElement("span");
+  title.className = "quest-title";
+  const stars = quest.title.match(/\s*(⭐+)$/u)?.[1] || "";
+  if (quest.requirement) {
+    const required = el("span", "quest-ticket-tag quest-ticket-tag--required",
+      window.WIKI_I18N.language === 'cn' ? "需要门票" : "Ticket required");
+    summary.appendChild(required);
+  }
+  if (quest.reward) {
+    const reward = el("span", "quest-ticket-tag quest-ticket-tag--reward",
+      window.WIKI_I18N.language === 'cn' ? "可获得门票" : "Ticket reward");
+    summary.appendChild(reward);
+  }
+  title.textContent = quest.title.replace(/\s*⭐+$/u, "");
+  summary.appendChild(title);
+  if (stars) {
+    const rating = el("span", "quest-rating", stars);
+    rating.setAttribute("aria-label", window.WIKI_I18N.language === 'cn' ? `${Array.from(stars).length} 星` : `${Array.from(stars).length} stars`);
+    summary.appendChild(rating);
+  }
   details.appendChild(summary);
   if (keyword) { details.open = true; details.classList.add('is-search-match'); }
 
-  const meta = el("div", "bazaar-meta");
-  [
-    [window.WIKI_I18N.language === 'cn' ? "进入条件" : "Entry requirements", quest.requirement],
-    [window.WIKI_I18N.language === 'cn' ? "奖励 / 用途" : "Rewards / purpose", quest.reward]
-  ].filter(([, value]) => value).forEach(([key, value]) => {
-    const box = el("div");
-    const label = el("b", null, key + "：");
-    box.appendChild(label);
-    appendRichText(box, value);
-    meta.appendChild(box);
-  });
-  if (meta.children.length) details.appendChild(meta);
-
   if (Object.keys(quest.drops || {}).length) {
-    addBlock(details, window.WIKI_I18N.text('label.questDrops', 'Special Drops'), formatQuestDrops(quest.drops));
+    addQuestDrops(details, quest.drops);
   }
   addQuestCounts(details, quest.monsterData, keyword);
   const notes = questNotes(quest.notes);
@@ -424,12 +559,8 @@ export function renderBazaarInfo(target = "#bazaar-info") {
 
   root.replaceChildren();
   const panel = el("section", "bazaar-panel");
-  const drops = addSection(panel, window.WIKI_I18N.language === 'cn' ? "特殊掉落 / 货币来源" : "Special drops / currency sources", "bz-drops");
-  ["EP1", "EP2", "EP4"].forEach(episode => {
-    const tableTitle = `${episode} ${window.WIKI_I18N.text('label.specialDrops', 'Special Drops')}`;
-    drops.appendChild(el("h4", "quest-drop-table-title", tableTitle));
-    addScopedTable(drops, [window.WIKI_I18N.text('label.item', 'Item'), window.WIKI_I18N.text('label.source', 'Quest / Source'), window.WIKI_I18N.text('label.rate', 'Rate / Condition'), window.WIKI_I18N.text('label.notes', 'Notes')], questDropRows(episode), [1]);
-  });
+  const drops = addSection(panel, window.WIKI_I18N.language === 'cn' ? "特殊掉落表" : "Special drops / currency sources", "bz-drops");
+  addScopedTable(drops, [window.WIKI_I18N.text('label.item', 'Item'), window.WIKI_I18N.text('label.source', 'Quest / Source'), window.WIKI_I18N.text('label.rate', 'Rate / Condition'), window.WIKI_I18N.text('label.notes', 'Notes')], questDropRows(), [1], "bazaar-table--special-drops");
 
   const services = addSection(panel, window.WIKI_I18N.language === 'cn' ? "集市服务" : "Bazaar services", "bz-services");
   addServiceCards(services);
@@ -437,10 +568,8 @@ export function renderBazaarInfo(target = "#bazaar-info") {
   const exchanges = addSection(panel, window.WIKI_I18N.language === 'cn' ? "集市兑换" : "Bazaar exchanges", "bz-exchange");
   addExchangeCards(exchanges);
 
-  const effects = addSection(panel, "装备效果 / 组合强化", "bz-effects");
-  const effectGrid = el("div", "bazaar-grid");
-  EQUIPMENT_EFFECTS.forEach(item => addListCard(effectGrid, { ...item, kind: "gear" }));
-  effects.appendChild(effectGrid);
+  const crafting = addSection(panel, window.WIKI_I18N.language === 'cn' ? "合成/套装" : "Crafting / Sets", "bz-crafting");
+  if (window.WIKI_ACTIVE_VIEW === 'crafting') addCraftingCards(crafting);
 
   if (window.WIKI_ACTIVE_VIEW === 'quests') {
     const quests = addSection(panel, window.WIKI_I18N.language === 'cn' ? "任务速查" : "Quest quick reference", "bz-quests");
@@ -469,33 +598,68 @@ function applyBazaarSection() {
   root.querySelectorAll('.bazaar-section').forEach(node => {
     node.hidden = node.dataset.view !== section;
   });
+  root.querySelectorAll('#bz-crafting .crafting-subsection').forEach(node => {
+    node.hidden = node.dataset.craftingSection !== (window.WIKI_CRAFTING_SECTION || 'recipes');
+  });
+}
+
+let bazaarDataPromise;
+function ensureBazaarData() {
+  if (!bazaarDataPromise) {
+    bazaarDataPromise = loadBazaarData().catch(error => {
+      bazaarDataPromise = null;
+      throw error;
+    });
+  }
+  return bazaarDataPromise;
+}
+
+function renderAndBindBazaar(root) {
+  renderBazaarInfo(root);
+  if (window.bindItemTooltips) window.bindItemTooltips(root);
+  bindSectionIdTooltips(root);
+  applyBazaarSection();
 }
 
 window.setBazaarSection = section => {
   const root = document.querySelector('#bazaar-info');
   if (!root) return;
-  if (BAZAAR_LANGUAGE !== window.WIKI_I18N.language || (section === 'quests' && !root.querySelector('#bz-quests'))) {
-    renderBazaarInfo(root);
-    if (window.bindItemTooltips) window.bindItemTooltips(root);
-    bindSectionIdTooltips(root);
-  }
   root.dataset.activeSection = section;
+  if (!SERVICES) {
+    ensureBazaarData().then(() => {
+      if (root.dataset.activeSection === section) renderAndBindBazaar(root);
+    }).catch(error => {
+      root.textContent = window.WIKI_I18N.language === 'cn' ? '资料加载失败，请稍后重试。' : 'Could not load this section. Please try again.';
+      console.error('Could not load bazaar data.', error);
+    });
+    return;
+  }
+  if (BAZAAR_LANGUAGE !== window.WIKI_I18N.language
+    || (section === 'quests' && !root.querySelector('#bz-quests'))
+    || (section === 'crafting' && !root.querySelector('#bz-crafting .crafting-grid'))) {
+    renderAndBindBazaar(root);
+  }
   applyBazaarSection();
 };
 
 async function loadBazaarData() {
   await window.WIKI_I18N.ready;
-  const names = ['bazaar-services', 'exchanges', 'endgame-gear', 'quest-catalog'];
-  const values = await Promise.all(names.map(name => fetch('assets/data/bazaar/' + name + '.json').then(res => res.json())));
-  [SERVICES, EXCHANGES, EQUIPMENT_EFFECTS, QUEST_CATALOG] = values;
+  const [services, exchanges, recipes, bonuses, questCatalog] = await Promise.all([
+    window.WIKI_DATA.loadJson('assets/data/bazaar/bazaar-services.json'),
+    window.WIKI_DATA.loadJson('assets/data/bazaar/exchanges.json'),
+    window.WIKI_DATA.loadJson('assets/data/drop-table/recipes.json'),
+    window.WIKI_DATA.loadJson('assets/data/drop-table/bonuses.json'),
+    window.WIKI_DATA.loadJson('assets/data/bazaar/quest-catalog.json')
+  ]);
+  [SERVICES, EXCHANGES, RECIPES, SET_BONUSES, QUEST_CATALOG] = [services, exchanges, recipes, bonuses, questCatalog];
   const questEpisodes = await Promise.all(['EP1', 'EP2', 'EP4'].map(episode =>
-    fetch(`assets/data/quest/quest_${episode}.json`).then(res => res.json())
+    window.WIKI_DATA.loadJson(`assets/data/quest/quest_${episode}.json`)
   ));
   QUEST_DATA = Object.fromEntries(['EP1', 'EP2', 'EP4'].map((episode, index) => [
     episode,
     Object.fromEntries(questEpisodes[index].map(quest => [quest.name.replace(/ \[EP\d\]$/, ''), quest]))
   ]));
-  const items = await fetch('assets/data/item-catalog.json').then(res => res.json());
+  const items = await window.WIKI_DATA.loadJson('assets/data/item-catalog.json');
   const translation = { monsters: Object.fromEntries(window.WIKI_I18N.getMonsterEntries()) };
   ITEM_DATA = items;
   window.WIKI_I18N.setItems(ITEM_DATA);
@@ -507,7 +671,11 @@ async function loadBazaarData() {
     });
   });
   MONSTER_ID_BY_TERM = {};
-  Object.entries(translation.monsters || {}).forEach(([id, monster]) => {
+  const monsterEntries = [
+    ...Object.entries(translation.monsters || {}),
+    ...window.WIKI_I18N.getMonsterCatalogEntries().map(([id]) => [id, { name: window.WIKI_I18N.getMonster(id) }])
+  ];
+  monsterEntries.forEach(([id, monster]) => {
     [id, monster.name, monster.name?.cn, monster.name?.en].filter(Boolean).forEach(term => {
       MONSTER_ID_BY_TERM[term] = id;
       MONSTER_ID_BY_TERM[term.toLowerCase()] = id;
@@ -520,19 +688,25 @@ async function loadBazaarData() {
   const scopedTerms = [...new Set([...Object.keys(SECTION_ID_BY_TERM), ...Object.keys(ITEM_ID_BY_TERM), ...Object.keys(MONSTER_ID_BY_TERM)])]
     .sort((a, b) => b.length - a.length).map(escapeRegex).join('|');
   SCOPED_NAME_RE = new RegExp(scopedTerms, 'gi');
-  renderBazaarInfo();
-  applyBazaarSection();
-  if (window.bindItemTooltips) window.bindItemTooltips(document.querySelector('#bazaar-info'));
-  bindSectionIdTooltips(document.querySelector('#bazaar-info'));
 }
 
-loadBazaarData();
+if (['special', 'bazaar', 'crafting', 'quests'].includes(window.WIKI_ACTIVE_VIEW)) {
+  window.setBazaarSection(window.WIKI_ACTIVE_VIEW);
+}
 
 window.addEventListener("wiki-language-change", () => {
   if (ITEM_DATA && NAME_RE) {
-    if (['special', 'bazaar', 'effects', 'quests'].includes(window.WIKI_ACTIVE_VIEW)) renderBazaarInfo();
-    applyBazaarSection();
-    if (window.bindItemTooltips) window.bindItemTooltips(document.querySelector('#bazaar-info'));
-    bindSectionIdTooltips(document.querySelector('#bazaar-info'));
+    if (['special', 'bazaar', 'crafting', 'quests'].includes(window.WIKI_ACTIVE_VIEW)) {
+      window.setBazaarSection(window.WIKI_ACTIVE_VIEW);
+    }
   }
+});
+
+window.addEventListener("wiki-equipment-database-ready", () => {
+  const root = document.querySelector("#bazaar-info");
+  if (root) root.querySelectorAll("[data-item]").forEach(node => {
+    const available = window.WIKI_HAS_EQUIPMENT(node.dataset.item);
+    node.dataset.equipmentAvailable = String(available);
+    node.classList.toggle("wiki-item-link", available);
+  });
 });

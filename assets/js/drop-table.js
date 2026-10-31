@@ -13,6 +13,12 @@ const SECTION_INDEX = {
 
 const bonusIndex = {};
 const recipeIndex = {};
+const monsterQuestIndex = new Map();
+const itemNameSearchCache = new Map();
+const itemDetailSearchCache = new Map();
+const bonusSearchCache = new WeakMap();
+const itemTooltipRoots = new WeakSet();
+const monsterTooltipRoots = new WeakSet();
 let episodeObserver;
 
 function difficultyLabel(difficulty) {
@@ -41,27 +47,178 @@ function searchText(...values) {
 
 // 名称搜索始终同时使用原始英文名和中文名，不受当前界面语言影响。
 function itemNameSearchText(itemId) {
+    if (itemNameSearchCache.has(itemId)) return itemNameSearchCache.get(itemId);
     const item = data?.items?.[itemId];
-    if (!item) return searchText(itemId);
-    return searchText(itemId, item.name?.en, item.name?.cn);
+    const text = item
+        ? searchText(itemId, item.name?.en, item.name?.cn)
+        : searchText(itemId);
+    itemNameSearchCache.set(itemId, text);
+    return text;
 }
 
 function itemDetailSearchText(itemId) {
+    if (itemDetailSearchCache.has(itemId)) return itemDetailSearchCache.get(itemId);
     const item = data?.items?.[itemId];
-    if (!item) return "";
-    return searchText(
+    const text = item ? searchText(
         item.description?.en,
         item.description?.cn,
         item.quest?.en,
         item.quest?.cn
-    );
+    ) : "";
+    itemDetailSearchCache.set(itemId, text);
+    return text;
+}
+
+function buildMonsterQuestIndex(questCatalog, questEpisodes) {
+    monsterQuestIndex.clear();
+    const normalizeMonsterName = name => name.trim().toLowerCase();
+    ["EP1", "EP2", "EP4"].forEach((episode, episodeIndex) => {
+        const questsByName = new Map((questEpisodes[episodeIndex] || []).map(quest => [
+            quest.name.replace(/ \[EP\d+\]$/, "").trim(),
+            quest
+        ]));
+        Object.entries(questCatalog?.[episode] || {}).forEach(([category, quests]) => {
+            Object.entries(quests || {}).forEach(([rawTitle, quest]) => {
+                const title = Array.from(rawTitle)
+                    .filter(character => character.codePointAt(0) !== 0x2b50)
+                    .join("")
+                    .trim();
+                const countData = questsByName.get(title);
+                if (!countData?.monsters) return;
+
+                const countsByMonster = new Map();
+                Object.entries(countData.monsters).forEach(([monsterGroup, rawCount]) => {
+                    const count = Number(rawCount);
+                    if (!Number.isFinite(count) || count <= 0) return;
+                    monsterGroup.split(/\s*\/\s*/).filter(Boolean).forEach(name => {
+                        const key = normalizeMonsterName(name);
+                        countsByMonster.set(key, (countsByMonster.get(key) || 0) + count);
+                    });
+                });
+
+                countsByMonster.forEach((count, monster) => {
+                    if (!monsterQuestIndex.has(monster)) monsterQuestIndex.set(monster, []);
+                    monsterQuestIndex.get(monster).push({ episode, category, title, count });
+                });
+            });
+        });
+    });
+
+    monsterQuestIndex.forEach(quests => {
+        quests.sort((left, right) =>
+            right.count - left.count
+            || left.episode.localeCompare(right.episode)
+            || left.category.localeCompare(right.category)
+            || left.title.localeCompare(right.title)
+        );
+        quests.splice(3);
+    });
+}
+
+function renderMonsterQuestTooltip(tooltip, monsterName) {
+    const quests = monsterQuestIndex.get(monsterName.trim().toLowerCase()) || [];
+    tooltip.innerHTML = monsterQuestTooltipMarkup(monsterName, quests);
+    bindMonsterTooltipImageErrors(tooltip);
+}
+
+function monsterQuestTooltipMarkup(monsterName, quests = monsterQuestIndex.get(monsterName.trim().toLowerCase()) || []) {
+    const monsterMeta = window.WIKI_I18N.getMonsterMeta(monsterName);
+    const image = monsterMeta.image
+        ? `<img class="monster-quest-tooltip__image" src="${escapeHtml(monsterMeta.image)}" alt="">`
+        : "";
+    const heading = window.WIKI_I18N.language === "cn" ? "任务出现数量 TOP 3" : "Top 3 quests by monster count";
+    const rows = quests.map((quest, index) => `
+        <li class="monster-quest-tooltip__row">
+            <span class="monster-quest-tooltip__rank">${index + 1}</span>
+            <span class="monster-quest-tooltip__details">
+                <span class="monster-quest-tooltip__context">${escapeHtml(`${quest.episode} · ${quest.category}`)}</span>
+                <span class="monster-quest-tooltip__title">${escapeHtml(quest.title)}</span>
+            </span>
+            <span class="monster-quest-tooltip__count">${quest.count}</span>
+        </li>`).join("");
+    const empty = window.WIKI_I18N.language === "cn" ? "暂无任务数量记录" : "No quest count data";
+    return `<div class="monster-quest-tooltip__header">${image}<span>${heading}</span></div>${rows
+        ? `<ol class="monster-quest-tooltip__list">${rows}</ol>`
+        : `<div class="monster-quest-tooltip__empty">${empty}</div>`}`;
+}
+
+function bindMonsterTooltipImageErrors(root) {
+    root.querySelectorAll(".monster-quest-tooltip__image").forEach(image => {
+        image.addEventListener("error", () => image.remove(), { once: true });
+    });
+}
+
+function positionMonsterQuestTooltip(tooltip, event) {
+    tooltip.style.display = "block";
+    const rect = tooltip.getBoundingClientRect();
+    const margin = 10;
+    const offset = 16;
+    let left = event.clientX + offset;
+    let top = event.clientY + offset;
+    if (left + rect.width > window.innerWidth - margin) left = event.clientX - rect.width - offset;
+    if (top + rect.height > window.innerHeight - margin) top = event.clientY - rect.height - offset;
+    tooltip.style.left = `${Math.max(margin, Math.min(left, window.innerWidth - rect.width - margin))}px`;
+    tooltip.style.top = `${Math.max(margin, Math.min(top, window.innerHeight - rect.height - margin))}px`;
+}
+
+function bindMonsterQuestTooltips(root = document) {
+    const tooltip = document.getElementById("monster-quest-tooltip");
+    if (!tooltip || monsterTooltipRoots.has(root)) return;
+    monsterTooltipRoots.add(root);
+    let activeCell = null;
+    let pointer = null;
+    let positionFrame = 0;
+    const hideTooltip = () => {
+        activeCell = null;
+        pointer = null;
+        tooltip.style.display = "none";
+    };
+    const schedulePosition = event => {
+        pointer = { clientX: event.clientX, clientY: event.clientY };
+        tooltip.style.display = "block";
+        if (positionFrame) return;
+        positionFrame = requestAnimationFrame(() => {
+            positionFrame = 0;
+            if (activeCell && pointer) positionMonsterQuestTooltip(tooltip, pointer);
+        });
+    };
+
+    root.addEventListener("mouseover", event => {
+        const target = event.target instanceof Element ? event.target : null;
+        const monster = target?.closest(".monster-cell.has-quest-data[data-monster]");
+        if (!monster || monster === activeCell || monster.contains(event.relatedTarget)) return;
+        activeCell = monster;
+        renderMonsterQuestTooltip(tooltip, monster.dataset.monster);
+        schedulePosition(event);
+    });
+    root.addEventListener("mousemove", event => {
+        if (activeCell?.contains(event.target)) schedulePosition(event);
+    });
+    root.addEventListener("mouseout", event => {
+        if (activeCell?.contains(event.target) && !activeCell.contains(event.relatedTarget)) hideTooltip();
+    });
+}
+
+function magTooltipHtml(detail) {
+    if (detail?.type !== "mag") return "";
+    const fields = ["100PB Trigger", "1/10HP Trigger", "Boss Trigger", "Activation Chance"];
+    const rows = fields.map(field => {
+        const label = window.WIKI_I18N.getDatabase(field) || field;
+        const value = window.WIKI_I18N.getDatabase(detail.raw[field] || "none");
+        return `<div class="tooltip-mag__row"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`;
+    }).join("");
+    return `<div class="tooltip-mag"><div class="tooltip-mag__heading">${escapeHtml(window.WIKI_I18N.language === "cn" ? "玛古触发信息" : "MAG triggers")}</div>${rows}</div>`;
 }
 
 function bonusSearchText(effect) {
     if (!effect || typeof effect !== "object") return searchText(effect);
-    return searchText(
+    const cached = bonusSearchCache.get(effect);
+    if (cached?.language === window.WIKI_I18N.language) return cached.text;
+    const text = searchText(
         Object.entries(effect).flatMap(([key, value]) => [key, effectLabel(key), value])
     );
+    bonusSearchCache.set(effect, { language: window.WIKI_I18N.language, text });
+    return text;
 }
 
 function effectLabel(key) {
@@ -152,31 +309,31 @@ function detailBoosts(itemName) {
 
 async function loadData() {
     await window.WIKI_I18N.ready;
-    const names = ['activities', 'section-ids', 'bonuses', 'recipes', 'tables'];
+    const names = ['section-ids', 'bonuses', 'recipes', 'tables'];
     const paths = names.map(name => 'assets/data/drop-table/' + name + '.json');
-    const [activitiesData, sectionIdsData, bonus, recipe, tables, items, ...detailFiles] = await Promise.all([
-        ...paths.map(path => fetch(path).then(res => res.json())),
-        fetch('assets/data/item-catalog.json').then(res => res.json()),
+    const [sectionIdsData, bonus, recipe, tables, items, ...additionalData] = await Promise.all([
+        ...paths.map(path => window.WIKI_DATA.loadJson(path)),
+        window.WIKI_DATA.loadJson('assets/data/item-catalog.json'),
         ...Object.values({ weapons: 'weapons', armors: 'armors', shields: 'shields', units: 'units', mags: 'mags' })
-            .map(file => fetch(`assets/data/item/${file}.json`).then(res => res.json()))
+            .map(file => window.WIKI_DATA.loadJson(`assets/data/item/${file}.json`)),
+        window.WIKI_DATA.loadJson('assets/data/bazaar/quest-catalog.json'),
+        ...['EP1', 'EP2', 'EP4'].map(episode => window.WIKI_DATA.loadJson(`assets/data/quest/quest_${episode}.json`))
     ]);
+    const detailFiles = additionalData.slice(0, 5);
+    const questCatalog = additionalData[5];
+    const questEpisodes = additionalData.slice(6);
+    buildMonsterQuestIndex(questCatalog, questEpisodes);
     const detailKinds = ['weapon', 'armor', 'shield', 'unit', 'mag'];
     detailKinds.forEach((kind, index) => Object.entries(detailFiles[index] || {}).forEach(([name, raw]) => {
         itemDetails[name] = { type: kind, raw };
     }));
-    data = { activities: activitiesData, sectionIds: sectionIdsData, bonus, recipe, tables, items };
+    window.dispatchEvent(new CustomEvent("wiki-drop-data-ready", {
+        detail: { equipmentNames: Object.keys(itemDetails) }
+    }));
+    data = { sectionIds: sectionIdsData, bonus, recipe, tables, items };
     window.WIKI_I18N.setItems(items);
     sectionIds = sectionIdsData || [];
     window.WIKI_ITEMS = items;
-
-    //更新活动
-    const activities = data.activities;
-    document.getElementById("event-title").innerText = activities.event
-        ? window.WIKI_I18N.getActivity(activities.event)
-        : window.WIKI_I18N.text("noEvent", "无活动");
-    document.getElementById("event-desc").innerHTML = (activities.eventDescription || [])
-        .map(x => `• ${window.WIKI_I18N.getActivity(x)}`)
-        .join("<br>");
 
     const searchInput = document.getElementById("searchInput");
     searchInput.addEventListener("focus", e => {
@@ -287,9 +444,10 @@ function render() {
         html += `</tr></thead><tbody>`;
 
         epData.monsters.forEach(monster => {
+            const monsterInfo = window.WIKI_I18N.getMonsterMeta(monster.name);
             html += `<tr>
-                        <td>
-                            <div class="monster-name">${window.WIKI_I18N.getMonster(monster.name)}</div>
+                        <td class="monster-cell${monsterQuestIndex.has(monster.name.trim().toLowerCase()) ? " has-quest-data" : ""}" data-monster="${escapeHtml(monster.name)}">
+                            <div class="monster-name" data-difficulty="${monsterInfo.difficulty}"><span>${escapeHtml(window.WIKI_I18N.getMonster(monster.name))}</span></div>
                             <div class="dar">DAR ${monster.dar}</div>
                         </td>
             `;
@@ -307,9 +465,10 @@ function render() {
                 <td class="item-cell col-${sectionId.id}"
                     data-item="${escapeHtml(drop.item)}"
                     data-section="${escapeHtml(sectionId.id)}"
+                    data-monster="${escapeHtml(monster.name)}"
                     data-farm="${escapeHtml(monster.farm || '')}">
 
-                    <span class="item-name ${rarityClass}">
+                    <span class="item-name ${rarityClass}" data-item="${escapeHtml(drop.item)}">
                         ${itemText.name || drop.item}
                     </span>
 
@@ -330,7 +489,8 @@ function render() {
         container.appendChild(section);
     });
 
-    bindTooltips();
+    bindTooltips(container);
+    bindMonsterQuestTooltips(container);
     performSearch();
     observeEpisodes();
     if (window.WIKI_ACTIVE_VIEW === "drops") location.hash = currentDifficulty + "_" + currentEpisode;
@@ -406,116 +566,119 @@ function switchDifficulty(diff) {
     render()
 }
 
-function bindTooltips(root = document) {
+function bindTooltips(root = document.getElementById("content")) {
+    if (!root || itemTooltipRoots.has(root)) return;
+    itemTooltipRoots.add(root);
     const tooltip = document.getElementById("tooltip");
-
-    root.querySelectorAll(".item-cell, [data-item]").forEach(cell => {
-
-        // 缓存当前显示的 item，避免重复生成
-        let currentItem = null;
-
-        cell.addEventListener("mousemove", e => {
-            const itemName = cell.dataset.item;
-            const section = cell.dataset.section;
-            const sectionNumber = SECTION_INDEX[section];
-            const item = data?.items?.[itemName] || window.WIKI_ITEMS?.[itemName];
-            const itemText = window.WIKI_I18N.getItem(itemName);
-            const farm = cell.dataset.farm || "";
-            if (!item) return;
-
-            // 如果当前 tooltip 已显示该 item，直接更新位置，不重建
-            if (currentItem !== itemName) {
-                currentItem = itemName;
-
-                const rarity = item.superitem || 0;
-                const rarityClass = rarity === 2 ? 'ultimate-item' : rarity === 1 ? 'legend-item' : '';
-
-                const tooltipBonus = bonusIndex[itemName] || [];
-                const tooltipRecipe = recipeIndex[itemName] || [];
-
-                const itemTypeContent = window.WIKI_I18N.getType(detailType(itemName, item));
-
-                tooltip.innerHTML = `
-                    ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
-                    <div class="tooltip-name ${rarityClass}">${itemText.name || itemName}</div>
-                    ${window.WIKI_I18N.language === "cn" && itemName !== itemText.name ? `<div class="tooltip-en">${itemName}</div>` : ""}
-                    ${itemTypeContent && itemTypeContent !== "-" ? `<div class="tooltip-type">${window.WIKI_I18N.text("itemType", "类型")}: ${itemTypeContent}</div>` : ""}
-                    ${detailDescription(itemName, item) ? `<div class="tooltip-class">${detailDescription(itemName, item)}</div>` : ""}
-                    ${(detailFor(itemName)?.raw.Special && detailFor(itemName).raw.Special !== "None") || detailBoosts(itemName) ? `<div class="tooltip-effects-row">${detailFor(itemName)?.raw.Special && detailFor(itemName).raw.Special !== "None" ? specialBadge(detailFor(itemName).raw.Special, "EX：") : ""}${detailBoosts(itemName) ? `<span class="boost-badge-list">${detailBoosts(itemName)}</span>` : ""}</div>` : ""}
-                    ${farm ? `<span class="tooltip-farm">${farm}</span>` : ""}
-
-                    ${tooltipBonus.length ? `
-                    <div class="tooltip-inline tooltip-bonus-inline">
-                        ${tooltipBonus.map(b => `
-                            <div class="tooltip-item bonus-item">
-                                <span class="bonus-header">${b.items.map(itemLabel).join(" ✦ ")} ➜</span>
-                                <span class="bonus-body">${effectText(b.effect)}</span>
-                            </div>
-                        `).join("")}
-                    </div>` : ""}
-
-                    ${tooltipRecipe.length ? `
-                    <div class="tooltip-inline tooltip-recipe-inline">
-                        ${tooltipRecipe.map(r => `
-                            <div class="tooltip-item recipe-item">
-                                <span class="recipe-header">${itemLabel(r.result)} ⬅</span>
-                                <span class="recipe-body">${r.components.map(itemLabel).join('<span class="plus">+</span><wbr>')}</span>
-                            </div>
-                        `).join("")}
-                    </div>` : ""}
-                `;
-            }
-
-            // =======================
-            // Tooltip自动定位 V2
-            // =======================
+    let activeCell = null;
+    let pointer = null;
+    let positionFrame = 0;
+    const sectionHeaders = (cell, active) => {
+        const section = cell.dataset.section;
+        const table = cell.closest(".table-section");
+        if (!section || !table) return;
+        table.querySelectorAll(`thead th[data-section="${CSS.escape(section)}"]`)
+            .forEach(header => header.classList.toggle("section-id-highlight", active));
+    };
+    const hideTooltip = () => {
+        if (activeCell) sectionHeaders(activeCell, false);
+        activeCell = null;
+        pointer = null;
+        tooltip.style.display = "none";
+    };
+    const schedulePosition = event => {
+        pointer = { clientX: event.clientX, clientY: event.clientY };
+        tooltip.style.display = "block";
+        if (positionFrame) return;
+        positionFrame = requestAnimationFrame(() => {
+            positionFrame = 0;
+            if (!activeCell || !pointer) return;
             tooltip.style.display = "block";
-
-            // 强制浏览器完成布局
-            tooltip.offsetHeight;
-
             const rect = tooltip.getBoundingClientRect();
-            const tooltipWidth = rect.width;
-            const tooltipHeight = rect.height;
-
             const offset = 18;
             const margin = 10;
-            let left, top;
-
-            // 横向判断
-            if (e.clientX > window.innerWidth / 2) {
-                left = e.clientX - tooltipWidth - offset;
-            } else {
-                left = e.clientX + offset;
-            }
-            left = Math.max(margin, Math.min(left, window.innerWidth - tooltipWidth - margin));
-
-            // 纵向判断
-            if (e.clientY > window.innerHeight / 2) {
-                top = e.clientY - tooltipHeight - offset;
-            } else {
-                top = e.clientY + offset;
-            }
-            top = Math.max(margin, Math.min(top, window.innerHeight - tooltipHeight - margin));
-
+            let left = pointer.clientX > window.innerWidth / 2
+                ? pointer.clientX - rect.width - offset
+                : pointer.clientX + offset;
+            let top = pointer.clientY > window.innerHeight / 2
+                ? pointer.clientY - rect.height - offset
+                : pointer.clientY + offset;
+            left = Math.max(margin, Math.min(left, window.innerWidth - rect.width - margin));
+            top = Math.max(margin, Math.min(top, window.innerHeight - rect.height - margin));
             tooltip.style.left = `${left}px`;
             tooltip.style.top = `${top}px`;
         });
+    };
+    const renderItemTooltip = cell => {
+        const itemName = cell.dataset.item;
+        const item = data?.items?.[itemName] || window.WIKI_ITEMS?.[itemName];
+        if (!item) return false;
+        const itemText = window.WIKI_I18N.getItem(itemName);
+        const rarity = item.superitem || 0;
+        const rarityClass = rarity === 2 ? "ultimate-item" : rarity === 1 ? "legend-item" : "";
+        const tooltipBonus = bonusIndex[itemName] || [];
+        const tooltipRecipe = recipeIndex[itemName] || [];
+        const monsterName = cell.dataset.monster || "";
+        const monsterQuests = monsterQuestIndex.get(monsterName.trim().toLowerCase()) || [];
+        const monsterQuestHtml = monsterQuests.length
+            ? `<div class="tooltip-monster-quests">${monsterQuestTooltipMarkup(monsterName, monsterQuests)}</div>`
+            : "";
+        const detail = detailFor(itemName);
+        const special = detail?.raw.Special && detail.raw.Special !== "None" ? specialBadge(detail.raw.Special, "EX：") : "";
+        const boosts = detailBoosts(itemName);
+        const itemTypeContent = window.WIKI_I18N.getType(detailType(itemName, item));
 
-        cell.addEventListener("mouseenter", () => {
-            const section = cell.dataset.section;
-            document.querySelectorAll(`thead th[data-section="${CSS.escape(section)}"]`)
-                .forEach(header => header.classList.add("section-id-highlight"));
-        });
+        tooltip.innerHTML = `
+            ${item.image && item.image.trim() !== "" ? `<img src="images/${item.image}" class="tooltip-item-image">` : ""}
+            <div class="tooltip-name ${rarityClass}">${itemText.name || itemName}</div>
+            ${window.WIKI_I18N.language === "cn" && itemName !== itemText.name ? `<div class="tooltip-en">${itemName}</div>` : ""}
+            ${itemTypeContent && itemTypeContent !== "-" ? `<div class="tooltip-type">${window.WIKI_I18N.text("itemType", "类型")}: ${itemTypeContent}</div>` : ""}
+            ${detailDescription(itemName, item) ? `<div class="tooltip-class">${detailDescription(itemName, item)}</div>` : ""}
+            ${magTooltipHtml(detail)}
+            ${special || boosts ? `<div class="tooltip-effects-row">${special}${boosts ? `<span class="boost-badge-list">${boosts}</span>` : ""}</div>` : ""}
+            ${cell.dataset.farm ? `<span class="tooltip-farm">${cell.dataset.farm}</span>` : ""}
+            ${tooltipBonus.length ? `
+            <div class="tooltip-inline tooltip-bonus-inline">
+                ${tooltipBonus.map(b => `
+                    <div class="tooltip-item bonus-item">
+                        <span class="bonus-header">${b.items.map(itemLabel).join(" ✦ ")} ➜</span>
+                        <span class="bonus-body">${effectText(b.effect)}</span>
+                    </div>`).join("")}
+            </div>` : ""}
+            ${tooltipRecipe.length ? `
+            <div class="tooltip-inline tooltip-recipe-inline">
+                ${tooltipRecipe.map(recipe => `
+                    <div class="tooltip-item recipe-item">
+                        <span class="recipe-header">${itemLabel(recipe.result)} ⬅</span>
+                        <span class="recipe-body">${recipe.components.map(itemLabel).join('<span class="plus">+</span><wbr>')}</span>
+                    </div>`).join("")}
+            </div>` : ""}
+            ${monsterQuestHtml}
+        `;
+        bindMonsterTooltipImageErrors(tooltip);
+        return true;
+    };
 
-        cell.addEventListener("mouseleave", () => {
-            tooltip.style.display = "none";
-            currentItem = null; // 重置
-            const section = cell.dataset.section;
-            document.querySelectorAll(`thead th[data-section="${CSS.escape(section)}"]`)
-                .forEach(header => header.classList.remove("section-id-highlight"));
-        });
-
+    root.addEventListener("mousemove", event => {
+        const target = event.target instanceof Element ? event.target : null;
+        const cell = target?.closest(".item-cell") || target?.closest("[data-item]");
+        if (!cell || !cell.dataset.item) {
+            if (activeCell) hideTooltip();
+            return;
+        }
+        if (cell !== activeCell) {
+            if (!renderItemTooltip(cell)) {
+                hideTooltip();
+                return;
+            }
+            if (activeCell) sectionHeaders(activeCell, false);
+            activeCell = cell;
+            sectionHeaders(cell, true);
+        }
+        schedulePosition(event);
+    });
+    root.addEventListener("mouseout", event => {
+        if (activeCell?.contains(event.target) && !activeCell.contains(event.relatedTarget)) hideTooltip();
     });
 }
 
@@ -543,10 +706,11 @@ function scrollToRow(row) {
 function performSearch() {
     const keyword = window.WIKI_SEARCH.normalize(document.getElementById("searchInput").value);
     if (!data) return;
+    const container = document.getElementById("content");
     let firstMatch = null;
     const matchedSections = new Set();
 
-    document.querySelectorAll("tbody tr").forEach(row => {
+    container.querySelectorAll("tbody tr").forEach(row => {
         row.style.display = "";
         row.querySelectorAll("td").forEach(td => td.classList.remove(
             "highlight-item", "highlight-related", "highlight-bonus", "highlight-recipe"
@@ -614,13 +778,13 @@ function performSearch() {
     });
 
     // 搜索时只保留含有命中掉落的 Section ID 表头；清空搜索后恢复原样。
-    document.querySelectorAll("thead th[data-section]").forEach(header => {
+    container.querySelectorAll("thead th[data-section]").forEach(header => {
         const hidden = Boolean(keyword) && !matchedSections.has(header.dataset.section);
         header.classList.toggle("section-id-no-match", hidden);
         header.setAttribute("aria-hidden", String(hidden));
     });
 
-    document.querySelectorAll(".table-section").forEach(section => {
+    container.querySelectorAll(".table-section").forEach(section => {
         if (!keyword) { section.style.display = ""; return; }
         const visibleRows = section.querySelectorAll('tbody tr:not([style*="display: none"])').length;
         section.style.display = visibleRows > 0 ? "" : "none";
@@ -646,12 +810,6 @@ loadData();
 window.addEventListener("wiki-language-change", () => {
     document.getElementById("tooltip").style.display = "none";
     if (data) {
-        const activities = data.activities;
-        document.getElementById("event-title").innerText = activities.event
-            ? window.WIKI_I18N.getActivity(activities.event)
-            : window.WIKI_I18N.text("noEvent", "");
-        document.getElementById("event-desc").innerHTML = (activities.eventDescription || [])
-            .map(x => `• ${window.WIKI_I18N.getActivity(x)}`).join("<br>");
         render();
     }
 });

@@ -11080,5 +11080,71 @@
             "en": "",
             "cn": ""
         }
+    },
+    "Magic Water": {
+        "superitem": 0,
+        "image": "",
+        "name": {
+            "cn": "魔神水"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Generic Cane": {
+        "superitem": 0,
+        "image": "",
+        "name": {
+            "cn": "普通手杖"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Generic Slicer": {
+        "superitem": 0,
+        "image": "",
+        "name": {
+            "cn": "普通投刃"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Generic Wand": {
+        "superitem": 0,
+        "image": "",
+        "name": {
+            "cn": "普通魔杖"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Generic Handgun": {
+        "superitem": 0,
+        "image": "",
+        "name": {
+            "cn": "普通光枪"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Parasitic cell Type D": {
+        "superitem": 0,
+        "image": "",
+        "name": {
+            "cn": "Ｄ型寄生细胞"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
     }
 }

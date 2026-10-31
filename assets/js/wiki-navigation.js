@@ -1,30 +1,36 @@
 const panels = {
   drops: document.querySelector("#drop-table-panel"),
   bazaar: document.querySelector("#bazaar-panel"),
-  commands: document.querySelector("#commands-panel"),
-  localization: document.querySelector("#localization-panel"),
+  guide: document.querySelector("#guide-panel"),
   dictionary: document.querySelector("#dictionary-panel"),
   database: document.querySelector("#database-panel")
 };
 
 const siteNav = document.querySelector(".wiki-site-nav");
+const guideViews = ["server-rules", "common-commands", "level-200", "localization"];
+const views = ["drops", ...guideViews, "dictionary", "special", "bazaar", "crafting", "crafting-recipes", "crafting-sets", "quests", "database"];
 const updateStickyOffset = () => {
   document.documentElement.style.setProperty("--wiki-nav-height", `${siteNav.getBoundingClientRect().height}px`);
 };
 updateStickyOffset();
 new ResizeObserver(updateStickyOffset).observe(siteNav);
 
-function selectView(view, updateHash = true) {
+function selectView(view, updateHash = true, scrollToTop = true) {
+  const routeView = view;
+  if (view === "crafting-recipes" || view === "crafting-sets") {
+    window.WIKI_CRAFTING_SECTION = view === "crafting-sets" ? "sets" : "recipes";
+    view = "crafting";
+  }
+  if (view === "localization" && window.WIKI_I18N.language !== "cn") view = "server-rules";
   const isDrops = view === "drops";
-  const isCommands = view === "commands";
-  const isLocalization = view === "localization";
+  const isGuide = guideViews.includes(view) || view === "commands";
+  if (view === "commands") view = "common-commands";
   const isDictionary = view === "dictionary";
   const isDatabase = view === "database";
   window.WIKI_ACTIVE_VIEW = view;
   panels.drops.hidden = !isDrops;
-  panels.bazaar.hidden = isDrops || isCommands || isLocalization || isDictionary || isDatabase;
-  panels.commands.hidden = !isCommands;
-  panels.localization.hidden = !isLocalization;
+  panels.bazaar.hidden = isDrops || isGuide || isDictionary || isDatabase;
+  panels.guide.hidden = !isGuide;
   panels.dictionary.hidden = !isDictionary;
   panels.database.hidden = !isDatabase;
   document.querySelectorAll("[data-view]").forEach(button => {
@@ -32,23 +38,81 @@ function selectView(view, updateHash = true) {
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-selected", String(active));
   });
-  if (!isDrops && !isCommands && !isLocalization && !isDictionary && !isDatabase && window.setBazaarSection) window.setBazaarSection(view);
-  if (updateHash) history.replaceState(null, "", "#" + view);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  const craftingDropdown = document.querySelector('.wiki-nav-dropdown[data-nav-group="crafting"]');
+  if (craftingDropdown) {
+    craftingDropdown.classList.toggle("is-active", view === "crafting");
+    craftingDropdown.querySelector(".wiki-nav-button").setAttribute("aria-selected", String(view === "crafting"));
+  }
+  if (!isDrops && !isGuide && !isDictionary && !isDatabase && window.setBazaarSection) window.setBazaarSection(view);
+  if (updateHash) history.replaceState(null, "", "#" + routeView);
+  if (scrollToTop) window.scrollTo({ top: 0, behavior: "smooth" });
+  if (isGuide) renderGuidePage(view);
+  if (isDatabase && window.WIKI_LOAD_EQUIPMENT_DATABASE) {
+    window.WIKI_LOAD_EQUIPMENT_DATABASE().catch(error => {
+      const root = document.querySelector("#equipment-database");
+      if (root) root.textContent = "Could not load the equipment database.";
+      console.error("Could not load the equipment database.", error);
+    });
+  }
 }
 
-document.querySelectorAll(".wiki-nav-button").forEach(button => {
-  button.addEventListener("click", () => selectView(button.dataset.view));
+document.querySelectorAll(".wiki-nav-dropdown").forEach(dropdown => {
+  const button = dropdown.querySelector(".wiki-nav-button");
+  dropdown.addEventListener("pointerenter", () => {
+    dropdown.classList.remove("is-dismissed");
+    button.setAttribute("aria-expanded", "true");
+  });
+  dropdown.addEventListener("focusin", () => {
+    dropdown.classList.remove("is-dismissed");
+    button.setAttribute("aria-expanded", "true");
+  });
+  button.addEventListener("click", () => {
+    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!expanded));
+    dropdown.classList.toggle("is-dismissed", expanded);
+  });
+  dropdown.addEventListener("pointerleave", () => {
+    if (!dropdown.contains(document.activeElement)) button.setAttribute("aria-expanded", "false");
+  });
+  dropdown.addEventListener("focusout", event => {
+    if (!dropdown.contains(event.relatedTarget)) button.setAttribute("aria-expanded", "false");
+  });
 });
 
-const views = ["drops", "commands", "localization", "dictionary", "special", "bazaar", "effects", "quests", "database"];
+document.querySelectorAll(".wiki-nav-button[data-view]").forEach(button => {
+  button.addEventListener("click", () => selectView(button.dataset.view));
+});
+document.querySelectorAll("[data-guide-view]").forEach(button => {
+  button.addEventListener("click", () => {
+    const dropdown = document.querySelector(".wiki-nav-dropdown");
+    dropdown.querySelector(".wiki-nav-button").setAttribute("aria-expanded", "false");
+    dropdown.classList.add("is-dismissed");
+    selectView(button.dataset.guideView);
+  });
+});
+
+document.querySelectorAll("[data-crafting-view]").forEach(button => {
+  button.addEventListener("click", () => {
+    const dropdown = button.closest(".wiki-nav-dropdown");
+    dropdown.querySelector(".wiki-nav-button").setAttribute("aria-expanded", "false");
+    dropdown.classList.add("is-dismissed");
+    selectView(button.dataset.craftingView);
+  });
+});
+
 const initialView = location.hash.slice(1);
-selectView(views.includes(initialView) ? initialView : "drops", false);
+selectView(initialView === "commands" ? "common-commands" : initialView === "effects" ? "crafting-recipes" : views.includes(initialView) ? initialView : "drops", false);
+
+window.addEventListener("popstate", () => {
+  const hash = location.hash.slice(1);
+  const view = hash === "commands" ? "common-commands" : hash === "effects" ? "crafting-recipes" : views.includes(hash) ? hash : "drops";
+  selectView(view, false, false);
+});
 
 window.addEventListener("wiki-language-change", event => {
-  if (event.detail.language === "en" && ["localization", "dictionary"].includes(window.WIKI_ACTIVE_VIEW)) {
-    selectView("drops");
-  }
+  if (event.detail.language === "en" && window.WIKI_ACTIVE_VIEW === "localization") selectView("server-rules");
+  else if (event.detail.language === "en" && window.WIKI_ACTIVE_VIEW === "dictionary") selectView("drops");
+  else if (guideViews.includes(window.WIKI_ACTIVE_VIEW)) renderGuidePage(window.WIKI_ACTIVE_VIEW);
 });
 
 async function renderBilingualDictionary() {
@@ -57,15 +121,35 @@ async function renderBilingualDictionary() {
   await window.WIKI_I18N.ready;
   try {
     const [items, translation] = await Promise.all([
-      fetch("assets/data/item-catalog.json").then(res => res.json()),
-      fetch("assets/data/translation/cn.json").then(res => res.json())
+      window.WIKI_DATA.loadJson("assets/data/item-catalog.json"),
+      window.WIKI_DATA.loadJson("assets/data/translation/cn.json?v=20261031-2")
     ]);
     const rows = Object.entries(items).map(([en, value]) => [en, value.name?.cn || ""])
       .filter(([en, cn]) => en || cn).sort((a, b) => a[0].localeCompare(b[0]));
-    const monsters = Object.entries(translation.monsters || {}).map(([en, value]) => [en, value.name || ""])
+    const monsterTranslations = translation.monsters || {};
+    const monsterNames = new Set([
+      ...Object.keys(monsterTranslations),
+      ...window.WIKI_I18N.getMonsterCatalogEntries().map(([name]) => name)
+    ]);
+    const monsters = [...monsterNames].map(en => [en, monsterTranslations[en]?.name || ""])
       .sort((a, b) => a[0].localeCompare(b[0]));
-    const table = (title, data, kind) => `<section class="dictionary-section" data-dictionary-kind="${kind}"><h2>${title}</h2><div class="dictionary-table-wrap"><table><thead><tr><th>English</th><th>中文</th></tr></thead><tbody>${data.map(([en, cn]) => `<tr data-search="${`${en} ${cn}`.toLowerCase()}"><td>${en}</td><td>${cn}</td></tr>`).join("")}</tbody></table></div></section>`;
+    const table = (title, data, kind) => `<section class="dictionary-section" data-dictionary-kind="${kind}"><h2>${title}</h2><div class="dictionary-table-wrap"><table><thead><tr><th>English</th><th>中文</th></tr></thead><tbody>${data.map(([en, cn]) => {
+      const meta = kind === "monsters" ? window.WIKI_I18N.getMonsterMeta(en) : null;
+      const image = meta?.image ? `<img class="dictionary-monster__image" src="${databaseEscape(meta.image)}" alt="" loading="lazy">` : "";
+      const difficulty = meta ? ` data-difficulty="${meta.difficulty}"` : "";
+      const name = kind === "monsters"
+        ? `<span class="dictionary-monster"${difficulty}>${image}${databaseEscape(en)}</span>`
+        : `<span data-item="${databaseEscape(en)}">${databaseEscape(en)}</span>`;
+      const translated = kind === "monsters"
+        ? `<span class="dictionary-monster"${difficulty}>${databaseEscape(cn)}</span>`
+        : `<span data-item="${databaseEscape(en)}">${databaseEscape(cn)}</span>`;
+      return `<tr data-search="${databaseEscape(`${en} ${cn}`.toLowerCase())}"><td>${name}</td><td>${translated}</td></tr>`;
+    }).join("")}</tbody></table></div></section>`;
     root.innerHTML = `<article class="dictionary-panel"><p class="dictionary-panel__intro">中英名称速查</p><input id="dictionarySearch" class="dictionary-search" type="search" placeholder="搜索英文或中文名称…">${table("道具名称", rows, "items")}${table("怪物名称", monsters, "monsters")}</article>`;
+    root.querySelectorAll(".dictionary-monster__image").forEach(image => {
+      image.addEventListener("error", () => image.remove(), { once: true });
+    });
+    refreshEquipmentLinks(root);
     const search = root.querySelector("#dictionarySearch");
     window.WIKI_SEARCH.bind(search, query => {
       root.querySelectorAll(".dictionary-section").forEach(section => {
@@ -86,26 +170,144 @@ async function renderBilingualDictionary() {
 window.addEventListener("wiki-language-change", renderBilingualDictionary);
 renderBilingualDictionary();
 
-async function loadLocalizationGuide() {
-  const guide = await fetch("assets/data/site/localization-guide.json").then(res => res.json());
-  document.querySelectorAll("[data-localization-guide]").forEach(root => {
-    root.innerHTML = `
-    <div class="localization-guide">
-      <p class="command-panel__eyebrow">${guide.eyebrow}</p>
-      <h2>${guide.title}</h2>
-      <div class="command-panel__content">
-        <p>${guide.description}</p>
-        <ol>${guide.steps.map(step => `<li>${step}</li>`).join("")}</ol>
-        <a class="localization-guide__download" href="${guide.download.href}" download>${guide.download.label}</a>
-      </div>
-    </div>`;
-  });
+let newPlayerGuidePromise;
+function guideText(value) {
+  if (typeof value === "string") return value;
+  return value?.[window.WIKI_I18N.language] || value?.cn || value?.en || "";
 }
 
-loadLocalizationGuide();
+function guideEscape(value) {
+  return String(value ?? "").replace(/[&<>"']/g, character => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[character]));
+}
+
+function loadNewPlayerGuide() {
+  if (!newPlayerGuidePromise) {
+    newPlayerGuidePromise = window.WIKI_DATA.loadJson("assets/data/site/new-player-guide.json");
+  }
+  return newPlayerGuidePromise;
+}
+
+function guideHeader(title, subtitle = "") {
+  return `<p class="command-panel__eyebrow">${guideEscape(window.WIKI_I18N.text("guide.eyebrow", "D服务器指南"))}</p><h2>${guideEscape(title)}</h2>${subtitle ? `<p class="guide-page__intro">${guideEscape(subtitle)}</p>` : ""}`;
+}
+
+function renderRules(guide) {
+  const cards = guide.rules.map(rule => `
+    <article class="guide-card">
+      <h3>${guideEscape(guideText(rule.title))}</h3>
+      <p>${guideEscape(guideText(rule.content))}</p>
+    </article>`).join("");
+  return `${guideHeader(window.WIKI_I18N.text("guide.serverRules", "服务器规则"))}<div class="guide-card-grid">${cards}</div>`;
+}
+
+function renderCommands(guide) {
+  const groups = guide.commandGroups.map(group => `
+    <section class="guide-command-group">
+      <h3>${guideEscape(guideText(group.title))}</h3>
+      <div class="guide-command-grid">${group.commands.map(command => {
+        const name = guideText(command.nameEn ? { cn: command.name, en: command.nameEn } : command.name);
+        const details = (command.details?.[window.WIKI_I18N.language] || command.details?.cn || [])
+          .map(detail => `<li>${guideEscape(detail)}</li>`).join("");
+        const sectionIds = command.sectionIds ? `<div class="guide-section-id-grid">${command.sectionIds.map(section => {
+          const label = guideText(section.name);
+          const image = guideEscape(section.image);
+          return `<div class="guide-section-id"><img src="images/ids/${image}" alt="${guideEscape(label)}" title="${guideEscape(label)}"><span class="guide-section-id__number">${guideEscape(section.id)}</span><span>${guideEscape(label)}</span></div>`;
+        }).join("")}</div>` : "";
+        return `<article class="guide-command"><h4><code>${guideEscape(name)}</code>${command.recommended ? `<span class="guide-command__tag">${guideEscape(window.WIKI_I18N.text("guide.recommended", "推荐快捷键"))}</span>` : ""}</h4><p>${guideEscape(guideText(command.summary))}</p>${details ? `<ul>${details}</ul>` : ""}${sectionIds}</article>`;
+      }).join("")}</div>
+    </section>`).join("");
+  return `${guideHeader(window.WIKI_I18N.text("guide.commonCommands", "常用命令"))}${groups}`;
+}
+
+function statDetails(classBuild, language) {
+  const label = (key, fallback) => guideEscape(window.WIKI_I18N.text(`guide.${key}`, fallback));
+  const notes = values => values?.[language] || values?.cn || [];
+  const renderBuild = build => `
+    <dl class="stat-build">
+      <div><dt>${label("mag", "玛古配置")}</dt><dd>${guideEscape(build.mag)}</dd></div>
+      <div><dt>${label("materials", "药水分配")}</dt><dd>${guideEscape(guideText(build.materials))}</dd></div>
+      <div><dt>${label("remaining", "剩余药位")}</dt><dd>${guideEscape(build.remaining)}</dd></div>
+    </dl>${notes(build.notes).length ? `<ul class="stat-build__notes">${notes(build.notes).map(note => `<li>${guideEscape(note)}</li>`).join("")}</ul>` : ""}`;
+  if (classBuild.routes) {
+    return classBuild.routes.map(route => `
+      <section class="stat-route">
+        <h5>${guideEscape(guideText(route.name))}</h5>
+        ${renderBuild(route)}
+      </section>`).join("");
+  }
+  return renderBuild(classBuild);
+}
+
+function renderStatPlan(guide) {
+  const plan = guide.statPlan;
+  const principles = plan.principles.map(item => `
+    <article class="guide-card">
+      <h3>${guideEscape(guideText(item.title))}</h3>
+      <p>${guideEscape(guideText(item.content))}</p>
+    </article>`).join("");
+  const groups = [...new Set(plan.classes.map(item => JSON.stringify(item.group)))];
+  const classes = groups.map(groupKey => {
+    const group = JSON.parse(groupKey);
+    const entries = plan.classes.filter(item => JSON.stringify(item.group) === groupKey);
+    return `<section class="guide-command-group"><h3>${guideEscape(guideText(group))}</h3><div class="guide-build-grid">${entries.map(build => `
+      <article class="guide-build-card">
+        <h4>${guideEscape(build.name)}${window.WIKI_I18N.language === "cn" && build.nickname ? ` <small>（${guideEscape(build.nickname)}）</small>` : ""}</h4>
+        ${statDetails(build, window.WIKI_I18N.language)}
+      </article>`).join("")}</div></section>`;
+  }).join("");
+  return `${guideHeader(guideText(plan.intro))}<div class="guide-card-grid guide-card-grid--principles">${principles}</div>${classes}`;
+}
+
+async function renderGuidePage(view) {
+  const root = document.querySelector("#guide-content");
+  if (!root || !guideViews.includes(view)) return;
+  root.dataset.guidePage = view;
+  try {
+    if (view === "localization") {
+      const guide = await window.WIKI_DATA.loadJson("assets/data/site/localization-guide.json");
+      root.innerHTML = `
+        <div class="localization-guide">
+          <p class="command-panel__eyebrow">${guideEscape(guideText(guide.eyebrow))}</p>
+          <h2>${guideEscape(guideText(guide.title))}</h2>
+          <div class="command-panel__content">
+            <p>${guideEscape(guideText(guide.description))}</p>
+            <ol>${guide.steps.map(step => `<li>${guideEscape(guideText(step))}</li>`).join("")}</ol>
+            <a class="localization-guide__download" href="${guideEscape(guide.download.href)}" download>${guideEscape(guideText(guide.download.label))}</a>
+          </div>
+        </div>`;
+      return;
+    }
+    const guide = await loadNewPlayerGuide();
+    if (view === "server-rules") root.innerHTML = renderRules(guide);
+    else if (view === "common-commands") root.innerHTML = renderCommands(guide);
+    else root.innerHTML = renderStatPlan(guide);
+  } catch (error) {
+    root.textContent = window.WIKI_I18N.text("guide.loadError", "指南内容加载失败。");
+    console.error("Could not render guide page.", error);
+  }
+}
 
 let equipmentDatabase = null;
 let databaseFilterActive = false;
+let databaseTargetItem = "";
+let equipmentDatabaseReady;
+const equipmentItemIds = new Set();
+const normalizedItemId = value => window.WIKI_SEARCH.normalize(value);
+window.WIKI_HAS_EQUIPMENT = itemId => equipmentItemIds.has(normalizedItemId(itemId));
+window.addEventListener("wiki-drop-data-ready", event => {
+  event.detail.equipmentNames.forEach(name => equipmentItemIds.add(normalizedItemId(name)));
+  refreshEquipmentLinks();
+});
+
+function refreshEquipmentLinks(root = document) {
+  root.querySelectorAll("[data-item]:not(.item-cell)").forEach(node => {
+    const available = window.WIKI_HAS_EQUIPMENT(node.dataset.item);
+    node.dataset.equipmentAvailable = String(available);
+    node.classList.toggle("wiki-item-link", available);
+  });
+}
 const databaseKinds = [
   ["weapons", "weapon"],
   ["shields", "shield"],
@@ -197,6 +399,7 @@ function databaseFields(kind, records) {
 function databaseRows(records, fields, query) {
   const lowerQuery = window.WIKI_SEARCH.normalize(query);
   return Object.keys(records).filter(name => {
+    if (databaseTargetItem) return name === databaseTargetItem;
     const record = records[name];
     let searchable = equipmentDatabase.searchIndex.get(record);
     if (searchable == null) {
@@ -231,7 +434,7 @@ function databaseTable(records, fields, query, kind, typeLabel = "") {
     const label = window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getDatabase(field) : field;
     return state.sort[kind] === field ? `${label} ${state.direction === "asc" ? "▲" : "▼"}` : label;
   };
-  return `<div class="database-table-wrap"><table class="database-table" data-db-kind="${databaseEscape(kind)}"><thead><tr><th data-sort-kind="${kind}" data-sort-field="name">${window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getDatabase("Name") : "Name"}</th>${fields.map(field => `<th data-sort-kind="${kind}" data-sort-field="${databaseEscape(field)}">${databaseEscape(header(field))}</th>`).join("")}</tr></thead><tbody>${rows.map(name => { const rarity = equipmentDatabase.catalog?.[name]?.superitem || 0; const rarityClass = rarity === 2 ? "ultimate-item" : rarity === 1 ? "legend-item" : ""; return `<tr><td><span class="database-item-name ${rarityClass}">${databaseHighlight(databaseDisplayName(name), query)}</span>${window.WIKI_I18N.language === "cn" && databaseDisplayName(name) !== name ? `<small class="database-name-en">${databaseHighlight(name, query)}</small>` : ""}</td>${fields.map(field => `<td data-db-field="${databaseEscape(field)}">${databaseCellHtml(records[name][field], field, query)}</td>`).join("")}</tr>`; }).join("")}</tbody></table></div>`;
+  return `<div class="database-table-wrap"><table class="database-table" data-db-kind="${databaseEscape(kind)}"><thead><tr><th data-sort-kind="${kind}" data-sort-field="name">${window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getDatabase("Name") : "Name"}</th>${fields.map(field => `<th data-sort-kind="${kind}" data-sort-field="${databaseEscape(field)}">${databaseEscape(header(field))}</th>`).join("")}</tr></thead><tbody>${rows.map(name => { const rarity = equipmentDatabase.catalog?.[name]?.superitem || 0; const rarityClass = rarity === 2 ? "ultimate-item" : rarity === 1 ? "legend-item" : ""; const targetClass = databaseTargetItem === name ? "database-target" : ""; return `<tr class="${targetClass}"><td><span class="database-item-name ${rarityClass}">${databaseHighlight(databaseDisplayName(name), query)}</span>${window.WIKI_I18N.language === "cn" && databaseDisplayName(name) !== name ? `<small class="database-name-en">${databaseHighlight(name, query)}</small>` : ""}</td>${fields.map(field => `<td data-db-field="${databaseEscape(field)}">${databaseCellHtml(records[name][field], field, query)}</td>`).join("")}</tr>`; }).join("")}</tbody></table></div>`;
 }
 
 function databaseCategory(file, kind, query) {
@@ -258,7 +461,10 @@ function databaseRender() {
   if (!root.querySelector(".database-panel")) {
     root.innerHTML = `<article class="database-panel"><p class="command-panel__eyebrow">Equipment Reference</p><h1></h1><input id="equipmentDatabaseSearch" class="database-search" type="search"><div class="database-sections"></div></article>`;
     const search = root.querySelector("#equipmentDatabaseSearch");
-    window.WIKI_SEARCH.bind(search, databaseRender);
+    window.WIKI_SEARCH.bind(search, () => {
+      databaseTargetItem = "";
+      databaseRender();
+    });
   }
   const query = window.WIKI_SEARCH.normalize(root.querySelector("#equipmentDatabaseSearch")?.value);
   if (!query && !databaseFilterActive) {
@@ -289,14 +495,46 @@ function databaseRender() {
   }));
 }
 
+function findEquipmentItem(itemId) {
+  const normalizedId = window.WIKI_SEARCH.normalize(itemId);
+  for (const [file] of databaseKinds) {
+    const records = equipmentDatabase[file] || {};
+    const name = Object.keys(records).find(candidate =>
+      window.WIKI_SEARCH.normalize(candidate) === normalizedId
+    );
+    if (name) return name;
+  }
+  return "";
+}
+
+window.WIKI_OPEN_EQUIPMENT = async itemId => {
+  await window.WIKI_LOAD_EQUIPMENT_DATABASE();
+  const name = findEquipmentItem(itemId);
+  if (!name) return false;
+  databaseTargetItem = name;
+  history.pushState({ view: "database", item: name }, "", "#database");
+  selectView("database", false, false);
+  const root = document.querySelector("#equipment-database");
+  const search = root.querySelector("#equipmentDatabaseSearch");
+  search.value = name;
+  databaseRender();
+  requestAnimationFrame(() => {
+    root.querySelector(".database-target")?.scrollIntoView({ block: "center", behavior: "smooth" });
+  });
+  return true;
+};
+
 async function loadEquipmentDatabase() {
   await window.WIKI_I18N.ready;
   const values = await Promise.all([
-    fetch("assets/data/item-catalog.json").then(response => response.json()),
-    ...databaseKinds.map(([file]) => fetch(`assets/data/item/${file}.json`).then(response => response.json()))
+    window.WIKI_DATA.loadJson("assets/data/item-catalog.json"),
+    ...databaseKinds.map(([file]) => window.WIKI_DATA.loadJson(`assets/data/item/${file}.json`))
   ]);
   equipmentDatabase = { catalog: values[0], state: { sort: {}, direction: "asc", open: new Set() } };
   databaseKinds.forEach(([file], index) => { equipmentDatabase[file] = values[index + 1]; });
+  databaseKinds.forEach(([file]) => {
+    Object.keys(equipmentDatabase[file]).forEach(name => equipmentItemIds.add(normalizedItemId(name)));
+  });
   equipmentDatabase.fields = Object.fromEntries(databaseKinds.map(([file, kind]) =>
     [file, databaseFields(kind, equipmentDatabase[file])]
   ));
@@ -309,9 +547,37 @@ async function loadEquipmentDatabase() {
       )])
   );
   databaseRender();
+  refreshEquipmentLinks();
+  window.dispatchEvent(new Event("wiki-equipment-database-ready"));
 }
 
-loadEquipmentDatabase();
+window.WIKI_LOAD_EQUIPMENT_DATABASE = () => {
+  if (!equipmentDatabaseReady) {
+    equipmentDatabaseReady = loadEquipmentDatabase().catch(error => {
+      equipmentDatabaseReady = null;
+      throw error;
+    });
+  }
+  return equipmentDatabaseReady;
+};
+if (window.WIKI_ACTIVE_VIEW === "database") {
+  window.WIKI_LOAD_EQUIPMENT_DATABASE().catch(error => {
+    const root = document.querySelector("#equipment-database");
+    if (root) root.textContent = "Could not load the equipment database.";
+    console.error("Could not load the equipment database.", error);
+  });
+}
+
+document.addEventListener("click", event => {
+  if (event.button !== 0) return;
+  const clicked = event.target instanceof Element ? event.target : event.target.parentElement;
+  const target = clicked?.closest(".wiki-item-link[data-equipment-available='true']");
+  if (!target || !target.dataset.item || !window.WIKI_OPEN_EQUIPMENT) return;
+  event.preventDefault();
+  window.WIKI_OPEN_EQUIPMENT(target.dataset.item).catch(error => {
+    console.error("Could not open the equipment database item.", error);
+  });
+});
 
 window.addEventListener("wiki-language-change", () => {
   if (equipmentDatabase) {
