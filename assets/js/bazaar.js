@@ -6,6 +6,7 @@ const SECTION_ID_NAMES = ['Viridia', 'Greenill', 'Skyly', 'Bluefull', 'Purplenum
 const SECTION_ID_BY_TERM = Object.fromEntries(SECTION_ID_NAMES.map((name, id) => [name.toLowerCase(), { name, id }]));
 let questFilter = '';
 let BAZAAR_LANGUAGE = '';
+const QUEST_SEARCH_INDEX = new WeakMap();
 const SECTION_BY_ID = {
   'bz-quick': 'currency', 'bz-drops': 'special', 'bz-mpc': 'special',
   'bz-services': 'bazaar', 'bz-exchange': 'bazaar', 'bz-effects': 'effects', 'bz-quests': 'quests'
@@ -175,13 +176,9 @@ function bindSectionIdTooltips(root) {
   });
 }
 
-function normalizeSearch(value) {
-  return String(value || '').toLocaleLowerCase();
-}
-
 function monsterTerms(name) {
   return String(name).split(/\s*\/\s*/).flatMap(term => {
-    const id = MONSTER_ID_BY_TERM[term] || MONSTER_ID_BY_TERM[normalizeSearch(term)];
+    const id = MONSTER_ID_BY_TERM[term] || MONSTER_ID_BY_TERM[window.WIKI_SEARCH.normalize(term)];
     return [term, id, id ? window.WIKI_I18N.getMonster(id) : ''].filter(Boolean);
   });
 }
@@ -189,7 +186,7 @@ function monsterTerms(name) {
 function matchingMonsterIds(keyword) {
   if (!keyword) return new Set();
   return new Set(Object.entries(MONSTER_ID_BY_TERM)
-    .filter(([term]) => normalizeSearch(term).includes(keyword))
+    .filter(([term]) => window.WIKI_SEARCH.normalize(term).includes(keyword))
     .map(([, id]) => id));
 }
 
@@ -200,9 +197,9 @@ function questMonsterDataForKeyword(data, keyword) {
   const floors = Object.fromEntries(Object.entries(data.floors || {}).map(([floorId, floor]) => [floorId, {
     ...floor,
     monsters: Object.fromEntries(Object.entries(floor.monsters || {}).filter(([name]) => {
-      const terms = monsterTerms(name).map(normalizeSearch);
+      const terms = monsterTerms(name).map(term => window.WIKI_SEARCH.normalize(term));
       return terms.some(term => term.includes(keyword)) || terms.some(term => {
-        const id = MONSTER_ID_BY_TERM[name] || MONSTER_ID_BY_TERM[normalizeSearch(name)];
+        const id = MONSTER_ID_BY_TERM[name] || MONSTER_ID_BY_TERM[window.WIKI_SEARCH.normalize(name)];
         return id && matchingIds.has(id);
       });
     }))
@@ -217,6 +214,26 @@ function questCountText(data) {
     window.WIKI_I18N.getQuestArea(floor.floor_name),
     ...Object.entries(floor.monsters || {}).flatMap(([name, count]) => [name, ...monsterTerms(name), count])
   ]).flat().join(' ');
+}
+
+function questSearchText(quest, source) {
+  let languageIndex = QUEST_SEARCH_INDEX.get(source);
+  if (!languageIndex) {
+    languageIndex = new Map();
+    QUEST_SEARCH_INDEX.set(source, languageIndex);
+  }
+  const language = window.WIKI_I18N.language;
+  if (languageIndex.has(language)) return languageIndex.get(language);
+  const text = window.WIKI_SEARCH.normalize([
+    quest.title,
+    quest.requirement,
+    quest.reward,
+    formatQuestDrops(quest.drops),
+    questCountText(quest.monsterData),
+    ...questNotes(quest.notes)
+  ].join(' '));
+  languageIndex.set(language, text);
+  return text;
 }
 
 function addQuestCounts(parent, data, keyword = '') {
@@ -346,8 +363,7 @@ function addQuest(parent, quest, keyword = '') {
   const summary = document.createElement("summary");
   summary.textContent = quest.title; // 任务名保持英文，不与道具/怪物名称混淆。
   details.appendChild(summary);
-  const searchable = [quest.title, quest.requirement, quest.reward, formatQuestDrops(quest.drops), questCountText(quest.monsterData), ...questNotes(quest.notes)].join(' ').toLowerCase();
-  if (keyword && searchable.includes(keyword)) { details.open = true; details.classList.add('is-search-match'); }
+  if (keyword) { details.open = true; details.classList.add('is-search-match'); }
 
   const meta = el("div", "bazaar-meta");
   [
@@ -392,8 +408,7 @@ function addQuestDirectory(parent) {
       categoryDetails.appendChild(categorySummary);
       Object.entries(quests).forEach(([title, source]) => {
         const quest = { ...source, title, monsterData: QUEST_DATA[episode]?.[questBaseTitle(title)] };
-        const haystack = [quest.title, quest.requirement, quest.reward, formatQuestDrops(quest.drops), questCountText(quest.monsterData), ...questNotes(quest.notes)].join(' ').toLowerCase();
-        if (!keyword || haystack.includes(keyword)) addQuest(categoryDetails, quest, keyword);
+        if (!keyword || questSearchText(quest, source).includes(keyword)) addQuest(categoryDetails, quest, keyword);
       });
       if (!categoryDetails.querySelector('.bazaar-details')) categoryDetails.hidden = true;
       else ep.appendChild(categoryDetails);
@@ -432,24 +447,15 @@ export function renderBazaarInfo(target = "#bazaar-info") {
     const search = document.createElement('input');
     search.id = 'questSearchInput'; search.className = 'quest-search'; search.placeholder = window.WIKI_I18N.language === 'cn' ? '搜索任务名称、掉落物或怪物名称…' : 'Search quest, drop, or monster…';
     search.value = questFilter;
-    let isComposing = false;
-    let skipNextInput = false;
-    const updateQuestSearch = () => {
-      questFilter = normalizeSearch(search.value.trim());
-      renderBazaarInfo();
-      applyBazaarSection();
-      const nextSearch = document.querySelector('#questSearchInput');
-      nextSearch?.focus();
-      nextSearch?.setSelectionRange(questFilter.length, questFilter.length);
-    };
-    search.addEventListener('compositionstart', () => { isComposing = true; });
-    search.addEventListener('compositionend', () => { isComposing = false; skipNextInput = true; updateQuestSearch(); });
-    search.addEventListener('input', () => {
-      if (skipNextInput) { skipNextInput = false; return; }
-      if (!isComposing) updateQuestSearch();
+    const directory = el('div', 'quest-directory');
+    window.WIKI_SEARCH.bind(search, query => {
+      questFilter = query;
+      directory.replaceChildren();
+      addQuestDirectory(directory);
     });
     quests.appendChild(search);
-    addQuestDirectory(quests);
+    quests.appendChild(directory);
+    addQuestDirectory(directory);
   }
 
   root.appendChild(panel);

@@ -7,6 +7,13 @@ const panels = {
   database: document.querySelector("#database-panel")
 };
 
+const siteNav = document.querySelector(".wiki-site-nav");
+const updateStickyOffset = () => {
+  document.documentElement.style.setProperty("--wiki-nav-height", `${siteNav.getBoundingClientRect().height}px`);
+};
+updateStickyOffset();
+new ResizeObserver(updateStickyOffset).observe(siteNav);
+
 function selectView(view, updateHash = true) {
   const isDrops = view === "drops";
   const isCommands = view === "commands";
@@ -60,8 +67,7 @@ async function renderBilingualDictionary() {
     const table = (title, data, kind) => `<section class="dictionary-section" data-dictionary-kind="${kind}"><h2>${title}</h2><div class="dictionary-table-wrap"><table><thead><tr><th>English</th><th>中文</th></tr></thead><tbody>${data.map(([en, cn]) => `<tr data-search="${`${en} ${cn}`.toLowerCase()}"><td>${en}</td><td>${cn}</td></tr>`).join("")}</tbody></table></div></section>`;
     root.innerHTML = `<article class="dictionary-panel"><p class="dictionary-panel__intro">中英名称速查</p><input id="dictionarySearch" class="dictionary-search" type="search" placeholder="搜索英文或中文名称…">${table("道具名称", rows, "items")}${table("怪物名称", monsters, "monsters")}</article>`;
     const search = root.querySelector("#dictionarySearch");
-    search.addEventListener("input", () => {
-      const query = search.value.trim().toLowerCase();
+    window.WIKI_SEARCH.bind(search, query => {
       root.querySelectorAll(".dictionary-section").forEach(section => {
         let matches = 0;
         section.querySelectorAll("tbody tr").forEach(row => {
@@ -82,8 +88,8 @@ renderBilingualDictionary();
 
 async function loadLocalizationGuide() {
   const guide = await fetch("assets/data/site/localization-guide.json").then(res => res.json());
-  const root = document.querySelector("#localization-guide");
-  root.innerHTML = `
+  document.querySelectorAll("[data-localization-guide]").forEach(root => {
+    root.innerHTML = `
     <div class="localization-guide">
       <p class="command-panel__eyebrow">${guide.eyebrow}</p>
       <h2>${guide.title}</h2>
@@ -93,11 +99,13 @@ async function loadLocalizationGuide() {
         <a class="localization-guide__download" href="${guide.download.href}" download>${guide.download.label}</a>
       </div>
     </div>`;
+  });
 }
 
 loadLocalizationGuide();
 
 let equipmentDatabase = null;
+let databaseFilterActive = false;
 const databaseKinds = [
   ["weapons", "weapon"],
   ["shields", "shield"],
@@ -110,11 +118,17 @@ function databaseEscape(value) {
   return String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 }
 
-function databaseHighlight(value, query) {
+function databaseHighlight(value, query, source = value) {
   const escaped = databaseEscape(value);
-  if (!query) return escaped;
-  const pattern = new RegExp(`(${query.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&")})`, "ig");
-  return escaped.replace(pattern, "<mark>$1</mark>");
+  const normalizedQuery = window.WIKI_SEARCH.normalize(query);
+  if (!normalizedQuery) return escaped;
+  if (!window.WIKI_SEARCH.normalize(value).includes(normalizedQuery)) {
+    return window.WIKI_SEARCH.normalize(source).includes(normalizedQuery)
+      ? `<mark>${escaped}</mark>`
+      : escaped;
+  }
+  const pattern = new RegExp(normalizedQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "ig");
+  return escaped.replace(pattern, match => `<mark>${match}</mark>`);
 }
 
 function databaseValue(value) {
@@ -130,40 +144,36 @@ function databaseDisplayName(name) {
 
 function databaseDisplayValue(value, field) {
   const text = databaseValue(value);
-  if (text === "None") return "";
-  if (field === "Special") return text.split(/\s*,\s*/).map(part => window.WIKI_I18N.getBoost(part)).join(", ");
-  if (field === "Required") return text.replace(/\b(ATP|ATA|MST|LCK|HP|TP)\b/g, token => window.WIKI_I18N.getBoost(token));
-  if (field !== "Boosts" || text === "-") return text;
-  return text.split(/,\s*/).map(part => {
-    const match = part.match(/^(All Stats|Megid Penetration|HP Recovery|TP Recovery|HP Drain|TP Drain|Trap Search|[^ +]+)(.*)$/);
-    return match ? `${window.WIKI_I18N.getBoost(match[1])}${match[2]}` : window.WIKI_I18N.getBoost(part);
-  }).join(", ");
+  if ((field === "Boosts" || field === "Special") && window.WIKI_SEARCH.normalize(text) === "none") return "";
+  if (text === "-") return text;
+  const boost = window.WIKI_I18N.getBoost(text);
+  return boost === text ? window.WIKI_I18N.getDatabase(text) : boost;
 }
 
-function databaseClassHtml(value) {
+function databaseClassHtml(value, query) {
   const classes = String(value || "").split(/,\s*/).filter(Boolean);
   const allClasses = new Set(["humar", "hunewearl", "hucast", "hucaseal", "ramar", "ramarl", "racast", "racaseal", "fomar", "fomarl", "fonewm", "fonewearl"]);
-  if (classes.length === allClasses.size && classes.every(item => allClasses.has(item))) return `<span class="class-badge class-all">${window.WIKI_I18N.text("label.allClasses", "全职业可装备")}</span>`;
+  if (classes.length === allClasses.size && classes.every(item => allClasses.has(item))) {
+    const label = window.WIKI_I18N.text("label.allClasses", "全职业可装备");
+    return `<span class="class-badge class-all">${databaseHighlight(label, query, value)}</span>`;
+  }
   return classes.map(item => {
     const faction = /^(humar|hunewearl|hucast|hucaseal)$/.test(item) ? "hunter" : /^(ramar|ramarl|racast|racaseal)$/.test(item) ? "ranger" : /^(fomar|fomarl|fonewm|fonewearl)$/.test(item) ? "force" : "";
-    return `<span class="class-badge ${faction}">${databaseEscape(window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getClass(item) : item)}</span>`;
+    const translated = window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getClass(item) : item;
+    return `<span class="class-badge ${faction}">${databaseHighlight(translated, query, item)}</span>`;
   }).join(" ");
 }
 
-function databaseSpecialHtml(value) {
+function databaseSpecialHtml(value, query) {
   const translated = window.WIKI_I18N.getBoost(value);
-  const tone = /^(Draw|Drain|Fill|Gush|Heat|Fire|Flame|Burning|Berserk|Triple Foie|Ultimate Destruction|Energy Beam)$/.test(value) ? "fire" : /^(Heart|Mind|Soul|Geist|Ice|Frost|Freeze|Blizzard|Spirit|Freeze Mist)$/.test(value) ? "ice" : /^(Master's|Lord's|King's|Panic|Riot|Havoc|Chaos|Energy Wave)$/.test(value) ? "special-purple" : /^(Charge|Shock|Thunder|Storm|Tempest)$/.test(value) ? "lightning" : /^(Bind|Hold|Seize|Arrest)$/.test(value) ? "special-orange" : /^(Dim|Shadow|Dark|Hell|Double Megid|Hell Stor|Megid)$/.test(value) ? "megid" : /^(Devil's|Demon's)$/.test(value) ? "holy" : "other";
-  return `<span class="boost-badge ${tone}">${databaseEscape(translated)}</span>`;
+  const tone = window.WIKI_I18N.getBoostTone(value);
+  return `<span class="boost-badge ${tone}">${databaseHighlight(translated, query, value)}</span>`;
 }
 
-function databaseBoostHtml(value) {
-  const badges = String(value || "").split(/,\s*/).map(part => {
-    const match = part.match(/^(All Stats|Megid Penetration|HP Recovery|TP Recovery|HP Drain|TP Drain|Trap Search|[^ +]+)(.*)$/);
-    const key = match?.[1] || "other";
-    const exact = window.WIKI_I18N.getBoost(part);
-    const label = exact !== part ? exact : match ? `${window.WIKI_I18N.getBoost(key)}${match[2]}` : part;
-    const tone = /^(Foie|Gifoie|Rafoie|Fire|Flame|Heat|Burning)$/.test(key) ? "fire" : /^(Barta|Gibarta|Rabarta|Ice|Frost|Freeze|Blizzard)$/.test(key) ? "ice" : /^(Zonde|Gizonde|Razonde|All|All Stats|Shock|Thunder|Storm|Tempest)$/.test(key) ? "lightning" : /^(Triple Grants|Grants|Resta|Anti|Reverser)$/.test(key) ? "holy" : /^(Megid|Megid Penetration)$/.test(key) ? "megid" : /^(Shifta|Jellen|ATP)$/.test(key) ? "attack" : /^(Deband|Zalure|DFP)$/.test(key) ? "defense" : /^(HP|HP Recovery|HP Drain)$/.test(key) ? "hp" : /^(TP|TP Recovery|TP Drain)$/.test(key) ? "tp" : /^ATA$/.test(key) ? "accuracy" : /^EVP$/.test(key) ? "evasion" : /^MST$/.test(key) ? "mind" : /^LCK$/.test(key) ? "luck" : "other";
-    return `<span class="boost-badge ${tone}">${databaseEscape(label)}</span>`;
+function databaseBoostHtml(value, query) {
+  const badges = window.WIKI_I18N.getBoostParts(value).map(part => {
+    const tone = window.WIKI_I18N.getBoostTone(part.source);
+    return `<span class="boost-badge ${tone}">${databaseHighlight(part.label, query, part.source)}</span>`;
   });
   const rows = [];
   for (let index = 0; index < badges.length; index += 2) rows.push(`<span class="boost-badge-row">${badges.slice(index, index + 2).join("")}</span>`);
@@ -171,11 +181,11 @@ function databaseBoostHtml(value) {
 }
 
 function databaseCellHtml(value, field, query) {
-  if (value == null || value === "" || value === "None") return "";
-  if (field === "Class" && value) return databaseClassHtml(value);
-  if (field === "Special" && value) return databaseSpecialHtml(value);
-  if (field === "Boosts" && value && value !== "None") return databaseBoostHtml(value);
-  return databaseHighlight(databaseDisplayValue(value, field), query);
+  if (value == null || value === "" || window.WIKI_SEARCH.normalize(value) === "none" && ["Boosts", "Special"].includes(field)) return "";
+  if (field === "Class" && value) return databaseClassHtml(value, query);
+  if (field === "Special" && value) return databaseSpecialHtml(value, query);
+  if (field === "Boosts" && value) return databaseBoostHtml(value, query);
+  return databaseHighlight(databaseDisplayValue(value, field), query, databaseValue(value));
 }
 
 function databaseFields(kind, records) {
@@ -185,10 +195,21 @@ function databaseFields(kind, records) {
 }
 
 function databaseRows(records, fields, query) {
-  const lowerQuery = query.toLocaleLowerCase();
+  const lowerQuery = window.WIKI_SEARCH.normalize(query);
   return Object.keys(records).filter(name => {
-    const values = [name, databaseDisplayName(name), ...fields.map(field => databaseDisplayValue(records[name][field], field))];
-    return !lowerQuery || values.join(" ").toLocaleLowerCase().includes(lowerQuery);
+    const record = records[name];
+    let searchable = equipmentDatabase.searchIndex.get(record);
+    if (searchable == null) {
+      const values = [name, databaseDisplayName(name), ...fields.flatMap(field => [
+        ["Boosts", "Special"].includes(field) && window.WIKI_SEARCH.normalize(record[field]) === "none"
+          ? ""
+          : databaseValue(record[field]),
+        databaseDisplayValue(record[field], field)
+      ])];
+      searchable = window.WIKI_SEARCH.normalize(values.join(" "));
+      equipmentDatabase.searchIndex.set(record, searchable);
+    }
+    return !lowerQuery || searchable.includes(lowerQuery);
   });
 }
 
@@ -215,15 +236,15 @@ function databaseTable(records, fields, query, kind, typeLabel = "") {
 
 function databaseCategory(file, kind, query) {
   const records = equipmentDatabase[file] || {};
-  const fields = databaseFields(kind, records);
+  const fields = equipmentDatabase.fields[file];
   if (kind !== "weapon") {
     const table = databaseTable(records, fields, query, kind);
     if (!table) return "";
     return `<details class="database-category" data-db-key="${file}"${query || equipmentDatabase.state.open.has(file) ? " open" : ""}><summary>${databaseEscape(window.WIKI_I18N.getDatabase(file))}</summary>${table}</details>`;
   }
-  const types = [...new Set(Object.values(records).map(record => record.Type).filter(Boolean))].sort();
+  const types = Object.keys(equipmentDatabase.weaponTypes);
   const typeSections = types.map(type => {
-    const typeRecords = Object.fromEntries(Object.entries(records).filter(([, record]) => record.Type === type));
+    const typeRecords = equipmentDatabase.weaponTypes[type];
     const table = databaseTable(typeRecords, fields, query, `${kind}:${type}`);
     const key = `${kind}:${type}`;
     return table ? `<details class="database-subcategory" data-db-key="${databaseEscape(key)}"${query || equipmentDatabase.state.open.has(key) ? " open" : ""}><summary>${databaseEscape(window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getType(type) : type)}</summary>${table}</details>` : "";
@@ -234,23 +255,31 @@ function databaseCategory(file, kind, query) {
 function databaseRender() {
   const root = document.querySelector("#equipment-database");
   if (!root || !equipmentDatabase) return;
-  root.querySelectorAll("details[data-db-key]").forEach(node => {
-    if (node.open) equipmentDatabase.state.open.add(node.dataset.dbKey);
-    else equipmentDatabase.state.open.delete(node.dataset.dbKey);
-  });
-  const query = (root.querySelector("#equipmentDatabaseSearch")?.value || "").trim();
+  if (!root.querySelector(".database-panel")) {
+    root.innerHTML = `<article class="database-panel"><p class="command-panel__eyebrow">Equipment Reference</p><h1></h1><input id="equipmentDatabaseSearch" class="database-search" type="search"><div class="database-sections"></div></article>`;
+    const search = root.querySelector("#equipmentDatabaseSearch");
+    window.WIKI_SEARCH.bind(search, databaseRender);
+  }
+  const query = window.WIKI_SEARCH.normalize(root.querySelector("#equipmentDatabaseSearch")?.value);
+  if (!query && !databaseFilterActive) {
+    root.querySelectorAll("details[data-db-key]").forEach(node => {
+      if (node.open) equipmentDatabase.state.open.add(node.dataset.dbKey);
+      else equipmentDatabase.state.open.delete(node.dataset.dbKey);
+    });
+  }
   const sections = databaseKinds.map(([file, kind]) => databaseCategory(file, kind, query)).filter(Boolean).join("");
-  root.innerHTML = `<article class="database-panel"><p class="command-panel__eyebrow">Equipment Reference</p><h1>${window.WIKI_I18N.language === "cn" ? "装备数据库" : "Equipment Database"}</h1><input id="equipmentDatabaseSearch" class="database-search" type="search" placeholder="${window.WIKI_I18N.language === "cn" ? "搜索所有装备信息…" : "Search all equipment information..."}" value="${databaseEscape(query)}"><div class="database-sections">${sections || `<p class="database-empty">${window.WIKI_I18N.language === "cn" ? "没有匹配的装备。" : "No matching equipment."}</p>`}</div></article>`;
+  root.querySelector("h1").textContent = window.WIKI_I18N.language === "cn" ? "装备数据库" : "Equipment Database";
   const search = root.querySelector("#equipmentDatabaseSearch");
-  let composing = false;
-  search.addEventListener("compositionstart", () => { composing = true; });
-  search.addEventListener("compositionend", () => { composing = false; databaseRender(); });
-  search.addEventListener("input", () => { if (!composing) databaseRender(); });
-  root.querySelectorAll("details[data-db-key]").forEach(node => node.addEventListener("toggle", () => {
+  search.placeholder = window.WIKI_I18N.language === "cn" ? "搜索所有装备信息…" : "Search all equipment information...";
+  const sectionsRoot = root.querySelector(".database-sections");
+  sectionsRoot.innerHTML = sections || `<p class="database-empty">${window.WIKI_I18N.language === "cn" ? "没有匹配的装备。" : "No matching equipment."}</p>`;
+  databaseFilterActive = Boolean(query);
+  sectionsRoot.querySelectorAll("details[data-db-key]").forEach(node => node.addEventListener("toggle", () => {
+    if (databaseFilterActive) return;
     if (node.open) equipmentDatabase.state.open.add(node.dataset.dbKey);
     else equipmentDatabase.state.open.delete(node.dataset.dbKey);
   }));
-  root.querySelectorAll("[data-sort-field]").forEach(header => header.addEventListener("click", () => {
+  sectionsRoot.querySelectorAll("[data-sort-field]").forEach(header => header.addEventListener("click", () => {
     const kind = header.dataset.sortKind;
     const field = header.dataset.sortField === "name" ? "" : header.dataset.sortField;
     const state = equipmentDatabase.state;
@@ -268,11 +297,25 @@ async function loadEquipmentDatabase() {
   ]);
   equipmentDatabase = { catalog: values[0], state: { sort: {}, direction: "asc", open: new Set() } };
   databaseKinds.forEach(([file], index) => { equipmentDatabase[file] = values[index + 1]; });
+  equipmentDatabase.fields = Object.fromEntries(databaseKinds.map(([file, kind]) =>
+    [file, databaseFields(kind, equipmentDatabase[file])]
+  ));
+  equipmentDatabase.searchIndex = new WeakMap();
+  equipmentDatabase.weaponTypes = Object.fromEntries(
+    [...new Set(Object.values(equipmentDatabase.weapons).map(record => record.Type).filter(Boolean))]
+      .sort()
+      .map(type => [type, Object.fromEntries(
+        Object.entries(equipmentDatabase.weapons).filter(([, record]) => record.Type === type)
+      )])
+  );
   databaseRender();
 }
 
 loadEquipmentDatabase();
 
 window.addEventListener("wiki-language-change", () => {
-  if (equipmentDatabase) databaseRender();
+  if (equipmentDatabase) {
+    equipmentDatabase.searchIndex = new WeakMap();
+    databaseRender();
+  }
 });

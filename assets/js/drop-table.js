@@ -33,11 +33,10 @@ function escapeHtml(value) {
 }
 
 function searchText(...values) {
-    return values
+    return window.WIKI_SEARCH.normalize(values
         .flat(Infinity)
         .filter(value => typeof value === "string" && value.trim())
-        .join(" ")
-        .toLowerCase();
+        .join(" "));
 }
 
 // 名称搜索始终同时使用原始英文名和中文名，不受当前界面语言影响。
@@ -122,7 +121,7 @@ function classBadges(value) {
 function specialBadge(value, prefix = "") {
     if (!value || value === "None") return "";
     const translated = window.WIKI_I18N.getBoost(value);
-    const tone = /^(Draw|Drain|Fill|Gush|Heat|Fire|Flame|Burning|Berserk|Triple Foie|Ultimate Destruction|Energy Beam)$/.test(value) ? "fire" : /^(Heart|Mind|Soul|Geist|Ice|Frost|Freeze|Blizzard|Spirit|Freeze Mist)$/.test(value) ? "ice" : /^(Master's|Lord's|King's|Panic|Riot|Havoc|Chaos)$/.test(value) ? "special-purple" : /^(Charge|Shock|Thunder|Storm|Tempest|Autotarget Charge|Set 777 Damage)$/.test(value) ? "lightning" : /^(Bind|Hold|Seize|Arrest)$/.test(value) ? "special-orange" : /^(Dim|Shadow|Dark|Hell|Double Megid|Hell Storm|Megid)$/.test(value) ? "megid" : /^(Devil's|Demon's)$/.test(value) ? "holy" : "other";
+    const tone = window.WIKI_I18N.getBoostTone(value);
     return `<span class="boost-badge ${tone}">${escapeHtml(prefix + translated)}</span>`;
 }
 
@@ -146,15 +145,9 @@ function detailDescription(itemName, item) {
 function detailBoosts(itemName) {
     const detail = detailFor(itemName);
     if (!detail || !detail.raw.Boosts || detail.raw.Boosts === "None") return "";
-    const translate = value => window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getBoost(value) : value;
-    return String(detail.raw.Boosts).split(", ").map(part => {
-        const match = part.match(/^(All Stats|Megid Penetration|HP Recovery|TP Recovery|HP Drain|TP Drain|Trap Search|[^ +]+)(.*)$/);
-        const exact = translate(part);
-        const label = exact !== part ? exact : match ? `${translate(match[1])}${match[2]}` : part;
-        const key = exact !== part ? part : match?.[1] || "other";
-        const tone = /^(Foie|Gifoie|Rafoie|Fire|Flame|Heat|Burning)$/.test(key) ? "fire" : /^(Barta|Gibarta|Rabarta|Ice|Frost|Freeze|Blizzard)$/.test(key) ? "ice" : /^(Zonde|Gizonde|All|All Stats|Razonde|Shock|Thunder|Storm|Tempest)$/.test(key) ? "lightning" : /^(Grants|Resta|Anti|Reverser)$/.test(key) ? "holy" : /^(Megid|Megid Penetration)$/.test(key) ? "megid" : /^(Shifta|Jellen|ATP)$/.test(key) ? "attack" : /^(Deband|Zalure|DFP)$/.test(key) ? "defense" : /^(HP|HP Recovery|HP Drain)$/.test(key) ? "hp" : /^(TP|TP Recovery|TP Drain)$/.test(key) ? "tp" : /^ATA$/.test(key) ? "accuracy" : /^EVP$/.test(key) ? "evasion" : /^MST$/.test(key) ? "mind" : /^LCK$/.test(key) ? "luck" : "other";
-        return `<span class="boost-badge ${tone}">${escapeHtml(label)}</span>`;
-    }).join("");
+    return window.WIKI_I18N.getBoostParts(detail.raw.Boosts).map(part =>
+        `<span class="boost-badge ${window.WIKI_I18N.getBoostTone(part.source)}">${escapeHtml(part.label)}</span>`
+    ).join("");
 }
 
 async function loadData() {
@@ -185,20 +178,11 @@ async function loadData() {
         .map(x => `• ${window.WIKI_I18N.getActivity(x)}`)
         .join("<br>");
 
-    //搜索框
     const searchInput = document.getElementById("searchInput");
-
-    // 鼠标点击时自动全选
     searchInput.addEventListener("focus", e => {
         e.target.select();
     });
-
-    // 按下 Enter 触发搜索
-    searchInput.addEventListener("keydown", e => {
-        if (e.key === "Enter") {
-            performSearch();
-        }
-    });
+    window.WIKI_SEARCH.bind(searchInput, performSearch);
 
     //初始化索引
     (data.bonus || []).forEach(b => {
@@ -557,7 +541,7 @@ function scrollToRow(row) {
 }
 
 function performSearch() {
-    const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
+    const keyword = window.WIKI_SEARCH.normalize(document.getElementById("searchInput").value);
     if (!data) return;
     let firstMatch = null;
     const matchedSections = new Set();

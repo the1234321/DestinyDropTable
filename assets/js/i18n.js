@@ -6,8 +6,12 @@ let typeTranslations = {};
 let activityTranslations = {};
 let questAreaTranslations = {};
 let boostTranslations = {};
+let boostTranslationByLowercase = {};
+let boostToneEntries = [];
+let boostTechniques = new Set();
 let databaseTranslations = {};
 let classTranslations = {};
+let translationDataPromise;
 
 const LANGUAGE_LABELS = { cn: "中文", en: "English" };
 const DEFAULT_UI = {
@@ -58,23 +62,108 @@ const DEFAULT_UI = {
     "term.allIds": "all IDs"
 };
 
+window.WIKI_SEARCH = {
+    normalize(value) {
+        return String(value ?? "").trim().toLocaleLowerCase();
+    },
+    bind(input, onSearch) {
+        let composing = false;
+        let lastValue = null;
+        const commit = () => {
+            const query = this.normalize(input.value);
+            if (query === lastValue) return;
+            lastValue = query;
+            onSearch(query);
+        };
+        input.addEventListener("compositionstart", () => { composing = true; });
+        input.addEventListener("compositionend", () => {
+            composing = false;
+            window.setTimeout(commit, 0);
+        });
+        input.addEventListener("input", event => {
+            if (!composing && !event.isComposing) commit();
+        });
+        input.addEventListener("keydown", event => {
+            if (event.key === "Enter" && !composing) commit();
+        });
+    }
+};
+
+function translatedBoostPart(value) {
+    const text = String(value ?? "").trim();
+    if (boostTranslations[text]) return boostTranslations[text];
+    const match = text.match(/^(.+?)(\s*[+-]\s*[\d.]+%?)$/);
+    if (!match) return boostTranslationByLowercase[text.toLocaleLowerCase()] || text;
+    const translated = boostTranslations[match[1]] ||
+        boostTranslationByLowercase[match[1].toLocaleLowerCase()] ||
+        match[1];
+    return `${translated}${match[2]}`;
+}
+
+function translatedBoostParts(value) {
+    const parts = String(value ?? "").split(/\s*,\s*/).filter(Boolean);
+    const translated = [];
+    for (let index = 0; index < parts.length;) {
+        let end = index;
+        const nextTechnique = part => {
+            const match = part.match(/^(.+?)(\s*[+-]\s*[\d.]+%?)?$/);
+            return match && boostTechniques.has(match[1].toLocaleLowerCase());
+        };
+        while (end + 1 < parts.length &&
+            nextTechnique(parts[end]) &&
+            nextTechnique(parts[end + 1]) &&
+            !/[+-]\s*[\d.]+%?$/.test(parts[end])) {
+            end += 1;
+        }
+        const finalPart = parts[end].match(/^(.+?)(\s*[+-]\s*[\d.]+%?)$/);
+        if (end > index && finalPart && boostTechniques.has(finalPart[1].toLocaleLowerCase())) {
+            const names = parts.slice(index, end).concat(finalPart[1]);
+            translated.push({
+                source: parts.slice(index, end).concat(parts[end]).join(", "),
+                label: `${names.map(name => translatedBoostPart(name)).join("、")}${finalPart[2]}`
+            });
+            index = end + 1;
+        } else {
+            translated.push({ source: parts[index], label: translatedBoostPart(parts[index]) });
+            index += 1;
+        }
+    }
+    return translated;
+}
+
+function loadTranslationData() {
+    if (!translationDataPromise) {
+        translationDataPromise = fetch("assets/data/translation/cn.json?v=20261031-2").then(response => {
+            if (!response.ok) throw new Error(`Could not load Chinese translations: ${response.status}`);
+            return response.json();
+        });
+    }
+    return translationDataPromise;
+}
+
 async function loadLanguage(nextLanguage) {
     const selected = nextLanguage === "en" ? "en" : "cn";
-    const translation = selected === "cn"
-        ? await fetch("assets/data/translation/cn.json?v=20260905-5").then(response => response.json())
-        : {};
+    const translation = await loadTranslationData();
+    const localized = selected === "cn";
     language = selected;
     const effectMessages = Object.fromEntries(
-        Object.entries(translation.effect || {}).map(([key, value]) => [`effect.${key}`, value])
+        Object.entries(localized ? translation.effect || {} : {}).map(([key, value]) => [`effect.${key}`, value])
     );
-    messages = { ...DEFAULT_UI, ...(translation.ui || {}), ...effectMessages };
-    monsterTranslations = translation.monsters || {};
-    typeTranslations = translation.types || {};
-    activityTranslations = translation.activity || {};
-    questAreaTranslations = translation.questAreas || {};
-    boostTranslations = translation.boosts || {};
-    databaseTranslations = translation.database || {};
-    classTranslations = translation.classes || {};
+    messages = { ...DEFAULT_UI, ...(localized ? translation.ui || {} : {}), ...effectMessages };
+    monsterTranslations = localized ? translation.monsters || {} : {};
+    typeTranslations = localized ? translation.types || {} : {};
+    activityTranslations = localized ? translation.activity || {} : {};
+    questAreaTranslations = localized ? translation.questAreas || {} : {};
+    boostTranslations = localized ? translation.boosts || {} : {};
+    boostTranslationByLowercase = Object.fromEntries(
+        Object.entries(boostTranslations).map(([key, value]) => [key.toLocaleLowerCase(), value])
+    );
+    boostToneEntries = Object.entries(translation.boostTones || {})
+        .flatMap(([tone, terms]) => terms.map(term => [term.toLocaleLowerCase(), tone]))
+        .sort((left, right) => right[0].length - left[0].length);
+    boostTechniques = new Set((translation.techniques || []).map(value => value.toLocaleLowerCase()));
+    databaseTranslations = localized ? translation.database || {} : {};
+    classTranslations = localized ? translation.classes || {} : {};
     localStorage.setItem("wiki-language", language);
     document.documentElement.lang = language === "en" ? "en" : "zh-CN";
     document.title = messages.pageTitle || document.title;
@@ -89,6 +178,9 @@ async function loadLanguage(nextLanguage) {
     document.querySelectorAll("[data-language]").forEach(button => {
         button.classList.toggle("is-active", button.dataset.language === language);
         button.setAttribute("aria-pressed", String(button.dataset.language === language));
+    });
+    document.querySelectorAll("[data-cn-only]").forEach(node => {
+        node.hidden = language !== "cn";
     });
     const localizationButton = document.querySelector('[data-view="localization"]');
     if (localizationButton) localizationButton.hidden = language === "en";
@@ -119,8 +211,30 @@ window.WIKI_I18N = {
     },
     getActivity(value) { return activityTranslations[value] || value; },
     getQuestArea(value) { return questAreaTranslations[value] || value; },
-    getBoost(value) { return language === "cn" ? (boostTranslations[value] || value) : value; },
-    getDatabase(value) { return language === "cn" ? (databaseTranslations[value] || value) : value; },
+    getBoost(value) {
+        if (language !== "cn") return value;
+        if (boostTranslations[value]) return boostTranslations[value];
+        return translatedBoostParts(value).map(part => part.label).join("，");
+    },
+    getBoostParts(value) {
+        return translatedBoostParts(value).map(part => ({
+            source: part.source,
+            label: language === "cn" ? part.label : part.source
+        }));
+    },
+    getBoostTone(value) {
+        const source = String(value ?? "").trim().toLocaleLowerCase();
+        return boostToneEntries.find(([term]) =>
+            source === term || source.startsWith(`${term} `) ||
+            source.startsWith(`${term}+`) || source.startsWith(`${term},`) ||
+            source.startsWith(`${term}/`)
+        )?.[1] || "other";
+    },
+    getDatabase(value) {
+        return language === "cn"
+            ? (databaseTranslations[value] || boostTranslations[value] || value)
+            : value;
+    },
     getClass(value) { return language === "cn" ? (classTranslations[value] || value) : value; },
     getTerm(value) { return messages[`term.${value}`] || value; },
     text(key, fallback = "") { return messages[key] || fallback; },

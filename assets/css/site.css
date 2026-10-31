@@ -123,10 +123,13 @@
 .database-category > summary { color: var(--site-accent); font-size: 20px; }
 .database-subcategory { margin: 0 12px 10px; background: rgba(255, 255, 255, .025); }
 .database-subcategory > summary { font-size: 16px; }
-.database-table-wrap { overflow: hidden; border-top: 1px solid var(--site-border); }
+.database-category > summary { position: sticky; top: var(--wiki-nav-height, 64px); z-index: 8; background: #111827; }
+.database-subcategory > summary { position: sticky; top: calc(var(--wiki-nav-height, 64px) + 52px); z-index: 7; background: #151f32; }
+.database-table-wrap { overflow: visible; border-top: 1px solid var(--site-border); }
 .database-table { width: 100%; min-width: 0; border-collapse: collapse; table-layout: fixed; }
 .database-table th, .database-table td { padding: 8px 10px; border-bottom: 1px solid var(--site-border); text-align: left; vertical-align: top; line-height: 1.4; white-space: normal; overflow-wrap: anywhere; word-break: break-word; font-size: 13px; }
-.database-table th { position: sticky; top: 0; z-index: 1; background: #1d3453; color: #fff; cursor: pointer; }
+.database-table th { position: sticky; top: calc(var(--wiki-nav-height, 64px) + 98px); z-index: 6; background: #1d3453; color: #fff; cursor: pointer; }
+.database-category > .database-table-wrap .database-table th { top: calc(var(--wiki-nav-height, 64px) + 52px); }
 .database-table th:first-child, .database-table td:first-child { width: 16%; font-weight: 700; }
 .database-table th:nth-child(2), .database-table td:nth-child(2) { width: 7%; }
 .database-table th[data-sort-field="Class"], .database-table td:nth-child(3) { width: 28%; }

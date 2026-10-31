@@ -39,7 +39,7 @@ body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#0f172a;
 
 .episode-selector-row {
     position: sticky;
-    top: 54px;
+    top: var(--wiki-nav-height, 54px);
     z-index: 2000;
     padding: 8px 0;
     background: rgba(17, 24, 39, .98);
@@ -125,12 +125,21 @@ table{ border-collapse:collapse; width:max-content; min-width:1200px; margin:0 a
     width: auto;
     min-width: 0;
     max-width: none;
-    position: static;
     box-shadow: none;
     clip-path: none;
     overflow: visible;
     text-overflow: clip;
     white-space: normal;
+}
+#database-panel .database-table td {
+    position: static;
+}
+#database-panel .database-table thead th {
+    position: sticky;
+    z-index: 6;
+}
+#database-panel .database-table thead th:first-child {
+    z-index: 7;
 }
 
 /* 基础单元格 */
@@ -812,6 +821,34 @@ tbody td:hover{
 #database-panel .database-table td:first-child { width: 16% !important; }
 #database-panel .database-table th:nth-last-child(-n+2),
 #database-panel .database-table td:nth-last-child(-n+2) { width: 24% !important; }
+#database-panel .database-table-wrap { overflow: visible; }
+#database-panel .database-category > summary {
+    position: sticky;
+    top: var(--wiki-nav-height, 64px);
+    z-index: 8;
+    background: #111827;
+}
+#database-panel .database-subcategory > summary {
+    position: sticky;
+    top: calc(var(--wiki-nav-height, 64px) + 52px);
+    z-index: 7;
+    background: #151f32;
+}
+#database-panel .database-table th {
+    position: sticky;
+    top: calc(var(--wiki-nav-height, 64px) + 98px);
+    z-index: 6;
+    background: #1d3453;
+}
+#database-panel .database-table thead th {
+    position: sticky;
+}
+#database-panel .database-category > .database-table-wrap .database-table thead th {
+    top: calc(var(--wiki-nav-height, 64px) + 52px);
+}
+#database-panel .database-category > .database-table-wrap .database-table th {
+    top: calc(var(--wiki-nav-height, 64px) + 52px);
+}
 
 .tooltip-quest::before { content: none !important; display: none !important; }
 
