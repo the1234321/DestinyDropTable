@@ -38,6 +38,8 @@ window.WIKI_DATA = { loadJson };
 const LANGUAGE_LABELS = { cn: "中文", en: "English" };
 const DEFAULT_UI = {
     "nav.drops": "Drop Table",
+    "drops.menuHeading": "DROP TABLE",
+    "drops.normal": "Normal Drops",
     "nav.commands": "New Player Guide",
     "guide.eyebrow": "Destiny New Player Guide",
     "guide.serverRules": "Server Rules",
@@ -50,16 +52,19 @@ const DEFAULT_UI = {
     "guide.remaining": "Slots remaining",
     "guide.loadError": "Could not load guide content.",
     "guide.menuHeading": "NEW PLAYER GUIDE",
-    "nav.localization": "Localization Guide",
     "nav.dictionary": "Bilingual Dictionary",
+    "nav.localeTools": "Localization / Dictionary",
+    "localeTools.menuHeading": "LOCALIZATION & DICTIONARY",
     "nav.currency": "Currency",
     "nav.special": "Special Drops",
-    "nav.bazaar": "Bazaar",
-    "nav.crafting": "Crafting / Sets",
+    "nav.bazaar": "Bazaar Services",
+    "nav.crafting": "Equipment Related",
     "crafting.recipes": "Crafting",
+    "crafting.exchange": "Exchange",
     "crafting.sets": "Sets",
-    "crafting.menuHeading": "CRAFTING / SETS",
-    "nav.quests": "Quest Guide",
+    "crafting.menuHeading": "EQUIPMENT RELATED",
+    "nav.quests": "Quest Related",
+    "quests.quickLookup": "Quest Quick Reference",
     "nav.database": "Equipment Database",
     "brand": "Destiny Server Wiki",
     "pageTitle": "Destiny Server Wiki",
@@ -92,8 +97,6 @@ const DEFAULT_UI = {
     "label.boosts": "Boosts",
     "label.allClasses": "All classes",
     "label.monsters": "Monster Counts / BOSS Info",
-    "label.questDrops": "Special Drops",
-    "label.specialDrops": "Special Drops",
     "term.except": "except",
     "term.allIds": "all IDs"
 };
@@ -169,7 +172,7 @@ function translatedBoostParts(value) {
 
 function loadTranslationData() {
     if (!translationDataPromise) {
-        translationDataPromise = loadJson("assets/data/translation/cn.json?v=20261031-2");
+        translationDataPromise = loadJson("assets/data/translation/cn.json?v=20261101-5");
     }
     return translationDataPromise;
 }
@@ -224,13 +227,9 @@ async function loadLanguage(nextLanguage) {
         button.classList.toggle("is-active", button.dataset.language === language);
         button.setAttribute("aria-pressed", String(button.dataset.language === language));
     });
-    document.querySelectorAll("[data-cn-only]").forEach(node => {
-        node.hidden = language !== "cn";
+    document.querySelectorAll("[data-non-en]").forEach(node => {
+        node.hidden = language === "en";
     });
-    const localizationButton = document.querySelector('[data-view="localization"]');
-    if (localizationButton) localizationButton.hidden = language === "en";
-    const dictionaryButton = document.querySelector('[data-view="dictionary"]');
-    if (dictionaryButton) dictionaryButton.hidden = language === "en";
     window.dispatchEvent(new CustomEvent("wiki-language-change", { detail: { language } }));
 }
 

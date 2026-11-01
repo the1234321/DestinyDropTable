@@ -9,7 +9,7 @@ let BAZAAR_LANGUAGE = '';
 const QUEST_SEARCH_INDEX = new WeakMap();
 const SECTION_BY_ID = {
   'bz-quick': 'currency', 'bz-drops': 'special', 'bz-mpc': 'special',
-  'bz-services': 'bazaar', 'bz-exchange': 'bazaar', 'bz-crafting': 'crafting', 'bz-quests': 'quests'
+  'bz-services': 'bazaar', 'bz-exchange': 'exchange', 'bz-crafting': 'crafting', 'bz-quests': 'quests'
 };
 
 function localized(value) {
@@ -109,7 +109,7 @@ function formatQuestDrops(drops) {
 
 function addQuestDrops(parent, drops) {
   const wrap = el("div", "bazaar-blockwrap quest-drops-wrap");
-  wrap.appendChild(el("div", "bazaar-block-label", window.WIKI_I18N.text('label.questDrops', 'Special Drops')));
+  wrap.appendChild(el("div", "bazaar-block-label", window.WIKI_I18N.text('nav.special', 'Special Drops')));
   const table = el("table", "quest-drop-table");
   const header = document.createElement("thead");
   const headerRow = document.createElement("tr");
@@ -690,13 +690,13 @@ async function loadBazaarData() {
   SCOPED_NAME_RE = new RegExp(scopedTerms, 'gi');
 }
 
-if (['special', 'bazaar', 'crafting', 'quests'].includes(window.WIKI_ACTIVE_VIEW)) {
+if (['special', 'bazaar', 'exchange', 'crafting', 'quests'].includes(window.WIKI_ACTIVE_VIEW)) {
   window.setBazaarSection(window.WIKI_ACTIVE_VIEW);
 }
 
 window.addEventListener("wiki-language-change", () => {
   if (ITEM_DATA && NAME_RE) {
-    if (['special', 'bazaar', 'crafting', 'quests'].includes(window.WIKI_ACTIVE_VIEW)) {
+    if (['special', 'bazaar', 'exchange', 'crafting', 'quests'].includes(window.WIKI_ACTIVE_VIEW)) {
       window.setBazaarSection(window.WIKI_ACTIVE_VIEW);
     }
   }

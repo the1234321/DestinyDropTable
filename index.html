@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D服中文资料站</title>
-    <link rel="stylesheet" href="assets/css/site.css?v=20261031-8">
+    <link rel="stylesheet" href="assets/css/site.css?v=20261101-3">
     <link rel="stylesheet" href="assets/css/drop-table.css?v=20261031-11">
     <link rel="stylesheet" href="assets/css/bazaar.css?v=20261031-14">
 </head>
@@ -14,7 +14,14 @@
 
     <nav class="wiki-site-nav" aria-label="资料栏目">
         <span class="wiki-brand" data-i18n="brand">命运服中文资料站</span>
-        <button class="wiki-nav-button is-active" type="button" data-view="drops" aria-selected="true" data-i18n="nav.drops">掉落表</button>
+        <div class="wiki-nav-dropdown" data-nav-group="drops">
+            <button class="wiki-nav-button" type="button" aria-haspopup="true" aria-expanded="false" aria-selected="true" data-i18n="nav.drops">掉落表</button>
+            <div class="wiki-nav-dropdown__menu" role="menu">
+                <div class="wiki-nav-dropdown__heading" role="presentation" data-i18n="drops.menuHeading">掉落表分类</div>
+                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-drop-view="drops" data-i18n="drops.normal">普通掉落</button>
+                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-drop-view="special" data-i18n="nav.special">特殊掉落</button>
+            </div>
+        </div>
         <div class="wiki-nav-dropdown">
             <button class="wiki-nav-button wiki-nav-button--featured" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.commands">新手指引</button>
             <div class="wiki-nav-dropdown__menu" role="menu">
@@ -22,22 +29,33 @@
                 <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-guide-view="server-rules" data-i18n="guide.serverRules">服务器规则</button>
                 <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-guide-view="common-commands" data-i18n="guide.commonCommands">常用命令</button>
                 <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-guide-view="level-200" data-i18n="guide.level200">200级配点</button>
-                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-guide-view="localization" data-cn-only data-i18n="guide.localization">汉化指南</button>
             </div>
         </div>
-        <button class="wiki-nav-button" type="button" data-view="dictionary" aria-selected="false" data-i18n="nav.dictionary">中英对照</button>
-        <button class="wiki-nav-button" type="button" data-view="special" aria-selected="false" data-i18n="nav.special">特殊掉落</button>
-        <button class="wiki-nav-button" type="button" data-view="bazaar" aria-selected="false" data-i18n="nav.bazaar">集市服务与兑换</button>
-        <div class="wiki-nav-dropdown" data-nav-group="crafting">
-            <button class="wiki-nav-button" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.crafting">合成/套装</button>
+        <div class="wiki-nav-dropdown" data-nav-group="locale-tools" data-non-en>
+            <button class="wiki-nav-button" type="button" aria-haspopup="true" aria-expanded="false" aria-selected="false" data-i18n="nav.localeTools">汉化/对照</button>
             <div class="wiki-nav-dropdown__menu" role="menu">
-                <div class="wiki-nav-dropdown__heading" role="presentation" data-i18n="crafting.menuHeading">合成/套装分类</div>
-                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-crafting-view="crafting-recipes" data-i18n="crafting.recipes">合成</button>
-                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-crafting-view="crafting-sets" data-i18n="crafting.sets">套装</button>
+                <div class="wiki-nav-dropdown__heading" role="presentation" data-i18n="localeTools.menuHeading">汉化与对照</div>
+                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-locale-view="localization" data-i18n="guide.localization">汉化指南</button>
+                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-locale-view="dictionary" data-i18n="nav.dictionary">中英对照</button>
             </div>
         </div>
-        <button class="wiki-nav-button" type="button" data-view="quests" aria-selected="false" data-i18n="nav.quests">任务介绍</button>
-        <button class="wiki-nav-button" type="button" data-view="database" aria-selected="false" data-i18n="nav.database">装备数据库</button>
+        <div class="wiki-nav-dropdown" data-nav-group="equipment">
+            <button class="wiki-nav-button" type="button" aria-haspopup="true" aria-expanded="false" data-default-view="database" data-i18n="nav.crafting">装备相关</button>
+            <div class="wiki-nav-dropdown__menu" role="menu">
+                <div class="wiki-nav-dropdown__heading" role="presentation" data-i18n="crafting.menuHeading">装备相关分类</div>
+                <button class="wiki-nav-dropdown__item wiki-nav-dropdown__item--featured" type="button" role="menuitem" data-equipment-view="database" data-i18n="nav.database">装备速查</button>
+                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-equipment-view="crafting-recipes" data-i18n="crafting.recipes">装备合成</button>
+                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-equipment-view="exchange" data-i18n="crafting.exchange">装备兑换</button>
+                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-equipment-view="crafting-sets" data-i18n="crafting.sets">套装效果</button>
+            </div>
+        </div>
+        <div class="wiki-nav-dropdown" data-nav-group="quests">
+            <button class="wiki-nav-button" type="button" aria-haspopup="true" aria-expanded="false" aria-selected="false" data-default-view="quests" data-i18n="nav.quests">任务相关</button>
+            <div class="wiki-nav-dropdown__menu" role="menu">
+                <button class="wiki-nav-dropdown__item wiki-nav-dropdown__item--featured" type="button" role="menuitem" data-task-view="quests" data-i18n="quests.quickLookup">任务速查</button>
+                <button class="wiki-nav-dropdown__item" type="button" role="menuitem" data-task-view="bazaar" data-i18n="nav.bazaar">集市服务</button>
+            </div>
+        </div>
     <div class="language-switcher" role="group" aria-label="语言选择">
             <button type="button" data-language="cn" aria-pressed="true">中文</button>
             <button type="button" data-language="en" aria-pressed="false">English</button>
@@ -111,10 +129,10 @@
     <div id="tooltip" class="tooltip"></div>
     <div id="monster-quest-tooltip" class="monster-quest-tooltip"></div>
 
-    <script src="assets/js/i18n.js?v=20261031-8"></script>
+    <script src="assets/js/i18n.js?v=20261101-4"></script>
     <script src="assets/js/drop-table.js?v=20261031-15"></script>
-    <script type="module" src="assets/js/bazaar.js?v=20261031-14"></script>
-    <script src="assets/js/wiki-navigation.js?v=20261031-8"></script>
+    <script type="module" src="assets/js/bazaar.js?v=20261101-2"></script>
+    <script src="assets/js/wiki-navigation.js?v=20261101-8"></script>
 
 </body>
 

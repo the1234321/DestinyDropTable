@@ -33,12 +33,10 @@
 }
 
 .wiki-site-nav .wiki-brand { margin-right: 12px; }
-.wiki-site-nav [data-view="localization"][hidden] { display: none; }
-
 .wiki-nav-dropdown { position: relative; flex: 0 0 auto; }
 .wiki-nav-dropdown__menu {
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   left: 50%;
   z-index: 3200;
   display: grid;
@@ -90,6 +88,16 @@
   transition: background .16s ease, color .16s ease, transform .16s ease;
 }
 .wiki-nav-dropdown__item + .wiki-nav-dropdown__item { margin-top: 5px; }
+.wiki-nav-dropdown__item--featured {
+  border: 1px solid rgba(242, 193, 78, .62);
+  background: linear-gradient(100deg, rgba(242, 193, 78, .24), rgba(242, 193, 78, .1));
+  color: #ffe3a0;
+  box-shadow: inset 0 0 0 1px rgba(242, 193, 78, .08), 0 0 12px rgba(242, 193, 78, .08);
+}
+.wiki-nav-dropdown__item--featured::before {
+  border-color: #ffd66b;
+  background: rgba(242, 193, 78, .42);
+}
 .wiki-nav-dropdown__item::before {
   content: "";
   position: absolute;
@@ -108,6 +116,11 @@
   color: #fff;
   transform: translateX(2px);
 }
+.wiki-nav-dropdown__item--featured:hover,
+.wiki-nav-dropdown__item--featured:focus-visible {
+  background: linear-gradient(100deg, rgba(242, 193, 78, .34), rgba(242, 193, 78, .16));
+  color: #fff1c8;
+}
 .wiki-nav-dropdown__item[hidden] { display: none; }
 
 .wiki-nav-button {
@@ -120,6 +133,20 @@
   font: 700 14px/1 "Segoe UI", "Microsoft YaHei", sans-serif;
   cursor: pointer;
   transition: .2s ease;
+}
+
+.wiki-nav-dropdown > .wiki-nav-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.wiki-nav-dropdown > .wiki-nav-button::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid currentColor;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
 }
 
 .wiki-nav-button:hover { color: #fff; background: rgba(98, 212, 255, .12); }

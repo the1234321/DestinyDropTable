@@ -8,7 +8,7 @@ const panels = {
 
 const siteNav = document.querySelector(".wiki-site-nav");
 const guideViews = ["server-rules", "common-commands", "level-200", "localization"];
-const views = ["drops", ...guideViews, "dictionary", "special", "bazaar", "crafting", "crafting-recipes", "crafting-sets", "quests", "database"];
+const views = ["drops", ...guideViews, "dictionary", "special", "bazaar", "crafting", "crafting-recipes", "exchange", "crafting-sets", "quests", "database"];
 const updateStickyOffset = () => {
   document.documentElement.style.setProperty("--wiki-nav-height", `${siteNav.getBoundingClientRect().height}px`);
 };
@@ -38,11 +38,18 @@ function selectView(view, updateHash = true, scrollToTop = true) {
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-selected", String(active));
   });
-  const craftingDropdown = document.querySelector('.wiki-nav-dropdown[data-nav-group="crafting"]');
-  if (craftingDropdown) {
-    craftingDropdown.classList.toggle("is-active", view === "crafting");
-    craftingDropdown.querySelector(".wiki-nav-button").setAttribute("aria-selected", String(view === "crafting"));
-  }
+  const dropdownViews = {
+    drops: isDrops || view === "special",
+    "locale-tools": view === "localization" || view === "dictionary",
+    equipment: view === "crafting" || view === "exchange" || view === "database",
+    quests: view === "quests" || view === "bazaar"
+  };
+  Object.entries(dropdownViews).forEach(([group, active]) => {
+    const dropdown = document.querySelector(`.wiki-nav-dropdown[data-nav-group="${group}"]`);
+    if (!dropdown) return;
+    dropdown.classList.toggle("is-active", active);
+    dropdown.querySelector(".wiki-nav-button").setAttribute("aria-selected", String(active));
+  });
   if (!isDrops && !isGuide && !isDictionary && !isDatabase && window.setBazaarSection) window.setBazaarSection(view);
   if (updateHash) history.replaceState(null, "", "#" + routeView);
   if (scrollToTop) window.scrollTo({ top: 0, behavior: "smooth" });
@@ -67,15 +74,23 @@ document.querySelectorAll(".wiki-nav-dropdown").forEach(dropdown => {
     button.setAttribute("aria-expanded", "true");
   });
   button.addEventListener("click", () => {
+    if (button.dataset.defaultView) {
+      selectView(button.dataset.defaultView);
+      return;
+    }
     const expanded = button.getAttribute("aria-expanded") === "true";
     button.setAttribute("aria-expanded", String(!expanded));
     dropdown.classList.toggle("is-dismissed", expanded);
   });
   dropdown.addEventListener("pointerleave", () => {
-    if (!dropdown.contains(document.activeElement)) button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-expanded", "false");
+    dropdown.classList.add("is-dismissed");
   });
   dropdown.addEventListener("focusout", event => {
-    if (!dropdown.contains(event.relatedTarget)) button.setAttribute("aria-expanded", "false");
+    if (!dropdown.contains(event.relatedTarget)) {
+      button.setAttribute("aria-expanded", "false");
+      dropdown.classList.add("is-dismissed");
+    }
   });
 });
 
@@ -83,21 +98,23 @@ document.querySelectorAll(".wiki-nav-button[data-view]").forEach(button => {
   button.addEventListener("click", () => selectView(button.dataset.view));
 });
 document.querySelectorAll("[data-guide-view]").forEach(button => {
-  button.addEventListener("click", () => {
-    const dropdown = document.querySelector(".wiki-nav-dropdown");
-    dropdown.querySelector(".wiki-nav-button").setAttribute("aria-expanded", "false");
-    dropdown.classList.add("is-dismissed");
-    selectView(button.dataset.guideView);
-  });
+  button.addEventListener("click", () => selectView(button.dataset.guideView));
 });
 
-document.querySelectorAll("[data-crafting-view]").forEach(button => {
-  button.addEventListener("click", () => {
-    const dropdown = button.closest(".wiki-nav-dropdown");
-    dropdown.querySelector(".wiki-nav-button").setAttribute("aria-expanded", "false");
-    dropdown.classList.add("is-dismissed");
-    selectView(button.dataset.craftingView);
-  });
+document.querySelectorAll("[data-locale-view]").forEach(button => {
+  button.addEventListener("click", () => selectView(button.dataset.localeView));
+});
+
+document.querySelectorAll("[data-task-view]").forEach(button => {
+  button.addEventListener("click", () => selectView(button.dataset.taskView));
+});
+
+document.querySelectorAll("[data-equipment-view]").forEach(button => {
+  button.addEventListener("click", () => selectView(button.dataset.equipmentView));
+});
+
+document.querySelectorAll("[data-drop-view]").forEach(button => {
+  button.addEventListener("click", () => selectView(button.dataset.dropView));
 });
 
 const initialView = location.hash.slice(1);
@@ -122,7 +139,7 @@ async function renderBilingualDictionary() {
   try {
     const [items, translation] = await Promise.all([
       window.WIKI_DATA.loadJson("assets/data/item-catalog.json"),
-      window.WIKI_DATA.loadJson("assets/data/translation/cn.json?v=20261031-2")
+      window.WIKI_DATA.loadJson("assets/data/translation/cn.json?v=20261101-5")
     ]);
     const rows = Object.entries(items).map(([en, value]) => [en, value.name?.cn || ""])
       .filter(([en, cn]) => en || cn).sort((a, b) => a[0].localeCompare(b[0]));
