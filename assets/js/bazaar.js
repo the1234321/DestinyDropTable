@@ -414,14 +414,20 @@ function addServiceCards(parent) {
 }
 
 function addExchangeCards(parent) {
-  const grid = el("div", "bazaar-grid");
+  const grid = el("div", "crafting-grid");
   EXCHANGES.forEach(exchange => {
-    const card = el("article", "bazaar-card");
-    card.appendChild(el("h4", null, exchange.title));
-    card.appendChild(el("p", null, "" + exchange.location));
-    const ul = el("ul");
-    exchange.materials.forEach(line => ul.appendChild(el("li", null, line)));
-    card.appendChild(ul);
+    const card = el("article", "bazaar-card crafting-card crafting-card--exchange");
+    card.appendChild(el("h4", "crafting-card__result", exchange.title));
+    card.appendChild(el("div", "crafting-card__label", window.WIKI_I18N.language === 'cn' ? "兑换地点" : "Location"));
+    card.appendChild(el("div", "crafting-card__location", exchange.location));
+    card.appendChild(el("div", "crafting-card__label", window.WIKI_I18N.language === 'cn' ? "兑换材料" : "Materials"));
+    const materials = el("div", "crafting-card__items");
+    exchange.materials.forEach(line => {
+      const material = el("span", "crafting-card__item");
+      appendRichText(material, line);
+      materials.appendChild(material);
+    });
+    card.appendChild(materials);
     grid.appendChild(card);
   });
   parent.appendChild(grid);
@@ -454,12 +460,6 @@ function addCraftingCards(parent) {
   sets.appendChild(el("h3", null, window.WIKI_I18N.language === 'cn' ? "套装效果" : "Set bonuses"));
   parent.appendChild(sets);
   const setGrid = el("div", "crafting-grid");
-  const effectLabels = {
-    ATA: ["命中", "Accuracy"], ATP: ["攻击力", "Attack power"],
-    attack_range: ["攻击范围", "Attack range"], attack_speed: ["攻击速度", "Attack speed"],
-    attack_action: ["攻击动作", "Attack action"], targets: ["目标数", "Targets"],
-    hits: ["命中段数", "Hits"], piercing: ["贯穿", "Piercing"]
-  };
   SET_BONUSES.forEach(set => {
     const card = el("article", "bazaar-card crafting-card crafting-card--set");
     const items = el("div", "crafting-card__items");
@@ -471,14 +471,13 @@ function addCraftingCards(parent) {
     card.appendChild(items);
     const effects = el("dl", "crafting-card__effects");
     Object.entries(set.effect || {}).forEach(([key, value]) => {
-      const label = effectLabels[key];
-      const term = el("dt", null, label ? label[window.WIKI_I18N.language === 'cn' ? 0 : 1] : key);
-      const displayValue = typeof value === "boolean"
-        ? (window.WIKI_I18N.language === 'cn' ? (value ? "是" : "否") : (value ? "Yes" : "No"))
-        : localizeQuestText(value);
-      const description = el("dd", null, displayValue === "increased"
-        ? window.WIKI_I18N.text('boost.increased', window.WIKI_I18N.language === 'cn' ? "提升" : "Increased")
-        : displayValue);
+      if (value === false || value == null || value === "") return;
+      const label = window.WIKI_I18N.text(`effect.${key}`, key);
+      const term = document.createElement("dt");
+      term.textContent = label;
+      const displayValue = value === true ? "" : window.WIKI_I18N.getEffectValue(key, value);
+      const description = document.createElement("dd");
+      description.textContent = displayValue;
       effects.append(term, description);
     });
     card.appendChild(effects);

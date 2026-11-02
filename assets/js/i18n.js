@@ -289,6 +289,21 @@ window.WIKI_I18N = {
             ? (databaseTranslations[value] || boostTranslations[value] || value)
             : value;
     },
+    getEffectValue(key, value) {
+        if (key === "attack_action") return this.getType(value);
+        const text = String(value ?? "");
+        if (language !== "cn") return text;
+        return text
+            .replace(/increased/gi, "增大")
+            .replace(/in one attack/gi, "单次攻击")
+            .replace(/angle/gi, "角度")
+            .replace(/NON_HEAVEN_PUNISHER_EX/gi, "非天罚EX")
+            .replace(/HEAVEN_PUNISHER_EX/gi, "天罚EX")
+            .replace(/Dual Casting:\s*Jellen and Zalure if tech lv is 30/gi, "可同时释放降攻术、降防术 Lv30")
+            .replace(/Low HP/gi, "濒死")
+            .replace(/\bHits\b\s*:?/gi, "攻击次数：")
+            .replace(/\bLv(?=\s*\d)/gi, "等级");
+    },
     getClass(value) { return language === "cn" ? (classTranslations[value] || value) : value; },
     getTerm(value) { return messages[`term.${value}`] || value; },
     text(key, fallback = "") { return messages[key] || fallback; },

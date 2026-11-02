@@ -97,31 +97,38 @@ function buildMonsterQuestIndex(questCatalog, questEpisodes) {
                 });
 
                 countsByMonster.forEach((count, monster) => {
-                    if (!monsterQuestIndex.has(monster)) monsterQuestIndex.set(monster, []);
-                    monsterQuestIndex.get(monster).push({ episode, category, title, count });
+                    if (!monsterQuestIndex.has(monster)) monsterQuestIndex.set(monster, new Map());
+                    const questsByEpisode = monsterQuestIndex.get(monster);
+                    if (!questsByEpisode.has(episode)) questsByEpisode.set(episode, []);
+                    questsByEpisode.get(episode).push({ episode, category, title, count });
                 });
             });
         });
     });
 
-    monsterQuestIndex.forEach(quests => {
-        quests.sort((left, right) =>
-            right.count - left.count
-            || left.episode.localeCompare(right.episode)
-            || left.category.localeCompare(right.category)
-            || left.title.localeCompare(right.title)
-        );
-        quests.splice(3);
+    monsterQuestIndex.forEach(questsByEpisode => {
+        questsByEpisode.forEach(quests => {
+            quests.sort((left, right) =>
+                right.count - left.count
+                || left.category.localeCompare(right.category)
+                || left.title.localeCompare(right.title)
+            );
+            quests.splice(3);
+        });
     });
 }
 
-function renderMonsterQuestTooltip(tooltip, monsterName) {
-    const quests = monsterQuestIndex.get(monsterName.trim().toLowerCase()) || [];
+function monsterQuestsForEpisode(monsterName, episode) {
+    return monsterQuestIndex.get(monsterName.trim().toLowerCase())?.get(episode) || [];
+}
+
+function renderMonsterQuestTooltip(tooltip, monsterName, episode) {
+    const quests = monsterQuestsForEpisode(monsterName, episode);
     tooltip.innerHTML = monsterQuestTooltipMarkup(monsterName, quests);
     bindMonsterTooltipImageErrors(tooltip);
 }
 
-function monsterQuestTooltipMarkup(monsterName, quests = monsterQuestIndex.get(monsterName.trim().toLowerCase()) || []) {
+function monsterQuestTooltipMarkup(monsterName, quests = []) {
     const monsterMeta = window.WIKI_I18N.getMonsterMeta(monsterName);
     const image = monsterMeta.image
         ? `<img class="monster-quest-tooltip__image" src="${escapeHtml(monsterMeta.image)}" alt="">`
@@ -188,7 +195,7 @@ function bindMonsterQuestTooltips(root = document) {
         const monster = target?.closest(".monster-cell.has-quest-data[data-monster]");
         if (!monster || monster === activeCell || monster.contains(event.relatedTarget)) return;
         activeCell = monster;
-        renderMonsterQuestTooltip(tooltip, monster.dataset.monster);
+        renderMonsterQuestTooltip(tooltip, monster.dataset.monster, monster.closest(".table-section")?.id);
         schedulePosition(event);
     });
     root.addEventListener("mousemove", event => {
@@ -226,24 +233,7 @@ function effectLabel(key) {
 }
 
 function effectValue(key, value) {
-    if (key === "attack_action") {
-        return window.WIKI_I18N.getType(value);
-    }
-    if (window.WIKI_I18N.language == "cn") {
-        return String(value)
-            .replace(/increased/g, "增大")
-            .replace(/in one attack/g, "单次攻击")
-            .replace(/angle/g, "角度")
-            .replace(/NON_HEAVEN_PUNISHER_EX/g, "非天罚EX")
-            .replace(/HEAVEN_PUNISHER_EX/g, "天罚EX")
-            .replace(/Dual Casting: Jellen and Zalure if tech lv is 30/g, "可同时释放降攻术 降防术 Lv30")
-            .replace(/Low HP/g, "濒死")
-            .trim();
-    }
-    return String(value)
-    // .replace(/扩大|增大/g, "increased")
-    // .replace(/数：?/g, "")
-    // .trim();
+    return window.WIKI_I18N.getEffectValue(key, value).trim();
 }
 
 function effectText(effect) {
@@ -446,7 +436,7 @@ function render() {
         epData.monsters.forEach(monster => {
             const monsterInfo = window.WIKI_I18N.getMonsterMeta(monster.name);
             html += `<tr>
-                        <td class="monster-cell${monsterQuestIndex.has(monster.name.trim().toLowerCase()) ? " has-quest-data" : ""}" data-monster="${escapeHtml(monster.name)}">
+                        <td class="monster-cell${monsterQuestsForEpisode(monster.name, ep).length ? " has-quest-data" : ""}" data-monster="${escapeHtml(monster.name)}">
                             <div class="monster-name" data-difficulty="${monsterInfo.difficulty}"><span>${escapeHtml(window.WIKI_I18N.getMonster(monster.name))}</span></div>
                             <div class="dar">DAR ${monster.dar}</div>
                         </td>
@@ -619,7 +609,8 @@ function bindTooltips(root = document.getElementById("content")) {
         const tooltipBonus = bonusIndex[itemName] || [];
         const tooltipRecipe = recipeIndex[itemName] || [];
         const monsterName = cell.dataset.monster || "";
-        const monsterQuests = monsterQuestIndex.get(monsterName.trim().toLowerCase()) || [];
+        const episode = cell.closest(".table-section")?.id;
+        const monsterQuests = monsterQuestsForEpisode(monsterName, episode);
         const monsterQuestHtml = monsterQuests.length
             ? `<div class="tooltip-monster-quests">${monsterQuestTooltipMarkup(monsterName, monsterQuests)}</div>`
             : "";
