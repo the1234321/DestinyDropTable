@@ -312,7 +312,6 @@ tbody td:hover{
     color:#8be7fa;
     font-weight:800;
 }
-.monster-quest-tooltip__image { width:42px; height:42px; flex:none; object-fit:contain; }
 .monster-quest-tooltip__list { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
 .monster-quest-tooltip__row {
     display: grid;
@@ -344,13 +343,29 @@ tbody td:hover{
     border-top:1px solid rgba(98,212,255,.28);
 }
 .tooltip-monster-quests .monster-quest-tooltip__header { font-size:12px; }
-.tooltip-monster-quests .monster-quest-tooltip__image { width:32px; height:32px; }
 .tooltip-mag {
     margin:8px 0;
     padding:8px 10px;
     border:1px solid rgba(98,212,255,.28);
     border-radius:7px;
     background:rgba(98,212,255,.06);
+}
+#monster-image-tooltip {
+    position: fixed;
+    z-index: 12000;
+    display: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    line-height: 0;
+    pointer-events: none;
+}
+#monster-image-tooltip img {
+    display: block;
+    max-width: none;
+    max-height: none;
+    object-fit: none;
 }
 .tooltip-mag__heading { margin-bottom:5px; color:#8be7fa; font-weight:800; }
 .tooltip-mag__row { display:flex; justify-content:space-between; gap:16px; padding:2px 0; }
@@ -718,21 +733,21 @@ tbody td:hover{
 /* 套装条目 */
 .bonus-entry, .recipe-entry { margin-bottom: 4px; padding: 4px 6px; border-radius: 4px;}
 
-.bonus-body, .recipe-body { padding-left: 8px; white-space: pre-wrap; word-break: break-word;}
+.bonus-body, .recipe-body, .exchange-body { padding-left: 8px; white-space: pre-wrap; word-break: break-word;}
 
 /* 套装/合成公式中的加号样式 */
-.bonus-body, .recipe-body {
+.bonus-body, .recipe-body, .exchange-body {
     font-size: 13px; 
     line-height: 1.4;
 }
 
 /* 针对加号突出显示 */
-.bonus-body::after, .recipe-body::after {
+.bonus-body::after, .recipe-body::after, .exchange-body::after {
     content: "";
 }
 
 /* 使用 span 包裹加号 */
-.bonus-body span.plus, .recipe-body span.plus {
+.bonus-body span.plus, .recipe-body span.plus, .exchange-body span.plus {
     font-weight: 700;
     color: #facc15; /* 金黄色，更醒目 */
     font-size: 14px;
@@ -807,6 +822,16 @@ tbody td:hover{
     background: rgba(139,92,246,0.08);
     color: #8b5cf6;
 }
+
+/* 任务兑换公式使用独立的青绿色，与套装和装备合成区分 */
+.tooltip-exchange-inline .exchange-item {
+    display: block;
+    background: linear-gradient(90deg, rgba(20,184,166,.15), rgba(20,184,166,.05));
+    border-left: 3px solid #14b8a6;
+    color: #e5e7eb;
+}
+.exchange-header { color: #5eead4; font-weight: 700; }
+.exchange-body { color: #e5e7eb; }
 
 /* 调整整体间距 */
 .tooltip-inline {

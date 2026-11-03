@@ -13,6 +13,7 @@ const SECTION_INDEX = {
 
 const bonusIndex = {};
 const recipeIndex = {};
+const exchangeIndex = {};
 const monsterQuestIndex = new Map();
 const itemNameSearchCache = new Map();
 const itemDetailSearchCache = new Map();
@@ -26,7 +27,11 @@ function difficultyLabel(difficulty) {
 }
 
 function itemLabel(itemId) {
-    return window.WIKI_I18N.getItem(itemId).name || itemId;
+    return window.WIKI_I18N.getExchangeItemName(itemId) || itemId;
+}
+
+function exchangeItemName(itemName) {
+    return String(itemName ?? "").replace(/\s+x\d+\s*$/i, "").trim();
 }
 
 function escapeHtml(value) {
@@ -125,14 +130,9 @@ function monsterQuestsForEpisode(monsterName, episode) {
 function renderMonsterQuestTooltip(tooltip, monsterName, episode) {
     const quests = monsterQuestsForEpisode(monsterName, episode);
     tooltip.innerHTML = monsterQuestTooltipMarkup(monsterName, quests);
-    bindMonsterTooltipImageErrors(tooltip);
 }
 
 function monsterQuestTooltipMarkup(monsterName, quests = []) {
-    const monsterMeta = window.WIKI_I18N.getMonsterMeta(monsterName);
-    const image = monsterMeta.image
-        ? `<img class="monster-quest-tooltip__image" src="${escapeHtml(monsterMeta.image)}" alt="">`
-        : "";
     const heading = window.WIKI_I18N.language === "cn" ? "任务出现数量 TOP 3" : "Top 3 quests by monster count";
     const rows = quests.map((quest, index) => `
         <li class="monster-quest-tooltip__row">
@@ -144,15 +144,9 @@ function monsterQuestTooltipMarkup(monsterName, quests = []) {
             <span class="monster-quest-tooltip__count">${quest.count}</span>
         </li>`).join("");
     const empty = window.WIKI_I18N.language === "cn" ? "暂无任务数量记录" : "No quest count data";
-    return `<div class="monster-quest-tooltip__header">${image}<span>${heading}</span></div>${rows
+    return `<div class="monster-quest-tooltip__header">${heading}</div>${rows
         ? `<ol class="monster-quest-tooltip__list">${rows}</ol>`
         : `<div class="monster-quest-tooltip__empty">${empty}</div>`}`;
-}
-
-function bindMonsterTooltipImageErrors(root) {
-    root.querySelectorAll(".monster-quest-tooltip__image").forEach(image => {
-        image.addEventListener("error", () => image.remove(), { once: true });
-    });
 }
 
 function positionMonsterQuestTooltip(tooltip, event) {
@@ -300,10 +294,11 @@ function detailBoosts(itemName) {
 async function loadData() {
     await window.WIKI_I18N.ready;
     const names = ['section-ids', 'bonuses', 'recipes', 'tables'];
-    const paths = names.map(name => 'assets/data/drop-table/' + name + '.json');
-    const [sectionIdsData, bonus, recipe, tables, items, ...additionalData] = await Promise.all([
+    const paths = names.map(name => `assets/data/drop-table/${name}.json${name === 'recipes' ? '?v=20261103-2' : ''}`);
+    const [sectionIdsData, bonus, recipe, tables, items, exchanges, ...additionalData] = await Promise.all([
         ...paths.map(path => window.WIKI_DATA.loadJson(path)),
         window.WIKI_DATA.loadJson('assets/data/item-catalog.json'),
+        window.WIKI_DATA.loadJson('assets/data/bazaar/exchanges.json?v=20261103-3'),
         ...Object.values({ weapons: 'weapons', armors: 'armors', shields: 'shields', units: 'units', mags: 'mags' })
             .map(file => window.WIKI_DATA.loadJson(`assets/data/item/${file}.json`)),
         window.WIKI_DATA.loadJson('assets/data/bazaar/quest-catalog.json'),
@@ -366,6 +361,24 @@ async function loadData() {
             });
         });
     });
+
+    const indexedExchanges = new Set();
+    (exchanges || []).forEach(task => (task.npcs || []).forEach(npc => (npc.exchanges || []).forEach(exchange => {
+        const result = exchangeItemName(exchange.item);
+        const components = (exchange.materials || [])
+            .map(material => exchangeItemName(material.content))
+            .filter(Boolean);
+        if (!result || !components.length) return;
+        const formulaKey = `${result.toLowerCase()}=${components.map(item => item.toLowerCase()).join("+")}`;
+        if (indexedExchanges.has(formulaKey)) return;
+        indexedExchanges.add(formulaKey);
+        const formula = { result, components };
+        [result, ...components].forEach(itemName => {
+            const key = itemName.toLowerCase();
+            if (!exchangeIndex[key]) exchangeIndex[key] = [];
+            exchangeIndex[key].push(formula);
+        });
+    })));
 
     // hash同步
     const hash = location.hash;
@@ -608,6 +621,7 @@ function bindTooltips(root = document.getElementById("content")) {
         const rarityClass = rarity === 2 ? "ultimate-item" : rarity === 1 ? "legend-item" : "";
         const tooltipBonus = bonusIndex[itemName] || [];
         const tooltipRecipe = recipeIndex[itemName] || [];
+        const tooltipExchanges = exchangeIndex[itemName.toLowerCase()] || [];
         const monsterName = cell.dataset.monster || "";
         const episode = cell.closest(".table-section")?.id;
         const monsterQuests = monsterQuestsForEpisode(monsterName, episode);
@@ -644,9 +658,16 @@ function bindTooltips(root = document.getElementById("content")) {
                         <span class="recipe-body">${recipe.components.map(itemLabel).join('<span class="plus">+</span><wbr>')}</span>
                     </div>`).join("")}
             </div>` : ""}
+            ${tooltipExchanges.length ? `
+            <div class="tooltip-inline tooltip-exchange-inline">
+                ${tooltipExchanges.map(exchange => `
+                    <div class="tooltip-item exchange-item">
+                        <span class="exchange-header">${escapeHtml(itemLabel(exchange.result))} ⬅</span>
+                        <span class="exchange-body">${exchange.components.map(component => escapeHtml(itemLabel(component))).join('<span class="plus">+</span><wbr>')}</span>
+                    </div>`).join("")}
+            </div>` : ""}
             ${monsterQuestHtml}
         `;
-        bindMonsterTooltipImageErrors(tooltip);
         return true;
     };
 
@@ -717,13 +738,13 @@ function performSearch() {
                 const item = data.items[itemName];
                 // 1.名字匹配（最高优先级）
 
-                if (itemNameSearchText(itemName).includes(keyword)) {
+                if (window.WIKI_SEARCH.matches(keyword, itemNameSearchText(itemName))) {
                     matchedType = "item";
                 }
 
                 // 2. 物品描述、类型和任务说明
 
-                else if (itemDetailSearchText(itemName).includes(keyword)) {
+                else if (window.WIKI_SEARCH.matches(keyword, itemDetailSearchText(itemName))) {
                     matchedType = "related";
                 }
 
@@ -731,8 +752,8 @@ function performSearch() {
 
                 else if (
                     (bonusIndex[itemName] || []).some(b =>
-                        b.items.some(item => itemNameSearchText(item).includes(keyword)) ||
-                        bonusSearchText(b.effect).includes(keyword)
+                        b.items.some(item => window.WIKI_SEARCH.matches(keyword, itemNameSearchText(item))) ||
+                        window.WIKI_SEARCH.matches(keyword, bonusSearchText(b.effect))
                     )
                 ) {
                     matchedType = "related";
@@ -742,8 +763,8 @@ function performSearch() {
 
                 else if (
                     (recipeIndex[itemName] || []).some(r =>
-                        itemNameSearchText(r.result).includes(keyword) ||
-                        r.components.some(item => itemNameSearchText(item).includes(keyword))
+                        window.WIKI_SEARCH.matches(keyword, itemNameSearchText(r.result)) ||
+                        r.components.some(item => window.WIKI_SEARCH.matches(keyword, itemNameSearchText(item)))
                     )
                 ) {
                     matchedType = "related";

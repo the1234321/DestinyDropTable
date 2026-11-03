@@ -1,44 +1,5 @@
 ﻿[
     {
-        "result": "FORBIDDEN GRIMOIRE",
-        "components": [
-            "Hallowed Jack-O\u0027-Lantern",
-            "Cladding of Epsilon",
-            "Proof of Sonic Team",
-            "Sorcerer\u0027s Right Arm",
-            "Magic Stone \"Iritista\"",
-            "Book of HITOGATA"
-        ],
-        "extra": []
-    },
-    {
-        "result": "Millennium/HP",
-        "components": [
-            "Millennium Photon Core",
-            "Immortal/HP",
-            "CATACLYSM SHIELD",
-            "MOLTEN RING",
-            "Weapons Crystal Badge",
-            "MOTHER GARB+"
-        ],
-        "extra": []
-    },
-    {
-        "result": "ASTRAL CLOAK",
-        "components": [
-            "Primal Photon Sphere",
-            "Millennium Photon Core",
-            "KROE\u0027S SWEATER",
-            "X-PARTS ver3.10",
-            "ARCHFIEND ARMOR",
-            "DYNASTY ARMOR",
-            "RING OF FIRE",
-            "NINJA SUIT",
-            ""
-        ],
-        "extra": []
-    },
-    {
         "result": "CELESTIAL FUSION",
         "components": [
             "TASTE OF AFFECTION",
@@ -115,59 +76,6 @@
         "extra": []
     },
     {
-        "result": "ASTRAL WINGS",
-        "components": [
-            "Astral Essence",
-            "BAT WING",
-            "Magic Rock \"Heart Key\"",
-            "Magic Stone \"Iritista\"",
-            "GRATIA"
-        ],
-        "extra": []
-    },
-    {
-        "result": "V803",
-        "components": [
-            "Darkness Photon Sphere",
-            "Millennium Photon Core",
-            "V802",
-            "V503",
-            "Magic Stone \"Iritista\"",
-            "D-Photon Core",
-            "Book of HITOGATA"
-        ],
-        "extra": []
-    },
-    {
-        "result": "Ignis Engine",
-        "components": [
-            "Millennium Photon Core",
-            "Darkness Photon Sphere",
-            "BLAST GARMENT",
-            "BEHEMOTH ARMOR",
-            "Proof of Sonic Team",
-            "MOLTEN RING",
-            "Weapons Crystal Badge"
-        ],
-        "extra": []
-    },
-    {
-        "result": "ASTRAL CLAW",
-        "components": [
-            "Millennium Photon Core",
-            "Primal Photon Sphere",
-            "Darkness Photon Sphere",
-            "BLAST GARMENT",
-            "HP/Flow",
-            "TP/Flow",
-            "PB/Flow",
-            "Proof of Sonic Team",
-            "ANTI-DARK RING",
-            "ANTI-LIGHT RING"
-        ],
-        "extra": []
-    },
-    {
         "result": "NIGHTMARE",
         "components": [
             "YAMIGARASU",
@@ -188,47 +96,6 @@
         "components": [
             "SPREAD NEEDLE",
             "Dark Matter"
-        ],
-        "extra": []
-    },
-    {
-        "result": "ASTRAL SABER",
-        "components": [
-            "BLAST GARMENT",
-            "Cladding of Manipulator III",
-            "Millennium Photon Core",
-            "Red Crystal",
-            "Blue Crystal",
-            "Yellow Crystal",
-            "Green Crystal",
-            "IZMAELA",
-            "Dark Matter"
-        ],
-        "extra": []
-    },
-    {
-        "result": "Jointparts",
-        "components": [
-            "Cladding of Manipulator III",
-            "Syncesta",
-            "Photon Booster",
-            "State/Maintenance",
-            "Proof of Sonic Team",
-            "Trap/Search",
-            "Dark Matter"
-        ],
-        "extra": []
-    },
-    {
-        "result": "PHANTASMAL FIELD",
-        "components": [
-            "Darkness Photon Sphere",
-            "Millennium Photon Core",
-            "Cladding of Manipulator III",
-            "DF FIELD",
-            "GENESIS ARMOR",
-            "LUMINOUS FIELD",
-            "VIRUS ARMOR:Lafuteria"
         ],
         "extra": []
     },
@@ -297,7 +164,7 @@
         "extra": []
     },
     {
-        "result": "SANGE \u0026 YASHA",
+        "result": "SANGE & YASHA",
         "components": [
             "SANGE",
             "YASHA"
@@ -361,15 +228,6 @@
         "extra": []
     },
     {
-        "result": "TWINKLE STAR",
-        "components": [
-            "Star Amplifier",
-            "Book of HITOGATA",
-            "Generic Wand"
-        ],
-        "extra": []
-    },
-    {
         "result": "BRIGHTNESS CIRCLE",
         "components": [
             "Star Amplifier",
@@ -410,7 +268,7 @@
         "extra": []
     },
     {
-        "result": "LAVIS STORM (Blue, non-cast)",
+        "result": "LAVIS STORM",
         "components": [
             "Orb of Illusions",
             "ULTIMATE DOUBLE CANNON"
@@ -418,7 +276,7 @@
         "extra": []
     },
     {
-        "result": "DOUBLE RAGE (Red, cast)",
+        "result": "DOUBLE FURY",
         "components": [
             "Orb of Illusions",
             "ULTIMATE DOUBLE CANNON"
@@ -534,36 +392,6 @@
         ]
     },
     {
-        "result": "D-VIRUS ARMOR",
-        "components": [
-            "Easter Egg"
-        ],
-        "extra": []
-    },
-    {
-        "result": "D-VIRUS LAUNCHER",
-        "components": [
-            "Easter Egg *30"
-        ],
-        "extra": []
-    },
-    {
-        "result": "MATRIX SCOPE",
-        "components": [
-            "Infernal Stone",
-            "Fragments of Orb [Red]",
-            "Fragments of Orb [Blue]",
-            "REFLEX GEAR",
-            "ETHEREAL ARMOR",
-            "SHADOW CLOAK",
-            "Proof of Sonic Team",
-            "Photon Booster",
-            "ADEPT",
-            "Syncesta"
-        ],
-        "extra": []
-    },
-    {
         "result": "DARK FLOW",
         "components": [
             "Calibur",
@@ -668,14 +496,18 @@
         "extra": []
     },
         {
-        "result": "DIVINE FIELD",
+        "result": "Alternative Cannon",
         "components": [
-            "Core of Administrator",
-            "Millennium Photon Core",
-            "Proof of Sonic Team",
-            "PRIMAL NEXUS",
-            "ETHEREAL ARMOR",
-            "D-VIRUS ARMOR"
+            "Phantasmal Ore \u0027Syncesta\u0027",
+            "DOUBLE CANNON"
+        ],
+        "extra": []
+    },   
+     {
+        "result": "Astral Blade",
+        "components": [
+            "Astral Ore \u0027Iritista\u0027",
+            "LAST EMPEROR"
         ],
         "extra": []
     }

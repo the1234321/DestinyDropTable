@@ -8,7 +8,11 @@ const panels = {
 
 const siteNav = document.querySelector(".wiki-site-nav");
 const guideViews = ["server-rules", "common-commands", "level-200", "localization"];
-const views = ["drops", ...guideViews, "dictionary", "special", "bazaar", "crafting", "crafting-recipes", "exchange", "crafting-sets", "quests", "database"];
+const views = ["drops", ...guideViews, "dictionary", "special", "crafting", "crafting-recipes", "exchange", "crafting-sets", "quests", "database"];
+const viewFromHash = hash => hash === "commands" ? "common-commands"
+  : hash === "effects" ? "crafting-recipes"
+    : hash === "bazaar" ? "exchange"
+      : views.includes(hash) ? hash : "drops";
 const updateStickyOffset = () => {
   document.documentElement.style.setProperty("--wiki-nav-height", `${siteNav.getBoundingClientRect().height}px`);
 };
@@ -41,8 +45,8 @@ function selectView(view, updateHash = true, scrollToTop = true) {
   const dropdownViews = {
     drops: isDrops || view === "special",
     "locale-tools": view === "localization" || view === "dictionary",
-    equipment: view === "crafting" || view === "exchange" || view === "database",
-    quests: view === "quests" || view === "bazaar"
+    equipment: view === "crafting" || view === "database",
+    quests: view === "quests" || view === "exchange"
   };
   Object.entries(dropdownViews).forEach(([group, active]) => {
     const dropdown = document.querySelector(`.wiki-nav-dropdown[data-nav-group="${group}"]`);
@@ -118,12 +122,10 @@ document.querySelectorAll("[data-drop-view]").forEach(button => {
 });
 
 const initialView = location.hash.slice(1);
-selectView(initialView === "commands" ? "common-commands" : initialView === "effects" ? "crafting-recipes" : views.includes(initialView) ? initialView : "drops", false);
+selectView(viewFromHash(initialView), false);
 
 window.addEventListener("popstate", () => {
-  const hash = location.hash.slice(1);
-  const view = hash === "commands" ? "common-commands" : hash === "effects" ? "crafting-recipes" : views.includes(hash) ? hash : "drops";
-  selectView(view, false, false);
+  selectView(viewFromHash(location.hash.slice(1)), false, false);
 });
 
 window.addEventListener("wiki-language-change", event => {
@@ -139,7 +141,7 @@ async function renderBilingualDictionary() {
   try {
     const [items, translation] = await Promise.all([
       window.WIKI_DATA.loadJson("assets/data/item-catalog.json"),
-      window.WIKI_DATA.loadJson("assets/data/translation/cn.json?v=20261101-5")
+      window.WIKI_DATA.loadJson("assets/data/translation/cn.json?v=20261103-6")
     ]);
     const rows = Object.entries(items).map(([en, value]) => [en, value.name?.cn || ""])
       .filter(([en, cn]) => en || cn).sort((a, b) => a[0].localeCompare(b[0]));
@@ -152,30 +154,23 @@ async function renderBilingualDictionary() {
       .sort((a, b) => a[0].localeCompare(b[0]));
     const table = (title, data, kind) => `<section class="dictionary-section" data-dictionary-kind="${kind}"><h2>${title}</h2><div class="dictionary-table-wrap"><table><thead><tr><th>English</th><th>中文</th></tr></thead><tbody>${data.map(([en, cn]) => {
       const meta = kind === "monsters" ? window.WIKI_I18N.getMonsterMeta(en) : null;
-      const image = meta?.image ? `<img class="dictionary-monster__image" src="${databaseEscape(meta.image)}" alt="" loading="lazy">` : "";
-      const difficulty = meta ? ` data-difficulty="${meta.difficulty}"` : "";
+      const monsterAttributes = meta
+        ? ` data-monster-id="${databaseEscape(en)}" data-difficulty="${meta.difficulty}"`
+        : "";
       const name = kind === "monsters"
-        ? `<span class="dictionary-monster"${difficulty}>${image}${databaseEscape(en)}</span>`
+        ? `<span class="dictionary-monster"${monsterAttributes}>${databaseEscape(en)}</span>`
         : `<span data-item="${databaseEscape(en)}">${databaseEscape(en)}</span>`;
       const translated = kind === "monsters"
-        ? `<span class="dictionary-monster"${difficulty}>${databaseEscape(cn)}</span>`
+        ? `<span class="dictionary-monster"${monsterAttributes}>${databaseEscape(cn)}</span>`
         : `<span data-item="${databaseEscape(en)}">${databaseEscape(cn)}</span>`;
-      return `<tr data-search="${databaseEscape(`${en} ${cn}`.toLowerCase())}"><td>${name}</td><td>${translated}</td></tr>`;
+      return `<tr data-search="${databaseEscape(window.WIKI_SEARCH.normalize(`${en} ${cn}`))}"><td>${name}</td><td>${translated}</td></tr>`;
     }).join("")}</tbody></table></div></section>`;
     root.innerHTML = `<article class="dictionary-panel"><p class="dictionary-panel__intro">中英名称速查</p><input id="dictionarySearch" class="dictionary-search" type="search" placeholder="搜索英文或中文名称…">${table("道具名称", rows, "items")}${table("怪物名称", monsters, "monsters")}</article>`;
-    root.querySelectorAll(".dictionary-monster__image").forEach(image => {
-      image.addEventListener("error", () => image.remove(), { once: true });
-    });
     refreshEquipmentLinks(root);
     const search = root.querySelector("#dictionarySearch");
     window.WIKI_SEARCH.bind(search, query => {
       root.querySelectorAll(".dictionary-section").forEach(section => {
-        let matches = 0;
-        section.querySelectorAll("tbody tr").forEach(row => {
-          const visible = !query || row.dataset.search.includes(query);
-          row.hidden = !visible;
-          if (visible) matches += 1;
-        });
+        const matches = window.WIKI_SEARCH.filter(section, "tbody tr", query);
         section.hidden = matches === 0;
       });
     });

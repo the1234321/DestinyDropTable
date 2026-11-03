@@ -11146,5 +11146,70 @@
             "en": "",
             "cn": ""
         }
+    },
+    "Photon Sphere": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "光子结晶ＰＳ"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Phantasmal Ore \u0027Syncesta\u0027": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "幻影「真空波石」"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Astral Ore \u0027Iritista\u0027": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "星界石「伊利提斯塔」"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+        "Alternative Cannon": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "圣剑「变种·迦农」"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+        "Astral Blade": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "星界刃"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    }, "4th Anniversary Orb": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "4周年纪念宝珠"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
     }
 }

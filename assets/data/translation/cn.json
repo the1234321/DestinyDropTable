@@ -1,8 +1,8 @@
 {
     "ui"        : {
-        "nav.drops"           : "掉落表",
-        "drops.menuHeading"   : "掉落表分类",
-        "drops.normal"        : "普通掉落",
+        "nav.drops"           : "掉落查询",
+        "drops.menuHeading"   : "掉落查询",
+        "drops.normal"        : "掉落表",
         "nav.commands"        : "新手指引",
         "guide.eyebrow"       : "D服新手指南",
         "guide.serverRules"   : "服务器规则",
@@ -20,14 +20,13 @@
         "nav.dictionary"      : "中英对照",
         "nav.localeTools"     : "汉化相关",
         "localeTools.menuHeading": "汉化与对照",
-        "nav.bazaar"          : "集市服务",
         "nav.crafting"        : "装备相关",
         "crafting.recipes"    : "装备合成",
-        "crafting.exchange"   : "装备兑换",
         "crafting.sets"       : "套装效果",
         "crafting.menuHeading": "装备相关分类",
         "nav.quests"          : "任务相关",
         "quests.quickLookup"  : "任务速查",
+        "quests.exchange"     : "任务兑换",
         "nav.database"        : "装备速查",
         "brand"               : "命运服中文资料站",
         "pageTitle"           : "D服中文资料站",
@@ -50,6 +49,16 @@
         "label.monsters"      : "怪物数量 / BOSS 信息",
         "term.except"         : "除了",
         "term.allIds"         : "全ID"
+    },
+    "exchangeItems": {
+        "EX"                : "EX特殊攻击",
+        "200 DEF MAG"       : "200防御玛古",
+        "200 DEX MAG"       : "200敏捷玛古",
+        "200 MIND MAG"      : "200精神玛古",
+        "200 POW MAG"       : "200攻击玛古",
+        "Dreamcast"         : "梦幻主机",
+        "Epsilon"           : "厄普西隆",
+        "Tormentorr"        : "苦痛者"
     },
     "monsters"  : {
         "Nightmare Dominator VI"   : {"name": "噩梦支配者 VI"         },

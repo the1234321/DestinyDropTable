@@ -1,6 +1,7 @@
 let language = localStorage.getItem("wiki-language") || "en";
 let messages = {};
 let itemData = {};
+let itemDataByLowercase = {};
 let monsterTranslations = {};
 let monsterCatalog = {};
 let monsterCatalogByLowercase = {};
@@ -14,6 +15,11 @@ let boostToneEntries = [];
 let boostTechniques = new Set();
 let databaseTranslations = {};
 let classTranslations = {};
+let exchangeItemTranslations = {};
+let exchangeItemTranslationEntries = [];
+let localizedItemEntries = [];
+let exchangeItemNameCache = new Map();
+let itemSearchTermCache = new Map();
 let translationDataPromise;
 const jsonDataCache = new Map();
 
@@ -33,13 +39,41 @@ function loadJson(path) {
     return jsonDataCache.get(path);
 }
 
+function localizedItemSuffix(source, baseName) {
+    return source.slice(baseName.length).trim()
+        .replace(/\bLv\s*(\d+)/gi, "等级$1")
+        .replace(/(\d+)H\b/gi, "$1命中");
+}
+
+function localizedExchangeItemName(source) {
+    if (language === "cn" && exchangeItemTranslations[source]) return exchangeItemTranslations[source];
+    const exactItem = itemData[source] || itemDataByLowercase[source.toLocaleLowerCase()];
+    if (exactItem?.name?.[language]) return exactItem.name[language];
+    if (language === "cn") {
+        const lowerSource = source.toLocaleLowerCase();
+        const alias = exchangeItemTranslationEntries.find(([lowerName]) =>
+            lowerSource.startsWith(`${lowerName} `));
+        if (alias) {
+            const suffix = localizedItemSuffix(source, alias[1]);
+            return `${alias[2]}${suffix ? ` ${suffix}` : ""}`;
+        }
+        const baseItem = localizedItemEntries.find(([lowerName]) =>
+            lowerSource.startsWith(`${lowerName} `));
+        if (baseItem) {
+            const suffix = localizedItemSuffix(source, baseItem[1]);
+            return `${baseItem[2]}${suffix ? ` ${suffix}` : ""}`;
+        }
+    }
+    return itemData[source]?.name?.[language] || itemData[source]?.name?.en || source;
+}
+
 window.WIKI_DATA = { loadJson };
 
 const LANGUAGE_LABELS = { cn: "中文", en: "English" };
 const DEFAULT_UI = {
     "nav.drops": "Drop Table",
-    "drops.menuHeading": "DROP TABLE",
-    "drops.normal": "Normal Drops",
+    "drops.menuHeading": "DROP LOOKUP",
+    "drops.normal": "Drop Table",
     "nav.commands": "New Player Guide",
     "guide.eyebrow": "Destiny New Player Guide",
     "guide.serverRules": "Server Rules",
@@ -53,18 +87,17 @@ const DEFAULT_UI = {
     "guide.loadError": "Could not load guide content.",
     "guide.menuHeading": "NEW PLAYER GUIDE",
     "nav.dictionary": "Bilingual Dictionary",
-    "nav.localeTools": "Localization / Dictionary",
+    "nav.localeTools": "Localization",
     "localeTools.menuHeading": "LOCALIZATION & DICTIONARY",
     "nav.currency": "Currency",
     "nav.special": "Special Drops",
-    "nav.bazaar": "Bazaar Services",
     "nav.crafting": "Equipment Related",
     "crafting.recipes": "Crafting",
-    "crafting.exchange": "Exchange",
     "crafting.sets": "Sets",
     "crafting.menuHeading": "EQUIPMENT RELATED",
     "nav.quests": "Quest Related",
     "quests.quickLookup": "Quest Quick Reference",
+    "quests.exchange": "Quest Exchange",
     "nav.database": "Equipment Database",
     "brand": "Destiny Server Wiki",
     "pageTitle": "Destiny Server Wiki",
@@ -105,6 +138,18 @@ window.WIKI_SEARCH = {
     normalize(value) {
         return String(value ?? "").trim().toLocaleLowerCase();
     },
+    matches(query, searchableText) {
+        const normalizedQuery = this.normalize(query);
+        return !normalizedQuery || this.normalize(searchableText).includes(normalizedQuery);
+    },
+    filter(root, selector, query) {
+        let visibleCount = 0;
+        root.querySelectorAll(selector).forEach(node => {
+            node.hidden = !this.matches(query, node.dataset.search);
+            if (!node.hidden) visibleCount += 1;
+        });
+        return visibleCount;
+    },
     bind(input, onSearch) {
         let composing = false;
         let lastValue = null;
@@ -122,6 +167,8 @@ window.WIKI_SEARCH = {
         input.addEventListener("input", event => {
             if (!composing && !event.isComposing) commit();
         });
+        input.addEventListener("search", commit);
+        input.addEventListener("change", commit);
         input.addEventListener("keydown", event => {
             if (event.key === "Enter" && !composing) commit();
         });
@@ -172,7 +219,7 @@ function translatedBoostParts(value) {
 
 function loadTranslationData() {
     if (!translationDataPromise) {
-        translationDataPromise = loadJson("assets/data/translation/cn.json?v=20261101-5");
+        translationDataPromise = loadJson("assets/data/translation/cn.json?v=20261103-3");
     }
     return translationDataPromise;
 }
@@ -212,6 +259,12 @@ async function loadLanguage(nextLanguage) {
     boostTechniques = new Set((translation.techniques || []).map(value => value.toLocaleLowerCase()));
     databaseTranslations = localized ? translation.database || {} : {};
     classTranslations = localized ? translation.classes || {} : {};
+    exchangeItemTranslations = localized ? translation.exchangeItems || {} : {};
+    exchangeItemTranslationEntries = Object.entries(exchangeItemTranslations)
+        .map(([name, value]) => [name.toLocaleLowerCase(), name, value])
+        .sort((left, right) => right[1].length - left[1].length);
+    exchangeItemNameCache.clear();
+    itemSearchTermCache.clear();
     localStorage.setItem("wiki-language", language);
     document.documentElement.lang = language === "en" ? "en" : "zh-CN";
     document.title = messages.pageTitle || document.title;
@@ -237,7 +290,19 @@ window.WIKI_I18N = {
     ready: loadLanguage(language),
     get language() { return language; },
     get labels() { return LANGUAGE_LABELS; },
-    setItems(items) { itemData = items || {}; },
+    setItems(items) {
+        itemData = items || {};
+        itemDataByLowercase = Object.create(null);
+        localizedItemEntries = Object.entries(itemData)
+            .filter(([, item]) => item.name?.cn)
+            .map(([name, item]) => [name.toLocaleLowerCase(), name, item.name.cn])
+            .sort((left, right) => right[1].length - left[1].length);
+        Object.entries(itemData).forEach(([name, item]) => {
+            itemDataByLowercase[name.toLocaleLowerCase()] = item;
+        });
+        exchangeItemNameCache.clear();
+        itemSearchTermCache.clear();
+    },
     getItem(itemId) {
         const item = itemData[itemId] || {};
         return {
@@ -245,6 +310,26 @@ window.WIKI_I18N = {
             description: item.description?.[language] || "",
             quest: item.quest?.[language] || ""
         };
+    },
+    getItemSearchTerms(itemId) {
+        const source = String(itemId ?? "");
+        if (itemSearchTermCache.has(source)) return itemSearchTermCache.get(source);
+        const item = itemData[source] || itemDataByLowercase[source.toLocaleLowerCase()];
+        const terms = [...new Set([
+            source,
+            item?.name?.en,
+            item?.name?.cn,
+            this.getExchangeItemName(source)
+        ].filter(Boolean))];
+        itemSearchTermCache.set(source, terms);
+        return terms;
+    },
+    getExchangeItemName(itemId) {
+        const source = String(itemId ?? "");
+        if (!exchangeItemNameCache.has(source)) {
+            exchangeItemNameCache.set(source, localizedExchangeItemName(source));
+        }
+        return exchangeItemNameCache.get(source);
     },
     getType(type) { return typeTranslations[type] || type; },
     getMonster(monsterId) {

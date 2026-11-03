@@ -330,25 +330,24 @@
 .database-table mark { padding: 0 2px; border-radius: 3px; background: #f4cf58; color: #182235; }
 
 .wiki-panel[hidden] { display: none !important; }
-.dictionary-panel { max-width: 1100px; margin: 42px auto 80px; padding: 34px; border: 1px solid rgba(98,212,255,.28); border-radius: 18px; background: #111c31; }
-.dictionary-panel__intro { margin: 0 0 18px; color: var(--site-accent); font-size: 19px; font-weight: 800; letter-spacing: .08em; text-align: center; }
-.dictionary-search { display: block; width: min(92%, 760px); height: 58px; margin: 0 auto 36px; padding: 0 20px; border: 2px solid rgba(98,212,255,.5); border-radius: 14px; background: #0b1528; color: #fff; font: 700 18px/1 "Segoe UI", "Microsoft YaHei", sans-serif; text-align: center; }
+.dictionary-panel { max-width: 1100px; margin: 24px auto 56px; padding: 20px; border: 1px solid rgba(98,212,255,.28); border-radius: 18px; background: #111c31; }
+.dictionary-panel__intro { margin: 0 0 12px; color: var(--site-accent); font-size: 19px; font-weight: 800; letter-spacing: .08em; text-align: center; }
+.dictionary-search { display: block; width: min(92%, 760px); height: 46px; margin: 0 auto 20px; padding: 0 16px; border: 2px solid rgba(98,212,255,.5); border-radius: 12px; background: #0b1528; color: #fff; font: 700 18px/1 "Segoe UI", "Microsoft YaHei", sans-serif; text-align: center; }
 .dictionary-search:focus { outline: none; border-color: var(--site-accent); box-shadow: 0 0 20px rgba(98,212,255,.2); }
-.dictionary-section { margin-top: 28px; }
-.dictionary-section h2 { color: var(--site-accent); font-size: 24px; }
+.dictionary-section { margin-top: 16px; }
+.dictionary-section h2 { margin: 0 0 8px; color: var(--site-accent); font-size: 22px; }
 .dictionary-table-wrap { overflow: visible; border: 1px solid var(--site-border); border-radius: 10px; }
 .dictionary-table-wrap table { width: 100%; border-collapse: collapse; }
 .dictionary-table-wrap th { background: #1d3453; color: #fff; }
-.dictionary-table-wrap th, .dictionary-table-wrap td { padding: 12px 16px; border-bottom: 1px solid var(--site-border); text-align: left; font-size: 16px; }
+.dictionary-table-wrap th, .dictionary-table-wrap td { padding: 7px 12px; border-bottom: 1px solid var(--site-border); text-align: left; font-size: 18px; line-height: 1.35; }
 #dictionary-panel table { display: table; width: 100%; min-width: 0; margin: 0; table-layout: auto; }
 #dictionary-panel th, #dictionary-panel td { position: static; min-width: 0; max-width: none; width: auto; background: transparent; color: #d9e7f7; white-space: normal; }
 #dictionary-panel thead th { position: static; background: #1d3453; }
 #dictionary-panel tbody td:first-child, #dictionary-panel thead th:first-child { position: static; box-shadow: none; clip-path: none; }
 .wiki-item-link { cursor: pointer; text-decoration: none; }
 .database-table tr.database-target > td { background: rgba(111, 217, 242, .16); box-shadow: inset 0 1px rgba(111, 217, 242, .45), inset 0 -1px rgba(111, 217, 242, .45); }
-.dictionary-monster { display: inline-flex; align-items: center; gap: 6px; color: #8be7fa; font-weight: 700; }
+.dictionary-monster { color: #8be7fa; font-weight: 700; cursor: help; }
 .dictionary-monster[data-difficulty="1"] { color: #ff8585; }
-.dictionary-monster__image { width: 30px; height: 30px; object-fit: contain; }
 .wiki-panel .control-bar { top: 54px; }
 
 @media (max-width: 720px) {

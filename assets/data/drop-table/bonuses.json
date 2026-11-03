@@ -1,8 +1,9 @@
 ﻿[
     {
         "items": [
-            "YUNCHANG",
-            "Asteroid Engine"
+            "Asteroid Engine",
+            "YUNCHANG"
+            
         ],
         "effect": {
             "ATA": "+20",
@@ -234,8 +235,7 @@
         "effect": {
             "ATA": "+30",
             "ATP": "+350",
-            "hits": "(N/H)3-3-3",
-            "notes": "攻击力+350, 命中+30, Hits (N/H)3-3-3, (EX)3-3-4"
+            "hits": "(N/H)3-3-3, (EX)3-3-4"
         },
         "extra": []
     },
@@ -245,8 +245,7 @@
             "THE SIGH OF A GOD"
         ],
         "effect": {
-            "hits": "3-3-3",
-            "notes": "EX伤害和范围提升, Hits: 3-3-3"
+            "hits": "3-3-3"
         },
         "extra": []
     },
@@ -256,8 +255,7 @@
             "PROPHETS OF MOTAV"
         ],
         "effect": {
-            "hits": "1-2-3",
-            "notes": "EX: Lv26极冰术, Hits: 1-2-3"
+            "hits": "1-2-3"
         },
         "extra": []
     },
@@ -267,8 +265,7 @@
             "HEAVEN STRIKER"
         ],
         "effect": {
-            "hits": "3-3-3",
-            "notes": "濒死时 Hits 3-3-3"
+            "hits": "3-3-3"
         },
         "extra": []
     },
@@ -280,8 +277,7 @@
         "effect": {
             "targets": 5,
             "attack_range": "increased",
-            "attack_speed": "+50%",
-            "notes": "攻速+50%, 5目标, 攻击范围增大"
+            "attack_speed": "+50%"
         },
         "extra": []
     },

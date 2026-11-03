@@ -1,15 +1,21 @@
-let SERVICES, EXCHANGES, RECIPES, SET_BONUSES, QUEST_CATALOG, QUEST_DATA, NAME_RE, SCOPED_NAME_RE;
+let EXCHANGES, RECIPES, SET_BONUSES, QUEST_CATALOG, QUEST_DATA, MAG_DATA, NAME_RE, SCOPED_NAME_RE;
 let ITEM_DATA = {};
 let ITEM_ID_BY_TERM = {};
 let MONSTER_ID_BY_TERM = {};
 const SECTION_ID_NAMES = ['Viridia', 'Greenill', 'Skyly', 'Bluefull', 'Purplenum', 'Pinkal', 'Redria', 'Oran', 'Yellowboze', 'Whitill'];
 const SECTION_ID_BY_TERM = Object.fromEntries(SECTION_ID_NAMES.map((name, id) => [name.toLowerCase(), { name, id }]));
 let questFilter = '';
+let exchangeFilter = '';
+let recipeFilter = '';
+let setFilter = '';
 let BAZAAR_LANGUAGE = '';
 const QUEST_SEARCH_INDEX = new WeakMap();
+const monsterImagePaths = new Set();
+const failedMonsterImagePaths = new Set();
+let activeMonsterName;
 const SECTION_BY_ID = {
   'bz-quick': 'currency', 'bz-drops': 'special', 'bz-mpc': 'special',
-  'bz-services': 'bazaar', 'bz-exchange': 'exchange', 'bz-crafting': 'crafting', 'bz-quests': 'quests'
+  'bz-exchange': 'exchange', 'bz-crafting': 'crafting', 'bz-quests': 'quests'
 };
 
 function localized(value) {
@@ -17,7 +23,7 @@ function localized(value) {
   return value || '';
 }
 
-function appendRichText(node, text, includeSectionIds = false) {
+function appendRichText(node, text, includeSectionIds = false, preferItems = false) {
   const source = String(text);
   let lastIndex = 0;
   const pattern = includeSectionIds ? SCOPED_NAME_RE : NAME_RE;
@@ -28,9 +34,11 @@ function appendRichText(node, text, includeSectionIds = false) {
     }
     const key = match.toLowerCase();
     const sectionId = includeSectionIds ? SECTION_ID_BY_TERM[key] : null;
+    const itemId = ITEM_ID_BY_TERM[match] || ITEM_ID_BY_TERM[key];
     const monsterId = MONSTER_ID_BY_TERM[match] || MONSTER_ID_BY_TERM[key];
-    const itemId = monsterId ? null : (ITEM_ID_BY_TERM[match] || ITEM_ID_BY_TERM[key]);
-    const displayName = sectionId ? '' : monsterId ? window.WIKI_I18N.getMonster(monsterId) : (itemId ? (window.WIKI_I18N.getItem(itemId).name || match) : match);
+    const matchedItemId = preferItems ? itemId : (monsterId ? null : itemId);
+    const matchedMonsterId = matchedItemId ? null : monsterId;
+    const displayName = sectionId ? '' : matchedMonsterId ? window.WIKI_I18N.getMonster(matchedMonsterId) : (matchedItemId ? (window.WIKI_I18N.getItem(matchedItemId).name || match) : match);
     if (sectionId) {
       const icon = document.createElement('img');
       icon.className = 'bazaar-section-id-icon';
@@ -42,25 +50,17 @@ function appendRichText(node, text, includeSectionIds = false) {
       return match;
     }
     const term = document.createElement("span");
-    term.className = monsterId ? "bazaar-monster" : "bazaar-term";
-    if (monsterId) {
-      const monsterInfo = window.WIKI_I18N.getMonsterMeta(monsterId);
+    term.className = matchedMonsterId ? "bazaar-monster" : "bazaar-term";
+    if (matchedMonsterId) {
+      const monsterInfo = window.WIKI_I18N.getMonsterMeta(matchedMonsterId);
+      term.dataset.monsterId = matchedMonsterId;
       term.dataset.difficulty = String(monsterInfo.difficulty);
-      if (monsterInfo.image) {
-        const image = document.createElement("img");
-        image.className = "bazaar-monster__image";
-        image.src = monsterInfo.image;
-        image.alt = "";
-        image.loading = "lazy";
-        image.addEventListener("error", () => image.remove(), { once: true });
-        term.appendChild(image);
-      }
     }
     term.appendChild(document.createTextNode(displayName));
     term.title = match;
-    if (itemId) {
-      term.dataset.item = itemId;
-      if (window.WIKI_HAS_EQUIPMENT?.(itemId)) {
+    if (matchedItemId) {
+      term.dataset.item = matchedItemId;
+      if (window.WIKI_HAS_EQUIPMENT?.(matchedItemId)) {
         term.classList.add('wiki-item-link');
         term.dataset.equipmentAvailable = "true";
       }
@@ -73,6 +73,65 @@ function appendRichText(node, text, includeSectionIds = false) {
   }
   node.appendChild(fragment);
 }
+
+function positionMonsterImageTooltip(image, event) {
+  const tooltip = document.getElementById("monster-image-tooltip");
+  if (!tooltip) return;
+  const margin = 8;
+  const offset = 14;
+  const left = event.clientX + image.naturalWidth + offset + margin <= window.innerWidth
+    ? event.clientX + offset
+    : event.clientX - image.naturalWidth - offset;
+  const top = event.clientY + image.naturalHeight + offset + margin <= window.innerHeight
+    ? event.clientY + offset
+    : event.clientY - image.naturalHeight - offset;
+  tooltip.style.left = `${Math.max(margin, Math.min(left, window.innerWidth - image.naturalWidth - margin))}px`;
+  tooltip.style.top = `${Math.max(margin, Math.min(top, window.innerHeight - image.naturalHeight - margin))}px`;
+}
+
+document.addEventListener("mouseover", event => {
+  const target = event.target instanceof Element ? event.target : null;
+  const monster = target?.closest(".bazaar-monster[data-monster-id], .dictionary-monster[data-monster-id]");
+  if (!monster || monster.contains(event.relatedTarget)) return;
+  const imagePath = window.WIKI_I18N.getMonsterMeta(monster.dataset.monsterId).image;
+  const tooltip = document.getElementById("monster-image-tooltip");
+  const image = tooltip?.querySelector("img");
+  if (!imagePath || !tooltip || !image || failedMonsterImagePaths.has(imagePath)) return;
+  activeMonsterName = monster;
+  image.onload = () => {
+    if (activeMonsterName !== monster || image.src !== new URL(imagePath, document.baseURI).href) return;
+    monsterImagePaths.add(imagePath);
+    image.style.width = `${image.naturalWidth}px`;
+    image.style.height = `${image.naturalHeight}px`;
+    tooltip.style.display = "block";
+    positionMonsterImageTooltip(image, event);
+  };
+  image.onerror = () => {
+    if (activeMonsterName !== monster || image.src !== new URL(imagePath, document.baseURI).href) return;
+    failedMonsterImagePaths.add(imagePath);
+    tooltip.style.display = "none";
+  };
+  if (monsterImagePaths.has(imagePath) && image.src === new URL(imagePath, document.baseURI).href) {
+    tooltip.style.display = "block";
+    positionMonsterImageTooltip(image, event);
+  } else {
+    tooltip.style.display = "none";
+    image.src = imagePath;
+  }
+});
+
+document.addEventListener("mousemove", event => {
+  const tooltip = document.getElementById("monster-image-tooltip");
+  const image = tooltip?.querySelector("img");
+  if (activeMonsterName && image?.naturalWidth) positionMonsterImageTooltip(image, event);
+});
+
+document.addEventListener("mouseout", event => {
+  if (!activeMonsterName?.contains(event.target) || activeMonsterName.contains(event.relatedTarget)) return;
+  activeMonsterName = null;
+  const tooltip = document.getElementById("monster-image-tooltip");
+  if (tooltip) tooltip.style.display = "none";
+});
 
 function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -252,7 +311,7 @@ function monsterTerms(name) {
 function matchingMonsterIds(keyword) {
   if (!keyword) return new Set();
   return new Set(Object.entries(MONSTER_ID_BY_TERM)
-    .filter(([term]) => window.WIKI_SEARCH.normalize(term).includes(keyword))
+    .filter(([term]) => window.WIKI_SEARCH.matches(keyword, term))
     .map(([, id]) => id));
 }
 
@@ -264,7 +323,7 @@ function questMonsterDataForKeyword(data, keyword) {
     ...floor,
     monsters: Object.fromEntries(Object.entries(floor.monsters || {}).filter(([name]) => {
       const terms = monsterTerms(name).map(term => window.WIKI_SEARCH.normalize(term));
-      return terms.some(term => term.includes(keyword)) || terms.some(term => {
+      return terms.some(term => window.WIKI_SEARCH.matches(keyword, term)) || terms.some(term => {
         const id = MONSTER_ID_BY_TERM[name] || MONSTER_ID_BY_TERM[window.WIKI_SEARCH.normalize(name)];
         return id && matchingIds.has(id);
       });
@@ -290,14 +349,22 @@ function questSearchText(quest, source) {
   }
   const language = window.WIKI_I18N.language;
   if (languageIndex.has(language)) return languageIndex.get(language);
-  const text = window.WIKI_SEARCH.normalize([
+  const searchParts = [
+    quest.episode,
+    quest.category,
     quest.title,
     quest.requirement,
     quest.reward,
     formatQuestDrops(quest.drops),
     questCountText(quest.monsterData),
     ...questNotes(quest.notes)
-  ].join(' '));
+  ];
+  const sourceText = searchParts.filter(Boolean).join(" ");
+  const localizedItemTerms = [...new Set(sourceText.match(NAME_RE) || [])]
+    .map(term => ITEM_ID_BY_TERM[term] || ITEM_ID_BY_TERM[term.toLowerCase()])
+    .filter(Boolean)
+    .flatMap(item => window.WIKI_I18N.getItemSearchTerms(item));
+  const text = window.WIKI_SEARCH.normalize([...searchParts, ...localizedItemTerms].join(" "));
   languageIndex.set(language, text);
   return text;
 }
@@ -335,15 +402,30 @@ function addQuestCounts(parent, data, keyword = '') {
   }
 }
 
-function highlightMatches(root, keyword) {
+function highlightMatches(root, keyword, termGroups = []) {
+  root.querySelectorAll("mark.quest-search-highlight").forEach(mark => {
+    mark.replaceWith(document.createTextNode(mark.textContent));
+  });
+  root.normalize();
   if (!keyword) return;
-  const terms = [keyword, ...Array.from(matchingMonsterIds(keyword)).map(id => window.WIKI_I18N.getMonster(id))]
-    .filter(Boolean).sort((a, b) => b.length - a.length);
-  if (!terms.length) return;
-  const pattern = new RegExp(`(${terms.map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+  const terms = new Set([keyword]);
+  termGroups.forEach(group => {
+    if (group.some(term => window.WIKI_SEARCH.matches(keyword, term))) {
+      group.forEach(term => terms.add(term));
+    }
+  });
+  if (!termGroups.length) {
+    matchingMonsterIds(keyword).forEach(id => terms.add(window.WIKI_I18N.getMonster(id)));
+  }
+  const searchableTerms = [...terms].filter(Boolean).sort((a, b) => b.length - a.length);
+  if (!searchableTerms.length) return;
+  const pattern = new RegExp(`(${searchableTerms.map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   const textNodes = [];
-  while (walker.nextNode()) textNodes.push(walker.currentNode);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (!node.parentElement.closest("[hidden], script, style, mark, input")) textNodes.push(node);
+  }
   textNodes.forEach(node => {
     if (!pattern.test(node.nodeValue)) {
       pattern.lastIndex = 0;
@@ -402,88 +484,432 @@ function addTable(parent, headers, rows, plainTextColumns = []) {
   parent.appendChild(wrap);
 }
 
-function addServiceCards(parent) {
-  const grid = el("div", "bazaar-grid");
-  SERVICES.forEach(service => {
-    const card = el("article", "bazaar-card");
-    card.appendChild(el("h4", null, service.title));
-    card.appendChild(el("p", null, service.detail));
-    grid.appendChild(card);
+function addCraftingTable(parent, headers, className = '', context = null) {
+  const wrap = el("div", "crafting-table-wrap");
+  if (className) wrap.classList.add(`${className}-wrap`);
+  const table = el("table", `crafting-table ${className}`.trim());
+  const thead = el("thead");
+  const location = String(context?.location ?? "").trim();
+  if (location) {
+    const contextRow = el("tr", "exchange-table__context");
+    const contextCell = el("th");
+    contextCell.colSpan = 1;
+    contextCell.textContent = location;
+    contextRow.appendChild(contextCell);
+    thead.appendChild(contextRow);
+  }
+  if (headers.length) {
+    const headingRow = el("tr");
+    headers.forEach(header => {
+      const heading = el("th");
+      heading.textContent = header;
+      headingRow.appendChild(heading);
+    });
+    thead.appendChild(headingRow);
+  }
+  if (thead.childElementCount) table.appendChild(thead);
+  const tbody = el("tbody");
+  table.appendChild(tbody);
+  wrap.appendChild(table);
+  parent.appendChild(wrap);
+  return tbody;
+}
+
+function addNpcImage(parent, npc) {
+  if (!npc.locationImage) return;
+  const image = document.createElement("img");
+  image.className = "exchange-npc__image";
+  image.src = npc.locationImage;
+  image.alt = npc.name || "";
+  image.loading = "lazy";
+  parent.appendChild(image);
+}
+
+function addItemText(parent, item, className = '') {
+  const text = el("span", className);
+  appendRichText(text, item, false, true);
+  parent.appendChild(text);
+  return text;
+}
+
+function catalogItemSearchText(...items) {
+  return window.WIKI_SEARCH.normalize(items.flatMap(item =>
+    window.WIKI_I18N.getItemSearchTerms(item)
+  ).join(" "));
+}
+
+function catalogSearchText(...values) {
+  return window.WIKI_SEARCH.normalize(values.flat(Infinity).filter(Boolean).join(" "));
+}
+
+function addCatalogSearch(parent, id, placeholder, initialValue, onSearch) {
+  const search = document.createElement("input");
+  search.id = id;
+  search.className = "quest-search catalog-search";
+  search.type = "search";
+  search.placeholder = placeholder;
+  search.value = initialValue;
+  parent.appendChild(search);
+  window.WIKI_SEARCH.bind(search, onSearch);
+  onSearch(window.WIKI_SEARCH.normalize(initialValue));
+  return search;
+}
+
+function filterCatalogRows(root, query, selector = "[data-catalog-search-row]") {
+  window.WIKI_SEARCH.filter(root, selector, query);
+  const firstInGroup = new Map();
+  root.querySelectorAll(selector).forEach(row => {
+    const group = row.dataset.searchGroup;
+    const body = row.parentElement;
+    if (!firstInGroup.has(body)) firstInGroup.set(body, new Set());
+    const groups = firstInGroup.get(body);
+    const isFirstVisible = !row.hidden && !groups.has(group);
+    row.classList.toggle("set-table__row--group-start", isFirstVisible);
+    if (isFirstVisible) groups.add(group);
+    highlightMatches(row, query, row.searchTermGroups || []);
   });
-  parent.appendChild(grid);
+}
+
+function exchangeSearchText(task, npc, exchange) {
+  const itemTerms = value => [
+    value,
+    ...window.WIKI_I18N.getItemSearchTerms(value),
+    ...window.WIKI_I18N.getItemSearchTerms(exchangeItemName(value))
+  ];
+  return catalogSearchText(
+    task,
+    npc,
+    itemTerms(exchange.item),
+    (exchange.materials || []).map(material => itemTerms(material.content))
+  );
+}
+
+function applyExchangeFilter(root, query) {
+  window.WIKI_SEARCH.filter(root, ".exchange-search-row", query);
+  root.querySelectorAll(".exchange-npc").forEach(npc => {
+    npc.hidden = !npc.querySelector(".exchange-search-row:not([hidden])");
+  });
+  root.querySelectorAll(".exchange-task").forEach(task => {
+    task.hidden = !task.querySelector(".exchange-npc:not([hidden])");
+    highlightMatches(task, query, task.searchTermGroups || []);
+  });
+}
+
+function addExchangeFormula(parent, exchange) {
+  const formula = el("div", "exchange-line");
+  const target = addItemText(formula, exchange.item, "exchange-line__target");
+  target.title = exchange.item;
+  formula.appendChild(el("span", "exchange-line__arrow", "←"));
+  const materials = el("div", "exchange-line__materials");
+  exchange.materials.forEach((material, index) => {
+    const slot = el("div", `exchange-line__material-slot${index < exchange.materials.length - 1 ? " exchange-line__material-slot--joined" : ""}`);
+    const component = el("span", "exchange-line__material");
+    addItemText(component, material.content, "exchange-line__material-name");
+    component.title = material.quantity != null
+      ? `${material.content} × ${material.quantity}`
+      : material.content;
+    if (material.quantity != null && material.quantity !== 1) {
+      component.appendChild(el("span", "exchange-line__quantity", `× ${material.quantity}`));
+    }
+    slot.appendChild(component);
+    materials.appendChild(slot);
+  });
+  formula.appendChild(materials);
+  parent.appendChild(formula);
+}
+
+function sizeExchangeTableColumns(table) {
+  const columnCount = Number(table.dataset.maxMaterialCount) || 1;
+  const columnWidths = Array(columnCount).fill(0);
+  const isMobile = window.matchMedia("(max-width: 640px)").matches;
+  const manyMaterials = columnCount >= 7;
+  const denseMaterials = columnCount >= 9;
+  const operatorWidth = manyMaterials
+    ? (isMobile ? (denseMaterials ? 5 : 7) : 8)
+    : (isMobile ? 10 : 12);
+  const material = table.querySelector(".exchange-line__material");
+  const materialFontSize = material ? parseFloat(getComputedStyle(material).fontSize) : (isMobile ? 11 : 14);
+  let naturalTargetWidth = 0;
+
+  table.querySelectorAll(".exchange-line__target").forEach(target => {
+    const measure = target.cloneNode(true);
+    measure.style.cssText += ";position:fixed;left:-10000px;top:0;width:max-content;min-width:0;max-width:none;overflow:visible;white-space:nowrap;text-overflow:clip";
+    table.appendChild(measure);
+    naturalTargetWidth = Math.max(naturalTargetWidth, Math.ceil(measure.getBoundingClientRect().width) + 12);
+    measure.remove();
+  });
+
+  table.querySelectorAll(".exchange-line__materials").forEach(materials => {
+    materials.querySelectorAll(".exchange-line__material").forEach((material, index) => {
+      const measure = material.cloneNode(true);
+      measure.style.cssText += ";position:fixed;left:-10000px;top:0;width:max-content;max-width:none;overflow:visible;flex:none";
+      const name = measure.querySelector(".exchange-line__material-name");
+      if (name) name.style.cssText += ";width:max-content;max-width:none;overflow:visible;text-overflow:clip";
+      table.appendChild(measure);
+      columnWidths[index] = Math.max(columnWidths[index], Math.ceil(measure.getBoundingClientRect().width));
+      measure.remove();
+    });
+  });
+
+  const line = table.querySelector(".exchange-line");
+  if (!line) return;
+  const lineStyle = getComputedStyle(line);
+  const arrowWidth = parseFloat(getComputedStyle(line.querySelector(".exchange-line__arrow")).width);
+  const columnGap = parseFloat(lineStyle.columnGap);
+  const materialPadding = isMobile ? 2 : 6;
+  const minimumNameWidth = manyMaterials ? materialFontSize * 2 + materialPadding : 0;
+  const minTracks = columnWidths.map((_, index) => manyMaterials
+    ? minimumNameWidth + (index < columnCount - 1 ? operatorWidth : 0)
+    : index < columnCount - 1 ? (isMobile ? 18 : 74) : (isMobile ? 12 : 60)
+  );
+  const minMaterialWidth = minTracks.reduce((sum, width) => sum + width, 0);
+  const availableTargetWidth = line.clientWidth - arrowWidth - columnGap * 2 - minMaterialWidth;
+  const maxTargetRatio = manyMaterials ? (isMobile ? 0.2 : 0.24) : 1;
+  const targetWidth = Math.min(
+    naturalTargetWidth,
+    Math.max(32, Math.min(availableTargetWidth, line.clientWidth * maxTargetRatio))
+  );
+  table.style.setProperty("--exchange-target-column-width", `${targetWidth}px`);
+
+  const availableWidth = line.clientWidth - targetWidth - arrowWidth - columnGap * 2;
+  const naturalTracks = columnWidths.map((width, index) =>
+    width + (index < columnCount - 1 ? operatorWidth : 0)
+  );
+  const desiredTracks = naturalTracks.map((width, index) => Math.max(width, minTracks[index]));
+  const desiredTotal = desiredTracks.reduce((sum, width) => sum + width, 0);
+  let trackWidths = desiredTracks;
+
+  if (desiredTotal > availableWidth) {
+    const minTotal = minTracks.reduce((sum, width) => sum + width, 0);
+    if (minTotal >= availableWidth) {
+      const scale = availableWidth / minTotal;
+      trackWidths = minTracks.map(width => width * scale);
+    } else {
+      let extraAvailable = availableWidth - minTotal;
+      const remaining = desiredTracks.map((width, index) => Math.max(0, width - minTracks[index]));
+      trackWidths = [...minTracks];
+      let activeTracks = remaining
+        .map((width, index) => width > 0 ? index : -1)
+        .filter(index => index >= 0);
+      while (extraAvailable > 0 && activeTracks.length) {
+        const share = extraAvailable / activeTracks.length;
+        let allocated = 0;
+        const nextActiveTracks = [];
+        activeTracks.forEach(index => {
+          const addition = Math.min(remaining[index], share);
+          trackWidths[index] += addition;
+          remaining[index] -= addition;
+          allocated += addition;
+          if (remaining[index] > 0) nextActiveTracks.push(index);
+        });
+        if (!allocated) break;
+        extraAvailable -= allocated;
+        activeTracks = nextActiveTracks;
+      }
+    }
+  } else if (availableWidth > desiredTotal && trackWidths.length) {
+    const extraPerTrack = (availableWidth - desiredTotal) / trackWidths.length;
+    trackWidths = trackWidths.map(width => width + extraPerTrack);
+  }
+
+  const tracks = trackWidths.map(width => `${Math.max(1, width)}px`);
+  table.style.setProperty("--exchange-material-columns", tracks.join(" "));
 }
 
 function addExchangeCards(parent) {
-  const grid = el("div", "crafting-grid");
-  EXCHANGES.forEach(exchange => {
-    const card = el("article", "bazaar-card crafting-card crafting-card--exchange");
-    card.appendChild(el("h4", "crafting-card__result", exchange.title));
-    card.appendChild(el("div", "crafting-card__label", window.WIKI_I18N.language === 'cn' ? "兑换地点" : "Location"));
-    card.appendChild(el("div", "crafting-card__location", exchange.location));
-    card.appendChild(el("div", "crafting-card__label", window.WIKI_I18N.language === 'cn' ? "兑换材料" : "Materials"));
-    const materials = el("div", "crafting-card__items");
-    exchange.materials.forEach(line => {
-      const material = el("span", "crafting-card__item");
-      appendRichText(material, line);
-      materials.appendChild(material);
+  EXCHANGES.forEach(task => {
+    const taskSection = el("section", "exchange-task");
+    taskSection.appendChild(el("h4", "exchange-task__title", task.task));
+    (task.npcs || []).forEach(npc => {
+      const npcSection = el("section", "exchange-npc");
+      if (npc.name) npcSection.appendChild(el("h5", "exchange-npc__title", npc.name));
+      addNpcImage(npcSection, npc);
+      const body = addCraftingTable(npcSection, [], "exchange-table", npc);
+      const exchanges = npc.exchanges || [];
+      const table = body.closest(".exchange-table");
+      const maxMaterialCount = Math.max(1, ...exchanges.map(exchange => exchange.materials.length));
+      table.dataset.maxMaterialCount = String(maxMaterialCount);
+      table.classList.toggle("exchange-table--many-materials", maxMaterialCount >= 7);
+      table.classList.toggle("exchange-table--dense-materials", maxMaterialCount >= 9);
+      table.classList.toggle("exchange-table--single-material", maxMaterialCount === 1);
+      exchanges.forEach(exchange => {
+        const row = el("tr", "exchange-search-row");
+        row.dataset.search = exchangeSearchText(task.task, npc.name, exchange);
+        row.searchTermGroups = [
+          [task.task, npc.name].filter(Boolean),
+          ...[exchange.item, ...(exchange.materials || []).map(material => material.content)]
+            .map(item => window.WIKI_I18N.getItemSearchTerms(exchangeItemName(item)))
+        ];
+        if (!taskSection.searchTermGroups) taskSection.searchTermGroups = [];
+        taskSection.searchTermGroups.push(...row.searchTermGroups);
+        const formulaCell = el("td", "exchange-table__formula-cell");
+        addExchangeFormula(formulaCell, exchange);
+        row.appendChild(formulaCell);
+        body.appendChild(row);
+      });
+      taskSection.appendChild(npcSection);
     });
-    card.appendChild(materials);
-    grid.appendChild(card);
+    parent.appendChild(taskSection);
   });
-  parent.appendChild(grid);
 }
 
-function addCraftingCards(parent) {
+function appendRecipeRows(recipeBody, recipes) {
+  const componentCounts = new Map();
+  recipes.forEach(recipe => recipe.components.forEach(component => {
+    componentCounts.set(component, (componentCounts.get(component) || 0) + 1);
+  }));
+  const recipeGroups = new Map();
+  const ungroupedRecipes = [];
+  recipes.forEach(recipe => {
+    const sharedComponents = recipe.components
+      .filter(component => componentCounts.get(component) > 1)
+      .sort((a, b) => componentCounts.get(b) - componentCounts.get(a));
+    if (!sharedComponents.length) {
+      ungroupedRecipes.push(recipe);
+      return;
+    }
+    const groupKey = sharedComponents[0];
+    if (!recipeGroups.has(groupKey)) recipeGroups.set(groupKey, []);
+    recipeGroups.get(groupKey).push(recipe);
+  });
+  const recipeGroupList = [...recipeGroups.entries()].map(([key, group]) => [key, group]);
+  if (ungroupedRecipes.length) recipeGroupList.push(["ungrouped", ungroupedRecipes]);
+  recipeGroupList.forEach(([groupKey, group]) => {
+    group.forEach((recipe, index) => {
+      const row = el("tr", "set-table__row recipe-table__row catalog-search-row");
+      row.dataset.catalogSearchRow = "true";
+      row.dataset.searchGroup = groupKey;
+      row.dataset.search = catalogItemSearchText(recipe.result, ...recipe.components);
+      row.searchTermGroups = [recipe.result, ...recipe.components]
+        .map(item => window.WIKI_I18N.getItemSearchTerms(item));
+      if (index === 0) row.classList.add("set-table__row--group-start");
+      const formulaCell = el("td");
+      const formula = el("div", "recipe-line");
+      recipe.components.forEach((component, componentIndex) => {
+        if (componentIndex) formula.appendChild(el("span", "recipe-line__operator", "+"));
+        addItemText(formula, component, "recipe-formula__item");
+      });
+      formula.appendChild(el("span", "recipe-line__operator recipe-line__operator--equals", "="));
+      addItemText(formula, recipe.result, "recipe-formula__item recipe-line__result");
+      formulaCell.appendChild(formula);
+      row.appendChild(formulaCell);
+      recipeBody.appendChild(row);
+    });
+  });
+}
+
+function addCraftingTables(parent) {
+  const magNames = new Set(Object.keys(MAG_DATA || {}).map(name => name.toLowerCase()));
+  const magRecipes = RECIPES.filter(recipe =>
+    [recipe.result, ...recipe.components].some(item => magNames.has(item.toLowerCase()))
+  );
+  const magRecipeSet = new Set(magRecipes);
+  const regularRecipes = RECIPES.filter(recipe => !magRecipeSet.has(recipe));
+
   const recipes = el("section", "crafting-subsection");
   recipes.dataset.craftingSection = "recipes";
   recipes.appendChild(el("h3", null, window.WIKI_I18N.language === 'cn' ? "合成公式" : "Crafting recipes"));
+  addCatalogSearch(
+    recipes,
+    "recipeSearchInput",
+    window.WIKI_I18N.language === "cn" ? "搜索合成道具…" : "Search crafting items ...",
+    recipeFilter,
+    query => {
+      recipeFilter = query;
+      filterCatalogRows(parent, query, ".recipe-table__row");
+    }
+  );
   parent.appendChild(recipes);
-  const recipeGrid = el("div", "crafting-grid");
-  RECIPES.forEach(recipe => {
-    const card = el("article", "bazaar-card crafting-card");
-    card.appendChild(el("h4", "crafting-card__result", recipe.result));
-    const label = window.WIKI_I18N.language === 'cn' ? "合成材料" : "Components";
-    card.appendChild(el("div", "crafting-card__label", label));
-    const components = el("div", "crafting-card__items");
-    recipe.components.filter(Boolean).forEach(item => {
-      const name = el("span", "crafting-card__item");
-      appendRichText(name, item);
-      components.appendChild(name);
-    });
-    card.appendChild(components);
-    recipeGrid.appendChild(card);
-  });
-  recipes.appendChild(recipeGrid);
+  appendRecipeRows(addCraftingTable(recipes, [], "recipe-table"), regularRecipes);
+  filterCatalogRows(parent, recipeFilter, ".recipe-table__row");
+
+  if (magRecipes.length) {
+    const magSection = el("section", "crafting-subsection");
+    magSection.dataset.craftingSection = "recipes";
+    const heading = el("h3");
+    heading.textContent = window.WIKI_I18N.language === 'cn' ? "玛古合成" : "MAG crafting";
+    magSection.appendChild(heading);
+    parent.appendChild(magSection);
+    appendRecipeRows(addCraftingTable(magSection, [], "recipe-table"), magRecipes);
+    filterCatalogRows(parent, recipeFilter, ".recipe-table__row");
+  }
 
   const sets = el("section", "crafting-subsection");
   sets.dataset.craftingSection = "sets";
   sets.appendChild(el("h3", null, window.WIKI_I18N.language === 'cn' ? "套装效果" : "Set bonuses"));
+  addCatalogSearch(
+    sets,
+    "setSearchInput",
+    window.WIKI_I18N.language === "cn" ? "搜索套装或效果…" : "Search sets or effects...",
+    setFilter,
+    query => {
+      setFilter = query;
+      filterCatalogRows(sets, query);
+    }
+  );
   parent.appendChild(sets);
-  const setGrid = el("div", "crafting-grid");
+  const setBody = addCraftingTable(sets, [], "set-table");
+  const setGroups = new Map();
   SET_BONUSES.forEach(set => {
-    const card = el("article", "bazaar-card crafting-card crafting-card--set");
-    const items = el("div", "crafting-card__items");
-    set.items.filter(Boolean).forEach(item => {
-      const name = el("span", "crafting-card__item");
-      appendRichText(name, item);
-      items.appendChild(name);
-    });
-    card.appendChild(items);
-    const effects = el("dl", "crafting-card__effects");
-    Object.entries(set.effect || {}).forEach(([key, value]) => {
-      if (value === false || value == null || value === "") return;
-      const label = window.WIKI_I18N.text(`effect.${key}`, key);
-      const term = document.createElement("dt");
-      term.textContent = label;
-      const displayValue = value === true ? "" : window.WIKI_I18N.getEffectValue(key, value);
-      const description = document.createElement("dd");
-      description.textContent = displayValue;
-      effects.append(term, description);
-    });
-    card.appendChild(effects);
-    setGrid.appendChild(card);
+    const commonItem = set.items.find(Boolean) || (window.WIKI_I18N.language === 'cn' ? "未分类" : "Uncategorized");
+    if (!setGroups.has(commonItem)) setGroups.set(commonItem, []);
+    setGroups.get(commonItem).push(set);
   });
-  sets.appendChild(setGrid);
+  setGroups.forEach((group, commonItem) => {
+    group.forEach((set, index) => {
+      const effects = Object.entries(set.effect || {}).filter(([, value]) =>
+        value !== false && value != null && value !== ""
+      );
+      const row = el("tr");
+      row.classList.add("set-table__row");
+      row.classList.add("catalog-search-row");
+      row.dataset.catalogSearchRow = "true";
+      row.dataset.searchGroup = commonItem;
+      row.dataset.search = catalogSearchText(
+        ...set.items.flatMap(item => window.WIKI_I18N.getItemSearchTerms(item)),
+        effects.flatMap(([key, value]) => [
+          key,
+          window.WIKI_I18N.text(`effect.${key}`, key),
+          value,
+          value === true ? "" : window.WIKI_I18N.getEffectValue(key, value)
+        ])
+      );
+      row.searchTermGroups = [
+        ...set.items.filter(Boolean).map(item => window.WIKI_I18N.getItemSearchTerms(item)),
+        ...effects.map(([key, value]) => [
+          key,
+          window.WIKI_I18N.text(`effect.${key}`, key),
+          value,
+          value === true ? "" : window.WIKI_I18N.getEffectValue(key, value)
+        ])
+      ];
+      if (index === 0) row.classList.add("set-table__row--group-start");
+      const combinationCell = el("td", "set-table__combination");
+      const combination = el("div", "set-combination");
+      set.items.filter(Boolean).forEach((item, itemIndex) => {
+        if (itemIndex) combination.appendChild(el("span", "recipe-formula__join", "+"));
+        addItemText(combination, item, "recipe-formula__item");
+      });
+      combinationCell.appendChild(combination);
+      row.appendChild(combinationCell);
+
+      const effectsCell = el("td");
+      const effectsContent = el("div", "set-effects");
+      effects.forEach(([key, value]) => {
+        const effect = el("div", "set-effect");
+        const term = el("span", "set-effect__label");
+        term.textContent = window.WIKI_I18N.text(`effect.${key}`, key);
+        const description = el("span", "set-effect__value");
+        description.textContent = value === true ? "" : window.WIKI_I18N.getEffectValue(key, value);
+        effect.append(term, description);
+        effectsContent.appendChild(effect);
+      });
+      effectsCell.appendChild(effectsContent);
+      row.appendChild(effectsCell);
+      setBody.appendChild(row);
+    });
+  });
+  filterCatalogRows(sets, setFilter);
 }
 
 function addQuest(parent, quest, keyword = '') {
@@ -541,8 +967,8 @@ function addQuestDirectory(parent) {
       categorySummary.textContent = category;
       categoryDetails.appendChild(categorySummary);
       Object.entries(quests).forEach(([title, source]) => {
-        const quest = { ...source, title, monsterData: QUEST_DATA[episode]?.[questBaseTitle(title)] };
-        if (!keyword || questSearchText(quest, source).includes(keyword)) addQuest(categoryDetails, quest, keyword);
+        const quest = { ...source, episode, category, title, monsterData: QUEST_DATA[episode]?.[questBaseTitle(title)] };
+        if (window.WIKI_SEARCH.matches(keyword, questSearchText(quest, source))) addQuest(categoryDetails, quest, keyword);
       });
       if (!categoryDetails.querySelector('.bazaar-details')) categoryDetails.hidden = true;
       else ep.appendChild(categoryDetails);
@@ -561,14 +987,22 @@ export function renderBazaarInfo(target = "#bazaar-info") {
   const drops = addSection(panel, window.WIKI_I18N.language === 'cn' ? "特殊掉落表" : "Special drops / currency sources", "bz-drops");
   addScopedTable(drops, [window.WIKI_I18N.text('label.item', 'Item'), window.WIKI_I18N.text('label.source', 'Quest / Source'), window.WIKI_I18N.text('label.rate', 'Rate / Condition'), window.WIKI_I18N.text('label.notes', 'Notes')], questDropRows(), [1], "bazaar-table--special-drops");
 
-  const services = addSection(panel, window.WIKI_I18N.language === 'cn' ? "集市服务" : "Bazaar services", "bz-services");
-  addServiceCards(services);
-
-  const exchanges = addSection(panel, window.WIKI_I18N.language === 'cn' ? "集市兑换" : "Bazaar exchanges", "bz-exchange");
+  const exchanges = addSection(panel, window.WIKI_I18N.text('quests.exchange', '任务兑换'), "bz-exchange");
+  addCatalogSearch(
+    exchanges,
+    "exchangeSearchInput",
+    window.WIKI_I18N.language === "cn" ? "搜索任务、道具）…" : "Search quests and items ...",
+    exchangeFilter,
+    query => {
+      exchangeFilter = query;
+      applyExchangeFilter(exchanges, query);
+    }
+  );
   addExchangeCards(exchanges);
+  applyExchangeFilter(exchanges, exchangeFilter);
 
   const crafting = addSection(panel, window.WIKI_I18N.language === 'cn' ? "合成/套装" : "Crafting / Sets", "bz-crafting");
-  if (window.WIKI_ACTIVE_VIEW === 'crafting') addCraftingCards(crafting);
+  if (window.WIKI_ACTIVE_VIEW === 'crafting') addCraftingTables(crafting);
 
   if (window.WIKI_ACTIVE_VIEW === 'quests') {
     const quests = addSection(panel, window.WIKI_I18N.language === 'cn' ? "任务速查" : "Quest quick reference", "bz-quests");
@@ -597,10 +1031,25 @@ function applyBazaarSection() {
   root.querySelectorAll('.bazaar-section').forEach(node => {
     node.hidden = node.dataset.view !== section;
   });
+  if (section === 'exchange') {
+    root.querySelectorAll('#bz-exchange .exchange-table').forEach(sizeExchangeTableColumns);
+  }
   root.querySelectorAll('#bz-crafting .crafting-subsection').forEach(node => {
     node.hidden = node.dataset.craftingSection !== (window.WIKI_CRAFTING_SECTION || 'recipes');
   });
 }
+
+let exchangeResizeFrame = 0;
+window.addEventListener("resize", () => {
+  if (exchangeResizeFrame) return;
+  exchangeResizeFrame = requestAnimationFrame(() => {
+    exchangeResizeFrame = 0;
+    const root = document.querySelector('#bazaar-info');
+    if (root?.dataset.activeSection === 'exchange') {
+      root.querySelectorAll('#bz-exchange .exchange-table').forEach(sizeExchangeTableColumns);
+    }
+  });
+}, { passive: true });
 
 let bazaarDataPromise;
 function ensureBazaarData() {
@@ -624,7 +1073,7 @@ window.setBazaarSection = section => {
   const root = document.querySelector('#bazaar-info');
   if (!root) return;
   root.dataset.activeSection = section;
-  if (!SERVICES) {
+  if (!EXCHANGES) {
     ensureBazaarData().then(() => {
       if (root.dataset.activeSection === section) renderAndBindBazaar(root);
     }).catch(error => {
@@ -635,7 +1084,7 @@ window.setBazaarSection = section => {
   }
   if (BAZAAR_LANGUAGE !== window.WIKI_I18N.language
     || (section === 'quests' && !root.querySelector('#bz-quests'))
-    || (section === 'crafting' && !root.querySelector('#bz-crafting .crafting-grid'))) {
+    || (section === 'crafting' && !root.querySelector('#bz-crafting .crafting-table'))) {
     renderAndBindBazaar(root);
   }
   applyBazaarSection();
@@ -643,14 +1092,15 @@ window.setBazaarSection = section => {
 
 async function loadBazaarData() {
   await window.WIKI_I18N.ready;
-  const [services, exchanges, recipes, bonuses, questCatalog] = await Promise.all([
-    window.WIKI_DATA.loadJson('assets/data/bazaar/bazaar-services.json'),
-    window.WIKI_DATA.loadJson('assets/data/bazaar/exchanges.json'),
-    window.WIKI_DATA.loadJson('assets/data/drop-table/recipes.json'),
+  const [exchanges, recipes, bonuses, questCatalog, mags] = await Promise.all([
+    window.WIKI_DATA.loadJson('assets/data/bazaar/exchanges.json?v=20261103-3'),
+    window.WIKI_DATA.loadJson('assets/data/drop-table/recipes.json?v=20261103-2'),
     window.WIKI_DATA.loadJson('assets/data/drop-table/bonuses.json'),
-    window.WIKI_DATA.loadJson('assets/data/bazaar/quest-catalog.json')
+    window.WIKI_DATA.loadJson('assets/data/bazaar/quest-catalog.json'),
+    window.WIKI_DATA.loadJson('assets/data/item/mags.json')
   ]);
-  [SERVICES, EXCHANGES, RECIPES, SET_BONUSES, QUEST_CATALOG] = [services, exchanges, recipes, bonuses, questCatalog];
+  [EXCHANGES, RECIPES, SET_BONUSES, QUEST_CATALOG] = [exchanges, recipes, bonuses, questCatalog];
+  MAG_DATA = mags;
   const questEpisodes = await Promise.all(['EP1', 'EP2', 'EP4'].map(episode =>
     window.WIKI_DATA.loadJson(`assets/data/quest/quest_${episode}.json`)
   ));

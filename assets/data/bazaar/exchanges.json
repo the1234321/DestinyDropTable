@@ -1,212 +1,426 @@
 [
   {
-    "title": "ASTRAL WINGS",
-    "location": "Trade NPC",
-    "materials": [
-      "Astral Essence x1",
-      "BAT WING x3",
-      "Magic Rock \"Heart Key\" x1",
-      "Magic Stone \"Iritista\" x2",
-      "Gratia x1"
+    "task": "EP2 Shop The Phantastic Bazaar",
+    "npcs": [
+      {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "Photon Drop x98",
+            "materials": [ {"content": "Photon Sphere", "quantity": 1} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/photon-sphere-to-98-photon-drops.png"
+      },
+          {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "Photon Sphere",
+            "materials": [ {"content": "Photon Drop", "quantity": 99} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/99-photon-drops-to-photon-sphere.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "200 POW MAG",
+            "materials": [ {"content": "Photon Drop", "quantity": 20} ]
+          },
+                    {
+            "item"     : "200 MIND MAG",
+            "materials": [ {"content": "Photon Drop", "quantity": 20} ]
+          },
+                    {
+            "item"     : "200 DEX MAG",
+            "materials": [ {"content": "Photon Drop", "quantity": 20} ]
+          },
+                    {
+            "item"     : "200 DEF MAG",
+            "materials": [ {"content": "Photon Drop", "quantity": 20} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/level-200-mags.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "Elenor Lv0 + PB",
+            "materials": [ {"content": "Elenor Lv100", "quantity": 1} ]
+          },          {
+            "item"     : "Dreamcast Lv0 + PB",
+            "materials": [ {"content": "Dreamcast Lv100", "quantity": 1} ]
+          },          {
+            "item"     : "Epsilon Lv0 + PB",
+            "materials": [ {"content": "Epsilon Lv100", "quantity": 1} ]
+          },          {
+            "item"     : "Tormentorr Lv0 + PB",
+            "materials": [ {"content": "Tormentorr Lv100", "quantity": 1} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/photon-drop-mag-trades.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "Photon Token x5",
+            "materials": [ {"content": "Photon Drop", "quantity": 30} ]
+          },
+                    {
+            "item"     : "Photon Token",
+            "materials": [ {"content": "Photon Drop", "quantity": 6} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/photon-token-trades.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "Vulcan 50H",
+            "materials": [ {"content": "Photon Drop", "quantity": 1} ]
+          },
+                    {
+            "item"     : "Raygun 50H",
+            "materials": [ {"content": "Photon Drop", "quantity": 1} ]
+          },
+                    {
+            "item"     : "Arms 50H",
+            "materials": [ {"content": "Photon Drop", "quantity": 1} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/starter-weapons.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "Calibur 50|50H",
+            "materials": [ {"content": "Photon Drop", "quantity": 20} ]
+          },
+                    {
+            "item"     : "Arms 50|50H",
+            "materials": [ {"content": "Photon Drop", "quantity": 20} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/50h-weapons.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item": "Jointparts",
+            "materials": [
+              {"content": "Cladding of Manipulator III", "quantity": 7},
+              {"content": "Syncesta",                    "quantity": 5},
+              {"content": "Photon Booster",              "quantity": 3},
+              {"content": "State/Maintenance",           "quantity": 1},
+              {"content": "Proof of Sonic Team",         "quantity": 1},
+              {"content": "Trap/Search",                 "quantity": 1},
+              {"content": "Dark Matter",                 "quantity": 1}
+            ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/jointparts-trade.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "Heavenly/Battle",
+            "materials": [ {"content": "Photon Drop", "quantity": 3} ]
+          },
+                    {
+            "item"     : "Heavenly/Power",
+            "materials": [ {"content": "Photon Drop", "quantity": 3} ]
+          },
+                    {
+            "item"     : "Heavenly/Mind",
+            "materials": [ {"content": "Photon Drop", "quantity": 3} ]
+          },
+                    {
+            "item"     : "Heavenly/Arms",
+            "materials": [ {"content": "Photon Drop", "quantity": 3} ]
+          },
+                    {
+            "item"     : "Heavenly/Ability",
+            "materials": [ {"content": "Photon Drop", "quantity": 3} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/heavenly-unit-trades.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item": "ASTRAL WINGS",
+            "materials": [
+              {"content": "Astral Essence",           "quantity": 1},
+              {"content": "BAT WING",                 "quantity": 3},
+              {"content": "Magic Rock \"Heart Key\"", "quantity": 1},
+              {"content": "Magic Stone \"Iritista\"", "quantity": 2},
+              {"content": "Gratia",                   "quantity": 1}
+            ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/halloween-trade.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "EX",
+            "materials": [ {"content": "Photon Drop", "quantity": 50} ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/weapon-ex-trade.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item": "V803",
+            "materials": [
+              {"content": "Darkness Photon Sphere",   "quantity":  1},
+              {"content": "Millennium Photon Core",   "quantity": 20},
+              {"content": "V802",                     "quantity":  2},
+              {"content": "V503",                     "quantity":  1},
+              {"content": "Magic Stone \"Iritista\"", "quantity":  2},
+              {"content": "D-Photon Core",            "quantity":  1},
+              {"content": "Book of Hitogata",         "quantity":  1}
+            ]
+          },
+          {
+            "item": "PHANTASMAL FIELD",
+            "materials": [
+              {"content": "Darkness Photon Sphere",      "quantity":  1},
+              {"content": "Millennium Photon Core",      "quantity": 25},
+              {"content": "Cladding of Manipulator III", "quantity":  1},
+              {"content": "DF Field",                    "quantity":  1},
+              {"content": "Genesis Armor",               "quantity":  2},
+              {"content": "Luminous Field",              "quantity":  1},
+              {"content": "VIRUS ARMOR:Lafuteria",       "quantity":  1}
+            ]
+          },
+                    {
+            "item": "ASTRAL CLOAK",
+            "materials": [
+              {"content": "Primal Photon Sphere",   "quantity": 1},
+              {"content": "Millennium Photon Core", "quantity": 8},
+              {"content": "KROE'S SWEATER",         "quantity": 1},
+              {"content": "X-Parts ver3.10",        "quantity": 1},
+              {"content": "Archfiend Armor",        "quantity": 1},
+              {"content": "Dynasty Armor",          "quantity": 1},
+              {"content": "Ring of Fire",           "quantity": 1},
+              {"content": "Ninja Suit",             "quantity": 1},
+              {"content": "Mother Garb+",           "quantity": 2}
+            ]
+          },
+          {
+            "item": "ASTRAL CLAW",
+            "materials": [
+              {"content": "Millennium Photon Core", "quantity":   10},
+              {"content": "Primal Photon Sphere",   "quantity":    1},
+              {"content": "Darkness Photon Sphere", "quantity":    1},
+              {"content": "HP/FLOW",                "quantity":    1},
+              {"content": "TP/FLOW",                "quantity":    1},
+              {"content": "PB/FLOW",                "quantity":    1},
+              {"content": "Proof of Sonic Team",    "quantity":    1},
+              {"content": "ANTI-DARK RING",         "quantity":    1},
+              {"content": "ANTI-LIGHT RING",        "quantity":    1},
+              {"content": "BLAST GARMENT",          "quantity": null}
+            ]
+          },
+          {
+            "item": "Millennium/HP",
+            "materials": [
+              {"content": "Millennium Photon Core", "quantity":    5},
+              {"content": "Immortal/HP",            "quantity":    2},
+              {"content": "Cataclysm Shield",       "quantity":    1},
+              {"content": "MOLTEN RING",            "quantity":    1},
+              {"content": "Weapons Crystal Badge",  "quantity":   10},
+              {"content": "MOTHER GARB+",           "quantity": null}
+            ]
+          },
+          {
+            "item": "Ignis Engine",
+            "materials": [
+              {"content": "Millennium Photon Core", "quantity": 25},
+              {"content": "Darkness Photon Sphere", "quantity":  1},
+              {"content": "Blast Garment",          "quantity":  1},
+              {"content": "Behemoth Armor",         "quantity":  1},
+              {"content": "Proof of Sonic Team",    "quantity":  1},
+              {"content": "MOLTEN RING",            "quantity":  2},
+              {"content": "Weapons Crystal Badge",  "quantity": 30}
+            ]
+          },
+          {
+            "item": "DIVINE FIELD",
+            "materials": [
+              {"content": "Core of Administrator",  "quantity":  2},
+              {"content": "Millennium Photon Core", "quantity": 15},
+              {"content": "Proof of Sonic Team",    "quantity":  2},
+              {"content": "Primal Nexus",           "quantity":  1},
+              {"content": "Ethereal Armor",         "quantity":  1},
+              {"content": "D-VIRUS ARMOR",          "quantity":  1}
+            ]
+          },
+          {
+            "item": "ASTRAL SABER",
+            "materials": [
+              {"content": "BLAST GARMENT",               "quantity":  1},
+              {"content": "Cladding of Manipulator III", "quantity":  2},
+              {"content": "Millennium Photon Core",      "quantity": 15},
+              {"content": "Red Crystal",                 "quantity":  1},
+              {"content": "Blue Crystal",                "quantity":  2},
+              {"content": "Yellow Crystal",              "quantity":  2},
+              {"content": "Green Crystal",               "quantity":  2},
+              {"content": "IZMAELA",                     "quantity":  1},
+              {"content": "Dark Matter",                 "quantity":  1}
+            ]
+          },
+          {
+            "item": "MATRIX SCOPE",
+            "materials": [
+              {"content": "Infernal Stone",          "quantity": 1},
+              {"content": "Fragments of Orb [Red]",  "quantity": 2},
+              {"content": "Fragments of Orb [Blue]", "quantity": 2},
+              {"content": "Reflex Gear",             "quantity": 2},
+              {"content": "Ethereal Armor",          "quantity": 1},
+              {"content": "Shadow Cloak",            "quantity": 1},
+              {"content": "Proof of Sonic Team",     "quantity": 1},
+              {"content": "Photon Booster",          "quantity": 3},
+              {"content": "ADEPT",                   "quantity": 2},
+              {"content": "Syncesta",                "quantity": 3}
+            ]
+          },
+                    {
+            "item": "Astral Ore 'Iritista'",
+            "materials": [
+              {"content": "Infernal Stone",          "quantity": 1},
+              {"content": "Fragments of Orb [Red]",  "quantity": 2},
+              {"content": "Fragments of Orb [Blue]", "quantity": 2},
+              {"content": "Reflex Gear",             "quantity": 2},
+              {"content": "Ethereal Armor",          "quantity": 1},
+              {"content": "Shadow Cloak",            "quantity": 1},
+              {"content": "Proof of Sonic Team",     "quantity": 1},
+              {"content": "Photon Booster",          "quantity": 3},
+              {"content": "ADEPT",                   "quantity": 2},
+              {"content": "Syncesta",                "quantity": 3}
+            ]
+          },          {
+            "item": "Phantasmal Ore 'Syncesta'",
+            "materials": [
+              {"content": "Infernal Stone",          "quantity": 1},
+              {"content": "Fragments of Orb [Red]",  "quantity": 2},
+              {"content": "Fragments of Orb [Blue]", "quantity": 2},
+              {"content": "Reflex Gear",             "quantity": 2},
+              {"content": "Ethereal Armor",          "quantity": 1},
+              {"content": "Shadow Cloak",            "quantity": 1},
+              {"content": "Proof of Sonic Team",     "quantity": 1},
+              {"content": "Photon Booster",          "quantity": 3},
+              {"content": "ADEPT",                   "quantity": 2},
+              {"content": "Syncesta",                "quantity": 3}
+            ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/high-tier-weapon-trades.png"
+      },
+                {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item"     : "Weapons Crystal Badge x5",
+            "materials": [ {"content": "Flower Bouquet", "quantity": 25} ]
+          },
+                   {
+            "item"     : "Wings of Life",
+            "materials": [ {"content": "Flower Bouquet", "quantity": 150} ]
+          },
+                            {
+            "item"     : "D-VIRUS ARMOR",
+            "materials": [ {"content": "Easter Egg", "quantity": 30} ]
+          },
+                            {
+            "item"     : "D-VIRUS LAUNCHER",
+            "materials": [ {"content": "Easter Egg", "quantity": 30} ]
+          },
+                            {
+            "item"     : "BERSERK NEEDLE",
+            "materials": [ {"content": "Easter Egg", "quantity": 60} ]
+          },
+                            {
+            "item"     : "ILL GILL REAPER",
+            "materials": [ {"content": "Jack-O'-Lantern", "quantity": 15} ]
+          },
+                            {
+            "item"     : "LAST EMPEROR",
+            "materials": [ {"content": "Jack-O'-Lantern", "quantity": 15} ]
+          },
+                            {
+            "item"     : "BAT WING",
+            "materials": [ {"content": "Jack-O'-Lantern", "quantity": 40} ]
+          },
+                            {
+            "item"     : "CHRISTMAS SPIRIT",
+            "materials": [ {"content": "Christmas Present", "quantity": 40} ]
+          },
+                            {
+            "item"     : "Lightning Garment",
+            "materials": [ {"content": "Secret Ticket", "quantity": 99} ]
+          },
+          {
+            "item": "MIRACLE CHAIN",
+            "materials": [
+              {"content": "Fragments of Orb [Yellow]", "quantity":  1},
+              {"content": "Fragments of Orb [Green]",  "quantity":  1},
+              {"content": "Weapons Crystal Badge",     "quantity": 10}
+            ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/event-trades.png"
+      }
     ]
   },
-  {
-    "title": "ASTRAL HALO",
-    "location": "Trade NPC",
-    "materials": [
-      "ASTRAL WINGS",
-      "Orb of Illusions"
-    ]
-  },
-  {
-    "title": "Jointparts",
-    "location": "Trade NPC / Bazaar FOmar",
-    "materials": [
-      "Cladding of Manipulator III x7",
-      "Syncesta x5",
-      "Photon Booster x3",
-      "State/Maintenance x1",
-      "Proof of Sonic Team x1",
-      "Trap/Search x1",
-      "Dark Matter x1"
-    ]
-  },
-  {
-    "title": "V803",
-    "location": "Millennium Shop",
-    "materials": [
-      "Darkness Photon Sphere x1",
-      "Millennium Photon Core x20",
-      "V802 x2",
-      "V503 x1",
-      "Magic Stone \"Iritista\" x2",
-      "D-Photon Core x1",
-      "Book of Hitogata x1"
-    ]
-  },
-  {
-    "title": "PHANTASMAL FIELD",
-    "location": "Millennium Shop",
-    "materials": [
-      "Darkness Photon Sphere x1",
-      "Millennium Photon Core x25",
-      "Cladding of Manipulator III x1",
-      "DF Field x1",
-      "Genesis Armor x2",
-      "Luminous Field x1",
-      "VIRUS ARMOR:Lafuteria x1"
-    ]
-  },
-  {
-    "title": "ASTRAL CLOAK",
-    "location": "Millennium Shop / Delta NPC",
-    "materials": [
-      "Primal Photon Sphere x1",
-      "Millennium Photon Core x8",
-      "KROE'S SWEATER x1",
-      "X-Parts ver3.10 x1",
-      "Archfiend Armor x1",
-      "Dynasty Armor x1",
-      "Ring of Fire x1",
-      "Ninja Suit x1",
-      "Mother Garb+ x2"
-    ]
-  },
-  {
-    "title": "ASTRAL CLAW",
-    "location": "Millennium Shop",
-    "materials": [
-      "Millennium Photon Core x10",
-      "Primal Photon Sphere x1",
-      "Darkness Photon Sphere x1",
-      "HP/FLOW x1",
-      "TP/FLOW x1",
-      "PB/FLOW x1",
-      "Proof of Sonic Team x1",
-      "ANTI-DARK RING x1",
-      "ANTI-LIGHT RING x1"
-    ]
-  },
-  {
-    "title": "Millennium/HP",
-    "location": "Millennium Shop",
-    "materials": [
-      "Millennium Photon Core x5",
-      "Immortal/HP x2",
-      "Cataclysm Shield x1",
-      "MOLTEN RING x1",
-      "Weapons Crystal Badge x10"
-    ]
-  },
-  {
-    "title": "Ignis Engine",
-    "location": "Millennium Shop",
-    "materials": [
-      "Millennium Photon Core x25",
-      "Darkness Photon Sphere x1",
-      "Blast Garment x1",
-      "Behemoth Armor x1",
-      "Proof of Sonic Team x1",
-      "MOLTEN RING x2",
-      "Weapons Crystal Badge x30"
-    ]
-  },
-  {
-    "title": "DIVINE FIELD",
-    "location": "Administrator / Millennium ",
-    "materials": [
-      "Core of Administrator x2",
-      "Millennium Photon Core x15",
-      "Proof of Sonic Team x2",
-      "Primal Nexus x1",
-      "Ethereal Armor x1",
-      "D-VIRUS ARMOR x1"
-    ]
-  },
-  {
-    "title": "ASTRAL SABER",
-    "location": "Millennium Shop",
-    "materials": [
-      "BLAST GARMENT x1",
-      "Cladding of Manipulator III x2",
-      "Millennium Photon Core x15",
-      "Red Crystal x1",
-      "Blue Crystal x2",
-      "Yellow Crystal x2",
-      "Green Crystal x2",
-      "IZMAELA x1",
-      "Dark Matter x1"
-    ]
-  },
-  {
-    "title": "MATRIX SCOPE",
-    "location": "Millennium Shop ",
-    "materials": [
-      "Infernal Stone x1",
-      "Fragments of Orb [Red] x2",
-      "Fragments of Orb [Blue]x2",
-      "Reflex Gear x2",
-      "Ethereal Armor x1",
-      "Shadow Cloak x1",
-      "Proof of Sonic Team x1",
-      "Photon Booster x3",
-      "ADEPT x2",
-      "Syncesta x3"
-    ]
-  },
-  {
-    "title": "Forbidden Grimoire",
-    "location": "Hallowed World [Master] / Paganini",
-    "materials": [
-      "Hallowed Jack-O\u0027-Lantern x1",
-      "Millennium Photon Core x10",
-      "Cladding of Epsilon x1",
-      "Proof of Sonic Team x1",
-      "Sorcerer's Right Arm x1",
-      "Magic Stone \"Iritista\" x2",
-      "Book of Hitogata x1"
-    ]
-  },
-  {
-    "title": "Section ID Halo",
-    "location": "Love Research [Valentine]",
-    "materials": [
-      "Wings of Life x3",
-      "Flower Bouquet x50"
-    ]
-  },
-  {
-    "title": "Flower Bouquet shop",
-    "location": "Trade NPC",
-    "materials": [
-      "Wings of Life：150 Flower Bouquet",
-      "Weapons Crystal Badge x5",
-      "Flower Bouquet x25"
-    ]
-  },
-  {
-    "title": "Easter Egg shop",
-    "location": "Trade NPC",
-    "materials": [
-      "D-VIRUS ARMOR：30 Easter Egg",
-      "D-VIRUS LAUNCHER（0/0/0/0|0）：30 Easter Egg",
-      "BERSERK NEEDLE（0/0/0/0|0）：60 Easter Egg"
-    ]
-  },
-  {
-    "title": "Lightning Garment",
-    "location": "Trade NPC",
-    "materials": [
-      "Secret Ticket：99"
-    ]
-  },
-  {
-    "title": "MIRACLE CHAIN",
-    "location": "Trade NPC",
-    "materials": [
-      "Fragments of Orb [Yellow] :1",
-      "Fragments of Orb [Green] :1",
-      "Weapons Crystal Badge :10"
+    {
+    "task": "EP2 Special Hallowed World [Master]",
+    "npcs": [
+        {
+        "name": "",
+        "exchanges"    : [
+          {
+            "item": "Forbidden Grimoire",
+            "materials": [
+              {"content": "Hallowed Jack-O'-Lantern", "quantity":  1},
+              {"content": "Millennium Photon Core",   "quantity": 10},
+              {"content": "Cladding of Epsilon",      "quantity":  1},
+              {"content": "Proof of Sonic Team",      "quantity":  1},
+              {"content": "Sorcerer's Right Arm",     "quantity":  1},
+              {"content": "Magic Stone \"Iritista\"", "quantity":  2},
+              {"content": "Book of Hitogata",         "quantity":  1}
+            ]
+          }
+        ],
+        "location"     : "",
+        "locationImage": "images/trade/hallowed-world-trade.png"
+      }
     ]
   }
 ]
