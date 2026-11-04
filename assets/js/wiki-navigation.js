@@ -153,20 +153,9 @@ async function renderBilingualDictionary() {
     const monsters = [...monsterNames].map(en => [en, monsterTranslations[en]?.name || ""])
       .sort((a, b) => a[0].localeCompare(b[0]));
     const table = (title, data, kind) => `<section class="dictionary-section" data-dictionary-kind="${kind}"><h2>${title}</h2><div class="dictionary-table-wrap"><table><thead><tr><th>English</th><th>中文</th></tr></thead><tbody>${data.map(([en, cn]) => {
-      const meta = kind === "monsters" ? window.WIKI_I18N.getMonsterMeta(en) : null;
-      const monsterAttributes = meta
-        ? ` data-monster-id="${databaseEscape(en)}" data-difficulty="${meta.difficulty}"`
-        : "";
-      const name = kind === "monsters"
-        ? `<span class="dictionary-monster"${monsterAttributes}>${databaseEscape(en)}</span>`
-        : `<span data-item="${databaseEscape(en)}">${databaseEscape(en)}</span>`;
-      const translated = kind === "monsters"
-        ? `<span class="dictionary-monster"${monsterAttributes}>${databaseEscape(cn)}</span>`
-        : `<span data-item="${databaseEscape(en)}">${databaseEscape(cn)}</span>`;
-      return `<tr data-search="${databaseEscape(window.WIKI_SEARCH.normalize(`${en} ${cn}`))}"><td>${name}</td><td>${translated}</td></tr>`;
+      return `<tr data-search="${databaseEscape(window.WIKI_SEARCH.normalize(`${en} ${cn}`))}"><td>${databaseEscape(en)}</td><td>${databaseEscape(cn)}</td></tr>`;
     }).join("")}</tbody></table></div></section>`;
     root.innerHTML = `<article class="dictionary-panel"><p class="dictionary-panel__intro">中英名称速查</p><input id="dictionarySearch" class="dictionary-search" type="search" placeholder="搜索英文或中文名称…">${table("道具名称", rows, "items")}${table("怪物名称", monsters, "monsters")}</article>`;
-    refreshEquipmentLinks(root);
     const search = root.querySelector("#dictionarySearch");
     window.WIKI_SEARCH.bind(search, query => {
       root.querySelectorAll(".dictionary-section").forEach(section => {

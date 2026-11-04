@@ -60,6 +60,9 @@ function appendRichText(node, text, includeSectionIds = false, preferItems = fal
     term.title = match;
     if (matchedItemId) {
       term.dataset.item = matchedItemId;
+      const rarity = ITEM_DATA[matchedItemId]?.superitem;
+      if (rarity === 2) term.classList.add("ultimate-item");
+      else if (rarity === 1) term.classList.add("legend-item");
       if (window.WIKI_HAS_EQUIPMENT?.(matchedItemId)) {
         term.classList.add('wiki-item-link');
         term.dataset.equipmentAvailable = "true";
@@ -91,7 +94,7 @@ function positionMonsterImageTooltip(image, event) {
 
 document.addEventListener("mouseover", event => {
   const target = event.target instanceof Element ? event.target : null;
-  const monster = target?.closest(".bazaar-monster[data-monster-id], .dictionary-monster[data-monster-id]");
+  const monster = target?.closest(".bazaar-monster[data-monster-id]");
   if (!monster || monster.contains(event.relatedTarget)) return;
   const imagePath = window.WIKI_I18N.getMonsterMeta(monster.dataset.monsterId).image;
   const tooltip = document.getElementById("monster-image-tooltip");

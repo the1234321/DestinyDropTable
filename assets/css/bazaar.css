@@ -730,6 +730,19 @@
   text-shadow: 0 0 8px rgba(251, 191, 36, .22);
 }
 
+#bazaar-info .bazaar-term.legend-item {
+  color: #fbbf24;
+}
+
+#bazaar-info .bazaar-term.ultimate-item {
+  background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0066ff, #ff00ff);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 4s linear infinite;
+}
+
 #bazaar-info .bazaar-term-en {
   margin-left: 2px;
   color: #d6b66c;
