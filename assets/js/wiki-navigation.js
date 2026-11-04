@@ -383,7 +383,13 @@ function databaseBoostHtml(value, query) {
   return rows.join("");
 }
 
-function databaseCellHtml(value, field, query) {
+function databaseCellHtml(value, field, query, itemName) {
+  if (field === "Drop Source") {
+    return databaseDropSourceHtml(
+      equipmentDatabase.dropSources.get(databaseItemKey(itemName)) || [],
+      query
+    );
+  }
   if (value == null || value === "" || window.WIKI_SEARCH.normalize(value) === "none" && ["Boosts", "Special"].includes(field)) return "";
   if (field === "Class" && value) return databaseClassHtml(value, query);
   if (field === "Special" && value) return databaseSpecialHtml(value, query);
@@ -393,8 +399,270 @@ function databaseCellHtml(value, field, query) {
 
 function databaseFields(kind, records) {
   return [...new Set(Object.values(records).flatMap(record => Object.keys(record || {})))].filter(field =>
-    field !== "Description" && !(kind === "mag" && ["Class", "Notes"].includes(field)) && !(kind === "weapon" && ["Type", "ATP"].includes(field))
-  );
+    field !== "Description" && field !== "Grind" && !(kind === "mag" && field === "Notes") && !(kind === "weapon" && ["Type", "ATP"].includes(field))
+  ).concat("Drop Source");
+}
+
+function databaseItemKey(itemName) {
+  return window.WIKI_SEARCH.normalize(itemName).replace(/\s+/g, " ");
+}
+
+function databaseSpecialIds(ids, sectionIds) {
+  const text = String(ids ?? "").trim();
+  const normalized = text.toLocaleLowerCase().replace(/\s+/g, " ");
+  const idNames = sectionIds.map((section, index) => ({ name: section.id, index }));
+  const allIds = /\ball\s*ids\b/i.test(normalized) || /^except\b/i.test(normalized);
+  const excluded = allIds && /\bexcept\b/i.test(normalized)
+    ? idNames.filter(({ name }) => normalized.includes(name.toLocaleLowerCase()))
+    : [];
+  const included = allIds
+    ? idNames.filter(({ index }) => !excluded.some(id => id.index === index))
+    : idNames.filter(({ name }) => normalized.includes(name.toLocaleLowerCase()));
+  return {
+    sections: included.map(({ name, index }) => ({ name, id: index })),
+    excludedSections: excluded.map(({ name, index }) => ({ name, id: index })),
+    idMode: allIds ? "all" : "",
+    idCount: sectionIds.length,
+    idLabel: included.length ? "" : text
+  };
+}
+
+function databaseSourceItemKey(itemName) {
+  return databaseItemKey(String(itemName || "").replace(/\s+x\d+\s*$/i, ""));
+}
+
+function addDatabaseDropSource(index, itemName, source) {
+  const key = databaseItemKey(itemName);
+  if (!key) return;
+  if (!index.has(key)) index.set(key, []);
+  index.get(key).push(source);
+}
+
+function buildDatabaseDropSources(tables, sectionIds, questCatalog, recipes, exchanges) {
+  const sourceIndex = new Map();
+  const sectionNumbers = new Map(sectionIds.map((section, index) => [section.id, index]));
+  Object.entries(tables || {}).forEach(([difficulty, episodes]) => {
+    Object.entries(episodes || {}).forEach(([episode, data]) => {
+      (data.monsters || []).forEach(monster => {
+        Object.entries(monster.drops || {}).forEach(([section, drop]) => {
+          addDatabaseDropSource(sourceIndex, drop.item, {
+            kind: "drop",
+            monster: monster.name,
+            sections: [{ name: section, id: sectionNumbers.get(section) }],
+            rate: drop.rate || "",
+            difficulty,
+            episode
+          });
+        });
+      });
+    });
+  });
+
+  Object.entries(questCatalog || {}).forEach(([episode, categories]) => {
+    Object.entries(categories || {}).forEach(([category, quests]) => {
+      Object.entries(quests || {}).forEach(([quest, data]) => {
+        Object.entries(data.drops || {}).forEach(([monsters, drops]) => {
+          Object.entries(drops || {}).forEach(([drop, ids]) => {
+            const match = drop.match(/^(.*?)\s+(\d+\/\d+)\s*$/);
+            const itemName = (match?.[1] || drop).trim();
+            const rate = match?.[2] || "";
+            monsters.split(",").map(monster => monster.trim()).filter(Boolean).forEach(monster => {
+              addDatabaseDropSource(sourceIndex, itemName, {
+                kind: "special",
+                monster,
+                ...databaseSpecialIds(ids, sectionIds),
+                rate,
+                episode,
+                category,
+                quest
+              });
+            });
+          });
+        });
+      });
+    });
+  });
+
+  (recipes || []).forEach(recipe => {
+    [recipe.result, ...(recipe.extra || [])].forEach(item => {
+      const result = databaseSourceItemKey(item);
+      if (!result) return;
+      addDatabaseDropSource(sourceIndex, result, {
+        kind: "crafting",
+        components: recipe.components || [],
+        episode: "",
+        category: "",
+        quest: ""
+      });
+    });
+  });
+
+  (exchanges || []).forEach(task => {
+    const match = String(task.task || "").match(/^(EP\d+)\s+([^\s]+)\s+(.+)$/);
+    if (!match) return;
+    const [, episode, category, quest] = match;
+    (task.npcs || []).forEach(npc => (npc.exchanges || []).forEach(exchange => {
+      const result = databaseSourceItemKey(exchange.item);
+      if (!result) return;
+      addDatabaseDropSource(sourceIndex, result, {
+        kind: "exchange",
+        episode,
+        category,
+        quest,
+        components: (exchange.materials || []).map(material => material.content)
+      });
+    }));
+  });
+
+  const difficultyOrder = { Ultimate: 0, "Very Hard": 1, Hard: 2, Normal: 3 };
+  sourceIndex.forEach((sources, itemName) => {
+    const contextGroups = new Map();
+    sources.forEach(source => {
+      const contextKey = source.kind === "drop"
+        ? JSON.stringify([source.kind, source.monster, source.rate, source.difficulty, source.episode])
+        : JSON.stringify([source.kind, source.monster, source.rate, source.idMode, source.idLabel, source.category, source.quest, source.episode, source.components]);
+      if (!contextGroups.has(contextKey)) {
+        contextGroups.set(contextKey, {
+          ...source,
+          sections: [],
+          excludedSections: [],
+          contexts: []
+        });
+      }
+      const group = contextGroups.get(contextKey);
+      (source.sections || []).forEach(section => {
+        if (!group.sections.some(entry => entry.id === section.id)) group.sections.push(section);
+      });
+      (source.excludedSections || []).forEach(section => {
+        if (!group.excludedSections.some(entry => entry.id === section.id)) group.excludedSections.push(section);
+      });
+      const context = source.kind === "drop"
+        ? { difficulty: source.difficulty, episode: source.episode }
+        : { episode: source.episode };
+      if (!group.contexts.some(entry =>
+        entry.difficulty === context.difficulty && entry.episode === context.episode
+      )) group.contexts.push(context);
+    });
+    const merged = new Map();
+    contextGroups.forEach(source => {
+      source.sections.sort((left, right) => left.id - right.id);
+      const groupKey = JSON.stringify([
+        source.kind,
+        source.monster,
+        source.rate,
+        source.idMode,
+        source.idLabel,
+        source.category,
+        source.quest,
+        ...(source.components || []),
+        source.sections.map(section => section.id),
+        source.excludedSections.map(section => section.id)
+      ]);
+      if (!merged.has(groupKey)) merged.set(groupKey, { ...source, contexts: [] });
+      const group = merged.get(groupKey);
+      source.contexts.forEach(context => {
+        if (!group.contexts.some(entry =>
+          entry.difficulty === context.difficulty && entry.episode === context.episode
+        )) group.contexts.push(context);
+      });
+    });
+    merged.forEach(source => {
+      source.contexts.sort((left, right) =>
+        (difficultyOrder[left.difficulty] ?? 4) - (difficultyOrder[right.difficulty] ?? 4) ||
+        left.episode.localeCompare(right.episode)
+      );
+    });
+    sourceIndex.set(itemName, [...merged.values()].sort((left, right) => {
+      const sourceOrder = { drop: 0, special: 1, crafting: 2, exchange: 3 };
+      if (left.kind !== right.kind) return (sourceOrder[left.kind] ?? 4) - (sourceOrder[right.kind] ?? 4);
+      const difficultyDifference = (difficultyOrder[left.difficulty] ?? 4) - (difficultyOrder[right.difficulty] ?? 4);
+      if (difficultyDifference) return difficultyDifference;
+      const episodeDifference = left.episode.localeCompare(right.episode);
+      return episodeDifference || (left.monster || "").localeCompare(right.monster || "") || (left.quest || "").localeCompare(right.quest || "");
+    }));
+  });
+  return sourceIndex;
+}
+
+function databaseDropSourceSearchText(sources = []) {
+  return sources.flatMap(source => [
+    source.monster,
+    source.monster ? window.WIKI_I18N.getMonster(source.monster) : "",
+    databaseDropSourceIdLabel(source),
+    ...source.sections.flatMap(section => [section.id, section.name]),
+    ...(source.excludedSections || []).flatMap(section => [section.id, section.name]),
+    source.idLabel,
+    source.rate,
+    source.category,
+    source.quest,
+    ...(source.components || []),
+    ...source.contexts.flatMap(context => [context.difficulty, context.episode])
+  ]).filter(Boolean).join(" ");
+}
+
+function databaseDropSourceIdLabel(source) {
+  if (source.idMode === "all" && source.sections.length) {
+    const allIds = Array.from({ length: source.idCount }, (_, index) => index);
+    const excluded = allIds.filter(id => !source.sections.some(section => section.id === id));
+    return excluded.length
+      ? `IDs 0-${allIds.length - 1} except ${excluded.join(", ")}`
+      : `IDs 0-${allIds.length - 1}`;
+  }
+  if (source.sections.length) {
+    return source.sections.map(section => `ID ${section.id} ${section.name}`).join(", ");
+  }
+  return source.idLabel || "";
+}
+
+function databaseDropSourceIdHtml(source, query) {
+  const label = databaseDropSourceIdLabel(source);
+  if (!source.sections.length) {
+    return label ? databaseHighlight(label, query, source.idLabel || label) : "";
+  }
+  const icon = section => `<img class="bazaar-section-id-icon" src="images/ids/${databaseEscape(section.name)}.png" alt="${databaseEscape(section.name)}" title="${databaseEscape(section.name)} (${section.id})">`;
+  if (source.idMode === "all") {
+    if (source.excludedSections?.length) {
+      const excludedIcons = source.excludedSections.map(icon).join("");
+      return `${window.WIKI_I18N.language === "cn" ? "除" : "Except"} ${excludedIcons}`;
+    }
+  }
+  return source.sections.map(icon).join("");
+}
+
+function databaseDropSourceEntryHtml(source, query) {
+  const contexts = source.contexts.map(context => {
+    if (source.kind !== "drop") return "";
+    const difficulty = window.WIKI_I18N.language === "cn"
+      ? ({ Normal: "N", Hard: "H", "Very Hard": "VH", Ultimate: "U" }[context.difficulty] || context.difficulty)
+      : context.difficulty;
+    return `${context.episode} · ${difficulty}`;
+  }).join(", ");
+  const monsterName = source.monster ? window.WIKI_I18N.getMonster(source.monster) : "";
+  const idLabel = databaseDropSourceIdHtml(source, query);
+  const components = source.components?.length
+    ? `<span class="database-drop-source__components">${source.components.map((component, index) => `${index ? '<span class="database-drop-source__operator">+</span>' : ""}<span class="database-drop-source__component">${databaseHighlight(window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getExchangeItemName(component) : component, query, component)}</span>`).join("")}</span>`
+    : "";
+  const parts = [
+    contexts ? `<span class="database-drop-source__context">${databaseHighlight(contexts, query, source.contexts.map(context => `${context.difficulty || ""} ${context.episode}`).join(" "))}</span>` : "",
+    source.kind === "special" || source.kind === "exchange" ? `<span class="database-drop-source__quest">${databaseHighlight(`${source.episode} · ${source.category} · ${source.quest.replace(/\s+⭐+$/u, "")}`, query, `${source.episode} ${source.category} ${source.quest}`)}</span>` : "",
+    source.kind === "crafting" ? `<span class="database-drop-source__quest">${databaseHighlight(window.WIKI_I18N.language === "cn" ? "合成" : "Crafting", query, "Crafting")}</span>` : "",
+    components,
+    source.monster ? `<span class="database-drop-source__monster" title="${databaseEscape(source.monster)}">${databaseHighlight(monsterName, query, source.monster)}</span>` : "",
+    idLabel ? `<span class="database-drop-source__id">${idLabel}</span>` : "",
+    source.rate ? `<span class="database-drop-source__rate">${databaseHighlight(source.rate, query)}</span>` : ""
+  ].filter(Boolean);
+  const title = source.kind === "special" ? ` title="${databaseEscape(source.quest)}"` : "";
+  return `<span class="database-drop-source__entry"${title}>${parts.join('<span class="database-drop-source__separator"> · </span>')}</span>`;
+}
+
+function databaseDropSourceHtml(sources, query) {
+  if (!sources?.length) return "";
+  const firstSource = databaseDropSourceEntryHtml(sources[0], query);
+  if (sources.length === 1) return firstSource;
+  const sourceList = sources.map(source => databaseDropSourceEntryHtml(source, query)).join("");
+  const expandLabel = window.WIKI_I18N.language === "cn" ? "展开更多" : "Show more";
+  const collapseLabel = window.WIKI_I18N.language === "cn" ? "收起" : "Show less";
+  return `<details class="database-drop-sources"><summary>${firstSource}<span class="database-drop-source__more" aria-label="${expandLabel}"><span class="database-drop-source__more-count">+${sources.length - 1}</span><span class="database-drop-source__more-label database-drop-source__more-label--expand">${expandLabel}</span><span class="database-drop-source__more-label database-drop-source__more-label--collapse">${collapseLabel}</span><span class="database-drop-source__more-caret" aria-hidden="true">▾</span></span></summary><div class="database-drop-sources__list">${sourceList}</div></details>`;
 }
 
 function databaseRows(records, fields, query) {
@@ -405,11 +673,14 @@ function databaseRows(records, fields, query) {
     let searchable = equipmentDatabase.searchIndex.get(record);
     if (searchable == null) {
       const values = [name, databaseDisplayName(name), ...fields.flatMap(field => [
+        field === "Drop Source"
+          ? databaseDropSourceSearchText(equipmentDatabase.dropSources.get(databaseItemKey(name)) || [])
+          : "",
         ["Boosts", "Special"].includes(field) && window.WIKI_SEARCH.normalize(record[field]) === "none"
           ? ""
           : databaseValue(record[field]),
         databaseDisplayValue(record[field], field)
-      ])];
+      ]), record.Grind > 0 ? `+${record.Grind}` : ""];
       searchable = window.WIKI_SEARCH.normalize(values.join(" "));
       equipmentDatabase.searchIndex.set(record, searchable);
     }
@@ -424,8 +695,11 @@ function databaseTable(records, fields, query, kind, typeLabel = "") {
   const sortField = state.sort[kind] || "";
   rows.sort((leftName, rightName) => {
     if (!sortField) return databaseDisplayName(leftName).localeCompare(databaseDisplayName(rightName));
-    const left = databaseDisplayValue(records[leftName][sortField], sortField);
-    const right = databaseDisplayValue(records[rightName][sortField], sortField);
+    const fieldValue = name => sortField === "Drop Source"
+      ? databaseDropSourceSearchText(equipmentDatabase.dropSources.get(databaseItemKey(name)) || [])
+      : records[name][sortField];
+    const left = databaseDisplayValue(fieldValue(leftName), sortField);
+    const right = databaseDisplayValue(fieldValue(rightName), sortField);
     const leftNumber = Number.parseFloat(left.replace(/[^\d.+-]/g, ""));
     const rightNumber = Number.parseFloat(right.replace(/[^\d.+-]/g, ""));
     const result = Number.isNaN(leftNumber) || Number.isNaN(rightNumber) ? left.localeCompare(right) : leftNumber - rightNumber;
@@ -435,7 +709,23 @@ function databaseTable(records, fields, query, kind, typeLabel = "") {
     const label = window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getDatabase(field) : field;
     return state.sort[kind] === field ? `${label} ${state.direction === "asc" ? "▲" : "▼"}` : label;
   };
-  return `<div class="database-table-wrap"><table class="database-table" data-db-kind="${databaseEscape(kind)}"><thead><tr><th data-sort-kind="${kind}" data-sort-field="name">${window.WIKI_I18N.language === "cn" ? window.WIKI_I18N.getDatabase("Name") : "Name"}</th>${fields.map(field => `<th data-sort-kind="${kind}" data-sort-field="${databaseEscape(field)}">${databaseEscape(header(field))}</th>`).join("")}</tr></thead><tbody>${rows.map(name => { const rarity = equipmentDatabase.catalog?.[name]?.superitem || 0; const rarityClass = rarity === 2 ? "ultimate-item" : rarity === 1 ? "legend-item" : ""; const targetClass = databaseTargetItem === name ? "database-target" : ""; return `<tr class="${targetClass}"><td><span class="database-item-name ${rarityClass}">${databaseHighlight(databaseDisplayName(name), query)}</span>${window.WIKI_I18N.language === "cn" && databaseDisplayName(name) !== name ? `<small class="database-name-en">${databaseHighlight(name, query)}</small>` : ""}</td>${fields.map(field => `<td data-db-field="${databaseEscape(field)}">${databaseCellHtml(records[name][field], field, query)}</td>`).join("")}</tr>`; }).join("")}</tbody></table></div>`;
+  return `<div class="database-table-wrap"><table class="database-table" data-db-kind="${databaseEscape(kind)}"><thead><tr><th data-sort-kind="${databaseEscape(kind)}" data-sort-field="name">${databaseEscape(header("Name"))}</th>${fields.map(field => `<th data-sort-kind="${databaseEscape(kind)}" data-sort-field="${databaseEscape(field)}">${databaseEscape(header(field))}</th>`).join("")}</tr></thead><tbody>${rows.map(name => {
+    const record = records[name];
+    const rarity = equipmentDatabase.catalog?.[name]?.superitem || 0;
+    const rarityClass = rarity === 2 ? "ultimate-item" : rarity === 1 ? "legend-item" : "";
+    const targetClass = databaseTargetItem === name ? "database-target" : "";
+    const grind = Number(record.Grind);
+    const grindSuffix = Number.isFinite(grind) && grind > 0 ? `+${grind}` : "";
+    const displayName = databaseDisplayName(name);
+    const nameTitle = `${displayName}${grindSuffix ? ` ${grindSuffix}` : ""}${displayName !== name ? ` ${name}` : ""}`;
+    const englishName = name;
+    const shownName = window.WIKI_I18N.language === "cn" ? displayName : name;
+    const nameCell = `<td data-db-field="Name"><button class="database-mobile-sort-label" type="button" data-sort-kind="${databaseEscape(kind)}" data-sort-field="name">${databaseEscape(header("Name"))}</button><div class="database-cell-value"><span class="database-item-name ${rarityClass}" title="${databaseEscape(nameTitle)}">${databaseHighlight(shownName, query, name)}${grindSuffix ? ` ${databaseHighlight(grindSuffix, query)}` : ""}</span>${window.WIKI_I18N.language === "cn" && displayName !== name ? `<small class="database-name-en">${databaseHighlight(englishName, query)}</small>` : ""}</div></td>`;
+    const cells = fields.map(field =>
+      `<td data-db-field="${databaseEscape(field)}"><button class="database-mobile-sort-label" type="button" data-sort-kind="${databaseEscape(kind)}" data-sort-field="${databaseEscape(field)}">${databaseEscape(header(field))}</button><div class="database-cell-value">${databaseCellHtml(record[field], field, query, name)}</div></td>`
+    ).join("");
+    return `<tr class="${targetClass}">${nameCell}${cells}</tr>`;
+  }).join("")}</tbody></table></div>`;
 }
 
 function databaseCategory(file, kind, query) {
@@ -529,9 +819,18 @@ async function loadEquipmentDatabase() {
   await window.WIKI_I18N.ready;
   const values = await Promise.all([
     window.WIKI_DATA.loadJson("assets/data/item-catalog.json"),
-    ...databaseKinds.map(([file]) => window.WIKI_DATA.loadJson(`assets/data/item/${file}.json`))
+    ...databaseKinds.map(([file]) => window.WIKI_DATA.loadJson(`assets/data/item/${file}.json`)),
+    window.WIKI_DATA.loadJson("assets/data/drop-table/tables.json"),
+    window.WIKI_DATA.loadJson("assets/data/drop-table/section-ids.json"),
+    window.WIKI_DATA.loadJson("assets/data/bazaar/quest-catalog.json"),
+    window.WIKI_DATA.loadJson("assets/data/drop-table/recipes.json"),
+    window.WIKI_DATA.loadJson("assets/data/bazaar/exchanges.json")
   ]);
-  equipmentDatabase = { catalog: values[0], state: { sort: {}, direction: "asc", open: new Set() } };
+  equipmentDatabase = {
+    catalog: values[0],
+    dropSources: buildDatabaseDropSources(values[6], values[7], values[8], values[9], values[10]),
+    state: { sort: {}, direction: "asc", open: new Set() }
+  };
   databaseKinds.forEach(([file], index) => { equipmentDatabase[file] = values[index + 1]; });
   databaseKinds.forEach(([file]) => {
     Object.keys(equipmentDatabase[file]).forEach(name => equipmentItemIds.add(normalizedItemId(name)));

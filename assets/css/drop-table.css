@@ -919,11 +919,86 @@ tbody td:hover{
     overflow-wrap: anywhere;
 }
 
-#database-panel .database-table th:first-child,
-#database-panel .database-table td:first-child { width: 16% !important; }
-#database-panel .database-table th:nth-last-child(-n+2),
-#database-panel .database-table td:nth-last-child(-n+2) { width: 24% !important; }
 #database-panel .database-table-wrap { overflow: visible; }
+#database-panel .database-table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: auto;
+}
+#database-panel .database-table td[data-db-field="Drop Source"] { width: 34%; min-width: 180px; }
+#database-panel .database-table td[data-db-field="Boosts"],
+#database-panel .database-table td[data-db-field="Class"] { max-width: 190px !important; }
+#database-panel .database-table th,
+#database-panel .database-table td {
+    max-width: 220px !important;
+    padding: 4px 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#database-panel .database-table td:first-child { max-width: 240px !important; }
+#database-panel .database-table td[data-db-field="Boosts"],
+#database-panel .database-table td[data-db-field="Class"],
+#database-panel .database-table td[data-db-field="Drop Source"] {
+    max-width: 300px !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-overflow: clip;
+}
+#database-panel .database-table td[data-db-field="Boosts"] .boost-badge-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    white-space: normal;
+}
+#database-panel .database-table td[data-db-field="Boosts"] .boost-badge,
+#database-panel .database-table td[data-db-field="Class"] .class-badge {
+    padding: 2px 4px;
+    font-size: 11px;
+}
+#database-panel .database-drop-sources > summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    cursor: pointer;
+    list-style: none;
+}
+#database-panel .database-drop-sources > summary::-webkit-details-marker { display: none; }
+#database-panel .database-drop-sources[open] > summary { justify-content: flex-end; }
+#database-panel .database-drop-sources[open] > summary > .database-drop-source__entry { display: none; }
+#database-panel .database-drop-source__entry { display: block; line-height: 1.35; }
+#database-panel .database-drop-sources > summary .database-drop-source__entry {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+#database-panel .database-drop-source__components { display: inline-flex; max-width: 100%; flex-wrap: wrap; align-items: baseline; gap: 2px 4px; vertical-align: baseline; }
+#database-panel .database-drop-source__component { min-width: 0; overflow-wrap: anywhere; color: #d9e7f7; }
+#database-panel .database-drop-source__operator { flex: none; color: var(--site-accent); font-weight: 800; }
+#database-panel .database-drop-source__more { display: inline-flex; flex: none; align-items: center; gap: 4px; margin-top: 1px; padding: 2px 6px; border: 1px solid rgba(98,212,255,.4); border-radius: 10px; background: rgba(98,212,255,.1); color: var(--site-accent); font-size: 10px; font-weight: 800; white-space: nowrap; }
+#database-panel .database-drop-source__more-label { color: #d9e7f7; }
+#database-panel .database-drop-source__more-label--collapse,
+#database-panel details[open] > summary .database-drop-source__more-label--expand { display: none; }
+#database-panel details[open] > summary .database-drop-source__more-label--collapse { display: inline; }
+#database-panel .database-drop-source__more-caret { transition: transform .15s ease; }
+#database-panel details[open] > summary .database-drop-source__more-caret { transform: rotate(180deg); }
+#database-panel .database-drop-sources__list {
+    display: grid;
+    gap: 3px;
+    padding: 3px 0 0;
+}
+#database-panel .database-drop-sources__list > .database-drop-source__entry {
+    padding: 3px 6px;
+    border-left: 2px solid rgba(98,212,255,.35);
+    border-radius: 3px;
+    background: rgba(11,21,40,.45);
+}
+#database-panel .database-drop-source__context { color: var(--site-text-muted); }
+#database-panel .database-drop-source__quest { color: var(--site-text-muted); }
+#database-panel .database-drop-source__monster { color: #d9e7f7; }
+#database-panel .database-drop-source__id { color: #a9bad0; }
+#database-panel .database-drop-source__rate { color: #f4cf58; white-space: nowrap; }
+#database-panel .database-drop-source__separator { color: #63748b; }
 #database-panel .database-category > summary {
     position: sticky;
     top: var(--wiki-nav-height, 64px);
@@ -950,6 +1025,84 @@ tbody td:hover{
 }
 #database-panel .database-category > .database-table-wrap .database-table th {
     top: calc(var(--wiki-nav-height, 64px) + 52px);
+}
+
+@media (max-width: 720px) {
+    #database-panel .database-panel,
+    #database-panel .database-sections,
+    #database-panel .database-category,
+    #database-panel .database-subcategory,
+    #database-panel .database-table-wrap {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    #database-panel .database-table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        border-collapse: separate;
+    }
+    #database-panel .database-table thead { display: none; }
+    #database-panel .database-table tbody {
+        display: grid;
+        gap: 5px;
+    }
+    #database-panel .database-table tbody tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border: 1px solid var(--site-border);
+        border-radius: 6px;
+        background: rgba(11, 21, 40, .45);
+    }
+    #database-panel .database-table th,
+    #database-panel .database-table td {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3px 2px;
+        font-size: 10px;
+        white-space: normal;
+        overflow: visible;
+        overflow-wrap: anywhere;
+        text-overflow: clip;
+    }
+    #database-panel .database-table tbody tr > td {
+        min-width: 0 !important;
+        max-width: none !important;
+        width: auto !important;
+    }
+    #database-panel .database-table td[data-db-field="Name"],
+    #database-panel .database-table td[data-db-field="Boosts"],
+    #database-panel .database-table td[data-db-field="Class"],
+    #database-panel .database-table td[data-db-field="Drop Source"] {
+        grid-column: 1 / -1;
+    }
+    #database-panel .database-table td[data-db-field="Name"] {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        border-bottom: 1px solid var(--site-border);
+    }
+    #database-panel .database-mobile-sort-label {
+        display: block;
+        margin: 0 0 2px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--site-text-muted);
+        font: 700 9px/1.2 "Segoe UI", "Microsoft YaHei", sans-serif;
+        text-align: left;
+        cursor: pointer;
+    }
+    #database-panel .database-table td[data-db-field="Name"] .database-mobile-sort-label { margin: 0; }
+    #database-panel .database-cell-value { min-width: 0; max-width: 100%; }
+    #database-panel .database-table td:not([data-db-field="Boosts"]):not([data-db-field="Class"]):not([data-db-field="Drop Source"]) .database-cell-value {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    #database-panel .database-table td[data-db-field="Drop Source"] .database-cell-value { width: 100%; }
 }
 
 .tooltip-quest::before { content: none !important; display: none !important; }

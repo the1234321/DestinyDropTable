@@ -1045,7 +1045,7 @@
 
 #bazaar-info .bazaar-details.is-search-match { border-color: var(--bz-gold); box-shadow: 0 0 0 1px rgba(242,193,78,.18), 0 0 20px rgba(242,193,78,.1); }
 #bazaar-info .quest-drop-table-title { margin: 20px 16px 8px; color: var(--bz-gold); font-size: 16px; }
-#bazaar-info .bazaar-section-id-icon {
+.bazaar-section-id-icon {
   display: inline-block;
   width: 20px;
   height: 20px;

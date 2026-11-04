@@ -219,7 +219,7 @@ function translatedBoostParts(value) {
 
 function loadTranslationData() {
     if (!translationDataPromise) {
-        translationDataPromise = loadJson("assets/data/translation/cn.json?v=20261103-3");
+        translationDataPromise = loadJson("assets/data/translation/cn.json?v=20261104-1");
     }
     return translationDataPromise;
 }

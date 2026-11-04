@@ -283,51 +283,61 @@
 .database-subcategory > summary { font-size: 16px; }
 .database-category > summary { position: sticky; top: var(--wiki-nav-height, 64px); z-index: 8; background: #111827; }
 .database-subcategory > summary { position: sticky; top: calc(var(--wiki-nav-height, 64px) + 52px); z-index: 7; background: #151f32; }
-.database-table-wrap { overflow: visible; border-top: 1px solid var(--site-border); }
-.database-table { width: 100%; min-width: 0; border-collapse: collapse; table-layout: fixed; }
-.database-table th, .database-table td { padding: 8px 10px; border-bottom: 1px solid var(--site-border); text-align: left; vertical-align: top; line-height: 1.4; white-space: normal; overflow-wrap: anywhere; word-break: break-word; font-size: 13px; }
+.database-table-wrap { max-width: 100%; overflow: visible; border-top: 1px solid var(--site-border); }
+.database-table { width: max-content; max-width: 100%; min-width: 0; margin: 0 auto; border-collapse: collapse; table-layout: auto; }
+.database-table th, .database-table td { max-width: 220px; padding: 4px 6px; border-bottom: 1px solid var(--site-border); text-align: left; vertical-align: middle; line-height: 1.25; white-space: nowrap; overflow: hidden; overflow-wrap: normal; word-break: normal; text-overflow: ellipsis; font-size: 12px; }
 .database-table th { position: sticky; top: calc(var(--wiki-nav-height, 64px) + 98px); z-index: 6; background: #1d3453; color: #fff; cursor: pointer; }
 .database-category > .database-table-wrap .database-table th { top: calc(var(--wiki-nav-height, 64px) + 52px); }
-.database-table th:first-child, .database-table td:first-child { width: 16%; font-weight: 700; }
-.database-table th:nth-child(2), .database-table td:nth-child(2) { width: 7%; }
-.database-table th[data-sort-field="Class"], .database-table td:nth-child(3) { width: 28%; }
-.database-table th[data-sort-field="Boosts"] { width: auto; }
-.database-table td:has(.boost-badge) { width: auto; }
-.database-table td[data-db-field="Required"], .database-table td[data-db-field="Special"] {white-space: nowrap; }
-.database-table td[data-db-field="Boosts"] { width: auto; }
-.database-table[data-db-kind^="weapon"] th,
-.database-table[data-db-kind^="weapon"] td { padding-inline: 5px; }
-.database-table[data-db-kind^="weapon"] th:nth-child(2),
-.database-table[data-db-kind^="weapon"] td:nth-child(2),
-.database-table[data-db-kind^="weapon"] th:nth-child(3),
-.database-table[data-db-kind^="weapon"] td:nth-child(3),
-.database-table[data-db-kind^="weapon"] th:nth-child(4),
-.database-table[data-db-kind^="weapon"] td:nth-child(4),
-.database-table[data-db-kind^="weapon"] th:nth-child(5),
-.database-table[data-db-kind^="weapon"] td:nth-child(5),
-.database-table[data-db-kind^="weapon"] th:nth-child(6),
-.database-table[data-db-kind^="weapon"] td:nth-child(6),
-.database-table[data-db-kind^="weapon"] th:nth-child(9),
-.database-table[data-db-kind^="weapon"] td:nth-child(9),
-.database-table[data-db-kind^="weapon"] th:nth-child(10),
-.database-table[data-db-kind^="weapon"] td:nth-child(10) { width: 5%; }
-.database-table[data-db-kind^="weapon"] th:nth-child(7),
-.database-table[data-db-kind^="weapon"] td:nth-child(7) { width: 23%; white-space: nowrap; }
-.database-table[data-db-kind^="weapon"] th:nth-child(6),
-.database-table[data-db-kind^="weapon"] td:nth-child(6) { width: 13%; white-space: nowrap; }
-.database-table[data-db-kind^="weapon"] th:nth-child(8),
-.database-table[data-db-kind^="weapon"] td:nth-child(8) { width: 5%; }
-.database-table[data-db-kind^="weapon"] th:nth-child(11),
-.database-table[data-db-kind^="weapon"] td:nth-child(11) { width: 17%; }
-.database-table[data-db-kind^="weapon"] th:nth-child(10),
-.database-table[data-db-kind^="weapon"] td:nth-child(10) { width: 12%; }
-.database-table[data-db-kind^="weapon"] td[data-db-field="Special"] .boost-badge { white-space: nowrap; font-size: 14px; padding-inline: 4px; }
-.database-table[data-db-kind^="weapon"] td[data-db-field="Special"],
-.database-table td[data-db-field="Boosts"] .boost-badge-row { white-space: normal; }
-.database-name-en { display: block; margin-top: 3px; color: var(--site-text-muted); font-weight: 400; font-size: 11px; }
+.database-table th:first-child, .database-table td:first-child { font-weight: 700; }
+.database-table td[data-db-field="Boosts"],
+.database-table td[data-db-field="Class"],
+.database-table td[data-db-field="Drop Source"] { max-width: 300px; white-space: normal; overflow-wrap: anywhere; text-overflow: clip; }
+.database-table td[data-db-field="Boosts"] .boost-badge-row { display: inline-flex; flex-wrap: wrap; gap: 3px; margin-right: 3px; white-space: normal; }
+.database-table td[data-db-field="Boosts"] .boost-badge { padding: 2px 4px; font-size: 11px; }
+.database-table td[data-db-field="Class"] .class-badge { margin: 1px 2px 1px 0; padding: 2px 4px; font-size: 11px; }
+.database-table td[data-db-field="Drop Source"] { min-width: 180px; }
+#database-panel .database-table { width: 100%; table-layout: auto; }
+#database-panel .database-table td[data-db-field="Drop Source"] { width: 34%; min-width: 180px; }
+#database-panel .database-table td[data-db-field="Boosts"],
+#database-panel .database-table td[data-db-field="Class"] { max-width: 190px !important; }
+.database-mobile-sort-label { display: none; }
+.database-drop-sources > summary { display: flex; align-items: flex-start; gap: 5px; cursor: pointer; list-style: none; }
+.database-drop-sources > summary::-webkit-details-marker { display: none; }
+.database-drop-source__entry { display: block; line-height: 1.35; }
+.database-drop-sources > summary .database-drop-source__entry { min-width: 0; overflow-wrap: anywhere; white-space: normal; }
+.database-drop-source__components { display: inline-flex; max-width: 100%; flex-wrap: wrap; align-items: baseline; gap: 2px 4px; vertical-align: baseline; }
+.database-drop-source__component { min-width: 0; overflow-wrap: anywhere; color: #d9e7f7; }
+.database-drop-source__operator { flex: none; color: var(--site-accent); font-weight: 800; }
+.database-drop-source__more { flex: none; color: var(--site-accent); font-weight: 800; }
+.database-drop-source__more { display: inline-flex; align-items: center; gap: 4px; margin-top: 1px; padding: 2px 6px; border: 1px solid rgba(98,212,255,.4); border-radius: 10px; background: rgba(98,212,255,.1); font-size: 10px; white-space: nowrap; }
+.database-drop-source__more-label { color: #d9e7f7; }
+.database-drop-source__more-label--collapse,
+.database-drop-sources[open] > summary .database-drop-source__more-label--expand { display: none; }
+.database-drop-sources[open] > summary .database-drop-source__more-label--collapse { display: inline; }
+.database-drop-source__more-caret { transition: transform .15s ease; }
+.database-drop-sources[open] > summary .database-drop-source__more-caret { transform: rotate(180deg); }
+.database-drop-sources__list { padding: 5px 7px; border: 1px solid var(--site-border); border-radius: 5px; background: #0b1528; }
+.database-drop-source__context { color: var(--site-text-muted); }
+.database-drop-source__quest { color: var(--site-text-muted); }
+.database-drop-source__monster { color: #d9e7f7; }
+.database-drop-source__id { color: #a9bad0; }
+.database-drop-source__rate { color: #f4cf58; white-space: nowrap; }
+.database-name-en { display: block; margin-top: 3px; color: var(--site-text-muted); font-weight: 400; font-size: 10px; }
 .database-empty { color: var(--site-text-muted); text-align: center; }
 .database-table tbody tr:hover { background: rgba(98,212,255,.08); }
 .database-table mark { padding: 0 2px; border-radius: 3px; background: #f4cf58; color: #182235; }
+#database-panel .database-table th,
+#database-panel .database-table td { max-width: 220px !important; padding: 4px 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#database-panel .database-table td:first-child { max-width: 240px !important; }
+#database-panel .database-table td[data-db-field="Boosts"],
+#database-panel .database-table td[data-db-field="Class"],
+#database-panel .database-table td[data-db-field="Drop Source"] {
+  max-width: 300px !important;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+}
+#database-panel .database-table td[data-db-field="Drop Source"] { min-width: 180px; }
 
 .wiki-panel[hidden] { display: none !important; }
 .dictionary-panel { max-width: 1100px; margin: 24px auto 56px; padding: 20px; border: 1px solid rgba(98,212,255,.28); border-radius: 18px; background: #111c31; }
@@ -356,6 +366,8 @@
   .wiki-nav-dropdown:hover .wiki-nav-dropdown__menu,
   .wiki-nav-dropdown:focus-within .wiki-nav-dropdown__menu,
   .wiki-nav-dropdown .wiki-nav-button[aria-expanded="true"] + .wiki-nav-dropdown__menu { transform: translate(0, 0); }
+  .wiki-nav-dropdown[data-nav-group="equipment"] .wiki-nav-dropdown__menu,
+  .wiki-nav-dropdown[data-nav-group="quests"] .wiki-nav-dropdown__menu { right: 0; left: auto; }
   .wiki-panel .control-bar { top: 50px; }
   .language-switcher { top: 8px; right: 8px; }
 }

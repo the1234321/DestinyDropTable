@@ -25,6 +25,47 @@ function localized(value) {
 
 function appendRichText(node, text, includeSectionIds = false, preferItems = false) {
   const source = String(text);
+  if (includeSectionIds) {
+    const trimmed = source.trim();
+    const lowerTrimmed = trimmed.toLowerCase();
+    const allIdsTerm = String(window.WIKI_I18N.getTerm('allIds') || 'all ids').trim();
+    const exceptTerm = String(window.WIKI_I18N.getTerm('except') || 'except').trim();
+    let allIdsMatch = trimmed.match(/^all\s+ids(?:\s+except\s+(.+))?$/i);
+    let exceptMatch = trimmed.match(/^except\s+(.+)$/i);
+    if (!allIdsMatch && lowerTrimmed === allIdsTerm.toLowerCase()) allIdsMatch = [trimmed];
+    if (!allIdsMatch && lowerTrimmed.startsWith(allIdsTerm.toLowerCase())) {
+      const remainder = trimmed.slice(allIdsTerm.length).trim();
+      if (remainder.toLowerCase().startsWith(exceptTerm.toLowerCase())) {
+        allIdsMatch = [trimmed, remainder.slice(exceptTerm.length).trim()];
+      }
+    }
+    if (!exceptMatch && lowerTrimmed.startsWith(exceptTerm.toLowerCase())) {
+      exceptMatch = [trimmed, trimmed.slice(exceptTerm.length).trim()];
+    }
+    const excludedText = allIdsMatch?.[1] || exceptMatch?.[1] || "";
+    const excludedNames = excludedText.split(/[\s,]+/).filter(Boolean);
+    const excludedSections = excludedNames.map(name =>
+      SECTION_ID_NAMES.find(sectionName => sectionName.toLowerCase() === name.toLowerCase())
+    );
+    if ((allIdsMatch || exceptMatch) && excludedSections.every(Boolean)) {
+      const fragment = document.createDocumentFragment();
+      const names = excludedSections.length
+        ? excludedSections
+        : SECTION_ID_NAMES;
+      if (excludedSections.length) fragment.appendChild(document.createTextNode(window.WIKI_I18N.language === "cn" ? "除" : "Except"));
+      names.forEach(name => {
+        const sectionId = SECTION_ID_BY_TERM[name.toLowerCase()];
+        const icon = document.createElement('img');
+        icon.className = 'bazaar-section-id-icon';
+        icon.src = `images/ids/${sectionId.name}.png`;
+        icon.alt = sectionId.name;
+        icon.title = `${sectionId.name} (${sectionId.id})`;
+        fragment.appendChild(icon);
+      });
+      node.appendChild(fragment);
+      return;
+    }
+  }
   let lastIndex = 0;
   const pattern = includeSectionIds ? SCOPED_NAME_RE : NAME_RE;
   const fragment = document.createDocumentFragment();
@@ -282,27 +323,40 @@ function addScopedTable(parent, headers, rows, plainTextColumns = [], className 
   parent.appendChild(wrap);
 }
 
-function bindSectionIdTooltips(root) {
+let sectionIdTooltipsBound = false;
+function bindSectionIdTooltips() {
   const tooltip = document.getElementById('tooltip');
-  if (!tooltip) return;
-  root.querySelectorAll('.bazaar-section-id-icon').forEach(icon => {
-    const move = event => {
-      tooltip.className = 'tooltip-section-id';
-      tooltip.innerHTML = `<img src="${icon.src}" alt=""><strong>${icon.alt}</strong><span class="tooltip-section-id-number"> : ${icon.title.match(/\d+/)?.[0] || ''}</span>`;
-      tooltip.style.display = 'block';
-      const rect = tooltip.getBoundingClientRect();
-      const left = Math.max(8, Math.min(event.clientX + 14, window.innerWidth - rect.width - 8));
-      const top = Math.max(8, Math.min(event.clientY + 14, window.innerHeight - rect.height - 8));
-      tooltip.style.left = `${left}px`;
-      tooltip.style.top = `${top}px`;
-    };
-    icon.addEventListener('mousemove', move);
-    icon.addEventListener('mouseleave', () => {
-      tooltip.style.display = 'none';
-      tooltip.className = '';
-    });
+  if (!tooltip || sectionIdTooltipsBound) return;
+  sectionIdTooltipsBound = true;
+  let activeIcon = null;
+  const hide = () => {
+    activeIcon = null;
+    tooltip.style.display = 'none';
+    tooltip.className = '';
+  };
+  document.addEventListener('mousemove', event => {
+    const icon = event.target instanceof Element ? event.target.closest('.bazaar-section-id-icon') : null;
+    if (!icon) {
+      if (activeIcon) hide();
+      return;
+    }
+    activeIcon = icon;
+    tooltip.className = 'tooltip-section-id';
+    tooltip.innerHTML = `<img src="${icon.src}" alt=""><strong>${icon.alt}</strong><span class="tooltip-section-id-number"> : ${icon.title.match(/\d+/)?.[0] || ''}</span>`;
+    tooltip.style.display = 'block';
+    const rect = tooltip.getBoundingClientRect();
+    const left = Math.max(8, Math.min(event.clientX + 14, window.innerWidth - rect.width - 8));
+    const top = Math.max(8, Math.min(event.clientY + 14, window.innerHeight - rect.height - 8));
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
+  });
+  document.addEventListener('mouseout', event => {
+    const icon = event.target instanceof Element ? event.target.closest('.bazaar-section-id-icon') : null;
+    const nextIcon = event.relatedTarget instanceof Element ? event.relatedTarget.closest('.bazaar-section-id-icon') : null;
+    if (icon && icon === activeIcon && nextIcon !== icon) hide();
   });
 }
+bindSectionIdTooltips();
 
 function monsterTerms(name) {
   return String(name).split(/\s*\/\s*/).flatMap(term => {
@@ -1068,7 +1122,6 @@ function ensureBazaarData() {
 function renderAndBindBazaar(root) {
   renderBazaarInfo(root);
   if (window.bindItemTooltips) window.bindItemTooltips(root);
-  bindSectionIdTooltips(root);
   applyBazaarSection();
 }
 
