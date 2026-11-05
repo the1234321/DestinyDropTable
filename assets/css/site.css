@@ -326,6 +326,20 @@
 .database-empty { color: var(--site-text-muted); text-align: center; }
 .database-table tbody tr:hover { background: rgba(98,212,255,.08); }
 .database-table mark { padding: 0 2px; border-radius: 3px; background: #f4cf58; color: #182235; }
+.database-table .ultimate-item mark,
+.database-table mark.ultimate-item {
+  background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0066ff, #ff00ff);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 4s linear infinite;
+  text-decoration: underline;
+  text-decoration-color: #f4cf58;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  text-shadow: 0 0 7px rgba(244, 207, 88, .55);
+}
 #database-panel .database-table th,
 #database-panel .database-table td { max-width: 220px !important; padding: 4px 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #database-panel .database-table td:first-child { max-width: 240px !important; }
