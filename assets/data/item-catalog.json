@@ -11211,5 +11211,38 @@
             "en": "",
             "cn": ""
         }
+    },
+    "Soul of Gee": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "姬蜂之魂"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Soul of Claw": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "爪虫之魂"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
+    },
+    "Soul of Dark Bringer": {
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "暗黑骑士之魂"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
     }
 }
