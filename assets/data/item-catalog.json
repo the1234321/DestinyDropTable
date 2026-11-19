@@ -11244,5 +11244,16 @@
             "en": "",
             "cn": ""
         }
+    },
+    "SLICER OF HERETIC":{
+        "superitem": 2,
+        "image": "",
+        "name": {
+            "cn": "异教徒的投刃"
+        },
+        "description": {
+            "en": "",
+            "cn": ""
+        }
     }
 }

@@ -7018,5 +7018,20 @@
         "Description": "A special sword that can cast support techniques. Only female can use this weapon.",
         "Boosts": "Resta/Shifta/Deband Range+100%",
         "Class": "hunewearl, hucaseal, ramarl, racaseal, fomarl, fonewearl"
+    },
+    "SLICER OF HERETIC":{
+        "Type": "Slicer",
+        "ATP": "550-670",
+        "Grind": 125,
+        "Total ATP": 670,
+        "ATA": 40,
+        "MST": 0,
+        "Required": "ATP 800",
+        "Special": "Arrest",
+        "Targets": 5,
+        "Range": 130.0,
+        "Description": "A dreadful slicer that said to be used by a secret society. Special attacks arrests enemies.",
+        "Boosts": "",
+        "Class": "humar, hunewearl, hucast, hucaseal, ramar, ramarl, racast, racaseal, fomar, fomarl, fonewm, fonewearl"
     }
 }

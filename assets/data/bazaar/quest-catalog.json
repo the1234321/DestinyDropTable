@@ -1463,6 +1463,19 @@
           "cn": [],
           "en": []
         }
+      },
+      "Phantasmal World #2 [Extreme]": {
+        "requirement": "",
+        "reward": "",
+        "drops": {
+          "Bubbles": {
+            "SLICER OF HERETIC 1/930": "all ids"
+          }
+        },
+        "notes": {
+          "cn": [],
+          "en": []
+        }
       }
     },
     "Halloween": {

@@ -4000,7 +4000,7 @@
       }
     }
   },
-   {
+  {
     "name": "Radiant Destiny!",
     "total": 430,
     "monsters": {
@@ -4282,7 +4282,7 @@
       }
     }
   },
-    {
+  {
     "name": "Phantasmal World #3 [Extreme]",
     "total": 485,
     "monsters": {
@@ -4345,7 +4345,7 @@
       }
     }
   },
-    {
+  {
     "name": "Hallowed World [Extreme]",
     "total": 319,
     "monsters": {
@@ -4455,6 +4455,70 @@
           "Mericarol": 24,
           "Gibbles": 17,
           "Mericus": 17
+        }
+      }
+    }
+  },
+  {
+    "name": "Phantasmal World #2 [Extreme]",
+    "total": 611,
+    "monsters": {
+      "Gee": 167,
+      "Ul Gibbon": 132,
+      "Meriltas": 80,
+      "Zol Gibbon": 37,
+      "Bubbles": 37,
+      "Sinow Spigell": 34,
+      "Merillia": 33,
+      "Sinow Berill": 31,
+      "Mericarol": 20,
+      "Gi Gue": 17,
+      "Merikle": 12,
+      "Mericus": 11
+    },
+    "floors": {
+      "0": {
+        "floor_name": "Lab",
+        "floor_id": 0,
+        "total": 0,
+        "monsters": {}
+      },
+      "5": {
+        "floor_name": "Central Control Area",
+        "floor_id": 5,
+        "total": 326,
+        "monsters": {
+          "Gee": 92,
+          "Ul Gibbon": 60,
+          "Meriltas": 47,
+          "Sinow Spigell": 26,
+          "Bubbles": 24,
+          "Zol Gibbon": 20,
+          "Sinow Berill": 18,
+          "Merillia": 11,
+          "Gi Gue": 10,
+          "Mericarol": 8,
+          "Merikle": 6,
+          "Mericus": 4
+        }
+      },
+      "8": {
+        "floor_name": "Mountain Area",
+        "floor_id": 8,
+        "total": 285,
+        "monsters": {
+          "Gee": 75,
+          "Ul Gibbon": 72,
+          "Meriltas": 33,
+          "Merillia": 22,
+          "Zol Gibbon": 17,
+          "Bubbles": 13,
+          "Sinow Berill": 13,
+          "Mericarol": 12,
+          "Sinow Spigell": 8,
+          "Mericus": 7,
+          "Gi Gue": 7,
+          "Merikle": 6
         }
       }
     }
