@@ -3,12 +3,13 @@ const panels = {
   bazaar: document.querySelector("#bazaar-panel"),
   guide: document.querySelector("#guide-panel"),
   dictionary: document.querySelector("#dictionary-panel"),
-  database: document.querySelector("#database-panel")
+  database: document.querySelector("#database-panel"),
+  lottery: document.querySelector("#lottery-panel")
 };
 
 const siteNav = document.querySelector(".wiki-site-nav");
 const guideViews = ["server-rules", "common-commands", "level-200", "localization"];
-const views = ["drops", ...guideViews, "dictionary", "special", "crafting", "crafting-recipes", "exchange", "crafting-sets", "quests", "database"];
+const views = ["drops", ...guideViews, "dictionary", "special", "lottery", "crafting", "crafting-recipes", "exchange", "crafting-sets", "quests", "database"];
 const viewFromHash = hash => hash === "commands" ? "common-commands"
   : hash === "effects" ? "crafting-recipes"
     : hash === "bazaar" ? "exchange"
@@ -31,19 +32,21 @@ function selectView(view, updateHash = true, scrollToTop = true) {
   if (view === "commands") view = "common-commands";
   const isDictionary = view === "dictionary";
   const isDatabase = view === "database";
+  const isLottery = view === "lottery";
   window.WIKI_ACTIVE_VIEW = view;
   panels.drops.hidden = !isDrops;
   panels.bazaar.hidden = isDrops || isGuide || isDictionary || isDatabase;
   panels.guide.hidden = !isGuide;
   panels.dictionary.hidden = !isDictionary;
   panels.database.hidden = !isDatabase;
+  panels.lottery.hidden = !isLottery;
   document.querySelectorAll("[data-view]").forEach(button => {
     const active = button.dataset.view === view;
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-selected", String(active));
   });
   const dropdownViews = {
-    drops: isDrops || view === "special",
+    drops: isDrops || view === "special" || isLottery,
     "locale-tools": view === "localization" || view === "dictionary",
     equipment: view === "crafting" || view === "database",
     quests: view === "quests" || view === "exchange"
@@ -440,6 +443,9 @@ function addDatabaseDropSource(index, itemName, source) {
 
 function buildDatabaseDropSources(tables, sectionIds, questCatalog, recipes, exchanges) {
   const sourceIndex = new Map();
+  (window.WIKI_BOX_LOTTERY_ITEMS || []).forEach(item => addDatabaseDropSource(sourceIndex, item, {
+    kind: "lottery", sections: [], excludedSections: [], contexts: []
+  }));
   const sectionNumbers = new Map(sectionIds.map((section, index) => [section.id, index]));
   Object.entries(tables || {}).forEach(([difficulty, episodes]) => {
     Object.entries(episodes || {}).forEach(([episode, data]) => {
@@ -573,7 +579,7 @@ function buildDatabaseDropSources(tables, sectionIds, questCatalog, recipes, exc
       );
     });
     sourceIndex.set(itemName, [...merged.values()].sort((left, right) => {
-      const sourceOrder = { drop: 0, special: 1, crafting: 2, exchange: 3 };
+      const sourceOrder = { drop: 0, special: 1, crafting: 2, exchange: 3, lottery: 4 };
       if (left.kind !== right.kind) return (sourceOrder[left.kind] ?? 4) - (sourceOrder[right.kind] ?? 4);
       const difficultyDifference = (difficultyOrder[left.difficulty] ?? 4) - (difficultyOrder[right.difficulty] ?? 4);
       if (difficultyDifference) return difficultyDifference;
@@ -586,6 +592,7 @@ function buildDatabaseDropSources(tables, sectionIds, questCatalog, recipes, exc
 
 function databaseDropSourceSearchText(sources = []) {
   return sources.flatMap(source => [
+    source.kind === "lottery" ? "箱子抽奖 Box Lottery" : "",
     source.monster,
     source.monster ? window.WIKI_I18N.getMonster(source.monster) : "",
     databaseDropSourceIdLabel(source),
@@ -630,6 +637,7 @@ function databaseDropSourceIdHtml(source, query) {
 }
 
 function databaseDropSourceEntryHtml(source, query) {
+  if (source.kind === "lottery") return `<span class="database-drop-source__entry"><span class="database-drop-source__quest">${databaseEscape(window.WIKI_I18N.language === "cn" ? "箱子抽奖" : "Box Lottery")}</span></span>`;
   const contexts = source.contexts.map(context => {
     if (source.kind !== "drop") return "";
     const difficulty = window.WIKI_I18N.language === "cn"

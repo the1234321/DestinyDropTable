@@ -614,7 +614,7 @@ function bindTooltips(root = document.getElementById("content")) {
     };
     const renderItemTooltip = cell => {
         const itemName = cell.dataset.item;
-        const item = data?.items?.[itemName] || window.WIKI_ITEMS?.[itemName];
+        const item = data?.items?.[itemName] || window.WIKI_ITEMS?.[itemName] || window.WIKI_ITEM_CATALOG?.[itemName];
         if (!item) return false;
         const itemText = window.WIKI_I18N.getItem(itemName);
         const rarity = item.superitem || 0;
